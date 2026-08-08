@@ -9731,17 +9731,112 @@ function goTo(id) {
   if (event && event.target) event.target.classList.add('active');
 }
 
+function _normTxt(s) {
+  return (s || '').toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .replace(/[®™]/g, '')
+    .replace(/\s+/g, ' ');
+}
+
+var _origOrder = null;
+
+function _drugLabel(card) {
+  var n = card.querySelector('.drug-name');
+  return n ? n.textContent.trim() : card.id.replace('card-', '');
+}
+
 function filterDrugs(q) {
-  q = q.toLowerCase().trim();
-  document.querySelectorAll('.drug-card').forEach(function(card) {
-    var text = (card.dataset.search || '') + ' ' + card.innerText.toLowerCase();
-    card.style.display = (!q || text.includes(q)) ? '' : 'none';
+  var main = document.getElementById('main-content');
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.drug-card'));
+  if (!_origOrder) _origOrder = cards.slice();
+
+  var bar = document.getElementById('search-summary');
+  if (!bar) {
+    bar = document.createElement('div');
+    bar.id = 'search-summary';
+    main.insertBefore(bar, main.firstChild);
+  }
+
+  var nq = _normTxt(q).trim();
+
+  // ── Aucune recherche : tout réafficher dans l'ordre d'origine ──
+  if (!nq) {
+    _origOrder.forEach(function(c) { c.style.display = ''; main.appendChild(c); });
+    main.insertBefore(bar, main.firstChild);
+    bar.innerHTML = '';
+    bar.style.display = 'none';
+    document.querySelectorAll('.sidebar-btn').forEach(function(b) { b.style.opacity = '1'; });
+    return;
+  }
+
+  // ── Classement par pertinence ──
+  // 0 = le nom commence par la requête · 1 = le nom contient la requête
+  // 2 = seulement mentionné dans le corps de la fiche (interactions, CI…)
+  var fiches = [], mentions = [];
+  _origOrder.forEach(function(card) {
+    if (card._nName === undefined) {
+      card._nName = _normTxt(card.dataset.search || '');
+      card._nBody = _normTxt(card.textContent || '');
+    }
+    var name = card._nName;
+    var body = card._nBody;
+    var rank = -1;
+    if (name.indexOf(nq) === 0 || name.split(' ').some(function(w) { return w.indexOf(nq) === 0; })) rank = 0;
+    else if (name.indexOf(nq) !== -1) rank = 1;
+    else if (body.indexOf(nq) !== -1) rank = 2;
+
+    card.style.display = 'none';
+    if (rank === 0 || rank === 1) fiches.push({ card: card, rank: rank });
+    else if (rank === 2) mentions.push(card);
   });
+
+  fiches.sort(function(a, b) { return a.rank - b.rank; });
+
+  // ── Affichage ──
+  var shown;
+  if (fiches.length) {
+    shown = fiches.map(function(f) { return f.card; });
+  } else {
+    shown = mentions;          // aucun nom ne correspond : on montre les fiches qui le mentionnent
+    mentions = [];
+  }
+  shown.forEach(function(c) { c.style.display = ''; main.appendChild(c); });
+
+  // ── Bandeau de résumé ──
+  var esc = function(s) { return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); };
+  var html = '';
+  if (!shown.length) {
+    html = '<div style="padding:14px 16px;background:#fef2f2;border-left:4px solid #c0392b;border-radius:8px;font-size:13px;">'
+         + 'Aucune fiche pour <strong>' + esc(q.trim()) + '</strong>.</div>';
+  } else {
+    html = '<div style="padding:10px 14px;background:#eef4ff;border-left:4px solid #1e40af;border-radius:8px;font-size:13px;">'
+         + '<strong>' + shown.length + '</strong> fiche' + (shown.length > 1 ? 's' : '')
+         + (fiches.length ? '' : ' mentionnant ce terme')
+         + ' pour « ' + esc(q.trim()) + ' »</div>';
+    if (mentions.length) {
+      html += '<div style="margin-top:8px;padding:10px 14px;background:#fff8e1;border-left:4px solid #d35400;border-radius:8px;font-size:12px;">'
+            + '<strong>Également mentionné dans ' + mentions.length + ' autre' + (mentions.length > 1 ? 's' : '')
+            + ' fiche' + (mentions.length > 1 ? 's' : '') + '</strong> (interactions, contre-indications, suivi) :<div style="margin-top:6px;display:flex;flex-wrap:wrap;gap:6px;">'
+            + mentions.map(function(c) {
+                var id = c.id.replace('card-', '');
+                return '<button onclick="goTo(\'' + id + '\')" style="background:#fff;border:1px solid #e2c48a;border-radius:999px;padding:3px 11px;cursor:pointer;font-size:12px;color:#7c3f00;">'
+                     + esc(_drugLabel(c)) + '</button>';
+              }).join('')
+            + '</div></div>';
+    }
+  }
+  bar.innerHTML = html;
+  bar.style.display = '';
+  bar.style.marginBottom = '14px';
+  main.insertBefore(bar, main.firstChild);
+
+  // ── Menu latéral : mettre en évidence les fiches retenues ──
+  var shownIds = {};
+  shown.forEach(function(c) { shownIds[c.id.replace('card-', '')] = 1; });
   document.querySelectorAll('.sidebar-btn').forEach(function(btn) {
     var m = btn.getAttribute('onclick').match(/'([^']+)'/);
     if (!m) return;
-    var card = document.getElementById('card-' + m[1]);
-    btn.style.opacity = (!q || (card && card.style.display !== 'none')) ? '1' : '0.35';
+    btn.style.opacity = shownIds[m[1]] ? '1' : '0.3';
   });
 }
 
