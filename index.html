@@ -42062,7 +42062,7 @@ Revoir rapidement si nouvelle Sx ou changement de dose<br>
         <table style="font-size:12px;">
           <thead><tr><th>Condition</th><th>Mécanisme</th><th>FSH</th><th>LH</th><th>Œstradiol</th><th>Conséquence</th></tr></thead>
           <tbody>
-            <tr><td><strong>SOPC</strong></td><td>↑ LH/FSH ratio (&gt; 2) → ↑ androgènes ovariens, résistance insuline → anovulation</td><td>Normal ou ↓</td><td>↑</td><td>Variable</td><td>Anovulation chronique, SUA, infertilité</td></tr>
+            <tr><td><strong>SOPK</strong></td><td>↑ LH/FSH ratio (&gt; 2) → ↑ androgènes ovariens, résistance insuline → anovulation</td><td>Normal ou ↓</td><td>↑</td><td>Variable</td><td>Anovulation chronique, SUA, infertilité</td></tr>
             <tr><td><strong>Ménopause</strong></td><td>Déplétion folliculaire → ↓ inhibine → ↑ FSH (premier signe) → ↓ œstradiol</td><td>↑↑ (&gt; 25-40 UI/L)</td><td>↑</td><td>↓↓ (&lt; 30 pmol/L)</td><td>Symptômes vasomoteurs, ostéoporose, SGUM</td></tr>
             <tr><td><strong>Hypothyroïdie</strong></td><td>↑ TRH → ↑ TSH et ↑ prolactine → inhibition pulsatilité GnRH → anovulation</td><td>Variable</td><td>Variable</td><td>↓</td><td>Aménorrhée, SUA, galactorrhée</td></tr>
             <tr><td><strong>Hyperprolactinémie</strong></td><td>↑ Prolactine → inhibe GnRH pulsatile → ↓ FSH/LH → anovulation</td><td>↓</td><td>↓</td><td>↓</td><td>Aménorrhée, galactorrhée, infertilité</td></tr>
@@ -42334,7 +42334,7 @@ Revoir rapidement si nouvelle Sx ou changement de dose<br>
         <button onclick="goToBlock('sua-2')" style="background:#6d28d9;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🔬 Ovulatoire vs anovulatoire</button>
         <button onclick="goToBlock('sua-3')" style="background:#0369a1;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🔬 Investigation</button>
         <button onclick="goToBlock('sua-aigu')" style="background:#c0392b;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🚨 Saignement aigu</button>
-        <button onclick="goToBlock('sua-4')" style="background:#0f766e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🎯 Outil de sélection</button>
+        <button onclick="goToBlock('sua-4')" style="background:#0f766e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🎯 Choix du traitement</button>
         <button onclick="goToBlock('sua-5')" style="background:#15803d;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">💊 Pharmacothérapie</button>
         <button onclick="goToBlock('sua-chir')" style="background:#7c3aed;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🔧 Chirurgie</button>
         <button onclick="goToBlock('sua-fer')" style="background:#b45309;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🩸 Anémie ferriprive</button>
@@ -42548,44 +42548,90 @@ Revoir rapidement si nouvelle Sx ou changement de dose<br>
         <div class="key-fact orange" style="margin-top:12px;">🧬 <strong>Le réflexe qu'on oublie chez l'adolescente :</strong> un saignement sévère <strong>dès les premières menstruations</strong> est un mode de révélation classique de la <strong>maladie de von Willebrand</strong> — la coagulopathie héréditaire la plus fréquente. Rechercher aussi : épistaxis à répétition, ecchymoses faciles, saignement prolongé après une extraction dentaire ou une chirurgie, antécédents familiaux. Le bilan (facteur von Willebrand antigène et activité, facteur VIII) se prélève <strong>idéalement à distance de l'épisode aigu et hors œstrogènes</strong>, qui faussent les résultats à la hausse.</div>
       </div>
 
-      <div class="block para" style="margin-top:14px;border-left-color:var(--teal,#0d9488)">
-        <div class="block-title" id="sua-4"><span class="tag">🎯 Outil — Sélection du traitement pharmacologique SUA</span></div>
-        <p style="font-size:13px;color:#555;margin-bottom:10px">Sélectionnez les caractéristiques de votre patiente pour voir les options thérapeutiques recommandées.</p>
-        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px" id="sua-opts">
-          <button class="algo-opt" onclick="suaTx(this,'désir-grossesse')">Désir de grossesse</button>
-          <button class="algo-opt" onclick="suaTx(this,'contraception')">Désir de contraception</button>
-          <button class="algo-opt" onclick="suaTx(this,'menopause')">Périménopause</button>
-          <button class="algo-opt" onclick="suaTx(this,'anovulation')">Anovulation</button>
-          <button class="algo-opt" onclick="suaTx(this,'urgence')">Saignement aigu sévère</button>
-          <button class="algo-opt" onclick="suaTx(this,'chirurgie')">Pont préchirurgical</button>
-          <button class="algo-opt" onclick="suaTx(this,'non-hormonal')">CI aux hormones</button>
-          <button class="algo-opt sel" onclick="suaTx(this,'chronique')">SUA chronique fonctionnel</button>
+            <div class="block para" style="margin-top:14px;border-left-color:var(--teal,#0d9488)">
+        <div class="block-title" id="sua-4"><span class="tag">🎯 Choix du traitement selon le contexte clinique</span></div>
+        <div class="key-fact blue" style="margin-top:10px;">🧭 <strong>Comment lire ce tableau :</strong> repérer la ligne qui décrit la situation de la patiente, puis lire de gauche à droite — première intention, options de rechange, puis ce qu'il faut éviter. Les contextes se cumulent souvent : une patiente en périménopause qui désire une contraception relève des deux lignes.</div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr>
+            <th style="width:16%;">Contexte</th>
+            <th style="width:26%;">1<sup>re</sup> intention</th>
+            <th style="width:28%;">Autres options</th>
+            <th>À éviter / précautions</th>
+          </tr></thead>
+          <tbody>
+            <tr style="background:#f0fdf4;">
+              <td><strong>Désir de grossesse</strong></td>
+              <td><strong>Traiter la cause</strong> — polypectomie, myomectomie<br>Si anovulation : <strong>induction de l'ovulation</strong> (létrozole, citrate de clomifène)</td>
+              <td><strong>AINS</strong> pendant les menstruations si saignement ovulatoire<br><strong>Acide tranexamique</strong> les jours de saignement</td>
+              <td>⛔ <strong>DIU-LNG et contraceptif combiné</strong> — incompatibles avec un projet de grossesse actif<br>⛔ Ablation de l'endomètre</td>
+            </tr>
+            <tr>
+              <td><strong>Désir de contraception</strong></td>
+              <td><strong>DIU au lévonorgestrel</strong> ★<br><em>Réduction du saignement d'environ 96 % à 1 an — l'option la plus efficace à long terme</em></td>
+              <td><strong>Contraceptif oral combiné</strong> — réduction d'environ 40–50 %, régularise le cycle<br><strong>Acétate de médroxyprogestérone injectable</strong> si aménorrhée souhaitée</td>
+              <td>Contraceptif combiné : contre-indications habituelles — <strong>tabagisme ≥ 35 ans, migraine avec aura, antécédent de TEV, HTA non contrôlée</strong><br>Injectable : spotting initial fréquent, retour de fertilité retardé</td>
+            </tr>
+            <tr style="background:#fff8e1;">
+              <td><strong>Périménopause</strong></td>
+              <td>⚠️ <strong>Écarter d'abord une malignité</strong> — biopsie de l'endomètre selon les indications (voir bloc Investigation)<br>Puis <strong>DIU-LNG</strong> — traite le saignement <em>et</em> protège l'endomètre</td>
+              <td><strong>Contraceptif combiné faible dose</strong> si pas de contre-indication vasculaire<br><strong>Progestatif oral</strong> en phase lutéale</td>
+              <td>⛔ Ne jamais traiter un saignement de périménopause <strong>sans avoir écarté une cause néoplasique</strong> quand l'indication de biopsie est présente<br>Réévaluer le risque vasculaire avant tout œstrogène</td>
+            </tr>
+            <tr>
+              <td><strong>Anovulation chronique</strong><br><em>(SOPK, périménopause, hypothyroïdie)</em></td>
+              <td><strong>Progestatif oral</strong> — corrige le déficit de progestérone, régularise le cycle et <strong>protège l'endomètre</strong> de la stimulation œstrogénique non opposée</td>
+              <td><strong>Contraceptif combiné</strong> si contraception souhaitée<br><strong>DIU-LNG</strong> pour le long terme<br><strong>Traiter la cause</strong> : SOPK (poids, metformine si indiquée), thyroïde, prolactine</td>
+              <td>⚠️ L'anovulation chronique expose à l'<strong>hyperplasie puis au cancer de l'endomètre</strong> — la protection endométriale n'est pas optionnelle, même si le saignement est peu gênant</td>
+            </tr>
+            <tr style="background:#fce4ec;">
+              <td><strong>Saignement aigu sévère</strong></td>
+              <td><strong>Œstrogènes à dose élevée</strong> (IV ou orale) — stabilisation rapide de l'endomètre<br><em>ou</em> <strong>progestatif à haute dose</strong> si les œstrogènes sont contre-indiqués</td>
+              <td><strong>Acide tranexamique</strong> en appoint<br>Si réfractaire : <strong>tamponnade par ballonnet</strong>, curetage ou hystéroscopie, embolisation</td>
+              <td>⚠️ Toujours <strong>β-hCG</strong> d'abord<br>⚠️ <strong>Prévoir la transition vers un traitement d'entretien</strong> — sans quoi la récidive est la règle<br>➜ Détails dans le bloc <em>Saignement aigu sévère</em></td>
+            </tr>
+            <tr>
+              <td><strong>Pont préopératoire</strong></td>
+              <td><strong>Analogue de la GnRH</strong> — « ménopause médicale » : réduit le volume des fibromes et permet de corriger l'anémie avant la chirurgie</td>
+              <td><strong>Fer</strong> (oral ou IV selon le délai) — souvent l'élément le plus utile<br>Acide tranexamique en attendant</td>
+              <td>⚠️ <strong>Traitement d'appoint (« add-back ») nécessaire au-delà de 6 mois</strong> — prévention de la perte osseuse et des symptômes vasomoteurs</td>
+            </tr>
+            <tr style="background:#e8f4fd;">
+              <td><strong>Contre-indication aux hormones</strong><br><em>(cancer du sein, antécédent de TEV, hépatopathie active)</em></td>
+              <td><strong>Acide tranexamique</strong> les jours de saignement — réduction d'environ 26–60 %</td>
+              <td><strong>AINS</strong> pendant les menstruations — réduction d'environ 33–55 %, et soulage la dysménorrhée<br><strong>Ablation de l'endomètre</strong> si échec et projet familial complété</td>
+              <td>⛔ <strong>DIU de cuivre</strong> — il <em>augmente</em> le saignement<br>AINS : prudence si antécédent d'ulcère, insuffisance rénale, anticoagulation<br>Acide tranexamique : prudence si thrombophilie connue</td>
+            </tr>
+            <tr>
+              <td><strong>SUA chronique fonctionnel</strong><br><em>(ovulatoire, sans cause structurelle)</em></td>
+              <td><strong>DIU au lévonorgestrel</strong> ★ — l'option la plus efficace à long terme</td>
+              <td><strong>Acide tranexamique + AINS</strong> — association possible, utile si réticence au DIU<br><strong>Contraceptif combiné</strong> chez la patiente jeune souhaitant aussi une contraception<br><strong>Ablation de l'endomètre</strong> si projet familial complété et échec du traitement médical</td>
+              <td>Avant de conclure à un échec : vérifier <strong>la dose, la durée de l'essai et l'observance</strong> — beaucoup d'« échecs » sont des essais insuffisants ou des effets indésirables non signalés</td>
+            </tr>
+          </tbody>
+        </table>
         </div>
-        <div id="sua-result" class="algo-result" style="display:block"></div>
-        <script>
-        (function(){
-          var plans = {
-            'désir-grossesse': '<strong>Objectif : préserver fertilité</strong><br>▶ Traiter la cause (polypectomie, myomectomie) · ▶ Induction ovulation si anovulation (citrate de clomifène, létrozole) · ▶ AINS pour ménorragie ovulatoire · <span style="color:#dc2626">⚠️ Éviter DIU-LNG + COC si désir grossesse actif</span>',
-            'contraception': '<strong>Objectif : traitement + contraception</strong><br>▶ <strong>DIU-LNG (Mirena)</strong> ★★★ — ↓ 96 % · Gold standard longue durée · ▶ COC — ↓ 40-50 %, régularise cycle · ▶ Depo-Provera — option si désir aménorrhée',
-            'menopause': '<strong>Périménopause + SUA</strong><br>▶ Exclure malignité d\'abord (biopsie si ≥ 45 ans) · ▶ <strong>DIU-LNG</strong> — traitement SUA + protection endomètre (remplace progestatif de l\'HT) · ▶ COC faible dose si pas de CI vasculaires · ▶ Progestatifs oraux phase lutéale',
-            'anovulation': '<strong>Anovulation chronique (SOPK, périménopause)</strong><br>▶ <strong>Progestatifs oraux</strong> (AMP 5-10 mg j14-25 ou noréthinidrone 5 mg) — régularise cycle + protection endomètre · ▶ COC si désir contraception · ▶ DIU-LNG si long terme · ▶ Traiter la cause (SOPK → perte poids, metformine si DM2)',
-            'urgence': '<strong>Saignement aigu sévère (Hb &lt; 80 ou instabilité)</strong><br>▶ <strong>Œstrogènes conjugués IV</strong> 25 mg IV q4-6h × 24h (hémostase urgente) ou hautes doses orales · ▶ COC haute dose (monophasique, 3×/j × 7j → dégressif) · ▶ Acide tranexamique 1g IV q8h · ▶ Si réfractaire : curetage / hystéroscopie / embolisation',
-            'chirurgie': '<strong>Pont préchirurgical (myomectomie/hystérectomie)</strong><br>▶ <strong>Analogues GnRH</strong> (leuprolide 3,75 mg IM/mois × 3-6 mois) → ménopause médicale → ↓ volume fibrome + correction anémie · <span style="color:#dc2626">⚠️ Add-back therapy obligatoire si &gt; 6 mois</span>',
-            'non-hormonal': '<strong>CI aux hormones (cancer sein, ATCD TEV, HTA sévère non contrôlée)</strong><br>▶ <strong>Acide tranexamique</strong> (Cyclokapron) 1g 3-4×/j × 3-5j — ↓ 26-60 % · ▶ <strong>AINS</strong> (naproxen 500mg BID ou ibuprofène 600mg TID × durée menstruations) — ↓ 33-55 % · ▶ DIU cuivre → CI (↑ saignement) · ▶ Ablation endomètre si échec',
-            'chronique': '<strong>SUA chronique fonctionnel (ovulatoire, pas de cause structurelle)</strong><br>▶ <strong>DIU-LNG (Mirena)</strong> ★ — option la plus efficace à long terme (↓ 96 %) · ▶ <strong>Acide tranexamique + AINS</strong> si réticence DIU — combinaison possible · ▶ COC si jeune + désir contraception · ▶ Ablation endomètre si famille complète + réfractaire au médical'
-          };
-          var active = 'chronique';
-          function suaTx(btn, key) {
-            document.querySelectorAll('#sua-opts .algo-opt').forEach(function(b){ b.classList.remove('sel'); });
-            btn.classList.add('sel');
-            active = key;
-            document.getElementById('sua-result').innerHTML = plans[key] || '';
-          }
-          window.suaTx = suaTx;
-          // Init
-          document.getElementById('sua-result').innerHTML = plans['chronique'];
-        })();
-        </script>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px;">
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;border-left:4px solid #15803d;">
+            <strong style="color:#15803d;">✅ Les trois questions qui orientent le choix</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">
+              <div><strong>①</strong> Y a-t-il une <strong>cause structurelle</strong> (PALM) à traiter directement?</div>
+              <div><strong>②</strong> La patiente <strong>souhaite-t-elle une grossesse</strong>, maintenant ou plus tard?</div>
+              <div><strong>③</strong> Y a-t-il une <strong>contre-indication aux œstrogènes</strong>?</div>
+              <div style="margin-top:6px;">Ces trois réponses éliminent la majorité des options et rendent le choix évident.</div>
+            </div>
+          </div>
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;border-left:4px solid #d35400;">
+            <strong style="color:#d35400;">⏱️ Délai d'évaluation de la réponse</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">
+              <strong>DIU-LNG</strong> — spotting fréquent les 3 à 6 premiers mois, puis réduction marquée. <strong>Ne pas le retirer trop tôt</strong> : prévenir la patiente dès la pose évite bien des abandons.<br>
+              <strong>Contraceptif combiné et progestatifs</strong> — réévaluer après 3 cycles.<br>
+              <strong>Acide tranexamique et AINS</strong> — effet dès le premier cycle traité.
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="block rx" style="margin-top:14px;">
@@ -42728,16 +42774,19 @@ Revoir rapidement si nouvelle Sx ou changement de dose<br>
     <div class="section" id="sec-cancer-col">
       <div class="section-header">
         <div class="section-accent" style="background:#9d174d">🎗️</div>
-        <div class="section-title"><h1>Cancer du Col de l'Utérus</h1><div class="breadcrumb">Gynécologie <span class="breadcrumb-sep">·</span> Section 66</div></div>
+        <div class="section-title"><h1>Cancer du col de l'utérus</h1><div class="breadcrumb">Gynécologie <span class="breadcrumb-sep">·</span> VPH <span class="breadcrumb-sep">·</span> Dépistage <span class="breadcrumb-sep">·</span> CIN <span class="breadcrumb-sep">·</span> Traitement</div></div>
       </div>
       <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;">
-        <button onclick="goToBlock('col-1')" style="background:#374151;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">📌 FdR</button>
-        <button onclick="goToBlock('col-2')" style="background:#6d28d9;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">🧬 VPH & Prévention</button>
-        <button onclick="goToBlock('col-3')" style="background:#0a7a4e;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">💉 Vaccination</button>
-        <button onclick="goToBlock('col-4')" style="background:#0f766e;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">🔬 Dépistage</button>
-        <button onclick="goToBlock('col-5')" style="background:#0f766e;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">🩺 Clinique</button>
-        <button onclick="goToBlock('col-6')" style="background:#7c3aed;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">🔬 Dx &amp; FIGO</button>
-        <button onclick="goToBlock('col-7')" style="background:#c0392b;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">🚨 Red Flags</button>
+        <button onclick="goToBlock('col-1')" style="background:#374151;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">📌 Facteurs de risque</button>
+        <button onclick="goToBlock('col-2')" style="background:#6d28d9;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧬 VPH &amp; histoire naturelle</button>
+        <button onclick="goToBlock('col-3')" style="background:#0f766e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">💉 Vaccination</button>
+        <button onclick="goToBlock('col-4')" style="background:#0369a1;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🔬 Dépistage (test VPH)</button>
+        <button onclick="goToBlock('col-conduite')" style="background:#7c3aed;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧭 Résultat anormal</button>
+        <button onclick="goToBlock('col-cin')" style="background:#15803d;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🔧 Lésions précancéreuses</button>
+        <button onclick="goToBlock('col-5')" style="background:#b45309;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🩺 Clinique</button>
+        <button onclick="goToBlock('col-6')" style="background:#334155;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🔬 Dx &amp; FIGO</button>
+        <button onclick="goToBlock('col-tx')" style="background:#0a7a4e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">💊 Traitement</button>
+        <button onclick="goToBlock('col-7')" style="background:#dc2626;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🚨 Red flags</button>
       </div>
       <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:20px;">
         <div style="flex:1;min-width:95px;background:#FEE2E2;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#c0392b;">VPH 16/18</div><div style="font-size:11px;color:#555;margin-top:4px;">Cause 70 % cancer col</div></div>
@@ -42747,7 +42796,7 @@ Revoir rapidement si nouvelle Sx ou changement de dose<br>
       <!-- Stat-cards -->
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:16px;">
         <div style="background:#fce4ec;border-radius:10px;padding:11px;text-align:center;border-left:4px solid #888;"><div style="font-size:12px;font-weight:800;color:#b91c1c;">HPV 16&18</div><div style="font-size:11px;color:#555;margin-top:3px;">70% cancers col utérin</div></div>
-        <div style="background:#f0fdf4;border-radius:10px;padding:11px;text-align:center;border-left:4px solid #888;"><div style="font-size:12px;font-weight:800;color:#15803d;">Dépistage</div><div style="font-size:11px;color:#555;margin-top:3px;">Pap + HPV co-test</div></div>
+        <div style="background:#f0fdf4;border-radius:10px;padding:11px;text-align:center;border-left:4px solid #888;"><div style="font-size:12px;font-weight:800;color:#15803d;">Dépistage</div><div style="font-size:11px;color:#555;margin-top:3px;">Test VPH primaire q5 ans (25–65 ans)</div></div>
         <div style="background:#e8f4fd;border-radius:10px;padding:11px;text-align:center;border-left:4px solid #888;"><div style="font-size:12px;font-weight:800;color:#0369a1;">Stade I–IIA</div><div style="font-size:11px;color:#555;margin-top:3px;">Chirurgie ± radio-chimio</div></div>
         <div style="background:#fff3cd;border-radius:10px;padding:11px;text-align:center;border-left:4px solid #888;"><div style="font-size:12px;font-weight:800;color:#b45309;">Vaccin HPV</div><div style="font-size:11px;color:#555;margin-top:3px;">9v: gardasil, idéal 9–14 ans</div></div>
       </div>
@@ -42788,7 +42837,11 @@ Revoir rapidement si nouvelle Sx ou changement de dose<br>
             <tr><td><strong>Progression lésionnelle</strong></td><td>Infection VPH HR → CIN 1 (80 % régression) → CIN 2 (50 % régression) → CIN 3 (20 % régression, 30 % progression) → carcinome in situ → cancer invasif</td></tr>
           </tbody>
         </table>
-        <div class="block-title" style="margin-top:10px;" id="col-3"><span class="tag">💉 Vaccination VPH</span></div>
+              </div>
+    
+
+            <div class="block rx" style="margin-top:14px;border-left-color:#0f766e;">
+        <div class="block-title" id="col-3"><span class="tag">💉 Vaccination VPH</span></div>
         <table style="font-size:12px;">
           <thead><tr><th>Vaccin</th><th>Valence</th><th>Souches</th></tr></thead>
           <tbody>
@@ -42798,19 +42851,134 @@ Revoir rapidement si nouvelle Sx ou changement de dose<br>
           </tbody>
         </table>
         <div class="key-fact blue" style="margin-top:6px;"><strong>Calendrier vaccination ACIP/QC :</strong> Routine 11-12 ans (dès 9 ans), 2 sexes · 2 doses si &lt; 15 ans · 3 doses si ≥ 15 ans ou immunodéficients · Rattrapage jusqu'à 26 ans · Efficacité ≥ 97 % contre les séquelles des souches couvertes · <strong>La vaccination ne remplace pas le dépistage !</strong></div>
-        <div class="block-title" style="margin-top:10px;" id="col-4"><span class="tag">🔬 Dépistage (PQDCCU Québec / USPSTF)</span></div>
+      </div>
+
+      <div class="block para" style="margin-top:14px;border-left-color:#0369a1;">
+        <div class="block-title" id="col-4"><span class="tag">🔬 Dépistage au Québec — le test VPH devient le test primaire</span></div>
+
+        <div class="key-fact red" style="margin-top:10px;">🔄 <strong>Changement de pratique en cours.</strong> Depuis 2026, le <strong>test de détection des VPH à haut risque remplace le test Pap</strong> comme test de dépistage primaire au Québec. Le déploiement se fait <strong>progressivement, par grappe de laboratoires</strong> : les lignes directrices de 2011 (test Pap) <strong>restent en vigueur tant que le test VPH n'est pas disponible dans votre région</strong>. Vérifier l'état du déploiement pour votre établissement avant de prescrire.</div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;border-left:4px solid #15803d;">
+            <strong style="color:#15803d;">✅ Nouveau protocole — test VPH</strong>
+            <div style="font-size:13px;line-height:1.8;margin-top:8px;">
+              <div><strong>Population :</strong> personnes avec un col, de <strong>25 à 65 ans</strong></div>
+              <div><strong>Test :</strong> détection des VPH à haut risque, sur cytologie liquide — un <strong>seul prélèvement</strong>, avec cytologie réflexe si le VPH est positif</div>
+              <div><strong>Intervalle : 5 ans</strong> si négatif</div>
+              <div><strong>Fin :</strong> 65 ans</div>
+              <div style="margin-top:6px;">⚠️ <strong>L'autoprélèvement n'est pas disponible au Québec.</strong></div>
+            </div>
+          </div>
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;border-left:4px solid #d35400;">
+            <strong style="color:#d35400;">🔀 Gérer la transition</strong>
+            <div style="font-size:13px;line-height:1.8;margin-top:8px;">
+              <div>Quand le test VPH devient disponible, l'offrir <strong>3 ans après le dernier test Pap</strong>.</div>
+              <div><strong>Ne pas</strong> faire un test VPH si un Pap a été fait il y a <strong>moins de 3 ans</strong>…</div>
+              <div>…<strong>ou moins d'un an chez une personne immunosupprimée</strong>.</div>
+              <div style="margin-top:6px;">📋 L'<strong>INESSS</strong> a publié un <strong>protocole médical national</strong> encadrant l'amorce du dépistage par test VPH et son suivi — pertinent pour l'IPS.</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">🤔 Pourquoi ces seuils — la logique derrière les chiffres</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;">
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+            <strong style="color:#1d4ed8;">Pourquoi commencer à 25 ans</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Avant 25 ans, les infections à VPH sont <strong>fréquentes et transitoires</strong>, et le cancer du col est <strong>rare</strong>. Dépister plus tôt cause <strong>plus de torts que de bénéfices</strong> : faux positifs, colposcopies inutiles, surtraitement du col (avec ses conséquences obstétricales), anxiété.</div>
+          </div>
+          <div style="background:#ede9fe;border-radius:10px;padding:14px;">
+            <strong style="color:#6d28d9;">Pourquoi 5 ans et non 3</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">La <strong>valeur prédictive négative</strong> du test VPH est très élevée et la latence entre l'infection et la lésion précancéreuse atteint <strong>15 à 20 ans</strong>. Le risque dans les <strong>5 ans</strong> suivant un VPH négatif est <em>inférieur</em> au risque dans les <strong>3 ans</strong> suivant un Pap négatif.</div>
+          </div>
+          <div style="background:#fce4ec;border-radius:10px;padding:14px;">
+            <strong style="color:#c0392b;">Pourquoi ne pas rapprocher les tests</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Prescrire le test VPH plus souvent que tous les 5 ans <strong>augmente les faux positifs sans améliorer la détection</strong>. Cela engorge aussi l'accès à la colposcopie pour celles qui en ont réellement besoin.</div>
+          </div>
+          <div style="background:#f1f5f9;border-radius:10px;padding:14px;">
+            <strong style="color:#334155;">Ce qui ne change pas</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Le dépistage vise la <strong>zone de transformation</strong>. Il reste <strong>indépendant du statut vaccinal</strong> — <strong>le vaccin ne remplace pas le dépistage</strong>. Et il ne s'applique pas aux personnes sans col.</div>
+          </div>
+        </div>
+
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">⚠️ Situations particulières</div>
+        <div style="overflow-x:auto;">
         <table style="font-size:12px;">
-          <thead><tr><th>Âge</th><th>Test</th><th>Fréquence</th></tr></thead>
+          <thead><tr><th style="width:28%;">Situation</th><th>Conduite</th></tr></thead>
           <tbody>
-            <tr><td>21-29 ans</td><td>Cytologie (Pap) seule</td><td>Tous les 3 ans (si normal)</td></tr>
-            <tr><td>30-65 ans</td><td>Co-test (Pap + VPH) <strong>OU</strong> VPH seul OU Pap seule</td><td>Tous les 5 ans (co-test/VPH) ou tous les 3 ans (Pap)</td></tr>
-            <tr><td>&gt; 65 ans</td><td>—</td><td>Cesser si 3 cytologies négatives consécutives ou 2 co-tests négatifs dans les 10 ans</td></tr>
+            <tr style="background:#fce4ec;"><td><strong>Immunosuppression</strong> (VIH, greffe, immunosuppresseurs)</td><td>Dépistage <strong>plus rapproché</strong>, débuté plus tôt, et <strong>poursuivi au-delà de 65 ans</strong> · suivi selon protocole spécialisé — cette population sort de l'algorithme standard</td></tr>
+            <tr><td><strong>Moins de 25 ans</strong></td><td><strong>Pas de dépistage</strong>, même en présence d'activité sexuelle · un symptôme (saignement post-coïtal, lésion visible) relève de l'<em>investigation</em>, pas du dépistage</td></tr>
+            <tr style="background:#f0fdf4;"><td><strong>Après hystérectomie totale</strong> pour indication bénigne, <strong>sans antécédent</strong> de lésion de haut grade</td><td><strong>Cesser le dépistage</strong> — il n'y a plus de col</td></tr>
+            <tr><td><strong>Après hystérectomie avec antécédent</strong> de lésion de haut grade</td><td><strong>Poursuivre</strong> le dépistage du fond vaginal selon protocole</td></tr>
+            <tr style="background:#fff8e1;"><td><strong>Antécédent de traitement d'une lésion de haut grade</strong></td><td>Surveillance <strong>rapprochée et prolongée</strong> — le risque reste élevé pendant des années, même après un traitement réussi</td></tr>
+            <tr><td><strong>Grossesse</strong></td><td>Le dépistage peut se poursuivre selon le calendrier · la <strong>colposcopie est possible</strong>, mais le <strong>traitement d'une lésion est généralement reporté après l'accouchement</strong>, sauf suspicion d'invasion</td></tr>
+            <tr style="background:#ede9fe;"><td><strong>Lésion cervicale visible au spéculum</strong></td><td>🚨 <strong>Ne pas se contenter d'un test de dépistage</strong> — il peut être faussement négatif. <strong>Biopsie directe</strong> et orientation.</td></tr>
           </tbody>
         </table>
-        <div class="key-fact green" style="margin-top:6px;font-size:13px;"><strong>Gestion anomalies cytologiques (ASC-US) :</strong> Reflex VPH (si VPH négatif → dépistage routine; si VPH positif → colposcopie) · <strong>HSIL :</strong> colposcopie d'emblée · <strong>Colposcopie :</strong> évaluation ZT avec acide acétique (lésions blanches) ± biopsie → histologie CIN 1/2/3 → traitement par excision (LEEP, cône froid)</div>
-        <div class="key-fact red" style="margin-top:6px;"><strong>Cas particuliers — Dépistage à éviter :</strong> &lt; 21 ans (pas de dépistage même si active sexuellement) · Après hystérectomie totale sans ATCD dysplasie · Femme immunodéprimée (VIH) : dépistage annuel dès le début de l'activité sexuelle</div>
+        </div>
+        <div class="key-fact blue" style="margin-top:12px;">🔗 <strong>Source :</strong> MSSS — <em>Transition du test Pap au test VPH</em>, et avis de l'INESSS sur l'implantation du test VPH comme test primaire. Le déploiement étant régional, <strong>valider la disponibilité et le protocole en vigueur dans votre grappe de laboratoires</strong>.</div>
       </div>
-    
+
+      <div class="block rx" style="margin-top:14px;border-left-color:#7c3aed;">
+        <div class="block-title" id="col-conduite"><span class="tag">🧭 Conduite devant un résultat anormal</span></div>
+        <div class="key-fact orange" style="margin-top:10px;">🎯 <strong>Le principe qui a changé :</strong> avec le test VPH primaire, la question n'est plus « quelle est l'anomalie cytologique? » mais <strong>« y a-t-il un VPH à haut risque, et si oui, la cytologie réflexe montre-t-elle une lésion? »</strong>. Le VPH détermine le risque; la cytologie précise l'urgence.</div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:26%;">Résultat</th><th style="width:34%;">Signification</th><th>Conduite générale</th></tr></thead>
+          <tbody>
+            <tr style="background:#f0fdf4;"><td><strong>VPH négatif</strong></td><td>Risque très faible de lésion dans les années qui suivent</td><td><strong>Retour au dépistage régulier</strong> — prochain test dans 5 ans</td></tr>
+            <tr><td><strong>VPH positif · cytologie réflexe négative</strong></td><td>Infection présente sans lésion détectable — souvent transitoire</td><td><strong>Contrôle rapproché</strong> (habituellement à 12 mois) plutôt que colposcopie immédiate · persistance du VPH → colposcopie</td></tr>
+            <tr style="background:#fff8e1;"><td><strong>VPH positif · cytologie de bas grade</strong> (ASC-US, LSIL)</td><td>Lésion de bas grade probable — <strong>régression fréquente</strong></td><td><strong>Colposcopie</strong> ou contrôle rapproché selon le génotype (16/18 = risque supérieur) et le contexte</td></tr>
+            <tr style="background:#fce4ec;"><td><strong>Cytologie de haut grade</strong> (HSIL, ASC-H, AGC)</td><td>Lésion de haut grade probable</td><td>🚨 <strong>Colposcopie d'emblée</strong>, sans triage supplémentaire · AGC impose aussi une évaluation <strong>endométriale</strong> selon l'âge</td></tr>
+            <tr><td><strong>VPH 16 ou 18 positif</strong></td><td>Génotypes responsables d'environ <strong>70 % des cancers</strong></td><td>Seuil d'orientation en colposcopie <strong>plus bas</strong> que pour les autres génotypes</td></tr>
+            <tr style="background:#e8f4fd;"><td><strong>Prélèvement insatisfaisant</strong></td><td>Cellularité insuffisante, sang, inflammation</td><td><strong>Répéter</strong> le prélèvement — un traitement de l'atrophie par œstrogène local peut être nécessaire après la ménopause</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px;">
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;border-left:4px solid #1d4ed8;">
+            <strong style="color:#1d4ed8;">🔬 Ce que fait la colposcopie</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Examen de la <strong>zone de transformation</strong> après application d'<strong>acide acétique</strong> (les lésions blanchissent) et de <strong>solution de Lugol</strong> (les lésions ne fixent pas l'iode).<br>Permet la <strong>biopsie dirigée</strong> et le curetage endocervical.<br>⚠️ Une colposcopie est dite <strong>non satisfaisante</strong> si la jonction squamo-cylindrique n'est pas entièrement visible — fréquent après la ménopause, où la jonction remonte dans le canal.</div>
+          </div>
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;border-left:4px solid #15803d;">
+            <strong style="color:#15803d;">🗣️ Ce qu'il faut dire à la patiente</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Un VPH positif n'est pas un cancer</strong> — c'est une infection très commune, le plus souvent éliminée spontanément.<br>Il ne signifie <strong>ni infidélité ni infection récente</strong> : le virus peut être resté latent des années.<br>Le suivi sert à repérer la minorité d'infections qui persistent.<br><strong>Le tabac favorise la persistance</strong> — c'est un levier concret que la patiente contrôle.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block rx" style="margin-top:14px;border-left-color:#15803d;">
+        <div class="block-title" id="col-cin"><span class="tag">🔧 Lésions précancéreuses (CIN) — surveiller ou traiter</span></div>
+        <div class="key-fact blue" style="margin-top:10px;">⚖️ <strong>L'arbitrage central :</strong> les lésions de bas grade régressent en majorité et se surveillent; les lésions de haut grade se traitent. Mais tout traitement du col a un <strong>coût obstétrical</strong> — d'où l'importance de ne pas surtraiter, surtout chez la jeune femme.</div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:16%;">Histologie</th><th style="width:26%;">Évolution naturelle</th><th>Conduite</th></tr></thead>
+          <tbody>
+            <tr style="background:#f0fdf4;"><td><strong>CIN 1</strong><br><em>bas grade</em></td><td><strong>Régression dans environ 80 %</strong> des cas</td><td><strong>Surveillance</strong> — contrôle à 12 mois, sans traitement · traiter seulement en cas de persistance prolongée</td></tr>
+            <tr style="background:#fff8e1;"><td><strong>CIN 2</strong><br><em>haut grade, intermédiaire</em></td><td>Régression dans environ la moitié des cas, surtout chez la <strong>jeune femme</strong></td><td><strong>Traitement</strong> habituel · <strong>surveillance envisageable</strong> chez la femme jeune désirant une grossesse, si la colposcopie est satisfaisante et le suivi assuré</td></tr>
+            <tr style="background:#fce4ec;"><td><strong>CIN 3 / carcinome in situ</strong></td><td>Régression peu fréquente · <strong>progression significative</strong> vers l'invasion si non traité</td><td><strong>Traitement systématique</strong> — excision privilégiée pour obtenir une histologie complète</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">🛠️ Modalités de traitement</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+            <strong style="color:#1d4ed8;">Excision — LEEP/LLETZ, conisation</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Privilégiée</strong> : fournit une <strong>pièce histologique</strong> permettant d'exclure une invasion occulte et d'évaluer les marges.<br>Indispensable si la colposcopie est <strong>non satisfaisante</strong>, si l'atteinte est <strong>endocervicale</strong>, ou en cas de <strong>discordance</strong> entre cytologie et histologie.</div>
+          </div>
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+            <strong style="color:#15803d;">Ablation — cryothérapie, laser</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Détruit la lésion <strong>sans pièce histologique</strong>.<br>Réservée aux situations où le diagnostic est certain, la lésion entièrement visible, l'atteinte non endocervicale, et l'invasion exclue.</div>
+          </div>
+        </div>
+
+        <div class="key-fact red" style="margin-top:12px;">🤰 <strong>Le coût obstétrical qu'on oublie de mentionner :</strong> l'excision cervicale, surtout si elle est <strong>profonde ou répétée</strong>, augmente le risque d'<strong>accouchement prématuré</strong>, de rupture prématurée des membranes et d'insuffisance cervicale. À intégrer explicitement à la discussion chez une patiente en âge de procréer — et à signaler en cas de grossesse ultérieure.</div>
+
+        <div class="key-fact orange" style="margin-top:8px;">📅 <strong>Après le traitement, le risque ne revient pas à la normale.</strong> Le risque de récidive et de cancer reste élevé pendant <strong>des années, voire des décennies</strong>. La surveillance post-traitement est <strong>prolongée</strong> et ne suit pas le calendrier de dépistage habituel — même si les marges étaient saines, même si le test VPH se négative.</div>
+      </div>
 
       <div class="block clin" style="margin-top:14px;">
         <div class="block-title" id="col-5"><span class="tag">🩺 Présentation clinique</span></div>
@@ -42890,6 +43058,58 @@ Revoir rapidement si nouvelle Sx ou changement de dose<br>
         </div>
       </div>
 
+            <div class="block rx" style="margin-top:14px;">
+        <div class="block-title" id="col-tx"><span class="tag">💊 Traitement du cancer invasif — par stade</span></div>
+        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>La ligne de partage :</strong> les stades <strong>précoces et confinés</strong> relèvent de la <strong>chirurgie</strong>; dès que la maladie atteint les paramètres ou au-delà, c'est la <strong>radio-chimiothérapie concomitante</strong> qui devient le standard. La question de la <strong>fertilité</strong> se pose seulement dans les stades les plus précoces — et elle doit être posée <em>avant</em> de planifier le traitement.</div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:16%;">Stade</th><th style="width:32%;">Traitement de référence</th><th>Points à connaître</th></tr></thead>
+          <tbody>
+            <tr style="background:#f0fdf4;"><td><strong>Carcinome in situ<br>IA1 sans invasion lymphovasculaire</strong></td><td><strong>Conisation</strong> (avec marges saines) ou <strong>hystérectomie simple</strong></td><td><strong>Fertilité préservée</strong> par la conisation seule · surveillance rapprochée ensuite</td></tr>
+            <tr><td><strong>IA1 avec invasion lymphovasculaire · IA2</strong></td><td><strong>Hystérectomie radicale modifiée</strong> + évaluation ganglionnaire</td><td>L'invasion lymphovasculaire fait changer de stratégie · <strong>trachélectomie radicale</strong> possible si désir de grossesse</td></tr>
+            <tr style="background:#e8f4fd;"><td><strong>IB1 · IB2 · IIA</strong><br><em>confiné au col ou extension sans atteinte des paramètres</em></td><td><strong>Hystérectomie radicale + lymphadénectomie pelvienne</strong><br><em>ou</em> <strong>radio-chimiothérapie</strong> — efficacité comparable</td><td>Le choix se fait selon le volume tumoral, l'âge, les comorbidités et les préférences · <strong>éviter de cumuler chirurgie et radiothérapie</strong> : la morbidité s'additionne</td></tr>
+            <tr style="background:#fff8e1;"><td><strong>IIB à IVA</strong><br><em>atteinte des paramètres, du vagin bas, de la paroi pelvienne ou des organes de voisinage</em></td><td><strong>Radio-chimiothérapie concomitante</strong> — radiothérapie externe + <strong>cisplatine hebdomadaire</strong> comme radiosensibilisant, complétée par <strong>curiethérapie</strong></td><td>La <strong>curiethérapie n'est pas optionnelle</strong> : l'omettre dégrade nettement le contrôle local · la chirurgie n'apporte pas de bénéfice ajouté à ce stade</td></tr>
+            <tr><td><strong>IVB · récidive à distance</strong></td><td><strong>Traitement systémique</strong> — chimiothérapie à base de platine ± antiangiogénique, <strong>immunothérapie</strong> selon l'expression de PD-L1</td><td>Intention <strong>palliative</strong> · intégrer précocement les soins de support et la maîtrise des symptômes</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="key-fact red" style="margin-top:12px;">⚠️ <strong>Voie d'abord de l'hystérectomie radicale :</strong> les approches <strong>mini-invasives (laparoscopie, robot) ne sont plus recommandées</strong> pour le cancer du col — la survie sans récidive s'est révélée <strong>inférieure</strong> à celle de la chirurgie ouverte. C'est un renversement de pratique récent qu'il faut connaître.</div>
+
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">🤰 Préservation de la fertilité</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;border-left:4px solid #15803d;">
+            <strong style="color:#15803d;">✅ Envisageable si</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Stade précoce, lésion de petite taille, absence d'atteinte ganglionnaire<br>Histologie favorable<br>Patiente informée du risque de récidive et du suivi requis<br><strong>Options :</strong> conisation seule · <strong>trachélectomie radicale</strong> (ablation du col avec conservation du corps utérin)</div>
+          </div>
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;border-left:4px solid #d35400;">
+            <strong style="color:#d35400;">📌 À aborder avant tout traitement</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">La <strong>radiothérapie pelvienne détruit la fonction ovarienne</strong> et rend l'utérus non fonctionnel · une <strong>transposition ovarienne</strong> peut être proposée avant l'irradiation<br>La <strong>préservation de gamètes ou d'embryons</strong> se planifie <em>avant</em> le traitement<br>Une grossesse après trachélectomie est à <strong>haut risque de prématurité</strong> et se suit en obstétrique spécialisée</div>
+          </div>
+        </div>
+
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">📅 Après le traitement — ce que l'IPS suit</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;">
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+            <strong style="color:#1d4ed8;">Surveillance de la récidive</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Visites rapprochées les premières années, puis espacées · <strong>examen pelvien et rectovaginal</strong> à chaque visite · imagerie selon le stade et les symptômes<br>La majorité des récidives surviennent dans les <strong>2 premières années</strong></div>
+          </div>
+          <div style="background:#fce4ec;border-radius:10px;padding:14px;">
+            <strong style="color:#c0392b;">Séquelles de la radiothérapie</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Sténose et sécheresse vaginales</strong> — proposer dilatateurs et hydratants, sujet systématiquement sous-abordé<br>Cystite et entérite radiques · <strong>lymphœdème</strong> des membres inférieurs<br><strong>Insuffisance ovarienne précoce</strong> → symptômes vasomoteurs, santé osseuse</div>
+          </div>
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+            <strong style="color:#15803d;">Santé sexuelle &amp; hormonale</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Le cancer du col n'étant <strong>pas hormonodépendant</strong>, l'hormonothérapie de remplacement est <strong>généralement possible</strong> chez la patiente en insuffisance ovarienne induite — à valider avec l'équipe traitante<br>Aborder explicitement la <strong>dyspareunie, la libido et l'image corporelle</strong></div>
+          </div>
+          <div style="background:#f1f5f9;border-radius:10px;padding:14px;">
+            <strong style="color:#334155;">Le reste de la personne</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Cessation tabagique</strong> — réduit la récidive et les complications<br>Vaccination VPH toujours pertinente selon l'âge<br>Soutien psychologique · retour au travail<br>Poursuivre les <strong>autres dépistages</strong> adaptés à l'âge</div>
+          </div>
+        </div>
+      </div>
+
       <div class="block flag" style="margin-top:14px;">
         <div class="block-title" id="col-7"><span class="tag">🚨 Red Flags &mdash; Orientation urgente</span></div>
         <div class="flag-list">
@@ -42966,15 +43186,17 @@ Revoir rapidement si nouvelle Sx ou changement de dose<br>
     <div class="section" id="sec-cancer-endo">
       <div class="section-header">
         <div class="section-accent" style="background:#9d174d">🔴</div>
-        <div class="section-title"><h1>Cancer de l'Endomètre</h1><div class="breadcrumb">Gynécologie <span class="breadcrumb-sep">·</span> Section 67</div></div>
+        <div class="section-title"><h1>Cancer de l'endomètre</h1><div class="breadcrumb">Gynécologie <span class="breadcrumb-sep">·</span> Saignement post-ménopausique <span class="breadcrumb-sep">·</span> Hyperplasie <span class="breadcrumb-sep">·</span> FIGO 2023</div></div>
       </div>
       <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;">
-        <button onclick="goToBlock('ce-1')" style="background:#374151;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">📌 FdR & Protecteurs</button>
-        <button onclick="goToBlock('ce-2')" style="background:#6d28d9;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">🧬 Stadification FIGO</button>
-        <button onclick="goToBlock('ce-3')" style="background:#0a7a4e;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">💊 Traitement NCCN</button>
-        <button onclick="goToBlock('ce-4')" style="background:#0f766e;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">🧪 CA-125</button>
-        <button onclick="goToBlock('ce-5')" style="background:#7b3fa0;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">📋 Traitement par stade</button>
-        <button onclick="goToBlock('ce-6')" style="background:#c0392b;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">🚨 Red Flags</button>
+        <button onclick="goToBlock('ce-1')" style="background:#374151;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">📌 FdR &amp; protecteurs</button>
+        <button onclick="goToBlock('ce-saign')" style="background:#c0392b;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🩸 Saignement post-ménopausique</button>
+        <button onclick="goToBlock('ce-hyper')" style="background:#b45309;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🔬 Hyperplasie</button>
+        <button onclick="goToBlock('ce-2')" style="background:#6d28d9;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧬 Types &amp; FIGO 2023</button>
+        <button onclick="goToBlock('ce-3')" style="background:#0f766e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">💊 Modalités thérapeutiques</button>
+        <button onclick="goToBlock('ce-5')" style="background:#0a7a4e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">📋 Traitement par stade</button>
+        <button onclick="goToBlock('ce-4')" style="background:#0369a1;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧪 CA-125</button>
+        <button onclick="goToBlock('ce-6')" style="background:#dc2626;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🚨 Red flags</button>
       </div>
       <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:20px;">
         <div style="flex:1;min-width:95px;background:#EEF2FF;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#1C3F8F;">FIGO 2023</div><div style="font-size:11px;color:#555;margin-top:4px;">Stadification actuelle</div></div>
@@ -43008,7 +43230,7 @@ Revoir rapidement si nouvelle Sx ou changement de dose<br>
             <tr><td><strong>Syndrome de Cowden (PTEN)</strong></td><td>Risque vie 13-28 %</td></tr>
             <tr><td><strong>Obésité</strong></td><td>RR 2,5-7,1 (aromatase tissu adipeux → œstrogènes non opposés) · dose-réponse avec IMC</td></tr>
             <tr><td><strong>Œstrogènes non opposés</strong></td><td>THS sans progestatif (après hystérectomie = acceptable) · RR 2-10</td></tr>
-            <tr><td><strong>SOPC (anovulation chronique)</strong></td><td>RR 3 · exposition prolongée œstrogènes sans progestérone</td></tr>
+            <tr><td><strong>SOPK (anovulation chronique)</strong></td><td>RR 3 · exposition prolongée œstrogènes sans progestérone</td></tr>
             <tr><td><strong>Nulliparité · DM type 2 · Tamoxifène · Ménopause tardive</strong></td><td>RR ~2 chacun</td></tr>
           </tbody>
         </table>
@@ -43027,6 +43249,74 @@ Revoir rapidement si nouvelle Sx ou changement de dose<br>
           </table>
         </div>
         <div class="key-fact blue" style="margin-top:6px;"><strong>Présentation clinique :</strong> saignement vaginal anormal chez femme postménopausique = cancer endomètre jusqu'à preuve du contraire (10-15 % des femmes postménopausiques avec saignement ont un cancer) · Écho TVS : endomètre ≥ 4-5 mm post-ménopause → biopsie</div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;border-left-color:#c0392b;">
+        <div class="block-title" id="ce-saign"><span class="tag">🩸 Saignement post-ménopausique — la porte d'entrée</span></div>
+
+        <div class="key-fact red" style="margin-top:10px;">🚨 <strong>Règle absolue :</strong> tout saignement utérin survenant <strong>≥ 12 mois après les dernières menstruations</strong> impose d'écarter un cancer de l'endomètre — <strong>quel qu'en soit le volume</strong>, même une seule tache. C'est le symptôme révélateur dans la grande majorité des cas, et c'est ce qui explique que ce cancer soit souvent diagnostiqué à un stade précoce, donc curable.</div>
+
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">🧭 Démarche</div>
+        <div class="criteria-list">
+          <div class="criteria-item"><div class="criteria-num red">1</div><span><strong>Confirmer l'origine.</strong> Examen au spéculum — écarter une cause <strong>vulvaire, vaginale, cervicale, urétrale ou anorectale</strong>. L'atrophie génito-urinaire est fréquente, mais <strong>ne dispense jamais</strong> d'investiguer l'endomètre.</span></div>
+          <div class="criteria-item"><div class="criteria-num red">2</div><span><strong>Échographie transvaginale</strong> — mesurer l'<strong>épaisseur de l'endomètre</strong>. Un endomètre <strong>fin et régulier</strong> chez une patiente ménopausée non sous hormonothérapie a une <strong>valeur prédictive négative élevée</strong>.</span></div>
+          <div class="criteria-item"><div class="criteria-num red">3</div><span><strong>Biopsie de l'endomètre</strong> si l'endomètre est épaissi, irrégulier, mal visualisé, ou si le contexte est à risque. La biopsie à la pipelle se fait <strong>en cabinet</strong>.</span></div>
+          <div class="criteria-item"><div class="criteria-num red">4</div><span><strong>Hystéroscopie avec biopsie dirigée</strong> si la biopsie est <strong>insuffisante, non contributive</strong>, ou si le saignement <strong>persiste malgré une biopsie négative</strong> — une lésion focale (polype, cancer localisé) peut être manquée par un prélèvement à l'aveugle.</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">!</div><span><strong>Un saignement récidivant après un bilan négatif se réinvestigue.</strong> Ne pas se contenter du résultat antérieur.</span></div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px;">
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;border-left:4px solid #d35400;">
+            <strong style="color:#d35400;">⚠️ Là où le seuil échographique ne s'applique pas</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">
+              <div><strong>Sous tamoxifène</strong> — l'endomètre est artificiellement épaissi et hétérogène; l'échographie est peu fiable, l'évaluation est <strong>histologique</strong></div>
+              <div><strong>Sous hormonothérapie de remplacement</strong> — l'interprétation dépend du schéma (continu ou cyclique)</div>
+              <div><strong>Endomètre mal visualisé</strong> (obésité, fibromes, utérus rétroversé) — ne pas conclure, faire une biopsie</div>
+              <div><strong>Saignement persistant ou récidivant</strong> — investiguer, quelle que soit l'épaisseur mesurée</div>
+            </div>
+          </div>
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;border-left:4px solid #1d4ed8;">
+            <strong style="color:#1d4ed8;">🔍 Avant la ménopause aussi</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Le seuil échographique <strong>ne s'applique pas</strong> avant la ménopause — l'endomètre varie normalement selon la phase du cycle.<br>La <strong>biopsie</strong> est indiquée devant un saignement anormal chez une patiente de <strong>45 ans et plus</strong>, ou <strong>plus jeune en présence de facteurs de risque</strong> : obésité, anovulation chronique ou SOPK, nulliparité, tamoxifène, antécédent familial évocateur de Lynch, ou échec du traitement médical.</div>
+          </div>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">📌 <strong>À ne pas oublier :</strong> une biopsie ne renseigne que sur le fragment prélevé. Devant une <strong>forte suspicion clinique</strong>, un résultat bénin sur un prélèvement à l'aveugle <strong>n'exclut pas</strong> une lésion focale — c'est l'indication de l'hystéroscopie.</div>
+      </div>
+
+      <div class="block rx" style="margin-top:14px;border-left-color:#b45309;">
+        <div class="block-title" id="ce-hyper"><span class="tag">🔬 Hyperplasie de l'endomètre — le stade où l'on peut encore agir</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>Pourquoi c'est le bloc le plus utile :</strong> l'hyperplasie est le <strong>précurseur direct</strong> du cancer de type 1, et c'est le seul moment où l'on peut interrompre l'évolution. Toute la conduite dépend d'une seule variable : <strong>y a-t-il des atypies?</strong></div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:24%;">Entité</th><th style="width:24%;">Risque de cancer</th><th>Conduite</th></tr></thead>
+          <tbody>
+            <tr style="background:#f0fdf4;">
+              <td><strong>Hyperplasie sans atypie</strong></td>
+              <td><strong>Faible</strong> — évolution maligne peu fréquente</td>
+              <td><strong>Traitement progestatif</strong> — le <strong>DIU au lévonorgestrel</strong> est l'option la plus efficace (action locale, meilleure observance) · progestatif oral en alternative<br><strong>Corriger la cause</strong> : perte de poids, anovulation, arrêt d'une œstrogénothérapie non opposée<br><strong>Biopsie de contrôle</strong> après quelques mois pour confirmer la régression</td>
+            </tr>
+            <tr style="background:#fce4ec;">
+              <td><strong>Hyperplasie atypique</strong><br><em>(néoplasie intraépithéliale endométriale)</em></td>
+              <td>🚨 <strong>Élevé</strong> — et un <strong>cancer concomitant est déjà présent dans une proportion importante</strong> des hystérectomies faites pour cette indication</td>
+              <td><strong>Hystérectomie totale</strong> — traitement de référence<br>La conservation ovarienne se discute selon l'âge<br><strong>Ne pas faire d'ablation de l'endomètre</strong> — elle détruit le tissu sans permettre le diagnostic et compromet la surveillance</td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px;">
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;border-left:4px solid #d35400;">
+            <strong style="color:#d35400;">🤰 Si la patiente désire une grossesse</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Une <strong>préservation utérine</strong> est envisageable en présence d'une hyperplasie atypique, ou même d'un cancer endométrioïde de bas grade très limité, à conditions strictes :<br>• <strong>traitement progestatif à haute dose</strong> (oral ou DIU-LNG)<br>• <strong>biopsies de contrôle répétées</strong> aux quelques mois<br>• orientation en <strong>fertilité</strong> — le délai compte<br>• <strong>hystérectomie fortement recommandée une fois le projet familial complété</strong><br>⚠️ Décision de gynéco-oncologie, jamais en première ligne.</div>
+          </div>
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;border-left:4px solid #15803d;">
+            <strong style="color:#15803d;">🛡️ Prévention chez la patiente à risque</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">L'<strong>anovulation chronique</strong> et l'obésité exposent l'endomètre à des œstrogènes non opposés pendant des années.<br>➜ Assurer une <strong>protection endométriale</strong> — progestatif cyclique, contraceptif combiné ou DIU-LNG — <strong>même si le saignement n'est pas gênant</strong>.<br>➜ Jamais d'<strong>œstrogène sans progestatif</strong> chez une patiente ayant un utérus.<br>➜ La <strong>perte de poids</strong> réduit l'aromatisation périphérique et le risque.</div>
+          </div>
+        </div>
       </div>
 
       <div class="block para" style="margin-top:14px;">
@@ -43137,23 +43427,10 @@ Revoir rapidement si nouvelle Sx ou changement de dose<br>
           </tbody>
         </table>
 
-        <div class="block-title" style="margin-top:12px" id="ce-4"><span class="tag">🧪 Marqueur tumoral — CA-125</span></div>
-        <p style="font-size:13px"><strong>CA-125 (Cancer Antigen 125)</strong> est une glycoprotéine exprimée par les cellules mésothéliales et les épithéliums müllériens. Dans le cancer de l'endomètre :</p>
-        <table style="font-size:12px;margin-top:4px">
-          <thead><tr><th>Aspect</th><th>Détail</th></tr></thead>
-          <tbody>
-            <tr><td><strong>Sensibilité</strong></td><td>Élevée dans les stades avancés (stade III-IV) et les types histologiques agressifs (séreux, carcinosarcome) · Faible sensibilité stade I (40-50 %)</td></tr>
-            <tr><td><strong>Utilité préopératoire</strong></td><td>CA-125 élevé (&gt; 35 U/mL) préopératoire → ↑ probabilité envahissement extra-utérin · Aide à planifier l'étendue de la chirurgie</td></tr>
-            <tr><td><strong>Suivi post-traitement</strong></td><td>Suivi des récidives si CA-125 initial était élevé · ↑ CA-125 après traitement = suspicion de récidive → réévaluation radiologique</td></tr>
-            <tr><td><strong>Limites</strong></td><td>Non spécifique (↑ dans endométriose, maladies inflammatoires, autres cancers gynécologiques) · Pas recommandé comme dépistage ou diagnostic primaire</td></tr>
-          </tbody>
-        </table>
+              </div>
 
-        <div class="key-fact red" style="margin-top:8px;"><strong>Tests obligatoires chez TOUTES les patientes :</strong> MMR/MSI (dépistage Lynch + valeur prédictive immuno) · p53 (pronostic) · ER/PR (hormonothérapie) · HER2 (si séreux/carcinosarcome) · CA-125 si stade avancé</div>
-      </div>
-
-      <div class="block rx" id="ce-5" style="margin-top:14px;">
-        <div class="block-title"><span class="tag">📋 5.4 Traitement par Stade (NCCN / FIGO 2023)</span></div>
+      <div class="block rx" style="margin-top:14px;">
+        <div class="block-title" id="ce-5"><span class="tag">📋 5.4 Traitement par Stade (NCCN / FIGO 2023)</span></div>
         <div class="key-fact blue" style="margin-bottom:10px">La décision thérapeutique intègre le <strong>stade FIGO 2023</strong>, le <strong>profil moléculaire</strong> (POLEmut · MMRd · NSMP · p53abn), l'<strong>histologie</strong> (endométrioïde vs agressif) et le <strong>statut chirurgical</strong> de la patiente.</div>
         <table style="font-size:12px">
           <thead>
@@ -43265,6 +43542,22 @@ Revoir rapidement si nouvelle Sx ou changement de dose<br>
           </table>
         </div>
         <div class="key-fact red" style="margin-top:8px">🚨 <strong>Récidive :</strong> Vaginale isolée → curiethérapie ± RT externe (survie ~70 % à 5 ans) · Pelvienne → RT ± chimio · À distance → chimio systémique ± immunothérapie (MMRd) · CA-125 + TDM/PET-scan pour confirmation avant traitement</div>
+      </div>
+
+      <div class="block para" style="margin-top:14px;border-left-color:#0369a1;">
+        <div class="block-title" id="ce-4"><span class="tag">🧪 Marqueur tumoral — CA-125</span></div>
+        <p style="font-size:13px"><strong>CA-125 (Cancer Antigen 125)</strong> est une glycoprotéine exprimée par les cellules mésothéliales et les épithéliums müllériens. Dans le cancer de l'endomètre :</p>
+        <table style="font-size:12px;margin-top:4px">
+          <thead><tr><th>Aspect</th><th>Détail</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Sensibilité</strong></td><td>Élevée dans les stades avancés (stade III-IV) et les types histologiques agressifs (séreux, carcinosarcome) · Faible sensibilité stade I (40-50 %)</td></tr>
+            <tr><td><strong>Utilité préopératoire</strong></td><td>CA-125 élevé (&gt; 35 U/mL) préopératoire → ↑ probabilité envahissement extra-utérin · Aide à planifier l'étendue de la chirurgie</td></tr>
+            <tr><td><strong>Suivi post-traitement</strong></td><td>Suivi des récidives si CA-125 initial était élevé · ↑ CA-125 après traitement = suspicion de récidive → réévaluation radiologique</td></tr>
+            <tr><td><strong>Limites</strong></td><td>Non spécifique (↑ dans endométriose, maladies inflammatoires, autres cancers gynécologiques) · Pas recommandé comme dépistage ou diagnostic primaire</td></tr>
+          </tbody>
+        </table>
+
+        <div class="key-fact red" style="margin-top:8px;"><strong>Tests obligatoires chez TOUTES les patientes :</strong> MMR/MSI (dépistage Lynch + valeur prédictive immuno) · p53 (pronostic) · ER/PR (hormonothérapie) · HER2 (si séreux/carcinosarcome) · CA-125 si stade avancé</div>
       </div>
 
     
@@ -46002,7 +46295,7 @@ const SEARCH_INDEX = [
   { id:'niveau-soins',  title:'Niveau de Soins & Approche Palliative', specialty:'Pneumologie',   keywords:['niveau de soins','amm','palliatif','réanimation','dnr','soins de confort','opioïdes','dyspnée','prognose','fin de vie'] },
   // Gynécologie — nouvelles sections
   { id:'gyneco-anatomie', title:'Anatomie de l\'Appareil Reproducteur', specialty:'Gynécologie', keywords:['ovaires','trompes','utérus','col','vagin','vulve','zone de transformation','amh','inhibine','réserve ovarienne'] },
-  { id:'cycles-hormonaux', title:'Cycles Menstruels & Hormones Reproductrices', specialty:'Gynécologie', keywords:['cycle menstruel','œstrogène','progestérone','FSH','LH','axe hypothalamo-hypophyso-ovarien','ovulation','follicule','corps jaune','SOPC'] },
+  { id:'cycles-hormonaux', title:'Cycles Menstruels & Hormones Reproductrices', specialty:'Gynécologie', keywords:['cycle menstruel','œstrogène','progestérone','FSH','LH','axe hypothalamo-hypophyso-ovarien','ovulation','follicule','corps jaune','SOPK'] },
   { id:'cancer-col',    title:'Cancer du Col de l\'Utérus — VPH & Prévention', specialty:'Gynécologie', keywords:['cancer col utérus','VPH','HPV','gardasil','CIN','dysplasie','colposcopie','dépistage','PQDCCU','cytologie','E6','E7','p53'] },
   { id:'cancer-endo',   title:'Cancer de l\'Endomètre — Stadification & Traitement', specialty:'Gynécologie', keywords:['cancer endomètre','hyperplasie','FIGO','type 1','type 2','carcinome endométrioïde','carcinosarcome','progestatifs','hystérectomie','MMRd','TCGA','POLEmut','traitement par stade','stade I','stade II','stade III','stade IV','curiethérapie vaginale','carboplatine','paclitaxel','pembrolizumab','dostarlimab','lenvatinib','trastuzumab','chimioradiation','cytoréduction','p53abn','NSMP','MSI-H','hormonothérapie endomètre','récidive endomètre','ganglion sentinelle','brachythérapie'] },
   { id:'survivance',    title:'Survivance au Cancer & Rôle IPS',        specialty:'Gynécologie', keywords:['survivance','effets tardifs','plan soins survivance','CIPN','cardiotoxicité','IPS','santé sexuelle','atrophie vaginale','fatigue cancéreuse','inhibiteur aromatase','immunothérapie','irAE'] },
