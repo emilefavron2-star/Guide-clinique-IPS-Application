@@ -1303,6 +1303,7 @@ m
         <span class="emoji">💊</span> Pharmacologie
         <svg class="chevron" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>      </div>
       <div class="specialty-items">
+        <div class="nav-item" onclick="showSection('mvl-psn')">💊 MVL &amp; PSN</div>
         <div class="nav-item" onclick="showSection('pharmacoguide')">💊 Guide Pharmaco.</div>
       </div>
     </div>
@@ -1468,7 +1469,7 @@ m
           <div class="home-card-icon" style="background:#f0f9ff;color:#0369a1">💊</div>
           <div class="home-card-body">
             <div class="home-card-name">Pharmacologie</div>
-            <div class="home-card-count">1 section</div>
+            <div class="home-card-count">2 sections</div>
           </div>
         </div>
         <div class="home-card" onclick="showSection('calculateurs')">
@@ -43713,16 +43714,98 @@ Revoir rapidement si nouvelle Sx ou changement de dose<br>
     <div class="section" id="sec-depistage">
       <div class="section-header">
         <div class="section-accent" style="background:#065f46">🛡️</div>
-        <div class="section-title"><h1>Dépistage & Prévention</h1><div class="breadcrumb">Prévention <span class="breadcrumb-sep">·</span> Lignes directrices canadiennes/québécoises</div></div>
+        <div class="section-title"><h1>Prévention &amp; Dépistage</h1><div class="breadcrumb">Grille par âge <span class="breadcrumb-sep">·</span> Dépistage <span class="breadcrumb-sep">·</span> Vaccination <span class="breadcrumb-sep">·</span> Counseling <span class="breadcrumb-sep">·</span> Choisir avec soins</div></div>
       </div>
       <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;">
-        <button onclick="goToBlock('dep-cancer')" style="background:#374151;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">🔬 Cancers</button>
-        <button onclick="goToBlock('dep-cardio')" style="background:#dc2626;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">❤️ CV & Métabolique</button>
-        <button onclick="goToBlock('dep-itss')" style="background:#7c3aed;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">🧬 ITSS & Infections</button>
-        <button onclick="goToBlock('dep-os')" style="background:#92400e;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">🦴 Os & Vision</button>
-        <button onclick="goToBlock('dep-choisir')" style="background:#374151;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">⚠️ Choisir avec soins</button>
-      
-        <button onclick="goToBlock('dep-mvl')" style="background:#065f46;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">💊 MVL &amp; PSN</button></div>
+        <button onclick="goToBlock('dep-0')" style="background:#0a7a4e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧭 Grille par âge</button>
+        <button onclick="goToBlock('dep-risque')" style="background:#b45309;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">⚖️ Risque moyen vs élevé</button>
+        <button onclick="goToBlock('dep-cancer')" style="background:#374151;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🔬 Cancers</button>
+        <button onclick="goToBlock('dep-cardio')" style="background:#dc2626;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">❤️ CV &amp; Métabolique</button>
+        <button onclick="goToBlock('dep-itss')" style="background:#7c3aed;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧬 ITSS &amp; Infections</button>
+        <button onclick="goToBlock('dep-os')" style="background:#92400e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🦴 Os, sens &amp; psychosocial</button>
+        <button onclick="goToBlock('dep-vaccin')" style="background:#0369a1;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">💉 Vaccination adulte</button>
+        <button onclick="goToBlock('dep-counseling')" style="background:#15803d;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🗣️ Counseling</button>
+        <button onclick="goToBlock('dep-arret')" style="background:#6d28d9;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🛑 Quand arrêter</button>
+        <button onclick="goToBlock('dep-choisir')" style="background:#c0392b;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">⚠️ Choisir avec soins</button>
+      </div>
+
+      <div class="key-fact orange" style="margin-top:4px;">🎯 <strong>Comment utiliser cette section :</strong> la <strong>grille par âge</strong> ci-dessous répond à la question de la visite d'aujourd'hui — « qu'est-ce que je dois offrir à cette personne? ». Les blocs suivants donnent le détail par appareil quand une case de la grille demande une précision. Les recommandations proviennent du <strong>GECSSP</strong>, des <strong>programmes québécois de dépistage</strong> (PQDCS, CCR) et des sociétés canadiennes de spécialité; les seuils évoluent — valider avant d'agir.</div>
+
+      <div class="block def" style="margin-top:14px;border-left-color:#0a7a4e;">
+        <div class="block-title" id="dep-0"><span class="tag">🧭 Grille d'entrée par âge — « que faire à cette visite »</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">📖 <strong>Mode d'emploi :</strong> repérer la tranche d'âge, lire la colonne <em>Tous</em>, puis la colonne correspondant au sexe et aux organes présents. Les mentions en <strong>gras</strong> sont celles qui relèvent d'un programme organisé ou d'une recommandation forte; les autres se discutent selon le risque individuel.</div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:13%;">Âge</th><th style="width:32%;">Tous</th><th style="width:27%;">Personnes avec col / seins</th><th>Personnes avec prostate</th></tr></thead>
+          <tbody>
+            <tr style="background:#f0fdf4;">
+              <td><strong>18–29 ans</strong></td>
+              <td><strong>TA à chaque visite</strong> · IMC et tour de taille<br><strong>Statut vaccinal</strong> (dcaT, RRO, varicelle, VPH, hépatite B)<br>Tabac, alcool, cannabis, autres substances<br>Santé sexuelle · contraception<br>Violence conjugale<br><strong>VIH — au moins une fois dans la vie</strong></td>
+              <td><strong>Dépistage du col dès 21–25 ans</strong> selon le protocole en vigueur<br>Acide folique si grossesse envisagée<br>VPH si non vacciné</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td><strong>30–39 ans</strong></td>
+              <td>Idem +<br>Bilan lipidique si <strong>facteurs de risque CV</strong> ou ATCD familial précoce<br>Glycémie ou HbA1c si facteurs de risque<br>ITSS selon exposition<br><strong>VHC une fois</strong> (cohorte 1945–1975 ou facteurs de risque)</td>
+              <td>Dépistage du col selon l'intervalle<br><strong>Évaluer le risque mammaire familial</strong> — un risque élevé change l'âge de début</td>
+              <td>—</td>
+            </tr>
+            <tr style="background:#fff8e1;">
+              <td><strong>40–49 ans</strong></td>
+              <td><strong>Bilan lipidique — hommes ≥ 40 ans</strong><br><strong>Glycémie / HbA1c aux 3 ans dès 40 ans</strong> (plus tôt et plus souvent si facteurs de risque)<br>Calcul du <strong>risque cardiovasculaire</strong><br>Rappel dcaT aux 10 ans</td>
+              <td><strong>Bilan lipidique — femmes ≥ 50 ans ou ménopausées</strong><br>Mammographie : <strong>décision partagée</strong> avant 50 ans, selon risque et préférences<br><strong>Si risque élevé : dépistage déjà commencé</strong></td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td><strong>50–64 ans</strong></td>
+              <td><strong>Dépistage du cancer colorectal — RSOSi aux 2 ans</strong><br><strong>Dépistage pulmonaire par TDM faible dose</strong> si 50–80 ans et tabagisme ≥ 20 paquets-années (actif ou cessé &lt; 15 ans)<br>Poursuivre TA, lipides, glycémie<br><strong>Zona</strong> selon le calendrier en vigueur</td>
+              <td><strong>Mammographie aux 2 ans dès 50 ans</strong> (PQDCS)<br>Poursuivre le dépistage du col<br>Ménopause : symptômes, santé osseuse</td>
+              <td><strong>APS — discussion partagée à partir de 55 ans</strong><br>Ne pas doser sans cette discussion</td>
+            </tr>
+            <tr style="background:#e8f4fd;">
+              <td><strong>65–74 ans</strong></td>
+              <td>Poursuivre CCR, poumon, TA, lipides, glycémie<br><strong>Vision aux 1–2 ans</strong> · audition<br><strong>Risque de chute</strong> et évaluation de la mobilité<br>Fonction cognitive si plainte ou signal<br><strong>Influenza annuel · pneumocoque · zona</strong></td>
+              <td><strong>Mammographie jusqu'à 74 ans</strong><br><strong>DMO dès 65 ans</strong> · FRAX<br>Dépistage du col : arrêt possible selon les critères du protocole</td>
+              <td><strong>Écho abdominale une fois</strong> si homme 65–75 ans ayant fumé — dépistage de l'AAA<br>APS : décision partagée jusqu'à 69 ans</td>
+            </tr>
+            <tr>
+              <td><strong>75 ans et plus</strong></td>
+              <td><strong>Le dépistage devient une décision individualisée</strong> — voir le bloc « Quand arrêter »<br>Priorité aux interventions à bénéfice rapide : <strong>vaccination, prévention des chutes, révision de la médication, vision et audition, dépistage de la fragilité et de la dénutrition</strong><br>Discuter du <strong>niveau de soins</strong></td>
+              <td><strong>DMO chez l'homme dès 70 ans</strong><br>Poursuivre le dépistage du cancer du sein seulement si espérance de vie et préférences le justifient</td>
+              <td>APS : généralement non recommandé au-delà de 70 ans ou si espérance de vie &lt; 10 ans</td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="key-fact green" style="margin-top:12px;">✅ <strong>Le réflexe à garder :</strong> avant d'ajouter un test, se demander <strong>ce qu'on ferait du résultat</strong>. Un dépistage n'a de valeur que si un résultat anormal déclenche une action que la personne accepterait. C'est ce raisonnement qui structure les blocs « Quand arrêter » et « Choisir avec soins ».</div>
+      </div>
+
+      <div class="block para" style="margin-top:14px;border-left-color:#b45309;">
+        <div class="block-title" id="dep-risque"><span class="tag">⚖️ Risque moyen ou élevé — comment classer la personne devant soi</span></div>
+
+        <div class="key-fact orange" style="margin-top:10px;">🎯 <strong>Pourquoi c'est l'étape qu'on saute :</strong> les tableaux de dépistage donnent presque tous deux colonnes — risque moyen et risque élevé — mais rarement le moyen de savoir dans laquelle tombe le patient. Or le risque élevé change <strong>l'âge de début, le test et l'intervalle</strong>. C'est la question à poser <em>avant</em> de consulter le tableau.</div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:16%;">Dépistage</th><th style="width:42%;">Ce qui fait basculer en risque élevé</th><th>Conséquence pratique</th></tr></thead>
+          <tbody>
+            <tr style="background:#fce4ec;"><td><strong>Colorectal</strong></td><td>Antécédent personnel de polype adénomateux ou de CCR · <strong>parent du 1<sup>er</sup> degré atteint avant 60 ans</strong> ou deux parents du 1<sup>er</sup> degré à tout âge · syndrome de <strong>Lynch</strong> ou polypose adénomateuse familiale · <strong>MII évoluant depuis ≥ 8–10 ans</strong></td><td><strong>Coloscopie</strong> et non RSOSi · début vers 40–45 ans, ou <strong>10 ans avant l'âge du cas familial le plus jeune</strong> · intervalle raccourci</td></tr>
+            <tr><td><strong>Sein</strong></td><td>Mutation <strong>BRCA1/2</strong> ou autre gène de prédisposition · antécédent familial marqué · <strong>irradiation thoracique avant 30 ans</strong> (lymphome de Hodgkin) · antécédent d'hyperplasie atypique ou de carcinome lobulaire in situ · <strong>densité mammaire catégorie D</strong></td><td><strong>IRM mammaire ± mammographie annuelle</strong> · début <strong>dès 30 ans</strong> si BRCA · orientation en génétique</td></tr>
+            <tr style="background:#fff8e1;"><td><strong>Poumon</strong></td><td>C'est le seul dépistage où l'admissibilité <em>est</em> le risque : <strong>50–80 ans + tabagisme ≥ 20 paquets-années</strong>, actif ou cessé depuis moins de 15 ans</td><td><strong>TDM thoracique faible dose annuelle</strong> · <strong>toujours coupler à l'aide à la cessation tabagique</strong> — c'est ce qui donne le plus de bénéfice</td></tr>
+            <tr><td><strong>Col utérin</strong></td><td><strong>Immunosuppression</strong> (VIH, greffe, immunosuppresseurs) · exposition in utero au diéthylstilbestrol · antécédent de lésion de haut grade traitée</td><td>Intervalles <strong>raccourcis</strong> · pas d'arrêt du dépistage aux âges habituels · suivi selon protocole spécialisé</td></tr>
+            <tr style="background:#e8f4fd;"><td><strong>Cardiovasculaire</strong></td><td>Antécédent familial de <strong>maladie CV précoce</strong> (homme &lt; 55 ans, femme &lt; 65 ans) · diabète · IRC · <strong>hypercholestérolémie familiale</strong> · maladie inflammatoire chronique · complications de grossesse (prééclampsie, diabète gestationnel)</td><td>Bilan lipidique <strong>plus tôt</strong> que 40/50 ans · calcul du risque et cibles ajustées · dépistage du diabète plus fréquent</td></tr>
+            <tr><td><strong>Diabète</strong></td><td>Obésité · antécédent familial du 1<sup>er</sup> degré · <strong>prédiabète</strong> · diabète gestationnel antérieur · SOPK · HTA · dyslipidémie · origine ethnique à risque · antipsychotiques atypiques</td><td>Dépistage <strong>avant 40 ans</strong> et <strong>plus fréquent que q3 ans</strong> · prédiabète = intervention intensive sur les habitudes de vie</td></tr>
+            <tr style="background:#ede9fe;"><td><strong>Ostéoporose</strong></td><td><strong>Fracture de fragilité</strong> après 40 ans · corticostéroïdes au long cours · ménopause précoce · faible poids · tabac, alcool · <strong>chute dans la dernière année</strong> · inhibiteurs de l'aromatase, privation androgénique</td><td>DMO <strong>avant 65 ans</strong> · calcul du <strong>FRAX</strong> · une fracture de fragilité peut justifier un traitement <em>sans</em> attendre la DMO</td></tr>
+            <tr><td><strong>ITSS</strong></td><td>Partenaires multiples ou nouveau partenaire · HARSAH · usage de drogues injectables · travail du sexe · antécédent d'ITSS · partenaire infecté · incarcération</td><td>Dépistage <strong>annuel ou plus fréquent</strong>, aux <strong>trois sites</strong> selon les pratiques (gorge, anus, urogénital) · offrir la <strong>PrEP</strong> si indiquée</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="key-fact red" style="margin-top:12px;">🚩 <strong>Le piège de l'antécédent familial :</strong> demander « avez-vous des antécédents familiaux de cancer? » donne souvent un « non » alors que la famille est à risque. Poser plutôt les questions concrètes : <strong>qui, quel cancer, à quel âge, de quel côté de la famille</strong>. Un cancer du sein <em>et</em> de l'ovaire dans la même lignée, un cancer avant 50 ans, ou plusieurs cas apparentés justifient une orientation en génétique.</div>
+      </div>
 
       <div class="block def" style="margin-top:14px;">
         <div class="block-title" id="dep-cancer"><span class="tag">🔬 Dépistage du Cancer — Recommandations QC/Canada</span></div>
@@ -43825,6 +43908,123 @@ Revoir rapidement si nouvelle Sx ou changement de dose<br>
         </table>
       </div>
 
+            <div class="block rx" style="margin-top:14px;border-left-color:#0369a1;">
+        <div class="block-title" id="dep-vaccin"><span class="tag">💉 Vaccination de l'adulte</span></div>
+
+        <div class="key-fact red" style="margin-top:10px;">📕 <strong>Le PIQ est la norme, pas un aide-mémoire.</strong> Le <strong>Protocole d'immunisation du Québec</strong> est reconnu par les ordres professionnels comme <strong>la norme de pratique au Québec</strong>; il est mis à jour en continu et <strong>a préséance sur tout autre document</strong>, y compris ce guide. Le tableau ci-dessous sert à savoir <em>quoi vérifier</em> — les indications, doses et intervalles se valident dans le PIQ avant chaque administration.<br><a href="https://msss.gouv.qc.ca/professionnels/vaccination/protocole-d-immunisation-du-quebec-piq/" target="_blank" style="color:#0369a1;font-weight:600;">msss.gouv.qc.ca — Protocole d'immunisation du Québec ↗</a></div>
+
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">🗂️ Ce qu'il faut vérifier chez tout adulte</div>
+        <div style="overflow-x:auto;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:20%;">Vaccin</th><th style="width:40%;">Qui viser</th><th>Points d'attention</th></tr></thead>
+          <tbody>
+            <tr style="background:#e8f4fd;"><td><strong>Influenza</strong></td><td>Campagne <strong>annuelle</strong> · viser en priorité les personnes âgées, les maladies chroniques, la grossesse, les travailleurs de la santé et les contacts de personnes vulnérables</td><td>La gratuité et les groupes ciblés changent chaque saison — vérifier la fiche de la campagne en cours</td></tr>
+            <tr><td><strong>COVID-19</strong></td><td>Selon les recommandations de la campagne en cours</td><td>Intervalles depuis la dernière dose ou la dernière infection — à revalider chaque saison</td></tr>
+            <tr style="background:#f0fdf4;"><td><strong>dcaT / dT</strong></td><td>Rappel <strong>aux 10 ans</strong> chez l'adulte<br><strong>Une dose de dcaT à chaque grossesse</strong></td><td>Vérifier la primovaccination chez les personnes nées à l'étranger · plaies souillées : revoir le statut</td></tr>
+            <tr><td><strong>Pneumocoque</strong></td><td>Personnes âgées et adultes avec <strong>condition à risque</strong> — maladie chronique cardiaque, pulmonaire, hépatique ou rénale, diabète, tabagisme, <strong>asplénie</strong>, immunosuppression, implant cochléaire, fuite de LCR</td><td>Section récemment mise à jour au PIQ — la séquence des produits conjugués et polysaccharidiques a changé : <strong>vérifier systématiquement</strong></td></tr>
+            <tr style="background:#ede9fe;"><td><strong>Zona</strong></td><td>Adultes à partir de l'âge prévu au calendrier · aussi les personnes <strong>immunosupprimées</strong> selon les indications</td><td>Le vaccin recombinant se donne <strong>en deux doses</strong> — s'assurer que la seconde est administrée</td></tr>
+            <tr><td><strong>VPH</strong></td><td>Programme scolaire · rattrapage chez le jeune adulte · indications élargies pour certaines populations (immunosupprimés, HARSAH)</td><td>Le nombre de doses dépend de <strong>l'âge à la première dose</strong> et du statut immunitaire</td></tr>
+            <tr style="background:#fff8e1;"><td><strong>Hépatite B</strong></td><td>Non vaccinés à risque : usage de drogues injectables, partenaires multiples, HARSAH, dialyse, contacts d'une personne infectée, travailleurs de la santé, voyage</td><td>Vérifier la <strong>réponse sérologique</strong> chez les immunosupprimés et les dialysés · doses majorées dans certaines situations</td></tr>
+            <tr><td><strong>Hépatite A</strong></td><td>Voyage en zone endémique · <strong>maladie hépatique chronique</strong> · HARSAH · usage de drogues</td><td>À proposer systématiquement à tout patient cirrhotique</td></tr>
+            <tr style="background:#fce4ec;"><td><strong>RRO · varicelle</strong></td><td>Adultes sans preuve d'immunité, surtout nés après 1970 · avant une grossesse · travailleurs de la santé</td><td>⚠️ <strong>Vaccins vivants — contre-indiqués en grossesse et en immunosuppression</strong></td></tr>
+            <tr><td><strong>Méningocoque</strong></td><td><strong>Asplénie</strong>, déficit en complément, <strong>traitement par inhibiteur du complément</strong>, voyage, éclosion</td><td>Sérogroupes et calendriers distincts selon l'indication</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px;">
+          <div style="background:#fef2f2;border-radius:10px;padding:14px;border-left:4px solid #c0392b;">
+            <strong style="color:#c0392b;">🚩 Situations qui changent tout</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">
+              <div><strong>Immunosuppression</strong> — vaccins vivants contre-indiqués; vacciner <em>avant</em> de débuter un immunosuppresseur quand c'est possible, et vérifier la réponse</div>
+              <div><strong>Grossesse</strong> — influenza et dcaT recommandés; vaccins vivants contre-indiqués</div>
+              <div><strong>Asplénie ou hyposplénie</strong> — pneumocoque, méningocoque, <em>Haemophilus</em> : à planifier idéalement 2 semaines avant une splénectomie</div>
+              <div><strong>Maladie hépatique chronique</strong> — hépatites A et B, pneumocoque, influenza</div>
+              <div><strong>Voyage</strong> — orienter en clinique santé-voyage; délais parfois longs</div>
+            </div>
+          </div>
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;border-left:4px solid #15803d;">
+            <strong style="color:#15803d;">✅ Réflexes de pratique</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">
+              <div><strong>Consulter le registre de vaccination</strong> plutôt que de se fier au souvenir du patient</div>
+              <div><strong>Saisir l'occasion</strong> — toute visite est une occasion de mettre le statut à jour, pas seulement les visites préventives</div>
+              <div><strong>Distinguer vraie contre-indication et fausse</strong> — un rhume banal, une antibiothérapie en cours ou un antécédent familial ne contre-indiquent pas</div>
+              <div><strong>Documenter</strong> le produit, le lot, le site et la date</div>
+              <div><strong>Aborder l'hésitation</strong> avec des questions ouvertes plutôt qu'avec des données</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block rx" style="margin-top:14px;border-left-color:#15803d;">
+        <div class="block-title" id="dep-counseling"><span class="tag">🗣️ Counseling &amp; prévention primaire</span></div>
+
+        <div class="key-fact green" style="margin-top:10px;">🎯 <strong>Le rendement du counseling dépasse celui de la plupart des tests.</strong> Chez un adulte, l'aide à la cessation tabagique, la réduction de la consommation d'alcool et l'activité physique produisent plus de bénéfice que n'importe quel dépistage ajouté. C'est la partie de la visite préventive qui se fait le plus souvent expédier — et celle qui compte le plus.</div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;margin-top:12px;">
+          <div style="background:#fce4ec;border-radius:10px;padding:14px;">
+            <strong style="color:#c0392b;">🚬 Tabac</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Demander le statut à chaque visite</strong> et le documenter.<br>Structure des <strong>5 A</strong> : <em>Ask, Advise, Assess, Assist, Arrange</em> — ou, en version brève, « demander · conseiller · offrir ».<br><strong>Ce qui marche :</strong> conseil bref + <strong>pharmacothérapie</strong> (thérapie de remplacement de la nicotine, varénicline, bupropion) + <strong>suivi organisé</strong>. La combinaison fait bien mieux que chacun seul.<br>Orienter vers les services de cessation existants.</div>
+          </div>
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;">
+            <strong style="color:#d35400;">🍷 Alcool</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Dépistage bref (type <strong>AUDIT-C</strong>) puis <strong>intervention brève</strong> chez les consommateurs à risque.<br>Quantifier en <strong>verres standards par semaine</strong> plutôt qu'en « social » ou « occasionnel ».<br>Chercher les signes de <strong>trouble d'usage</strong> et le risque de <strong>sevrage</strong> avant de conseiller un arrêt brusque.<br>Message clé actuel : le risque augmente de façon continue avec la quantité — il n'existe pas de seuil sans risque.</div>
+          </div>
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+            <strong style="color:#1d4ed8;">🏃 Activité physique</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Cible générale chez l'adulte : <strong>150 min/semaine d'activité aérobie modérée à vigoureuse</strong> + <strong>renforcement musculaire ≥ 2 fois/semaine</strong>.<br>Chez la personne âgée, y ajouter l'<strong>entraînement à l'équilibre</strong> — c'est ce qui réduit les chutes.<br>Le message le plus utile reste : <strong>un peu vaut mieux que rien</strong>, et augmenter progressivement.</div>
+          </div>
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+            <strong style="color:#15803d;">🥗 Nutrition &amp; poids</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Approche centrée sur les <strong>comportements</strong> et la santé métabolique plutôt que sur le seul chiffre de l'IMC.<br>Le <strong>tour de taille</strong> ajoute une information que l'IMC ne donne pas.<br>Éviter les messages culpabilisants — ils réduisent l'adhésion et l'assiduité aux soins.<br>Orienter en nutrition quand la situation le justifie.</div>
+          </div>
+          <div style="background:#ede9fe;border-radius:10px;padding:14px;">
+            <strong style="color:#6d28d9;">🧠 Santé mentale &amp; sécurité</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>PHQ-2 → PHQ-9</strong> si positif · évaluer le <strong>risque suicidaire</strong> quand le contexte le demande<br><strong>Violence conjugale</strong> — questionner en privé, sans le partenaire<br>Sommeil · isolement social<br>Sécurité : <strong>ceinture, casque, conduite avec facultés affaiblies</strong>, sécurité des armes à feu au domicile</div>
+          </div>
+          <div style="background:#f1f5f9;border-radius:10px;padding:14px;">
+            <strong style="color:#334155;">💊 Chimioprophylaxie — à discuter, pas à généraliser</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>AAS en prévention primaire</strong> — n'est plus recommandé de façon systématique : le bénéfice cardiovasculaire est contrebalancé par le risque hémorragique. Décision individualisée.<br><strong>Acide folique</strong> avant la conception<br><strong>Vitamine D</strong> selon le contexte (âge, exposition, santé osseuse) — le <em>dosage</em> de routine n'est pas indiqué (voir Choisir avec soins)<br><strong>PrEP du VIH</strong> chez les personnes à risque élevé</div>
+          </div>
+        </div>
+
+        <div class="key-fact blue" style="margin-top:12px;">🗨️ <strong>Décision partagée — la formuler concrètement :</strong> pour l'APS et le dépistage pulmonaire, la recommandation <em>est</em> d'avoir la conversation, pas de faire le test. Trois éléments à couvrir : <strong>ce que le test peut détecter</strong>, <strong>ce qu'un résultat anormal entraînerait</strong> (biopsie, imagerie de suivi, anxiété, surdiagnostic), et <strong>ce que la personne souhaite</strong>. Documenter que la discussion a eu lieu.</div>
+      </div>
+
+      <div class="block para" style="margin-top:14px;border-left-color:#6d28d9;">
+        <div class="block-title" id="dep-arret"><span class="tag">🛑 Quand arrêter de dépister</span></div>
+
+        <div class="key-fact orange" style="margin-top:10px;">⏳ <strong>Le principe :</strong> un dépistage n'apporte un bénéfice qu'après un <strong>délai</strong> — le temps que le cancer détecté tôt aurait mis à devenir symptomatique. Ce délai est de l'ordre de <strong>10 ans</strong> pour le cancer du sein et le cancer colorectal. Si l'espérance de vie de la personne est plus courte que ce délai, le dépistage ne peut plus lui rapporter — mais il peut encore lui nuire.</div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;border-left:4px solid #15803d;">
+            <strong style="color:#15803d;">✅ Poursuivre si</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Espérance de vie <strong>&gt; 10 ans</strong> compte tenu de l'âge et des comorbidités<br>Personne autonome, peu de comorbidités<br>La personne <strong>accepterait les suites</strong> d'un résultat anormal (investigation, chirurgie, traitement)<br>Le dépistage est encore dans la fenêtre d'âge du programme</div>
+          </div>
+          <div style="background:#fef2f2;border-radius:10px;padding:14px;border-left:4px solid #c0392b;">
+            <strong style="color:#c0392b;">🛑 Cesser ou ne pas amorcer si</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Espérance de vie <strong>&lt; 10 ans</strong> — maladie avancée, fragilité, démence évoluée<br>La personne <strong>refuserait l'investigation</strong> ou le traitement d'un résultat anormal<br>Le geste diagnostique comporterait un risque disproportionné<br>Objectifs de soins orientés vers le confort</div>
+          </div>
+        </div>
+
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">📌 Repères par dépistage</div>
+        <div style="overflow-x:auto;">
+        <table style="font-size:12px;">
+          <thead><tr><th>Dépistage</th><th>Borne supérieure habituelle</th><th>Nuance</th></tr></thead>
+          <tbody>
+            <tr style="background:#f8f9fa;"><td><strong>Sein</strong></td><td>74 ans (fin du programme organisé)</td><td>Au-delà, décision individualisée selon l'espérance de vie et les préférences</td></tr>
+            <tr><td><strong>Colorectal</strong></td><td>74 ans</td><td>Poursuivre jusqu'à 75–85 ans peut se discuter si la personne est en bonne santé et n'a jamais été dépistée</td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>Col utérin</strong></td><td>Arrêt possible selon les critères du protocole, en présence d'un historique de dépistage adéquat et négatif</td><td>Ne pas arrêter si immunosuppression ou antécédent de lésion de haut grade</td></tr>
+            <tr><td><strong>Prostate (APS)</strong></td><td>Généralement non recommandé au-delà de 70 ans</td><td>Ou dès que l'espérance de vie est &lt; 10 ans</td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>Poumon</strong></td><td>80 ans, ou arrêt après 15 ans de cessation tabagique</td><td>Cesser aussi si la personne ne serait pas candidate à un traitement curatif</td></tr>
+            <tr><td><strong>AAA</strong></td><td>Examen <strong>unique</strong> entre 65 et 75 ans</td><td>Un examen négatif ne se répète pas</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="key-fact green" style="margin-top:12px;">🗨️ <strong>Comment le dire sans que ça sonne comme un abandon :</strong> éviter « vous êtes trop vieux pour ça ». Formuler plutôt en termes de bénéfice et de délai — « ce test protège les gens sur une dizaine d'années, et je pense qu'à ce stade-ci d'autres choses vous aideraient davantage : la vaccination, la révision de vos médicaments, la prévention des chutes ». <strong>Remplacer</strong> le dépistage abandonné par les interventions à bénéfice rapide, plutôt que de simplement retirer quelque chose.</div>
+      </div>
+
       <div class="block flag" style="margin-top:14px;">
         <div class="block-title" id="dep-choisir"><span class="tag">⚠️ Choisir avec soins — Tests à éviter (surdiagnostic)</span></div>
         <div class="criteria-list">
@@ -43839,490 +44039,7 @@ Revoir rapidement si nouvelle Sx ou changement de dose<br>
         </div>
         <div class="key-fact green" style="margin-top:8px;font-size:13px;"><strong>Source :</strong> Choisir avec soin Canada (Choosing Wisely Canada) · <em>choisiravecsoin.ca</em> · Société canadienne de médecine interne · INESSS Québec</div>
       </div>
-      <!-- MVL & PSN -->
-      <div class="block rx" style="margin-top:14px;border-left-color:#065f46;" id="dep-mvl">
-        <div class="block-title"><span class="tag">💊 Médicaments en Vente Libre & Produits de Santé Naturels</span></div>
-
-        <!-- Pills nav -->
-        <div style="display:flex;gap:6px;flex-wrap:wrap;margin:10px 0 14px;">
-          <button onclick="showPanel('mvl','mvl0',9)" data-panel="mvl0" style="background:#065f46;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">📋 Classification</button>
-          <button onclick="showPanel('mvl','mvl1',9)" data-panel="mvl1" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">💊 Douleur aiguë</button>
-          <button onclick="showPanel('mvl','mvl2',9)" data-panel="mvl2" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">🤧 Rhume & Grippe</button>
-          <button onclick="showPanel('mvl','mvl3',9)" data-panel="mvl3" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">🌸 Rhinite & Allergie</button>
-          <button onclick="showPanel('mvl','mvl4',9)" data-panel="mvl4" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">🧴 Dermatologie</button>
-          <button onclick="showPanel('mvl','mvl5',9)" data-panel="mvl5" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">🌿 PSN — Cadre & Cas</button>
-          <button onclick="showPanel('mvl','mvl6',9)" data-panel="mvl6" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">💪 PSN — Sports & Stress</button>
-          <button onclick="showPanel('mvl','mvl7',9)" data-panel="mvl7" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">⚠️ Interactions PSN</button>
-          <button onclick="showPanel('mvl','mvl8',9)" data-panel="mvl8" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">🔍 Ressources fiables</button>
-        </div>
-
-        <!-- PANEL mvl0 : Classification + Automédication -->
-        <div id="mvl0" style="display:block;">
-          <div class="key-fact blue" style="margin-bottom:10px;"><strong>Rôle IPS :</strong> Questionner SYSTÉMATIQUEMENT sur MVL et PSN à chaque évaluation — les patients ne les déclarent pas spontanément («&nbsp;c&apos;est pas un vrai médicament&nbsp;»).</div>
-          <table style="font-size:12px;">
-            <thead><tr><th>Annexe</th><th>Description</th><th>Exemple</th></tr></thead>
-            <tbody>
-              <tr><td><strong>Annexe 1</strong></td><td>Rx sur ordonnance, diagnostic et intervention d&apos;un praticien. Vente contrôlée par législation provinciale.</td><td>Antibiotiques, opioïdes</td></tr>
-              <tr style="background:#f0fdf4;"><td><strong>Annexe 2</strong></td><td>Rx sans ordonnance mais intervention du pharmacien requise au point de vente. Zone non accessible au public.</td><td>Agents antibactériens ophtalmiques, NicoDerm</td></tr>
-              <tr><td><strong>Annexe 3</strong></td><td>Rx sans ordonnance, zone d&apos;autosélection sous supervision directe du pharmacien.</td><td>Hydrocortisone 0,5 %, antihistaminiques</td></tr>
-              <tr style="background:#f0fdf4;"><td><strong>Hors annexe</strong></td><td>Vente sans supervision professionnelle (n&apos;importe quel magasin). L&apos;étiquette suffit.</td><td>Vitamines, acétaminophène faible dose</td></tr>
-            </tbody>
-          </table>
-          <div class="key-fact yellow" style="margin-top:12px;"><strong>Risques de l&apos;automédication :</strong> Surdosage involontaire (ex. acétaminophène dans multiples produits combinés) · Interactions médicamenteuses · Masquage de symptômes → retard diagnostique.</div>
-        </div>
-
-        <!-- PANEL mvl1 : Douleur aiguë -->
-        <div id="mvl1" style="display:none;">
-          <!-- Sous-onglets douleur -->
-          <div style="display:flex;gap:5px;flex-wrap:wrap;margin:0 0 10px;">
-            <button onclick="showPanel('doul','doul0',4)" data-panel="doul0" style="background:#c0392b;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">Acétaminophène</button>
-            <button onclick="showPanel('doul','doul1',4)" data-panel="doul1" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">AINS</button>
-            <button onclick="showPanel('doul','doul2',4)" data-panel="doul2" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">Codéine MVL</button>
-            <button onclick="showPanel('doul','doul3',4)" data-panel="doul3" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">Topiques & Relaxants</button>
-          </div>
-
-          <div id="doul0" style="display:block;">
-            <div class="key-fact red"><strong>~500 produits contiennent de l&apos;acétaminophène au Canada</strong> · 4500 hospitalisations/an pour surdose · 3404 intoxications au CAPQ en 2022, ¾ par erreur de dosage.</div>
-            <table style="font-size:12px;margin-top:8px;">
-              <thead><tr><th>Formulation</th><th>Dosage</th><th>Posologie adulte</th></tr></thead>
-              <tbody>
-                <tr><td>Tylenol régulier</td><td>325 mg</td><td>1–2 co q4–6h</td></tr>
-                <tr style="background:#f0fdf4;"><td>Tylenol extra-fort</td><td>500 mg</td><td>1–2 co q4–6h</td></tr>
-                <tr><td>Tylenol arthritique</td><td>650 mg LP</td><td>2 co q8h</td></tr>
-                <tr style="background:#f0fdf4;"><td>Suppositoires</td><td>350 ou 650 mg</td><td>q4–6h</td></tr>
-                <tr><td>Acéta + caféine (Tylenol Ultra)</td><td>500 mg + 65 mg</td><td>1–2 co q4–6h</td></tr>
-              </tbody>
-            </table>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px;">
-              <div class="key-fact yellow"><strong>Doses max quotidiennes :</strong><br>Court terme : <strong>4 g</strong><br>Long terme : <strong>3,2 g</strong><br>Gériatrie : <strong>2,6 g</strong><br>Alcoolisme : <strong>2 g</strong><br>IH / IRC : réduire dose</div>
-              <div class="key-fact red"><strong>CI/Précautions :</strong><br>Hépatopathie grave, hypersensibilité<br>Déficience G6PD (hémolyse)<br>Cumul produits combinés<br><strong>Interactions :</strong> Warfarine (&uarr; saignement) · Carbamazépine, alcool, hépatotoxiques (&uarr; hépatotoxicité)</div>
-            </div>
-          </div>
-
-          <div id="doul1" style="display:none;">
-            <div class="key-fact blue"><strong>Mécanisme :</strong> Inhibition COX &rarr; &darr; prostaglandines, prostacycline, thromboxanes. COX-1 : cytoprotection gastrique, homéostasie vasculaire, agrégation plaquettaire, fonction rénale. COX-2 : induite par états inflammatoires.</div>
-            <table style="font-size:12px;margin-top:8px;">
-              <thead><tr><th>Molécule</th><th>Dose</th><th>Max MVL/jour</th><th>Notes</th></tr></thead>
-              <tbody>
-                <tr><td>Ibuprofène (Advil, Motrin)</td><td>200–400 mg q4–6h</td><td>1200 mg</td><td>Anti-inflammatoire, analgésique, antipyrétique</td></tr>
-                <tr style="background:#fef2f2;"><td>Naproxène sodique (Aleve)</td><td>220 mg q8–12h</td><td>440 mg</td><td>Demi-vie plus longue, 1x/12h possible</td></tr>
-                <tr><td>AAS (Aspirine)</td><td>325–500 mg q4–6h</td><td>4000 mg</td><td>Antiplaquettaire irréversible à faible dose</td></tr>
-              </tbody>
-            </table>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px;">
-              <div class="key-fact red"><strong>Contre-indications AINS :</strong><br>Hypersensibilité · Pontage récent<br>IC NYHA III-IV<br>Gastroduodénopathie active<br>ClCr &lt; 30 mL/min · K&sup+ &gt; 5,5 mmol/L<br>Grossesse &ge;26–28 sem. · IH grave</div>
-              <div class="key-fact yellow"><strong>Triple Whammy :</strong><br>AINS + IECA/ARA + Diurétique<br>&rarr; hypoperfusion rénale &rarr; IRA<br><br><strong>Interactions :</strong> AAS 80 mg (&darr; antiplaquettaire) · Anticoag/ISRS/cortico (&uarr; saignement) · Li (&uarr; concentration) · Méthotrexate (toxicité)</div>
-            </div>
-            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin-top:8px;">
-              <div style="background:#fef2f2;border-radius:8px;padding:8px;font-size:11px;"><strong>🫀 Risque CV</strong><br>Tous les AINS &uarr; risque IM/AVC (dose/durée dépendant) · AAS seul épargné</div>
-              <div style="background:#fef2f2;border-radius:8px;padding:8px;font-size:11px;"><strong>🤮 Risque GI</strong><br>Ulcères, hémorragies · IPP concomitant si risque élevé · Naproxène profil GI légèrement meilleur</div>
-              <div style="background:#fef2f2;border-radius:8px;padding:8px;font-size:11px;"><strong>🫘 Risque rénal</strong><br>IRA (surtout si DFG &lt;60 ou hypovolémie) · Retention sodique · HTA</div>
-            </div>
-          </div>
-
-          <div id="doul2" style="display:none;">
-            <div class="key-fact blue"><strong>Mécanisme :</strong> Agoniste récepteur &mu;-opioïde central + périphérique. Métabolisé en morphine par CYP2D6 (variabilité génétique importante).</div>
-            <table style="font-size:12px;margin-top:8px;">
-              <thead><tr><th>Produit</th><th>Composition</th><th>Dose</th><th>Max/jour</th></tr></thead>
-              <tbody>
-                <tr><td>Atasol-8</td><td>Acét 325 mg + Codéine 8 mg + Caféine 30 mg</td><td>1–2 co q4–6h</td><td>12 co</td></tr>
-                <tr style="background:#fef2f2;"><td>222 (Annexe 2)</td><td>AAS 375 mg + Codéine 8 mg + Caféine 30 mg</td><td>1–2 co q4–8h</td><td>10 co</td></tr>
-              </tbody>
-            </table>
-            <div class="key-fact red" style="margin-top:8px;"><strong>CI :</strong> Hypersensibilité, occlusion intestinale · <strong>Précautions :</strong> Dépendance, abus, surdose · CYP2D6 métaboliseurs lents (inefficacité) ou ultrarapides (surdose) · Gériatrie (chutes, confusion) · <strong>Interactions :</strong> Dépresseurs SNC (additif), inhibiteurs/inducteurs CYP2D6, IMAO, naltrexone</div>
-          </div>
-
-          <div id="doul3" style="display:none;">
-            <p style="font-size:12px;font-weight:700;margin-bottom:6px;">Analgésiques topiques</p>
-            <table style="font-size:12px;">
-              <thead><tr><th>Produit</th><th>Mécanisme</th><th>Précautions</th><th>Notes cliniques</th></tr></thead>
-              <tbody>
-                <tr><td>Diclofénac gel (Voltaren Emulgel)</td><td>AINS topique · Inhibition COX locale</td><td>AINS PO (duplication) · Anticoagulants · Éviter grossesse T3</td><td>Absorption proportionnelle à la surface/hydratation · EI systémiques possibles</td></tr>
-                <tr style="background:#f0fdf4;"><td>Capsaïcine (Zostrix)</td><td>Déplétion substance P au niveau cutané</td><td>Pas sur peau lésée · Grossesse (absence données)</td><td>Effet après plusieurs jours · Éviter chaleur et pansement occlusif</td></tr>
-                <tr><td>Salicylate de méthyle / Triéthanolamine (Antiphlogistine, Myoflex)</td><td>Contre-irritant / AINS faible topique</td><td>Interaction anticoagulants · Éviter en grossesse</td><td>Effet contre-irritant bien toléré</td></tr>
-                <tr style="background:#f0fdf4;"><td>Menthol/Camphre/Eucalyptus (Baume du tigre)</td><td>Contre-irritant cutané</td><td>Données insuffisantes en grossesse</td><td>Sensation de fraîcheur/chaleur locale</td></tr>
-              </tbody>
-            </table>
-            <p style="font-size:12px;font-weight:700;margin:10px 0 6px;">Relaxants musculaires</p>
-            <table style="font-size:12px;">
-              <thead><tr><th>Molécule</th><th>Posologie</th><th>Précautions / EI</th></tr></thead>
-              <tbody>
-                <tr><td>Méthocarbamol (Robaxin, Robaxisal, Robaxacet, Robax Platine)</td><td>1500 mg q6h x 2–3j puis 1000 mg q6h · Max 4 g/j x 5 jours</td><td>IH · Peu de données grossesse/allait. · Gériatrie (effets anticholinergiques)</td></tr>
-                <tr style="background:#f0fdf4;"><td>Orphénadrine (Norflex)</td><td>100 mg q12h</td><td>Effets anticholinergiques plus marqués · Gériatrie (Beers)</td></tr>
-              </tbody>
-            </table>
-            <div class="key-fact yellow" style="margin-top:8px;"><strong>EI communs :</strong> Étourdissements, somnolence, nausées, vision brouillée · <strong>Interactions :</strong> Alcool/dépresseurs SNC (effet additif)</div>
-          </div>
-        </div>
-
-        <!-- PANEL mvl2 : Rhume & Grippe -->
-        <div id="mvl2" style="display:none;">
-          <div style="display:flex;gap:5px;flex-wrap:wrap;margin:0 0 10px;">
-            <button onclick="showPanel('rh','rh0',3)" data-panel="rh0" style="background:#0369a1;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">Décongestionnants</button>
-            <button onclick="showPanel('rh','rh1',3)" data-panel="rh1" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">Antitussifs</button>
-            <button onclick="showPanel('rh','rh2',3)" data-panel="rh2" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">Hygiène nasale</button>
-          </div>
-
-          <div id="rh0" style="display:block;">
-            <div class="key-fact blue"><strong>Mécanisme :</strong> Sympathomimétiques &alpha;-adrénergiques &rarr; vasoconstriction muqueuse nasale &rarr; &darr; &oelig;dème et drainage des sécrétions.</div>
-            <p style="font-size:12px;font-weight:700;margin:8px 0 4px;">Topiques</p>
-            <table style="font-size:12px;">
-              <thead><tr><th>Produit</th><th>Début action</th><th>Durée</th><th>Intervalle</th></tr></thead>
-              <tbody>
-                <tr><td>Oxymétazoline (Claritin nasal, Drixoral, Dristan)</td><td>&lt; 10 min</td><td>12 h</td><td>q10–12h · <strong>Max 3 jours</strong></td></tr>
-                <tr style="background:#eff6ff;"><td>Phényléphrine nasale (Dristan)</td><td>&le; 2 min</td><td>2,5–5 h</td><td>q4h · <strong>Max 3 jours</strong></td></tr>
-                <tr><td>Xylométazoline (Otrivin)</td><td>&lt; 2 min</td><td>12 h</td><td>q8–10h · <strong>Max 3 jours</strong></td></tr>
-              </tbody>
-            </table>
-            <p style="font-size:12px;font-weight:700;margin:8px 0 4px;">Oraux</p>
-            <table style="font-size:12px;">
-              <thead><tr><th>Produit</th><th>Dose</th><th>Notes</th></tr></thead>
-              <tbody>
-                <tr><td>Phényléphrine (Sudafed PE)</td><td>10 mg PO q4h, max 60 mg/j</td><td>Efficacité remise en doute (FDA 2023)</td></tr>
-                <tr style="background:#eff6ff;"><td>Pseudoéphédrine (Sudafed)</td><td>60 mg PO q4–6h, max 240 mg/j</td><td>Risque d&apos;abus/diversion · Annexe 2 (derrière le comptoir)</td></tr>
-              </tbody>
-            </table>
-            <div class="key-fact red" style="margin-top:8px;"><strong>Rhinite médicamenteuse :</strong> Congestion rebond à l&apos;arrêt des décongestionnants topiques prolongés. Prévention : faible dose, au besoin seulement, <strong>max 3 jours</strong>. Soulagement : arrêt brusque OU sevrage graduel (1 narine à la fois) OU corticostéroïde topique.</div>
-            <div class="key-fact yellow" style="margin-top:6px;"><strong>EI décongestionnants oraux :</strong> Insomnie, nervosité, palpitations, tachycardie, tremblements · CI : HTA non contrôlée, IMAO, hyperthyroïdie, glaucome angle fermé.</div>
-          </div>
-
-          <div id="rh1" style="display:none;">
-            <table style="font-size:12px;">
-              <thead><tr><th>Produit</th><th>Dose adulte</th><th>Prises/jour</th><th>Recommandation</th></tr></thead>
-              <tbody>
-                <tr><td>Dextrométhorphane (DM)</td><td>10–20 mg</td><td>q4–6h</td><td style="background:#fef2f2;color:#c0392b;font-weight:600;">Non recommandé (efficacité limitée, interactions)</td></tr>
-                <tr style="background:#f0fdf4;"><td>Codéine</td><td>10–20 mg</td><td>q4–6h</td><td style="background:#fef2f2;color:#c0392b;font-weight:600;">Non recommandé (efficacité controversée, EI)</td></tr>
-                <tr><td>Chlophédianol (Ulone)</td><td>25 mg</td><td>3–4x/j</td><td style="background:#fef2f2;color:#c0392b;font-weight:600;">Non recommandé (efficacité limitée)</td></tr>
-                <tr style="background:#f0fdf4;"><td>Guaïfénésine (expectorant)</td><td>200–400 mg</td><td>q4h</td><td style="background:#f0fdf4;color:#065f46;font-weight:600;">Facilite expecto. des sécrétions · OK</td></tr>
-              </tbody>
-            </table>
-            <div class="key-fact blue" style="margin-top:8px;"><strong>Principe :</strong> La toux a souvent une cause sous-jacente (RGO, asthme, IVRS, IECA). <strong>Traiter la cause d&apos;abord</strong>. Mesures non pharmacologiques &gt; pharmacologiques.</div>
-          </div>
-
-          <div id="rh2" style="display:none;">
-            <div class="key-fact blue"><strong>Produits :</strong> Gouttes nasales, vaporisateur nasal, irrigation nasale (Neti Pot). Indications : hygiène quotidienne, rhume, rhinite allergique (ad 4–5x/jour).</div>
-            <div style="background:var(--surface);border:1.5px solid #0369a1;border-radius:8px;padding:10px;margin-top:8px;">
-              <p style="font-weight:700;font-size:12px;margin-bottom:6px;">🧂 Recette solution saline maison</p>
-              <p style="font-size:12px;">Sel (NaCl) : 10 mL (2 c. à thé) · Bicarbonate de sodium : 2,5 mL (½ c. à thé) · Eau stérile/bouillie tiédie : 1000 mL (4 tasses)</p>
-              <p style="font-size:12px;margin-top:4px;"><strong>Conservation :</strong> 7 jours au réfrigérateur / 24h à température ambiante (contenant de verre étanche). Servir tiède pour l&apos;irrigation.</p>
-              <p style="font-size:12px;margin-top:4px;"><strong>Étapes :</strong> Laver mains &rarr; moucher &rarr; solution saline &rarr; moucher à nouveau &rarr; laver mains.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- PANEL mvl3 : Rhinite & Allergie -->
-        <div id="mvl3" style="display:none;">
-          <div style="display:flex;gap:5px;flex-wrap:wrap;margin:0 0 10px;">
-            <button onclick="showPanel('all','all0',4)" data-panel="all0" style="background:#7c3aed;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">Antihistaminiques</button>
-            <button onclick="showPanel('all','all1',4)" data-panel="all1" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">CSI nasaux</button>
-            <button onclick="showPanel('all','all2',4)" data-panel="all2" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">Produits ophtalmiques</button>
-            <button onclick="showPanel('all','all3',4)" data-panel="all3" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">Agents conservation</button>
-          </div>
-
-          <div id="all0" style="display:block;">
-            <div class="key-fact blue"><strong>Mécanisme :</strong> Agoniste inverse des récepteurs H1 · Compétition avec histamine au niveau des muscles lisses, capillaires, glandes exocrines. Efficace pour : éternuements, prurit, rhinorrhée. Peu d&apos;effet sur la congestion.</div>
-            <table style="font-size:12px;margin-top:8px;">
-              <thead><tr><th>Génération</th><th>Molécules</th><th>Dose adulte</th><th>Notes</th></tr></thead>
-              <tbody>
-                <tr style="background:#fef2f2;"><td><strong>1ère gén.</strong><br><small style="color:#c0392b;">Éviter si possible</small></td><td>Diphenhydramine (Benadryl) · Chlorphéniramine</td><td>Diphenhydramine 25–50 mg q4–6h</td><td>Traversent BHE &rarr; sédation, effets anticholinergiques, rétention urinaire · Non sélectifs</td></tr>
-                <tr style="background:#f0fdf4;"><td><strong>2e gén.</strong><br><small style="color:#065f46;">1er choix</small></td><td>Cétirizine (Reactine) · Loratadine (Claritin) · Fexofénadine (Allegra) · Desloratadine (Aerius)</td><td>Cétirizine 10 mg DIE · Loratadine 10 mg DIE · Fexofénadine 120–180 mg DIE</td><td>Liaisons H1 périphériques · Ne traversent pas BHE &rarr; pas de sédation (sauf cétirizine légèrement) · Bien tolérés</td></tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div id="all1" style="display:none;">
-            <div class="key-fact blue"><strong>Agents les plus efficaces en rhinite allergique</strong> · Améliorent TOUS les symptômes incluant congestion et symptômes oculaires · Mécanisme : régulent mastocytes avant dégranulation &amp; &darr; tous médiateurs inflammatoires.</div>
-            <div class="key-fact yellow" style="margin:6px 0;"><strong>Délai :</strong> Début en quelques jours · Effet max en 1–2 semaines · Utilisation régulière &gt; au besoin · Enseigner la méthode d&apos;administration (viser la paroi latérale de la narine, ne pas inhaler brusquement).</div>
-            <table style="font-size:12px;">
-              <thead><tr><th>Produit</th><th>Posologie</th><th>Notes RAMQ</th></tr></thead>
-              <tbody>
-                <tr><td>Fluticasone propionate (Flonase)</td><td>2 vap/narine DIE</td><td>RAMQ : &gt;18 ans</td></tr>
-                <tr style="background:#f0fdf4;"><td>Mométasone (Nasonex)</td><td>2 vap/narine DIE</td><td>RAMQ : &gt;12 ans · <strong>1er choix grossesse/allaitement/pédiatrie</strong></td></tr>
-                <tr><td>Triamcinolone (Nasacort AQ)</td><td>2 vap/narine DIE</td><td>RAMQ : &gt;12 ans</td></tr>
-              </tbody>
-            </table>
-            <div class="key-fact red" style="margin-top:8px;"><strong>EI :</strong> Goût amer, irritation nasale, céphalée, épistaxis · <strong>CI rares :</strong> Ulcère du septum nasal, trauma nasal récent</div>
-          </div>
-
-          <div id="all2" style="display:none;">
-            <p style="font-size:12px;font-weight:700;margin-bottom:6px;">Produits ophtalmiques — conjonctivite allergique</p>
-            <table style="font-size:12px;">
-              <thead><tr><th>Classe</th><th>Exemples</th><th>Indications</th></tr></thead>
-              <tbody>
-                <tr><td>Antihistaminiques topiques</td><td>Kétotifène (Zaditor, Alaway)</td><td>Prurit oculaire allergique · 1 gtte q8–12h</td></tr>
-                <tr style="background:#f0fdf4;"><td>Vasoconstricteurs</td><td>Naphazoline (Visine rouge)</td><td>Rougeur oculaire · Max 3–4 jours</td></tr>
-              </tbody>
-            </table>
-            <p style="font-size:12px;font-weight:700;margin:10px 0 4px;">Produits hydratants — sécheresse oculaire</p>
-            <table style="font-size:12px;">
-              <thead><tr><th>Véhicule</th><th>Caractéristiques</th></tr></thead>
-              <tbody>
-                <tr><td>Solution</td><td>Plus courant, reste le moins longtemps</td></tr>
-                <tr style="background:#f0fdf4;"><td>Gel</td><td>Plus longue durée de contact vs solution</td></tr>
-                <tr><td>Onguent</td><td>Haute viscosité, préféré la nuit, brouille la vision</td></tr>
-                <tr style="background:#f0fdf4;"><td>Suspension</td><td>À agiter avant emploi (rare en MVL)</td></tr>
-              </tbody>
-            </table>
-            <div class="key-fact blue" style="margin-top:8px;"><strong>Séquence d&apos;essai (méta-analyse Moshirgar) :</strong> Carboxyméthylcellulose / HPMC / Acide hyaluronique &rarr; si réfractaire : Systane Ultra ou Soothe &rarr; si toujours réfractaire : agent lipidique ou gel/onguent. Essai minimal de <strong>2 semaines</strong> avant de juger l&apos;efficacité.</div>
-            <p style="font-size:12px;font-weight:700;margin:10px 0 4px;">Agents antibactériens topiques (Annexe 2)</p>
-            <table style="font-size:12px;">
-              <thead><tr><th>Molécule</th><th>Spectre</th><th>Produit</th></tr></thead>
-              <tbody>
-                <tr><td>Gramicidine</td><td>Gram + et certains Gram &ndash;</td><td rowspan="2">Polysporin Gouttes (Gramicidine + Polymyxine B)</td></tr>
-                <tr style="background:#f0fdf4;"><td>Polymyxine B</td><td>Gram &ndash;</td></tr>
-                <tr><td>Bacitracine</td><td>Gram + (instable en solution)</td><td>Stérisporin onguent (Bacitracine + Polymyxine B)</td></tr>
-              </tbody>
-            </table>
-            <div class="key-fact yellow" style="margin-top:6px;"><strong>Note :</strong> La majorité des conjonctivites bactériennes sont autoréolutives. Usage chronique &rarr; toxicité épithéliale, résistance. Nettoyage des paupières recommandé.</div>
-          </div>
-
-          <div id="all3" style="display:none;">
-            <div class="key-fact blue"><strong>Agents de conservation :</strong> Nécessaires pour assurer la stérilité dans les bouteilles multi-usage. Si usage &gt;4–6x/jour &rarr; préférer sans conservateur.</div>
-            <table style="font-size:12px;margin-top:8px;">
-              <thead><tr><th>Type</th><th>Exemples</th><th>Compatibilité lentilles</th></tr></thead>
-              <tbody>
-                <tr style="background:#fef2f2;"><td>Détergents</td><td>Chlorure de benzalkonium (BAK)</td><td><strong>NON compatible</strong> lentilles cornéennes · Risque inflammatoire</td></tr>
-                <tr style="background:#f0fdf4;"><td>Oxydatifs</td><td>Perborate de sodium, chlorite de sodium, polyquad</td><td><strong>Compatible</strong> lentilles (préférés si porteur)</td></tr>
-              </tbody>
-            </table>
-            <div class="key-fact yellow" style="margin-top:8px;"><strong>Péremption :</strong> Norme 89.01 OPQ · Préparations oto-naso-ophtalmiques = <strong>30 jours après ouverture</strong> (sauf études fabricant permettant plus). Toujours dater l&apos;ouverture sur la bouteille.</div>
-          </div>
-        </div>
-
-        <!-- PANEL mvl4 : Dermatologie -->
-        <div id="mvl4" style="display:none;">
-          <div style="display:flex;gap:5px;flex-wrap:wrap;margin:0 0 10px;">
-            <button onclick="showPanel('derm','derm0',4)" data-panel="derm0" style="background:#92400e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">Sécheresse cutanée</button>
-            <button onclick="showPanel('derm','derm1',4)" data-panel="derm1" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">Corticostéroïdes topiques</button>
-            <button onclick="showPanel('derm','derm2',4)" data-panel="derm2" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">Dermatite contact</button>
-            <button onclick="showPanel('derm','derm3',4)" data-panel="derm3" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">Antifongiques topiques</button>
-          </div>
-
-          <div id="derm0" style="display:block;">
-            <div class="key-fact blue"><strong>Ingrédients à rechercher :</strong> Acide lactique · Urée · Acide hyaluronique · Diméthicone · Glycérine · Lanoline · Huile minérale · Vaseline · Huiles naturelles · Céramides.</div>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px;">
-              <div style="background:var(--surface);border:1px solid #92400e;border-radius:8px;padding:10px;">
-                <p style="font-size:12px;font-weight:700;margin-bottom:6px;">Conseils IPS — Sécheresse cutanée</p>
-                <div style="font-size:12px;line-height:1.7;">Douche max 10 min (tiède &gt; chaude)<br>
-Nettoyant hydratant (CeraVe, Dove) &gt; savon ordinaire<br>
-Éviter parfums et colorants<br>
-Crème hydratante plusieurs fois/jour (appliquer sur peau légèrement humide)<br>
-Humidificateur (60 %) en hiver<br>
-Écran solaire, baume à lèvres, gants pour vaisselle</div>
-              </div>
-              <div style="background:var(--surface);border:1px solid #92400e;border-radius:8px;padding:10px;">
-                <p style="font-size:12px;font-weight:700;margin-bottom:6px;">Principes actifs selon effet</p>
-                <div style="font-size:12px;line-height:1.7;"><strong>Humectants :</strong> Acide hyaluronique, glycérine, urée (attirent l&apos;eau)<br>
-<strong>Émollients :</strong> Céramides, huiles (comblent les espaces intercellulaires)<br>
-<strong>Occlusifs :</strong> Vaseline, lanoline, diméthicone (forment barrière)<br>
-<strong>Kératolytiques :</strong> Acide lactique, urée &gt;10 % (ramollissent la peau épaissie)</div>
-              </div>
-            </div>
-          </div>
-
-          <div id="derm1" style="display:none;">
-            <div class="key-fact blue"><strong>Classification :</strong> Classés par puissance 1 (plus élevée) à 7 (plus faible). MVL généralement de faible puissance (hydrocortisone 0,5–1 %). Application die–BID sur région affectée, temporairement.</div>
-            <table style="font-size:12px;margin-top:8px;">
-              <thead><tr><th>Classe</th><th>Puissance</th><th>Exemple MVL</th><th>Utilisation</th></tr></thead>
-              <tbody>
-                <tr style="background:#f0fdf4;"><td>Classe 6–7</td><td>Faible</td><td>Hydrocortisone 0,5–1 %</td><td>Visage, plis, génitaux, nourrissons · Dermatite atopique légère</td></tr>
-                <tr><td>Classe 4–5</td><td>Modérée (Rx)</td><td>Triamcinolone 0,1 %, Bétaméthasone 0,05 %</td><td>Corps, cuir chevelu · Sous supervision</td></tr>
-                <tr style="background:#fef2f2;"><td>Classe 1–2</td><td>Très élevée (Rx)</td><td>Clobétasol 0,05 %</td><td>Psoriasis, lichen plan · Éviter visage/plis</td></tr>
-              </tbody>
-            </table>
-            <div class="key-fact yellow" style="margin-top:8px;"><strong>EI :</strong> Dermatite de contact par hypersensibilité · Atrophie cutanée (exposition prolongée à forte puissance) · Vergetures · Retard cicatrisation · <strong>Corticophobie :</strong> Rassurer les patients — corticos topiques de faible puissance sont sécuritaires à court terme.</div>
-          </div>
-
-          <div id="derm2" style="display:none;">
-            <div class="key-fact red"><strong>Les antibiotiques topiques sont la cause la plus fréquente de dermatite de contact allergique (DCA) médicamenteuse.</strong></div>
-            <table style="font-size:12px;margin-top:8px;">
-              <thead><tr><th>Allergène</th><th>Prévalence (test épicutané)</th><th>Source commune</th></tr></thead>
-              <tbody>
-                <tr style="background:#fef2f2;"><td><strong>Bacitracine</strong></td><td>29 %</td><td>Polysporin, onguents topiques</td></tr>
-                <tr><td><strong>Néomycine</strong></td><td>23 %</td><td>Antibiotiques topiques combinés</td></tr>
-                <tr style="background:#fef2f2;"><td>Lidocaïne</td><td>&mdash;</td><td>Anesthésiques locaux topiques (hémorroïdes, plaies)</td></tr>
-                <tr><td>Propylèneglycol</td><td>&mdash;</td><td>Véhicule dans cosmétiques, crèmes</td></tr>
-                <tr style="background:#fef2f2;"><td>Polymyxine B</td><td>&mdash;</td><td>Antibiotiques topiques</td></tr>
-                <tr><td>Tixocortol-21-pivalate</td><td>&mdash;</td><td>Corticostéroïdes topiques (marqueur DCA)</td></tr>
-                <tr style="background:#fef2f2;"><td>Benzocaïne</td><td>&mdash;</td><td>Anesthésiques locaux</td></tr>
-                <tr><td>Budésonide</td><td>&mdash;</td><td>Corticostéroïdes (marqueur DCA aux corticos)</td></tr>
-              </tbody>
-            </table>
-            <div class="key-fact yellow" style="margin-top:8px;"><strong>Prise en charge :</strong> Identifier et éliminer l&apos;allergène · Corticostéroïde topique (classe selon sévérité) · Test épicutané (patch test) si DCA suspectée · Éviter la néomycine si antécédent de sensibilisation.</div>
-          </div>
-
-          <div id="derm3" style="display:none;">
-            <div class="key-fact blue"><strong>Indications :</strong> Pied d&apos;athlète (tinea pedis) · Infections vaginales fongiques (Candida) · Infections cutanées fongiques (tinea corporis, cruris, versicolor).</div>
-            <table style="font-size:12px;margin-top:8px;">
-              <thead><tr><th>Molécule</th><th>Produit</th><th>Concentration</th><th>Mécanisme</th><th>Notes</th></tr></thead>
-              <tbody>
-                <tr><td>Clotrimazole</td><td>Canesten crème</td><td>1 %</td><td>Inhibition synthèse ergostérol (membrane fongique)</td><td>Pied d&apos;athlète : BID x 4 sem · Candidose vaginale : 1–6 jours selon formulation</td></tr>
-                <tr style="background:#f0fdf4;"><td>Miconazole</td><td>Monistat crème</td><td>2 %</td><td>Idem clotrimazole</td><td>Candidose vaginale : crème intravaginale 1, 3 ou 7 jours</td></tr>
-                <tr><td>Tolnaftate</td><td>Tinactin poudre/aérosol</td><td>1 %</td><td>Inhibe squalène époxydase fongique</td><td>Pied d&apos;athlète principalement · Pas de couverture Candida</td></tr>
-              </tbody>
-            </table>
-            <div class="key-fact red" style="margin-top:8px;"><strong>Red flags &rarr; référer :</strong> Onycomycose (ongle) &rarr; antifongique PO nécessaire · Dermatophytose étendue · Tinea capitis (cheveux/cuir chevelu) · Échec MVL après 2–4 semaines · Diabète/immunosuppression.</div>
-          </div>
-        </div>
-
-        <!-- PANEL mvl5 : PSN — Cadre & Cas cliniques -->
-        <div id="mvl5" style="display:none;">
-          <div class="key-fact blue" style="margin-bottom:10px;"><strong>Définition PSN :</strong> Remèdes traditionnels, homéopathie, vitamines/minéraux, probiotiques, plantes médicinales, acides aminés, acides gras essentiels · <strong>NPN</strong> = Numéro de produit naturel (examen innocuité/qualité/allégations par Santé Canada).</div>
-          <div class="key-fact yellow" style="margin-bottom:10px;"><strong>Contexte canadien :</strong> 73 % des Canadiens consomment des PSN · 32 % quotidiennement · 71 % les croient « meilleurs que les médicaments » · 42 % les croient « sans danger car naturels » · <strong>Rapport VGC 2021 :</strong> Surveillance de Santé Canada insuffisante — lacunes dans inspection et suivi post-commercialisation.</div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
-            <div style="background:#f5f3ff;border:1.5px solid #7c3aed;border-radius:8px;padding:10px;">
-              <p style="font-size:12px;font-weight:700;color:#7c3aed;margin-bottom:6px;">🥈 Argent colloïdal — Argyrisme</p>
-              <div style="font-size:12px;line-height:1.7;">Utilisé pour propriétés antimicrobiennes présumées<br>
-18 % des particules absorbées et distribuées<br>
-&rarr; Teinte <strong>bleutée irréversible</strong> de la peau (aggravée par le soleil)<br>
-Cause la plus fréquente d&apos;argyrisme généralisé<br>
-Aucun bénéfice thérapeutique démontré</div>
-            </div>
-            <div style="background:#eff6ff;border:1.5px solid #0369a1;border-radius:8px;padding:10px;">
-              <p style="font-size:12px;font-weight:700;color:#0369a1;margin-bottom:6px;">💠 Divya Swasari Ras — Glycosides cardiaques</p>
-              <div style="font-size:12px;line-height:1.7;">Produit ayurvédique — problèmes respiratoires<br>
-Mélange d&apos;extraits végétaux + minéraux (poudre)<br>
-Contamination fréquente par glycosides cardiaques<br>
-Souvent faux positif à la digoxinémie<br>
-Antidote : Digibind peut être efficace même sans digoxine confirmée</div>
-            </div>
-            <div style="background:#fef3c7;border:1.5px solid #d97706;border-radius:8px;padding:10px;">
-              <p style="font-size:12px;font-weight:700;color:#92400e;margin-bottom:6px;">🍵 Thé vert (Camellia sinensis) — Hépatotoxicité</p>
-              <div style="font-size:12px;line-height:1.7;">Utilisé pour bénéfices CV et perte de poids<br>
-Plusieurs cas d&apos;hépatite aiguë (parfois transplantation)<br>
-Atteinte liée à interactions ou contamination<br>
-&uarr; AST/ALT significative<br>
-Inducteur CYP3A4 (niveau 3) et inhibiteur CYP1A2 (niveau 2)</div>
-            </div>
-            <div style="background:#f0fdf4;border:1.5px solid #065f46;border-radius:8px;padding:10px;">
-              <p style="font-size:12px;font-weight:700;color:#065f46;margin-bottom:6px;">🦴 Collagène</p>
-              <div style="font-size:12px;line-height:1.7;">Protéine structurale la plus abondante du corps<br>
-Allégations : peau, articulations, os, muscles<br>
-Preuves limitées pour la plupart des allégations<br>
-Sécuritaire à court terme · Aucune interaction majeure documentée<br>
-Dipeptides absorbés stimulent fibroblastes (mécanisme proposé)</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- PANEL mvl6 : PSN — Sports & Stress -->
-        <div id="mvl6" style="display:none;">
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px;">
-            <div style="background:#fef2f2;border:1.5px solid #c0392b;border-radius:8px;padding:10px;">
-              <p style="font-size:12px;font-weight:700;color:#c0392b;margin-bottom:6px;">💪 Produits d&apos;entraînement — Risques</p>
-              <p style="font-size:12px;margin-bottom:4px;"><strong>Pré-workout :</strong> Caféine haute dose, Yohimbe, synephrine, DMAA/DMHA (souvent interdits mais présents)</p>
-              <p style="font-size:12px;margin-bottom:4px;"><strong>Amaigrissants sport :</strong> Diurétiques, stimulants multiples, laxatifs, agents thyroïdiens non déclarés</p>
-              <p style="font-size:12px;font-weight:600;color:#c0392b;margin-bottom:4px;">Contaminations documentées :</p>
-              <p style="font-size:12px;">Stéroïdes anabolisants · AINS · Glycosides cardiaques · Métaux lourds · Composition souvent nébuleuse, concentrations indisponibles</p>
-            </div>
-            <div style="background:#eff6ff;border:1.5px solid #0369a1;border-radius:8px;padding:10px;">
-              <p style="font-size:12px;font-weight:700;color:#0369a1;margin-bottom:6px;">🏋 Créatine</p>
-              <p style="font-size:12px;margin-bottom:4px;"><strong>Source :</strong> Amine endogène (reins/foie) · Rôle dans métabolisme énergétique musculaire (phosphocréatine &rarr; ATP)</p>
-              <p style="font-size:12px;margin-bottom:4px;"><strong>Effets possiblement démontrés :</strong> Performance athlétique · Force musculaire · Sarcopénie · Déficience en créatine cérébrale</p>
-              <p style="font-size:12px;font-weight:600;margin-bottom:2px;">EI :</p>
-              <p style="font-size:12px;margin-bottom:2px;"><em>Fréquents :</em> Déshydratation · Diarrhée · Troubles GI · Crampes · Rétention d&apos;eau · &uarr; créatinine sérique (fausse élévation)</p>
-              <p style="font-size:12px;"><em>Rares mais sérieux :</em> Néphrite interstitielle · IRA · Rhabdomyolyse · Thrombose veineuse</p>
-            </div>
-          </div>
-          <div style="background:#f5f3ff;border:1.5px solid #7c3aed;border-radius:8px;padding:10px;">
-            <p style="font-size:12px;font-weight:700;color:#7c3aed;margin-bottom:6px;">🌱 Ashwagandha (Withania somnifera)</p>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:12px;">
-              <div>
-                <p><strong>Famille :</strong> Solanaceae · Principes actifs : alcaloïdes, lactones stéroïdiennes, saponines</p>
-                <p style="margin-top:4px;"><strong>Utilisations :</strong> Stress · Anxiété · Sommeil · Cognition · Performance athlétique · Arthrite rhumatoïde · Diabète · Hypothyroïdie · Dysfonction sexuelle</p>
-                <p style="margin-top:4px;"><strong>Sécurité :</strong> Probablement sûr PO court terme (&le;1250 mg/j x 6 mois)</p>
-              </div>
-              <div>
-                <p><strong style="color:#c0392b;">❌ Grossesse : PROBABLEMENT DANGEREUX</strong> (effets abortifs · éviter absolument) · Lactation : données insuffisantes · éviter</p>
-                <p style="margin-top:4px;"><strong>EI sérieux :</strong> Hépatite aiguë · Insuffisance hépatique · Encéphalopathie · Transplantation · Décès rapportés</p>
-                <p style="margin-top:4px;"><strong>Interactions :</strong> Antidiabétiques (&uarr; risque hypoglycémie, preuve B modérée) · Antihypertenseurs (&uarr; hypotension) · Structure similaire digoxine (Digibind potentiellement efficace)</p>
-              </div>
-            </div>
-          </div>
-          <div style="background:var(--surface);border:1px solid var(--ink2);border-radius:8px;padding:10px;margin-top:8px;">
-            <p style="font-size:12px;font-weight:700;margin-bottom:6px;">Autres PSN populaires — Tableau synthèse</p>
-            <table style="font-size:12px;">
-              <thead><tr><th>PSN</th><th>Allégations principales</th><th>Evidence</th><th>Préoccupations</th></tr></thead>
-              <tbody>
-                <tr><td>Mélatonine</td><td>Insomnie, jet-lag</td><td>Bonne (jet-lag, T circadiens)</td><td>Dose très variable (0,3–10 mg)</td></tr>
-                <tr style="background:#f0fdf4;"><td>Magnésium</td><td>Migraines, sommeil, crampes</td><td>Modérée</td><td>Diarrhée osmotique à haute dose · Risque si IRC</td></tr>
-                <tr><td>Vitamine D + Ca</td><td>Santé osseuse, immunité</td><td>Bonne pour os</td><td>Hypercalcémie si surdose · &uarr; risque lithiase</td></tr>
-                <tr style="background:#f0fdf4;"><td>Oméga-3</td><td>CV, TG élevés, dépression</td><td>Bonne pour TG</td><td>&uarr; risque saignement si &gt;3 g/j</td></tr>
-                <tr><td>Probiotiques</td><td>Santé digestive, immunité</td><td>Variable selon souche</td><td>CI si immunosupprimé sévère</td></tr>
-                <tr style="background:#f0fdf4;"><td>Millepertuis</td><td>Dépression légère-modérée</td><td>Modérée</td><td><strong>Inducteur puissant CYP3A4</strong> · &darr; efficacité nombreux Rx</td></tr>
-                <tr><td>Ginkgo biloba</td><td>Cognition, mémoire</td><td>Limitée</td><td>&uarr; risque saignement · Interaction anticoag.</td></tr>
-                <tr style="background:#f0fdf4;"><td>Échinacea</td><td>Rhumes, immunité</td><td>Limitée</td><td>Inhibiteur CYP1A2 · Réactions allergiques</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <!-- PANEL mvl7 : Interactions PSN -->
-        <div id="mvl7" style="display:none;">
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px;">
-            <div class="key-fact yellow">
-              <strong>Vitamines — Interactions clés</strong>
-              <div style="font-size:11px;line-height:1.8;">Vitamine K &harr; INR (warfarine)<br>
-Vitamine E &harr; warfarine (&uarr; saignement)<br>
-Vitamine B6 &harr; isoniazide (carence &rarr; supp. prophylactique)<br>
-Vitamine A &harr; rétinoïdes (risque hypervitaminose A)<br>
-Vitamine B6/B9 &harr; anticonvulsivants (&darr; concentrations)<br>
-Vitamine D &rarr; &uarr; absorption calcium<br>
-Vitamine C &rarr; &uarr; absorption fer<br>
-Cholestyramine &rarr; &darr; absorption vitamines liposolubles (ADEK)</div>
-            </div>
-            <div class="key-fact blue">
-              <strong>Minéraux — Interactions clés</strong>
-              <div style="font-size:11px;line-height:1.8;">IPP/antiacides &rarr; &darr; absorption vit. B12<br>
-Calcium &rarr; &darr; absorption ciprofloxacine (40–85 %)<br>
-Ca, Mg, Fe, Zn &rarr; &darr; absorption fluoroquinolones, tétracyclines, lévothyroxine<br>
-Séparer la prise de 2–4h pour minimiser<br>
-Magnésium &rarr; laxatif osmotique si excess · risque si IRC<br>
-Fer &rarr; constipation · interactions chélation nombreuses</div>
-            </div>
-          </div>
-          <p style="font-size:12px;font-weight:700;margin-bottom:6px;">🌿 Plantes — Interactions via Cytochromes</p>
-          <div style="font-size:11px;color:#555;margin-bottom:4px;">🟥 Inhibition &nbsp;|&nbsp; 🟦 Induction &nbsp;|&nbsp; 🟩 Absence interaction &nbsp;|&nbsp; ⬜ Conflictuel &nbsp;&nbsp;&nbsp; Niveau preuve : 1 = fort (ERC) &rarr; 5 = faible (in vitro)</div>
-          <table style="font-size:12px;">
-            <thead><tr><th>Plante</th><th>CYP3A4</th><th>CYP2D6</th><th>CYP1A2</th><th>Note clinique</th></tr></thead>
-            <tbody>
-              <tr style="background:#fef2f2;"><td><strong>Millepertuis ⚠️</strong></td><td>🟦 Induction (1)</td><td>🟩</td><td>🟩</td><td><strong>&darr; CO, INTI, warfarine, immuno., ISRS, antinéo.</strong></td></tr>
-              <tr><td>Ginkgo</td><td>⬜ Conflictuel</td><td>🟩</td><td>🟩</td><td>&uarr; risque saignement (non CYP-médié)</td></tr>
-              <tr style="background:#f0fdf4;"><td>Ginseng asiatique</td><td>🟥 Inhib. (2)</td><td>🟥 (3)</td><td>🟩</td><td>Interaction warfarine, IMAO</td></tr>
-              <tr><td>Thé vert</td><td>🟦 Induction (3)</td><td>🟩</td><td>🟥 (2)</td><td>Hépatotoxicité · Interaction café/théine</td></tr>
-              <tr style="background:#f0fdf4;"><td>Réglisse</td><td>🟩</td><td>🟥 (5)</td><td>🟥 (5)</td><td>Pseudohyperaldo. · &uarr; TA si dose élevée</td></tr>
-              <tr><td>Canneberge</td><td>🟥 Inhib. (2)</td><td>🟥 (5)</td><td>🟥 (2)</td><td>Interaction warfarine potentielle</td></tr>
-              <tr style="background:#f0fdf4;"><td>Ail</td><td>🟩</td><td>🟩</td><td>🟩</td><td>Effet antiplaquettaire modeste</td></tr>
-              <tr><td>Curcuma</td><td>🟩</td><td>🟥 (2)</td><td>🟥 (2)</td><td>Effet antiplaquettaire · Interaction anticoag.</td></tr>
-              <tr style="background:#f0fdf4;"><td>Camomille</td><td>🟥 (4)</td><td>🟥 (5)</td><td>🟥 (4)</td><td>Interaction warfarine possible</td></tr>
-              <tr><td>Échinacée</td><td>🟩</td><td>🟩</td><td>🟥 (2)</td><td>CI si auto-immune · courte durée</td></tr>
-              <tr style="background:#f0fdf4;"><td>Valériane</td><td>🟩</td><td>🟩</td><td>🟥 (2)</td><td>Sédation additive avec dépresseurs SNC</td></tr>
-              <tr><td>Gingembre</td><td>⬜ Conflictuel</td><td>🟥 (4)</td><td>⬜ Conflictuel</td><td>Antiplaquettaire &rarr; interaction anticoag.</td></tr>
-              <tr style="background:#f0fdf4;"><td>Aloe vera</td><td>🟥 (4)</td><td>🟥 (5)</td><td>⬜ Conflictuel</td><td>Laxatif irritant si usage interne</td></tr>
-              <tr><td>Actée à grappes noires</td><td>🟩</td><td>🟥 (3)</td><td>🟥 (2)</td><td>Hépatotoxicité rare · Tamoxifène</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <!-- PANEL mvl8 : Ressources fiables -->
-        <div id="mvl8" style="display:none;">
-          <div class="key-fact blue" style="margin-bottom:10px;"><strong>Rôle IPS — Synthèse pratique :</strong> Questionner systématiquement sur MVL/PSN · Valider pertinence clinique · Évaluer risques · Conseiller mesures non-pharmacologiques · Dépister le triple whammy · Enseigner rhinite médicamenteuse · Appliquer limites acétaminophène selon population · Ne jamais présumer qu&apos;un PSN est sécuritaire · Signaler EI à Santé Canada (MedEffet).</div>
-          <table style="font-size:12px;">
-            <thead><tr><th>Ressource</th><th>Description</th><th>Accès</th></tr></thead>
-            <tbody>
-              <tr><td><strong>NatMed Pro</strong> (Natural Medicines Database)</td><td>Référence la plus complète sur PSN/suppléments. Inclut : safety, grossesse/lactation, doses, mécanisme, EI, interactions (Rx, suppléments, conditions, tests lab), efficacité par condition (rated)</td><td>BAnQ / bibliothèques universitaires (UdeM, ULaval, McGill)</td></tr>
-              <tr style="background:#f0fdf4;"><td><strong>Rx Vigilance</strong> (section PSN)</td><td>Fiches en français pour professionnels : appellations, utilisations, dose adulte, EI, mises en garde (grossesse/allaitement), interactions</td><td>Via Ordre des pharmaciens QC</td></tr>
-              <tr><td><strong>Centre antipoison QC (CAPQ)</strong></td><td>Consultation 24/7 pour toxicités et surdoses de MVL/PSN</td><td>1 800 463-5060</td></tr>
-              <tr style="background:#f0fdf4;"><td><strong>INESSS</strong></td><td>Lignes directrices et revues cliniques (québécoises)</td><td>inesss.qc.ca</td></tr>
-              <tr><td><strong>Bulletin info toxicologique (INSPQ)</strong></td><td>Cas cliniques commentés sur PSN et toxicités</td><td>inspq.qc.ca</td></tr>
-              <tr style="background:#f0fdf4;"><td><strong>Santé Canada</strong></td><td>Base de données PSN homologués (recherche par NPN)</td><td>canada.ca/psn-homologues</td></tr>
-              <tr><td><strong>MedEffet Canada</strong></td><td>Déclaration des effets indésirables des MVL/PSN à Santé Canada</td><td>canada.ca/medeffet</td></tr>
-            </tbody>
-          </table>
-          <div class="key-fact red" style="margin-top:10px;"><strong>Red flags &rarr; consultation obligatoire :</strong> Grossesse/allaitement · Enfants de moins de 2 ans · Personnes âgées (&gt;65 ans) · IRC/IH · IC · Polymédication · Immunosuppression · Symptômes persistants &gt;7 jours sans amélioration · Fièvre élevée ou signes de complication.</div>
-        </div>
-
-      </div>
+      
       <!-- fin dep-mvl -->
 
     </div>
@@ -44948,6 +44665,499 @@ Fer &rarr; constipation · interactions chélation nombreuses</div>
 
 
 
+    <div class="section" id="sec-mvl-psn">
+      <div class="section-header">
+        <div class="section-accent" style="background:#065f46">💊</div>
+        <div class="section-title"><h1>Médicaments en vente libre &amp; Produits de santé naturels</h1><div class="breadcrumb">Pharmacologie <span class="breadcrumb-sep">·</span> Automédication <span class="breadcrumb-sep">·</span> PSN <span class="breadcrumb-sep">·</span> Interactions</div></div>
+      </div>
+
+      <div class="key-fact orange" style="margin-top:4px;">🎯 <strong>Pourquoi cette section compte :</strong> les MVL et les produits de santé naturels sont pris <strong>sans ordonnance et rarement déclarés spontanément</strong>. Poser la question explicitement — « prenez-vous quelque chose acheté en pharmacie, à l'épicerie ou en ligne? » — fait souvent apparaître une cause d'effet indésirable, d'interaction ou d'échec thérapeutique.</div>
+
+<div class="block rx" style="margin-top:14px;border-left-color:#065f46;">
+        <div class="block-title" id="mvl-1"><span class="tag">💊 Médicaments en Vente Libre & Produits de Santé Naturels</span></div>
+
+        <!-- Pills nav -->
+        <div style="display:flex;gap:6px;flex-wrap:wrap;margin:10px 0 14px;">
+          <button onclick="showPanel('mvl','mvl0',9)" data-panel="mvl0" style="background:#065f46;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">📋 Classification</button>
+          <button onclick="showPanel('mvl','mvl1',9)" data-panel="mvl1" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">💊 Douleur aiguë</button>
+          <button onclick="showPanel('mvl','mvl2',9)" data-panel="mvl2" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">🤧 Rhume & Grippe</button>
+          <button onclick="showPanel('mvl','mvl3',9)" data-panel="mvl3" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">🌸 Rhinite & Allergie</button>
+          <button onclick="showPanel('mvl','mvl4',9)" data-panel="mvl4" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">🧴 Dermatologie</button>
+          <button onclick="showPanel('mvl','mvl5',9)" data-panel="mvl5" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">🌿 PSN — Cadre & Cas</button>
+          <button onclick="showPanel('mvl','mvl6',9)" data-panel="mvl6" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">💪 PSN — Sports & Stress</button>
+          <button onclick="showPanel('mvl','mvl7',9)" data-panel="mvl7" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">⚠️ Interactions PSN</button>
+          <button onclick="showPanel('mvl','mvl8',9)" data-panel="mvl8" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">🔍 Ressources fiables</button>
+        </div>
+
+        <!-- PANEL mvl0 : Classification + Automédication -->
+        <div id="mvl0" style="display:block;">
+          <div class="key-fact blue" style="margin-bottom:10px;"><strong>Rôle IPS :</strong> Questionner SYSTÉMATIQUEMENT sur MVL et PSN à chaque évaluation — les patients ne les déclarent pas spontanément («&nbsp;c&apos;est pas un vrai médicament&nbsp;»).</div>
+          <table style="font-size:12px;">
+            <thead><tr><th>Annexe</th><th>Description</th><th>Exemple</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Annexe 1</strong></td><td>Rx sur ordonnance, diagnostic et intervention d&apos;un praticien. Vente contrôlée par législation provinciale.</td><td>Antibiotiques, opioïdes</td></tr>
+              <tr style="background:#f0fdf4;"><td><strong>Annexe 2</strong></td><td>Rx sans ordonnance mais intervention du pharmacien requise au point de vente. Zone non accessible au public.</td><td>Agents antibactériens ophtalmiques, NicoDerm</td></tr>
+              <tr><td><strong>Annexe 3</strong></td><td>Rx sans ordonnance, zone d&apos;autosélection sous supervision directe du pharmacien.</td><td>Hydrocortisone 0,5 %, antihistaminiques</td></tr>
+              <tr style="background:#f0fdf4;"><td><strong>Hors annexe</strong></td><td>Vente sans supervision professionnelle (n&apos;importe quel magasin). L&apos;étiquette suffit.</td><td>Vitamines, acétaminophène faible dose</td></tr>
+            </tbody>
+          </table>
+          <div class="key-fact yellow" style="margin-top:12px;"><strong>Risques de l&apos;automédication :</strong> Surdosage involontaire (ex. acétaminophène dans multiples produits combinés) · Interactions médicamenteuses · Masquage de symptômes → retard diagnostique.</div>
+        </div>
+
+        <!-- PANEL mvl1 : Douleur aiguë -->
+        <div id="mvl1" style="display:none;">
+          <!-- Sous-onglets douleur -->
+          <div style="display:flex;gap:5px;flex-wrap:wrap;margin:0 0 10px;">
+            <button onclick="showPanel('doul','doul0',4)" data-panel="doul0" style="background:#c0392b;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">Acétaminophène</button>
+            <button onclick="showPanel('doul','doul1',4)" data-panel="doul1" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">AINS</button>
+            <button onclick="showPanel('doul','doul2',4)" data-panel="doul2" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">Codéine MVL</button>
+            <button onclick="showPanel('doul','doul3',4)" data-panel="doul3" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">Topiques & Relaxants</button>
+          </div>
+
+          <div id="doul0" style="display:block;">
+            <div class="key-fact red"><strong>~500 produits contiennent de l&apos;acétaminophène au Canada</strong> · 4500 hospitalisations/an pour surdose · 3404 intoxications au CAPQ en 2022, ¾ par erreur de dosage.</div>
+            <table style="font-size:12px;margin-top:8px;">
+              <thead><tr><th>Formulation</th><th>Dosage</th><th>Posologie adulte</th></tr></thead>
+              <tbody>
+                <tr><td>Tylenol régulier</td><td>325 mg</td><td>1–2 co q4–6h</td></tr>
+                <tr style="background:#f0fdf4;"><td>Tylenol extra-fort</td><td>500 mg</td><td>1–2 co q4–6h</td></tr>
+                <tr><td>Tylenol arthritique</td><td>650 mg LP</td><td>2 co q8h</td></tr>
+                <tr style="background:#f0fdf4;"><td>Suppositoires</td><td>350 ou 650 mg</td><td>q4–6h</td></tr>
+                <tr><td>Acéta + caféine (Tylenol Ultra)</td><td>500 mg + 65 mg</td><td>1–2 co q4–6h</td></tr>
+              </tbody>
+            </table>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px;">
+              <div class="key-fact yellow"><strong>Doses max quotidiennes :</strong><br>Court terme : <strong>4 g</strong><br>Long terme : <strong>3,2 g</strong><br>Gériatrie : <strong>2,6 g</strong><br>Alcoolisme : <strong>2 g</strong><br>IH / IRC : réduire dose</div>
+              <div class="key-fact red"><strong>CI/Précautions :</strong><br>Hépatopathie grave, hypersensibilité<br>Déficience G6PD (hémolyse)<br>Cumul produits combinés<br><strong>Interactions :</strong> Warfarine (&uarr; saignement) · Carbamazépine, alcool, hépatotoxiques (&uarr; hépatotoxicité)</div>
+            </div>
+          </div>
+
+          <div id="doul1" style="display:none;">
+            <div class="key-fact blue"><strong>Mécanisme :</strong> Inhibition COX &rarr; &darr; prostaglandines, prostacycline, thromboxanes. COX-1 : cytoprotection gastrique, homéostasie vasculaire, agrégation plaquettaire, fonction rénale. COX-2 : induite par états inflammatoires.</div>
+            <table style="font-size:12px;margin-top:8px;">
+              <thead><tr><th>Molécule</th><th>Dose</th><th>Max MVL/jour</th><th>Notes</th></tr></thead>
+              <tbody>
+                <tr><td>Ibuprofène (Advil, Motrin)</td><td>200–400 mg q4–6h</td><td>1200 mg</td><td>Anti-inflammatoire, analgésique, antipyrétique</td></tr>
+                <tr style="background:#fef2f2;"><td>Naproxène sodique (Aleve)</td><td>220 mg q8–12h</td><td>440 mg</td><td>Demi-vie plus longue, 1x/12h possible</td></tr>
+                <tr><td>AAS (Aspirine)</td><td>325–500 mg q4–6h</td><td>4000 mg</td><td>Antiplaquettaire irréversible à faible dose</td></tr>
+              </tbody>
+            </table>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px;">
+              <div class="key-fact red"><strong>Contre-indications AINS :</strong><br>Hypersensibilité · Pontage récent<br>IC NYHA III-IV<br>Gastroduodénopathie active<br>ClCr &lt; 30 mL/min · K&sup+ &gt; 5,5 mmol/L<br>Grossesse &ge;26–28 sem. · IH grave</div>
+              <div class="key-fact yellow"><strong>Triple Whammy :</strong><br>AINS + IECA/ARA + Diurétique<br>&rarr; hypoperfusion rénale &rarr; IRA<br><br><strong>Interactions :</strong> AAS 80 mg (&darr; antiplaquettaire) · Anticoag/ISRS/cortico (&uarr; saignement) · Li (&uarr; concentration) · Méthotrexate (toxicité)</div>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin-top:8px;">
+              <div style="background:#fef2f2;border-radius:8px;padding:8px;font-size:11px;"><strong>🫀 Risque CV</strong><br>Tous les AINS &uarr; risque IM/AVC (dose/durée dépendant) · AAS seul épargné</div>
+              <div style="background:#fef2f2;border-radius:8px;padding:8px;font-size:11px;"><strong>🤮 Risque GI</strong><br>Ulcères, hémorragies · IPP concomitant si risque élevé · Naproxène profil GI légèrement meilleur</div>
+              <div style="background:#fef2f2;border-radius:8px;padding:8px;font-size:11px;"><strong>🫘 Risque rénal</strong><br>IRA (surtout si DFG &lt;60 ou hypovolémie) · Retention sodique · HTA</div>
+            </div>
+          </div>
+
+          <div id="doul2" style="display:none;">
+            <div class="key-fact blue"><strong>Mécanisme :</strong> Agoniste récepteur &mu;-opioïde central + périphérique. Métabolisé en morphine par CYP2D6 (variabilité génétique importante).</div>
+            <table style="font-size:12px;margin-top:8px;">
+              <thead><tr><th>Produit</th><th>Composition</th><th>Dose</th><th>Max/jour</th></tr></thead>
+              <tbody>
+                <tr><td>Atasol-8</td><td>Acét 325 mg + Codéine 8 mg + Caféine 30 mg</td><td>1–2 co q4–6h</td><td>12 co</td></tr>
+                <tr style="background:#fef2f2;"><td>222 (Annexe 2)</td><td>AAS 375 mg + Codéine 8 mg + Caféine 30 mg</td><td>1–2 co q4–8h</td><td>10 co</td></tr>
+              </tbody>
+            </table>
+            <div class="key-fact red" style="margin-top:8px;"><strong>CI :</strong> Hypersensibilité, occlusion intestinale · <strong>Précautions :</strong> Dépendance, abus, surdose · CYP2D6 métaboliseurs lents (inefficacité) ou ultrarapides (surdose) · Gériatrie (chutes, confusion) · <strong>Interactions :</strong> Dépresseurs SNC (additif), inhibiteurs/inducteurs CYP2D6, IMAO, naltrexone</div>
+          </div>
+
+          <div id="doul3" style="display:none;">
+            <p style="font-size:12px;font-weight:700;margin-bottom:6px;">Analgésiques topiques</p>
+            <table style="font-size:12px;">
+              <thead><tr><th>Produit</th><th>Mécanisme</th><th>Précautions</th><th>Notes cliniques</th></tr></thead>
+              <tbody>
+                <tr><td>Diclofénac gel (Voltaren Emulgel)</td><td>AINS topique · Inhibition COX locale</td><td>AINS PO (duplication) · Anticoagulants · Éviter grossesse T3</td><td>Absorption proportionnelle à la surface/hydratation · EI systémiques possibles</td></tr>
+                <tr style="background:#f0fdf4;"><td>Capsaïcine (Zostrix)</td><td>Déplétion substance P au niveau cutané</td><td>Pas sur peau lésée · Grossesse (absence données)</td><td>Effet après plusieurs jours · Éviter chaleur et pansement occlusif</td></tr>
+                <tr><td>Salicylate de méthyle / Triéthanolamine (Antiphlogistine, Myoflex)</td><td>Contre-irritant / AINS faible topique</td><td>Interaction anticoagulants · Éviter en grossesse</td><td>Effet contre-irritant bien toléré</td></tr>
+                <tr style="background:#f0fdf4;"><td>Menthol/Camphre/Eucalyptus (Baume du tigre)</td><td>Contre-irritant cutané</td><td>Données insuffisantes en grossesse</td><td>Sensation de fraîcheur/chaleur locale</td></tr>
+              </tbody>
+            </table>
+            <p style="font-size:12px;font-weight:700;margin:10px 0 6px;">Relaxants musculaires</p>
+            <table style="font-size:12px;">
+              <thead><tr><th>Molécule</th><th>Posologie</th><th>Précautions / EI</th></tr></thead>
+              <tbody>
+                <tr><td>Méthocarbamol (Robaxin, Robaxisal, Robaxacet, Robax Platine)</td><td>1500 mg q6h x 2–3j puis 1000 mg q6h · Max 4 g/j x 5 jours</td><td>IH · Peu de données grossesse/allait. · Gériatrie (effets anticholinergiques)</td></tr>
+                <tr style="background:#f0fdf4;"><td>Orphénadrine (Norflex)</td><td>100 mg q12h</td><td>Effets anticholinergiques plus marqués · Gériatrie (Beers)</td></tr>
+              </tbody>
+            </table>
+            <div class="key-fact yellow" style="margin-top:8px;"><strong>EI communs :</strong> Étourdissements, somnolence, nausées, vision brouillée · <strong>Interactions :</strong> Alcool/dépresseurs SNC (effet additif)</div>
+          </div>
+        </div>
+
+        <!-- PANEL mvl2 : Rhume & Grippe -->
+        <div id="mvl2" style="display:none;">
+          <div style="display:flex;gap:5px;flex-wrap:wrap;margin:0 0 10px;">
+            <button onclick="showPanel('rh','rh0',3)" data-panel="rh0" style="background:#0369a1;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">Décongestionnants</button>
+            <button onclick="showPanel('rh','rh1',3)" data-panel="rh1" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">Antitussifs</button>
+            <button onclick="showPanel('rh','rh2',3)" data-panel="rh2" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">Hygiène nasale</button>
+          </div>
+
+          <div id="rh0" style="display:block;">
+            <div class="key-fact blue"><strong>Mécanisme :</strong> Sympathomimétiques &alpha;-adrénergiques &rarr; vasoconstriction muqueuse nasale &rarr; &darr; &oelig;dème et drainage des sécrétions.</div>
+            <p style="font-size:12px;font-weight:700;margin:8px 0 4px;">Topiques</p>
+            <table style="font-size:12px;">
+              <thead><tr><th>Produit</th><th>Début action</th><th>Durée</th><th>Intervalle</th></tr></thead>
+              <tbody>
+                <tr><td>Oxymétazoline (Claritin nasal, Drixoral, Dristan)</td><td>&lt; 10 min</td><td>12 h</td><td>q10–12h · <strong>Max 3 jours</strong></td></tr>
+                <tr style="background:#eff6ff;"><td>Phényléphrine nasale (Dristan)</td><td>&le; 2 min</td><td>2,5–5 h</td><td>q4h · <strong>Max 3 jours</strong></td></tr>
+                <tr><td>Xylométazoline (Otrivin)</td><td>&lt; 2 min</td><td>12 h</td><td>q8–10h · <strong>Max 3 jours</strong></td></tr>
+              </tbody>
+            </table>
+            <p style="font-size:12px;font-weight:700;margin:8px 0 4px;">Oraux</p>
+            <table style="font-size:12px;">
+              <thead><tr><th>Produit</th><th>Dose</th><th>Notes</th></tr></thead>
+              <tbody>
+                <tr><td>Phényléphrine (Sudafed PE)</td><td>10 mg PO q4h, max 60 mg/j</td><td>Efficacité remise en doute (FDA 2023)</td></tr>
+                <tr style="background:#eff6ff;"><td>Pseudoéphédrine (Sudafed)</td><td>60 mg PO q4–6h, max 240 mg/j</td><td>Risque d&apos;abus/diversion · Annexe 2 (derrière le comptoir)</td></tr>
+              </tbody>
+            </table>
+            <div class="key-fact red" style="margin-top:8px;"><strong>Rhinite médicamenteuse :</strong> Congestion rebond à l&apos;arrêt des décongestionnants topiques prolongés. Prévention : faible dose, au besoin seulement, <strong>max 3 jours</strong>. Soulagement : arrêt brusque OU sevrage graduel (1 narine à la fois) OU corticostéroïde topique.</div>
+            <div class="key-fact yellow" style="margin-top:6px;"><strong>EI décongestionnants oraux :</strong> Insomnie, nervosité, palpitations, tachycardie, tremblements · CI : HTA non contrôlée, IMAO, hyperthyroïdie, glaucome angle fermé.</div>
+          </div>
+
+          <div id="rh1" style="display:none;">
+            <table style="font-size:12px;">
+              <thead><tr><th>Produit</th><th>Dose adulte</th><th>Prises/jour</th><th>Recommandation</th></tr></thead>
+              <tbody>
+                <tr><td>Dextrométhorphane (DM)</td><td>10–20 mg</td><td>q4–6h</td><td style="background:#fef2f2;color:#c0392b;font-weight:600;">Non recommandé (efficacité limitée, interactions)</td></tr>
+                <tr style="background:#f0fdf4;"><td>Codéine</td><td>10–20 mg</td><td>q4–6h</td><td style="background:#fef2f2;color:#c0392b;font-weight:600;">Non recommandé (efficacité controversée, EI)</td></tr>
+                <tr><td>Chlophédianol (Ulone)</td><td>25 mg</td><td>3–4x/j</td><td style="background:#fef2f2;color:#c0392b;font-weight:600;">Non recommandé (efficacité limitée)</td></tr>
+                <tr style="background:#f0fdf4;"><td>Guaïfénésine (expectorant)</td><td>200–400 mg</td><td>q4h</td><td style="background:#f0fdf4;color:#065f46;font-weight:600;">Facilite expecto. des sécrétions · OK</td></tr>
+              </tbody>
+            </table>
+            <div class="key-fact blue" style="margin-top:8px;"><strong>Principe :</strong> La toux a souvent une cause sous-jacente (RGO, asthme, IVRS, IECA). <strong>Traiter la cause d&apos;abord</strong>. Mesures non pharmacologiques &gt; pharmacologiques.</div>
+          </div>
+
+          <div id="rh2" style="display:none;">
+            <div class="key-fact blue"><strong>Produits :</strong> Gouttes nasales, vaporisateur nasal, irrigation nasale (Neti Pot). Indications : hygiène quotidienne, rhume, rhinite allergique (ad 4–5x/jour).</div>
+            <div style="background:var(--surface);border:1.5px solid #0369a1;border-radius:8px;padding:10px;margin-top:8px;">
+              <p style="font-weight:700;font-size:12px;margin-bottom:6px;">🧂 Recette solution saline maison</p>
+              <p style="font-size:12px;">Sel (NaCl) : 10 mL (2 c. à thé) · Bicarbonate de sodium : 2,5 mL (½ c. à thé) · Eau stérile/bouillie tiédie : 1000 mL (4 tasses)</p>
+              <p style="font-size:12px;margin-top:4px;"><strong>Conservation :</strong> 7 jours au réfrigérateur / 24h à température ambiante (contenant de verre étanche). Servir tiède pour l&apos;irrigation.</p>
+              <p style="font-size:12px;margin-top:4px;"><strong>Étapes :</strong> Laver mains &rarr; moucher &rarr; solution saline &rarr; moucher à nouveau &rarr; laver mains.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- PANEL mvl3 : Rhinite & Allergie -->
+        <div id="mvl3" style="display:none;">
+          <div style="display:flex;gap:5px;flex-wrap:wrap;margin:0 0 10px;">
+            <button onclick="showPanel('all','all0',4)" data-panel="all0" style="background:#7c3aed;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">Antihistaminiques</button>
+            <button onclick="showPanel('all','all1',4)" data-panel="all1" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">CSI nasaux</button>
+            <button onclick="showPanel('all','all2',4)" data-panel="all2" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">Produits ophtalmiques</button>
+            <button onclick="showPanel('all','all3',4)" data-panel="all3" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">Agents conservation</button>
+          </div>
+
+          <div id="all0" style="display:block;">
+            <div class="key-fact blue"><strong>Mécanisme :</strong> Agoniste inverse des récepteurs H1 · Compétition avec histamine au niveau des muscles lisses, capillaires, glandes exocrines. Efficace pour : éternuements, prurit, rhinorrhée. Peu d&apos;effet sur la congestion.</div>
+            <table style="font-size:12px;margin-top:8px;">
+              <thead><tr><th>Génération</th><th>Molécules</th><th>Dose adulte</th><th>Notes</th></tr></thead>
+              <tbody>
+                <tr style="background:#fef2f2;"><td><strong>1ère gén.</strong><br><small style="color:#c0392b;">Éviter si possible</small></td><td>Diphenhydramine (Benadryl) · Chlorphéniramine</td><td>Diphenhydramine 25–50 mg q4–6h</td><td>Traversent BHE &rarr; sédation, effets anticholinergiques, rétention urinaire · Non sélectifs</td></tr>
+                <tr style="background:#f0fdf4;"><td><strong>2e gén.</strong><br><small style="color:#065f46;">1er choix</small></td><td>Cétirizine (Reactine) · Loratadine (Claritin) · Fexofénadine (Allegra) · Desloratadine (Aerius)</td><td>Cétirizine 10 mg DIE · Loratadine 10 mg DIE · Fexofénadine 120–180 mg DIE</td><td>Liaisons H1 périphériques · Ne traversent pas BHE &rarr; pas de sédation (sauf cétirizine légèrement) · Bien tolérés</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div id="all1" style="display:none;">
+            <div class="key-fact blue"><strong>Agents les plus efficaces en rhinite allergique</strong> · Améliorent TOUS les symptômes incluant congestion et symptômes oculaires · Mécanisme : régulent mastocytes avant dégranulation &amp; &darr; tous médiateurs inflammatoires.</div>
+            <div class="key-fact yellow" style="margin:6px 0;"><strong>Délai :</strong> Début en quelques jours · Effet max en 1–2 semaines · Utilisation régulière &gt; au besoin · Enseigner la méthode d&apos;administration (viser la paroi latérale de la narine, ne pas inhaler brusquement).</div>
+            <table style="font-size:12px;">
+              <thead><tr><th>Produit</th><th>Posologie</th><th>Notes RAMQ</th></tr></thead>
+              <tbody>
+                <tr><td>Fluticasone propionate (Flonase)</td><td>2 vap/narine DIE</td><td>RAMQ : &gt;18 ans</td></tr>
+                <tr style="background:#f0fdf4;"><td>Mométasone (Nasonex)</td><td>2 vap/narine DIE</td><td>RAMQ : &gt;12 ans · <strong>1er choix grossesse/allaitement/pédiatrie</strong></td></tr>
+                <tr><td>Triamcinolone (Nasacort AQ)</td><td>2 vap/narine DIE</td><td>RAMQ : &gt;12 ans</td></tr>
+              </tbody>
+            </table>
+            <div class="key-fact red" style="margin-top:8px;"><strong>EI :</strong> Goût amer, irritation nasale, céphalée, épistaxis · <strong>CI rares :</strong> Ulcère du septum nasal, trauma nasal récent</div>
+          </div>
+
+          <div id="all2" style="display:none;">
+            <p style="font-size:12px;font-weight:700;margin-bottom:6px;">Produits ophtalmiques — conjonctivite allergique</p>
+            <table style="font-size:12px;">
+              <thead><tr><th>Classe</th><th>Exemples</th><th>Indications</th></tr></thead>
+              <tbody>
+                <tr><td>Antihistaminiques topiques</td><td>Kétotifène (Zaditor, Alaway)</td><td>Prurit oculaire allergique · 1 gtte q8–12h</td></tr>
+                <tr style="background:#f0fdf4;"><td>Vasoconstricteurs</td><td>Naphazoline (Visine rouge)</td><td>Rougeur oculaire · Max 3–4 jours</td></tr>
+              </tbody>
+            </table>
+            <p style="font-size:12px;font-weight:700;margin:10px 0 4px;">Produits hydratants — sécheresse oculaire</p>
+            <table style="font-size:12px;">
+              <thead><tr><th>Véhicule</th><th>Caractéristiques</th></tr></thead>
+              <tbody>
+                <tr><td>Solution</td><td>Plus courant, reste le moins longtemps</td></tr>
+                <tr style="background:#f0fdf4;"><td>Gel</td><td>Plus longue durée de contact vs solution</td></tr>
+                <tr><td>Onguent</td><td>Haute viscosité, préféré la nuit, brouille la vision</td></tr>
+                <tr style="background:#f0fdf4;"><td>Suspension</td><td>À agiter avant emploi (rare en MVL)</td></tr>
+              </tbody>
+            </table>
+            <div class="key-fact blue" style="margin-top:8px;"><strong>Séquence d&apos;essai (méta-analyse Moshirgar) :</strong> Carboxyméthylcellulose / HPMC / Acide hyaluronique &rarr; si réfractaire : Systane Ultra ou Soothe &rarr; si toujours réfractaire : agent lipidique ou gel/onguent. Essai minimal de <strong>2 semaines</strong> avant de juger l&apos;efficacité.</div>
+            <p style="font-size:12px;font-weight:700;margin:10px 0 4px;">Agents antibactériens topiques (Annexe 2)</p>
+            <table style="font-size:12px;">
+              <thead><tr><th>Molécule</th><th>Spectre</th><th>Produit</th></tr></thead>
+              <tbody>
+                <tr><td>Gramicidine</td><td>Gram + et certains Gram &ndash;</td><td rowspan="2">Polysporin Gouttes (Gramicidine + Polymyxine B)</td></tr>
+                <tr style="background:#f0fdf4;"><td>Polymyxine B</td><td>Gram &ndash;</td></tr>
+                <tr><td>Bacitracine</td><td>Gram + (instable en solution)</td><td>Stérisporin onguent (Bacitracine + Polymyxine B)</td></tr>
+              </tbody>
+            </table>
+            <div class="key-fact yellow" style="margin-top:6px;"><strong>Note :</strong> La majorité des conjonctivites bactériennes sont autoréolutives. Usage chronique &rarr; toxicité épithéliale, résistance. Nettoyage des paupières recommandé.</div>
+          </div>
+
+          <div id="all3" style="display:none;">
+            <div class="key-fact blue"><strong>Agents de conservation :</strong> Nécessaires pour assurer la stérilité dans les bouteilles multi-usage. Si usage &gt;4–6x/jour &rarr; préférer sans conservateur.</div>
+            <table style="font-size:12px;margin-top:8px;">
+              <thead><tr><th>Type</th><th>Exemples</th><th>Compatibilité lentilles</th></tr></thead>
+              <tbody>
+                <tr style="background:#fef2f2;"><td>Détergents</td><td>Chlorure de benzalkonium (BAK)</td><td><strong>NON compatible</strong> lentilles cornéennes · Risque inflammatoire</td></tr>
+                <tr style="background:#f0fdf4;"><td>Oxydatifs</td><td>Perborate de sodium, chlorite de sodium, polyquad</td><td><strong>Compatible</strong> lentilles (préférés si porteur)</td></tr>
+              </tbody>
+            </table>
+            <div class="key-fact yellow" style="margin-top:8px;"><strong>Péremption :</strong> Norme 89.01 OPQ · Préparations oto-naso-ophtalmiques = <strong>30 jours après ouverture</strong> (sauf études fabricant permettant plus). Toujours dater l&apos;ouverture sur la bouteille.</div>
+          </div>
+        </div>
+
+        <!-- PANEL mvl4 : Dermatologie -->
+        <div id="mvl4" style="display:none;">
+          <div style="display:flex;gap:5px;flex-wrap:wrap;margin:0 0 10px;">
+            <button onclick="showPanel('derm','derm0',4)" data-panel="derm0" style="background:#92400e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">Sécheresse cutanée</button>
+            <button onclick="showPanel('derm','derm1',4)" data-panel="derm1" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">Corticostéroïdes topiques</button>
+            <button onclick="showPanel('derm','derm2',4)" data-panel="derm2" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">Dermatite contact</button>
+            <button onclick="showPanel('derm','derm3',4)" data-panel="derm3" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">Antifongiques topiques</button>
+          </div>
+
+          <div id="derm0" style="display:block;">
+            <div class="key-fact blue"><strong>Ingrédients à rechercher :</strong> Acide lactique · Urée · Acide hyaluronique · Diméthicone · Glycérine · Lanoline · Huile minérale · Vaseline · Huiles naturelles · Céramides.</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px;">
+              <div style="background:var(--surface);border:1px solid #92400e;border-radius:8px;padding:10px;">
+                <p style="font-size:12px;font-weight:700;margin-bottom:6px;">Conseils IPS — Sécheresse cutanée</p>
+                <div style="font-size:12px;line-height:1.7;">Douche max 10 min (tiède &gt; chaude)<br>
+Nettoyant hydratant (CeraVe, Dove) &gt; savon ordinaire<br>
+Éviter parfums et colorants<br>
+Crème hydratante plusieurs fois/jour (appliquer sur peau légèrement humide)<br>
+Humidificateur (60 %) en hiver<br>
+Écran solaire, baume à lèvres, gants pour vaisselle</div>
+              </div>
+              <div style="background:var(--surface);border:1px solid #92400e;border-radius:8px;padding:10px;">
+                <p style="font-size:12px;font-weight:700;margin-bottom:6px;">Principes actifs selon effet</p>
+                <div style="font-size:12px;line-height:1.7;"><strong>Humectants :</strong> Acide hyaluronique, glycérine, urée (attirent l&apos;eau)<br>
+<strong>Émollients :</strong> Céramides, huiles (comblent les espaces intercellulaires)<br>
+<strong>Occlusifs :</strong> Vaseline, lanoline, diméthicone (forment barrière)<br>
+<strong>Kératolytiques :</strong> Acide lactique, urée &gt;10 % (ramollissent la peau épaissie)</div>
+              </div>
+            </div>
+          </div>
+
+          <div id="derm1" style="display:none;">
+            <div class="key-fact blue"><strong>Classification :</strong> Classés par puissance 1 (plus élevée) à 7 (plus faible). MVL généralement de faible puissance (hydrocortisone 0,5–1 %). Application die–BID sur région affectée, temporairement.</div>
+            <table style="font-size:12px;margin-top:8px;">
+              <thead><tr><th>Classe</th><th>Puissance</th><th>Exemple MVL</th><th>Utilisation</th></tr></thead>
+              <tbody>
+                <tr style="background:#f0fdf4;"><td>Classe 6–7</td><td>Faible</td><td>Hydrocortisone 0,5–1 %</td><td>Visage, plis, génitaux, nourrissons · Dermatite atopique légère</td></tr>
+                <tr><td>Classe 4–5</td><td>Modérée (Rx)</td><td>Triamcinolone 0,1 %, Bétaméthasone 0,05 %</td><td>Corps, cuir chevelu · Sous supervision</td></tr>
+                <tr style="background:#fef2f2;"><td>Classe 1–2</td><td>Très élevée (Rx)</td><td>Clobétasol 0,05 %</td><td>Psoriasis, lichen plan · Éviter visage/plis</td></tr>
+              </tbody>
+            </table>
+            <div class="key-fact yellow" style="margin-top:8px;"><strong>EI :</strong> Dermatite de contact par hypersensibilité · Atrophie cutanée (exposition prolongée à forte puissance) · Vergetures · Retard cicatrisation · <strong>Corticophobie :</strong> Rassurer les patients — corticos topiques de faible puissance sont sécuritaires à court terme.</div>
+          </div>
+
+          <div id="derm2" style="display:none;">
+            <div class="key-fact red"><strong>Les antibiotiques topiques sont la cause la plus fréquente de dermatite de contact allergique (DCA) médicamenteuse.</strong></div>
+            <table style="font-size:12px;margin-top:8px;">
+              <thead><tr><th>Allergène</th><th>Prévalence (test épicutané)</th><th>Source commune</th></tr></thead>
+              <tbody>
+                <tr style="background:#fef2f2;"><td><strong>Bacitracine</strong></td><td>29 %</td><td>Polysporin, onguents topiques</td></tr>
+                <tr><td><strong>Néomycine</strong></td><td>23 %</td><td>Antibiotiques topiques combinés</td></tr>
+                <tr style="background:#fef2f2;"><td>Lidocaïne</td><td>&mdash;</td><td>Anesthésiques locaux topiques (hémorroïdes, plaies)</td></tr>
+                <tr><td>Propylèneglycol</td><td>&mdash;</td><td>Véhicule dans cosmétiques, crèmes</td></tr>
+                <tr style="background:#fef2f2;"><td>Polymyxine B</td><td>&mdash;</td><td>Antibiotiques topiques</td></tr>
+                <tr><td>Tixocortol-21-pivalate</td><td>&mdash;</td><td>Corticostéroïdes topiques (marqueur DCA)</td></tr>
+                <tr style="background:#fef2f2;"><td>Benzocaïne</td><td>&mdash;</td><td>Anesthésiques locaux</td></tr>
+                <tr><td>Budésonide</td><td>&mdash;</td><td>Corticostéroïdes (marqueur DCA aux corticos)</td></tr>
+              </tbody>
+            </table>
+            <div class="key-fact yellow" style="margin-top:8px;"><strong>Prise en charge :</strong> Identifier et éliminer l&apos;allergène · Corticostéroïde topique (classe selon sévérité) · Test épicutané (patch test) si DCA suspectée · Éviter la néomycine si antécédent de sensibilisation.</div>
+          </div>
+
+          <div id="derm3" style="display:none;">
+            <div class="key-fact blue"><strong>Indications :</strong> Pied d&apos;athlète (tinea pedis) · Infections vaginales fongiques (Candida) · Infections cutanées fongiques (tinea corporis, cruris, versicolor).</div>
+            <table style="font-size:12px;margin-top:8px;">
+              <thead><tr><th>Molécule</th><th>Produit</th><th>Concentration</th><th>Mécanisme</th><th>Notes</th></tr></thead>
+              <tbody>
+                <tr><td>Clotrimazole</td><td>Canesten crème</td><td>1 %</td><td>Inhibition synthèse ergostérol (membrane fongique)</td><td>Pied d&apos;athlète : BID x 4 sem · Candidose vaginale : 1–6 jours selon formulation</td></tr>
+                <tr style="background:#f0fdf4;"><td>Miconazole</td><td>Monistat crème</td><td>2 %</td><td>Idem clotrimazole</td><td>Candidose vaginale : crème intravaginale 1, 3 ou 7 jours</td></tr>
+                <tr><td>Tolnaftate</td><td>Tinactin poudre/aérosol</td><td>1 %</td><td>Inhibe squalène époxydase fongique</td><td>Pied d&apos;athlète principalement · Pas de couverture Candida</td></tr>
+              </tbody>
+            </table>
+            <div class="key-fact red" style="margin-top:8px;"><strong>Red flags &rarr; référer :</strong> Onycomycose (ongle) &rarr; antifongique PO nécessaire · Dermatophytose étendue · Tinea capitis (cheveux/cuir chevelu) · Échec MVL après 2–4 semaines · Diabète/immunosuppression.</div>
+          </div>
+        </div>
+
+        <!-- PANEL mvl5 : PSN — Cadre & Cas cliniques -->
+        <div id="mvl5" style="display:none;">
+          <div class="key-fact blue" style="margin-bottom:10px;"><strong>Définition PSN :</strong> Remèdes traditionnels, homéopathie, vitamines/minéraux, probiotiques, plantes médicinales, acides aminés, acides gras essentiels · <strong>NPN</strong> = Numéro de produit naturel (examen innocuité/qualité/allégations par Santé Canada).</div>
+          <div class="key-fact yellow" style="margin-bottom:10px;"><strong>Contexte canadien :</strong> 73 % des Canadiens consomment des PSN · 32 % quotidiennement · 71 % les croient « meilleurs que les médicaments » · 42 % les croient « sans danger car naturels » · <strong>Rapport VGC 2021 :</strong> Surveillance de Santé Canada insuffisante — lacunes dans inspection et suivi post-commercialisation.</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+            <div style="background:#f5f3ff;border:1.5px solid #7c3aed;border-radius:8px;padding:10px;">
+              <p style="font-size:12px;font-weight:700;color:#7c3aed;margin-bottom:6px;">🥈 Argent colloïdal — Argyrisme</p>
+              <div style="font-size:12px;line-height:1.7;">Utilisé pour propriétés antimicrobiennes présumées<br>
+18 % des particules absorbées et distribuées<br>
+&rarr; Teinte <strong>bleutée irréversible</strong> de la peau (aggravée par le soleil)<br>
+Cause la plus fréquente d&apos;argyrisme généralisé<br>
+Aucun bénéfice thérapeutique démontré</div>
+            </div>
+            <div style="background:#eff6ff;border:1.5px solid #0369a1;border-radius:8px;padding:10px;">
+              <p style="font-size:12px;font-weight:700;color:#0369a1;margin-bottom:6px;">💠 Divya Swasari Ras — Glycosides cardiaques</p>
+              <div style="font-size:12px;line-height:1.7;">Produit ayurvédique — problèmes respiratoires<br>
+Mélange d&apos;extraits végétaux + minéraux (poudre)<br>
+Contamination fréquente par glycosides cardiaques<br>
+Souvent faux positif à la digoxinémie<br>
+Antidote : Digibind peut être efficace même sans digoxine confirmée</div>
+            </div>
+            <div style="background:#fef3c7;border:1.5px solid #d97706;border-radius:8px;padding:10px;">
+              <p style="font-size:12px;font-weight:700;color:#92400e;margin-bottom:6px;">🍵 Thé vert (Camellia sinensis) — Hépatotoxicité</p>
+              <div style="font-size:12px;line-height:1.7;">Utilisé pour bénéfices CV et perte de poids<br>
+Plusieurs cas d&apos;hépatite aiguë (parfois transplantation)<br>
+Atteinte liée à interactions ou contamination<br>
+&uarr; AST/ALT significative<br>
+Inducteur CYP3A4 (niveau 3) et inhibiteur CYP1A2 (niveau 2)</div>
+            </div>
+            <div style="background:#f0fdf4;border:1.5px solid #065f46;border-radius:8px;padding:10px;">
+              <p style="font-size:12px;font-weight:700;color:#065f46;margin-bottom:6px;">🦴 Collagène</p>
+              <div style="font-size:12px;line-height:1.7;">Protéine structurale la plus abondante du corps<br>
+Allégations : peau, articulations, os, muscles<br>
+Preuves limitées pour la plupart des allégations<br>
+Sécuritaire à court terme · Aucune interaction majeure documentée<br>
+Dipeptides absorbés stimulent fibroblastes (mécanisme proposé)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PANEL mvl6 : PSN — Sports & Stress -->
+        <div id="mvl6" style="display:none;">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px;">
+            <div style="background:#fef2f2;border:1.5px solid #c0392b;border-radius:8px;padding:10px;">
+              <p style="font-size:12px;font-weight:700;color:#c0392b;margin-bottom:6px;">💪 Produits d&apos;entraînement — Risques</p>
+              <p style="font-size:12px;margin-bottom:4px;"><strong>Pré-workout :</strong> Caféine haute dose, Yohimbe, synephrine, DMAA/DMHA (souvent interdits mais présents)</p>
+              <p style="font-size:12px;margin-bottom:4px;"><strong>Amaigrissants sport :</strong> Diurétiques, stimulants multiples, laxatifs, agents thyroïdiens non déclarés</p>
+              <p style="font-size:12px;font-weight:600;color:#c0392b;margin-bottom:4px;">Contaminations documentées :</p>
+              <p style="font-size:12px;">Stéroïdes anabolisants · AINS · Glycosides cardiaques · Métaux lourds · Composition souvent nébuleuse, concentrations indisponibles</p>
+            </div>
+            <div style="background:#eff6ff;border:1.5px solid #0369a1;border-radius:8px;padding:10px;">
+              <p style="font-size:12px;font-weight:700;color:#0369a1;margin-bottom:6px;">🏋 Créatine</p>
+              <p style="font-size:12px;margin-bottom:4px;"><strong>Source :</strong> Amine endogène (reins/foie) · Rôle dans métabolisme énergétique musculaire (phosphocréatine &rarr; ATP)</p>
+              <p style="font-size:12px;margin-bottom:4px;"><strong>Effets possiblement démontrés :</strong> Performance athlétique · Force musculaire · Sarcopénie · Déficience en créatine cérébrale</p>
+              <p style="font-size:12px;font-weight:600;margin-bottom:2px;">EI :</p>
+              <p style="font-size:12px;margin-bottom:2px;"><em>Fréquents :</em> Déshydratation · Diarrhée · Troubles GI · Crampes · Rétention d&apos;eau · &uarr; créatinine sérique (fausse élévation)</p>
+              <p style="font-size:12px;"><em>Rares mais sérieux :</em> Néphrite interstitielle · IRA · Rhabdomyolyse · Thrombose veineuse</p>
+            </div>
+          </div>
+          <div style="background:#f5f3ff;border:1.5px solid #7c3aed;border-radius:8px;padding:10px;">
+            <p style="font-size:12px;font-weight:700;color:#7c3aed;margin-bottom:6px;">🌱 Ashwagandha (Withania somnifera)</p>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:12px;">
+              <div>
+                <p><strong>Famille :</strong> Solanaceae · Principes actifs : alcaloïdes, lactones stéroïdiennes, saponines</p>
+                <p style="margin-top:4px;"><strong>Utilisations :</strong> Stress · Anxiété · Sommeil · Cognition · Performance athlétique · Arthrite rhumatoïde · Diabète · Hypothyroïdie · Dysfonction sexuelle</p>
+                <p style="margin-top:4px;"><strong>Sécurité :</strong> Probablement sûr PO court terme (&le;1250 mg/j x 6 mois)</p>
+              </div>
+              <div>
+                <p><strong style="color:#c0392b;">❌ Grossesse : PROBABLEMENT DANGEREUX</strong> (effets abortifs · éviter absolument) · Lactation : données insuffisantes · éviter</p>
+                <p style="margin-top:4px;"><strong>EI sérieux :</strong> Hépatite aiguë · Insuffisance hépatique · Encéphalopathie · Transplantation · Décès rapportés</p>
+                <p style="margin-top:4px;"><strong>Interactions :</strong> Antidiabétiques (&uarr; risque hypoglycémie, preuve B modérée) · Antihypertenseurs (&uarr; hypotension) · Structure similaire digoxine (Digibind potentiellement efficace)</p>
+              </div>
+            </div>
+          </div>
+          <div style="background:var(--surface);border:1px solid var(--ink2);border-radius:8px;padding:10px;margin-top:8px;">
+            <p style="font-size:12px;font-weight:700;margin-bottom:6px;">Autres PSN populaires — Tableau synthèse</p>
+            <table style="font-size:12px;">
+              <thead><tr><th>PSN</th><th>Allégations principales</th><th>Evidence</th><th>Préoccupations</th></tr></thead>
+              <tbody>
+                <tr><td>Mélatonine</td><td>Insomnie, jet-lag</td><td>Bonne (jet-lag, T circadiens)</td><td>Dose très variable (0,3–10 mg)</td></tr>
+                <tr style="background:#f0fdf4;"><td>Magnésium</td><td>Migraines, sommeil, crampes</td><td>Modérée</td><td>Diarrhée osmotique à haute dose · Risque si IRC</td></tr>
+                <tr><td>Vitamine D + Ca</td><td>Santé osseuse, immunité</td><td>Bonne pour os</td><td>Hypercalcémie si surdose · &uarr; risque lithiase</td></tr>
+                <tr style="background:#f0fdf4;"><td>Oméga-3</td><td>CV, TG élevés, dépression</td><td>Bonne pour TG</td><td>&uarr; risque saignement si &gt;3 g/j</td></tr>
+                <tr><td>Probiotiques</td><td>Santé digestive, immunité</td><td>Variable selon souche</td><td>CI si immunosupprimé sévère</td></tr>
+                <tr style="background:#f0fdf4;"><td>Millepertuis</td><td>Dépression légère-modérée</td><td>Modérée</td><td><strong>Inducteur puissant CYP3A4</strong> · &darr; efficacité nombreux Rx</td></tr>
+                <tr><td>Ginkgo biloba</td><td>Cognition, mémoire</td><td>Limitée</td><td>&uarr; risque saignement · Interaction anticoag.</td></tr>
+                <tr style="background:#f0fdf4;"><td>Échinacea</td><td>Rhumes, immunité</td><td>Limitée</td><td>Inhibiteur CYP1A2 · Réactions allergiques</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- PANEL mvl7 : Interactions PSN -->
+        <div id="mvl7" style="display:none;">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px;">
+            <div class="key-fact yellow">
+              <strong>Vitamines — Interactions clés</strong>
+              <div style="font-size:11px;line-height:1.8;">Vitamine K &harr; INR (warfarine)<br>
+Vitamine E &harr; warfarine (&uarr; saignement)<br>
+Vitamine B6 &harr; isoniazide (carence &rarr; supp. prophylactique)<br>
+Vitamine A &harr; rétinoïdes (risque hypervitaminose A)<br>
+Vitamine B6/B9 &harr; anticonvulsivants (&darr; concentrations)<br>
+Vitamine D &rarr; &uarr; absorption calcium<br>
+Vitamine C &rarr; &uarr; absorption fer<br>
+Cholestyramine &rarr; &darr; absorption vitamines liposolubles (ADEK)</div>
+            </div>
+            <div class="key-fact blue">
+              <strong>Minéraux — Interactions clés</strong>
+              <div style="font-size:11px;line-height:1.8;">IPP/antiacides &rarr; &darr; absorption vit. B12<br>
+Calcium &rarr; &darr; absorption ciprofloxacine (40–85 %)<br>
+Ca, Mg, Fe, Zn &rarr; &darr; absorption fluoroquinolones, tétracyclines, lévothyroxine<br>
+Séparer la prise de 2–4h pour minimiser<br>
+Magnésium &rarr; laxatif osmotique si excess · risque si IRC<br>
+Fer &rarr; constipation · interactions chélation nombreuses</div>
+            </div>
+          </div>
+          <p style="font-size:12px;font-weight:700;margin-bottom:6px;">🌿 Plantes — Interactions via Cytochromes</p>
+          <div style="font-size:11px;color:#555;margin-bottom:4px;">🟥 Inhibition &nbsp;|&nbsp; 🟦 Induction &nbsp;|&nbsp; 🟩 Absence interaction &nbsp;|&nbsp; ⬜ Conflictuel &nbsp;&nbsp;&nbsp; Niveau preuve : 1 = fort (ERC) &rarr; 5 = faible (in vitro)</div>
+          <table style="font-size:12px;">
+            <thead><tr><th>Plante</th><th>CYP3A4</th><th>CYP2D6</th><th>CYP1A2</th><th>Note clinique</th></tr></thead>
+            <tbody>
+              <tr style="background:#fef2f2;"><td><strong>Millepertuis ⚠️</strong></td><td>🟦 Induction (1)</td><td>🟩</td><td>🟩</td><td><strong>&darr; CO, INTI, warfarine, immuno., ISRS, antinéo.</strong></td></tr>
+              <tr><td>Ginkgo</td><td>⬜ Conflictuel</td><td>🟩</td><td>🟩</td><td>&uarr; risque saignement (non CYP-médié)</td></tr>
+              <tr style="background:#f0fdf4;"><td>Ginseng asiatique</td><td>🟥 Inhib. (2)</td><td>🟥 (3)</td><td>🟩</td><td>Interaction warfarine, IMAO</td></tr>
+              <tr><td>Thé vert</td><td>🟦 Induction (3)</td><td>🟩</td><td>🟥 (2)</td><td>Hépatotoxicité · Interaction café/théine</td></tr>
+              <tr style="background:#f0fdf4;"><td>Réglisse</td><td>🟩</td><td>🟥 (5)</td><td>🟥 (5)</td><td>Pseudohyperaldo. · &uarr; TA si dose élevée</td></tr>
+              <tr><td>Canneberge</td><td>🟥 Inhib. (2)</td><td>🟥 (5)</td><td>🟥 (2)</td><td>Interaction warfarine potentielle</td></tr>
+              <tr style="background:#f0fdf4;"><td>Ail</td><td>🟩</td><td>🟩</td><td>🟩</td><td>Effet antiplaquettaire modeste</td></tr>
+              <tr><td>Curcuma</td><td>🟩</td><td>🟥 (2)</td><td>🟥 (2)</td><td>Effet antiplaquettaire · Interaction anticoag.</td></tr>
+              <tr style="background:#f0fdf4;"><td>Camomille</td><td>🟥 (4)</td><td>🟥 (5)</td><td>🟥 (4)</td><td>Interaction warfarine possible</td></tr>
+              <tr><td>Échinacée</td><td>🟩</td><td>🟩</td><td>🟥 (2)</td><td>CI si auto-immune · courte durée</td></tr>
+              <tr style="background:#f0fdf4;"><td>Valériane</td><td>🟩</td><td>🟩</td><td>🟥 (2)</td><td>Sédation additive avec dépresseurs SNC</td></tr>
+              <tr><td>Gingembre</td><td>⬜ Conflictuel</td><td>🟥 (4)</td><td>⬜ Conflictuel</td><td>Antiplaquettaire &rarr; interaction anticoag.</td></tr>
+              <tr style="background:#f0fdf4;"><td>Aloe vera</td><td>🟥 (4)</td><td>🟥 (5)</td><td>⬜ Conflictuel</td><td>Laxatif irritant si usage interne</td></tr>
+              <tr><td>Actée à grappes noires</td><td>🟩</td><td>🟥 (3)</td><td>🟥 (2)</td><td>Hépatotoxicité rare · Tamoxifène</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- PANEL mvl8 : Ressources fiables -->
+        <div id="mvl8" style="display:none;">
+          <div class="key-fact blue" style="margin-bottom:10px;"><strong>Rôle IPS — Synthèse pratique :</strong> Questionner systématiquement sur MVL/PSN · Valider pertinence clinique · Évaluer risques · Conseiller mesures non-pharmacologiques · Dépister le triple whammy · Enseigner rhinite médicamenteuse · Appliquer limites acétaminophène selon population · Ne jamais présumer qu&apos;un PSN est sécuritaire · Signaler EI à Santé Canada (MedEffet).</div>
+          <table style="font-size:12px;">
+            <thead><tr><th>Ressource</th><th>Description</th><th>Accès</th></tr></thead>
+            <tbody>
+              <tr><td><strong>NatMed Pro</strong> (Natural Medicines Database)</td><td>Référence la plus complète sur PSN/suppléments. Inclut : safety, grossesse/lactation, doses, mécanisme, EI, interactions (Rx, suppléments, conditions, tests lab), efficacité par condition (rated)</td><td>BAnQ / bibliothèques universitaires (UdeM, ULaval, McGill)</td></tr>
+              <tr style="background:#f0fdf4;"><td><strong>Rx Vigilance</strong> (section PSN)</td><td>Fiches en français pour professionnels : appellations, utilisations, dose adulte, EI, mises en garde (grossesse/allaitement), interactions</td><td>Via Ordre des pharmaciens QC</td></tr>
+              <tr><td><strong>Centre antipoison QC (CAPQ)</strong></td><td>Consultation 24/7 pour toxicités et surdoses de MVL/PSN</td><td>1 800 463-5060</td></tr>
+              <tr style="background:#f0fdf4;"><td><strong>INESSS</strong></td><td>Lignes directrices et revues cliniques (québécoises)</td><td>inesss.qc.ca</td></tr>
+              <tr><td><strong>Bulletin info toxicologique (INSPQ)</strong></td><td>Cas cliniques commentés sur PSN et toxicités</td><td>inspq.qc.ca</td></tr>
+              <tr style="background:#f0fdf4;"><td><strong>Santé Canada</strong></td><td>Base de données PSN homologués (recherche par NPN)</td><td>canada.ca/psn-homologues</td></tr>
+              <tr><td><strong>MedEffet Canada</strong></td><td>Déclaration des effets indésirables des MVL/PSN à Santé Canada</td><td>canada.ca/medeffet</td></tr>
+            </tbody>
+          </table>
+          <div class="key-fact red" style="margin-top:10px;"><strong>Red flags &rarr; consultation obligatoire :</strong> Grossesse/allaitement · Enfants de moins de 2 ans · Personnes âgées (&gt;65 ans) · IRC/IH · IC · Polymédication · Immunosuppression · Symptômes persistants &gt;7 jours sans amélioration · Fièvre élevée ou signes de complication.</div>
+        </div>
+
+      </div>
+    </div>
+
     <div class="section" id="sec-pharmacoguide">
       <div class="section-header" style="background:linear-gradient(135deg,#1e40af,#1d4ed8);">
         <div class="section-accent" style="background:#3b82f6;font-size:22px;">💊</div>
@@ -45405,6 +45615,7 @@ const SEARCH_INDEX = [
   { id:'schizophrenie',       title:'Schizophrénie & Psychose',           specialty:'Santé Mentale',      keywords:['schizophrénie','psychose','antipsychotique','clozapine','halopéridol','délire','hallucination','smn','dsp','désinstitutionnalisation'] },
   { id:'toc-tspt',            title:'TOC & TSPT',                         specialty:'Santé Mentale',      keywords:['toc','tspt','trouble obsessionnel','stress post-traumatique','compulsion','obsession','evitement','isrs','venlafaxine','prazosin','emdr'] },
   { id:'msk',                 title:'Musculosquelettique & MSK',          specialty:'Rhumatologie',       keywords:['msk','musculosquelettique','arthrite','tendinite','bursite','fracture','lombalgie','genou','épaule','hanche','ottawa','sport'] },
+  { id:'mvl-psn',            title:'MVL & Produits de santé naturels', specialty:'Pharmacologie',      keywords:['mvl','vente libre','automédication','psn','produit de santé naturel','acétaminophène','ibuprofène','décongestionnant','antihistaminique','rhume','allergie','topique','millepertuis','interactions psn','npn','din'] },
   { id:'pharmacoguide',       title:'Guide Pharmacologique',              specialty:'Pharmacologie',      keywords:['pharmacologie','médicament','pharmacocinétique','pharmacodynamie','interactions','prescription','posologie'] },
   { id:'quiz',                title:'Quiz Clinique Interactif',           specialty:'Formation',          keywords:['quiz','qcm','questions','auto-évaluation','formation','révision'] },
   // ── Calculateurs individuels (recherchables, mènent directement à l'outil) ──
@@ -45680,6 +45891,7 @@ const SECTION_ORDER = [
   // Musculosquelettique
   'msk',
   // Pharmacologie
+  'mvl-psn',
   'pharmacoguide',
   // Outils
   'quiz'
@@ -45716,7 +45928,7 @@ const SECTION_TITLES = {
   'sua':'SUA','cancer-col':'Cancer du Col','cancer-endo':'Cancer de l\'Endomètre',
   'menopause':'Ménopause & SGUM','survivance':'Survivance & Rôle IPS',
   'depistage':'Dépistage & Prévention',
-  'pharmacoguide':'Guide Pharmacologie'
+  'mvl-psn':'MVL & PSN','pharmacoguide':'Guide Pharmacologie'
 };
 
 function buildSectionNavs() {
@@ -46700,6 +46912,7 @@ function goToBlock(id) {
     'menopause',
     'survivance',
     'depistage',
+    'mvl-psn',
     'pharmacoguide'
   ];
 
