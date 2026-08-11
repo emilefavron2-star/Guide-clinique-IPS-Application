@@ -37564,115 +37564,361 @@ Revoir rapidement si nouvelle Sx ou changement de dose<br>
 <div class="section" id="sec-htp">
       <div class="section-header">
         <div class="section-accent" style="background:#1e3a8a">💧</div>
-        <div class="section-title"><h1>Hypertension portale</h1><div class="breadcrumb">Hépato-biliaire <span class="breadcrumb-sep">·</span> Section 9</div></div>
+        <div class="section-title"><h1>Hypertension portale</h1><div class="breadcrumb">Hépato-biliaire <span class="breadcrumb-sep">·</span> GPVH <span class="breadcrumb-sep">·</span> Varices <span class="breadcrumb-sep">·</span> Prophylaxie <span class="breadcrumb-sep">·</span> Complications</div></div>
       </div>
       <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;">
-        <button onclick="goToBlock('htport-1')" style="background:#374151;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">🔬 Définition</button>
-        <button onclick="goToBlock('htport-2')" style="background:#6d28d9;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">📌 Classification</button>
-        <button onclick="goToBlock('htport-3')" style="background:#b45309;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">🔍 Dérivations</button>
-        <button onclick="goToBlock('htport-4')" style="background:#c0392b;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">🚨 Complications</button>
+        <button onclick="goToBlock('htport-1')" style="background:#374151;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🔬 Définition &amp; Physiopath.</button>
+        <button onclick="goToBlock('htport-2')" style="background:#6d28d9;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">📌 Classification</button>
+        <button onclick="goToBlock('htport-3')" style="background:#1d4ed8;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">📏 GPVH &amp; Dx non invasif</button>
+        <button onclick="goToBlock('htport-4')" style="background:#b45309;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🔍 Dérivations</button>
+        <button onclick="goToBlock('htport-5')" style="background:#0f766e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🩺 Dépistage &amp; prophylaxie</button>
+        <button onclick="goToBlock('htport-6')" style="background:#c0392b;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🩸 Hémorragie variqueuse</button>
+        <button onclick="goToBlock('htport-7')" style="background:#0a7a4e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">⚠️ Complications</button>
+        <button onclick="goToBlock('htport-8')" style="background:#dc2626;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🚨 Red flags</button>
       </div>
-      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:20px;">
-        <div style="flex:1;min-width:100px;background:#FEF9C3;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:16px;font-weight:800;color:#92400e;">GPVH &gt; 5</div><div style="font-size:11px;color:#555;margin-top:4px;">Seuil HTP (mmHg)</div></div>
-        <div style="flex:1;min-width:100px;background:#FEE2E2;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:16px;font-weight:800;color:#c0392b;">GPVH &gt; 10</div><div style="font-size:11px;color:#555;margin-top:4px;">HTP cliniquement significative</div></div>
-        <div style="flex:1;min-width:100px;background:#EEF2FF;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:16px;font-weight:800;color:#1C3F8F;">Varices</div><div style="font-size:11px;color:#555;margin-top:4px;">Complication #1 mortelle</div></div>
+
+      <!-- Stat-cards -->
+      <div class="stat-row" style="margin-bottom:16px;">
+        <div class="stat-card yellow"><div class="stat-num">&gt; 5 mmHg</div><div class="stat-label">GPVH — seuil de l'hypertension portale</div></div>
+        <div class="stat-card red"><div class="stat-num">≥ 10 mmHg</div><div class="stat-label">HTP cliniquement significative — varices, décompensation</div></div>
+        <div class="stat-card purple"><div class="stat-num">≥ 12 mmHg</div><div class="stat-label">Seuil de risque hémorragique</div></div>
+        <div class="stat-card blue"><div class="stat-num">Baveno VII</div><div class="stat-label">&lt; 20 kPa + plaq. &gt; 150 → OGD évitable</div></div>
       </div>
-  <!-- Stat-cards -->
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:16px;">
-    <div style="background:#fce4ec;border-radius:10px;padding:11px;text-align:center;border-left:4px solid #dc2626;"><div style="font-size:12px;font-weight:800;color:#b91c1c;">PAPm &gt;20 mmHg</div><div style="font-size:11px;color:#555;margin-top:3px;">Nouveau seuil OMS 2022</div></div>
-    <div style="background:#e8f4fd;border-radius:10px;padding:11px;text-align:center;border-left:4px solid #0369a1;"><div style="font-size:12px;font-weight:800;color:#0369a1;">HTP groupe 1</div><div style="font-size:11px;color:#555;margin-top:3px;">HTAP — iPDE5, ERA, prostacyclines</div></div>
-    <div style="background:#fff3cd;border-radius:10px;padding:11px;text-align:center;border-left:4px solid #f59e0b;"><div style="font-size:12px;font-weight:800;color:#b45309;">HTP groupe 2</div><div style="font-size:11px;color:#555;margin-top:3px;">Cardiopathie gauche = la plus fréquente</div></div>
-    <div style="background:#fce4ec;border-radius:10px;padding:11px;text-align:center;border-left:4px solid #dc2626;"><div style="font-size:12px;font-weight:800;color:#b91c1c;">HTAP signes</div><div style="font-size:11px;color:#555;margin-top:3px;">Dyspnée effort · syncope · HPD</div></div>
-  </div>
+
       <div class="block para" style="margin-top:14px;">
-        <div class="block-title" id="htport-1"><span class="tag">🔬 9.1 Définition & physiopathologie</span></div>
-        <div class="content-text"><strong>Définition :</strong> Gradient de pression porto-hépatique (GPPH) &gt; 5 mmHg. HTP cliniquement significative ≥ 10 mmHg (risque varices). HTP sévère ≥ 12 mmHg (risque hémorragie).</div>
-        <div class="content-text" style="margin-top:6px;"><strong>Au repos :</strong> le foie reçoit ~25 % du débit cardiaque. Le sang traverse les sinusoïdes → veines centrolobulaires → veines sus-hépatiques → VCI.</div>
-        <div class="key-fact green" style="margin-top:8px;font-size:13px;">
-          <strong>Mécanismes HTP intrahépatique (cirrhose) :</strong><br>
-          1. ↑ Résistance vasculaire intrahépatique (fibrose + nodules compriment les sinusoïdes)<br>
-          2. ↑ Pression portale en amont (gradient porto-cave &gt; 5 mmHg)<br>
-          3. Hypertrophie des vaisseaux collatéraux préexistants → shunt porto-systémique<br>
-          4. Vasodilatation splanchnique secondaire → syndrome circulatoire hyperdynamique → activation SRAA + SNS + vasopressine → rétention hydrosodée → ascite + SHR
+        <div class="block-title" id="htport-1"><span class="tag">🔬 9.1 Définition &amp; physiopathologie</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">📖 <strong>Définition :</strong> élévation du <strong>gradient de pression veineuse hépatique (GPVH)</strong> au-dessus de <strong>5 mmHg</strong>. Le GPVH est la différence entre la pression sus-hépatique <em>bloquée</em> (reflet de la pression portale) et la pression sus-hépatique <em>libre</em> (reflet de la pression systémique) — c'est donc un <strong>gradient</strong>, ce qui le rend indépendant de la volémie et de la pression veineuse centrale.</div>
+
+        <div class="stat-row" style="margin-top:12px;">
+          <div class="stat-card gray"><div class="stat-num">≈ 25 %</div><div class="stat-label">du débit cardiaque perfuse le foie au repos</div></div>
+          <div class="stat-card green"><div class="stat-num">1–5 mmHg</div><div class="stat-label">GPVH normal</div></div>
+          <div class="stat-card yellow"><div class="stat-num">6–9 mmHg</div><div class="stat-label">HTP subclinique — pas encore de varices</div></div>
+          <div class="stat-card red"><div class="stat-num">≥ 10 mmHg</div><div class="stat-label">HTP cliniquement significative</div></div>
         </div>
+
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">⚙️ Les deux moteurs de l'hypertension portale</div>
+        <div style="background:#fafafa;border:1px solid #e2e8f0;border-radius:12px;padding:14px;overflow-x:auto;">
+        <svg viewBox="0 0 720 340" style="width:100%;min-width:620px;height:auto;font-family:inherit;" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <marker id="arr-htp" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#1d4ed8"/></marker>
+            <marker id="arr-htp-r" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#c0392b"/></marker>
+          </defs>
+
+          <rect x="20" y="14" width="300" height="62" rx="10" fill="#fff8e1" stroke="#d35400" stroke-width="1.8"/>
+          <text x="170" y="35" text-anchor="middle" font-size="12.5" font-weight="800" fill="#d35400">① ↑ RÉSISTANCE INTRAHÉPATIQUE</text>
+          <text x="170" y="52" text-anchor="middle" font-size="10.5" fill="#7c3f00">Fibrose + nodules de régénération (composante fixe)</text>
+          <text x="170" y="67" text-anchor="middle" font-size="10.5" fill="#7c3f00">+ contraction des cellules étoilées, ↓ NO (composante dynamique)</text>
+
+          <rect x="400" y="14" width="300" height="62" rx="10" fill="#e8f4fd" stroke="#1d4ed8" stroke-width="1.8"/>
+          <text x="550" y="35" text-anchor="middle" font-size="12.5" font-weight="800" fill="#1d4ed8">② ↑ DÉBIT SPLANCHNIQUE</text>
+          <text x="550" y="52" text-anchor="middle" font-size="10.5" fill="#1e3a8a">Vasodilatation artériolaire splanchnique (NO, glucagon)</text>
+          <text x="550" y="67" text-anchor="middle" font-size="10.5" fill="#1e3a8a">→ afflux de sang vers un foie déjà résistant</text>
+
+          <line x1="170" y1="76" x2="170" y2="100" stroke="#1d4ed8" stroke-width="2.2" marker-end="url(#arr-htp)"/>
+          <line x1="550" y1="76" x2="550" y2="100" stroke="#1d4ed8" stroke-width="2.2" marker-end="url(#arr-htp)"/>
+
+          <rect x="180" y="104" width="360" height="46" rx="10" fill="#ede9fe" stroke="#6d28d9" stroke-width="2"/>
+          <text x="360" y="124" text-anchor="middle" font-size="13" font-weight="800" fill="#6d28d9">↑ PRESSION PORTALE — GPVH &gt; 5 mmHg</text>
+          <text x="360" y="141" text-anchor="middle" font-size="10.5" fill="#4c1d95">Loi d'Ohm : ΔP = Débit × Résistance — les deux termes augmentent</text>
+
+          <line x1="360" y1="150" x2="360" y2="172" stroke="#c0392b" stroke-width="2.4" marker-end="url(#arr-htp-r)"/>
+          <line x1="200" y1="127" x2="120" y2="127" stroke="#94a3b8" stroke-width="1.6"/>
+          <line x1="120" y1="127" x2="120" y2="185" stroke="#94a3b8" stroke-width="1.6"/>
+          <line x1="120" y1="185" x2="132" y2="185" stroke="#c0392b" stroke-width="2.2" marker-end="url(#arr-htp-r)"/>
+
+          <rect x="20" y="178" width="230" height="70" rx="10" fill="#fce4ec" stroke="#c0392b" stroke-width="1.6"/>
+          <text x="36" y="199" font-size="12" font-weight="800" fill="#c0392b">Collatérales porto-systémiques</text>
+          <text x="36" y="216" font-size="10.5" fill="#7f1d1d">Réouverture de vaisseaux préexistants</text>
+          <text x="36" y="230" font-size="10.5" fill="#7f1d1d">→ varices œso-gastriques, caput medusae</text>
+          <text x="36" y="244" font-size="10.5" fill="#c0392b" font-weight="700">→ HÉMORRAGIE · ENCÉPHALOPATHIE</text>
+
+          <rect x="270" y="178" width="180" height="70" rx="10" fill="#f1f5f9" stroke="#475569" stroke-width="1.6"/>
+          <text x="286" y="199" font-size="12" font-weight="800" fill="#334155">Splénomégalie</text>
+          <text x="286" y="216" font-size="10.5" fill="#334155">Congestion en amont</text>
+          <text x="286" y="230" font-size="10.5" fill="#334155">Hypersplénisme :</text>
+          <text x="286" y="244" font-size="10.5" fill="#334155" font-weight="700">↓ plaquettes, ↓ leucocytes</text>
+
+          <rect x="470" y="178" width="230" height="70" rx="10" fill="#fff3cd" stroke="#d35400" stroke-width="1.6"/>
+          <text x="486" y="199" font-size="12" font-weight="800" fill="#d35400">Circulation hyperdynamique</text>
+          <text x="486" y="216" font-size="10.5" fill="#7c3f00">↓ volume artériel efficace</text>
+          <text x="486" y="230" font-size="10.5" fill="#7c3f00">→ activation SRAA, SNS, ADH</text>
+          <text x="486" y="244" font-size="10.5" fill="#d35400" font-weight="700">→ rétention hydrosodée</text>
+
+          <line x1="585" y1="248" x2="585" y2="270" stroke="#c0392b" stroke-width="2.2" marker-end="url(#arr-htp-r)"/>
+
+          <rect x="400" y="276" width="300" height="52" rx="10" fill="#7f1d1d"/>
+          <text x="550" y="297" text-anchor="middle" font-size="12.5" font-weight="800" fill="#fff">ASCITE → PBS → SYNDROME HÉPATORÉNAL</text>
+          <text x="550" y="315" text-anchor="middle" font-size="10.5" fill="#fecaca">La cascade de décompensation de la cirrhose</text>
+
+          <rect x="20" y="276" width="360" height="52" rx="10" fill="#f0fdf4" stroke="#15803d" stroke-width="1.8"/>
+          <text x="200" y="297" text-anchor="middle" font-size="12" font-weight="800" fill="#15803d">Cible thérapeutique : ↓ GPVH ≥ 10 % ou &lt; 12 mmHg</text>
+          <text x="200" y="315" text-anchor="middle" font-size="10.5" fill="#14532d">= chute majeure du risque d'hémorragie et de décompensation</text>
+        </svg>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">🔑 <strong>Ce que le schéma explique :</strong> la composante <strong>dynamique</strong> de la résistance intrahépatique (tonus des cellules étoilées) est la seule qui soit réversible — c'est là qu'agissent les <strong>bêta-bloquants non sélectifs</strong>, en réduisant surtout le débit splanchnique. La fibrose, elle, ne recule qu'en traitant la cause (sevrage alcoolique, traitement du VHC, contrôle métabolique).</div>
       </div>
 
       <div class="block def" style="margin-top:14px;">
         <div class="block-title" id="htport-2"><span class="tag">📌 9.2 Classification topographique des obstacles</span></div>
-        <table>
-          <thead><tr><th>Niveau</th><th>Exemples</th></tr></thead>
+        <div style="overflow-x:auto;margin-top:10px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:20%;">Niveau</th><th>Étiologies</th><th>Indices distinctifs</th></tr></thead>
           <tbody>
-            <tr><td><strong>Sus-hépatique (post-sinusoïdal)</strong></td><td>Syndrome de Budd-Chiari (thrombose veines hépatiques) · Diaphragme cave · Péricardite constrictive · Insuffisance cardiaque droite</td></tr>
-            <tr><td><strong>Intrahépatique ⭐</strong></td><td>Cirrhose (cause la plus fréquente) · Veinopathie portale oblitérante · Hyperplasie nodulaire régénérative · Bilharziose (schistosomiase)</td></tr>
-            <tr><td><strong>Sous-hépatique (pré-hépatique)</strong></td><td>Thrombose de la veine porte · Compression extrinsèque (tumeur, adénopathies) · Cavernome portal · HTP segmentaire (thrombose veine splénique)</td></tr>
+            <tr style="background:#e8f4fd;"><td><strong>Pré-hépatique</strong><br><em>(sous-hépatique)</em></td><td><strong>Thrombose de la veine porte</strong> · cavernome portal · compression extrinsèque (tumeur, adénopathies) · <strong>thrombose de la veine splénique</strong> (HTP « segmentaire », souvent sur pancréatite ou cancer du pancréas)</td><td><strong>Fonction hépatique conservée</strong> — pas d'ictère, pas d'encéphalopathie, albumine et INR normaux<br>Ascite rare<br>HTP segmentaire : <strong>varices gastriques isolées</strong> avec œsophage normal</td></tr>
+            <tr style="background:#fff8e1;"><td><strong>Intrahépatique</strong> ⭐</td><td><strong>Cirrhose — de loin la première cause</strong><br>Pré-sinusoïdal : bilharziose, cholangite biliaire primitive débutante, veinopathie portale oblitérante<br>Sinusoïdal : cirrhose, hépatite alcoolique aiguë<br>Post-sinusoïdal : maladie veino-occlusive (post-greffe, chimiothérapie)</td><td><strong>Signes d'insuffisance hépatocellulaire associés</strong> — ictère, angiomes stellaires, érythrose palmaire, ↓ albumine, ↑ INR<br>Ascite fréquente</td></tr>
+            <tr style="background:#fce4ec;"><td><strong>Post-hépatique</strong><br><em>(sus-hépatique)</em></td><td><strong>Syndrome de Budd-Chiari</strong> (thrombose des veines sus-hépatiques) · diaphragme de la VCI · <strong>péricardite constrictive</strong> · <strong>insuffisance cardiaque droite</strong> sévère · valvulopathie tricuspidienne</td><td><strong>Hépatomégalie douloureuse</strong> + ascite <strong>d'installation rapide</strong><br>⚠️ Chercher une cause cardiaque : jugulaires turgescentes, reflux hépatojugulaire — <strong>l'échocardiographie fait partie du bilan</strong><br>Budd-Chiari : penser à un syndrome myéloprolifératif sous-jacent</td></tr>
           </tbody>
         </table>
+        </div>
+        <div class="key-fact green" style="margin-top:12px;">🧭 <strong>Le raccourci clinique :</strong> une HTP <strong>avec</strong> insuffisance hépatocellulaire (ictère, ↓ albumine, ↑ INR) est presque toujours <strong>intrahépatique</strong>. Une HTP <strong>sans</strong> atteinte de la fonction hépatique oriente vers un obstacle <strong>pré-hépatique</strong>. Une HTP avec <strong>signes droits</strong> (jugulaires, reflux hépatojugulaire) oriente vers un obstacle <strong>post-hépatique</strong> — et souvent vers le cœur, pas vers le foie.</div>
+        <div class="key-fact red" style="margin-top:8px;">⚠️ <strong>Piège à ne pas manquer :</strong> devant une ascite, mesurer le <strong>gradient d'albumine sérum-ascite (GASA)</strong>. Un GASA ≥ 11 g/L confirme l'origine portale, mais ne dit pas <em>où</em> est l'obstacle. Si la protéinémie de l'ascite est <strong>élevée (&gt; 25 g/L)</strong> avec un GASA ≥ 11, penser <strong>cardiaque ou Budd-Chiari</strong> plutôt que cirrhose.</div>
+      </div>
+
+      <div class="block para" style="margin-top:14px;border-left-color:#1d4ed8;">
+        <div class="block-title" id="htport-3"><span class="tag">📏 9.3 Mesure du GPVH &amp; diagnostic non invasif</span></div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:10px;">
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;border-left:4px solid #1d4ed8;">
+            <strong style="color:#1d4ed8;">📏 GPVH — la mesure de référence</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Cathétérisme par voie <strong>transjugulaire</strong> d'une veine sus-hépatique.<br><strong>GPVH = pression bloquée − pression libre.</strong><br><br>Invasif, disponible seulement en centre spécialisé. En pratique courante, on ne le mesure pas — on l'<strong>estime</strong> par les méthodes non invasives ci-contre.<br><br>Il reste utile pour : évaluer la réponse hémodynamique à un traitement, préciser le pronostic, et trancher les cas ambigus.</div>
+          </div>
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;border-left:4px solid #15803d;">
+            <strong style="color:#15803d;">🧮 Les seuils qui comptent</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">
+              <div><strong>≤ 5 mmHg</strong> — normal</div>
+              <div><strong>6–9 mmHg</strong> — HTP subclinique : pas de varices, pas de décompensation</div>
+              <div><strong>≥ 10 mmHg</strong> — <strong>HTP cliniquement significative</strong> : seuil d'apparition des varices, de l'ascite et de la décompensation</div>
+              <div><strong>≥ 12 mmHg</strong> — seuil au-dessous duquel une varice ne saigne essentiellement pas</div>
+              <div><strong>≥ 16–20 mmHg</strong> — mauvais pronostic, échec du contrôle hémorragique</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">🩻 Évaluation non invasive — ce qu'on utilise réellement</div>
+        <div style="overflow-x:auto;">
+        <table style="font-size:12px;">
+          <thead><tr><th>Outil</th><th>Ce qu'il apporte</th><th>Limites</th></tr></thead>
+          <tbody>
+            <tr style="background:#f0fdf4;"><td><strong>Élastographie impulsionnelle (FibroScan)</strong></td><td>Mesure la rigidité hépatique en kPa · <strong>pierre angulaire des critères de Baveno VII</strong> · &gt; 20–25 kPa évoque fortement une HTP cliniquement significative</td><td>Non valide si <strong>ascite</strong>, obésité marquée, espaces intercostaux étroits<br>⚠️ Faussement élevée si <strong>repas récent</strong> (à jeun ≥ 3 h), cytolyse aiguë, cholestase, congestion cardiaque</td></tr>
+            <tr><td><strong>Plaquettes</strong></td><td>Reflet indirect de l'hypersplénisme · <strong>&lt; 150 × 10⁹/L</strong> = signal d'HTP · souvent la <em>première</em> anomalie détectée</td><td>Non spécifique — éliminer les autres causes de thrombopénie</td></tr>
+            <tr style="background:#e8f4fd;"><td><strong>Échographie-Doppler</strong></td><td>Splénomégalie · <strong>circulation collatérale</strong> (recanalisation de la veine ombilicale = signe quasi certain d'HTP) · <strong>inversion du flux portal</strong> (hépatofuge) · perméabilité de la veine porte · dysmorphie hépatique · ascite</td><td>Opérateur-dépendant · un examen normal n'exclut pas l'HTP</td></tr>
+            <tr><td><strong>Gastroscopie (OGD)</strong></td><td>Recherche et gradation des <strong>varices œsophagiennes et gastriques</strong> · repère les <strong>signes rouges</strong> · diagnostique la gastropathie hypertensive portale</td><td>Invasive, sédation · c'est ce que Baveno VII cherche à éviter chez les patients à faible risque</td></tr>
+            <tr style="background:#ede9fe;"><td><strong>TDM / IRM</strong></td><td>Cartographie des collatérales, thrombose portale, dysmorphie, dépistage du CHC</td><td>Irradiation, produit de contraste · ne mesure pas la pression</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="key-fact blue" style="margin-top:12px;">🎯 <strong>Règle de Baveno VII :</strong> chez un patient avec une maladie hépatique chronique compensée, si <strong>rigidité hépatique &lt; 20 kPa ET plaquettes &gt; 150 × 10⁹/L</strong>, le risque de varices à haut risque hémorragique est très faible → <strong>la gastroscopie de dépistage peut être évitée</strong>. Répéter FibroScan et plaquettes annuellement; si l'un des deux critères bascule, faire l'OGD.</div>
+        <div class="key-fact orange" style="margin-top:8px;">📌 <strong>Corollaire souvent oublié :</strong> ces critères s'appliquent à la maladie hépatique <strong>compensée</strong>. Un patient déjà décompensé (ascite, hémorragie, encéphalopathie, ictère) sort de l'algorithme — il relève d'une évaluation endoscopique et spécialisée directe.</div>
       </div>
 
       <div class="block clin" style="margin-top:14px;">
-        <div class="block-title" id="htport-3"><span class="tag">🔍 9.3 Voies de dérivation (circulation collatérale)</span></div>
-        <table>
-          <thead><tr><th>Voie</th><th>Localisation</th><th>Manifestation clinique</th></tr></thead>
+        <div class="block-title" id="htport-4"><span class="tag">🔍 9.4 Voies de dérivation (circulation collatérale)</span></div>
+        <div class="key-fact blue" style="margin-top:10px;">🧭 <strong>Le principe :</strong> quand le sang portal ne peut plus traverser le foie, il emprunte les anastomoses <strong>porto-systémiques</strong> préexistantes, qui se dilatent. Chaque territoire d'anastomose donne un signe clinique différent — et le plus dangereux est celui qu'on ne voit pas.</div>
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th>Voie</th><th>Anastomose</th><th>Manifestation</th><th>Portée clinique</th></tr></thead>
           <tbody>
-            <tr><td><strong>Gastro-œsophagiennes ⭐</strong></td><td>Veines gastro-œsophagiennes → veine azygos (réseau cave supérieur)</td><td><strong>Varices œsophagiennes</strong> — risque hémorragie massive (mortalité ~50 % à 6 sem si rupture, 50 % des HDH chez cirrhotique)</td></tr>
-            <tr><td><strong>Para-ombilicales</strong></td><td>Réouverture du ligament rond (veine ombilicale)</td><td><strong>Caput medusae</strong> (veines dilatées sous-cutanées abdominales rayonnant depuis l'ombilic)</td></tr>
-            <tr><td><strong>Hémorroïdaires</strong></td><td>Anastomoses recto-anales (mésentérique inf. → système cave inf.)</td><td>Hémorroïdes secondaires</td></tr>
-            <tr><td><strong>Rétro-péritonéales / spléno-rénales</strong></td><td>Veines rétro-péritonéales spontanées</td><td>Asymptomatique ou varices gastriques fundiques</td></tr>
+            <tr style="background:#fce4ec;"><td><strong>Gastro-œsophagienne</strong> ⭐</td><td>Veines gastriques gauches → veines œsophagiennes → <strong>azygos</strong> (système cave supérieur)</td><td><strong>Varices œsophagiennes et gastriques</strong></td><td><strong>La complication mortelle</strong> — environ la moitié des hémorragies digestives hautes du cirrhotique · invisible à l'examen physique</td></tr>
+            <tr><td><strong>Para-ombilicale</strong></td><td>Réouverture de la veine ombilicale dans le ligament rond</td><td><strong>Caput medusae</strong> — veines sous-cutanées rayonnant depuis l'ombilic<br>Parfois un souffle veineux (syndrome de Cruveilhier-Baumgarten)</td><td><strong>Signe quasi pathognomonique d'HTP</strong> à l'examen · sa visualisation au Doppler confirme le diagnostic</td></tr>
+            <tr style="background:#fff8e1;"><td><strong>Hémorroïdaire</strong></td><td>Veine rectale supérieure (mésentérique inférieure) → veines rectales moyennes et inférieures (système cave inférieur)</td><td>Varices rectales — <em>à distinguer des hémorroïdes banales</em></td><td>Saignement possible mais rarement massif · ne pas conclure « hémorroïdes » sans y penser chez un cirrhotique</td></tr>
+            <tr><td><strong>Rétropéritonéale et spléno-rénale</strong></td><td>Veines de Retzius · shunt spléno-rénal spontané</td><td>Souvent asymptomatique · <strong>varices gastriques fundiques</strong></td><td>Un gros shunt spléno-rénal favorise l'<strong>encéphalopathie hépatique réfractaire</strong> — il peut être embolisé</td></tr>
           </tbody>
         </table>
-        <div class="key-fact blue">💡 <strong>Baveno VII :</strong> si FibroScan &lt; 20 kPa + plaquettes &gt; 150 × 10⁹/L → risque faible de varices à haut risque hémorragique → OGD non obligatoire</div>
+        </div>
+        <div class="key-fact red" style="margin-top:12px;">⚠️ <strong>Ce que le sang court-circuite :</strong> en contournant le foie, il échappe au <strong>premier passage hépatique</strong>. Deux conséquences directes — l'ammoniaque et les toxines intestinales atteignent le cerveau sans détoxification (<strong>encéphalopathie hépatique</strong>), et la biodisponibilité des médicaments à fort effet de premier passage <strong>augmente</strong> (adapter les doses, prudence accrue avec les sédatifs et les opioïdes).</div>
+      </div>
+
+      <div class="block rx" style="margin-top:14px;">
+        <div class="block-title" id="htport-5"><span class="tag">🩺 9.5 Dépistage &amp; prophylaxie des varices</span></div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin:12px 0;">
+          <button id="htptab0" onclick="switchHtpTx(0)" style="background:#0f766e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;transition:.15s;">A. Dépistage</button>
+          <button id="htptab1" onclick="switchHtpTx(1)" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;transition:.15s;">B. Prophylaxie primaire</button>
+          <button id="htptab2" onclick="switchHtpTx(2)" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;transition:.15s;">C. Prophylaxie secondaire</button>
+        </div>
+
+        <div id="htpp0" style="display:block;">
+          <div class="criteria-list">
+            <div class="criteria-item"><div class="criteria-num blue">1</div><span><strong>Tout patient chez qui on pose un diagnostic de cirrhose</strong> doit être évalué pour les varices — soit par gastroscopie, soit par les critères non invasifs de Baveno VII.</span></div>
+            <div class="criteria-item"><div class="criteria-num blue">2</div><span><strong>Rigidité &lt; 20 kPa ET plaquettes &gt; 150 × 10⁹/L</strong> → OGD évitable · refaire FibroScan + plaquettes <strong>annuellement</strong>.</span></div>
+            <div class="criteria-item"><div class="criteria-num blue">3</div><span><strong>Critères non remplis</strong> → gastroscopie de dépistage.</span></div>
+            <div class="criteria-item"><div class="criteria-num blue">4</div><span><strong>Pas de varices à l'OGD</strong> → répéter aux <strong>2–3 ans</strong> (plus tôt si décompensation ou cause non contrôlée).</span></div>
+            <div class="criteria-item"><div class="criteria-num blue">5</div><span><strong>Petites varices sans traitement</strong> → répéter aux <strong>1–2 ans</strong>.</span></div>
+            <div class="criteria-item"><div class="criteria-num red">!</div><span><strong>Décompensation</strong> (ascite, ictère, encéphalopathie) ou <strong>hémorragie</strong> → évaluation endoscopique sans délai, quel que soit le calendrier.</span></div>
+          </div>
+
+          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">🔺 Ce qui définit une varice « à haut risque »</div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;">
+            <div style="background:#fce4ec;border-radius:10px;padding:14px;">
+              <strong style="color:#c0392b;">Taille</strong>
+              <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Grosses varices</strong> (moyennes à grosses) — le facteur de risque le plus fort</div>
+            </div>
+            <div style="background:#fff3cd;border-radius:10px;padding:14px;">
+              <strong style="color:#d35400;">Signes rouges</strong>
+              <div style="font-size:13px;line-height:1.7;margin-top:8px;"><em>Red wale marks</em>, taches rouge cerise — traduisent l'amincissement de la paroi variqueuse</div>
+            </div>
+            <div style="background:#ede9fe;border-radius:10px;padding:14px;">
+              <strong style="color:#6d28d9;">Gravité de la cirrhose</strong>
+              <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Child-Pugh B ou C</strong> — le risque hémorragique croît avec la décompensation</div>
+            </div>
+          </div>
+        </div>
+
+        <div id="htpp1" style="display:none;">
+          <div class="key-fact green" style="margin-bottom:10px;">🎯 <strong>Objectif :</strong> empêcher la <em>première</em> hémorragie. Deux options seulement, et elles ne se combinent pas en prophylaxie primaire.</div>
+          <div style="overflow-x:auto;">
+          <table style="font-size:12px;">
+            <thead><tr><th>Option</th><th>Indication</th><th>Avantages</th><th>Inconvénients</th></tr></thead>
+            <tbody>
+              <tr style="background:#f0fdf4;"><td><strong>Bêta-bloquant non sélectif (BBNS)</strong><br><span class="drug-badge line1">Carvédilol · propranolol · nadolol</span></td><td><strong>Première intention.</strong> Le <strong>carvédilol</strong> est privilégié : effet alpha-bloquant additionnel qui abaisse davantage le GPVH<br>Indiqué dès qu'il y a une <strong>HTP cliniquement significative</strong>, même sans grosses varices</td><td>Traite l'HTP <em>globalement</em> — réduit aussi le risque d'ascite et de décompensation, pas seulement l'hémorragie · peu coûteux · pas d'endoscopie répétée</td><td>Hypotension, fatigue, bronchospasme, bradycardie<br>Intolérance ou contre-indication chez une proportion notable de patients</td></tr>
+              <tr><td><strong>Ligature élastique endoscopique</strong></td><td>Si les BBNS sont <strong>contre-indiqués ou mal tolérés</strong>, chez un patient porteur de <strong>grosses varices</strong></td><td>Efficace localement · pas d'effet systémique</td><td>Séances répétées jusqu'à éradication · risque d'ulcère post-ligature et d'hémorragie iatrogène · <strong>n'agit pas sur la pression portale</strong> — donc pas de bénéfice sur l'ascite</td></tr>
+            </tbody>
+          </table>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
+            <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+              <strong style="color:#1d4ed8;">🎚️ Titration des BBNS</strong>
+              <div style="font-size:13px;line-height:1.7;margin-top:8px;">Augmenter jusqu'à la dose maximale tolérée.<br><strong>Cible classique : fréquence cardiaque 55–60 /min</strong>, en maintenant une <strong>TA systolique ≥ 90 mmHg</strong>.<br>Le carvédilol se titre plus prudemment (effet hypotenseur plus marqué).<br>Traitement <strong>à vie</strong> — l'arrêt fait remonter le risque.</div>
+            </div>
+            <div style="background:#fef2f2;border-radius:10px;padding:14px;">
+              <strong style="color:#c0392b;">🚫 Prudence / contre-indications</strong>
+              <div style="font-size:13px;line-height:1.7;margin-top:8px;">Asthme et MPOC sévère · bradycardie ou bloc AV · hypotension symptomatique<br><strong>Réévaluer si :</strong> ascite réfractaire, PBS, syndrome hépatorénal, TA systolique &lt; 90 mmHg, hyponatrémie &lt; 130 mmol/L — dans ces situations, les BBNS peuvent compromettre la perfusion rénale. Réduire ou suspendre, puis réintroduire après stabilisation.</div>
+            </div>
+          </div>
+        </div>
+
+        <div id="htpp2" style="display:none;">
+          <div class="key-fact red" style="margin-bottom:10px;">⚠️ <strong>Sans prophylaxie secondaire, la récidive hémorragique est la règle</strong> dans les deux ans qui suivent un premier épisode, avec une mortalité élevée à chaque récidive. C'est l'une des interventions les plus rentables de toute l'hépatologie.</div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;">
+            <div style="background:#f0fdf4;border-radius:10px;padding:14px;border-left:4px solid #15803d;">
+              <strong style="color:#15803d;">✅ Le standard : association</strong>
+              <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>BBNS + ligature élastique</strong> — contrairement à la prophylaxie primaire, ici on <strong>combine</strong> les deux.<br><br>Ligatures répétées <strong>toutes les 2 à 4 semaines jusqu'à éradication</strong> des varices, puis surveillance endoscopique.<br><br>Débuter dès que l'épisode aigu est stabilisé.</div>
+            </div>
+            <div style="background:#e8f4fd;border-radius:10px;padding:14px;border-left:4px solid #1d4ed8;">
+              <strong style="color:#1d4ed8;">📅 Surveillance après éradication</strong>
+              <div style="font-size:13px;line-height:1.7;margin-top:8px;">Gastroscopie de contrôle à <strong>3–6 mois</strong> après l'éradication, puis <strong>aux 6–12 mois</strong> — les varices récidivent.<br><br>Poursuivre le BBNS <strong>indéfiniment</strong>, à dose maximale tolérée.</div>
+            </div>
+            <div style="background:#ede9fe;border-radius:10px;padding:14px;border-left:4px solid #6d28d9;">
+              <strong style="color:#6d28d9;">🔀 TIPS</strong>
+              <div style="font-size:13px;line-height:1.7;margin-top:8px;">Shunt porto-systémique intrahépatique transjugulaire — une prothèse reliant la veine porte à une veine sus-hépatique, qui <strong>court-circuite le foie</strong> et fait chuter la pression portale.<br><br><strong>Indications :</strong> échec de l'association BBNS + ligature (récidive malgré traitement optimal), ascite réfractaire, et en <em>préemptif précoce</em> chez certains patients à haut risque après une hémorragie.</div>
+            </div>
+            <div style="background:#fef2f2;border-radius:10px;padding:14px;border-left:4px solid #c0392b;">
+              <strong style="color:#c0392b;">⚠️ Le prix du TIPS</strong>
+              <div style="font-size:13px;line-height:1.7;margin-top:8px;">En détournant le sang du foie, il aggrave ce que le foie ne fait plus :<br><strong>encéphalopathie hépatique</strong> (la complication principale) · insuffisance hépatique · insuffisance cardiaque droite par surcharge<br><br><strong>À éviter si :</strong> encéphalopathie non contrôlée, insuffisance hépatique avancée, insuffisance cardiaque, hypertension pulmonaire sévère.<br>Surveillance de la perméabilité par écho-Doppler.</div>
+            </div>
+          </div>
+          <div class="key-fact orange" style="margin-top:12px;">🔗 <strong>Ne pas oublier le fond du problème :</strong> traiter la <strong>cause</strong> de la cirrhose reste l'intervention la plus efficace sur l'HTP à long terme — sevrage alcoolique, traitement antiviral du VHC ou du VHB, contrôle métabolique et perte de poids dans la MASLD. Le GPVH peut réellement baisser quand la cause est maîtrisée. Y ajouter la <strong>vaccination</strong> (VHA, VHB, pneumocoque, influenza) et l'évaluation en <strong>transplantation hépatique</strong> au bon moment.</div>
+        </div>
+      </div>
+
+      <div class="block alert red" style="margin-top:14px;">
+        <div class="block-title" id="htport-6"><span class="tag">🩸 9.6 Hémorragie variqueuse aiguë — urgence</span></div>
+        <div class="key-fact red" style="margin-top:10px;">⏱️ <strong>Urgence vitale.</strong> Chez un cirrhotique qui saigne, présumer une origine variqueuse jusqu'à preuve endoscopique du contraire. Deux gestes changent la mortalité et se font <strong>avant</strong> l'endoscopie : le <strong>vasoconstricteur splanchnique</strong> et l'<strong>antibioprophylaxie</strong>.</div>
+
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">⚡ Séquence de prise en charge</div>
+        <div class="criteria-list">
+          <div class="criteria-item"><div class="criteria-num red">1</div><span><strong>Stabiliser.</strong> Deux voies veineuses de gros calibre · cristalloïdes prudents · protection des voies aériennes si vomissements abondants ou encéphalopathie · surveillance en unité monitorée.</span></div>
+          <div class="criteria-item"><div class="criteria-num red">2</div><span><strong>Transfusion restrictive — cible Hb ≈ 70–80 g/L.</strong> Sur-transfuser <em>augmente</em> la pression portale et le risque de récidive hémorragique. C'est contre-intuitif et souvent mal appliqué.</span></div>
+          <div class="criteria-item"><div class="criteria-num red">3</div><span><strong>Vasoconstricteur splanchnique immédiat</strong> — <span class="drug-badge line1">octréotide IV</span> (bolus puis perfusion) ou terlipressine · à poursuivre <strong>2 à 5 jours</strong>. Réduit le débit splanchnique et donc la pression portale.</span></div>
+          <div class="criteria-item"><div class="criteria-num red">4</div><span><strong>Antibioprophylaxie systématique</strong> — <span class="drug-badge line1">ceftriaxone IV</span> pendant <strong>≤ 7 jours</strong>. Elle réduit les infections, la récidive hémorragique <em>et la mortalité</em>. À donner même sans signe d'infection.</span></div>
+          <div class="criteria-item"><div class="criteria-num red">5</div><span><strong>Endoscopie dans les 12 heures</strong>, une fois le patient stabilisé → <strong>ligature élastique</strong> (traitement de choix pour les varices œsophagiennes).</span></div>
+          <div class="criteria-item"><div class="criteria-num red">6</div><span><strong>Prévenir l'encéphalopathie</strong> — le sang dans le tube digestif est une charge protéique majeure : <strong>lactulose</strong>.</span></div>
+          <div class="criteria-item"><div class="criteria-num red">7</div><span><strong>Suspendre temporairement les BBNS</strong> pendant l'épisode aigu (hypotension), puis les <strong>réintroduire</strong> dès la stabilisation, en prophylaxie secondaire.</span></div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px;">
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;border-left:4px solid #d35400;">
+            <strong style="color:#d35400;">🔀 Si l'hémorragie n'est pas contrôlée</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>TIPS de sauvetage</strong> — l'option la plus efficace en cas d'échec du traitement endoscopique et pharmacologique.<br><strong>Tamponnement par ballonnet</strong> (sonde de Sengstaken-Blakemore) ou <strong>stent œsophagien</strong> — mesures <em>temporaires</em> de sauvetage, sur quelques heures, en attendant le TIPS. Risque de nécrose et de perforation œsophagienne.</div>
+          </div>
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;border-left:4px solid #1d4ed8;">
+            <strong style="color:#1d4ed8;">🎈 Varices gastriques</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Elles saignent moins souvent que les varices œsophagiennes, mais <strong>plus abondamment</strong>.<br>La ligature y est moins efficace : on privilégie l'<strong>injection de colle (cyanoacrylate)</strong> ou des techniques d'obturation, ou une <strong>oblitération rétrograde par voie transveineuse (BRTO)</strong> selon l'anatomie du shunt.</div>
+          </div>
+        </div>
       </div>
 
       <div class="block flag" style="margin-top:14px;">
-        <div class="block-title" id="htport-4"><span class="tag">🚨 9.4 Complications de l'HTP et de la cirrhose décompensée</span></div>
-                <div style="display:flex;gap:6px;flex-wrap:wrap;margin:8px 0 12px;">
-          <button onclick="showPanel('ap71','ap710',3)" data-panel="ap710" style="background:#6b7280;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">Complications liées directement à l'HTP</button>
-          <button onclick="showPanel('ap71','ap711',3)" data-panel="ap711" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">Complications de l'insuffisance hépatocellulaire + HTP</button>
-          <button onclick="showPanel('ap71','ap712',3)" data-panel="ap712" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">Complications systémiques (EASL 2018) & oncologiques</button>
+        <div class="block-title" id="htport-7"><span class="tag">⚠️ 9.7 Complications de l'HTP et de la cirrhose décompensée</span></div>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;margin:8px 0 12px;">
+          <button onclick="showPanel('ap71','ap710',3)" data-panel="ap710" style="background:#6b7280;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">Liées directement à l'HTP</button>
+          <button onclick="showPanel('ap71','ap711',3)" data-panel="ap711" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">Insuffisance hépatocellulaire + HTP</button>
+          <button onclick="showPanel('ap71','ap712',3)" data-panel="ap712" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">Systémiques &amp; oncologiques</button>
         </div>
         <div id="ap710" style="display:block;">
-
-              <table style="font-size:12px;">
-                <thead><tr><th>Complication</th><th>Clinique</th><th>Prise en charge clé</th></tr></thead>
-                <tbody>
-                  <tr><td>Varices œsophagiennes / hémorragie</td><td>Hématémèse ± méléna · Choc hypovolémique · 50 % des HDH chez cirrhotique</td><td>Octréotide IV + ATB prophylaxie (norfloxacine) + endoscopie urgente (ligature élastique) · β-bloquants non sélectifs en prévention (nadolol, propranolol) · TIPS si réfractaire</td></tr>
-                  <tr><td>Splénomégalie + hypersplénisme</td><td>Thrombopénie + leucopénie + splénomégalie</td><td>Traiter cause sous-jacente · Transfusion plaquettaires si procédure invasive</td></tr>
-                  <tr><td>Gastropathie hypertensive portale</td><td>Saignements digestifs chroniques occultes</td><td>β-bloquants non sélectifs · Suppléments en fer</td></tr>
-                </tbody>
-              </table>
-            
+          <div style="overflow-x:auto;">
+          <table style="font-size:12px;">
+            <thead><tr><th>Complication</th><th>Clinique</th><th>Prise en charge clé</th></tr></thead>
+            <tbody>
+              <tr style="background:#fce4ec;"><td><strong>Varices œsophagiennes / hémorragie</strong></td><td>Hématémèse ± méléna · choc hypovolémique · environ la moitié des hémorragies digestives hautes du cirrhotique</td><td>Octréotide IV + ceftriaxone IV + endoscopie &lt; 12 h avec ligature élastique · BBNS en prophylaxie · TIPS si réfractaire<br><em>voir bloc 9.6</em></td></tr>
+              <tr><td><strong>Splénomégalie &amp; hypersplénisme</strong></td><td>Thrombopénie + leucopénie + splénomégalie · souvent la <strong>première anomalie biologique</strong> révélant l'HTP</td><td>Pas de traitement spécifique — traiter la cause · transfusion plaquettaire seulement avant un geste invasif</td></tr>
+              <tr style="background:#fff8e1;"><td><strong>Gastropathie hypertensive portale</strong></td><td>Muqueuse en « mosaïque » à l'endoscopie · saignement chronique occulte → <strong>anémie ferriprive</strong> plutôt qu'hémorragie massive</td><td>BBNS · supplémentation en fer · TIPS si saignement réfractaire</td></tr>
+              <tr><td><strong>Thrombose de la veine porte</strong></td><td>Aggravation brutale de l'HTP · douleur abdominale · parfois asymptomatique, découverte à l'imagerie</td><td>Doppler ou TDM · anticoagulation à discuter en spécialité (l'INR élevé du cirrhotique <strong>ne protège pas</strong> de la thrombose) · rechercher un CHC associé</td></tr>
+            </tbody>
+          </table>
+          </div>
         </div>
         <div id="ap711" style="display:none;">
-
-              <table style="font-size:12px;">
-                <thead><tr><th>Complication</th><th>Définition / Critères</th></tr></thead>
-                <tbody>
-                  <tr><td><strong>Ascite ⭐</strong></td><td>Épanchement péritonéal · 50 % des cirrhotiques à 10 ans · SAAG ≥ 11 g/L = origine portale · Rx : restriction sodée + spironolactone ± furosémide</td></tr>
-                  <tr><td><strong>PBS (péritonite bactérienne spontanée)</strong></td><td>PMN liquide ascite ≥ 0,25 × 10⁹/L · 10–20 % des cirrhotiques · Mortalité ~20 % · Rx : céfotaxime IV 2g q8h × 5j · Prophylaxie secondaire : norfloxacine PO</td></tr>
-                  <tr><td><strong>Syndrome hépatorénal (SHR)</strong></td><td>IRA fonctionnelle (vasoconstriction rénale sur vasodilatation splanchnique) · Critères : cirrhose + ascite + créat &gt; 133 µmol/L sans autre cause · Rx : albumine IV + terlipressine (ou noradrénaline)</td></tr>
-                  <tr><td><strong>Encéphalopathie hépatique</strong></td><td>Altération neurocognitive (NH₃ + shunt porto-systémique + GABA) · Astérixis → confusion → coma (grades 0–4) · Rx : lactulose PO + rifaximine (prévention récidive)</td></tr>
-                  <tr><td><strong>Ictère</strong></td><td>Bilirubine conjuguée — signe de gravité (insuffisance hépatique)</td></tr>
-                  <tr><td><strong>Coagulopathie</strong></td><td>↓ Facteurs coagulation (VII en premier) · ↑ RIN · Mais aussi ↓ anticoagulants naturels → état procoagulant paradoxal possible</td></tr>
-                </tbody>
-              </table>
-            
+          <div style="overflow-x:auto;">
+          <table style="font-size:12px;">
+            <thead><tr><th>Complication</th><th>Définition / critères</th><th>Prise en charge</th></tr></thead>
+            <tbody>
+              <tr style="background:#e8f4fd;"><td><strong>Ascite</strong> ⭐</td><td>Épanchement péritonéal · complication la plus fréquente de la décompensation · <strong>GASA ≥ 11 g/L</strong> = origine portale</td><td>Restriction sodée · <strong>spironolactone ± furosémide</strong> · paracentèse évacuatrice + <strong>albumine</strong> si grand volume · TIPS si réfractaire</td></tr>
+              <tr><td><strong>Péritonite bactérienne spontanée (PBS)</strong></td><td><strong>PMN ≥ 0,25 × 10⁹/L</strong> dans le liquide d'ascite · souvent <strong>pauci-symptomatique</strong> — fièvre discrète, douleur, ou simple aggravation inexpliquée</td><td><strong>Ponction d'ascite diagnostique devant toute décompensation</strong> · céfotaxime IV · <strong>albumine IV</strong> (réduit le syndrome hépatorénal et la mortalité) · prophylaxie secondaire par quinolone</td></tr>
+              <tr style="background:#ede9fe;"><td><strong>Syndrome hépatorénal</strong></td><td>IRA <strong>fonctionnelle</strong> par vasoconstriction rénale sur vasodilatation splanchnique · diagnostic d'exclusion : pas de choc, pas de néphrotoxique, pas de réponse à l'expansion volémique</td><td>Arrêt des diurétiques et des néphrotoxiques · <strong>albumine IV + terlipressine</strong> (ou noradrénaline) · évaluation en transplantation</td></tr>
+              <tr><td><strong>Encéphalopathie hépatique</strong></td><td>Shunt porto-systémique + insuffisance hépatique → toxines non détoxifiées · astérixis → confusion → coma (grades I–IV)</td><td><strong>Chercher le facteur déclenchant</strong> : infection, hémorragie digestive, constipation, déshydratation, sédatifs, hyponatrémie<br><strong>Lactulose</strong> (2–3 selles molles/j) · <strong>rifaximine</strong> en prévention des récidives</td></tr>
+              <tr style="background:#f0fdf4;"><td><strong>Ictère</strong></td><td>Bilirubine conjuguée élevée — <strong>marqueur de gravité</strong>, entre dans Child-Pugh et MELD</td><td>Traduit l'insuffisance hépatocellulaire — évaluation en transplantation</td></tr>
+              <tr><td><strong>Coagulopathie</strong></td><td>↓ facteurs (le VII en premier, demi-vie courte) → <strong>↑ INR</strong> · mais aussi ↓ protéines C et S et antithrombine</td><td>⚠️ <strong>L'INR élevé ne signifie pas « anticoagulé »</strong> : l'hémostase est <em>rééquilibrée</em>, et le patient peut thromboser. Ne pas corriger l'INR par du plasma en l'absence de saignement.</td></tr>
+            </tbody>
+          </table>
+          </div>
         </div>
         <div id="ap712" style="display:none;">
+          <div style="overflow-x:auto;">
+          <table style="font-size:12px;">
+            <thead><tr><th>Complication</th><th>Définition</th><th>Repère pratique</th></tr></thead>
+            <tbody>
+              <tr style="background:#fce4ec;"><td><strong>ACLF</strong> (insuffisance hépatique aiguë sur chronique)</td><td>Décompensation aiguë + <strong>défaillance d'un ou plusieurs organes</strong> · mortalité à court terme élevée</td><td>Souvent déclenchée par une infection ou une hémorragie · score CLIF-SOFA · <strong>soins intensifs et évaluation urgente en transplantation</strong></td></tr>
+              <tr><td><strong>Syndrome hépatopulmonaire</strong></td><td>Dilatations vasculaires intrapulmonaires → shunt droite-gauche → hypoxémie</td><td><strong>Platypnée-orthodéoxie</strong> : dyspnée et désaturation <em>en position debout</em>, améliorées en décubitus — signe très évocateur · seul traitement : transplantation</td></tr>
+              <tr style="background:#e8f4fd;"><td><strong>Hypertension porto-pulmonaire</strong></td><td>Hypertension artérielle pulmonaire secondaire à l'HTP</td><td>À dépister par échocardiographie avant transplantation — une pression trop élevée en <strong>contre-indique</strong> la greffe · à ne pas confondre avec le syndrome hépatopulmonaire</td></tr>
+              <tr><td><strong>Cardiomyopathie cirrhotique</strong></td><td>Dysfonction systolique et diastolique masquée au repos, démasquée par le stress · allongement du QT</td><td>Se révèle souvent après un TIPS ou une transplantation · prudence avec les médicaments allongeant le QT</td></tr>
+              <tr style="background:#f0fdf4;"><td><strong>Carcinome hépatocellulaire</strong></td><td>Complication de toute cirrhose, quelle qu'en soit la cause</td><td><strong>Dépistage par échographie ± α-fœtoprotéine tous les 6 mois</strong> chez tout cirrhotique candidat à un traitement</td></tr>
+              <tr><td><strong>Dénutrition &amp; sarcopénie</strong></td><td>Très fréquentes, largement sous-diagnostiquées</td><td>Facteur pronostique indépendant · apports protéiques suffisants (ne pas restreindre les protéines dans l'encéphalopathie), <strong>collation en soirée</strong>, consultation en nutrition</td></tr>
+            </tbody>
+          </table>
+          </div>
+        </div>
+      </div>
 
-              <table style="font-size:12px;">
-                <thead><tr><th>Complication</th><th>Définition</th></tr></thead>
-                <tbody>
-                  <tr><td><strong>ACLF</strong></td><td>Insuffisance hépatique aiguë sur cirrhose chronique + défaillance d'organe(s) · Mortalité élevée · CLIF-SOFA pour staging</td></tr>
-                  <tr><td><strong>Syndrome hépatopulmonaire</strong></td><td>Dilatations vasculaires pulmonaires → hypoxémie (orthodéoxie — ↓ SpO₂ en orthostatisme)</td></tr>
-                  <tr><td><strong>HTAP porto-pulmonaire</strong></td><td>HTAP secondaire à l'HTP (mPAP ≥ 25 mmHg + ↑ RVP) · CI transplantation si mPAP &gt; 45 mmHg</td></tr>
-                  <tr><td><strong>Cardiomyopathie cirrhotique</strong></td><td>Dysfonction systolique/diastolique + ↓ réponse aux stress + prolongation QT</td></tr>
-                  <tr><td><strong>CHC (carcinome hépatocellulaire)</strong></td><td>Tout cirrhotique → dépistage écho ± α-FP aux 6 mois si candidat au traitement</td></tr>
-                </tbody>
-              </table>
-            
+      <div class="block flag" style="margin-top:14px;">
+        <div class="block-title" id="htport-8"><span class="tag">🚨 9.8 Red flags &amp; suivi</span></div>
+        <div class="flag-list" style="margin-top:10px;">
+          <div class="flag-item"><span class="fi-icon">🩸</span><span><strong>Hématémèse ou méléna chez un cirrhotique</strong> — hémorragie variqueuse jusqu'à preuve du contraire : octréotide + ceftriaxone <em>avant</em> l'endoscopie, transfusion restrictive (Hb 70–80 g/L)</span></div>
+          <div class="flag-item"><span class="fi-icon">🌡️</span><span><strong>Toute décompensation nouvelle chez un patient avec ascite</strong> — fièvre, douleur, confusion, aggravation rénale : <strong>ponction d'ascite diagnostique</strong> à la recherche d'une PBS, même si le tableau est fruste</span></div>
+          <div class="flag-item"><span class="fi-icon">🧠</span><span><strong>Confusion ou somnolence nouvelle</strong> — encéphalopathie : chercher le déclencheur (infection, hémorragie, constipation, sédatif, hyponatrémie) avant de conclure à une simple progression</span></div>
+          <div class="flag-item"><span class="fi-icon">💧</span><span><strong>Créatinine qui monte malgré l'arrêt des diurétiques et l'expansion par albumine</strong> — syndrome hépatorénal : terlipressine et évaluation en transplantation</span></div>
+          <div class="flag-item"><span class="fi-icon">🫁</span><span><strong>Désaturation en position debout, améliorée couché</strong> — syndrome hépatopulmonaire</span></div>
+          <div class="flag-item"><span class="fi-icon">📉</span><span><strong>TA systolique &lt; 90 mmHg, hyponatrémie &lt; 130 mmol/L, ascite réfractaire ou PBS sous BBNS</strong> — réduire ou suspendre le bêta-bloquant, puis réintroduire après stabilisation</span></div>
+          <div class="flag-item"><span class="fi-icon">💊</span><span><strong>Prescription chez un cirrhotique</strong> — éviter les <strong>AINS</strong> (syndrome hépatorénal, hémorragie), prudence extrême avec les <strong>benzodiazépines et opioïdes</strong> (encéphalopathie), adapter les doses des médicaments à fort premier passage hépatique</span></div>
+          <div class="flag-item"><span class="fi-icon">🔬</span><span><strong>Nodule hépatique nouveau ou α-fœtoprotéine en hausse</strong> — carcinome hépatocellulaire : imagerie en coupes avec temps artériel</span></div>
         </div>
 
+        <div style="background:#f0fdf4;border-radius:10px;padding:14px;border-left:4px solid #15803d;margin-top:14px;">
+          <strong style="color:#15803d;">📅 Le calendrier de suivi du cirrhotique — l'essentiel en une ligne chacun</strong>
+          <div style="font-size:13px;line-height:1.8;margin-top:8px;">
+            <strong>Échographie ± α-fœtoprotéine aux 6 mois</strong> — dépistage du carcinome hépatocellulaire<br>
+            <strong>FibroScan + plaquettes annuellement</strong> si l'OGD a été évitée selon Baveno VII<br>
+            <strong>Gastroscopie</strong> — aux 2–3 ans si pas de varices, 1–2 ans si petites varices, 6–12 mois après éradication<br>
+            <strong>Bêta-bloquant</strong> — vérifier fréquence cardiaque et TA à chaque visite; traitement à vie<br>
+            <strong>Vaccination</strong> — VHA, VHB, pneumocoque, influenza, COVID<br>
+            <strong>Traiter la cause</strong> — sevrage alcoolique, antiviral, contrôle métabolique : la seule intervention qui fait vraiment baisser le GPVH<br>
+            <strong>Évaluation en transplantation</strong> — à envisager dès la première décompensation
+          </div>
+        </div>
       </div>
+
     
   <!-- Résumé PEC -->
   <div class="block rx" style="margin-top:14px;">
@@ -40142,16 +40388,18 @@ Revoir rapidement si nouvelle Sx ou changement de dose<br>
     <div class="section" id="sec-oncogenes">
       <div class="section-header">
         <div class="section-accent" style="background:#7f1d1d">🧬</div>
-        <div class="section-title"><h1>Oncogènes & Biologie du Cancer</h1><div class="breadcrumb">Oncologie <span class="breadcrumb-sep">·</span> Section 48</div></div>
+        <div class="section-title"><h1>Oncogènes &amp; Biologie du Cancer</h1><div class="breadcrumb">Oncologie <span class="breadcrumb-sep">·</span> Carcinogenèse <span class="breadcrumb-sep">·</span> Grade <span class="breadcrumb-sep">·</span> TNM <span class="breadcrumb-sep">·</span> Thérapies ciblées</div></div>
       </div>
       <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;">
-        <button onclick="goToBlock('onc-concept')" style="background:#7f1d1d;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">💡 Concept général</button>
-        <button onclick="goToBlock('onc-hallmarks')" style="background:#7f1d1d;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">🎯 Hallmarks (10)</button>
-        <button onclick="goToBlock('onc-cell-cycle')" style="background:#b45309;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">🔄 Cycle cellulaire</button>
-        <button onclick="goToBlock('onc-carcinogenese')" style="background:#0a7a4e;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">🔬 Carcinogenèse</button>
-        <button onclick="goToBlock('onc-1')" style="background:#0369a1;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">📌 Mécanismes</button>
-        <button onclick="goToBlock('onc-2')" style="background:#475569;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">🎯 Mutations ciblables</button>
-        <button onclick="goToBlock('onc-3')" style="background:#7c2d12;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">🧪 Dépistage génétique</button>
+        <button onclick="goToBlock('onc-concept')" style="background:#7f1d1d;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">💡 Concept général</button>
+        <button onclick="goToBlock('onc-hallmarks')" style="background:#c0392b;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🎯 Hallmarks (10)</button>
+        <button onclick="goToBlock('onc-cell-cycle')" style="background:#b45309;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🔄 Cycle cellulaire</button>
+        <button onclick="goToBlock('onc-carcinogenese')" style="background:#0a7a4e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🔬 Carcinogenèse</button>
+        <button onclick="goToBlock('onc-1')" style="background:#0369a1;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">📌 Mécanismes moléculaires</button>
+        <button onclick="goToBlock('onc-nomen')" style="background:#6d28d9;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🏷️ Nomenclature &amp; Grade</button>
+        <button onclick="goToBlock('onc-tnm')" style="background:#0f766e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">📊 Stadification TNM</button>
+        <button onclick="goToBlock('onc-2')" style="background:#475569;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🎯 Mutations ciblables</button>
+        <button onclick="goToBlock('onc-3')" style="background:#7c2d12;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧪 Dépistage génétique</button>
       </div>
       <!-- Stat-cards -->
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:16px;">
@@ -40239,6 +40487,145 @@ Revoir rapidement si nouvelle Sx ou changement de dose<br>
             <tr><td><strong>Méthylation épigénétique</strong></td><td>Silençage BRCA1 · MLH1</td><td>Inhibiteurs DNMT (Azacitidine · Décitabine)</td></tr>
           </tbody>
         </table>
+      </div>
+
+            <div class="block def" style="margin-top:14px;border-left-color:#6d28d9;">
+        <div class="block-title" id="onc-nomen"><span class="tag">🏷️ Nomenclature, bénin vs malin &amp; grade histologique</span></div>
+
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:12px 0 6px;">📖 Comment lire le nom d'une tumeur</div>
+        <div style="overflow-x:auto;">
+        <table style="font-size:12px;">
+          <thead><tr><th>Tissu d'origine</th><th>Tumeur bénigne</th><th>Tumeur maligne</th></tr></thead>
+          <tbody>
+            <tr style="background:#f0fdf4;"><td><strong>Épithélium de revêtement</strong> (peau, muqueuses)</td><td>Papillome</td><td><strong>Carcinome épidermoïde</strong> (spinocellulaire)</td></tr>
+            <tr><td><strong>Épithélium glandulaire</strong> (sein, côlon, prostate, poumon)</td><td>Adénome</td><td><strong>Adénocarcinome</strong></td></tr>
+            <tr style="background:#e8f4fd;"><td><strong>Tissu conjonctif / mésenchyme</strong></td><td>Suffixe <strong>-ome</strong> : lipome, fibrome, léiomyome, ostéome</td><td>Suffixe <strong>-sarcome</strong> : liposarcome, fibrosarcome, léiomyosarcome, ostéosarcome</td></tr>
+            <tr><td><strong>Tissu hématopoïétique</strong></td><td>—</td><td><strong>Leucémie</strong> (sang et moelle) · <strong>lymphome</strong> (ganglions et organes lymphoïdes) · <strong>myélome</strong> (plasmocytes)</td></tr>
+            <tr style="background:#ede9fe;"><td><strong>Mélanocytes</strong></td><td>Nævus</td><td><strong>Mélanome</strong></td></tr>
+            <tr><td><strong>Cellules germinales / embryonnaires</strong></td><td>Tératome mature</td><td>Séminome · tératome immature · <strong>-blastome</strong> (néphroblastome, neuroblastome, rétinoblastome)</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <div class="key-fact orange" style="margin-top:10px;">⚠️ <strong>Exceptions au suffixe « -ome = bénin » :</strong> <strong>mélanome</strong>, <strong>lymphome</strong>, <strong>myélome</strong>, <strong>séminome</strong>, <strong>hépatome</strong> (hépatocarcinome), <strong>mésothéliome</strong> — tous <em>malins</em> malgré la terminaison. C'est un piège classique.</div>
+
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">⚖️ Bénin vs malin — les critères qui comptent</div>
+        <div style="overflow-x:auto;">
+        <table style="font-size:12px;">
+          <thead><tr><th>Caractéristique</th><th>Bénin</th><th>Malin</th></tr></thead>
+          <tbody>
+            <tr style="background:#f0fdf4;"><td><strong>Différenciation</strong></td><td>Bien différenciée, ressemble au tissu d'origine</td><td>Variable — de bien différenciée à <strong>anaplasique</strong> (indifférenciée)</td></tr>
+            <tr><td><strong>Vitesse de croissance</strong></td><td>Lente, souvent stable</td><td>Rapide, mitoses nombreuses et <strong>atypiques</strong></td></tr>
+            <tr style="background:#f0fdf4;"><td><strong>Limites</strong></td><td><strong>Encapsulée</strong>, bien circonscrite, refoule les tissus</td><td><strong>Infiltrante</strong>, mal limitée, envahit et détruit</td></tr>
+            <tr><td><strong>Métastases</strong></td><td><strong>Jamais</strong></td><td><strong>Possible</strong> — c'est le critère définitif de malignité</td></tr>
+            <tr style="background:#f0fdf4;"><td><strong>Rapport nucléo-cytoplasmique</strong></td><td>Normal</td><td>Augmenté, noyaux hyperchromatiques, nucléoles proéminents, pléomorphisme</td></tr>
+            <tr><td><strong>Récidive après exérèse</strong></td><td>Rare</td><td>Fréquente si marges non saines</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <div class="key-fact blue" style="margin-top:10px;">💡 <strong>Bénin ne veut pas dire inoffensif :</strong> un méningiome comprimant le tronc cérébral, un adénome hypophysaire sécrétant, un léiomyome utérin hémorragique ou un phéochromocytome bénin peuvent être létaux. C'est la <strong>localisation</strong> et la <strong>fonction</strong> qui déterminent la gravité, pas seulement l'histologie.</div>
+
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">🔬 Grade histologique — à ne pas confondre avec le stade</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+          <div style="background:#ede9fe;border-radius:10px;padding:14px;border-left:4px solid #6d28d9;">
+            <strong style="color:#6d28d9;">GRADE = agressivité au microscope</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Évalue le <strong>degré de différenciation</strong>, le pléomorphisme nucléaire et l'index mitotique.<br><br><strong>G1</strong> — bien différencié, ressemble au tissu normal<br><strong>G2</strong> — moyennement différencié<br><strong>G3</strong> — peu différencié<br><strong>G4</strong> — indifférencié / anaplasique<br><br><em>Systèmes spécifiques : Gleason (prostate), Nottingham/SBR (sein), Fuhrman (rein).</em></div>
+          </div>
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;border-left:4px solid #1d4ed8;">
+            <strong style="color:#1d4ed8;">STADE = étendue anatomique</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Évalue <strong>jusqu'où le cancer s'est propagé</strong> — taille, ganglions, métastases (voir bloc suivant).<br><br><strong>Le stade prime généralement sur le grade</strong> pour le pronostic et le choix du traitement.<br><br><em>Deux tumeurs de même grade peuvent avoir des pronostics radicalement différents selon le stade — et inversement.</em></div>
+          </div>
+        </div>
+
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">🛤️ Voies de dissémination</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;">
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+            <strong style="color:#1d4ed8;">Lymphatique</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Voie privilégiée des <strong>carcinomes</strong>. Atteinte séquentielle des relais ganglionnaires → base du concept de <strong>ganglion sentinelle</strong> (sein, mélanome).</div>
+          </div>
+          <div style="background:#fce4ec;border-radius:10px;padding:14px;">
+            <strong style="color:#c0392b;">Hématogène</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Voie privilégiée des <strong>sarcomes</strong>, mais aussi de nombreux carcinomes.<br><strong>Sites préférentiels :</strong> foie, poumon, os, cerveau, surrénales.<br>Le drainage explique les cibles — <em>digestif → foie</em> (veine porte), <em>reste → poumon</em>.</div>
+          </div>
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;">
+            <strong style="color:#d35400;">Séreuse / transcœlomique</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Essaimage dans les cavités péritonéale ou pleurale → <strong>carcinose péritonéale</strong>, ascite maligne, épanchement pleural malin.<br>Typique : <strong>ovaire, estomac, pancréas, côlon</strong>.</div>
+          </div>
+          <div style="background:#f1f5f9;border-radius:10px;padding:14px;">
+            <strong style="color:#334155;">Contiguïté</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Extension directe aux structures voisines — explique bon nombre de complications locales (fistules, compression, envahissement pariétal).</div>
+          </div>
+        </div>
+        <div class="key-fact green" style="margin-top:12px;">🎯 <strong>Utilité clinique du site métastatique :</strong> devant un cancer d'origine inconnue, la répartition des métastases oriente la recherche du primitif. <strong>Métastases osseuses ostéocondensantes</strong> → prostate, sein. <strong>Métastases hépatiques multiples</strong> → digestif, poumon, sein. <strong>Ascite</strong> → ovaire, digestif.</div>
+      </div>
+
+      <div class="block para" style="margin-top:14px;border-left-color:#0f766e;">
+        <div class="block-title" id="onc-tnm"><span class="tag">📊 Stadification TNM — la grammaire commune de l'oncologie</span></div>
+        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>Pourquoi le maîtriser :</strong> le stade détermine l'<strong>intention du traitement</strong> (curative ou palliative), le <strong>pronostic</strong>, l'<strong>admissibilité aux essais</strong> et le <strong>calendrier de suivi</strong>. C'est le langage commun de tous les intervenants au dossier.</div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-top:12px;">
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;border-left:4px solid #1d4ed8;">
+            <strong style="color:#1d4ed8;">T — Tumeur primitive</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Tx</strong> — non évaluable<br><strong>T0</strong> — pas de tumeur primitive retrouvée<br><strong>Tis</strong> — carcinome <em>in situ</em> (n'a pas franchi la membrane basale)<br><strong>T1 → T4</strong> — taille et/ou profondeur d'invasion croissantes<br><br><em>Le critère (taille vs profondeur vs structures envahies) varie selon l'organe.</em></div>
+          </div>
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;border-left:4px solid #d35400;">
+            <strong style="color:#d35400;">N — Ganglions régionaux</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Nx</strong> — non évaluables<br><strong>N0</strong> — pas d'atteinte ganglionnaire régionale<br><strong>N1 → N3</strong> — nombre et/ou siège croissants<br><br>⚠️ Un ganglion <strong>à distance</strong> du territoire de drainage compte comme une <strong>métastase (M1)</strong>, pas comme un N.</div>
+          </div>
+          <div style="background:#fce4ec;border-radius:10px;padding:14px;border-left:4px solid #c0392b;">
+            <strong style="color:#c0392b;">M — Métastases à distance</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>M0</strong> — aucune métastase à distance<br><strong>M1</strong> — métastases présentes<br><br><strong>M1 fait basculer au stade IV</strong> presque systématiquement, quel que soit T et N — et fait passer l'intention de curative à palliative dans la plupart des cancers solides.</div>
+          </div>
+        </div>
+
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">🔤 Préfixes — savoir d'où vient l'information</div>
+        <div style="overflow-x:auto;">
+        <table style="font-size:12px;">
+          <thead><tr><th>Préfixe</th><th>Signification</th><th>Quand on l'utilise</th></tr></thead>
+          <tbody>
+            <tr style="background:#f8f9fa;"><td><strong>c</strong>TNM</td><td><strong>Clinique</strong> — examen, imagerie, endoscopie, biopsie</td><td>Avant tout traitement · base des décisions initiales</td></tr>
+            <tr><td><strong>p</strong>TNM</td><td><strong>Pathologique</strong> — pièce opératoire examinée</td><td>Après chirurgie · le plus fiable pour le pronostic</td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>yp</strong>TNM</td><td>Pathologique <strong>après traitement néoadjuvant</strong></td><td>Évalue la réponse à la chimiothérapie ou radiothérapie préopératoire</td></tr>
+            <tr><td><strong>r</strong>TNM</td><td><strong>Récidive</strong></td><td>Nouvelle stadification lors d'une reprise évolutive</td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>a</strong>TNM</td><td><strong>Autopsie</strong></td><td>Découverte post mortem</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">🎚️ Du TNM au stade — logique générale</div>
+        <div style="overflow-x:auto;">
+        <table style="font-size:12px;">
+          <thead><tr><th>Stade</th><th>Correspondance TNM (schéma général)</th><th>Intention thérapeutique habituelle</th></tr></thead>
+          <tbody>
+            <tr style="background:#f0fdf4;"><td><strong>0</strong></td><td>Tis N0 M0 — <em>in situ</em></td><td><strong>Curative</strong> — exérèse locale, guérison quasi constante</td></tr>
+            <tr><td><strong>I</strong></td><td>Tumeur petite, <strong>N0 M0</strong></td><td><strong>Curative</strong> — chirurgie seule le plus souvent</td></tr>
+            <tr style="background:#fff8e1;"><td><strong>II</strong></td><td>Tumeur plus volumineuse ou atteinte ganglionnaire limitée, <strong>M0</strong></td><td><strong>Curative</strong> — chirurgie ± traitement adjuvant</td></tr>
+            <tr><td><strong>III</strong></td><td>Extension locorégionale marquée et/ou <strong>N étendu</strong>, <strong>M0</strong></td><td><strong>Curative mais multimodale</strong> — association chirurgie, radiothérapie, systémique</td></tr>
+            <tr style="background:#fce4ec;"><td><strong>IV</strong></td><td><strong>M1</strong> — métastases à distance</td><td><strong>Palliative</strong> dans la majorité des cancers solides — contrôle de la maladie, qualité de vie<br><em>Exceptions notables : certains cancers germinaux, lymphomes et leucémies restent curables au stade IV</em></td></tr>
+          </tbody>
+        </table>
+        </div>
+        <div class="key-fact orange" style="margin-top:12px;">⚠️ <strong>La correspondance TNM → stade est propre à chaque organe.</strong> Le tableau ci-dessus donne la logique générale; il ne remplace pas la table AJCC/UICC du cancer concerné. Certains sites utilisent d'ailleurs des classifications parallèles : <strong>FIGO</strong> en gynécologie, <strong>Ann Arbor</strong> pour les lymphomes, <strong>Binet/Rai</strong> pour la LLC, <strong>maladie limitée vs étendue</strong> pour le cancer du poumon à petites cellules.</div>
+
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">🧭 Vocabulaire du traitement — à employer correctement</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;">
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+            <strong style="color:#15803d;">Néoadjuvant</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Avant</strong> le traitement local. But : réduire la tumeur pour la rendre opérable ou permettre une chirurgie conservatrice, et <strong>tester la chimiosensibilité in vivo</strong>.</div>
+          </div>
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+            <strong style="color:#1d4ed8;">Adjuvant</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Après</strong> un traitement local à visée curative, sans maladie détectable. But : éliminer la <strong>maladie micrométastatique</strong> et réduire le risque de récidive.</div>
+          </div>
+          <div style="background:#ede9fe;border-radius:10px;padding:14px;">
+            <strong style="color:#6d28d9;">Curatif vs palliatif</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Curatif</strong> — vise l'éradication.<br><strong>Palliatif</strong> — vise le contrôle de la maladie et des symptômes.<br>⚠️ <strong>Palliatif ≠ fin de vie</strong> : un patient peut recevoir un traitement palliatif pendant des années.</div>
+          </div>
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;">
+            <strong style="color:#d35400;">Réponse (RECIST)</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Réponse complète</strong> — disparition des lésions cibles<br><strong>Réponse partielle</strong> — réduction ≥ 30 %<br><strong>Maladie stable</strong> — entre les deux<br><strong>Progression</strong> — augmentation ≥ 20 % ou nouvelle lésion</div>
+          </div>
+        </div>
+        <div class="key-fact green" style="margin-top:12px;">🩺 <strong>Ce que l'IPS doit pouvoir faire :</strong> lire un rapport de pathologie et un compte rendu d'imagerie et en extraire le <strong>type histologique, le grade, le stade et l'intention thérapeutique</strong>. Ces quatre éléments suffisent à situer le patient, à comprendre son calendrier de suivi et à repérer ce qui sort du plan prévu.</div>
       </div>
 
       <div class="block clin" style="margin-top:14px;">
@@ -46036,6 +46423,15 @@ function switchTsptTx(n){
     var b=document.getElementById("tspttab"+i);
     if(p) p.style.display=(i===n)?"block":"none";
     if(b){b.style.background=(i===n)?"#15803d":"#e0e0e0";b.style.color=(i===n)?"#fff":"#333";}
+  });
+}
+
+function switchHtpTx(n){
+  [0,1,2].forEach(function(i){
+    var p=document.getElementById("htpp"+i);
+    var b=document.getElementById("htptab"+i);
+    if(p) p.style.display=(i===n)?"block":"none";
+    if(b){b.style.background=(i===n)?"#0f766e":"#e0e0e0";b.style.color=(i===n)?"#fff":"#333";}
   });
 }
 
