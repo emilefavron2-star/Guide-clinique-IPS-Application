@@ -1335,6 +1335,7 @@ m
         <span class="emoji">💊</span> Pharmacologie
         <svg class="chevron" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>      </div>
       <div class="specialty-items">
+        <div class="nav-item" onclick="showSection('ordonnances')">📝 Normes des Ordonnances</div>
         <div class="nav-item" onclick="showSection('mvl-psn')">💊 MVL &amp; PSN</div>
         <div class="nav-item" onclick="showSection('pharmacoguide')">💊 Guide Pharmaco.</div>
       </div>
@@ -1515,7 +1516,7 @@ m
           <div class="home-card-icon" style="background:#f0f9ff;color:#0369a1">💊</div>
           <div class="home-card-body">
             <div class="home-card-name">Pharmacologie</div>
-            <div class="home-card-count">2 sections</div>
+            <div class="home-card-count">3 sections</div>
           </div>
         </div>
         <div class="home-card" onclick="showSection('calculateurs')">
@@ -49400,6 +49401,205 @@ Revoir rapidement si nouvelle Sx ou changement de dose<br>
 
 
 
+    <div class="section" id="sec-ordonnances">
+      <div class="section-header">
+        <div class="section-accent" style="background:#334155">📝</div>
+        <div class="section-title"><h1>Normes des ordonnances</h1><div class="breadcrumb">Pharmacologie <span class="breadcrumb-sep">·</span> Cadre réglementaire québécois <span class="breadcrumb-sep">·</span> CMQ · OIIQ · RAMQ</div></div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;">
+        <button onclick="goToBlock('ord-1')" style="background:#374151;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">⚖️ Cadre légal &amp; types</button>
+        <button onclick="goToBlock('ord-2')" style="background:#0369a1;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🪪 Identification</button>
+        <button onclick="goToBlock('ord-3')" style="background:#b45309;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">📅 Date &amp; validité</button>
+        <button onclick="goToBlock('ord-4')" style="background:#0a7a4e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">💊 Ordonnance de médicament</button>
+        <button onclick="goToBlock('ord-5')" style="background:#0f766e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">📋 Exemples commentés</button>
+        <button onclick="goToBlock('ord-6')" style="background:#dc2626;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">⛔ Interdictions</button>
+        <button onclick="goToBlock('ord-7')" style="background:#6d28d9;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🩺 Spécificités IPS</button>
+        <button onclick="goToBlock('ord-8')" style="background:#991b1b;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🚨 Erreurs fréquentes</button>
+      </div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:20px;">
+        <div style="flex:1;min-width:95px;background:#EEF2FF;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#1C3F8F;">24 mois</div><div style="font-size:11px;color:#555;margin-top:4px;">Validité maximale par défaut — médicament</div></div>
+        <div style="flex:1;min-width:95px;background:#FEE2E2;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#b91c1c;">1 an</div><div style="font-size:11px;color:#555;margin-top:4px;">Benzodiazépines &amp; substances ciblées</div></div>
+        <div style="flex:1;min-width:95px;background:#FEF9C3;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#854d0e;">Date de rédaction</div><div style="font-size:11px;color:#555;margin-top:4px;">Point de départ de la validité</div></div>
+        <div style="flex:1;min-width:95px;background:#DCFCE7;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#15803d;">6 chiffres</div><div style="font-size:11px;color:#555;margin-top:4px;">N° de prescripteur + classe IPS</div></div>
+      </div>
+
+      <div class="block def" style="margin-top:14px;">
+        <div class="block-title" id="ord-1"><span class="tag">⚖️ Cadre légal &amp; types d'ordonnances</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">📗 <strong>Le texte de référence :</strong> le <strong>Règlement sur les normes relatives aux ordonnances faites par un médecin</strong> (RLRQ, c. M-9, r. 25.1) fixe la nomenclature, les caractéristiques et le contenu des différents types d'ordonnances. Sa version révisée en <strong>septembre 2015</strong> a resserré ces exigences. Le <strong>Collège des médecins</strong> en publie le guide d'exercice explicatif; les pharmaciens relèvent quant à eux du <em>Règlement sur les ordonnances d'un pharmacien</em>.<br>⚠️ <strong>Nuance à connaître :</strong> ce règlement encadre les ordonnances <strong>faites par un médecin</strong>. Comme IPS, votre encadrement propre relève de l'<strong>OIIQ</strong> et de votre règlement d'exercice — mais <strong>les normes de contenu sont parallèles</strong>, et c'est ce guide qui sert de référence pratique commune. Vérifiez toujours la version en vigueur auprès de l'OIIQ.</div>
+
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">🗂️ Les deux grands types</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;border-left:4px solid #1d4ed8;">
+            <strong style="color:#1d4ed8;">👤 Ordonnance individuelle</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Vise <strong>une personne précise et nommée</strong>, à la suite d'une évaluation clinique.<br>Peut porter sur un <strong>médicament</strong>, un <strong>traitement</strong>, un <strong>examen</strong>, une <strong>analyse de laboratoire</strong>, un appareil ou des lentilles ophtalmiques.<br>➜ C'est le mode de prescription courant de l'IPS dans sa pratique autonome.</div>
+          </div>
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;border-left:4px solid #15803d;">
+            <strong style="color:#15803d;">👥 Ordonnance collective</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Vise un <strong>groupe de personnes</strong> ou une <strong>situation clinique</strong>, et permet à d'autres professionnels habilités d'agir sans évaluation médicale préalable.<br>Elle constitue un <strong>corridor de services</strong> : elle autorise un professionnel à intervenir dans un cadre défini.<br>Exemples : contraception hormonale, bilan paraclinique en TNC, traitement des ITSS.<br>➜ Voir <em>Contraception</em>, <em>TNC</em>, <em>ITSS</em></div>
+          </div>
+        </div>
+
+        <div class="key-fact green" style="margin-top:12px;">📘 <strong>Les protocoles médicaux nationaux (PMN) de l'INESSS :</strong> lorsqu'un PMN existe, l'ordonnance collective peut simplement y <strong>renvoyer</strong>. En l'absence de protocole de l'INESSS, le prescripteur doit <strong>fournir le protocole dans l'ordonnance elle-même</strong> ou renvoyer à un protocole externe. C'est ce mécanisme qui sous-tend, par exemple, le traitement des ITSS ou la contraception au Québec.</div>
+      </div>
+
+      <div class="block para" style="margin-top:14px;border-left-color:#0369a1;">
+        <div class="block-title" id="ord-2"><span class="tag">🪪 Identification du prescripteur &amp; du patient</span></div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;border-left:4px solid #1d4ed8;">
+            <strong style="color:#1d4ed8;">✍️ Le prescripteur</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Nom</strong> — imprimé ou en <strong>lettres moulées</strong><br><strong>Numéro de permis d'exercice</strong> <em>(pour l'IPS : numéro de prescripteur — voir bloc dédié)</em><br><strong>Nom de l'établissement ou du milieu clinique</strong><br><strong>Numéro de téléphone</strong> et <strong>adresse de correspondance</strong> où être joint <em>relativement à cette ordonnance</em><br>🎯 <strong>La signature est obligatoire</strong><br>💡 <strong>Exception :</strong> pendant le séjour d'un patient <strong>en établissement</strong>, il n'est pas nécessaire d'inscrire le nom de l'établissement, le téléphone et l'adresse.<br><em>La raison d'être de ces coordonnées : permettre au pharmacien ou à un autre professionnel de vous joindre en cas de doute.</em></div>
+          </div>
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;border-left:4px solid #15803d;">
+            <strong style="color:#15803d;">🧑 Le patient</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Nom du patient</strong><br><strong>ET</strong> sa <strong>date de naissance</strong> <em>ou</em> son <strong>numéro d'assurance maladie (RAMQ)</strong><br>💡 Pour éviter de confondre deux personnes du même nom, on peut ajouter l'<strong>adresse</strong> et le <strong>sexe</strong>.<br>🎯 <strong>Pourquoi c'est critique :</strong> l'identification exacte évite qu'un médicament, une analyse sanguine, un examen d'imagerie ou un traitement <strong>ne soit attribué à la mauvaise personne</strong>.</div>
+          </div>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">📄 <strong>Deux exigences de forme souvent oubliées :</strong> ① le contenu de <strong>chaque ordonnance doit être consigné au dossier</strong>, quel que soit le support — on peut en conserver une copie qui tient lieu d'ordonnance au dossier; ② la <strong>partie non utilisée de la feuille d'ordonnance doit être rayée d'un trait oblique</strong>, pour empêcher tout ajout après coup.</div>
+
+        <div class="key-fact blue" style="margin-top:8px;">🔤 <strong>Lisibilité et langue :</strong> l'ordonnance doit être <strong>facilement lisible</strong> — c'est une exigence, pas une politesse. Elle peut être rédigée <strong>en français ou en anglais</strong>, sauf si l'établissement impose le français, et doit être <strong>comprise par tout professionnel habilité qui la reçoit</strong>. Elle peut être traduite pour le patient <strong>sur un document distinct</strong>.</div>
+      </div>
+
+      <div class="block para" style="margin-top:14px;border-left-color:#b45309;">
+        <div class="block-title" id="ord-3"><span class="tag">📅 Date de rédaction &amp; période de validité</span></div>
+
+        <div class="key-fact red" style="margin-top:10px;">🎯 <strong>La notion la plus mal comprise de tout le sujet :</strong> la <strong>date de rédaction est obligatoire</strong>, et c'est <strong>à cette date que commence la période de validité</strong> — <strong>pas</strong> au moment où le pharmacien délivre le médicament. Une ordonnance rédigée en janvier et présentée en juin a déjà « consommé » cinq mois de sa validité.</div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:30%;">Type d'ordonnance</th><th style="width:26%;">Période de validité</th><th>Précisions</th></tr></thead>
+          <tbody>
+            <tr style="background:#e8f4fd;"><td><strong>Médicament</strong></td><td>🎯 <strong>Maximum 24 mois</strong> à compter de la date de rédaction</td><td>Sauf si le prescripteur indique une période <strong>plus courte ou plus longue</strong><br>Les médicaments ne pourront être servis que s'il s'est écoulé <strong>moins de 2 ans</strong> depuis la rédaction</td></tr>
+            <tr><td><strong>Autre qu'un médicament</strong><br><em>examen, analyse, traitement</em></td><td><strong>Non limitée dans le temps</strong></td><td>Sous réserve des exceptions du règlement, et à moins d'indication contraire du prescripteur</td></tr>
+            <tr style="background:#fce4ec;"><td><strong>Benzodiazépines et autres substances ciblées</strong></td><td>🚨 <strong>1 an</strong></td><td>En vertu du <strong>règlement fédéral</strong> : le pharmacien ne peut servir ces médicaments que s'il s'est écoulé <strong>moins d'un an</strong> depuis le jour où l'ordonnance a été donnée</td></tr>
+            <tr><td><strong>Mention « à vie »</strong></td><td>Possible</td><td>Lorsque la condition clinique le justifie — par exemple un <strong>auto-injecteur d'adrénaline</strong> chez l'adulte, ou les <strong>bandelettes et aiguilles</strong> pour une personne insulinodépendante<br>💡 Très utile en pratique : évite des renouvellements inutiles</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">⏳ <strong>Ne pas confondre deux durées distinctes :</strong><br><strong>La durée du traitement</strong> — combien de temps le patient prend le médicament<br><strong>La période de validité de l'ordonnance</strong> — jusqu'à quand le pharmacien peut la servir<br>🎯 Cette distinction devient <strong>capitale quand on autorise un ajustement</strong> de médicament ou de thérapie.</div>
+
+        <div class="key-fact green" style="margin-top:8px;">💡 <strong>Deux précisions utiles :</strong> ① on peut inscrire une <strong>date limite de validité</strong>, après laquelle l'ordonnance ne doit plus être exécutée, renouvelée ni prolongée; ② la validité d'une ordonnance <strong>n'est pas affectée par le décès, la radiation ou la démission</strong> du prescripteur — elle a été rédigée par un professionnel alors en exercice et demeure valide.</div>
+      </div>
+
+      <div class="block rx" style="margin-top:14px;">
+        <div class="block-title" id="ord-4"><span class="tag">💊 L'ordonnance de médicament — contenu obligatoire</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>Aux éléments généraux s'ajoutent des exigences propres au médicament.</strong> Chacune vise à prévenir une erreur précise — la retenir avec sa raison d'être est plus efficace que de mémoriser une liste.</div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:22%;">Élément</th><th style="width:34%;">Exigence</th><th>Pourquoi</th></tr></thead>
+          <tbody>
+            <tr style="background:#f0fdf4;"><td><strong>Nom du médicament</strong></td><td>🎯 <strong>Nom intégral</strong> — et en <strong>lettres moulées lisibles</strong> lorsque le nom ressemble à celui d'un autre médicament</td><td>De nombreux noms se ressemblent, en dénomination commerciale comme commune. Exemples cités par le CMQ : <strong>Ditropan / diazépam · Lasix / Losec · Mogadon / Modulon · Sinequan / Surgam</strong></td></tr>
+            <tr><td><strong>Forme pharmaceutique</strong></td><td>Comprimé, sirop, capsule, timbre…</td><td>Un même produit existe souvent en plusieurs formes</td></tr>
+            <tr style="background:#e8f4fd;"><td><strong>Concentration</strong></td><td>Ex. mg/mL</td><td>Essentielle pour les liquides et les préparations pédiatriques</td></tr>
+            <tr><td><strong>Dosage</strong></td><td>Ex. mg ou mcg</td><td>⚠️ Ne jamais confondre mg et mcg</td></tr>
+            <tr style="background:#fff3cd;"><td><strong>Posologie</strong></td><td>Quantité totale à administrer, en une ou plusieurs prises</td><td>C'est la traduction concrète de l'intention thérapeutique</td></tr>
+            <tr><td><strong>Voie d'administration</strong></td><td><strong>Clairement indiquée</strong> — PO, IM, IV, SC, topique…</td><td>Exigence explicite du règlement</td></tr>
+            <tr style="background:#ede9fe;"><td><strong>Durée du traitement ou quantité</strong></td><td>Recommandé en <strong>nombre de jours, semaines, mois ou années</strong></td><td>⚠️ Si l'on inscrit <strong>uniquement le nombre de comprimés</strong> sans préciser la durée, cela s'interprète comme une <strong>durée autorisée de 2 ans</strong></td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="key-fact red" style="margin-top:12px;">💊 <strong>Les ordonnances « au besoin » (PRN) — trois éléments à préciser :</strong> ① la <strong>raison d'utilisation</strong> (ex. « PRN si douleur »), ② l'<strong>intervalle minimal</strong> entre les doses (ex. « aux 4 heures ») <em>ou</em> le nombre de doses par jour, ③ le <strong>nombre maximal de doses par jour</strong>. Un PRN sans balise est une source classique d'erreur et de surdosage.</div>
+
+        <div class="key-fact green" style="margin-top:8px;">🗣️ <strong>Sur l'indication :</strong> le prescripteur doit <strong>toujours informer le patient de l'indication précise</strong> pour laquelle il prescrit. Il peut l'<strong>inscrire sur l'ordonnance</strong>, à condition que le patient y <strong>consente</strong>. Cette mention évite que les informations reçues du prescripteur et du pharmacien semblent contradictoires — utile quand un médicament a plusieurs indications.</div>
+      </div>
+
+      <div class="block para" style="margin-top:14px;border-left-color:#0f766e;">
+        <div class="block-title" id="ord-5"><span class="tag">📋 Exemples commentés</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>Ces quatre cas montrent comment une même intention se traduit — ou se trahit — selon la façon de rédiger.</strong> C'est la partie la plus utile à relire avant un examen.</div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;border-left:4px solid #15803d;">
+            <strong style="color:#15803d;">✅ A — Condition chronique, durée précisée</strong>
+            <div style="font-family:var(--mono,monospace);font-size:12px;line-height:1.7;margin-top:8px;background:#fff;border-radius:6px;padding:10px;">Antiangineux – X mg<br>sig : 1 co PO die # durée : 18 mois à partir de ce jour<br><br>Hypotenseur – X mg # durée : 18 mois à partir de ce jour<br>sig : 1 co PO bid</div>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">➜ Le pharmacien peut servir la médication pendant <strong>18 mois à compter de la date de rédaction</strong>.<br>🎯 <strong>C'est la façon recommandée</strong> : la durée balise clairement la période de validité.</div>
+          </div>
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;border-left:4px solid #d35400;">
+            <strong style="color:#d35400;">⚠️ B — Renouvellements sans durée</strong>
+            <div style="font-family:var(--mono,monospace);font-size:12px;line-height:1.7;margin-top:8px;background:#fff;border-radius:6px;padding:10px;">Antiangineux – X mg<br>sig : 1 co PO die # 30 co<br>Ren x 18</div>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">➜ Servi mensuellement à 18 reprises, mais comme <strong>aucune durée n'est précisée</strong>, l'ordonnance vaut <strong>24 mois</strong>.<br>🚨 <strong>Le piège :</strong> si <strong>plus de 6 mois</strong> s'écoulent avant la première exécution, le patient <strong>ne pourra pas obtenir les 18 renouvellements</strong> — la validité sera écoulée avant.</div>
+          </div>
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;border-left:4px solid #1d4ed8;">
+            <strong style="color:#1d4ed8;">✅ C — Condition aiguë, validité balisée</strong>
+            <div style="font-family:var(--mono,monospace);font-size:12px;line-height:1.7;margin-top:8px;background:#fff;border-radius:6px;padding:10px;">Antibiotique – X mg<br>sig : 1 co PO bid x 10 jours<br>À débuter d'ici 48 heures<br>NR</div>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">➜ Le médicament ne sera servi que si le patient se présente <strong>dans les 48 heures</strong> de la rédaction.<br>🎯 <strong>Recommandé pour toute condition aiguë</strong> — évite qu'un antibiotique soit servi des mois plus tard pour un épisode révolu.</div>
+          </div>
+          <div style="background:#f1f5f9;border-radius:10px;padding:14px;border-left:4px solid #334155;">
+            <strong style="color:#334155;">🤝 Le rôle du pharmacien</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">L'ordonnance est toujours interprétée <strong>selon le jugement clinique du pharmacien</strong>. En cas d'imprécision, il <strong>communiquera avec vous avant de servir</strong> — et le prescripteur doit <strong>lui-même</strong> discuter et répondre à ses questions.<br>Il peut aussi vous aviser si le patient <strong>n'est pas fidèle</strong> au traitement.<br>💡 Une ordonnance claire n'est pas une formalité : c'est ce qui évite un appel, un délai et une erreur.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block flag" style="margin-top:14px;">
+        <div class="block-title" id="ord-6"><span class="tag">⛔ Interdictions formelles</span></div>
+
+        <div class="key-fact red" style="margin-top:10px;">⛔ <strong>Mentions interdites :</strong> « <strong>usage connu</strong> », « <strong>tel que prescrit</strong> », ou toute autre mention au même effet, sont <strong>interdites</strong> sur une ordonnance. Elles obligent le pharmacien à deviner l'intention et rendent impossible toute vérification.</div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
+          <div style="background:#fef2f2;border-radius:10px;padding:14px;border-left:4px solid #c0392b;">
+            <strong style="color:#c0392b;">🚫 Promotion de produits ou de fournisseurs</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Une ordonnance <strong>ne doit comporter aucun nom ni logo</strong> de produits, de services ou de fournisseurs en particulier.<br>⛔ Il est <strong>interdit d'utiliser des carnets d'ordonnances émanant de laboratoires ou de fournisseurs</strong> — physiothérapie, audiologie, orthèses, etc.<br>🎯 Double objectif : préserver l'<strong>indépendance professionnelle</strong> et garantir le <strong>libre choix du patient</strong>.<br>⚠️ La même règle s'applique aux <strong>outils technologiques</strong>, y compris les <strong>outils d'aide à la décision</strong> : ils ne doivent diffuser aucune promotion.</div>
+          </div>
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;border-left:4px solid #15803d;">
+            <strong style="color:#15803d;">✅ Ce qu'il faut utiliser</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Les <strong>carnets d'ordonnances portant vos coordonnées professionnelles</strong><br>Les <strong>réquisitions émanant d'un établissement public de santé du Québec</strong><br>💡 Si votre logiciel de prescription affiche des noms commerciaux ou des logos de fournisseurs, c'est un problème de conformité à signaler.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block rx" style="margin-top:14px;border-left-color:#6d28d9;">
+        <div class="block-title" id="ord-7"><span class="tag">🩺 Spécificités de l'IPS</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>Ce qui vous distingue à la rédaction :</strong> votre identification ne repose pas sur un numéro de permis de médecin, mais sur votre <strong>numéro de prescripteur</strong>, auquel s'ajoutent des mentions propres à votre <strong>situation professionnelle</strong> et à votre <strong>classe de spécialité</strong>.</div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
+          <div style="background:#ede9fe;border-radius:10px;padding:14px;border-left:4px solid #6d28d9;">
+            <strong style="color:#6d28d9;">🔢 Le numéro de prescripteur</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Inscrire les <strong>6 premiers chiffres</strong> de votre numéro d'inscription à la RAMQ.<br>Format d'inscription RAMQ : <strong>8-2XXXX-X à 8-7XXXX-X</strong>.<br>➜ Comme IPS, vous devez <strong>ajouter après ce numéro</strong> les mentions liées à votre profession et à votre spécialité.<br>➜ Les <strong>candidates (CIPS)</strong> ajoutent la lettre <strong>C</strong> correspondant à leur situation professionnelle, suivie de l'abréviation de leur classe.</div>
+          </div>
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;border-left:4px solid #1d4ed8;">
+            <strong style="color:#1d4ed8;">🏷️ Les cinq classes de spécialité</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>IPSPL</strong> — soins de première ligne<br><strong>IPSSA</strong> — soins aux adultes<br><strong>IPSSP</strong> — soins pédiatriques<br><strong>IPSNN</strong> — néonatalogie<br><strong>IPSSM</strong> — santé mentale<br>🎯 L'abréviation de votre classe fait partie de votre identification sur l'ordonnance.</div>
+          </div>
+        </div>
+
+        <div class="key-fact green" style="margin-top:12px;">📚 <strong>Vos références professionnelles :</strong> l'OIIQ met à disposition une <strong>Trousse du prescripteur</strong>, un <strong>Guide explicatif conjoint sur la prescription infirmière</strong>, et des pages sur les <strong>obligations déontologiques</strong> liées au droit de prescrire. Le principe déontologique de base : <strong>ne prescrire que lorsque c'est cliniquement nécessaire</strong>, en se référant aux <strong>normes de pratique reconnues et aux principes scientifiques en vigueur</strong>.</div>
+
+        <div class="key-fact orange" style="margin-top:8px;">⚠️ <strong>Un domaine qui évolue vite.</strong> L'étendue du droit de prescrire des IPS et celui des autres professionnels — notamment les pharmaciens, qui peuvent maintenant prolonger et modifier des ordonnances — s'est élargi à plusieurs reprises. <strong>Vérifiez toujours l'état du droit auprès de l'OIIQ avant de vous fier à une note de cours ou à ce guide</strong> : c'est le type de contenu qui se périme le plus vite.</div>
+      </div>
+
+      <div class="block flag" style="margin-top:14px;">
+        <div class="block-title" id="ord-8"><span class="tag">🚨 Erreurs fréquentes &amp; aide-mémoire</span></div>
+
+        <div class="flag-list" style="margin-top:12px;">
+          <div class="flag-item"><strong>Date de rédaction omise</strong> — elle est obligatoire et déclenche la période de validité</div>
+          <div class="flag-item"><strong>Confondre durée du traitement et période de validité</strong> — surtout lorsqu'on autorise un ajustement</div>
+          <div class="flag-item"><strong>Inscrire un nombre de comprimés sans durée</strong> — interprété comme une autorisation de 2 ans</div>
+          <div class="flag-item"><strong>Renouvellements nombreux sans durée précisée</strong> — le patient perd des renouvellements si l'ordonnance dort quelques mois</div>
+          <div class="flag-item"><strong>Ordonnance aiguë sans balise temporelle</strong> — un antibiotique servi des mois plus tard pour un épisode révolu</div>
+          <div class="flag-item"><strong>PRN sans intervalle ni dose maximale quotidienne</strong></div>
+          <div class="flag-item">⛔ <strong>« Usage connu » ou « tel que prescrit »</strong> — mentions interdites</div>
+          <div class="flag-item"><strong>Voie d'administration non indiquée</strong></div>
+          <div class="flag-item"><strong>Nom abrégé ou illisible</strong> d'un médicament dont le nom ressemble à un autre</div>
+          <div class="flag-item"><strong>Signature manquante</strong>, ou coordonnées permettant de vous joindre absentes</div>
+          <div class="flag-item"><strong>Identification du patient incomplète</strong> — nom sans date de naissance ni numéro RAMQ</div>
+          <div class="flag-item"><strong>Espace résiduel non rayé</strong> sur la feuille d'ordonnance</div>
+          <div class="flag-item"><strong>Ordonnance non consignée au dossier</strong></div>
+          <div class="flag-item"><strong>Oublier la règle d'un an</strong> pour les benzodiazépines et substances ciblées</div>
+        </div>
+
+        <div class="key-fact green" style="margin-top:12px;">✅ <strong>L'aide-mémoire en une ligne :</strong> <strong>QUI</strong> prescrit (nom, numéro, coordonnées, <strong>signature</strong>) · <strong>À QUI</strong> (nom + date de naissance ou RAMQ) · <strong>QUAND</strong> (date de rédaction, période de validité) · <strong>QUOI</strong> (nom intégral, forme, concentration, dosage) · <strong>COMMENT</strong> (posologie, voie, PRN balisé) · <strong>COMBIEN DE TEMPS</strong> (durée du traitement, renouvellements) · <strong>ET CONSIGNER</strong> au dossier.</div>
+      </div>
+    </div>
+
     <div class="section" id="sec-mvl-psn">
       <div class="section-header">
         <div class="section-accent" style="background:#065f46">💊</div>
@@ -50365,6 +50565,7 @@ const SEARCH_INDEX = [
   { id:'spondylarthrites',   title:'Spondylarthrites',               specialty:'Rhumatologie', keywords:['spondylarthrite','spondylarthrite ankylosante','axiale','non radiographique','sacro-iliite','hla-b27','lombalgie inflammatoire','enthésite','dactylite','talalgie','uvéite','psoriasique','rhumatisme psoriasique','arthrite réactionnelle','mii','syndesmophyte','anti-il-17','anti-tnf'] },
   { id:'connectivites',      title:'Connectivites & Vascularites',   specialty:'Rhumatologie', keywords:['connectivite','lupus','les','aan','anti-adn','anti-sm','néphrite lupique','hydroxychloroquine','sjögren','anti-ssa','anti-ssb','sécheresse','sclérodermie','raynaud','anti-scl70','anti-centromère','crise rénale','myosite','dermatomyosite','ck','anti-jo1','vascularite','anca','antiphospholipides','ppr','pseudopolyarthrite rhizomélique','horton','artérite à cellules géantes','acg','biopsie temporale','tocilizumab'] },
   { id:'mvl-psn',            title:'MVL & Produits de santé naturels', specialty:'Pharmacologie',      keywords:['mvl','vente libre','automédication','psn','produit de santé naturel','acétaminophène','ibuprofène','décongestionnant','antihistaminique','rhume','allergie','topique','millepertuis','interactions psn','npn','din'] },
+  { id:'ordonnances',        title:'Normes des Ordonnances',         specialty:'Pharmacologie',   keywords:['ordonnance','ordonnance individuelle','ordonnance collective','prescription','prescrire','norme','cmq','oiiq','ramq','numéro de prescripteur','ipspl','ipssa','ipssp','ipsnn','ipssm','date de rédaction','période de validité','24 mois','posologie','voie d administration','prn','usage connu','tel que prescrit','renouvellement','pmn','protocole médical national','inesss','benzodiazépine','substances ciblées','permis d exercice','signature','magistrale','déontologie'] },
   { id:'pharmacoguide',       title:'Guide Pharmacologique',              specialty:'Pharmacologie',      keywords:['pharmacologie','médicament','pharmacocinétique','pharmacodynamie','interactions','prescription','posologie'] },
   { id:'quiz',                title:'Quiz Clinique Interactif',           specialty:'Formation',          keywords:['quiz','qcm','questions','auto-évaluation','formation','révision'] },
   // ── Calculateurs individuels (recherchables, mènent directement à l'outil) ──
@@ -50644,7 +50845,7 @@ const SECTION_ORDER = [
   // Musculosquelettique
   'msk',
   // Pharmacologie
-  'mvl-psn',
+  'ordonnances','mvl-psn',
   'pharmacoguide',
   // Outils
   'quiz'
@@ -50652,6 +50853,7 @@ const SECTION_ORDER = [
 
 // Section titles for display in nav buttons
 const SECTION_TITLES = {
+  'ordonnances':'Normes des Ordonnances',
   'arthrite-approche':'Approche Douleur Articulaire','par':'Polyarthrite Rhumatoïde','goutte':'Goutte & Microcristaux','spondylarthrites':'Spondylarthrites','connectivites':'Connectivites & Vascularites',
   'geriatrie-eval':'Évaluation Gériatrique','delirium':'Délirium','tnc':'Troubles Neurocognitifs','chutes':'Chutes & Mobilité','polypharmacie':'Polypharmacie & Déprescription',
   'athero':'Athérosclérose','anevrisme':'Anévrisme','rein-anatomie':'Anatomie Rein','bases-endo':'Bases Physiologiques Endo.','pneumo-eval':'Évaluation Pulmonaire','pneumo-gazo':'Gazométrie & Acide-Base','pneumo-aco':'ACO','pneumo-o2':'O₂ Domicile & Conduite','pneumo-pneumonie':'Pneumonie','pneumo-autres-patho':'Autres Patho. Pulmonaires','pneumo-ira':'Insuffisance Respiratoire','pneumo-htp':'HTP & Cor Pulmonale','douleur':'Douleur & Analgésie','ddx-abdo':'Douleur Abdominale — DDx','mii':'MII — Crohn & Colite','diverticulite':'Diverticulite Aiguë','choledocholithiase':'Cholédocholithiase','cholangite':'Cholangite','pancreatite':'Pancréatite Aiguë','msk':'Guide MSK','quiz':'Quiz',
