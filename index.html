@@ -1209,6 +1209,20 @@ m
     </div>
 
 
+    <!-- Rhumatologie -->
+    <div class="specialty-group" id="grp-rhumato">
+      <div class="specialty-header" onclick="toggleGroup('grp-rhumato')">
+        <span class="emoji">🔥</span> Rhumatologie
+        <svg class="chevron" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>      </div>
+      <div class="specialty-items">
+        <div class="nav-item" onclick="showSection('arthrite-approche')">Approche Douleur Articulaire</div>
+        <div class="nav-item" onclick="showSection('par')">Polyarthrite Rhumatoïde</div>
+        <div class="nav-item" onclick="showSection('goutte')">Goutte &amp; Microcristaux</div>
+        <div class="nav-item" onclick="showSection('spondylarthrites')">Spondylarthrites</div>
+        <div class="nav-item" onclick="showSection('connectivites')">Connectivites &amp; Vascularites</div>
+      </div>
+    </div>
+
     <div class="specialty-group" id="grp-msk">
       <div class="specialty-header" onclick="toggleGroup('grp-msk')">
         <span class="emoji">🦴</span> MSK
@@ -1473,6 +1487,13 @@ m
           <div class="home-card-body">
             <div class="home-card-name">Dermatologie</div>
             <div class="home-card-count">1 section</div>
+          </div>
+        </div>
+        <div class="home-card" onclick="showSection('arthrite-approche'); openGroup('grp-rhumato')">
+          <div class="home-card-icon" style="background:#fff1f2;color:#e11d48">🔥</div>
+          <div class="home-card-body">
+            <div class="home-card-name">Rhumatologie</div>
+            <div class="home-card-count">5 sections</div>
           </div>
         </div>
         <div class="home-card" onclick="showSection('msk'); openGroup('grp-msk')">
@@ -47508,6 +47529,1234 @@ Revoir rapidement si nouvelle Sx ou changement de dose<br>
 
 
 
+    <div class="section" id="sec-arthrite-approche">
+      <div class="section-header">
+        <div class="section-accent" style="background:#0e7490">🔎</div>
+        <div class="section-title"><h1>Approche de la douleur articulaire</h1><div class="breadcrumb">Rhumatologie <span class="breadcrumb-sep">·</span> Inflammatoire vs mécanique <span class="breadcrumb-sep">·</span> Ponction articulaire <span class="breadcrumb-sep">·</span> Sérologies</div></div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;">
+        <button onclick="goToBlock('art-1')" style="background:#374151;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">⚖️ Inflammatoire vs mécanique</button>
+        <button onclick="goToBlock('art-2')" style="background:#0369a1;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🔢 Nombre &amp; distribution</button>
+        <button onclick="goToBlock('art-3')" style="background:#6d28d9;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🔍 Signes extra-articulaires</button>
+        <button onclick="goToBlock('art-4')" style="background:#0f766e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧪 Bilan sanguin</button>
+        <button onclick="goToBlock('art-5')" style="background:#c0392b;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">💉 Ponction articulaire</button>
+        <button onclick="goToBlock('art-6')" style="background:#b45309;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">📷 Imagerie</button>
+        <button onclick="goToBlock('art-7')" style="background:#0a7a4e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧭 Démarche diagnostique</button>
+        <button onclick="goToBlock('art-8')" style="background:#dc2626;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🚨 Red flags</button>
+      </div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:20px;">
+        <div style="flex:1;min-width:95px;background:#FEE2E2;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#b91c1c;">&gt; 30–60 min</div><div style="font-size:11px;color:#555;margin-top:4px;">Raideur matinale inflammatoire</div></div>
+        <div style="flex:1;min-width:95px;background:#EEF2FF;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#1C3F8F;">1 · 2–4 · ≥5</div><div style="font-size:11px;color:#555;margin-top:4px;">Mono · oligo · polyarthrite</div></div>
+        <div style="flex:1;min-width:95px;background:#FEF9C3;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#854d0e;">Ponction</div><div style="font-size:11px;color:#555;margin-top:4px;">Toute monoarthrite aiguë</div></div>
+        <div style="flex:1;min-width:95px;background:#DCFCE7;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#15803d;">Clinique</div><div style="font-size:11px;color:#555;margin-top:4px;">Les tests confirment, ils ne dépistent pas</div></div>
+      </div>
+
+      <div class="block def" style="margin-top:14px;">
+        <div class="block-title" id="art-1"><span class="tag">⚖️ La première question : inflammatoire ou mécanique?</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>C'est la bifurcation qui organise tout le reste.</strong> Avant de nommer une maladie, il faut trancher entre une atteinte <strong>inflammatoire</strong> — qui demande un bilan, souvent un traitement de fond et une orientation — et une atteinte <strong>mécanique</strong> ou dégénérative, qui relève d'une approche tout autre. Cette distinction se fait à l'<strong>histoire</strong>, pas au laboratoire.</div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:20%;">Caractéristique</th><th style="width:38%;">Inflammatoire</th><th>Mécanique / dégénératif</th></tr></thead>
+          <tbody>
+            <tr style="background:#fce4ec;"><td><strong>🕐 Raideur matinale</strong></td><td>🎯 <strong>Prolongée — plus de 30 à 60 minutes</strong>, parfois des heures</td><td><strong>Brève — moins de 30 minutes</strong>, « dérouillage » de quelques minutes</td></tr>
+            <tr><td><strong>Effet de l'activité</strong></td><td>🎯 <strong>Améliore</strong> avec le mouvement — la personne « se dégourdit »</td><td><strong>Aggrave</strong> avec l'usage, soulagée par le repos</td></tr>
+            <tr style="background:#e8f4fd;"><td><strong>Horaire</strong></td><td>Pire le <strong>matin</strong> et en <strong>seconde partie de nuit</strong> — réveille la personne</td><td>Pire en <strong>fin de journée</strong>, après l'effort</td></tr>
+            <tr><td><strong>Repos</strong></td><td>🎯 <strong>Aggrave</strong> — la raideur revient après l'immobilité (cinéma, longue voiture)</td><td><strong>Soulage</strong></td></tr>
+            <tr style="background:#f0fdf4;"><td><strong>Gonflement</strong></td><td><strong>Synovite</strong> : tuméfaction molle, chaude, épanchement</td><td>Absent ou minime · déformations osseuses dures (ostéophytes)</td></tr>
+            <tr><td><strong>Symptômes généraux</strong></td><td><strong>Fatigue, fébricule, perte de poids</strong> possibles</td><td>Absents</td></tr>
+            <tr style="background:#ede9fe;"><td><strong>Marqueurs</strong></td><td><strong>VS et CRP souvent élevées</strong> (mais peuvent être normales)</td><td>Normaux</td></tr>
+            <tr><td><strong>Exemples</strong></td><td>PAR · spondylarthrites · goutte · connectivites · arthrite septique</td><td>Arthrose · tendinopathies · bursites · syndrome fémoro-patellaire</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">🗣️ <strong>Les deux questions les plus discriminantes à poser :</strong> « <strong>Le matin, combien de temps ça vous prend avant d'être délié?</strong> » et « <strong>Est-ce que ça va mieux ou moins bien quand vous bougez?</strong> » Elles séparent l'inflammatoire du mécanique plus efficacement que n'importe quel test sanguin.</div>
+
+        <div class="key-fact red" style="margin-top:8px;">⚠️ <strong>Piège fréquent :</strong> une VS et une CRP normales <strong>n'excluent pas</strong> une arthrite inflammatoire — c'est particulièrement vrai dans les spondylarthrites et au début d'une PAR. Inversement, une VS élevée chez une personne âgée peut n'être qu'un reflet de l'âge ou d'une autre pathologie. <strong>Ces marqueurs appuient l'impression clinique, ils ne la remplacent pas.</strong></div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;border-left-color:#0369a1;">
+        <div class="block-title" id="art-2"><span class="tag">🔢 Nombre, distribution et symétrie</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>La deuxième question :</strong> combien d'articulations, lesquelles, et de façon symétrique ou non? Ces trois éléments réduisent le diagnostic différentiel plus vite que tout le reste.</div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:18%;">Nombre</th><th style="width:34%;">Causes à évoquer</th><th>Réflexe clé</th></tr></thead>
+          <tbody>
+            <tr style="background:#fce4ec;"><td><strong>Monoarthrite</strong><br><em>1 articulation</em></td><td>🚨 <strong>Arthrite septique</strong> · <strong>goutte</strong> · <strong>pseudogoutte</strong> · hémarthrose · arthrite réactionnelle · début de spondylarthrite · tumeur</td><td>🚨 <strong>PONCTIONNER</strong> — toute monoarthrite aiguë est une arthrite septique jusqu'à preuve du contraire</td></tr>
+            <tr><td><strong>Oligoarthrite</strong><br><em>2 à 4 articulations</em></td><td><strong>Spondylarthrites</strong> (psoriasique, réactionnelle, associée aux MII) · goutte polyarticulaire · sarcoïdose · Lyme</td><td>Chercher : <strong>psoriasis, atteinte axiale, dactylite, enthésite, uvéite, symptômes digestifs ou urogénitaux</strong></td></tr>
+            <tr style="background:#e8f4fd;"><td><strong>Polyarthrite</strong><br><em>5 articulations et plus</em></td><td><strong>PAR</strong> · <strong>lupus</strong> et autres connectivites · <strong>arthrites virales</strong> (parvovirus B19, hépatites, VIH) · rhumatisme psoriasique · PPR</td><td>Préciser <strong>symétrie</strong>, <strong>petites vs grosses articulations</strong> et <strong>durée</strong> (aiguë &lt; 6 semaines vs chronique)</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">🖐️ La distribution aux mains — très discriminante</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;">
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+            <strong style="color:#1d4ed8;">PAR</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>MCP et IPP</strong>, poignets · <strong>symétrique</strong><br>🎯 <strong>Épargne caractéristiquement les IPD</strong></div>
+          </div>
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;">
+            <strong style="color:#d35400;">Arthrose</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🎯 <strong>IPD</strong> (nodules d'Heberden) et <strong>IPP</strong> (nodules de Bouchard) · <strong>base du pouce</strong> (rhizarthrose)<br>Déformations <strong>dures</strong>, pas de synovite chaude</div>
+          </div>
+          <div style="background:#ede9fe;border-radius:10px;padding:14px;">
+            <strong style="color:#6d28d9;">Rhumatisme psoriasique</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🎯 <strong>Atteint les IPD</strong> · souvent <strong>asymétrique</strong><br><strong>Dactylite</strong> (« doigt en saucisse ») · atteinte des ongles</div>
+          </div>
+          <div style="background:#fce4ec;border-radius:10px;padding:14px;">
+            <strong style="color:#c0392b;">Goutte</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🎯 <strong>1<sup>re</sup> métatarso-phalangienne</strong> (podagre) · cheville, genou, coude<br>Monoarthrite <strong>très inflammatoire</strong>, d'installation nocturne</div>
+          </div>
+        </div>
+
+        <div class="key-fact green" style="margin-top:12px;">💡 <strong>Le raccourci mnémotechnique le plus utile :</strong> <strong>IPD atteintes → pensez arthrose ou rhumatisme psoriasique, pas PAR.</strong> C'est l'un des rares signes vraiment discriminants à l'examen des mains.</div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;border-left-color:#6d28d9;">
+        <div class="block-title" id="art-3"><span class="tag">🔍 Signes extra-articulaires — les indices qui nomment la maladie</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>C'est souvent hors de l'articulation qu'on trouve le diagnostic.</strong> Un examen articulaire seul est incomplet — la peau, les ongles, les yeux, les muqueuses et l'histoire digestive ou urogénitale font le tri entre des tableaux articulaires qui se ressemblent.</div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:20%;">Où regarder</th><th style="width:38%;">Ce qu'on cherche</th><th>Vers quoi ça oriente</th></tr></thead>
+          <tbody>
+            <tr style="background:#ede9fe;"><td><strong>Peau &amp; ongles</strong></td><td><strong>Plaques de psoriasis</strong> (cuir chevelu, nombril, pli interfessier — <em>à chercher activement</em>) · <strong>ongles piquetés ou décollés</strong> · érythème malaire · photosensibilité · purpura · nodules</td><td>Rhumatisme psoriasique · lupus · vascularite · PAR (nodules)</td></tr>
+            <tr><td><strong>Yeux</strong></td><td><strong>Uvéite</strong> (œil rouge douloureux, photophobie) · sécheresse oculaire · sclérite</td><td>🚨 <strong>Spondylarthrite</strong> (uvéite antérieure) · Sjögren · PAR · vascularite</td></tr>
+            <tr style="background:#f0fdf4;"><td><strong>Doigts &amp; orteils</strong></td><td>🎯 <strong>Dactylite</strong> — doigt entier gonflé « en saucisse »<br><strong>Phénomène de Raynaud</strong> · sclérodactylie · ulcérations digitales</td><td>Dactylite → <strong>spondylarthrite</strong><br>Raynaud → <strong>connectivite</strong> (sclérodermie, lupus)</td></tr>
+            <tr><td><strong>Enthèses</strong></td><td><strong>Talalgie</strong> (tendon d'Achille, fascia plantaire) · douleur aux insertions tendineuses</td><td>🎯 <strong>Enthésite → spondylarthrite</strong> — signe très évocateur</td></tr>
+            <tr style="background:#e8f4fd;"><td><strong>Rachis &amp; bassin</strong></td><td><strong>Douleur lombaire inflammatoire</strong> chez un jeune adulte · douleur fessière alternante</td><td><strong>Spondylarthrite axiale</strong></td></tr>
+            <tr><td><strong>Muqueuses</strong></td><td>Aphtes buccaux ou génitaux · <strong>sécheresse buccale</strong></td><td>Lupus · Behçet · Sjögren</td></tr>
+            <tr style="background:#fff3cd;"><td><strong>Digestif &amp; urogénital</strong></td><td>Diarrhée chronique, sang dans les selles · <strong>urétrite, cervicite</strong> · épisode infectieux récent</td><td>Arthrite associée aux <strong>MII</strong> · <strong>arthrite réactionnelle</strong> · <strong>gonococcie</strong></td></tr>
+            <tr><td><strong>Général</strong></td><td><strong>Fièvre</strong> · perte de poids · <strong>céphalée temporale, claudication de la mâchoire</strong> chez la personne de plus de 50 ans</td><td>🚨 Septique · connectivite · <strong>artérite à cellules géantes</strong></td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">📌 <strong>Le psoriasis se cache.</strong> Beaucoup de personnes ignorent en avoir, ou n'y pensent pas parce que la plaque est discrète. Regarder <strong>le cuir chevelu, derrière les oreilles, le nombril, le pli interfessier et les ongles</strong> — c'est parfois ce qui transforme une « polyarthrite indifférenciée » en rhumatisme psoriasique.</div>
+      </div>
+
+      <div class="block para" style="margin-top:14px;border-left-color:#0f766e;">
+        <div class="block-title" id="art-4"><span class="tag">🧪 Bilan sanguin — quoi demander, et comment l'interpréter</span></div>
+
+        <div class="key-fact red" style="margin-top:10px;">🎯 <strong>Le principe le plus important de ce bloc :</strong> les sérologies rhumatologiques sont des tests de <strong>confirmation</strong>, pas de <strong>dépistage</strong>. Demandées sans hypothèse clinique, elles produisent surtout des faux positifs, de l'anxiété et des consultations inutiles. <strong>Ne pas demander un AAN « pour voir ».</strong></div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:18%;">Test</th><th style="width:30%;">Ce qu'il apporte</th><th>Limites &amp; pièges</th></tr></thead>
+          <tbody>
+            <tr style="background:#e8f4fd;"><td><strong>VS &amp; CRP</strong></td><td>Confirment l'inflammation · utiles pour <strong>suivre l'évolution</strong> et la réponse au traitement</td><td>⚠️ <strong>Peuvent être normales</strong> en arthrite inflammatoire active, surtout dans les spondylarthrites<br>VS augmente avec l'âge, l'anémie, la grossesse · CRP plus spécifique et plus rapide</td></tr>
+            <tr><td><strong>Facteur rhumatoïde (FR)</strong></td><td>Appuie le diagnostic de PAR · un titre élevé est associé à une maladie plus sévère</td><td>⚠️ <strong>Peu spécifique</strong> — positif dans le Sjögren, les hépatites B et C, l'endocardite, la sarcoïdose, et chez des personnes âgées <strong>en bonne santé</strong><br>⚠️ <strong>Négatif chez une part des PAR</strong> (PAR séronégative)</td></tr>
+            <tr style="background:#f0fdf4;"><td><strong>Anti-CCP</strong></td><td>🎯 <strong>Beaucoup plus spécifique de la PAR</strong> que le FR · valeur <strong>pronostique</strong> — associé à une maladie érosive<br>Peut précéder les symptômes de plusieurs années</td><td>Sensibilité comparable au FR — un anti-CCP négatif n'exclut pas la PAR<br>➜ Demander <strong>FR et anti-CCP ensemble</strong> devant une polyarthrite</td></tr>
+            <tr style="background:#fce4ec;"><td><strong>AAN (ANA)</strong></td><td>Test d'entrée pour les <strong>connectivites</strong> — lupus surtout · très <strong>sensible</strong> pour le lupus</td><td>🚨 <strong>Peu spécifique :</strong> positif chez une proportion notable de personnes en bonne santé, surtout à faible titre et avec l'âge<br>⛔ <strong>Ne jamais demander sans suspicion clinique de connectivite</strong> — c'est la source la plus fréquente de consultations rhumatologiques inutiles<br>Si positif <em>et</em> tableau évocateur → <strong>anticorps spécifiques</strong> (anti-ADNdb, anti-Sm, anti-SSA/SSB, anti-Scl70, anti-centromère, anti-Jo1)</td></tr>
+            <tr><td><strong>Uricémie</strong></td><td>Appuie le diagnostic de goutte · sert à <strong>suivre la cible</strong> sous hypo-uricémiant</td><td>🚨 <strong>Peut être normale ou basse pendant la crise aiguë</strong> — une uricémie normale n'exclut pas la goutte<br>Une hyperuricémie asymptomatique <strong>n'est pas une goutte</strong> et ne se traite généralement pas<br>➜ Doser <strong>à distance</strong> de la crise</td></tr>
+            <tr style="background:#ede9fe;"><td><strong>HLA-B27</strong></td><td>Appuie une <strong>spondylarthrite axiale</strong> dans un contexte évocateur</td><td>⚠️ Fréquent dans la population générale — <strong>positif ≠ maladie</strong> · à interpréter uniquement avec une clinique compatible</td></tr>
+            <tr><td><strong>Bilan de base</strong></td><td><strong>FSC</strong> (anémie inflammatoire, cytopénies du lupus) · <strong>créatinine</strong> · <strong>bilan hépatique</strong> · analyse d'urine</td><td>🎯 L'<strong>analyse d'urine</strong> est essentielle si suspicion de lupus ou de vascularite — <strong>protéinurie et hématurie</strong> changent l'urgence</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="key-fact green" style="margin-top:12px;">✅ <strong>Bilan raisonnable devant une polyarthrite inflammatoire récente :</strong> FSC, VS, CRP, créatinine, bilan hépatique, analyse d'urine, <strong>FR + anti-CCP</strong>, ± sérologies virales selon le contexte. L'AAN s'ajoute <strong>seulement</strong> si des éléments évoquent une connectivite.</div>
+      </div>
+
+      <div class="block para" style="margin-top:14px;border-left-color:#c0392b;">
+        <div class="block-title" id="art-5"><span class="tag">💉 Ponction articulaire — le geste qui tranche</span></div>
+
+        <div class="key-fact red" style="margin-top:10px;">🚨 <strong>Règle absolue : toute monoarthrite aiguë doit être ponctionnée</strong> — sauf contre-indication évidente. L'arthrite septique détruit le cartilage en quelques jours et comporte une mortalité réelle. <strong>La goutte et l'arthrite septique se ressemblent, et elles peuvent coexister.</strong> Trouver des cristaux <strong>n'exclut pas</strong> une infection.</div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:16%;">Type</th><th style="width:16%;">Aspect</th><th style="width:20%;">Leucocytes</th><th>Interprétation</th></tr></thead>
+          <tbody>
+            <tr style="background:#f0fdf4;"><td><strong>Normal</strong></td><td>Clair, visqueux</td><td>Très faible</td><td>—</td></tr>
+            <tr><td><strong>Non inflammatoire</strong></td><td>Jaune clair, transparent</td><td>Faible</td><td><strong>Arthrose</strong>, traumatisme</td></tr>
+            <tr style="background:#fff3cd;"><td><strong>Inflammatoire</strong></td><td>Jaune trouble, moins visqueux</td><td>Élevé</td><td><strong>PAR</strong>, spondylarthrites, <strong>goutte</strong>, pseudogoutte, connectivites</td></tr>
+            <tr style="background:#fce4ec;"><td><strong>Septique</strong></td><td>Purulent, opaque</td><td>🚨 <strong>Très élevé</strong>, à prédominance de neutrophiles</td><td>🚨 <strong>Arthrite septique</strong> — urgence<br><em>Les seuils se chevauchent : un liquide très inflammatoire doit être traité comme septique jusqu'aux résultats</em></td></tr>
+            <tr><td><strong>Hémarthrose</strong></td><td>Sanglant</td><td>Variable</td><td>Traumatisme, fracture, <strong>coagulopathie ou anticoagulation</strong>, tumeur</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px;">
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;border-left:4px solid #1d4ed8;">
+            <strong style="color:#1d4ed8;">🧫 Ce qu'il faut demander sur le liquide</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Décompte cellulaire et différentiel</strong><br><strong>Coloration de Gram et culture</strong> 🎯<br><strong>Recherche de cristaux</strong> en lumière polarisée<br>➜ <strong>Urate monosodique</strong> : aiguilles, biréfringence négative → <strong>goutte</strong><br>➜ <strong>Pyrophosphate de calcium</strong> : rhomboïdes, biréfringence positive → <strong>pseudogoutte</strong></div>
+          </div>
+          <div style="background:#fef2f2;border-radius:10px;padding:14px;border-left:4px solid #c0392b;">
+            <strong style="color:#c0392b;">⚠️ Les pièges</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🚨 <strong>Cristaux présents n'exclut PAS une infection</strong> — les deux coexistent, surtout chez la personne âgée ou immunosupprimée<br><strong>Ne pas retarder l'antibiothérapie</strong> après le prélèvement si le tableau est septique<br>⛔ <strong>Ne pas infiltrer de corticostéroïde</strong> avant d'avoir écarté l'infection<br>Prélever aussi des <strong>hémocultures</strong> si fièvre<br>Chez le jeune sexuellement actif : penser à la <strong>gonococcie disséminée</strong> et faire les prélèvements ITSS</div>
+          </div>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">📌 <strong>En pratique de première ligne :</strong> vous ne ferez pas toujours la ponction vous-même — mais vous devez <strong>reconnaître qu'elle est indiquée et l'organiser sans délai</strong>. Une monoarthrite aiguë fébrile s'oriente vers l'urgence, pas vers un rendez-vous de suivi.</div>
+      </div>
+
+      <div class="block para" style="margin-top:14px;border-left-color:#b45309;">
+        <div class="block-title" id="art-6"><span class="tag">📷 Imagerie</span></div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:20%;">Examen</th><th style="width:34%;">Utilité</th><th>Limites</th></tr></thead>
+          <tbody>
+            <tr style="background:#f0fdf4;"><td><strong>Radiographie simple</strong></td><td>Référence initiale · <strong>érosions</strong> (PAR), <strong>pincement de l'interligne et ostéophytes</strong> (arthrose), <strong>chondrocalcinose</strong> (pseudogoutte), atteinte des sacro-iliaques</td><td>⚠️ <strong>Normale au début</strong> de la plupart des arthrites inflammatoires — une radiographie normale n'exclut rien<br>Les érosions de la PAR apparaissent <strong>tardivement</strong> : ne pas attendre pour traiter</td></tr>
+            <tr><td><strong>Échographie</strong></td><td>Détecte la <strong>synovite</strong>, les épanchements, les <strong>enthésites</strong> · guide la ponction et l'infiltration · <strong>signal Doppler</strong> = inflammation active</td><td>Opérateur-dépendante · accessibilité variable</td></tr>
+            <tr style="background:#e8f4fd;"><td><strong>IRM</strong></td><td>🎯 <strong>Détecte l'inflammation avant les lésions radiographiques</strong> — essentielle pour la <strong>spondylarthrite axiale non radiographique</strong> (œdème osseux des sacro-iliaques)</td><td>Coût et accès · à réserver aux situations où elle change la conduite</td></tr>
+            <tr><td><strong>TDM</strong></td><td>Détail osseux · utile pour les sacro-iliaques quand l'IRM est impossible</td><td>Irradiation · ne voit pas l'inflammation active</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="key-fact blue" style="margin-top:12px;">🎯 <strong>Le message à retenir :</strong> en arthrite inflammatoire débutante, <strong>l'imagerie sert surtout de point de référence pour l'avenir</strong>. Elle ne doit jamais retarder l'orientation ni le traitement — le pronostic dépend de la <strong>précocité de la prise en charge</strong>, pas de la documentation des lésions.</div>
+      </div>
+
+      <div class="block rx" style="margin-top:14px;">
+        <div class="block-title" id="art-7"><span class="tag">🧭 Démarche diagnostique — l'enchaînement</span></div>
+
+        <div class="criteria-list" style="margin-top:12px;">
+          <div class="criteria-item"><div class="criteria-num red">1</div><span>🚨 <strong>Écarter l'urgence :</strong> monoarthrite aiguë fébrile → <strong>arthrite septique</strong>, ponction sans délai · personne de plus de 50 ans avec céphalée temporale ou trouble visuel → <strong>artérite à cellules géantes</strong></span></div>
+          <div class="criteria-item"><div class="criteria-num blue">2</div><span><strong>Inflammatoire ou mécanique?</strong> — raideur matinale, effet du mouvement, gonflement</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">3</div><span><strong>Combien d'articulations, lesquelles, symétriques?</strong> — mono / oligo / poly · IPD ou non</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">4</div><span><strong>Depuis quand?</strong> — aiguë (&lt; 6 semaines, penser viral, réactionnel, cristaux) vs chronique (PAR, spondylarthrite, connectivite)</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">5</div><span><strong>Chercher les signes extra-articulaires</strong> — peau, ongles, yeux, enthèses, rachis, muqueuses, digestif, urogénital</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">6</div><span><strong>Bilan ciblé</strong> selon l'hypothèse — jamais de « panel rhumatologique » à l'aveugle</span></div>
+          <div class="criteria-item"><div class="criteria-num red">!</div><span>🎯 <strong>Orienter en rhumatologie sans attendre le résultat des tests</strong> devant une <strong>synovite persistante</strong> — la fenêtre thérapeutique précoce détermine le pronostic à long terme</span></div>
+        </div>
+
+        <div class="key-fact green" style="margin-top:14px;">⏱️ <strong>La notion de « fenêtre d'opportunité » :</strong> dans les arthrites inflammatoires chroniques, particulièrement la PAR, un traitement de fond amorcé <strong>tôt</strong> change durablement l'évolution — moins d'érosions, moins de déformations, meilleure fonction. Un retard de quelques mois a des conséquences permanentes. <strong>Devant une synovite qui persiste au-delà de quelques semaines, référer sans attendre d'avoir « tout le bilan ».</strong></div>
+      </div>
+
+      <div class="block flag" style="margin-top:14px;">
+        <div class="block-title" id="art-8"><span class="tag">🚨 Red flags</span></div>
+
+        <div class="flag-list" style="margin-top:12px;">
+          <div class="flag-item">🚨 <strong>Monoarthrite aiguë chaude, surtout avec fièvre</strong> — arthrite septique : ponction et orientation immédiates</div>
+          <div class="flag-item">🚨 <strong>Personne de plus de 50 ans avec céphalée temporale nouvelle, claudication de la mâchoire, trouble visuel ou douleur des ceintures</strong> — <strong>artérite à cellules géantes</strong> : urgence, risque de cécité</div>
+          <div class="flag-item"><strong>Arthrite avec atteinte rénale</strong> — protéinurie, hématurie, insuffisance rénale : connectivite ou vascularite active</div>
+          <div class="flag-item"><strong>Arthrite avec dyspnée, hémoptysie ou infiltrats pulmonaires</strong> — vascularite, pneumopathie interstitielle</div>
+          <div class="flag-item"><strong>Purpura palpable, livedo, ulcérations cutanées, neuropathie</strong> — vascularite systémique</div>
+          <div class="flag-item"><strong>Fièvre, perte de poids, sueurs nocturnes</strong> avec arthrite — néoplasie, infection, connectivite</div>
+          <div class="flag-item"><strong>Douleur rachidienne inflammatoire chez un jeune adulte</strong> — spondylarthrite axiale, souvent diagnostiquée avec des années de retard</div>
+          <div class="flag-item"><strong>Œil rouge douloureux avec photophobie</strong> — uvéite : évaluation ophtalmologique rapide</div>
+          <div class="flag-item"><strong>Synovite persistante au-delà de 6 semaines</strong> — orienter en rhumatologie, ne pas temporiser</div>
+          <div class="flag-item"><strong>Hémarthrose spontanée</strong> — coagulopathie, anticoagulation excessive, lésion structurelle</div>
+        </div>
+      </div>
+    </div>
+
+<div class="section" id="sec-par">
+      <div class="section-header">
+        <div class="section-accent" style="background:#b91c1c">🖐️</div>
+        <div class="section-title"><h1>Polyarthrite rhumatoïde</h1><div class="breadcrumb">Rhumatologie <span class="breadcrumb-sep">·</span> ACR/EULAR <span class="breadcrumb-sep">·</span> Traiter à la cible <span class="breadcrumb-sep">·</span> Méthotrexate</div></div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;">
+        <button onclick="goToBlock('par-1')" style="background:#374151;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧬 Physiopathologie</button>
+        <button onclick="goToBlock('par-2')" style="background:#c0392b;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🖐️ Présentation clinique</button>
+        <button onclick="goToBlock('par-3')" style="background:#6d28d9;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🫁 Atteintes extra-articulaires</button>
+        <button onclick="goToBlock('par-4')" style="background:#0f766e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧪 Sérologies &amp; bilan</button>
+        <button onclick="goToBlock('par-5')" style="background:#0369a1;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">📋 Critères &amp; DDx</button>
+        <button onclick="goToBlock('par-6')" style="background:#0a7a4e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">💊 Traitement</button>
+        <button onclick="goToBlock('par-7')" style="background:#b45309;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🔬 Surveillance</button>
+        <button onclick="goToBlock('par-8')" style="background:#0891b2;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">❤️ Comorbidités &amp; rôle IPS</button>
+        <button onclick="goToBlock('par-9')" style="background:#dc2626;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🚨 Red flags</button>
+      </div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:20px;">
+        <div style="flex:1;min-width:95px;background:#FEE2E2;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#b91c1c;">≥ 1 h</div><div style="font-size:11px;color:#555;margin-top:4px;">Raideur matinale caractéristique</div></div>
+        <div style="flex:1;min-width:95px;background:#EEF2FF;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#1C3F8F;">Épargne IPD</div><div style="font-size:11px;color:#555;margin-top:4px;">Signe distinctif clé</div></div>
+        <div style="flex:1;min-width:95px;background:#DCFCE7;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#15803d;">MTX</div><div style="font-size:11px;color:#555;margin-top:4px;">Traitement de fond de référence</div></div>
+        <div style="flex:1;min-width:95px;background:#FEF9C3;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#854d0e;">~ 15 %</div><div style="font-size:11px;color:#555;margin-top:4px;">Séronégatifs (FR et anti-CCP −)</div></div>
+      </div>
+
+      <div class="block def" style="margin-top:14px;">
+        <div class="block-title" id="par-1"><span class="tag">🧬 Définition &amp; physiopathologie</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>Définition :</strong> maladie <strong>auto-immune systémique chronique</strong> caractérisée par une <strong>synovite inflammatoire persistante</strong>, symétrique, des articulations périphériques — avec un potentiel de <strong>destruction du cartilage, d'érosion osseuse et de déformation permanente</strong>, ainsi que des atteintes extra-articulaires.</div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-top:12px;">
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+            <strong style="color:#1d4ed8;">🔥 Le mécanisme central</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">La <strong>membrane synoviale</strong> s'infiltre de cellules immunitaires et s'épaissit en un tissu inflammatoire proliférant — le <strong>pannus</strong>.<br>Ce pannus <strong>envahit et détruit le cartilage puis l'os sous-jacent</strong> → érosions.<br>➜ C'est ce processus qu'il faut arrêter <strong>tôt</strong>, car les érosions sont <strong>irréversibles</strong>.</div>
+          </div>
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+            <strong style="color:#15803d;">🧫 Auto-immunité</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Production d'auto-anticorps : <strong>facteur rhumatoïde</strong> et <strong>anti-CCP (ACPA)</strong>.<br>🎯 Les <strong>anti-CCP peuvent apparaître des années avant les premiers symptômes</strong> — il existe une phase préclinique.<br>Cytokines pro-inflammatoires (TNF, IL-6) → cibles des biothérapies.</div>
+          </div>
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;">
+            <strong style="color:#d35400;">⚠️ Facteurs de risque</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Sexe féminin</strong> · <strong>âge moyen</strong> au début<br><strong>Prédisposition génétique</strong> (HLA-DR)<br>🎯 <strong>Tabagisme</strong> — le facteur environnemental le mieux établi : il augmente le risque, favorise la séropositivité et <strong>réduit la réponse au traitement</strong><br>Maladie parodontale · obésité</div>
+          </div>
+          <div style="background:#ede9fe;border-radius:10px;padding:14px;">
+            <strong style="color:#6d28d9;">🚬 Pourquoi le tabac compte tant</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">C'est le <strong>seul facteur de risque véritablement modifiable</strong>, et son effet est double : il déclenche <em>et</em> il aggrave.<br>➜ <strong>La cessation tabagique fait partie du traitement de la PAR</strong>, pas seulement de la prévention cardiovasculaire.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;">
+        <div class="block-title" id="par-2"><span class="tag">🖐️ Présentation clinique</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>Le tableau typique :</strong> installation <strong>insidieuse sur des semaines à des mois</strong> de douleur, raideur et gonflement de <strong>plusieurs petites articulations</strong>, avec <strong>raideur matinale prolongée</strong> et symptômes généraux (fatigue, fébricule, perte de poids).<br>⚠️ Mais la présentation est variable : début fulminant en quelques jours, ou <strong>mono- ou oligoarthrite persistante</strong> pendant une longue période avant que le tableau typique n'apparaisse.</div>
+
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">📍 La distribution articulaire — la clé du diagnostic</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;border-left:4px solid #1d4ed8;">
+            <strong style="color:#1d4ed8;">✅ Articulations atteintes</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Début :</strong> petites articulations des mains — <strong>IPP et MCP</strong> — et des pieds — <strong>MTP</strong><br><strong>Puis extension</strong> vers les grosses articulations, approximativement dans cet ordre : <strong>poignets, genoux, coudes, chevilles, hanches, épaules</strong><br><strong>Symétrique</strong><br>⚠️ Atteinte possible du <strong>rachis cervical haut</strong> — voir red flags</div>
+          </div>
+          <div style="background:#fef2f2;border-radius:10px;padding:14px;border-left:4px solid #c0392b;">
+            <strong style="color:#c0392b;">🚫 Articulations épargnées</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🎯 <strong>La PAR épargne caractéristiquement les IPD</strong> et les petites articulations des orteils.<br>➜ Une atteinte des IPD oriente vers l'<strong>arthrose</strong> ou le <strong>rhumatisme psoriasique</strong>.<br>Le <strong>rachis dorsal et lombaire</strong> n'est pas atteint — si douleur lombaire inflammatoire, penser spondylarthrite.</div>
+          </div>
+        </div>
+
+        <div class="key-fact red" style="margin-top:12px;">🎯 <strong>Le diagnostic exige de l'inflammation objectivée, pas seulement de la douleur.</strong> L'histoire d'arthralgies est importante, mais il faut constater à l'examen une <strong>synovite</strong> — gonflement, chaleur, ou les deux. Une douleur articulaire sans signe inflammatoire n'est pas une arthrite.</div>
+
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">🔍 À l'examen</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;">
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+            <strong style="color:#15803d;">Précoce</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Tuméfaction <strong>molle et fusiforme</strong> des IPP<br><strong>Douleur à la compression latérale</strong> des MCP et des MTP (« squeeze test ») — signe simple et sensible<br>Chaleur, limitation de la mobilité, force de préhension diminuée</div>
+          </div>
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;">
+            <strong style="color:#d35400;">Tardif — déformations</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Déviation cubitale</strong> des doigts<br><strong>Col de cygne</strong> et <strong>boutonnière</strong><br><strong>Pouce en Z</strong><br>Subluxation des MTP, avant-pied triangulaire<br>🎯 <strong>Ces déformations devraient être devenues rares</strong> — leur présence témoigne d'une maladie non contrôlée ou diagnostiquée tardivement</div>
+          </div>
+          <div style="background:#ede9fe;border-radius:10px;padding:14px;">
+            <strong style="color:#6d28d9;">Symptômes généraux</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Fatigue</strong> — souvent le symptôme le plus invalidant rapporté par les patients<br><strong>Fébricule</strong>, perte de poids<br>Dépression fréquente et sous-traitée</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;border-left-color:#6d28d9;">
+        <div class="block-title" id="par-3"><span class="tag">🫁 Atteintes extra-articulaires</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>La PAR est une maladie systémique.</strong> Les atteintes extra-articulaires surviennent surtout chez les patients <strong>séropositifs (FR et/ou anti-CCP)</strong> et à maladie sévère. Rarement — et plus souvent chez l'homme — elles <strong>précèdent</strong> l'atteinte articulaire, notamment l'atteinte pulmonaire.</div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:20%;">Système</th><th style="width:34%;">Manifestations</th><th>Ce qu'il faut savoir</th></tr></thead>
+          <tbody>
+            <tr style="background:#f1f5f9;"><td><strong>Cutané</strong></td><td><strong>Nodules rhumatoïdes</strong> — surfaces d'extension, olécrâne, tendons</td><td>Presque toujours chez des patients <strong>FR positifs</strong> · peuvent apparaître ou grossir sous méthotrexate</td></tr>
+            <tr style="background:#e0f2fe;"><td><strong>Pulmonaire</strong></td><td><strong>Pneumopathie interstitielle</strong> · pleurésie et épanchement · nodules pulmonaires · bronchiolite</td><td>🚨 <strong>Cause majeure de morbidité et de mortalité</strong> · toute <strong>dyspnée ou toux persistante</strong> chez un patient atteint de PAR mérite investigation<br>⚠️ Le méthotrexate peut aussi causer une pneumopathie — diagnostic différentiel délicat</td></tr>
+            <tr><td><strong>Neurologique</strong></td><td><strong>Syndromes canalaires</strong> : canal carpien (médian au poignet), canal tarsien<br><strong>Vascularite</strong> → neuropathie en gant et chaussette ou <strong>mononévrite multiple</strong><br>🚨 <strong>Subluxation C1-C2</strong> → myélopathie</td><td>🚨 <strong>L'atteinte C1-C2 est le point le plus critique en pratique :</strong> elle peut comprimer la moelle. À signaler <strong>avant toute intubation ou chirurgie</strong> — la manipulation du cou est dangereuse. Suspecter devant une douleur cervicale, des paresthésies ou une faiblesse.</td></tr>
+            <tr style="background:#fce4ec;"><td><strong>Oculaire</strong></td><td><strong>Kératoconjonctivite sèche</strong> (Sjögren secondaire) · <strong>sclérite</strong>, épisclérite</td><td>🚨 La <strong>sclérite</strong> est douloureuse et menace la vision — orientation ophtalmologique rapide</td></tr>
+            <tr><td><strong>Hématologique</strong></td><td><strong>Anémie inflammatoire</strong> — proportionnelle à l'activité de la maladie<br><strong>Thrombocytose</strong><br><strong>Syndrome de Felty</strong> : PAR + <strong>splénomégalie</strong> + <strong>neutropénie</strong></td><td>L'anémie s'améliore quand la maladie est contrôlée<br>⚠️ Chercher aussi une <strong>anémie ferriprive</strong> par saignement digestif (AINS)<br>Felty : risque infectieux, ulcères de jambe · traiter la PAR sous-jacente</td></tr>
+            <tr style="background:#fff3cd;"><td><strong>Cardiovasculaire</strong></td><td><strong>Athérosclérose accélérée</strong> · péricardite</td><td>🎯 <strong>Le risque cardiovasculaire est le principal déterminant de la mortalité</strong> — voir le bloc Comorbidités</td></tr>
+            <tr><td><strong>Vasculaire</strong></td><td><strong>Vascularite rhumatoïde</strong> — ulcères cutanés, purpura, infarctus digitaux</td><td>Rare mais grave · associée à une maladie ancienne et fortement séropositive</td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+
+      <div class="block para" style="margin-top:14px;border-left-color:#0f766e;">
+        <div class="block-title" id="par-4"><span class="tag">🧪 Sérologies &amp; bilan</span></div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:20%;">Test</th><th style="width:20%;">Performance</th><th>Signification</th></tr></thead>
+          <tbody>
+            <tr style="background:#e8f4fd;"><td><strong>Facteur rhumatoïde</strong></td><td>Présent chez <strong>≈ 75 %</strong> des patients</td><td>Anticorps dirigé contre la portion Fc des IgG<br>🎯 Un <strong>titre élevé</strong> est associé à une <strong>maladie articulaire plus sévère</strong> et à <strong>pratiquement toutes les manifestations extra-articulaires</strong><br>⚠️ <strong>Peu spécifique</strong> — positif dans toute stimulation immunitaire chronique</td></tr>
+            <tr style="background:#f0fdf4;"><td><strong>Anti-CCP (ACPA)</strong></td><td>Présent chez <strong>≈ 70 %</strong><br>Spécificité <strong>93 à 98 %</strong></td><td>🎯 <strong>Beaucoup plus spécifique que le FR</strong><br>Peut être détecté <strong>des années avant</strong> le diagnostic clinique<br>Associé à une <strong>maladie érosive agressive</strong> — valeur pronostique<br>🎯 Sa présence, même dans les premières semaines d'une arthrite inflammatoire, <strong>évoque fortement une PAR agressive en cours</strong></td></tr>
+            <tr style="background:#fff8e1;"><td><strong>Séronégativité</strong></td><td><strong>≈ 15 %</strong> négatifs pour les deux</td><td>⚠️ <strong>Une sérologie négative n'exclut pas la PAR</strong> — le diagnostic reste clinique</td></tr>
+            <tr><td><strong>AAN</strong></td><td>Positifs chez <strong>≈ 30 %</strong> des PAR</td><td>⚠️ Ne signifie <strong>pas</strong> un lupus — source classique de confusion diagnostique</td></tr>
+            <tr style="background:#f1f5f9;"><td><strong>VS &amp; CRP</strong></td><td>Souvent élevées</td><td>Utiles pour <strong>suivre l'activité</strong> et la réponse au traitement · peuvent être normales</td></tr>
+            <tr><td><strong>FSC</strong></td><td>—</td><td><strong>Anémie inflammatoire</strong> proportionnelle à l'activité · <strong>thrombocytose</strong> fréquente</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="key-fact green" style="margin-top:12px;">✅ <strong>Bilan initial pratique :</strong> <strong>FR + anti-CCP</strong>, VS, CRP, FSC, créatinine, bilan hépatique, analyse d'urine · <strong>radiographies des mains et des pieds</strong> comme point de référence · dépistage de l'<strong>hépatite B, de l'hépatite C et de la tuberculose</strong> avant d'amorcer un traitement de fond, surtout une biothérapie.</div>
+      </div>
+
+      <div class="block para" style="margin-top:14px;border-left-color:#0369a1;">
+        <div class="block-title" id="par-5"><span class="tag">📋 Critères de classification &amp; diagnostic différentiel</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">📗 <strong>Deux systèmes coexistent.</strong> Les critères <strong>ACR/EULAR 2010</strong>, plus récents, <strong>n'exigent pas 6 semaines d'évolution</strong> et accordent un poids important à un <strong>titre élevé de FR ou d'anti-CCP</strong> — ils ont été conçus pour permettre un diagnostic <strong>plus précoce</strong>. Les critères plus anciens exigeaient une persistance de 6 semaines.<br>⚠️ Ce sont des critères de <strong>classification</strong>, utilisés comme aide diagnostique — ils ne remplacent pas le jugement clinique.</div>
+
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">📝 Les éléments classiques du diagnostic</div>
+        <div class="criteria-list">
+          <div class="criteria-item"><div class="criteria-num blue">1</div><span><strong>Raideur matinale ≥ 1 heure</strong></span></div>
+          <div class="criteria-item"><div class="criteria-num blue">2</div><span><strong>Gonflement des tissus mous de 3 articulations ou plus</strong></span></div>
+          <div class="criteria-item"><div class="criteria-num blue">3</div><span><strong>Gonflement des articulations de la main</strong> — IPP, MCP ou poignet</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">4</div><span><strong>Gonflement symétrique</strong></span></div>
+          <div class="criteria-item"><div class="criteria-num blue">5</div><span><strong>Nodules sous-cutanés</strong></span></div>
+          <div class="criteria-item"><div class="criteria-num blue">6</div><span><strong>Facteur rhumatoïde sérique</strong></span></div>
+          <div class="criteria-item"><div class="criteria-num blue">7</div><span><strong>Érosions ou ostéopénie périarticulaire</strong> à la radiographie des mains ou des poignets</span></div>
+          <div class="criteria-item"><div class="criteria-num red">!</div><span>Dans le système classique : les critères <strong>1 à 4 doivent persister ≥ 6 semaines</strong>, et <strong>4 des 7 critères</strong> sont requis.</span></div>
+        </div>
+
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">🔀 Diagnostic différentiel</div>
+        <div style="overflow-x:auto;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:32%;">Diagnostic</th><th style="width:18%;">Nodules</th><th style="width:16%;">FR</th><th>Indice distinctif</th></tr></thead>
+          <tbody>
+            <tr style="background:#fff8e1;"><td><strong>Arthrite virale</strong><br><em>hépatites B et C, parvovirus, rubéole</em></td><td>−</td><td>±</td><td>🎯 <strong>Dure habituellement 2 à 3 semaines seulement</strong> — c'est le grand simulateur d'une PAR débutante, y compris avec un FR positif. <strong>Ne pas poser le diagnostic trop vite.</strong></td></tr>
+            <tr><td><strong>Endocardite bactérienne</strong></td><td>±</td><td>+</td><td>Fièvre, souffle, hémocultures</td></tr>
+            <tr style="background:#f0fdf4;"><td><strong>Sarcoïdose</strong></td><td>+</td><td>+</td><td>Adénopathies hilaires, atteinte cutanée, hypercalcémie</td></tr>
+            <tr><td><strong>Arthrite réactionnelle</strong></td><td>−</td><td>−</td><td>Infection digestive ou urogénitale récente, asymétrique, atteinte axiale</td></tr>
+            <tr style="background:#ede9fe;"><td><strong>Rhumatisme psoriasique</strong></td><td>−</td><td>−</td><td>🎯 <strong>Atteinte des IPD</strong>, dactylite, psoriasis, ongles</td></tr>
+            <tr><td><strong>Lupus</strong></td><td>±</td><td>+</td><td>Arthrite <strong>non érosive</strong>, atteinte cutanée, rénale, cytopénies, AAN à titre élevé</td></tr>
+            <tr style="background:#e0f2fe;"><td><strong>Sjögren primaire</strong></td><td>−</td><td>+</td><td>Sécheresse oculaire et buccale au premier plan</td></tr>
+            <tr><td><strong>Goutte tophacée chronique</strong></td><td>+ <em>(tophi)</em></td><td>−</td><td>Antécédents de crises aiguës, hyperuricémie, tophus</td></tr>
+            <tr style="background:#f1f5f9;"><td><strong>Pseudogoutte (PPC)</strong></td><td>−</td><td>−</td><td>Chondrocalcinose radiologique, cristaux rhomboïdes</td></tr>
+            <tr><td><strong>Pseudopolyarthrite rhizomélique</strong></td><td>−</td><td>−</td><td>Plus de 50 ans, ceintures scapulaire et pelvienne, VS très élevée, réponse spectaculaire aux corticostéroïdes</td></tr>
+            <tr style="background:#fff3cd;"><td><strong>Arthrose érosive</strong></td><td>−</td><td>−</td><td>IPD et IPP, horaire mécanique</td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+
+      <div class="block rx" style="margin-top:14px;">
+        <div class="block-title" id="par-6"><span class="tag">💊 Traitement</span></div>
+
+        <div class="key-fact red" style="margin-top:10px;">🎯 <strong>Le principe qui gouverne tout :</strong> <strong>traiter tôt et viser une cible.</strong> Les recommandations de l'<strong>Association canadienne de rhumatologie</strong> retiennent quatre principes : ① <strong>amorcer un traitement de fond immédiatement</strong> pour réduire l'incapacité; ② utiliser des <strong>doses efficaces de méthotrexate</strong> (orale ou sous-cutanée) <strong>avec acide folique</strong> comme traitement initial; ③ <strong>escalader rapidement</strong> si le méthotrexate seul ne suffit pas; ④ <strong>mesurer l'activité de la maladie fréquemment</strong> en visant la <strong>rémission ou une faible activité</strong>.</div>
+
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;">
+          <button id="partab0" onclick="switchParTx(0)" style="background:#0a7a4e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;transition:.15s;">💊 Traitements de fond</button>
+          <button id="partab1" onclick="switchParTx(1)" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;transition:.15s;">🎯 Stratégie &amp; escalade</button>
+          <button id="partab2" onclick="switchParTx(2)" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;transition:.15s;">🩹 Traitements d'appoint</button>
+        </div>
+
+        <div id="parp0" style="display:block;margin-top:14px;">
+          <div style="overflow-x:auto;">
+          <table style="font-size:12px;">
+            <thead><tr><th style="width:20%;">Classe</th><th style="width:26%;">Molécules</th><th>Points essentiels</th></tr></thead>
+            <tbody>
+              <tr style="background:#f0fdf4;"><td><strong>Traitement de fond conventionnel</strong><br><em>csDMARD</em></td><td>🎯 <strong>Méthotrexate</strong> — référence<br><strong>Hydroxychloroquine</strong><br><strong>Sulfasalazine</strong><br><strong>Léflunomide</strong></td><td><strong>Méthotrexate :</strong> prise <strong>hebdomadaire</strong> ⚠️ (l'erreur de prise quotidienne est potentiellement mortelle) · <strong>acide folique obligatoire</strong> pour réduire la toxicité · voie sous-cutanée si intolérance digestive ou réponse insuffisante<br>⛔ <strong>Contre-indiqué en grossesse</strong> — contraception requise chez les deux sexes<br><strong>Hydroxychloroquine :</strong> souvent en association · surveillance <strong>ophtalmologique</strong><br><strong>Trithérapie</strong> (MTX + hydroxychloroquine + sulfasalazine) : option d'escalade validée</td></tr>
+              <tr><td><strong>Biothérapies</strong><br><em>bDMARD</em></td><td><strong>Anti-TNF</strong> · <strong>abatacept</strong> · <strong>tocilizumab</strong> (anti-IL-6) · <strong>rituximab</strong> (anti-CD20)</td><td>Ajoutées au méthotrexate en cas de réponse insuffisante<br>⚠️ <strong>Dépistage de la tuberculose latente et des hépatites B et C obligatoire avant l'amorce</strong><br>⚠️ <strong>Risque infectieux</strong> — suspendre en cas d'infection active, vaccination à jour <strong>avant</strong> l'amorce (vaccins vivants contre-indiqués pendant)<br>💡 Si réponse primaire insuffisante à un anti-TNF, une biothérapie <strong>d'une autre classe</strong> est souvent plus efficace qu'un second anti-TNF</td></tr>
+              <tr style="background:#e8f4fd;"><td><strong>Inhibiteurs de JAK</strong><br><em>tsDMARD</em></td><td>Molécules orales ciblées</td><td>Option en cas d'échec des précédents<br>⚠️ Signaux d'innocuité <strong>cardiovasculaire, thromboembolique et néoplasique</strong> — usage encadré, à discuter selon le profil de risque</td></tr>
+            </tbody>
+          </table>
+          </div>
+          <div class="key-fact orange" style="margin-top:12px;">⚠️ <strong>Le piège le plus dangereux en première ligne : le méthotrexate est HEBDOMADAIRE.</strong> Vérifier systématiquement la compréhension de la posologie et l'inscription claire sur l'ordonnance. Une prise quotidienne par erreur cause une toxicité médullaire et muqueuse grave, parfois fatale.</div>
+        </div>
+
+        <div id="parp1" style="display:none;margin-top:14px;">
+          <div class="key-fact green">⏱️ <strong>La fenêtre d'opportunité :</strong> les lésions structurelles s'installent tôt, et le bénéfice d'un traitement de fond amorcé dans les premiers mois est <strong>durable et supérieur</strong>. Le retard diagnostique est le principal facteur modifiable du pronostic à long terme. <strong>Orienter en rhumatologie devant une synovite persistante — sans attendre la confirmation sérologique.</strong></div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:12px;">
+            <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+              <strong style="color:#1d4ed8;">🎯 Traiter à la cible</strong>
+              <div style="font-size:13px;line-height:1.7;margin-top:8px;">Cible : <strong>rémission</strong>, ou à défaut <strong>faible activité de la maladie</strong>.<br>Mesurer l'activité de façon <strong>répétée et objective</strong> — scores composites intégrant nombre d'articulations douloureuses et gonflées, marqueurs inflammatoires et évaluation par le patient.<br>➜ <strong>Ajuster le traitement tant que la cible n'est pas atteinte</strong>, plutôt que d'accepter une amélioration partielle.</div>
+            </div>
+            <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+              <strong style="color:#15803d;">📈 Séquence habituelle</strong>
+              <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>①</strong> Méthotrexate + acide folique, à dose efficace<br><strong>②</strong> Si insuffisant : <strong>trithérapie conventionnelle</strong> ou ajout d'une <strong>biothérapie</strong><br><strong>③</strong> Si échec : changer de classe de biothérapie ou inhibiteur de JAK<br><strong>Corticostéroïdes</strong> : en <strong>pont</strong> à faible dose, le temps que le traitement de fond agisse — et à <strong>sevrer</strong></div>
+            </div>
+            <div style="background:#fff3cd;border-radius:10px;padding:14px;">
+              <strong style="color:#d35400;">📉 Et si la maladie est en rémission?</strong>
+              <div style="font-size:13px;line-height:1.7;margin-top:8px;">Une <strong>réduction progressive</strong> peut être envisagée après une rémission <strong>soutenue</strong>, en décision partagée.<br>⚠️ <strong>Ne jamais arrêter brusquement</strong> — risque de poussée.<br>Décision de rhumatologie, avec surveillance rapprochée.</div>
+            </div>
+          </div>
+        </div>
+
+        <div id="parp2" style="display:none;margin-top:14px;">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;">
+            <div style="background:#fce4ec;border-radius:10px;padding:14px;">
+              <strong style="color:#c0392b;">💊 AINS &amp; corticostéroïdes</strong>
+              <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>AINS :</strong> soulagement symptomatique seulement — ils <strong>ne modifient pas l'évolution</strong> et ne préviennent aucune érosion<br>⚠️ Risques digestif, rénal et cardiovasculaire, majorés chez la personne âgée<br><strong>Corticostéroïdes :</strong> très efficaces à court terme · <strong>faible dose en pont</strong> ou infiltration locale · ⚠️ ostéoporose, diabète, infections, prise de poids si prolongés</div>
+            </div>
+            <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+              <strong style="color:#15803d;">🏃 Non pharmacologique</strong>
+              <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Activité physique adaptée</strong> — préserve force, mobilité et fonction, sans aggraver la maladie<br><strong>Physiothérapie</strong> et <strong>ergothérapie</strong> : protection articulaire, orthèses, aides techniques, adaptation du travail<br><strong>Cessation tabagique</strong> 🎯<br>Soutien psychologique · gestion de la fatigue</div>
+            </div>
+            <div style="background:#ede9fe;border-radius:10px;padding:14px;">
+              <strong style="color:#6d28d9;">🤰 Grossesse</strong>
+              <div style="font-size:13px;line-height:1.7;margin-top:8px;">⛔ <strong>Méthotrexate et léflunomide contre-indiqués</strong> — planification indispensable, arrêt anticipé<br>Certains traitements de fond sont compatibles avec la grossesse — <strong>planifier avec la rhumatologie</strong><br>🎯 La maladie <strong>s'améliore souvent pendant la grossesse</strong> et <strong>rechute en post-partum</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block para" style="margin-top:14px;border-left-color:#b45309;">
+        <div class="block-title" id="par-7"><span class="tag">🔬 Surveillance des traitements — rôle de première ligne</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>C'est souvent vous qui verrez les résultats de laboratoire entre deux rendez-vous de rhumatologie.</strong> Savoir ce qu'on surveille, à quelle fréquence et ce qui doit faire suspendre le traitement fait partie du suivi partagé.</div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:22%;">Traitement</th><th style="width:30%;">Surveillance</th><th>Ce qui doit alerter</th></tr></thead>
+          <tbody>
+            <tr style="background:#f0fdf4;"><td><strong>Méthotrexate</strong></td><td><strong>FSC, ALAT/AST, créatinine</strong> à intervalles réguliers — plus rapprochés à l'amorce et après chaque augmentation de dose</td><td><strong>Cytopénies</strong> · <strong>élévation des transaminases</strong> · <strong>toux ou dyspnée nouvelle</strong> (pneumopathie) · stomatite, ulcères buccaux · nausées<br>⚠️ Prudence si <strong>insuffisance rénale</strong> (élimination rénale) et si <strong>consommation d'alcool</strong><br>⚠️ Interaction avec le <strong>triméthoprime-sulfaméthoxazole</strong> — toxicité médullaire</td></tr>
+            <tr><td><strong>Hydroxychloroquine</strong></td><td><strong>Examen ophtalmologique</strong> périodique</td><td>Rétinopathie — dépistage nécessaire, surtout après plusieurs années d'usage</td></tr>
+            <tr style="background:#e8f4fd;"><td><strong>Léflunomide</strong></td><td>FSC, bilan hépatique, <strong>tension artérielle</strong></td><td>Hépatotoxicité, HTA, diarrhée · ⛔ tératogène, demi-vie très longue</td></tr>
+            <tr><td><strong>Sulfasalazine</strong></td><td>FSC, bilan hépatique</td><td>Cytopénies, rash · prudence si allergie aux sulfamides</td></tr>
+            <tr style="background:#fce4ec;"><td><strong>Biothérapies &amp; JAK</strong></td><td><strong>Avant :</strong> dépistage <strong>tuberculose</strong>, <strong>hépatites B et C</strong>, vaccination à jour<br><strong>Pendant :</strong> FSC, bilan hépatique, lipides (tocilizumab, JAK)</td><td>🚨 <strong>Toute infection est à prendre au sérieux</strong> — la réponse inflammatoire peut être atténuée<br>⛔ <strong>Suspendre en cas d'infection active</strong> et en périopératoire selon le protocole<br>⛔ <strong>Vaccins vivants contre-indiqués</strong></td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="key-fact red" style="margin-top:12px;">🚨 <strong>La règle de sécurité à transmettre au patient :</strong> « <strong>si vous faites de la fièvre ou si vous pensez avoir une infection, ne prenez pas votre dose et appelez-nous.</strong> » Sous immunosuppression, une infection banale peut évoluer vite, et les signes classiques peuvent être atténués.</div>
+      </div>
+
+      <div class="block para" style="margin-top:14px;border-left-color:#0891b2;">
+        <div class="block-title" id="par-8"><span class="tag">❤️ Comorbidités &amp; suivi — ce que l'IPS gère</span></div>
+
+        <div class="key-fact red" style="margin-top:10px;">🎯 <strong>Le fait le plus important pour la première ligne :</strong> ce qui tue les patients atteints de PAR, ce ne sont pas leurs articulations — c'est la <strong>maladie cardiovasculaire</strong>. L'inflammation chronique accélère l'athérosclérose, <strong>indépendamment des facteurs de risque traditionnels</strong>. Le suivi cardiovasculaire fait partie du traitement de la PAR.</div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:12px;">
+          <div style="background:#fce4ec;border-radius:10px;padding:14px;">
+            <strong style="color:#c0392b;">❤️ Risque cardiovasculaire</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Évaluer et traiter</strong> : tension artérielle, lipides, glycémie, poids<br>🎯 <strong>Cessation tabagique</strong> — double bénéfice, articulaire et vasculaire<br>⚠️ Les <strong>AINS et les corticostéroïdes</strong> majorent le risque<br>➜ <strong>Le meilleur traitement du risque CV est le contrôle de l'inflammation</strong></div>
+          </div>
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+            <strong style="color:#1d4ed8;">🦴 Ostéoporose</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Risque augmenté par <strong>l'inflammation, l'immobilité et les corticostéroïdes</strong><br>➜ Calcium, vitamine D, <strong>ostéodensitométrie</strong>, exercice en charge<br>➜ Traitement antirésorptif selon le risque<br>➜ Voir <em>Chutes &amp; mobilité</em></div>
+          </div>
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+            <strong style="color:#15803d;">💉 Vaccination</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🎯 <strong>Mettre à jour AVANT d'amorcer une immunosuppression</strong><br><strong>Influenza annuel</strong> · <strong>pneumocoque</strong> · <strong>zona</strong> · COVID-19 selon les recommandations<br>⛔ <strong>Vaccins vivants contre-indiqués</strong> sous biothérapie</div>
+          </div>
+          <div style="background:#ede9fe;border-radius:10px;padding:14px;">
+            <strong style="color:#6d28d9;">🧠 Douleur, fatigue &amp; humeur</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">La <strong>fatigue</strong> est souvent le symptôme le plus invalidant — et rarement abordé<br><strong>Dépression et anxiété</strong> fréquentes, sous-diagnostiquées<br>Douleur chronique pouvant persister <strong>malgré une maladie contrôlée</strong> — ne pas conclure trop vite à une poussée</div>
+          </div>
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;">
+            <strong style="color:#d35400;">🦠 Infections</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Risque majoré par la maladie <em>et</em> par les traitements<br>➜ Seuil bas d'évaluation · <strong>suspendre l'immunosuppresseur</strong> pendant une infection active<br>➜ Attention aux <strong>infections opportunistes</strong> et à la réactivation tuberculeuse</div>
+          </div>
+          <div style="background:#f1f5f9;border-radius:10px;padding:14px;">
+            <strong style="color:#334155;">📅 À chaque visite</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Activité de la maladie · <strong>observance</strong> et tolérance<br><strong>Résultats de laboratoire</strong> de surveillance<br>Fonction, capacité de travail, autonomie<br>Facteurs de risque CV · vaccination<br><strong>Interactions médicamenteuses</strong></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block flag" style="margin-top:14px;">
+        <div class="block-title" id="par-9"><span class="tag">🚨 Red flags</span></div>
+
+        <div class="flag-list" style="margin-top:12px;">
+          <div class="flag-item">🚨 <strong>Monoarthrite aiguë chaude chez un patient atteint de PAR</strong> — l'<strong>arthrite septique</strong> est plus fréquente et plus grave dans cette population : ponctionner, ne pas attribuer d'emblée à une poussée</div>
+          <div class="flag-item">🚨 <strong>Fièvre sous immunosuppresseur ou biothérapie</strong> — infection jusqu'à preuve du contraire, suspendre le traitement et évaluer sans délai</div>
+          <div class="flag-item">🚨 <strong>Douleur cervicale, paresthésies, faiblesse ou troubles de la marche</strong> — <strong>subluxation C1-C2 avec myélopathie</strong> · à signaler impérativement <strong>avant toute intubation ou chirurgie</strong></div>
+          <div class="flag-item"><strong>Dyspnée ou toux persistante nouvelle</strong> — pneumopathie interstitielle, ou toxicité pulmonaire du méthotrexate</div>
+          <div class="flag-item"><strong>Œil rouge douloureux</strong> — sclérite : menace visuelle, orientation ophtalmologique rapide</div>
+          <div class="flag-item"><strong>Ulcères cutanés, purpura, infarctus digitaux, mononévrite multiple</strong> — vascularite rhumatoïde</div>
+          <div class="flag-item"><strong>Cytopénies</strong> sous traitement de fond — toxicité médullaire · <strong>neutropénie + splénomégalie</strong> → syndrome de Felty</div>
+          <div class="flag-item"><strong>Élévation des transaminases</strong> sous méthotrexate ou léflunomide</div>
+          <div class="flag-item"><strong>Synovite persistante non encore évaluée en rhumatologie</strong> — chaque mois de retard compte</div>
+          <div class="flag-item">⚠️ <strong>Méthotrexate prescrit ou compris comme une prise quotidienne</strong> — vérifier, toujours</div>
+        </div>
+      </div>
+    </div>
+
+<div class="section" id="sec-goutte">
+      <div class="section-header">
+        <div class="section-accent" style="background:#c2410c">🔥</div>
+        <div class="section-title"><h1>Goutte &amp; arthrites microcristallines</h1><div class="breadcrumb">Rhumatologie <span class="breadcrumb-sep">·</span> Urate monosodique <span class="breadcrumb-sep">·</span> Pseudogoutte <span class="breadcrumb-sep">·</span> Traiter à la cible</div></div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;">
+        <button onclick="goToBlock('gou-1')" style="background:#374151;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧬 Physiopathologie</button>
+        <button onclick="goToBlock('gou-2')" style="background:#b45309;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">⚠️ Facteurs de risque</button>
+        <button onclick="goToBlock('gou-3')" style="background:#c0392b;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🔥 Présentation &amp; stades</button>
+        <button onclick="goToBlock('gou-4')" style="background:#0f766e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🔬 Diagnostic</button>
+        <button onclick="goToBlock('gou-5')" style="background:#dc2626;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">💊 Crise aiguë</button>
+        <button onclick="goToBlock('gou-6')" style="background:#0a7a4e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🎯 Hypo-uricémiants</button>
+        <button onclick="goToBlock('gou-7')" style="background:#0369a1;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🍽️ Mode de vie &amp; comorbidités</button>
+        <button onclick="goToBlock('gou-8')" style="background:#6d28d9;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">💠 Pseudogoutte (PPC)</button>
+        <button onclick="goToBlock('gou-9')" style="background:#991b1b;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🚨 Red flags</button>
+      </div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:20px;">
+        <div style="flex:1;min-width:95px;background:#FEE2E2;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#b91c1c;">Podagre</div><div style="font-size:11px;color:#555;margin-top:4px;">1<sup>re</sup> MTP — présentation classique</div></div>
+        <div style="flex:1;min-width:95px;background:#DCFCE7;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#15803d;">&lt; 360 µmol/L</div><div style="font-size:11px;color:#555;margin-top:4px;">Cible d'uricémie usuelle</div></div>
+        <div style="flex:1;min-width:95px;background:#EDE9FE;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#6d28d9;">&lt; 300 µmol/L</div><div style="font-size:11px;color:#555;margin-top:4px;">Cible si tophus ou goutte sévère</div></div>
+        <div style="flex:1;min-width:95px;background:#FEF9C3;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#854d0e;">≥ 6 mois</div><div style="font-size:11px;color:#555;margin-top:4px;">Durée de la prophylaxie anti-crise</div></div>
+      </div>
+
+      <div class="block def" style="margin-top:14px;">
+        <div class="block-title" id="gou-1"><span class="tag">🧬 Physiopathologie</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>Le mécanisme en une phrase :</strong> lorsque l'uricémie dépasse durablement le seuil de saturation, des <strong>cristaux d'urate monosodique</strong> se déposent dans les articulations, les tissus mous et les organes. Ce sont ces cristaux — et la réaction inflammatoire massive qu'ils déclenchent — qui causent la douleur et la destruction articulaire.</div>
+
+        <div class="key-fact orange" style="margin-top:10px;">⏳ <strong>La notion qui change la façon d'expliquer la maladie au patient :</strong> les cristaux se déposent <strong>bien avant l'apparition du moindre symptôme</strong>. Au moment de la première crise, il existe déjà un <strong>stock de cristaux</strong> accumulé dans les articulations et les tissus mous. La goutte n'est donc pas une succession d'accidents isolés, mais une <strong>maladie de dépôt chronique</strong> qui se manifeste par poussées.<br>➜ C'est exactement pourquoi le traitement de fond vise à <strong>dissoudre ce stock</strong>, et pourquoi il faut du temps avant que les crises cessent.</div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-top:12px;">
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+            <strong style="color:#1d4ed8;">⚖️ D'où vient l'hyperuricémie</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">L'acide urique est le produit final du métabolisme des <strong>purines</strong>.<br>🎯 <strong>Dans la grande majorité des cas, le problème est une sous-excrétion rénale</strong>, pas une surproduction.<br>C'est pourquoi l'insuffisance rénale et les diurétiques sont des causes si fréquentes.</div>
+          </div>
+          <div style="background:#fce4ec;border-radius:10px;padding:14px;">
+            <strong style="color:#c0392b;">🔥 Pourquoi la crise est si brutale</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Les cristaux activent une réponse <strong>inflammatoire innée</strong> intense et rapide.<br>➜ Douleur maximale en quelques heures, souvent nocturne, avec rougeur et chaleur pouvant <strong>mimer une infection ou une cellulite</strong>.</div>
+          </div>
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+            <strong style="color:#15803d;">🌡️ Ce qui déclenche</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Toute <strong>variation rapide de l'uricémie</strong> — à la hausse comme à la baisse — peut déclencher une crise.<br>🎯 C'est pourquoi <strong>l'amorce d'un hypo-uricémiant provoque des crises</strong> si l'on n'ajoute pas de prophylaxie.<br>Autres déclencheurs : chirurgie, jeûne, déshydratation, alcool, repas riche, traumatisme, infection.</div>
+          </div>
+          <div style="background:#ede9fe;border-radius:10px;padding:14px;">
+            <strong style="color:#6d28d9;">💎 Le tophus</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Agrégat de cristaux d'urate entouré d'une réaction inflammatoire chronique.<br>Localisations : hélix de l'oreille, olécrâne, tendons, doigts, orteils.<br>➜ Signe une <strong>charge urique importante et ancienne</strong> · peut être <strong>intra-articulaire et invisible</strong> avant d'être palpable · <strong>régresse sous traitement hypo-uricémiant efficace</strong></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;border-left-color:#b45309;">
+        <div class="block-title" id="gou-2"><span class="tag">⚠️ Facteurs de risque</span></div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:12px;">
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+            <strong style="color:#1d4ed8;">👤 Terrain</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Sexe masculin</strong> · chez la femme, surtout <strong>après la ménopause</strong> (les œstrogènes sont uricosuriques)<br><strong>Âge</strong><br><strong>Antécédents familiaux</strong> — polymorphismes des transporteurs rénaux de l'urate<br><strong>Insuffisance rénale chronique</strong> 🎯</div>
+          </div>
+          <div style="background:#fce4ec;border-radius:10px;padding:14px;">
+            <strong style="color:#c0392b;">💊 Médicaments</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🎯 <strong>Diurétiques</strong> — thiazidiques et de l'anse : cause très fréquente et souvent négligée<br><strong>Aspirine à faible dose</strong><br><strong>Ciclosporine, tacrolimus</strong><br>⚠️ <strong>Toujours revoir la médication devant une goutte nouvelle</strong> — un changement d'antihypertenseur peut régler le problème</div>
+          </div>
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;">
+            <strong style="color:#d35400;">🍽️ Alimentation &amp; alcool</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Viandes rouges, abats, fruits de mer</strong> (purines)<br><strong>Bière</strong> ⭐ — particulièrement associée, davantage que les autres alcools<br><strong>Spiritueux</strong><br><strong>Boissons sucrées et fructose</strong> 🎯 — facteur souvent ignoré<br>Jeûne et déshydratation</div>
+          </div>
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+            <strong style="color:#15803d;">⚕️ Comorbidités associées</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Syndrome métabolique</strong> · <strong>obésité</strong><br><strong>HTA</strong> · <strong>diabète de type 2</strong> · <strong>dyslipidémie</strong><br><strong>Maladie cardiovasculaire</strong><br>Psoriasis, syndromes myéloprolifératifs, hémolyse (surproduction)<br>🎯 <strong>La goutte est un marqueur de risque cardiométabolique</strong> — son diagnostic justifie un bilan complet</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;">
+        <div class="block-title" id="gou-3"><span class="tag">🔥 Présentation clinique &amp; évolution</span></div>
+
+        <div class="key-fact red" style="margin-top:10px;">🎯 <strong>Le tableau classique :</strong> <strong>monoarthrite d'installation brutale, souvent nocturne</strong>, atteignant son maximum en quelques heures. Douleur <strong>intense</strong> — le contact du drap est insupportable —, articulation <strong>rouge, chaude, très sensible</strong>, avec parfois une <strong>desquamation de la peau</strong> en fin de crise. Un <strong>fébricule</strong> est possible, ce qui complique la distinction avec une infection.</div>
+
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">📍 Localisations</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+          <div style="background:#fce4ec;border-radius:10px;padding:14px;border-left:4px solid #c0392b;">
+            <strong style="color:#c0392b;">Typiques</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🎯 <strong>1<sup>re</sup> métatarso-phalangienne — la podagre</strong> : localisation initiale la plus fréquente<br><strong>Médio-pied, cheville, genou</strong><br>Poignet, coude (bursite olécrânienne), doigts</div>
+          </div>
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;border-left:4px solid #d35400;">
+            <strong style="color:#d35400;">Présentations atypiques à connaître</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Polyarticulaire</strong> — surtout chez la personne âgée, sous diurétiques, ou en goutte ancienne : peut <strong>mimer une PAR</strong><br><strong>Atteinte des mains chez la femme âgée</strong>, parfois sur des articulations arthrosiques<br><strong>Tophus sans crise préalable</strong> sous corticothérapie chronique<br><strong>Bursite ou ténosynovite</strong> isolée</div>
+          </div>
+        </div>
+
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">📈 Les stades de la maladie</div>
+        <div style="overflow-x:auto;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:24%;">Stade</th><th style="width:32%;">Description</th><th>Conduite</th></tr></thead>
+          <tbody>
+            <tr style="background:#f1f5f9;"><td><strong>Hyperuricémie asymptomatique</strong></td><td>Uricémie élevée, <strong>aucun symptôme</strong> · dépôts possibles mais silencieux</td><td>🎯 <strong>Ce n'est pas une goutte et cela ne se traite généralement pas</strong> par hypo-uricémiant<br>➜ Traiter les comorbidités et revoir les médicaments en cause</td></tr>
+            <tr style="background:#fce4ec;"><td><strong>Crise aiguë</strong></td><td>Monoarthrite très inflammatoire, résolutive en jours à semaines <strong>même sans traitement</strong></td><td>Traitement anti-inflammatoire rapide — voir bloc dédié</td></tr>
+            <tr><td><strong>Période intercritique</strong></td><td><strong>Asymptomatique</strong> entre les crises — mais les dépôts persistent et progressent</td><td>🎯 <strong>C'est le moment d'agir</strong> : bilan, comorbidités, décision sur le traitement de fond</td></tr>
+            <tr style="background:#ede9fe;"><td><strong>Goutte tophacée chronique</strong></td><td><strong>Tophus</strong>, arthropathie destructrice, crises fréquentes, atteinte polyarticulaire</td><td>Traitement hypo-uricémiant intensif avec <strong>cible plus basse</strong> · orientation en rhumatologie</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="key-fact green" style="margin-top:12px;">💡 <strong>À dire au patient dès la première crise :</strong> « cette crise va passer, mais elle indique que des cristaux se sont accumulés. Sans traitement de fond, les crises reviendront et deviendront plus fréquentes. » Beaucoup de patients traitent chaque crise isolément pendant des années sans qu'on leur explique la logique de fond.</div>
+      </div>
+
+      <div class="block para" style="margin-top:14px;border-left-color:#0f766e;">
+        <div class="block-title" id="gou-4"><span class="tag">🔬 Diagnostic</span></div>
+
+        <div class="key-fact red" style="margin-top:10px;">🚨 <strong>La règle de sécurité :</strong> devant une monoarthrite aiguë, <strong>l'arthrite septique doit être écartée</strong>. La goutte et l'infection se ressemblent beaucoup — rougeur, chaleur, douleur intense, fébricule, marqueurs inflammatoires élevés — et <strong>elles peuvent coexister</strong>. La présence de cristaux <strong>n'exclut pas</strong> une infection.</div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;border-left:4px solid #15803d;">
+            <strong style="color:#15803d;">✅ Le test de référence</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Ponction articulaire</strong> avec examen en <strong>lumière polarisée</strong> :<br>🎯 <strong>Cristaux d'urate monosodique</strong> — en <strong>aiguilles</strong>, <strong>biréfringence négative</strong>, souvent intracellulaires pendant la crise<br>➕ Toujours demander <strong>décompte cellulaire, Gram et culture</strong> en même temps</div>
+          </div>
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;border-left:4px solid #1d4ed8;">
+            <strong style="color:#1d4ed8;">🩺 Diagnostic clinique</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">En pratique, un diagnostic clinique est acceptable quand le tableau est très évocateur : <strong>podagre typique</strong>, installation brutale, antécédents de crises identiques, hyperuricémie, facteurs de risque.<br>⚠️ Mais <strong>ponctionner si doute</strong>, surtout devant une <strong>première crise</strong>, une <strong>fièvre</strong>, une <strong>atteinte de grosse articulation</strong>, ou chez une personne <strong>immunosupprimée</strong>.</div>
+          </div>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">⚠️ <strong>Le piège de l'uricémie :</strong> elle est <strong>fréquemment normale, voire basse, pendant la crise aiguë</strong> — l'inflammation augmente l'excrétion rénale d'urate. <strong>Une uricémie normale n'exclut donc pas une goutte.</strong> À l'inverse, une hyperuricémie chez une personne avec une arthrite ne prouve pas que c'est une goutte.<br>➜ <strong>Doser l'uricémie à distance de la crise</strong>, quelques semaines après, pour établir le niveau de base et la cible.</div>
+
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">📷 Imagerie</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;">
+          <div style="background:#f1f5f9;border-radius:10px;padding:14px;">
+            <strong style="color:#334155;">Radiographie</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Normale en début de maladie<br>Tardivement : <strong>érosions périarticulaires à bords saillants</strong> (« overhanging edges »), aspect en emporte-pièce, avec conservation relative de l'interligne</div>
+          </div>
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+            <strong style="color:#1d4ed8;">Échographie</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Peut détecter les <strong>dépôts d'urate à la surface du cartilage</strong> — le « double contour » — <strong>tôt dans la maladie</strong>, et peut être diagnostique<br>Utile aussi pour guider la ponction</div>
+          </div>
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;">
+            <strong style="color:#d35400;">Autres</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">TDM à double énergie : identifie spécifiquement les dépôts d'urate<br><strong>IRM : ne fait pas partie du bilan usuel</strong> de la goutte</div>
+          </div>
+        </div>
+
+        <div class="key-fact blue" style="margin-top:12px;">🧪 <strong>Bilan complémentaire à la découverte d'une goutte :</strong> <strong>créatinine et DFG</strong> (détermine le choix et la dose des traitements), glycémie, <strong>bilan lipidique</strong>, tension artérielle, poids, bilan hépatique, et <strong>révision de la médication</strong> — surtout les diurétiques.</div>
+      </div>
+
+      <div class="block rx" style="margin-top:14px;">
+        <div class="block-title" id="gou-5"><span class="tag">💊 Traitement de la crise aiguë</span></div>
+
+        <div class="key-fact green" style="margin-top:10px;">⏱️ <strong>Le principe : traiter vite.</strong> L'efficacité dépend surtout de la <strong>précocité</strong> — idéalement dans les <strong>premières 12 à 24 heures</strong>. Le choix de la molécule dépend moins de son efficacité, comparable, que des <strong>comorbidités du patient</strong> : fonction rénale, maladie cardiovasculaire, diabète, anticoagulation, antécédent digestif.</div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:18%;">Option</th><th style="width:28%;">Utilisation</th><th>Précautions</th></tr></thead>
+          <tbody>
+            <tr style="background:#f0fdf4;"><td><strong>Colchicine</strong></td><td><strong>Dose de charge puis dose plus faible à 1 heure</strong>, suivie d'une dose d'entretien les jours suivants jusqu'à résolution<br>🎯 D'autant plus efficace qu'elle est débutée <strong>tôt</strong> — l'idéal étant dans les 12 premières heures</td><td>⚠️ <strong>Diarrhée et troubles digestifs</strong> = effet dose-dépendant, principal facteur limitant<br>🚨 <strong>Ajuster à la fonction rénale et hépatique</strong><br>🚨 <strong>Interactions majeures</strong> : macrolides (clarithromycine), antifongiques azolés, ciclosporine, vérapamil, diltiazem, statines — risque de <strong>toxicité grave, dont rhabdomyolyse et atteinte médullaire</strong><br>➜ Vérifier systématiquement les interactions avant de prescrire</td></tr>
+            <tr><td><strong>AINS</strong></td><td>Dose anti-inflammatoire pleine, poursuivie jusqu'à quelques jours après la résolution</td><td>⚠️ <strong>Insuffisance rénale</strong>, insuffisance cardiaque, antécédent d'ulcère, anticoagulation, âge avancé<br>➜ Protection gastrique selon le risque<br>⛔ Souvent inutilisables chez la personne âgée avec comorbidités</td></tr>
+            <tr style="background:#e8f4fd;"><td><strong>Corticostéroïdes</strong></td><td><strong>Voie orale</strong> en cure courte · <strong>infiltration intra-articulaire</strong> si mono- ou oligoarthrite<br>🎯 <strong>Option privilégiée en insuffisance rénale</strong> et quand AINS et colchicine sont contre-indiqués</td><td>⚠️ <strong>Écarter formellement une arthrite septique avant d'infiltrer</strong><br>Surveiller la <strong>glycémie</strong> chez le patient diabétique<br>Cures répétées : effets métaboliques et osseux</td></tr>
+            <tr><td><strong>Mesures d'appoint</strong></td><td><strong>Repos</strong> de l'articulation, <strong>glace</strong>, hydratation</td><td>Simple et efficace en complément</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="key-fact red" style="margin-top:12px;">🎯 <strong>Deux règles souvent mal appliquées :</strong><br>① <strong>Ne pas cesser un hypo-uricémiant déjà en cours pendant une crise</strong> — l'arrêt et la reprise provoquent de nouvelles variations d'uricémie, donc de nouvelles crises. On traite la crise <em>par-dessus</em> le traitement de fond.<br>② <strong>Ne pas amorcer un hypo-uricémiant pendant une crise aiguë sans couverture anti-inflammatoire</strong> — la baisse rapide de l'uricémie peut prolonger ou aggraver la crise.</div>
+      </div>
+
+      <div class="block rx" style="margin-top:14px;border-left-color:#0a7a4e;">
+        <div class="block-title" id="gou-6"><span class="tag">🎯 Traitement hypo-uricémiant — traiter à la cible</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>Le concept central :</strong> le traitement de fond ne vise pas à « faire baisser un chiffre » — il vise à <strong>maintenir l'uricémie sous le seuil de saturation</strong> assez longtemps pour <strong>dissoudre le stock de cristaux déjà déposé</strong>. C'est un traitement <strong>à long terme, souvent à vie</strong>, dont le bénéfice n'apparaît qu'après des mois.</div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;border-left:4px solid #15803d;">
+            <strong style="color:#15803d;">🎯 Les cibles</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>&lt; 360 µmol/L</strong> — cible usuelle, à maintenir <strong>à long terme</strong><br><strong>&lt; 300 µmol/L</strong> — cible plus stricte en présence de <strong>tophus</strong>, de goutte sévère ou de crises persistantes, pour accélérer la dissolution<br>➜ <strong>Titrer la dose jusqu'à l'atteinte de la cible</strong>, puis contrôler l'uricémie périodiquement</div>
+          </div>
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;border-left:4px solid #1d4ed8;">
+            <strong style="color:#1d4ed8;">👤 Qui traiter</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Crises récidivantes</strong><br><strong>Tophus</strong><br><strong>Arthropathie goutteuse</strong> ou érosions radiologiques<br><strong>Lithiase urique</strong><br><strong>Insuffisance rénale chronique</strong><br>➜ Envisager aussi dès la <strong>première crise</strong> si uricémie très élevée, comorbidités importantes ou patient jeune<br>⛔ <strong>Pas de traitement pour une hyperuricémie asymptomatique</strong> en règle générale</div>
+          </div>
+        </div>
+
+        <div style="overflow-x:auto;margin-top:14px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:20%;">Molécule</th><th style="width:24%;">Mécanisme &amp; place</th><th>Points de vigilance</th></tr></thead>
+          <tbody>
+            <tr style="background:#f0fdf4;"><td><strong>Allopurinol</strong><br><em>1<sup>re</sup> intention</em></td><td>Inhibiteur de la xanthine oxydase — <strong>réduit la production</strong> d'acide urique</td><td>🎯 <strong>Débuter à faible dose et titrer progressivement</strong> — par paliers, toutes les 2 à 4 semaines, jusqu'à la cible<br>⚠️ <strong>Adapter la dose de départ à la fonction rénale</strong><br>🚨 <strong>Réaction d'hypersensibilité sévère</strong> possible (DRESS, SJS/TEN) — rare mais grave · risque accru en <strong>insuffisance rénale</strong> et chez certaines populations porteuses de <strong>HLA-B*58:01</strong> (dépistage à considérer selon l'origine ethnique)<br>➜ <strong>Enseigner : tout rash impose l'arrêt immédiat et une consultation</strong><br>⚠️ Interaction avec <strong>azathioprine</strong> — association dangereuse</td></tr>
+            <tr><td><strong>Fébuxostat</strong></td><td>Inhibiteur de la xanthine oxydase, non purinique<br>Alternative si intolérance ou échec de l'allopurinol</td><td>Utilisable quand la <strong>fonction rénale est très abaissée</strong><br>⚠️ Signal de <strong>risque cardiovasculaire</strong> — prudence en maladie cardiovasculaire établie, décision partagée</td></tr>
+            <tr style="background:#e8f4fd;"><td><strong>Uricosuriques</strong><br><em>probénécide</em></td><td>Augmentent l'<strong>excrétion rénale</strong> d'urate</td><td>⛔ À éviter si <strong>antécédent de lithiase urique</strong> ou insuffisance rénale significative<br>Assurer une <strong>bonne hydratation</strong></td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">🛡️ <strong>La prophylaxie anti-crise — l'étape qu'on oublie, et qui fait échouer le traitement :</strong> l'amorce d'un hypo-uricémiant <strong>déclenche des crises</strong> en mobilisant les cristaux. Il faut donc <strong>couvrir</strong> avec de la <strong>colchicine à faible dose</strong> — ou un AINS, ou un corticostéroïde à faible dose si la colchicine est contre-indiquée — pendant <strong>au moins 6 mois</strong>, en l'absence de contre-indication.<br>🎯 <strong>Sans cette explication, le patient conclut que « le médicament lui donne des crises » et l'abandonne.</strong> C'est la première cause d'échec du traitement de fond.</div>
+
+        <div class="key-fact green" style="margin-top:8px;">💬 <strong>Ce qu'il faut dire au moment de prescrire :</strong> « Ce médicament ne soulage pas la crise. Il dissout lentement les cristaux accumulés. Pendant les premiers mois, vous pourriez avoir <em>plus</em> de crises, pas moins — c'est normal et c'est même le signe que ça fonctionne. C'est pourquoi je vous donne aussi un traitement préventif. Il faut le prendre <strong>tous les jours, à long terme</strong>, sans l'arrêter pendant une crise. »</div>
+      </div>
+
+      <div class="block para" style="margin-top:14px;border-left-color:#0369a1;">
+        <div class="block-title" id="gou-7"><span class="tag">🍽️ Mode de vie &amp; comorbidités</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">⚖️ <strong>Mise au point importante :</strong> les mesures alimentaires <strong>abaissent l'uricémie de façon modeste</strong> — elles ne suffisent presque jamais à atteindre la cible chez une personne ayant une goutte établie. Il faut le dire clairement, sinon la personne se croit responsable de son échec et le traitement pharmacologique est perçu comme un aveu de faiblesse.<br>🎯 <strong>Le régime accompagne le traitement, il ne le remplace pas.</strong></div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;border-left:4px solid #15803d;">
+            <strong style="color:#15803d;">✅ À encourager</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Perte de poids</strong> progressive (⚠️ éviter le jeûne, qui déclenche des crises)<br><strong>Bonne hydratation</strong><br><strong>Produits laitiers faibles en gras</strong> — effet protecteur<br>Légumes, y compris ceux riches en purines : <strong>leur consommation n'augmente pas le risque</strong><br>Café · vitamine C (effet modeste)<br><strong>Activité physique</strong> régulière</div>
+          </div>
+          <div style="background:#fef2f2;border-radius:10px;padding:14px;border-left:4px solid #c0392b;">
+            <strong style="color:#c0392b;">🚫 À réduire</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Bière</strong> ⭐ et spiritueux<br><strong>Boissons sucrées et sirop de maïs à haute teneur en fructose</strong> 🎯<br><strong>Abats</strong>, viandes rouges en excès, certains fruits de mer<br>Jeûne et régimes très restrictifs</div>
+          </div>
+        </div>
+
+        <div class="key-fact red" style="margin-top:12px;">💊 <strong>Le levier le plus rentable en première ligne : revoir la médication.</strong> Un <strong>diurétique thiazidique</strong> peut à lui seul entretenir la goutte. Quand l'indication le permet, envisager une <strong>solution de rechange antihypertensive</strong> — certains agents ont un effet neutre ou favorable sur l'uricémie. De même, discuter la pertinence de l'aspirine à faible dose si elle n'est pas indiquée.</div>
+
+        <div class="key-fact green" style="margin-top:8px;">❤️ <strong>Ne pas s'arrêter à l'articulation :</strong> la goutte s'accompagne très souvent d'<strong>HTA, de diabète de type 2, de dyslipidémie, d'obésité, de maladie rénale chronique et de maladie cardiovasculaire</strong>. Son diagnostic est une <strong>occasion de dépistage cardiométabolique complet</strong> — c'est probablement l'intervention qui aura le plus d'effet sur l'espérance de vie du patient.</div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;border-left-color:#6d28d9;">
+        <div class="block-title" id="gou-8"><span class="tag">💠 Pseudogoutte — dépôt de pyrophosphate de calcium</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>Une maladie distincte, souvent confondue.</strong> Les cristaux ne sont pas d'urate mais de <strong>pyrophosphate de calcium (PPC)</strong>. La présentation aiguë ressemble à la goutte, mais l'épidémiologie, les localisations et le traitement de fond diffèrent — et surtout, <strong>il n'existe pas d'équivalent de l'allopurinol</strong>.</div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:20%;"></th><th style="width:34%;">Goutte</th><th>Pseudogoutte (PPC)</th></tr></thead>
+          <tbody>
+            <tr style="background:#f0fdf4;"><td><strong>Cristaux</strong></td><td><strong>Urate monosodique</strong> · en <strong>aiguilles</strong> · biréfringence <strong>négative</strong></td><td><strong>Pyrophosphate de calcium</strong> · <strong>rhomboïdes</strong> · biréfringence <strong>positive</strong></td></tr>
+            <tr><td><strong>Terrain</strong></td><td>Homme d'âge moyen · femme après la ménopause</td><td>🎯 <strong>Personne âgée</strong> — la fréquence augmente nettement avec l'âge</td></tr>
+            <tr style="background:#e8f4fd;"><td><strong>Localisations</strong></td><td><strong>1<sup>re</sup> MTP</strong>, médio-pied, cheville, genou</td><td>🎯 <strong>Genou</strong> surtout · poignet, épaule, symphyse pubienne</td></tr>
+            <tr><td><strong>Radiographie</strong></td><td>Érosions tardives à bords saillants</td><td>🎯 <strong>Chondrocalcinose</strong> — liseré calcique du cartilage, notamment aux <strong>ménisques du genou</strong> et au <strong>ligament triangulaire du carpe</strong></td></tr>
+            <tr style="background:#fff8e1;"><td><strong>Traitement de la crise</strong></td><td>Colchicine · AINS · corticostéroïdes</td><td><strong>Les mêmes</strong> — l'infiltration de corticostéroïde est souvent très efficace</td></tr>
+            <tr><td><strong>Traitement de fond</strong></td><td><strong>Hypo-uricémiant</strong> — dissout les dépôts</td><td>🎯 <strong>Aucun traitement ne dissout les dépôts de PPC</strong> · prise en charge symptomatique et des crises récidivantes</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">🔎 <strong>Chercher une cause sous-jacente devant une PPC chez une personne jeune ou avec atteinte étendue :</strong> <strong>hyperparathyroïdie</strong>, <strong>hémochromatose</strong>, hypomagnésémie, hypophosphatasie. L'arthropathie de l'<strong>hémochromatose</strong> peut ressembler à la fois à l'arthrose et à la PPC — un signe classique est la <strong>douleur à la poignée de main</strong>, avec atteinte des 2<sup>e</sup> et 3<sup>e</sup> MCP.</div>
+
+        <div class="key-fact green" style="margin-top:8px;">💡 <strong>En pratique :</strong> chez une personne âgée avec une <strong>monoarthrite aiguë du genou</strong>, la pseudogoutte est un diagnostic très fréquent — mais elle reste un diagnostic d'exclusion tant que l'<strong>arthrite septique</strong> n'a pas été écartée par la ponction.</div>
+      </div>
+
+      <div class="block flag" style="margin-top:14px;">
+        <div class="block-title" id="gou-9"><span class="tag">🚨 Red flags &amp; pièges</span></div>
+
+        <div class="flag-list" style="margin-top:12px;">
+          <div class="flag-item">🚨 <strong>Monoarthrite aiguë fébrile</strong> — arthrite septique jusqu'à preuve du contraire : ponctionner · <strong>les cristaux n'excluent pas l'infection</strong></div>
+          <div class="flag-item">🚨 <strong>Rash sous allopurinol</strong> — arrêt immédiat : possible réaction d'hypersensibilité sévère (DRESS, SJS/TEN)</div>
+          <div class="flag-item">🚨 <strong>Colchicine avec clarithromycine, azolés, ciclosporine, vérapamil, diltiazem ou statine</strong> — interactions pouvant causer une toxicité grave, dont rhabdomyolyse et aplasie médullaire</div>
+          <div class="flag-item"><strong>Insuffisance rénale</strong> — adapter colchicine et allopurinol, éviter les AINS</div>
+          <div class="flag-item"><strong>Goutte polyarticulaire chez une personne âgée</strong> — peut mimer une PAR et retarder le diagnostic</div>
+          <div class="flag-item"><strong>Crise ne répondant pas au traitement en quelques jours</strong> — revoir le diagnostic, penser à l'infection</div>
+          <div class="flag-item"><strong>Cellulite versus goutte</strong> — la goutte peut être très érythémateuse et desquamer; l'antibiothérapie répétée pour de fausses cellulites est un piège classique</div>
+          <div class="flag-item"><strong>Uricémie normale pendant la crise</strong> — n'exclut pas la goutte : redoser à distance</div>
+          <div class="flag-item"><strong>Patient qui arrête son hypo-uricémiant pendant une crise</strong> — erreur fréquente à corriger activement</div>
+          <div class="flag-item"><strong>Hypo-uricémiant amorcé sans prophylaxie anti-crise</strong> — cause majeure d'abandon du traitement</div>
+        </div>
+
+        <div class="key-fact green" style="margin-top:12px;">✅ <strong>La goutte bien prise en charge en 5 gestes :</strong> ① <strong>confirmer</strong> (ponction si doute, uricémie à distance) · ② <strong>traiter la crise tôt</strong>, selon les comorbidités · ③ <strong>décider du traitement de fond</strong> et l'amorcer avec <strong>prophylaxie ≥ 6 mois</strong> · ④ <strong>titrer jusqu'à la cible</strong> &lt; 360 µmol/L (&lt; 300 si tophus) · ⑤ <strong>réviser la médication</strong> et dépister les <strong>comorbidités cardiométaboliques</strong>.</div>
+      </div>
+    </div>
+
+<div class="section" id="sec-spondylarthrites">
+      <div class="section-header">
+        <div class="section-accent" style="background:#7e22ce">🦴</div>
+        <div class="section-title"><h1>Spondylarthrites</h1><div class="breadcrumb">Rhumatologie <span class="breadcrumb-sep">·</span> Axiale &amp; périphérique <span class="breadcrumb-sep">·</span> Psoriasique <span class="breadcrumb-sep">·</span> HLA-B27</div></div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;">
+        <button onclick="goToBlock('spa-1')" style="background:#374151;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧬 Le concept</button>
+        <button onclick="goToBlock('spa-2')" style="background:#c0392b;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🔙 Lombalgie inflammatoire</button>
+        <button onclick="goToBlock('spa-3')" style="background:#0369a1;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🔍 Signes évocateurs</button>
+        <button onclick="goToBlock('spa-4')" style="background:#6d28d9;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🗂️ Les formes</button>
+        <button onclick="goToBlock('spa-5')" style="background:#0f766e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧪 Diagnostic</button>
+        <button onclick="goToBlock('spa-6')" style="background:#0a7a4e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">💊 Traitement</button>
+        <button onclick="goToBlock('spa-7')" style="background:#b45309;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">📋 Suivi &amp; comorbidités</button>
+        <button onclick="goToBlock('spa-8')" style="background:#dc2626;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🚨 Red flags</button>
+      </div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:20px;">
+        <div style="flex:1;min-width:95px;background:#F3E8FF;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#6d28d9;">&lt; 45 ans</div><div style="font-size:11px;color:#555;margin-top:4px;">Début des symptômes axiaux</div></div>
+        <div style="flex:1;min-width:95px;background:#FEE2E2;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#b91c1c;">&gt; 3 mois</div><div style="font-size:11px;color:#555;margin-top:4px;">Durée de la lombalgie</div></div>
+        <div style="flex:1;min-width:95px;background:#DCFCE7;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#15803d;">AINS</div><div style="font-size:11px;color:#555;margin-top:4px;">1<sup>re</sup> ligne dans la forme axiale</div></div>
+        <div style="flex:1;min-width:95px;background:#FEF9C3;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#854d0e;">Années</div><div style="font-size:11px;color:#555;margin-top:4px;">Retard diagnostique habituel</div></div>
+      </div>
+
+      <div class="block def" style="margin-top:14px;">
+        <div class="block-title" id="spa-1"><span class="tag">🧬 Le concept de spondylarthrite</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>Une famille, pas une maladie.</strong> Les spondylarthrites regroupent des affections inflammatoires qui partagent un <strong>terrain génétique</strong> (HLA-B27), une <strong>atteinte axiale</strong> possible, des <strong>enthésites</strong>, une arthrite périphérique souvent <strong>asymétrique et des membres inférieurs</strong>, et des manifestations extra-articulaires communes — uvéite, psoriasis, maladie inflammatoire de l'intestin.<br>⚠️ Elles sont <strong>séronégatives</strong> : facteur rhumatoïde et anti-CCP <strong>négatifs</strong>.</div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
+          <div style="background:#ede9fe;border-radius:10px;padding:14px;border-left:4px solid #6d28d9;">
+            <strong style="color:#6d28d9;">🦴 L'enthèse — la cible caractéristique</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">L'<strong>enthèse</strong> est le point d'insertion d'un tendon, d'un ligament ou d'une capsule sur l'os.<br>🎯 <strong>C'est la lésion élémentaire des spondylarthrites</strong> — alors que la PAR attaque la <strong>synoviale</strong>.<br>➜ Explique la <strong>talalgie</strong> (Achille, fascia plantaire), la douleur des insertions, et la <strong>dactylite</strong>.<br>➜ Explique aussi la tendance à l'<strong>ossification</strong> — syndesmophytes, ankylose — plutôt qu'aux érosions pures.</div>
+          </div>
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;border-left:4px solid #1d4ed8;">
+            <strong style="color:#1d4ed8;">🧭 Classification actuelle</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">On classe désormais selon la <strong>présentation dominante</strong> :<br><strong>Spondylarthrite axiale</strong> — rachis et sacro-iliaques<br>&nbsp;&nbsp;• <strong>radiographique</strong> (anciennement spondylarthrite ankylosante) : sacro-iliite visible à la radiographie<br>&nbsp;&nbsp;• <strong>non radiographique</strong> : inflammation visible seulement à l'IRM<br><strong>Spondylarthrite périphérique</strong> — arthrite, enthésite, dactylite<br>🎯 Cette distinction compte : la forme <strong>non radiographique</strong> touche davantage les femmes et est <strong>massivement sous-diagnostiquée</strong>.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;border-left-color:#c0392b;">
+        <div class="block-title" id="spa-2"><span class="tag">🔙 La lombalgie inflammatoire — le signal à reconnaître</span></div>
+
+        <div class="key-fact red" style="margin-top:10px;">🎯 <strong>Le problème clinique le plus important de cette section :</strong> le délai entre les premiers symptômes et le diagnostic de spondylarthrite axiale se compte encore en <strong>années</strong>. La raison est simple — la lombalgie est extrêmement banale, et personne ne pense à distinguer sa forme inflammatoire. <strong>C'est en première ligne que ce délai se joue.</strong></div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:22%;">Caractéristique</th><th style="width:36%;">Lombalgie INFLAMMATOIRE</th><th>Lombalgie mécanique</th></tr></thead>
+          <tbody>
+            <tr style="background:#fce4ec;"><td><strong>Âge de début</strong></td><td>🎯 <strong>Avant 45 ans</strong> — souvent chez le jeune adulte</td><td>Tout âge</td></tr>
+            <tr><td><strong>Installation</strong></td><td><strong>Insidieuse</strong></td><td>Souvent aiguë, après un effort</td></tr>
+            <tr style="background:#e8f4fd;"><td><strong>Durée</strong></td><td><strong>Plus de 3 mois</strong></td><td>Variable, souvent résolutive</td></tr>
+            <tr><td><strong>Raideur matinale</strong></td><td>🎯 <strong>Plus de 30 minutes</strong></td><td>Brève</td></tr>
+            <tr style="background:#f0fdf4;"><td><strong>Effet de l'exercice</strong></td><td>🎯 <strong>AMÉLIORE</strong></td><td>Aggrave</td></tr>
+            <tr><td><strong>Effet du repos</strong></td><td>🎯 <strong>N'améliore pas — ou aggrave</strong></td><td>Améliore</td></tr>
+            <tr style="background:#fff8e1;"><td><strong>Douleur nocturne</strong></td><td>🎯 <strong>Réveille en 2<sup>e</sup> partie de nuit</strong>, oblige à se lever et à bouger</td><td>Rare</td></tr>
+            <tr><td><strong>Douleur fessière</strong></td><td><strong>Alternante</strong>, d'un côté puis de l'autre — évoque la sacro-iliite</td><td>Non typique</td></tr>
+            <tr style="background:#ede9fe;"><td><strong>Réponse aux AINS</strong></td><td>🎯 <strong>Réponse souvent spectaculaire</strong> — argument diagnostique en soi</td><td>Partielle</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="key-fact green" style="margin-top:12px;">🗣️ <strong>Les deux questions de dépistage à poser à tout jeune adulte lombalgique chronique :</strong> « <strong>Est-ce que la douleur vous réveille la nuit et vous oblige à vous lever?</strong> » et « <strong>Est-ce que ça va mieux quand vous bougez et moins bien quand vous restez assis?</strong> » Deux réponses positives chez une personne de moins de 45 ans avec une lombalgie de plus de 3 mois justifient d'aller plus loin.</div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;border-left-color:#0369a1;">
+        <div class="block-title" id="spa-3"><span class="tag">🔍 Les signes qui doivent faire évoquer une spondylarthrite</span></div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-top:12px;">
+          <div style="background:#ede9fe;border-radius:10px;padding:14px;">
+            <strong style="color:#6d28d9;">🌭 Dactylite</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Doigt ou orteil entier gonflé</strong>, « en saucisse » — l'inflammation touche toute la gaine.<br>🎯 <strong>Signe très évocateur</strong>, presque spécifique de cette famille.</div>
+          </div>
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+            <strong style="color:#1d4ed8;">🦶 Enthésite</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Talalgie</strong> — insertion du tendon d'Achille, fascia plantaire<br>Douleur des insertions costales, des crêtes iliaques, des tubérosités<br>🎯 Une <strong>talalgie inflammatoire chez un jeune adulte</strong> doit faire penser à une spondylarthrite.</div>
+          </div>
+          <div style="background:#fce4ec;border-radius:10px;padding:14px;">
+            <strong style="color:#c0392b;">👁️ Uvéite antérieure</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Œil rouge douloureux, photophobie, vision floue</strong> — souvent <strong>unilatérale et récidivante</strong>.<br>🚨 Nécessite une <strong>évaluation ophtalmologique rapide</strong>.<br>🎯 Une uvéite antérieure récidivante impose de chercher une spondylarthrite.</div>
+          </div>
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;">
+            <strong style="color:#d35400;">🩹 Psoriasis</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">À chercher <strong>activement</strong> : cuir chevelu, derrière les oreilles, nombril, pli interfessier, <strong>ongles</strong> (piquetés, décollement).<br>Peut être <strong>minime et méconnu</strong> du patient.</div>
+          </div>
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+            <strong style="color:#15803d;">🫃 Maladie inflammatoire de l'intestin</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Diarrhée chronique, douleurs abdominales, <strong>sang dans les selles</strong>, perte de poids.<br>➜ Voir la section <em>MII</em><br>L'arthrite peut <strong>précéder</strong> les symptômes digestifs.</div>
+          </div>
+          <div style="background:#f1f5f9;border-radius:10px;padding:14px;">
+            <strong style="color:#334155;">👨‍👩‍👦 Antécédents familiaux</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Spondylarthrite, psoriasis, uvéite ou MII chez un apparenté.<br>🎯 Question simple, rarement posée, souvent payante.</div>
+          </div>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">🧩 <strong>Le raisonnement à adopter :</strong> aucun de ces signes n'est diagnostique isolément — c'est leur <strong>accumulation</strong> chez une même personne qui construit la probabilité. Une lombalgie inflammatoire + une talalgie + un psoriasis discret + un oncle « qui a le dos soudé » constituent un tableau bien plus solide que n'importe quel test isolé.</div>
+      </div>
+
+      <div class="block para" style="margin-top:14px;border-left-color:#6d28d9;">
+        <div class="block-title" id="spa-4"><span class="tag">🗂️ Les différentes formes</span></div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:22%;">Forme</th><th style="width:34%;">Particularités</th><th>À retenir</th></tr></thead>
+          <tbody>
+            <tr style="background:#ede9fe;"><td><strong>Spondylarthrite axiale</strong><br><em>incluant la spondylarthrite ankylosante</em></td><td>Atteinte du <strong>rachis et des sacro-iliaques</strong> · raideur progressive · perte de mobilité rachidienne · <strong>cyphose</strong> évoluée dans les formes anciennes<br>Atteinte possible des hanches et des épaules</td><td>🎯 Forme <strong>non radiographique</strong> : IRM anormale mais radiographie normale — touche plus de femmes, longtemps méconnue<br>Complications : ostéoporose rachidienne, <strong>fractures vertébrales</strong> sur rachis ankylosé</td></tr>
+            <tr><td><strong>Rhumatisme psoriasique</strong></td><td>Formes très variées : oligoarthrite asymétrique, <strong>atteinte des IPD</strong>, polyarthrite ressemblant à la PAR, forme axiale, forme mutilante<br><strong>Dactylite</strong> et <strong>atteinte unguéale</strong> fréquentes</td><td>🎯 <strong>L'arthrite peut précéder le psoriasis</strong> de plusieurs années<br>La sévérité cutanée ne prédit pas la sévérité articulaire<br>Atteinte des IPD → ne pas confondre avec l'arthrose</td></tr>
+            <tr style="background:#f0fdf4;"><td><strong>Arthrite réactionnelle</strong></td><td>Survient <strong>quelques semaines après</strong> une infection <strong>digestive</strong> (Salmonella, Shigella, Campylobacter, Yersinia) ou <strong>urogénitale</strong> (Chlamydia)<br>Oligoarthrite asymétrique des membres inférieurs · enthésite · parfois conjonctivite et urétrite</td><td>Souvent <strong>résolutive en quelques mois</strong>, mais peut se chroniciser<br>🎯 Dépister et traiter l'ITSS déclenchante et les partenaires — voir la section <em>ITSS</em><br>L'antibiothérapie ne traite pas l'arthrite elle-même</td></tr>
+            <tr><td><strong>Arthrite associée aux MII</strong></td><td><strong>Périphérique</strong> : souvent parallèle à l'activité digestive<br><strong>Axiale</strong> : évolue <strong>indépendamment</strong> de l'atteinte intestinale</td><td>⚠️ <strong>Les AINS peuvent aggraver la maladie digestive</strong> — prudence, coordination avec la gastroentérologie<br>Certains traitements de fond couvrent les deux atteintes</td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+
+      <div class="block para" style="margin-top:14px;border-left-color:#0f766e;">
+        <div class="block-title" id="spa-5"><span class="tag">🧪 Diagnostic</span></div>
+
+        <div class="key-fact red" style="margin-top:10px;">🎯 <strong>Le diagnostic est clinique, appuyé par l'imagerie.</strong> Il n'existe <strong>aucun test qui confirme ou infirme</strong> une spondylarthrite à lui seul — ni le HLA-B27, ni la CRP, ni même l'IRM.</div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:20%;">Élément</th><th style="width:30%;">Apport</th><th>Limites</th></tr></thead>
+          <tbody>
+            <tr style="background:#ede9fe;"><td><strong>HLA-B27</strong></td><td>Augmente la probabilité dans un contexte évocateur · fortement associé à la forme axiale et à l'uvéite</td><td>🚨 <strong>Fréquent dans la population générale</strong> — la <strong>majorité des porteurs n'auront jamais de spondylarthrite</strong><br>⚠️ Sa négativité n'exclut pas le diagnostic<br>⛔ <strong>Ne jamais le demander comme test de dépistage</strong> devant une lombalgie banale</td></tr>
+            <tr><td><strong>VS &amp; CRP</strong></td><td>Peuvent appuyer et servir au suivi</td><td>⚠️ <strong>Souvent normales</strong>, même en maladie active — leur normalité ne rassure pas</td></tr>
+            <tr style="background:#f0fdf4;"><td><strong>Radiographie du bassin</strong></td><td>Recherche la <strong>sacro-iliite</strong> — érosions, sclérose, ankylose<br>Rachis : <strong>syndesmophytes</strong>, aspect en « colonne bambou » dans les formes évoluées</td><td>🎯 <strong>Peut rester normale pendant des années</strong> — la sacro-iliite radiographique est un signe <strong>tardif</strong><br>Une radiographie normale <strong>n'exclut rien</strong></td></tr>
+            <tr style="background:#e8f4fd;"><td><strong>IRM des sacro-iliaques</strong></td><td>🎯 <strong>Détecte l'inflammation active</strong> — œdème osseux sous-chondral — <strong>avant toute lésion radiographique</strong><br>C'est l'examen qui permet de diagnostiquer la forme <strong>non radiographique</strong></td><td>Accès et coût · à demander quand la suspicion clinique est raisonnable, idéalement en concertation avec la rhumatologie</td></tr>
+            <tr><td><strong>FR &amp; anti-CCP</strong></td><td>Servent à <strong>écarter une PAR</strong></td><td>Négatifs par définition — d'où le terme « séronégatives »</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="key-fact blue" style="margin-top:12px;">🧭 <strong>Quand orienter en rhumatologie :</strong> lombalgie chronique <strong>de plus de 3 mois débutant avant 45 ans</strong>, <strong>avec</strong> au moins un élément additionnel — caractère inflammatoire, talalgie ou enthésite, dactylite, uvéite, psoriasis, MII, antécédent familial, bonne réponse aux AINS, ou CRP élevée. <strong>Ne pas attendre une radiographie anormale pour référer.</strong></div>
+      </div>
+
+      <div class="block rx" style="margin-top:14px;">
+        <div class="block-title" id="spa-6"><span class="tag">💊 Traitement</span></div>
+
+        <div class="key-fact green" style="margin-top:10px;">🎯 <strong>Deux différences majeures avec la PAR, à bien avoir en tête :</strong><br>① Dans la forme <strong>axiale</strong>, les <strong>AINS sont le traitement de première ligne</strong> — et non un simple adjuvant.<br>② Le <strong>méthotrexate est peu efficace sur l'atteinte axiale</strong>; il garde une place dans les atteintes <strong>périphériques</strong>. C'est une erreur classique de traiter une spondylarthrite axiale comme une PAR.</div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:20%;">Modalité</th><th style="width:30%;">Atteinte axiale</th><th>Atteinte périphérique</th></tr></thead>
+          <tbody>
+            <tr style="background:#f0fdf4;"><td>🎯 <strong>Exercice &amp; physiothérapie</strong></td><td colspan="2">🎯 <strong>Pilier du traitement, à ne jamais présenter comme accessoire.</strong> Programme régulier d'<strong>étirements, de mobilité rachidienne et de posture</strong> — il préserve la fonction et limite l'enraidissement. À maintenir <strong>à vie</strong>.</td></tr>
+            <tr><td><strong>AINS</strong></td><td>🎯 <strong>1<sup>re</sup> ligne</strong> — à dose anti-inflammatoire, en évaluant la réponse sur plusieurs semaines</td><td>Utiles en appoint</td></tr>
+            <tr style="background:#e8f4fd;"><td><strong>Traitements de fond conventionnels</strong><br><em>méthotrexate, sulfasalazine</em></td><td>⚠️ <strong>Peu ou pas efficaces</strong> sur l'atteinte axiale</td><td>✅ Utiles — sulfasalazine, méthotrexate (rhumatisme psoriasique)</td></tr>
+            <tr><td><strong>Biothérapies</strong><br><em>anti-TNF, anti-IL-17, anti-IL-23 selon la forme</em></td><td>✅ <strong>Indiquées si échec des AINS</strong> — efficacité importante</td><td>✅ Selon la sévérité et l'atteinte cutanée</td></tr>
+            <tr style="background:#fff3cd;"><td><strong>Corticostéroïdes</strong></td><td>⚠️ Peu utiles par voie systémique dans l'atteinte axiale</td><td>Infiltrations locales possibles (enthésite, arthrite)</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">🧩 <strong>Le choix du traitement tient compte des atteintes associées :</strong> une personne avec spondylarthrite <strong>et</strong> MII, ou <strong>et</strong> uvéite récidivante, ou <strong>et</strong> psoriasis étendu, n'aura pas la même molécule — certaines biothérapies couvrent bien l'intestin ou l'œil, d'autres non, et certaines peuvent même aggraver une MII. <strong>C'est une décision de rhumatologie, souvent concertée avec la gastroentérologie ou la dermatologie.</strong></div>
+
+        <div class="key-fact red" style="margin-top:8px;">🚬 <strong>La cessation tabagique est un enjeu majeur ici :</strong> le tabagisme est associé à une <strong>progression structurelle plus rapide</strong> et à une <strong>moins bonne réponse au traitement</strong> dans la spondylarthrite axiale. C'est une intervention de première ligne à part entière.</div>
+      </div>
+
+      <div class="block para" style="margin-top:14px;border-left-color:#b45309;">
+        <div class="block-title" id="spa-7"><span class="tag">📋 Suivi &amp; comorbidités</span></div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:12px;">
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+            <strong style="color:#1d4ed8;">📏 Suivi de la maladie</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Douleur, <strong>raideur matinale</strong>, fatigue<br><strong>Mobilité rachidienne</strong> et expansion thoracique<br>Adhésion au <strong>programme d'exercices</strong> — à revalider à chaque visite<br>CRP selon le contexte<br>Fonction, travail, qualité de vie</div>
+          </div>
+          <div style="background:#fce4ec;border-radius:10px;padding:14px;">
+            <strong style="color:#c0392b;">🦴 Ostéoporose &amp; fractures</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🚨 Risque <strong>paradoxal</strong> : le rachis s'ankylose <em>et</em> se déminéralise.<br>Un <strong>rachis ankylosé se fracture pour un traumatisme mineur</strong>, avec risque neurologique élevé.<br>➜ Toute <strong>douleur rachidienne nouvelle</strong> chez un patient à rachis ankylosé, même après un traumatisme banal, doit faire <strong>éliminer une fracture</strong>.<br>➜ Évaluer la santé osseuse</div>
+          </div>
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;">
+            <strong style="color:#d35400;">❤️ Risque cardiovasculaire</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Augmenté par l'inflammation chronique, comme dans la PAR.<br>➜ Dépister et traiter TA, lipides, glycémie<br>⚠️ Usage prolongé d'AINS à intégrer dans l'évaluation du risque</div>
+          </div>
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+            <strong style="color:#15803d;">👁️🫃 Atteintes associées</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Enseigner à <strong>reconnaître l'uvéite</strong> — œil rouge douloureux avec photophobie : consultation ophtalmologique <strong>rapide</strong>, ne pas attendre<br>Surveiller l'apparition de <strong>symptômes digestifs</strong> (MII) ou <strong>cutanés</strong> (psoriasis)</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block flag" style="margin-top:14px;">
+        <div class="block-title" id="spa-8"><span class="tag">🚨 Red flags</span></div>
+
+        <div class="flag-list" style="margin-top:12px;">
+          <div class="flag-item">🚨 <strong>Douleur rachidienne nouvelle chez un patient à rachis ankylosé</strong>, même après traumatisme mineur — <strong>fracture vertébrale</strong> jusqu'à preuve du contraire, risque neurologique</div>
+          <div class="flag-item">🚨 <strong>Œil rouge douloureux avec photophobie</strong> — uvéite antérieure : évaluation ophtalmologique rapide</div>
+          <div class="flag-item">🚨 <strong>Déficit neurologique</strong>, syndrome de la queue de cheval — urgence</div>
+          <div class="flag-item"><strong>Lombalgie inflammatoire chez un moins de 45 ans persistant plus de 3 mois</strong> — ne pas laisser traîner : orienter</div>
+          <div class="flag-item"><strong>Talalgie inflammatoire chez un jeune adulte</strong> — penser enthésite, pas seulement fasciite plantaire mécanique</div>
+          <div class="flag-item"><strong>Dactylite</strong> — signe fort, à ne pas confondre avec un panaris ou une entorse</div>
+          <div class="flag-item"><strong>Diarrhée sanglante</strong> ou perte de poids chez un patient avec spondylarthrite — MII à investiguer</div>
+          <div class="flag-item">⚠️ <strong>AINS chez un patient avec MII</strong> — peuvent déclencher une poussée digestive</div>
+          <div class="flag-item"><strong>Monoarthrite aiguë fébrile</strong> chez un patient sous biothérapie — arthrite septique, seuil d'alerte bas</div>
+        </div>
+      </div>
+    </div>
+
+<div class="section" id="sec-connectivites">
+      <div class="section-header">
+        <div class="section-accent" style="background:#9d174d">🦋</div>
+        <div class="section-title"><h1>Connectivites &amp; vascularites</h1><div class="breadcrumb">Rhumatologie <span class="breadcrumb-sep">·</span> Lupus <span class="breadcrumb-sep">·</span> Sjögren <span class="breadcrumb-sep">·</span> PPR &amp; artérite à cellules géantes</div></div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;">
+        <button onclick="goToBlock('con-1')" style="background:#374151;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧭 Quand y penser</button>
+        <button onclick="goToBlock('con-2')" style="background:#0f766e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧪 Interpréter les AAN</button>
+        <button onclick="goToBlock('con-3')" style="background:#be185d;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🦋 Lupus</button>
+        <button onclick="goToBlock('con-4')" style="background:#0369a1;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">💧 Sjögren</button>
+        <button onclick="goToBlock('con-5')" style="background:#6d28d9;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🖐️ Sclérodermie &amp; Raynaud</button>
+        <button onclick="goToBlock('con-6')" style="background:#b45309;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">💪 Myosites</button>
+        <button onclick="goToBlock('con-7')" style="background:#dc2626;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">👁️ PPR &amp; artérite à cellules géantes</button>
+        <button onclick="goToBlock('con-8')" style="background:#991b1b;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🚨 Red flags</button>
+      </div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:20px;">
+        <div style="flex:1;min-width:95px;background:#FCE7F3;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#9d174d;">AAN</div><div style="font-size:11px;color:#555;margin-top:4px;">Sensible, peu spécifique</div></div>
+        <div style="flex:1;min-width:95px;background:#FEE2E2;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#b91c1c;">&gt; 50 ans</div><div style="font-size:11px;color:#555;margin-top:4px;">PPR &amp; artérite à cellules géantes</div></div>
+        <div style="flex:1;min-width:95px;background:#FEF9C3;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#854d0e;">Urgence</div><div style="font-size:11px;color:#555;margin-top:4px;">ACG — cécité irréversible</div></div>
+        <div style="flex:1;min-width:95px;background:#DCFCE7;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#15803d;">Urine</div><div style="font-size:11px;color:#555;margin-top:4px;">L'analyse qui change tout</div></div>
+      </div>
+
+      <div class="block def" style="margin-top:14px;">
+        <div class="block-title" id="con-1"><span class="tag">🧭 Quand penser à une connectivite</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>Le point commun de ces maladies :</strong> une atteinte <strong>multisystémique</strong> avec auto-anticorps. Le signal, en première ligne, n'est presque jamais un test — c'est un <strong>faisceau de manifestations qui ne s'expliquent pas ensemble</strong> par une cause banale.</div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-top:12px;">
+          <div style="background:#fce4ec;border-radius:10px;padding:14px;">
+            <strong style="color:#c0392b;">🚩 Le tableau qui doit alerter</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Arthralgies ou arthrite</strong> + <strong>fatigue</strong> + <strong>atteinte cutanée</strong><br>+ <strong>fièvre inexpliquée</strong>, perte de poids<br>+ <strong>cytopénies</strong> · <strong>anomalies urinaires</strong><br>+ <strong>phénomène de Raynaud</strong> · <strong>sécheresse</strong> · aphtes<br>🎯 <strong>Plusieurs systèmes atteints simultanément chez une personne jeune</strong> — c'est le motif d'investigation.</div>
+          </div>
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+            <strong style="color:#15803d;">🧪 Le bilan initial raisonnable</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>FSC</strong> — cytopénies<br><strong>Créatinine</strong> · <strong>analyse d'urine avec sédiment</strong> 🎯<br><strong>VS et CRP</strong><br>Bilan hépatique · <strong>CK</strong> si faiblesse musculaire<br><strong>AAN</strong> — <em>si et seulement si</em> le tableau clinique le justifie<br>± complément (C3, C4)</div>
+          </div>
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+            <strong style="color:#1d4ed8;">💧 L'analyse d'urine — le geste sous-estimé</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🎯 <strong>Protéinurie et hématurie sont souvent les seuls signes d'une atteinte rénale grave</strong>, entièrement <strong>asymptomatique</strong> à ce stade.<br>➜ Chez toute personne chez qui on suspecte un lupus ou une vascularite, l'analyse d'urine <strong>change le degré d'urgence</strong> de la référence.</div>
+          </div>
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;">
+            <strong style="color:#d35400;">💊 Toujours éliminer d'abord</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Infections</strong> — VIH, hépatites, endocardite, parvovirus, Lyme<br><strong>Néoplasies</strong><br><strong>Causes médicamenteuses</strong> — <strong>lupus induit</strong>, myopathie des statines<br>🎯 Ces trois catégories miment presque tous les tableaux de connectivite.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block para" style="margin-top:14px;border-left-color:#0f766e;">
+        <div class="block-title" id="con-2"><span class="tag">🧪 Interpréter les anticorps antinucléaires</span></div>
+
+        <div class="key-fact red" style="margin-top:10px;">🚨 <strong>Le message le plus important de toute la section :</strong> l'AAN est un test <strong>très sensible mais peu spécifique</strong>. Il est <strong>positif chez une proportion notable de personnes en parfaite santé</strong> — surtout à faible titre et avec l'âge —, et positif chez <strong>environ 30 % des patients atteints de PAR</strong>. Demandé sans hypothèse clinique, il génère bien plus d'anxiété et de références inutiles que de diagnostics.<br>➜ <strong>Ne jamais demander un AAN devant des arthralgies isolées ou de la fatigue seule.</strong></div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;border-left:4px solid #15803d;">
+            <strong style="color:#15803d;">✅ Ce que l'AAN permet</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🎯 Sa <strong>valeur principale est négative</strong> : un AAN négatif rend un <strong>lupus systémique très improbable</strong>.<br>Un <strong>titre élevé</strong> avec un tableau clinique compatible a du poids.<br>➜ Si positif <em>et</em> pertinent : compléter par les <strong>anticorps spécifiques</strong>.</div>
+          </div>
+          <div style="background:#fef2f2;border-radius:10px;padding:14px;border-left:4px solid #c0392b;">
+            <strong style="color:#c0392b;">🚫 Ce qu'il ne permet pas</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Un AAN positif <strong>ne fait pas un diagnostic</strong>.<br>Il ne sert pas à <strong>suivre l'activité</strong> de la maladie — inutile de le répéter.<br>Il ne dépiste pas : <strong>pas d'AAN « de contrôle »</strong> chez une personne asymptomatique.</div>
+          </div>
+        </div>
+
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">🎯 Les anticorps spécifiques et leur signification</div>
+        <div style="overflow-x:auto;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:24%;">Anticorps</th><th style="width:28%;">Associé à</th><th>Valeur</th></tr></thead>
+          <tbody>
+            <tr style="background:#fce4ec;"><td><strong>Anti-ADN double brin</strong></td><td><strong>Lupus</strong></td><td>🎯 <strong>Spécifique</strong> · corrèle souvent avec l'<strong>activité de la maladie</strong> et l'<strong>atteinte rénale</strong> — utile au suivi</td></tr>
+            <tr><td><strong>Anti-Sm</strong></td><td><strong>Lupus</strong></td><td>🎯 <strong>Très spécifique</strong>, mais peu sensible</td></tr>
+            <tr style="background:#e8f4fd;"><td><strong>Anti-SSA (Ro) / anti-SSB (La)</strong></td><td><strong>Sjögren</strong>, lupus</td><td>🚨 <strong>Anti-SSA en grossesse : risque de bloc cardiaque congénital et de lupus néonatal</strong> — information capitale à transmettre en préconception</td></tr>
+            <tr><td><strong>Anti-Scl70</strong> (anti-topoisomérase I)</td><td><strong>Sclérodermie diffuse</strong></td><td>Associé à la <strong>fibrose pulmonaire</strong></td></tr>
+            <tr style="background:#f0fdf4;"><td><strong>Anti-centromère</strong></td><td><strong>Sclérodermie limitée</strong></td><td>Associé à l'<strong>hypertension artérielle pulmonaire</strong></td></tr>
+            <tr><td><strong>Anti-Jo1</strong> et autres anti-synthétases</td><td><strong>Myosites</strong></td><td>Syndrome des anti-synthétases : myosite + <strong>pneumopathie interstitielle</strong> + Raynaud + « mains de mécanicien »</td></tr>
+            <tr style="background:#ede9fe;"><td><strong>Anticorps antiphospholipides</strong><br><em>anticoagulant lupique, anticardiolipine, anti-β2GP1</em></td><td><strong>Syndrome des antiphospholipides</strong>, lupus</td><td>🚨 <strong>Thromboses artérielles et veineuses</strong>, <strong>pertes fœtales à répétition</strong><br>➜ À rechercher devant une TEV non provoquée chez une personne jeune ou des complications obstétricales</td></tr>
+            <tr><td><strong>ANCA</strong></td><td><strong>Vascularites</strong> des petits vaisseaux</td><td>Devant une atteinte <strong>rénale + pulmonaire + ORL</strong> — situation grave, orientation urgente</td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;border-left-color:#be185d;">
+        <div class="block-title" id="con-3"><span class="tag">🦋 Lupus érythémateux disséminé</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>Maladie auto-immune multisystémique</strong> touchant surtout la <strong>femme en âge de procréer</strong>, avec une <strong>évolution par poussées et rémissions</strong>. Sa présentation est protéiforme — d'où sa réputation de grande simulatrice.</div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:20%;">Système</th><th style="width:36%;">Manifestations</th><th>À retenir</th></tr></thead>
+          <tbody>
+            <tr style="background:#fce4ec;"><td><strong>Cutané</strong></td><td><strong>Érythème malaire</strong> en aile de papillon <em>(épargne les plis nasogéniens)</em> · lupus discoïde · <strong>photosensibilité</strong> · alopécie · <strong>aphtes buccaux souvent indolores</strong></td><td>🎯 <strong>Protection solaire rigoureuse</strong> — l'exposition déclenche des poussées cutanées <em>et</em> systémiques</td></tr>
+            <tr><td><strong>Articulaire</strong></td><td>Arthrite ou arthralgies, souvent <strong>symétriques des petites articulations</strong></td><td>🎯 <strong>Non érosive</strong> — c'est ce qui la distingue de la PAR</td></tr>
+            <tr style="background:#e8f4fd;"><td><strong>Rénal</strong></td><td>🚨 <strong>Néphrite lupique</strong> — protéinurie, hématurie, cylindres, HTA, insuffisance rénale</td><td>🚨 <strong>Le déterminant majeur du pronostic</strong> · <strong>longtemps asymptomatique</strong><br>➜ <strong>Analyse d'urine à chaque visite</strong> · voir <em>Syndrome néphritique</em> et <em>néphrotique</em></td></tr>
+            <tr><td><strong>Hématologique</strong></td><td><strong>Anémie</strong> (dont hémolytique auto-immune), <strong>leucopénie</strong>, <strong>lymphopénie</strong>, <strong>thrombopénie</strong></td><td>Les cytopénies sont fréquentes et parfois révélatrices</td></tr>
+            <tr style="background:#f0fdf4;"><td><strong>Séreuses</strong></td><td><strong>Pleurésie</strong>, <strong>péricardite</strong></td><td>Douleur thoracique · à distinguer d'une cause ischémique ou infectieuse</td></tr>
+            <tr><td><strong>Neuropsychiatrique</strong></td><td>Céphalées, convulsions, psychose, troubles cognitifs, AVC, neuropathies</td><td>Diagnostic difficile — écarter infection, médicaments et cause métabolique</td></tr>
+            <tr style="background:#ede9fe;"><td><strong>Vasculaire</strong></td><td><strong>Raynaud</strong> · thromboses si <strong>antiphospholipides</strong></td><td>🚨 <strong>Athérosclérose accélérée</strong> — le risque cardiovasculaire est majeur et souvent négligé chez des patientes jeunes</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px;">
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;border-left:4px solid #1d4ed8;">
+            <strong style="color:#1d4ed8;">🧪 Bilan &amp; suivi</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>AAN</strong> (quasi toujours positif), <strong>anti-ADNdb</strong>, <strong>anti-Sm</strong><br><strong>Complément C3 et C4</strong> — <strong>abaissés</strong> en poussée<br><strong>FSC, créatinine, analyse d'urine</strong> 🎯<br><strong>Anticorps antiphospholipides</strong> à rechercher au diagnostic<br>➜ Suivi de l'activité : <strong>anti-ADNdb, complément, analyse d'urine</strong></div>
+          </div>
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;border-left:4px solid #15803d;">
+            <strong style="color:#15803d;">💊 Principes de traitement</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🎯 <strong>Hydroxychloroquine pour presque tous</strong> — réduit les poussées, protège l'organe, améliore la survie · surveillance <strong>ophtalmologique</strong><br><strong>Corticostéroïdes</strong> selon la sévérité, à la dose la plus faible possible<br><strong>Immunosuppresseurs</strong> et <strong>biothérapies</strong> selon l'atteinte d'organe<br><strong>Protection solaire</strong>, cessation tabagique, vaccination, <strong>santé osseuse</strong><br>➜ Prise en charge en rhumatologie ± néphrologie</div>
+          </div>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">💊 <strong>Lupus induit par un médicament</strong> — à évoquer devant un tableau lupique avec <strong>AAN positifs et anti-histones</strong> : arthralgies, sérosite, atteinte cutanée, mais <strong>atteintes rénale et neurologique rares</strong>. Il <strong>régresse à l'arrêt</strong> du médicament en cause. Toujours revoir la médication avant de conclure à un lupus systémique.</div>
+
+        <div class="key-fact red" style="margin-top:8px;">🤰 <strong>Grossesse et lupus — à planifier :</strong> la grossesse doit idéalement survenir en <strong>période de rémission</strong>. Risques de poussée, de <strong>prééclampsie</strong>, de perte fœtale et de prématurité. ⚠️ <strong>Anti-SSA : risque de bloc cardiaque congénital.</strong> ⚠️ Plusieurs immunosuppresseurs sont <strong>tératogènes</strong> — la contraception et la planification sont indispensables. Voir la section <em>Contraception</em>.</div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;border-left-color:#0369a1;">
+        <div class="block-title" id="con-4"><span class="tag">💧 Syndrome de Sjögren</span></div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:12px;">
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+            <strong style="color:#1d4ed8;">🔍 Présentation</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Infiltration lymphocytaire des <strong>glandes exocrines</strong> :<br><strong>Sécheresse oculaire</strong> — sensation de sable, brûlures<br><strong>Sécheresse buccale</strong> — difficulté à avaler les aliments secs, besoin de boire en mangeant<br>Tuméfaction parotidienne · sécheresse cutanée et vaginale<br><strong>Fatigue</strong> et <strong>arthralgies</strong> très fréquentes</div>
+          </div>
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+            <strong style="color:#15803d;">🧪 Diagnostic</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Anti-SSA (Ro)</strong> et <strong>anti-SSB (La)</strong> · <strong>FR souvent positif</strong> · AAN positifs<br>Tests objectifs de sécheresse — <strong>test de Schirmer</strong>, coloration oculaire<br>Biopsie des glandes salivaires accessoires si nécessaire<br>⚠️ <strong>Primaire</strong> ou <strong>secondaire</strong> à une autre connectivite (PAR, lupus)</div>
+          </div>
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;">
+            <strong style="color:#d35400;">💊 Prise en charge</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Larmes artificielles</strong>, substituts salivaires, agents sialagogues<br>🎯 <strong>Hygiène dentaire rigoureuse</strong> — la sécheresse buccale provoque des <strong>caries rapides et sévères</strong>, souvent sous-estimées<br>Hydroxychloroquine pour les manifestations systémiques<br>Éviter les médicaments <strong>anticholinergiques</strong>, qui aggravent la sécheresse</div>
+          </div>
+          <div style="background:#fce4ec;border-radius:10px;padding:14px;">
+            <strong style="color:#c0392b;">🚨 À surveiller</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🚨 <strong>Risque accru de lymphome</strong> — évoquer devant une <strong>tuméfaction parotidienne persistante ou asymétrique</strong>, des adénopathies, une splénomégalie ou des symptômes B<br>Atteintes systémiques possibles : rénale (acidose tubulaire), pulmonaire, neuropathies</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;border-left-color:#6d28d9;">
+        <div class="block-title" id="con-5"><span class="tag">🖐️ Sclérodermie &amp; phénomène de Raynaud</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>Le Raynaud est le symptôme d'entrée le plus fréquent en première ligne</strong> — et la question utile est : <strong>est-il primaire (banal) ou secondaire (annonciateur d'une connectivite)?</strong></div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:22%;"></th><th style="width:34%;">Raynaud PRIMAIRE</th><th>Raynaud SECONDAIRE</th></tr></thead>
+          <tbody>
+            <tr style="background:#f0fdf4;"><td><strong>Âge de début</strong></td><td><strong>Jeune</strong> — adolescence, début de l'âge adulte</td><td>🎯 <strong>Après 40 ans</strong> — plus inquiétant</td></tr>
+            <tr><td><strong>Symétrie</strong></td><td>Symétrique, épargne les pouces</td><td><strong>Asymétrique</strong> possible</td></tr>
+            <tr style="background:#fce4ec;"><td><strong>Sévérité</strong></td><td>Pas de lésion tissulaire</td><td>🚨 <strong>Ulcérations digitales, cicatrices punctiformes, nécrose</strong></td></tr>
+            <tr><td><strong>Capillaroscopie</strong></td><td>Normale</td><td><strong>Anormale</strong> — mégacapillaires, raréfaction</td></tr>
+            <tr style="background:#e8f4fd;"><td><strong>Sérologies</strong></td><td>AAN négatifs</td><td><strong>AAN positifs</strong>, anticorps spécifiques</td></tr>
+            <tr><td><strong>Conduite</strong></td><td>Mesures de protection contre le froid, rassurer</td><td>🎯 <strong>Investiguer et orienter</strong> — peut précéder la connectivite de plusieurs années</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px;">
+          <div style="background:#ede9fe;border-radius:10px;padding:14px;border-left:4px solid #6d28d9;">
+            <strong style="color:#6d28d9;">🖐️ Sclérodermie — les deux formes</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Limitée</strong> — épaississement cutané distal (mains, visage) · <strong>anti-centromère</strong> · évolution lente<br>🚨 Risque d'<strong>hypertension artérielle pulmonaire</strong><br><em>Manifestations associées : calcinose, Raynaud, atteinte œsophagienne, sclérodactylie, télangiectasies</em><br><br><strong>Diffuse</strong> — atteinte cutanée étendue, progression rapide · <strong>anti-Scl70</strong><br>🚨 Risque de <strong>fibrose pulmonaire</strong> et de <strong>crise rénale sclérodermique</strong></div>
+          </div>
+          <div style="background:#fef2f2;border-radius:10px;padding:14px;border-left:4px solid #c0392b;">
+            <strong style="color:#c0392b;">🚨 Ce qu'il faut surveiller</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🚨 <strong>Crise rénale sclérodermique</strong> — <strong>HTA sévère d'apparition brutale</strong> + insuffisance rénale : urgence, traitement par IECA<br>⚠️ Les <strong>corticostéroïdes à dose élevée en augmentent le risque</strong> — prudence<br><strong>Dyspnée</strong> → fibrose pulmonaire ou HTAP : dépistage régulier<br><strong>Dysphagie et RGO sévère</strong> — atteinte œsophagienne quasi constante<br><strong>Ulcères digitaux</strong> — douloureux, risque d'infection et de nécrose</div>
+          </div>
+        </div>
+
+        <div class="key-fact green" style="margin-top:12px;">🧤 <strong>Conseils concrets pour le Raynaud :</strong> se couvrir <strong>le tronc autant que les mains</strong> (la vasoconstriction est réflexe et systémique), mitaines plutôt que gants, chauffe-mains, <strong>cessation tabagique</strong> impérative, éviter les vasoconstricteurs — décongestionnants, certains bêtabloquants, stimulants. Les inhibiteurs calciques sont le traitement pharmacologique usuel quand les mesures ne suffisent pas.</div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;border-left-color:#b45309;">
+        <div class="block-title" id="con-6"><span class="tag">💪 Myosites inflammatoires</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>Le signal clinique :</strong> <strong>faiblesse musculaire proximale, symétrique, d'installation progressive</strong> — difficulté à monter les escaliers, à se lever d'une chaise, à se coiffer. <strong>La faiblesse domine la douleur</strong> — un point qui distingue la myosite des myalgies banales.</div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-top:12px;">
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+            <strong style="color:#1d4ed8;">🔬 Investigation</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>CK élevées</strong> — souvent très élevées<br>Aldolase, AST/ALT (origine musculaire possible)<br><strong>AAN</strong>, <strong>anti-Jo1</strong> et autres anti-synthétases<br><strong>EMG</strong> · <strong>IRM musculaire</strong> · <strong>biopsie musculaire</strong></div>
+          </div>
+          <div style="background:#fce4ec;border-radius:10px;padding:14px;">
+            <strong style="color:#c0392b;">🩹 Dermatomyosite</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Atteinte cutanée caractéristique :<br><strong>Érythème héliotrope</strong> des paupières<br><strong>Papules de Gottron</strong> sur les articulations des doigts<br>Érythème en châle, mains de mécanicien<br>🚨 <strong>Association aux néoplasies</strong> — un <strong>dépistage néoplasique adapté à l'âge est indiqué</strong>, particulièrement chez l'adulte</div>
+          </div>
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;">
+            <strong style="color:#d35400;">⚠️ Diagnostic différentiel essentiel</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🎯 <strong>Myopathie médicamenteuse — les statines en premier lieu</strong><br><strong>Hypothyroïdie</strong> — cause fréquente et facilement corrigée<br>Troubles électrolytiques · alcool · corticostéroïdes<br>Myopathies héréditaires · maladies neurologiques<br><strong>Polymyalgia rheumatica</strong> — mais là, c'est la <em>raideur</em> qui domine, pas la faiblesse, et les CK sont <strong>normales</strong></div>
+          </div>
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+            <strong style="color:#15803d;">🚨 Complications à surveiller</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Dysphagie</strong> — atteinte des muscles pharyngés : risque de <strong>pneumonie d'aspiration</strong><br><strong>Pneumopathie interstitielle</strong> — surtout avec anti-synthétases<br>Atteinte cardiaque<br>Faiblesse des muscles respiratoires</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block rx" style="margin-top:14px;border-left-color:#dc2626;">
+        <div class="block-title" id="con-7"><span class="tag">👁️ PPR &amp; artérite à cellules géantes — l'urgence à ne pas manquer</span></div>
+
+        <div class="key-fact red" style="margin-top:10px;">🚨 <strong>L'urgence la plus importante de toute la rhumatologie en première ligne.</strong> L'artérite à cellules géantes peut causer une <strong>perte de vision irréversible</strong>. La corticothérapie <strong>protège contre cette complication</strong> et fait habituellement disparaître rapidement les symptômes. <strong>Devant une suspicion sérieuse, on traite sans attendre les résultats des examens.</strong></div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:20%;"></th><th style="width:36%;">Pseudopolyarthrite rhizomélique (PPR)</th><th>Artérite à cellules géantes (ACG)</th></tr></thead>
+          <tbody>
+            <tr style="background:#e8f4fd;"><td><strong>Nature</strong></td><td>Syndrome inflammatoire <strong>clinique</strong></td><td><strong>Vascularite des gros vaisseaux</strong></td></tr>
+            <tr><td><strong>Âge</strong></td><td colspan="2">🎯 <strong>Exclusivement après 50 ans</strong> — un diagnostic de PPR ou d'ACG avant 50 ans doit être remis en question</td></tr>
+            <tr style="background:#f0fdf4;"><td><strong>Symptômes</strong></td><td><strong>Douleur et raideur symétriques des ceintures</strong> scapulaire et pelvienne · <strong>raideur matinale marquée</strong> · installation souvent rapide · difficulté à se lever, à se coiffer</td><td>🚨 <strong>Céphalée</strong> temporale nouvelle · <strong>claudication de la mâchoire</strong> · sensibilité du cuir chevelu · <strong>troubles visuels</strong> · artère temporale indurée ou peu pulsatile<br>Symptômes de PPR présents chez la majorité des patients · fièvre, perte de poids</td></tr>
+            <tr><td><strong>Biologie</strong></td><td colspan="2"><strong>VS et CRP élevées</strong> · anémie inflammatoire · ⚠️ des cas à marqueurs normaux existent</td></tr>
+            <tr style="background:#fff8e1;"><td><strong>Diagnostic</strong></td><td>🎯 <strong>Essentiellement clinique</strong> · <strong>réponse spectaculaire à une faible dose de corticostéroïdes</strong> — argument diagnostique majeur</td><td><strong>Biopsie de l'artère temporale</strong> — examen de référence<br>🎯 <strong>Reste interprétable au moins 2 semaines après le début de la corticothérapie</strong> — ne jamais retarder le traitement pour la biopsie<br>Imagerie des gros vaisseaux : échographie, IRM/ARM, TEP</td></tr>
+            <tr><td><strong>Traitement</strong></td><td><strong>Corticostéroïdes à faible dose</strong> — efficacité rapide</td><td><strong>Corticostéroïdes à dose modérée à élevée</strong>, sans délai<br><strong>Tocilizumab</strong> (anti-récepteur de l'IL-6) : efficace et approuvé, permet d'épargner les corticostéroïdes</td></tr>
+            <tr style="background:#fce4ec;"><td><strong>Durée</strong></td><td colspan="2">Traitement prolongé, avec <strong>sevrage lent</strong> sur de nombreux mois — souvent <strong>18 à 24 mois</strong> pour l'ACG, avec surveillance des rechutes</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px;">
+          <div style="background:#fef2f2;border-radius:10px;padding:14px;border-left:4px solid #c0392b;">
+            <strong style="color:#c0392b;">🚨 La conduite devant une suspicion d'ACG</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>①</strong> Suspicion clinique, <strong>surtout si symptômes visuels</strong><br><strong>②</strong> <strong>Amorcer la corticothérapie immédiatement</strong> — ne pas attendre la biopsie ni les résultats<br><strong>③</strong> VS, CRP, FSC · orientation <strong>urgente</strong> en rhumatologie ± ophtalmologie<br><strong>④</strong> Organiser la <strong>biopsie temporale</strong> rapidement<br>🎯 <strong>Une vision perdue ne revient pas.</strong> Le risque de traiter à tort quelques jours est sans commune mesure avec celui de la cécité.</div>
+          </div>
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;border-left:4px solid #d35400;">
+            <strong style="color:#d35400;">💊 Le suivi des corticostéroïdes — rôle de l'IPS</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">La <strong>morbidité de la corticothérapie prolongée est considérable</strong> dans cette population âgée et vulnérable :<br><strong>Ostéoporose</strong> — calcium, vitamine D, ostéodensitométrie, traitement antirésorptif<br><strong>Hyperglycémie et diabète cortico-induit</strong><br><strong>HTA</strong>, prise de poids, <strong>insomnie</strong>, fragilité cutanée<br><strong>Infections</strong> · <strong>cataracte et glaucome</strong><br>🎯 C'est un suivi typiquement partagé — et c'est vous qui verrez ces complications</div>
+          </div>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">⚠️ <strong>Deux pièges classiques :</strong> ① une <strong>PPR chez une personne âgée peut en réalité être une PAR à début tardif</strong> — des tests pour l'écarter peuvent être indiqués; ② une <strong>PPR qui répond mal aux corticostéroïdes, ou qui rechute à la baisse</strong>, doit faire reconsidérer le diagnostic — ACG occulte, néoplasie, infection, myosite.</div>
+      </div>
+
+      <div class="block flag" style="margin-top:14px;">
+        <div class="block-title" id="con-8"><span class="tag">🚨 Red flags</span></div>
+
+        <div class="flag-list" style="margin-top:12px;">
+          <div class="flag-item">🚨 <strong>Plus de 50 ans + céphalée temporale nouvelle, claudication de la mâchoire ou trouble visuel</strong> — <strong>artérite à cellules géantes</strong> : corticothérapie immédiate, orientation urgente</div>
+          <div class="flag-item">🚨 <strong>Protéinurie ou hématurie</strong> chez un patient avec connectivite — atteinte rénale active, souvent asymptomatique</div>
+          <div class="flag-item">🚨 <strong>HTA sévère d'apparition brutale avec insuffisance rénale chez un patient sclérodermique</strong> — <strong>crise rénale sclérodermique</strong></div>
+          <div class="flag-item">🚨 <strong>Hémoptysie + atteinte rénale</strong> — syndrome pneumo-rénal, vascularite : urgence</div>
+          <div class="flag-item"><strong>Ulcérations digitales ou nécrose</strong> — Raynaud secondaire sévère, vascularite</div>
+          <div class="flag-item"><strong>Faiblesse proximale avec CK élevées</strong> — myosite · écarter d'abord statines et hypothyroïdie</div>
+          <div class="flag-item"><strong>Dysphagie chez un patient avec myosite</strong> — risque de pneumonie d'aspiration</div>
+          <div class="flag-item"><strong>Dyspnée nouvelle</strong> chez un patient avec connectivite — pneumopathie interstitielle, HTAP, sérosite</div>
+          <div class="flag-item"><strong>Tuméfaction parotidienne persistante ou asymétrique dans un Sjögren</strong> — évoquer un <strong>lymphome</strong></div>
+          <div class="flag-item"><strong>Thrombose non provoquée chez une personne jeune, ou pertes fœtales à répétition</strong> — rechercher un <strong>syndrome des antiphospholipides</strong></div>
+          <div class="flag-item"><strong>Fièvre chez un patient sous immunosuppresseur</strong> — infection jusqu'à preuve du contraire, y compris opportuniste</div>
+          <div class="flag-item">⚠️ <strong>AAN positif isolé sans manifestation clinique</strong> — ne pas transformer un résultat de laboratoire en maladie</div>
+        </div>
+      </div>
+    </div>
+
     <div class="section" id="sec-msk">
       <div class="section-header" style="background:linear-gradient(135deg,#78350f,#92400e);padding:20px 24px;border-radius:12px;margin-bottom:18px;color:#fff">
         <h2 style="margin:0;font-size:1.4rem">🦴 Musculosquelettique (MSK)</h2>
@@ -49086,6 +50335,11 @@ const SEARCH_INDEX = [
   { id:'schizophrenie',       title:'Schizophrénie & Psychose',           specialty:'Santé Mentale',      keywords:['schizophrénie','psychose','antipsychotique','clozapine','halopéridol','délire','hallucination','smn','dsp','désinstitutionnalisation'] },
   { id:'toc-tspt',            title:'TOC & TSPT',                         specialty:'Santé Mentale',      keywords:['toc','tspt','trouble obsessionnel','stress post-traumatique','compulsion','obsession','evitement','isrs','venlafaxine','prazosin','emdr'] },
   { id:'msk',                 title:'Musculosquelettique & MSK',          specialty:'Rhumatologie',       keywords:['msk','musculosquelettique','arthrite','tendinite','bursite','fracture','lombalgie','genou','épaule','hanche','ottawa','sport'] },
+  { id:'arthrite-approche',  title:'Approche de la Douleur Articulaire', specialty:'Rhumatologie', keywords:['arthrite','arthralgie','douleur articulaire','inflammatoire','mécanique','raideur matinale','monoarthrite','oligoarthrite','polyarthrite','synovite','ponction articulaire','liquide synovial','cristaux','septique','facteur rhumatoïde','anti-ccp','aan','ana','hla-b27','vs','crp','ipd','dactylite','enthésite'] },
+  { id:'par',                title:'Polyarthrite Rhumatoïde',         specialty:'Rhumatologie', keywords:['polyarthrite rhumatoïde','par','pr','arthrite rhumatoïde','anti-ccp','acpa','facteur rhumatoïde','méthotrexate','mtx','dmard','biothérapie','anti-tnf','jak','hydroxychloroquine','sulfasalazine','léflunomide','pannus','érosion','felty','nodule rhumatoïde','c1-c2','pneumopathie interstitielle','traiter à la cible','acr','eular','déviation cubitale'] },
+  { id:'goutte',             title:'Goutte & Arthrites Microcristallines', specialty:'Rhumatologie', keywords:['goutte','gout','urate','acide urique','uricémie','podagre','colchicine','allopurinol','fébuxostat','probénécide','tophus','hyperuricémie','pseudogoutte','ppc','pyrophosphate','chondrocalcinose','cristaux','diurétique','xanthine oxydase','360','300'] },
+  { id:'spondylarthrites',   title:'Spondylarthrites',               specialty:'Rhumatologie', keywords:['spondylarthrite','spondylarthrite ankylosante','axiale','non radiographique','sacro-iliite','hla-b27','lombalgie inflammatoire','enthésite','dactylite','talalgie','uvéite','psoriasique','rhumatisme psoriasique','arthrite réactionnelle','mii','syndesmophyte','anti-il-17','anti-tnf'] },
+  { id:'connectivites',      title:'Connectivites & Vascularites',   specialty:'Rhumatologie', keywords:['connectivite','lupus','les','aan','anti-adn','anti-sm','néphrite lupique','hydroxychloroquine','sjögren','anti-ssa','anti-ssb','sécheresse','sclérodermie','raynaud','anti-scl70','anti-centromère','crise rénale','myosite','dermatomyosite','ck','anti-jo1','vascularite','anca','antiphospholipides','ppr','pseudopolyarthrite rhizomélique','horton','artérite à cellules géantes','acg','biopsie temporale','tocilizumab'] },
   { id:'mvl-psn',            title:'MVL & Produits de santé naturels', specialty:'Pharmacologie',      keywords:['mvl','vente libre','automédication','psn','produit de santé naturel','acétaminophène','ibuprofène','décongestionnant','antihistaminique','rhume','allergie','topique','millepertuis','interactions psn','npn','din'] },
   { id:'pharmacoguide',       title:'Guide Pharmacologique',              specialty:'Pharmacologie',      keywords:['pharmacologie','médicament','pharmacocinétique','pharmacodynamie','interactions','prescription','posologie'] },
   { id:'quiz',                title:'Quiz Clinique Interactif',           specialty:'Formation',          keywords:['quiz','qcm','questions','auto-évaluation','formation','révision'] },
@@ -49361,6 +50615,8 @@ const SECTION_ORDER = [
   'gyneco-anatomie','cycles-hormonaux','contraception','sua','cancer-col','cancer-endo','menopause','survivance',
   // Prévention & Dépistage
   'depistage',
+  // Rhumatologie
+  'arthrite-approche','par','goutte','spondylarthrites','connectivites',
   // Musculosquelettique
   'msk',
   // Pharmacologie
@@ -49372,6 +50628,7 @@ const SECTION_ORDER = [
 
 // Section titles for display in nav buttons
 const SECTION_TITLES = {
+  'arthrite-approche':'Approche Douleur Articulaire','par':'Polyarthrite Rhumatoïde','goutte':'Goutte & Microcristaux','spondylarthrites':'Spondylarthrites','connectivites':'Connectivites & Vascularites',
   'geriatrie-eval':'Évaluation Gériatrique','delirium':'Délirium','tnc':'Troubles Neurocognitifs','chutes':'Chutes & Mobilité','polypharmacie':'Polypharmacie & Déprescription',
   'athero':'Athérosclérose','anevrisme':'Anévrisme','rein-anatomie':'Anatomie Rein','bases-endo':'Bases Physiologiques Endo.','pneumo-eval':'Évaluation Pulmonaire','pneumo-gazo':'Gazométrie & Acide-Base','pneumo-aco':'ACO','pneumo-o2':'O₂ Domicile & Conduite','pneumo-pneumonie':'Pneumonie','pneumo-autres-patho':'Autres Patho. Pulmonaires','pneumo-ira':'Insuffisance Respiratoire','pneumo-htp':'HTP & Cor Pulmonale','douleur':'Douleur & Analgésie','ddx-abdo':'Douleur Abdominale — DDx','mii':'MII — Crohn & Colite','diverticulite':'Diverticulite Aiguë','choledocholithiase':'Cholédocholithiase','cholangite':'Cholangite','pancreatite':'Pancréatite Aiguë','msk':'Guide MSK','quiz':'Quiz',
   'home':'Accueil','calculateurs':'Calculateurs',
@@ -50123,6 +51380,16 @@ function switchHtpTx(n){
 }
 
 
+
+
+function switchParTx(n){
+  [0,1,2].forEach(function(i){
+    var pnl=document.getElementById("parp"+i);
+    var btn=document.getElementById("partab"+i);
+    if(pnl) pnl.style.display=(i===n)?"block":"none";
+    if(btn){btn.style.background=(i===n)?"#0a7a4e":"#e0e0e0";btn.style.color=(i===n)?"#fff":"#333";}
+  });
+}
 
 function switchDelTx(n){
   [0,1,2].forEach(function(i){
