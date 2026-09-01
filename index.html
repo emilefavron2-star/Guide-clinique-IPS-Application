@@ -1123,6 +1123,16 @@ m
       </div>
     </div>
 
+    <!-- Soins critiques -->
+    <div class="specialty-group" id="grp-soinscritiques">
+      <div class="specialty-header" onclick="toggleGroup('grp-soinscritiques')">
+        <span class="emoji">⚡</span> Soins critiques
+        <svg class="chevron" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>      </div>
+      <div class="specialty-items">
+        <div class="nav-item" onclick="showSection('chocs')">Les Chocs</div>
+      </div>
+    </div>
+
     <!-- Niveau de soins & Soins palliatifs -->
     <div class="specialty-group" id="grp-soinspallia">
       <div class="specialty-header" onclick="toggleGroup('grp-soinspallia')">
@@ -1208,6 +1218,16 @@ m
       </div>
     </div>
 
+
+    <!-- Imagerie -->
+    <div class="specialty-group" id="grp-imagerie">
+      <div class="specialty-header" onclick="toggleGroup('grp-imagerie')">
+        <span class="emoji">🩻</span> Imagerie
+        <svg class="chevron" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>      </div>
+      <div class="specialty-items">
+        <div class="nav-item" onclick="showSection('imagerie-thorax')">Imagerie du Thorax</div>
+      </div>
+    </div>
 
     <!-- Rhumatologie -->
     <div class="specialty-group" id="grp-rhumato">
@@ -1406,6 +1426,13 @@ m
             <div class="home-card-count">16 sections</div>
           </div>
         </div>
+        <div class="home-card" onclick="showSection('chocs'); openGroup('grp-soinscritiques')">
+          <div class="home-card-icon" style="background:#fef2f2;color:#991b1b">⚡</div>
+          <div class="home-card-body">
+            <div class="home-card-name">Soins Critiques</div>
+            <div class="home-card-count">1 section</div>
+          </div>
+        </div>
         <div class="home-card" onclick="showSection('niveau-soins'); openGroup('grp-soinspallia')">
           <div class="home-card-icon" style="background:#f1f5f9;color:#374151">⚕️</div>
           <div class="home-card-body">
@@ -1487,6 +1514,13 @@ m
           <div class="home-card-icon" style="background:#fdf4ff;color:#7c3aed">🩹</div>
           <div class="home-card-body">
             <div class="home-card-name">Dermatologie</div>
+            <div class="home-card-count">1 section</div>
+          </div>
+        </div>
+        <div class="home-card" onclick="showSection('imagerie-thorax'); openGroup('grp-imagerie')">
+          <div class="home-card-icon" style="background:#f8fafc;color:#475569">🩻</div>
+          <div class="home-card-body">
+            <div class="home-card-name">Imagerie</div>
             <div class="home-card-count">1 section</div>
           </div>
         </div>
@@ -24570,6 +24604,265 @@ function switchNeoRec(n) {
 </div>
 
     <!-- Niveau de Soins (AMM + Palliatif) -->
+    <div class="section" id="sec-chocs">
+      <div class="section-header">
+        <div class="section-accent" style="background:#991b1b">⚡</div>
+        <div class="section-title"><h1>Les chocs</h1><div class="breadcrumb">Soins critiques <span class="breadcrumb-sep">·</span> 4 types <span class="breadcrumb-sep">·</span> Lactate <span class="breadcrumb-sep">·</span> Vasopresseurs</div></div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;">
+        <button onclick="goToBlock('choc-1')" style="background:#374151;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧬 Définition &amp; mécanismes</button>
+        <button onclick="goToBlock('choc-2')" style="background:#c0392b;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🔍 Reconnaître le choc</button>
+        <button onclick="goToBlock('choc-3')" style="background:#6d28d9;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🗂️ Les 4 types</button>
+        <button onclick="goToBlock('choc-4')" style="background:#0369a1;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🩺 Examen physique</button>
+        <button onclick="goToBlock('choc-5')" style="background:#0f766e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧪 Bilan &amp; échographie</button>
+        <button onclick="goToBlock('choc-6')" style="background:#0a7a4e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">⏱️ La première heure</button>
+        <button onclick="goToBlock('choc-7')" style="background:#b45309;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🦠 Sepsis &amp; choc septique</button>
+        <button onclick="goToBlock('choc-8')" style="background:#0891b2;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">📈 Suivi de la réanimation</button>
+        <button onclick="goToBlock('choc-9')" style="background:#dc2626;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🚨 Red flags</button>
+      </div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:20px;">
+        <div style="flex:1;min-width:95px;background:#FEE2E2;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#b91c1c;">TAs &lt; 90<br>TAM &lt; 65</div><div style="font-size:11px;color:#555;margin-top:4px;">Seuils usuels d'hypotension</div></div>
+        <div style="flex:1;min-width:95px;background:#FEF9C3;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#854d0e;">Lactate ↑</div><div style="font-size:11px;color:#555;margin-top:4px;">Marqueur d'hypoperfusion</div></div>
+        <div style="flex:1;min-width:95px;background:#F3E8FF;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#6d28d9;">&gt; 50 %</div><div style="font-size:11px;color:#555;margin-top:4px;">Des chocs sont septiques</div></div>
+        <div style="flex:1;min-width:95px;background:#DCFCE7;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#15803d;">0,5–0,7</div><div style="font-size:11px;color:#555;margin-top:4px;">Indice de choc normal (FC/TAs)</div></div>
+      </div>
+
+      <div class="block def" style="margin-top:14px;">
+        <div class="block-title" id="choc-1"><span class="tag">🧬 Définition &amp; mécanismes</span></div>
+
+        <div class="key-fact red" style="margin-top:10px;">🎯 <strong>Définition :</strong> le choc est une <strong>dysfonction circulatoire aiguë entraînant une perfusion tissulaire inadéquate</strong>. C'est une <strong>urgence médicale</strong> : sans diagnostic et intervention rapides, l'évolution se fait vers le <strong>collapsus circulatoire, la défaillance multiviscérale et le décès</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Goldman-Cecil, ch. 98 « Approach to the Patient with Shock »</em></span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>Le choc n'est pas synonyme d'hypotension.</strong> On peut être hypotendu sans être en choc (hypotension chronique bien tolérée), et être <strong>en choc avec une tension encore normale</strong> — c'est le <strong>choc compensé</strong>, où la vasoconstriction maintient la pression au prix de la perfusion des organes. <strong>Le critère est la perfusion, pas le chiffre.</strong></div>
+
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">⚙️ La logique mécanique — deux grandes familles</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;border-left:4px solid #1d4ed8;">
+            <strong style="color:#1d4ed8;">📉 Débit cardiaque abaissé</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Hypovolémique</strong> — il manque de volume à éjecter<br><strong>Cardiogénique</strong> — la pompe est défaillante<br><strong>Obstructif</strong> — un obstacle mécanique empêche le remplissage ou l'éjection<br>➜ Cliniquement : <strong>extrémités froides</strong>, vasoconstriction compensatrice</div>
+          </div>
+          <div style="background:#fce4ec;border-radius:10px;padding:14px;border-left:4px solid #c0392b;">
+            <strong style="color:#c0392b;">🌡️ Perte du tonus vasomoteur</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Distributif</strong> — le contenant se dilate, le volume devient relativement insuffisant<br>Causes : <strong>sepsis</strong>, anaphylaxie, choc neurogénique, insuffisance surrénalienne<br>➜ Cliniquement : <strong>extrémités souvent chaudes</strong> au début — d'où le piège<br>🎯 <strong>Le choc septique, principalement distributif, représente plus de la moitié des chocs.</strong></div>
+          </div>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">🧮 <strong>Le raisonnement en trois variables :</strong> la pression artérielle dépend du <strong>débit cardiaque</strong> et des <strong>résistances vasculaires</strong>. Le débit cardiaque dépend lui-même de la <strong>précharge</strong> (volume), de la <strong>contractilité</strong> (pompe) et de la <strong>postcharge</strong>. Identifier <em>laquelle</em> de ces variables est en cause, c'est identifier le type de choc — et donc le traitement.</div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;border-left-color:#c0392b;">
+        <div class="block-title" id="choc-2"><span class="tag">🔍 Reconnaître le choc — avant qu'il soit évident</span></div>
+
+        <div class="key-fact red" style="margin-top:10px;">⏳ <strong>Le message central :</strong> quand la tension chute, la compensation a déjà échoué. <strong>Les signes précoces sont non spécifiques</strong> — c'est là qu'il faut les reconnaître, pas au stade du collapsus.</div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;border-left:4px solid #d35400;">
+            <strong style="color:#d35400;">🌱 Phase précoce — compensation</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Dominée par les signes de la <strong>cause déclenchante</strong> (douleur thoracique, fièvre et toux…).<br><strong>↑ fréquence respiratoire</strong> — génère une alcalose respiratoire qui compense l'acidose métabolique naissante<br><strong>Tachycardie</strong><br><strong>Parfois une hausse transitoire de la TA</strong><br><strong>Vasoconstriction périphérique</strong> → peau froide, cyanose périphérique, remplissage capillaire lent<br>🚨 <strong>Exception majeure :</strong> dans le choc <strong>distributif</strong> naissant, l'atteinte du tonus vasomoteur donne paradoxalement des <strong>extrémités chaudes et rouges</strong>.</div>
+          </div>
+          <div style="background:#fce4ec;border-radius:10px;padding:14px;border-left:4px solid #c0392b;">
+            <strong style="color:#c0392b;">🔴 Choc établi</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Hypotension</strong> + <strong>signes de perfusion inadéquate</strong><br>Repères usuels : <strong>TA systolique &lt; 90 mmHg</strong> ou <strong>TA moyenne &lt; 60–65 mmHg</strong> — au-delà, l'autorégulation ne suffit plus à protéger les organes vitaux<br><strong>Atteinte de l'état de conscience</strong> : confusion, désorientation, agitation, coma<br>⚠️ <strong>Une personne hypertendue chronique peut être symptomatique à une TA « normale »</strong> — son seuil d'autorégulation est décalé vers le haut.</div>
+          </div>
+        </div>
+
+        <div class="key-fact blue" style="margin-top:12px;">📊 <strong>Deux repères chiffrés utiles :</strong><br><strong>Indice de choc = FC / TA systolique</strong> — normal entre <strong>0,5 et 0,7</strong>. Il monte avant que la tension ne s'effondre.<br><strong>Pression pulsée = TAs − TAd</strong>, reflet du volume d'éjection : elle <strong>augmente tôt puis diminue AVANT la chute de la systolique</strong> — un signal précoce souvent ignoré.<br><em>TAM = TAd + (pression pulsée / 3)</em></div>
+      </div>
+
+      <div class="block para" style="margin-top:14px;border-left-color:#6d28d9;">
+        <div class="block-title" id="choc-3"><span class="tag">🗂️ Les quatre types — tableau différentiel</span></div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:16%;">Type</th><th style="width:24%;">Causes</th><th style="width:22%;">Indices cliniques</th><th>Orientation thérapeutique</th></tr></thead>
+          <tbody>
+            <tr style="background:#e8f4fd;"><td><strong>Hypovolémique</strong><br><em>↓ précharge</em></td><td><strong>Hémorragie</strong> (trauma, digestive, rupture d'anévrisme)<br>Pertes digestives, brûlures, déshydratation, 3<sup>e</sup> secteur</td><td><strong>Jugulaires plates</strong><br>Muqueuses sèches, pli cutané<br>Extrémités froides<br>Saignement visible ou trauma</td><td>🎯 <strong>Remplissage rapide</strong> · <strong>contrôle de la source</strong> · transfusion si hémorragie</td></tr>
+            <tr style="background:#fce4ec;"><td><strong>Cardiogénique</strong><br><em>↓ contractilité</em></td><td><strong>Infarctus</strong> ⭐ · insuffisance cardiaque décompensée · arythmie · valvulopathie aiguë · myocardite</td><td>🎯 <strong>Jugulaires distendues</strong><br>Crépitants, œdème pulmonaire<br>B3, souffle<br>Extrémités froides</td><td>⚠️ <strong>PAS de remplissage massif</strong> — un petit bolus peut être nécessaire, mais le <strong>soutien inotrope est la stratégie principale</strong><br>Revascularisation en cas d'infarctus</td></tr>
+            <tr style="background:#f0fdf4;"><td><strong>Distributif</strong><br><em>↓ résistances</em></td><td>🎯 <strong>Sepsis</strong> (le plus fréquent) · <strong>anaphylaxie</strong> · choc neurogénique (lésion médullaire) · insuffisance surrénalienne</td><td><strong>Extrémités chaudes</strong> au début<br>Fièvre ou hypothermie<br>Pression pulsée élargie<br>Urticaire, œdème (anaphylaxie)<br>Bradycardie (neurogénique)</td><td><strong>Remplissage</strong> + <strong>vasopresseurs</strong><br>Traiter la cause : antibiotiques et contrôle de la source · <strong>adrénaline IM</strong> en anaphylaxie</td></tr>
+            <tr style="background:#fff3cd;"><td><strong>Obstructif</strong><br><em>obstacle mécanique</em></td><td>🚨 <strong>Pneumothorax sous tension</strong><br>🚨 <strong>Tamponnade</strong><br>🚨 <strong>Embolie pulmonaire massive</strong></td><td><strong>Jugulaires distendues</strong><br>Pneumothorax : ↓ murmure, déviation trachéale<br>Tamponnade : bruits assourdis, <strong>pouls paradoxal</strong><br>EP : hypoxie, cœur droit</td><td>🎯 <strong>Lever l'obstacle — c'est le traitement</strong><br>Décompression à l'aiguille · péricardiocentèse · reperfusion<br><em>Le remplissage et les amines ne font que gagner du temps</em></td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">🎯 <strong>La question qui oriente le plus vite :</strong> <strong>les jugulaires sont-elles plates ou distendues?</strong><br><strong>Plates</strong> → hypovolémique (ou distributif)<br><strong>Distendues</strong> → cardiogénique ou obstructif<br>Combinée à la <strong>température des extrémités</strong> (froides = bas débit, chaudes = vasoplégie), cette seule observation classe la majorité des chocs au chevet.</div>
+
+        <div class="key-fact red" style="margin-top:8px;">⚠️ <strong>Les chocs mixtes sont fréquents</strong> — un patient septique peut aussi être hypovolémique et développer une dysfonction myocardique. Le type dominant peut <strong>changer au fil de la réanimation</strong> : réévaluer, ne pas s'enfermer dans le diagnostic initial.</div>
+      </div>
+
+      <div class="block para" style="margin-top:14px;border-left-color:#0369a1;">
+        <div class="block-title" id="choc-4"><span class="tag">🩺 Examen physique — ce que chaque signe raconte</span></div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:20%;">Système</th><th>Signes &amp; interprétation</th></tr></thead>
+          <tbody>
+            <tr style="background:#ede9fe;"><td><strong>Neurologique</strong></td><td><strong>Délirium, agitation, désorientation, confusion, coma</strong> — secondaires à la baisse de la pression de perfusion cérébrale (<strong>TAM − pression intracrânienne</strong>)<br>⚠️ Les personnes <strong>hypertendues chroniques</strong> ou à pression intracrânienne élevée sont symptomatiques à des tensions « normales »<br>Respiration de Cheyne-Stokes possible en insuffisance cardiaque décompensée sévère</td></tr>
+            <tr><td><strong>Température</strong></td><td><strong>Hyperthermie</strong> → augmente la respiration tissulaire et les besoins en oxygène<br><strong>Hypothermie</strong> → survient quand l'apport d'oxygène chute ou que la respiration cellulaire est altérée — <strong>signe de gravité</strong>, pas de bénignité</td></tr>
+            <tr style="background:#e0f2fe;"><td><strong>Peau</strong></td><td><strong>Extrémités distales froides</strong> — surtout avec <strong>bicarbonates bas et lactate élevé</strong> : combinaison très évocatrice d'hypoperfusion<br>Pâleur, cyanose, sudation, <strong>remplissage capillaire ralenti</strong>, marbrures<br><strong>Muqueuses sèches et pli cutané</strong> → hypovolémie<br>🎯 <strong>La température de l'orteil corrèle avec la sévérité du choc</strong></td></tr>
+            <tr><td><strong>Jugulaires</strong></td><td><strong>Distendues</strong> → insuffisance cardiaque, embolie pulmonaire, tamponnade<br><strong>Plates</strong> → hypovolémie</td></tr>
+            <tr style="background:#fce4ec;"><td><strong>Fréquence cardiaque</strong></td><td>Habituellement <strong>élevée</strong><br>🚨 <strong>Mais une bradycardie paradoxale est possible</strong> chez une personne avec cardiopathie préexistante ou en <strong>hémorragie sévère</strong> — ne pas se laisser faussement rassurer<br>La variabilité de la FC est associée à un pronostic défavorable</td></tr>
+            <tr><td><strong>Tension artérielle</strong></td><td><strong>Systolique</strong> : peut <strong>monter légèrement au début</strong> (↑ contractilité) puis chuter<br>⚠️ <strong>Un seul épisode d'hypotension inexpliquée avec TAs &lt; 80 mmHg s'accompagne d'une mortalité hospitalière d'environ 18 %</strong><br><strong>Diastolique</strong> : reflète la vasoconstriction artériolaire — monte tôt, chute quand la compensation échoue</td></tr>
+            <tr style="background:#f0fdf4;"><td><strong>Pouls paradoxal</strong></td><td>Chute de la TAs <strong>&gt; 10 mmHg à l'inspiration</strong> — <strong>asthme, tamponnade, embolie gazeuse</strong></td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+
+      <div class="block para" style="margin-top:14px;border-left-color:#0f766e;">
+        <div class="block-title" id="choc-5"><span class="tag">🧪 Bilan &amp; échographie au chevet</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>Le diagnostic présomptif repose sur trois éléments :</strong> <strong>hypotension</strong> + <strong>signes d'hypoperfusion</strong> + <strong>acidose lactique</strong>. Une <strong>anamnèse rapide</strong>, un <strong>examen clinique</strong> et une <strong>échographie au chevet</strong> permettent d'établir le type probable de choc, ce qui guide le traitement et aide à identifier la cause.</div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;border-left:4px solid #1d4ed8;">
+            <strong style="color:#1d4ed8;">🧪 Laboratoire &amp; imagerie initiale</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🎯 <strong>Lactate sérique élevé</strong> — marqueur central d'hypoperfusion<br><strong>Gaz</strong> (acidose métabolique), <strong>ionogramme</strong>, <strong>créatinine</strong>, <strong>FSC</strong>, <strong>bilan hépatique</strong>, <strong>coagulation</strong><br><strong>Hémocultures</strong> et cultures selon le foyer suspecté<br><strong>Troponine</strong>, <strong>ECG</strong><br><strong>Radiographie pulmonaire</strong><br><strong>β-hCG</strong> chez toute personne en âge de procréer</div>
+          </div>
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;border-left:4px solid #15803d;">
+            <strong style="color:#15803d;">🔊 Échographie au chevet — ce qu'on cherche</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Taille des cavités, remplissage et contractilité</strong> → cardiogénique vs hypovolémique<br><strong>Épanchement péricardique</strong> → tamponnade<br><strong>Collapsibilité de la veine cave inférieure</strong> → état volémique<br><strong>Pneumothorax</strong><br>🎯 En quelques minutes, elle tranche entre des tableaux que l'examen seul confond.</div>
+          </div>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">⚠️ <strong>Nuance sur le lactate :</strong> il reflète l'hypoperfusion, mais il monte aussi en cas de <strong>convulsions, d'effort intense, d'insuffisance hépatique, de metformine, de sevrage alcoolique ou de salbutamol à forte dose</strong>. Un lactate élevé impose de chercher un choc — il ne le prouve pas à lui seul. À l'inverse, un <strong>lactate normal n'exclut pas un choc débutant</strong>.</div>
+      </div>
+
+      <div class="block rx" style="margin-top:14px;">
+        <div class="block-title" id="choc-6"><span class="tag">⏱️ La première heure — priorités de prise en charge</span></div>
+
+        <div class="key-fact green" style="margin-top:10px;">🎯 <strong>Trois choses se font en parallèle, pas en séquence :</strong> soutenir la <strong>respiration</strong>, <strong>réanimer la circulation</strong>, et <strong>traiter la cause</strong>. Attendre le diagnostic complet avant de réanimer est une erreur.</div>
+
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;">
+          <button id="choctab0" onclick="switchChocTx(0)" style="background:#0a7a4e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;transition:.15s;">💧 Réanimation initiale</button>
+          <button id="choctab1" onclick="switchChocTx(1)" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;transition:.15s;">💉 Amines vasoactives</button>
+          <button id="choctab2" onclick="switchChocTx(2)" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;transition:.15s;">🎯 Traiter la cause</button>
+        </div>
+
+        <div id="chocp0" style="display:block;margin-top:14px;">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+            <div style="background:#e8f4fd;border-radius:10px;padding:14px;border-left:4px solid #1d4ed8;">
+              <strong style="color:#1d4ed8;">🫁 Soutien respiratoire</strong>
+              <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Oxygène</strong><br><strong>Ventilation mécanique</strong> si nécessaire<br>💡 La ventilation réduit aussi le <strong>travail respiratoire</strong>, qui consomme une part importante du débit cardiaque en état de choc.</div>
+            </div>
+            <div style="background:#f0fdf4;border-radius:10px;padding:14px;border-left:4px solid #15803d;">
+              <strong style="color:#15803d;">💧 Réanimation volémique</strong>
+              <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Accès veineux de gros calibre</strong> — deux si possible · voie centrale à envisager<br><strong>Bolus de cristalloïdes</strong> — <strong>le volume dépend du type de choc</strong><br><strong>Vasopresseurs</strong> si la tension est très basse, sans attendre la fin du remplissage<br>🚨 <strong>Le remplissage rapide est la clé de TOUTES les formes de choc SAUF le cardiogénique</strong></div>
+            </div>
+          </div>
+          <div class="key-fact red" style="margin-top:12px;">⚠️ <strong>Le choc cardiogénique est l'exception à retenir :</strong> un <strong>petit bolus</strong> peut être nécessaire, mais <strong>le soutien inotrope est la stratégie principale</strong>. Un remplissage massif y aggrave l'œdème pulmonaire et la défaillance.</div>
+          <div class="key-fact blue" style="margin-top:8px;">🩸 <strong>En choc hémorragique</strong>, la réanimation repose sur les <strong>produits sanguins</strong> et le <strong>contrôle rapide de la source</strong>, pas sur les cristalloïdes seuls.</div>
+        </div>
+
+        <div id="chocp1" style="display:none;margin-top:14px;">
+          <div class="key-fact blue">🎯 <strong>Distinguer deux familles :</strong> les <strong>vasopresseurs</strong> augmentent les <strong>résistances vasculaires</strong> (problème de tuyau), les <strong>inotropes</strong> augmentent la <strong>contractilité</strong> (problème de pompe). Choisir la mauvaise famille peut aggraver la situation.</div>
+          <div style="overflow-x:auto;margin-top:12px;">
+          <table style="font-size:12px;">
+            <thead><tr><th style="width:22%;">Agent</th><th style="width:26%;">Effet dominant</th><th>Contexte d'usage</th></tr></thead>
+            <tbody>
+              <tr style="background:#f0fdf4;"><td><strong>Noradrénaline</strong></td><td>Vasoconstricteur puissant, effet inotrope modeste</td><td>🎯 <strong>Vasopresseur de premier choix dans le choc septique</strong> et la plupart des chocs vasoplégiques</td></tr>
+              <tr><td><strong>Adrénaline</strong></td><td>Vasoconstricteur <strong>et</strong> inotrope</td><td>🚨 <strong>Traitement de l'anaphylaxie — par voie IM, sans délai</strong><br>Aussi en arrêt cardiaque et en choc réfractaire</td></tr>
+              <tr style="background:#e8f4fd;"><td><strong>Dobutamine</strong></td><td><strong>Inotrope</strong> — ↑ contractilité, peut abaisser la TA</td><td>Choc <strong>cardiogénique</strong> · bas débit avec pression conservée</td></tr>
+              <tr><td><strong>Vasopressine</strong></td><td>Vasoconstricteur non adrénergique</td><td>Ajout à la noradrénaline pour en limiter la dose</td></tr>
+              <tr style="background:#fff3cd;"><td><strong>Dopamine</strong></td><td>Effets mixtes selon la dose</td><td>⚠️ Usage restreint — <strong>plus d'arythmies</strong> que la noradrénaline</td></tr>
+            </tbody>
+          </table>
+          </div>
+          <div class="key-fact orange" style="margin-top:12px;">💡 <strong>Points pratiques :</strong> les amines s'administrent idéalement sur <strong>voie centrale</strong> (risque de nécrose en cas d'extravasation), mais <strong>ne pas retarder</strong> leur début si la voie périphérique est ce dont on dispose. Elles exigent une <strong>surveillance continue</strong> et un <strong>monitorage tensionnel rapproché</strong>.<br>⚠️ <strong>Les doses relèvent des protocoles de votre milieu</strong> — s'y référer plutôt qu'à une mémoire approximative.</div>
+        </div>
+
+        <div id="chocp2" style="display:none;margin-top:14px;">
+          <div class="key-fact green">🎯 <strong>Aucune amine ne remplace le traitement de la cause.</strong> La réanimation gagne du temps; c'est le contrôle de la cause qui règle le choc.</div>
+          <div style="overflow-x:auto;margin-top:12px;">
+          <table style="font-size:12px;">
+            <thead><tr><th style="width:26%;">Cause</th><th>Intervention décisive</th></tr></thead>
+            <tbody>
+              <tr style="background:#fff3cd;"><td><strong>Sepsis</strong></td><td><strong>Antibiotiques précoces</strong> après prélèvement des cultures + <strong>contrôle de la source</strong> (drainage d'un abcès, retrait d'un cathéter, décompression d'une obstruction — voir <em>Cholangite</em>, <em>Pyélonéphrite</em>)</td></tr>
+              <tr><td><strong>Infarctus du myocarde</strong></td><td><strong>Revascularisation</strong> — intervention coronarienne percutanée</td></tr>
+              <tr style="background:#fce4ec;"><td><strong>Pneumothorax sous tension</strong></td><td>🚨 <strong>Décompression à l'aiguille immédiate</strong>, puis drain — <strong>diagnostic clinique, pas radiologique</strong></td></tr>
+              <tr><td><strong>Tamponnade</strong></td><td><strong>Péricardiocentèse</strong></td></tr>
+              <tr style="background:#e8f4fd;"><td><strong>Embolie pulmonaire massive</strong></td><td><strong>Thrombolyse</strong> ou embolectomie — voir <em>Embolie pulmonaire</em></td></tr>
+              <tr><td><strong>Traumatisme</strong></td><td><strong>Chirurgie de contrôle des lésions</strong></td></tr>
+              <tr style="background:#f0fdf4;"><td><strong>Rupture d'anévrisme aortique</strong></td><td><strong>Chirurgie d'urgence</strong> — voir <em>Anévrisme</em></td></tr>
+              <tr><td><strong>Anaphylaxie</strong></td><td>🚨 <strong>Adrénaline IM</strong> immédiate · retrait de l'allergène</td></tr>
+            </tbody>
+          </table>
+          </div>
+          <div class="key-fact orange" style="margin-top:12px;">🔎 <strong>Traiter aussi les problèmes concomitants</strong> — hypoglycémie, convulsions, troubles électrolytiques, hypothermie. Ils aggravent le choc et sont vite corrigés.</div>
+        </div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;border-left-color:#b45309;">
+        <div class="block-title" id="choc-7"><span class="tag">🦠 Sepsis &amp; choc septique</span></div>
+
+        <div class="key-fact red" style="margin-top:10px;">🎯 <strong>Pourquoi ce bloc est le plus important :</strong> le choc septique représente <strong>plus de la moitié des chocs</strong>, et c'est celui que vous rencontrerez en première ligne — souvent avant qu'il ne soit reconnu comme tel.</div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-top:12px;">
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+            <strong style="color:#1d4ed8;">📖 Les définitions actuelles</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Sepsis</strong> — <strong>dysfonction d'organe menaçant le pronostic vital</strong>, causée par une réponse dérégulée de l'hôte à une infection.<br><strong>Choc septique</strong> — sepsis avec anomalies circulatoires et métaboliques assez profondes pour <strong>augmenter substantiellement la mortalité</strong> : besoin de <strong>vasopresseurs</strong> pour maintenir la TAM <strong>et</strong> <strong>lactate élevé</strong> malgré un remplissage adéquat.<br>🎯 <strong>Le terme « sepsis sévère » est abandonné.</strong></div>
+          </div>
+          <div style="background:#fce4ec;border-radius:10px;padding:14px;">
+            <strong style="color:#c0392b;">🔍 Repérer tôt</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Chercher une <strong>dysfonction d'organe nouvelle</strong> chez un patient infecté :<br><strong>Altération de l'état mental</strong><br><strong>Tachypnée</strong><br><strong>Hypotension</strong><br>Oligurie · ↑ créatinine · ↑ bilirubine · thrombopénie · ↑ lactate<br>⚠️ Chez la <strong>personne âgée</strong>, le sepsis se présente souvent par un <strong>délirium ou une chute, sans fièvre</strong> — voir <em>Délirium</em> et <em>Évaluation gériatrique</em></div>
+          </div>
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+            <strong style="color:#15803d;">⚡ Les gestes qui changent l'issue</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Reconnaître tôt</strong><br><strong>Hémocultures avant antibiotiques</strong> — sans retarder ceux-ci<br><strong>Antibiothérapie précoce à large spectre</strong>, adaptée au foyer<br><strong>Remplissage</strong><br><strong>Lactate</strong> initial et de contrôle<br>🎯 <strong>Contrôle de la source</strong> — souvent l'élément décisif<br><strong>Noradrénaline</strong> si hypotension persistante</div>
+          </div>
+          <div style="background:#f1f5f9;border-radius:10px;padding:14px;">
+            <strong style="color:#334155;">🩺 Le rôle de l'IPS</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">En première ligne, votre rôle est de <strong>reconnaître et d'orienter sans délai</strong> — pas de gérer le choc.<br>➜ Devant une infection avec <strong>dysfonction d'organe</strong> ou des signes d'hypoperfusion : <strong>transfert urgent</strong>.<br>➜ Se référer aux <strong>protocoles de sepsis de votre établissement</strong> pour les délais et les molécules.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block para" style="margin-top:14px;border-left-color:#0891b2;">
+        <div class="block-title" id="choc-8"><span class="tag">📈 Évaluer l'efficacité de la réanimation</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>Comment savoir si la réanimation fonctionne :</strong> l'adéquation se juge en s'assurant d'une <strong>précharge cardiaque suffisante</strong> par des <strong>mesures dynamiques</strong> — comme le <strong>lever de jambes passif</strong> —, et en surveillant la <strong>tension artérielle</strong>, la <strong>clairance du lactate</strong> et les <strong>signes cliniques d'hypoperfusion</strong>.</div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-top:12px;">
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+            <strong style="color:#15803d;">📉 Clairance du lactate</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Le <strong>lactate qui baisse</strong> est le meilleur indicateur que la perfusion s'améliore.<br>➜ Doser en <strong>série</strong>, pas une seule fois.<br>⚠️ Un lactate <strong>qui ne baisse pas</strong> malgré la réanimation est un signal d'alarme majeur.</div>
+          </div>
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+            <strong style="color:#1d4ed8;">🦵 Mesures dynamiques</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Lever de jambes passif</strong> — remplissage réversible et sans risque : si la TA s'améliore, le patient <strong>répondra au volume</strong>.<br>Variation de la veine cave inférieure à l'échographie.<br>🎯 <strong>Bien supérieur aux mesures statiques</strong> pour prédire la réponse au remplissage.</div>
+          </div>
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;">
+            <strong style="color:#d35400;">🩺 Signes cliniques</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Diurèse</strong> qui reprend<br><strong>Extrémités qui se réchauffent</strong>, marbrures qui régressent<br><strong>État de conscience</strong> qui s'améliore<br><strong>Remplissage capillaire</strong> qui s'accélère<br>💡 Simples, gratuits, et souvent plus parlants qu'un chiffre isolé.</div>
+          </div>
+          <div style="background:#fce4ec;border-radius:10px;padding:14px;">
+            <strong style="color:#c0392b;">⏭️ Et après</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🎯 <strong>Même quand la réanimation initiale réussit</strong>, une <strong>défaillance multiviscérale</strong> se développe fréquemment et exige une <strong>admission aux soins intensifs</strong>.<br>➜ Le succès de la première heure ne signifie pas que la crise est passée.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block flag" style="margin-top:14px;">
+        <div class="block-title" id="choc-9"><span class="tag">🚨 Red flags &amp; pièges</span></div>
+
+        <div class="flag-list" style="margin-top:12px;">
+          <div class="flag-item">🚨 <strong>Hypotension avec altération de l'état mental, marbrures ou oligurie</strong> — choc jusqu'à preuve du contraire</div>
+          <div class="flag-item">🚨 <strong>Lactate élevé</strong> chez un patient qui « ne paraît pas si malade » — le choc compensé précède l'effondrement</div>
+          <div class="flag-item">🚨 <strong>Pneumothorax sous tension suspecté</strong> — décompression immédiate, <strong>sans attendre la radiographie</strong></div>
+          <div class="flag-item">🚨 <strong>Jugulaires distendues + hypotension + bruits cardiaques assourdis</strong> — tamponnade</div>
+          <div class="flag-item"><strong>Bradycardie chez un patient en choc</strong> — ne pas se rassurer : possible en hémorragie sévère ou sur cardiopathie préexistante</div>
+          <div class="flag-item"><strong>Extrémités chaudes chez un patient hypotendu</strong> — choc distributif, souvent septique : ne pas exclure le choc parce que la peau est chaude</div>
+          <div class="flag-item"><strong>Hypothermie</strong> dans un contexte infectieux — signe de gravité, pas d'absence d'infection</div>
+          <div class="flag-item"><strong>TA « normale » chez un hypertendu chronique</strong> avec signes d'hypoperfusion — son seuil est plus élevé</div>
+          <div class="flag-item"><strong>Pression pulsée qui se pince</strong> — signe précoce, avant la chute de la systolique</div>
+          <div class="flag-item"><strong>Remplissage massif dans un choc cardiogénique</strong> — aggrave l'œdème pulmonaire</div>
+          <div class="flag-item"><strong>Lactate qui ne baisse pas</strong> malgré une réanimation adéquate — revoir le diagnostic et la source</div>
+          <div class="flag-item"><strong>Personne âgée avec délirium ou chute sans fièvre</strong> — le sepsis se présente ainsi</div>
+        </div>
+
+        <div class="key-fact green" style="margin-top:12px;">✅ <strong>La démarche en 5 temps :</strong> ① <strong>reconnaître</strong> (hypotension + hypoperfusion + lactate) · ② <strong>classer</strong> (jugulaires plates ou distendues? extrémités froides ou chaudes? échographie) · ③ <strong>réanimer</strong> (oxygène, accès, volume — sauf cardiogénique — amines au besoin) · ④ <strong>traiter la cause</strong> · ⑤ <strong>réévaluer</strong> (lactate en série, mesures dynamiques, signes cliniques).</div>
+      </div>
+    </div>
+
     <div class="section" id="sec-niveau-soins">
       <div class="section-header">
         <div class="section-accent" style="background:#374151">⚕️</div>
@@ -47580,6 +47873,216 @@ Revoir rapidement si nouvelle Sx ou changement de dose<br>
 
 
 
+    <div class="section" id="sec-imagerie-thorax">
+      <div class="section-header">
+        <div class="section-accent" style="background:#475569">🩻</div>
+        <div class="section-title"><h1>Imagerie du thorax</h1><div class="breadcrumb">Imagerie <span class="breadcrumb-sep">·</span> Lecture systématique <span class="breadcrumb-sep">·</span> Signes radiologiques <span class="breadcrumb-sep">·</span> Patrons</div></div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;">
+        <button onclick="goToBlock('img-1')" style="background:#374151;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">📐 Les bases physiques</button>
+        <button onclick="goToBlock('img-2')" style="background:#0369a1;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">✅ Qualité du cliché</button>
+        <button onclick="goToBlock('img-3')" style="background:#0a7a4e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🔍 Lecture systématique</button>
+        <button onclick="goToBlock('img-4')" style="background:#6d28d9;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🎯 Les signes classiques</button>
+        <button onclick="goToBlock('img-5')" style="background:#b45309;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🗂️ Patrons pathologiques</button>
+        <button onclick="goToBlock('img-6')" style="background:#c0392b;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🫁 Tableaux fréquents</button>
+        <button onclick="goToBlock('img-7')" style="background:#0f766e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">📷 Choisir la modalité</button>
+        <button onclick="goToBlock('img-8')" style="background:#dc2626;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🚨 Red flags &amp; pièges</button>
+      </div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:20px;">
+        <div style="flex:1;min-width:95px;background:#F1F5F9;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#334155;">5 densités</div><div style="font-size:11px;color:#555;margin-top:4px;">Air · graisse · eau · os · métal</div></div>
+        <div style="flex:1;min-width:95px;background:#EEF2FF;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#1C3F8F;">Silhouette</div><div style="font-size:11px;color:#555;margin-top:4px;">Le signe qui localise</div></div>
+        <div style="flex:1;min-width:95px;background:#FEF9C3;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#854d0e;">« Opacité »</div><div style="font-size:11px;color:#555;margin-top:4px;">Pas « infiltrat » — terme à éviter</div></div>
+        <div style="flex:1;min-width:95px;background:#FEE2E2;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#b91c1c;">Clinique</div><div style="font-size:11px;color:#555;margin-top:4px;">L'image ne remplace jamais le patient</div></div>
+      </div>
+
+      <div class="block def" style="margin-top:14px;">
+        <div class="block-title" id="img-1"><span class="tag">📐 Les bases physiques — pourquoi c'est blanc ou noir</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>Tout part d'un seul principe :</strong> plus un tissu <strong>absorbe</strong> les rayons X, plus il apparaît <strong>blanc</strong> (radio-opaque). Moins il absorbe, plus il est <strong>noir</strong> (radio-transparent). Comprendre cela suffit à interpréter la majorité des anomalies élémentaires.</div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:12px;">
+          <div style="background:#1e293b;border-radius:10px;padding:14px;">
+            <strong style="color:#f1f5f9;">⬛ Air — le plus noir</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;color:#e2e8f0;">Poumon normal, estomac, intestin<br>➜ <strong>Trop noir</strong> = emphysème, pneumothorax, air libre</div>
+          </div>
+          <div style="background:#475569;border-radius:10px;padding:14px;">
+            <strong style="color:#f8fafc;">🟫 Graisse</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;color:#e2e8f0;">Tissu sous-cutané, graisse médiastinale</div>
+          </div>
+          <div style="background:#94a3b8;border-radius:10px;padding:14px;">
+            <strong style="color:#0f172a;">⬜ Eau / tissus mous</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;color:#1e293b;">Cœur, vaisseaux, muscles, <strong>et tout ce qui remplit l'alvéole</strong> : pus, sang, œdème, cellules<br>🎯 <strong>C'est pourquoi pneumonie, œdème et hémorragie se ressemblent</strong> — même densité</div>
+          </div>
+          <div style="background:#e2e8f0;border-radius:10px;padding:14px;">
+            <strong style="color:#0f172a;">🦴 Os / calcium</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;color:#334155;">Côtes, vertèbres, calcifications</div>
+          </div>
+          <div style="background:#fff;border:2px solid #cbd5e1;border-radius:10px;padding:14px;">
+            <strong style="color:#0f172a;">⚪ Métal — le plus blanc</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;color:#334155;">Prothèses, cathéters, électrodes, stimulateur cardiaque, agrafes</div>
+          </div>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">🎯 <strong>La conséquence pratique la plus importante :</strong> deux structures de <strong>densité identique</strong> qui se touchent <strong>perdent leur frontière visible</strong>. C'est le fondement du <strong>signe de la silhouette</strong> — le signe le plus utile de toute la radiographie thoracique, expliqué plus bas.</div>
+      </div>
+
+      <div class="block para" style="margin-top:14px;border-left-color:#0369a1;">
+        <div class="block-title" id="img-2"><span class="tag">✅ Vérifier la qualité avant d'interpréter</span></div>
+
+        <div class="key-fact red" style="margin-top:10px;">⚠️ <strong>Un cliché de mauvaise qualité fabrique de fausses anomalies.</strong> Une rotation crée une fausse déviation trachéale et une fausse asymétrie des poumons; une inspiration insuffisante crée une fausse cardiomégalie et de fausses opacités basales. <strong>Toujours vérifier la qualité avant de conclure.</strong></div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:20%;">Critère</th><th style="width:34%;">Comment vérifier</th><th>Si c'est mauvais</th></tr></thead>
+          <tbody>
+            <tr style="background:#e8f4fd;"><td><strong>Identité &amp; date</strong></td><td>Nom, date, <strong>latéralité</strong></td><td>🚨 Le premier réflexe — et la première cause d'erreur grave</td></tr>
+            <tr><td><strong>Incidence</strong></td><td><strong>PA</strong> (debout, standard) vs <strong>AP</strong> (couché, au lit)</td><td>⚠️ En <strong>AP</strong>, la <strong>silhouette cardiaque est agrandie</strong> — ne pas conclure à une cardiomégalie · les épanchements se répartissent différemment</td></tr>
+            <tr style="background:#f0fdf4;"><td><strong>Rotation</strong></td><td>Les <strong>extrémités médiales des clavicules</strong> doivent être <strong>équidistantes des épineuses</strong></td><td>Fausse déviation trachéale et médiastinale, asymétrie de transparence pulmonaire</td></tr>
+            <tr><td><strong>Inspiration</strong></td><td>On doit voir environ <strong>9 à 10 arcs costaux postérieurs</strong> au-dessus du diaphragme</td><td>Expiration → <strong>fausse cardiomégalie</strong>, opacités basales artéfactuelles, poumons faussement « chargés »</td></tr>
+            <tr style="background:#fff3cd;"><td><strong>Pénétration</strong></td><td>On doit <strong>deviner les vertèbres derrière le cœur</strong> et voir les vaisseaux jusqu'à la périphérie</td><td>Sous-pénétré → tout paraît blanc, faux infiltrats<br>Sur-pénétré → on manque les opacités subtiles</td></tr>
+            <tr><td><strong>Champ complet</strong></td><td>Apex, culs-de-sac, parois latérales inclus</td><td>Un apex ou un cul-de-sac coupé peut masquer un pneumothorax ou un épanchement</td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+
+      <div class="block rx" style="margin-top:14px;">
+        <div class="block-title" id="img-3"><span class="tag">🔍 Lecture systématique — toujours le même ordre</span></div>
+
+        <div class="key-fact green" style="margin-top:10px;">🎯 <strong>Pourquoi un ordre fixe :</strong> l'œil est attiré par l'anomalie évidente, et s'y arrête — c'est le <strong>biais de satisfaction de recherche</strong>. Une séquence systématique, toujours la même, est la seule protection contre le fait de manquer la deuxième anomalie, souvent la plus importante.</div>
+
+        <div class="criteria-list" style="margin-top:12px;">
+          <div class="criteria-item"><div class="criteria-num blue">1</div><span><strong>Voies aériennes</strong> — trachée <strong>médiane</strong>? déviée <em>vers</em> une atélectasie, <em>repoussée</em> par un épanchement ou un pneumothorax sous tension · carène · bronches souches</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">2</div><span><strong>Os &amp; parties molles</strong> — côtes (<strong>fractures</strong>, lésions lytiques), clavicules, rachis, omoplates · <strong>emphysème sous-cutané</strong> · seins et plis cutanés (sources classiques de fausses opacités)</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">3</div><span><strong>Cœur &amp; médiastin</strong> — <strong>rapport cardiothoracique</strong> (&gt; 0,5 sur un cliché PA = cardiomégalie) · contours cardiaques · <strong>élargissement médiastinal</strong> · bouton aortique</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">4</div><span><strong>Diaphragme</strong> — coupole <strong>droite plus haute</strong> que la gauche normalement · <strong>culs-de-sac costo-diaphragmatiques</strong> libres et pointus? · 🚨 <strong>air libre sous-diaphragmatique</strong> = perforation</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">5</div><span><strong>Hiles</strong> — le <strong>hile gauche est normalement plus haut</strong> que le droit · densité, taille, contours · adénopathies?</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">6</div><span><strong>Parenchyme</strong> — comparer les deux poumons <strong>zone par zone, de haut en bas et symétriquement</strong> · opacités, transparence, vascularisation</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">7</div><span><strong>Plèvre</strong> — <strong>ligne pleurale</strong> visible avec absence de vascularisation au-delà = <strong>pneumothorax</strong> · émoussement des culs-de-sac = <strong>épanchement</strong> · épaississements, plaques</span></div>
+          <div class="criteria-item"><div class="criteria-num red">!</div><span><strong>Matériel &amp; zones aveugles</strong> — position des <strong>tubes, cathéters, sondes, électrodes</strong> 🎯 · puis <strong>revoir délibérément</strong> les <strong>apex</strong>, les <strong>régions rétrocardiaque et rétrodiaphragmatique</strong>, et les <strong>culs-de-sac</strong> — c'est là que se cachent les lésions manquées</span></div>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">🔎 <strong>Le geste qui rattrape le plus d'erreurs :</strong> <strong>comparer avec un cliché antérieur</strong>. Une opacité stable depuis trois ans n'a pas la même signification qu'une opacité nouvelle. Le radiologue lui-même intègre systématiquement la comparaison aux examens antérieurs et la recommandation de suivi. <span style="font-size:11px;color:#64748b;">📚 <em>Goldman-Cecil, ch. 78 « Imaging in Pulmonary Disease »</em></span></div>
+      </div>
+
+      <div class="block para" style="margin-top:14px;border-left-color:#6d28d9;">
+        <div class="block-title" id="img-4"><span class="tag">🎯 Les signes radiologiques classiques</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">📚 <strong>Cinq signes permettent de détecter et surtout de LOCALISER une anomalie</strong> sur un cliché thoracique. Les connaître transforme une image plate en information tridimensionnelle. <span style="font-size:11px;color:#64748b;"><em>Goldman-Cecil, ch. 78</em></span></div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:22%;">Signe</th><th style="width:36%;">Définition</th><th>Ce qu'il vous apprend</th></tr></thead>
+          <tbody>
+            <tr style="background:#ede9fe;"><td>🎯 <strong>Signe de la silhouette</strong></td><td><strong>Effacement d'un contour</strong> normalement dessiné par le poumon aéré, à cause d'une opacité pulmonaire ou pleurale <strong>adjacente</strong></td><td>🎯 <strong>Le signe le plus utile — il localise.</strong><br>Bord <strong>droit du cœur</strong> effacé → <strong>lobe moyen</strong><br>Bord <strong>gauche du cœur</strong> effacé → <strong>lingula</strong><br><strong>Coupole diaphragmatique</strong> effacée → <strong>lobe inférieur</strong><br><em>Si le contour reste net malgré l'opacité, la lésion n'est pas à son contact</em></td></tr>
+            <tr><td><strong>Signe de la colonne</strong><br><em>spine sign</em></td><td>Sur le <strong>profil</strong>, la colonne dorsale devient <strong>plus opaque vers le bas</strong> au lieu de s'éclaircir</td><td>Révèle une <strong>opacité discrète des lobes inférieurs</strong> — normalement, la colonne « s'éclaircit » en descendant</td></tr>
+            <tr style="background:#e8f4fd;"><td><strong>Signe du bord incomplet</strong></td><td>Une opacité dont <strong>un seul bord est net</strong> — angles <strong>obtus</strong> avec la paroi, bords estompés</td><td>🎯 La lésion <strong>n'est PAS dans le parenchyme</strong> : elle est <strong>pleurale, médiastinale ou pariétale</strong></td></tr>
+            <tr><td><strong>Signe de superposition hilaire</strong><br><em>hilum overlay</em></td><td>On regarde si l'opacité <strong>efface l'artère pulmonaire</strong> homolatérale</td><td>Distingue une <strong>masse médiastinale</strong> d'une <strong>masse hilaire</strong> : <strong>seule une masse hilaire efface l'artère pulmonaire</strong></td></tr>
+            <tr style="background:#fff3cd;"><td><strong>Bandes de Mach</strong></td><td><strong>Illusion rétinienne</strong> par renforcement des contours</td><td>⚠️ Aide à voir les contours, mais peut <strong>simuler un pneumothorax</strong> — piège classique</td></tr>
+            <tr><td><strong>Bronchogramme aérique</strong></td><td>Bronches <strong>remplies d'air</strong> visibles <strong>en noir</strong> au sein d'une opacité blanche</td><td>Les alvéoles sont <strong>remplies</strong> (pus, œdème, sang) mais les bronches restent perméables → <strong>comblement alvéolaire</strong><br>⚠️ Non spécifique — présent aussi dans certaines atteintes interstitielles</td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+
+      <div class="block para" style="margin-top:14px;border-left-color:#b45309;">
+        <div class="block-title" id="img-5"><span class="tag">🗂️ Décrire les opacités — le bon vocabulaire</span></div>
+
+        <div class="key-fact red" style="margin-top:10px;">🎯 <strong>Deux corrections de vocabulaire qui comptent :</strong><br>① <strong>Le terme « infiltrat » doit être évité</strong> — on parle d'<strong>opacités pulmonaires</strong>, classées en <strong>grandes (&gt; 1 cm)</strong> ou <strong>petites (&lt; 1 cm)</strong>.<br>② La <strong>distinction radiologique « alvéolaire vs interstitiel » n'est plus recommandée</strong> : la corrélation entre l'aspect radiologique et l'histologie réelle est <strong>médiocre</strong>. Un patron nodulaire peut être produit par une atteinte interstitielle <em>ou</em> alvéolaire; le verre dépoli également. <span style="font-size:11px;color:#64748b;">📚 <em>Goldman-Cecil, ch. 78</em></span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">✅ <strong>L'approche recommandée à la place :</strong> une <strong>description graphique</strong> qui combine <strong>l'opacité prédominante</strong>, <strong>l'expansion pulmonaire</strong>, et la <strong>distribution et l'abondance</strong> de l'atteinte. C'est cette combinaison qui produit un diagnostic différentiel utile.</div>
+
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">📊 Classification des grandes opacités selon la distribution</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;">
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+            <strong style="color:#1d4ed8;">Diffuses homogènes</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Dommage alvéolaire diffus · <strong>œdème pulmonaire par perméabilité accrue</strong> (non cardiogénique) · pneumonie virale diffuse · pneumonie à <em>Pneumocystis jirovecii</em></div>
+          </div>
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+            <strong style="color:#15803d;">Multifocales en plages</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Bronchopneumonie multifocale</strong> · atteintes disséminées</div>
+          </div>
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;">
+            <strong style="color:#d35400;">Lobaires — sans atélectasie</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Le volume du lobe est <strong>conservé</strong> → <strong>pneumonie lobaire</strong> typique</div>
+          </div>
+          <div style="background:#fce4ec;border-radius:10px;padding:14px;">
+            <strong style="color:#c0392b;">Lobaires — avec atélectasie</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Le volume est <strong>perdu</strong> → <strong>obstruction bronchique</strong> : bouchon muqueux, corps étranger, <strong>tumeur</strong><br>🚨 Signes de perte de volume : <strong>attraction de la trachée et du médiastin</strong>, ascension de la coupole, pincement des espaces intercostaux</div>
+          </div>
+          <div style="background:#ede9fe;border-radius:10px;padding:14px;">
+            <strong style="color:#6d28d9;">Périhilaires</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Distribution « en ailes de papillon » — évoque un <strong>œdème pulmonaire cardiogénique</strong></div>
+          </div>
+          <div style="background:#f1f5f9;border-radius:10px;padding:14px;">
+            <strong style="color:#334155;">Périphériques</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Distribution sous-pleurale — oriente vers certaines pneumopathies organisatrices ou éosinophiliques</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;border-left-color:#c0392b;">
+        <div class="block-title" id="img-6"><span class="tag">🫁 Reconnaître les tableaux fréquents</span></div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:20%;">Tableau</th><th style="width:38%;">Aspect radiologique</th><th>Indices distinctifs</th></tr></thead>
+          <tbody>
+            <tr style="background:#fce4ec;"><td>🚨 <strong>Pneumothorax</strong></td><td><strong>Ligne pleurale</strong> fine avec <strong>absence de vascularisation au-delà</strong>, hyperclarté périphérique</td><td>🚨 <strong>Sous tension :</strong> médiastin <strong>repoussé du côté opposé</strong>, aplatissement de la coupole → <strong>diagnostic clinique, décompression immédiate, sans attendre la radiographie</strong><br>💡 Chez le patient couché, l'air se collecte en <strong>antéro-basal</strong> — chercher un cul-de-sac anormalement profond et noir</td></tr>
+            <tr><td><strong>Épanchement pleural</strong></td><td><strong>Émoussement du cul-de-sac</strong> costo-diaphragmatique, puis opacité déclive à <strong>limite supérieure concave</strong> (ligne de Damoiseau)</td><td>💡 Un épanchement libre <strong>se mobilise en décubitus latéral</strong> — utile pour distinguer d'une opacité fixe<br>Si le médiastin est <strong>repoussé</strong> → épanchement volumineux; s'il est <strong>attiré</strong> → atélectasie associée<br>➜ Voir <em>Épanchement pleural</em></td></tr>
+            <tr style="background:#e8f4fd;"><td><strong>Pneumonie</strong></td><td><strong>Opacité</strong> avec <strong>bronchogramme aérique</strong>, sans perte de volume · lobaire ou multifocale</td><td>Le <strong>signe de la silhouette localise le lobe</strong><br>⚠️ La radiographie peut être <strong>normale au début</strong> ou en déshydratation — <strong>elle n'exclut pas la pneumonie</strong><br>➜ Voir <em>Pneumonie</em></td></tr>
+            <tr><td><strong>Œdème pulmonaire cardiogénique</strong></td><td><strong>Cardiomégalie</strong> · <strong>redistribution vasculaire vers les sommets</strong> · <strong>lignes B de Kerley</strong> · opacités périhilaires en ailes de papillon · <strong>épanchements pleuraux</strong> souvent bilatéraux</td><td>Évolue vite dans les deux sens — la radiographie <strong>retarde</strong> sur la clinique, à l'aggravation comme à l'amélioration<br>➜ Voir <em>Insuffisance cardiaque</em></td></tr>
+            <tr style="background:#f0fdf4;"><td><strong>Atélectasie</strong></td><td>Opacité <strong>avec perte de volume</strong> : attraction du médiastin et de la trachée, ascension diaphragmatique, déplacement des scissures</td><td>🚨 Chez un adulte, une atélectasie lobaire inexpliquée doit faire chercher une <strong>obstruction bronchique — donc une tumeur</strong> jusqu'à preuve du contraire</td></tr>
+            <tr><td><strong>MPOC / emphysème</strong></td><td>Poumons <strong>hyperclairs et distendus</strong>, <strong>diaphragmes aplatis</strong>, espace rétrosternal élargi, cœur « en goutte », raréfaction vasculaire</td><td>➜ Voir <em>MPOC</em></td></tr>
+            <tr style="background:#fff3cd;"><td><strong>Masse / nodule</strong></td><td><strong>Nodule &lt; 3 cm</strong>, <strong>masse ≥ 3 cm</strong></td><td>Analyser : <strong>contours</strong> (spiculés = suspects), <strong>calcifications</strong>, <strong>croissance</strong> par rapport aux anciens clichés<br>🎯 Le <strong>signe du bord incomplet</strong> dit si c'est pulmonaire ou pariétal/pleural<br>➜ Voir <em>Néoplasie pulmonaire</em></td></tr>
+            <tr><td>🚨 <strong>Air libre sous-diaphragmatique</strong></td><td><strong>Croissant clair</strong> sous la coupole, sur un cliché <strong>debout</strong></td><td>🚨 <strong>Perforation d'un organe creux</strong> — urgence chirurgicale<br>⚠️ Invisible si le cliché est fait couché</td></tr>
+            <tr style="background:#ede9fe;"><td><strong>Élargissement médiastinal</strong></td><td>Médiastin élargi, contours anormaux</td><td>🚨 En contexte traumatique ou de douleur thoracique déchirante : <strong>dissection aortique</strong> — voir <em>Anévrisme</em><br>Autres : adénopathies, masse, hématome</td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+
+      <div class="block para" style="margin-top:14px;border-left-color:#0f766e;">
+        <div class="block-title" id="img-7"><span class="tag">📷 Choisir la bonne modalité</span></div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:20%;">Modalité</th><th style="width:34%;">Indications</th><th>Limites</th></tr></thead>
+          <tbody>
+            <tr style="background:#f0fdf4;"><td><strong>Radiographie thoracique</strong></td><td>Examen de <strong>première intention</strong> : dyspnée, douleur thoracique, toux fébrile, traumatisme, contrôle de position de matériel<br>Peu irradiante, accessible, comparable dans le temps</td><td>⚠️ <strong>Faible sensibilité</strong> pour les lésions subtiles, l'embolie pulmonaire, la maladie interstitielle débutante<br><strong>Un cliché normal n'exclut pas grand-chose</strong></td></tr>
+            <tr><td><strong>TDM thoracique</strong></td><td>Anomalie radiologique à caractériser · <strong>nodule pulmonaire</strong> · maladie interstitielle · bilan d'extension tumorale · abcès, bronchiectasies<br><strong>Angio-TDM</strong> : embolie pulmonaire, dissection aortique</td><td>Irradiation · produit de contraste (fonction rénale, allergie) · <strong>trouvailles fortuites</strong> fréquentes générant des examens en cascade</td></tr>
+            <tr style="background:#e8f4fd;"><td><strong>Échographie thoracique</strong></td><td>🎯 Rôle traditionnellement limité, mais <strong>excellente pour localiser un épanchement pleural et guider son drainage</strong><br>Des données suggèrent son utilité comme <strong>examen préliminaire pour la pneumonie, l'œdème pulmonaire et le pneumothorax</strong><br>Aux soins intensifs : pneumonie associée au ventilateur, pneumothorax, dommage alvéolaire diffus</td><td>Opérateur-dépendante · l'air et l'os bloquent les ultrasons</td></tr>
+            <tr><td><strong>TEP-TDM</strong></td><td>Caractérisation des <strong>nodules pulmonaires solitaires</strong> · <strong>diagnostic et stadification</strong> des tumeurs intrathoraciques</td><td>Accès limité · faux positifs inflammatoires et infectieux</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="key-fact green" style="margin-top:12px;">💡 <strong>Avant de demander un examen, se poser la question :</strong> « <strong>le résultat va-t-il changer ma conduite?</strong> » C'est le principe de <em>Choisir avec soin</em>. Une radiographie de contrôle systématique après une pneumonie chez un patient jeune qui va bien cliniquement, par exemple, n'est pas automatique — elle se justifie surtout en présence de facteurs de risque de néoplasie.</div>
+      </div>
+
+      <div class="block flag" style="margin-top:14px;">
+        <div class="block-title" id="img-8"><span class="tag">🚨 Red flags &amp; pièges</span></div>
+
+        <div class="flag-list" style="margin-top:12px;">
+          <div class="flag-item">🚨 <strong>Pneumothorax sous tension</strong> — médiastin repoussé : <strong>diagnostic clinique, décompression immédiate</strong>, ne pas attendre l'imagerie</div>
+          <div class="flag-item">🚨 <strong>Air libre sous-diaphragmatique</strong> — perforation d'organe creux</div>
+          <div class="flag-item">🚨 <strong>Élargissement médiastinal</strong> avec douleur thoracique déchirante — dissection aortique</div>
+          <div class="flag-item">🚨 <strong>Atélectasie lobaire inexpliquée chez l'adulte</strong> — obstruction bronchique, donc tumeur jusqu'à preuve du contraire</div>
+          <div class="flag-item"><strong>Nodule aux contours spiculés</strong> ou en croissance par rapport aux clichés antérieurs</div>
+          <div class="flag-item"><strong>Épanchement unilatéral inexpliqué</strong> — néoplasie, tuberculose, empyème : investiguer</div>
+          <div class="flag-item">⚠️ <strong>Conclure sur un cliché de mauvaise qualité</strong> — rotation, expiration ou sous-pénétration fabriquent de fausses anomalies</div>
+          <div class="flag-item">⚠️ <strong>Prendre un cliché AP couché pour un PA debout</strong> — fausse cardiomégalie, épanchement mal évalué, air libre invisible</div>
+          <div class="flag-item">⚠️ <strong>S'arrêter à la première anomalie</strong> — terminer la séquence systématique, toujours</div>
+          <div class="flag-item">⚠️ <strong>Oublier les zones aveugles</strong> — apex, rétrocardiaque, rétrodiaphragmatique, culs-de-sac</div>
+          <div class="flag-item">⚠️ <strong>Ne pas comparer avec les clichés antérieurs</strong> — la stabilité dans le temps est une information majeure</div>
+          <div class="flag-item">⚠️ <strong>Conclure « radiographie normale, donc pas de pneumonie »</strong> — elle peut être normale au début et en déshydratation</div>
+        </div>
+
+        <div class="key-fact green" style="margin-top:12px;">✅ <strong>La lecture en 4 temps :</strong> ① <strong>vérifier la qualité</strong> (identité, incidence, rotation, inspiration, pénétration) · ② <strong>dérouler la séquence systématique</strong> sans sauter d'étape · ③ <strong>localiser</strong> avec le signe de la silhouette et décrire en termes d'<strong>opacités</strong> · ④ <strong>comparer aux clichés antérieurs</strong> et confronter à la clinique.</div>
+      </div>
+    </div>
+
     <div class="section" id="sec-arthrite-approche">
       <div class="section-header">
         <div class="section-accent" style="background:#0e7490">🔎</div>
@@ -50587,6 +51090,7 @@ const SEARCH_INDEX = [
   { id:'toc-tspt',            title:'TOC & TSPT',                         specialty:'Santé Mentale',      keywords:['toc','tspt','trouble obsessionnel','stress post-traumatique','compulsion','obsession','evitement','isrs','venlafaxine','prazosin','emdr'] },
   { id:'msk',                 title:'Musculosquelettique & MSK',          specialty:'Rhumatologie',       keywords:['msk','musculosquelettique','arthrite','tendinite','bursite','fracture','lombalgie','genou','épaule','hanche','ottawa','sport'] },
   { id:'arthrite-approche',  title:'Approche de la Douleur Articulaire', specialty:'Rhumatologie', keywords:['arthrite','arthralgie','douleur articulaire','inflammatoire','mécanique','raideur matinale','monoarthrite','oligoarthrite','polyarthrite','synovite','ponction articulaire','liquide synovial','cristaux','septique','facteur rhumatoïde','anti-ccp','aan','ana','hla-b27','vs','crp','ipd','dactylite','enthésite'] },
+  { id:'imagerie-thorax',    title:'Imagerie du Thorax',             specialty:'Imagerie',        keywords:['radiographie','rayon x','thorax','poumon','cliché','pa','ap','silhouette','bronchogramme aérique','opacité','atélectasie','pneumothorax','épanchement pleural','kerley','cardiomégalie','rapport cardiothoracique','médiastin','hile','coupole','cul-de-sac','air libre','pénétration','rotation','inspiration','tdm','angio-tdm','échographie pulmonaire','tep','nodule','masse','lecture systématique','spine sign','hilum overlay','mach'] },
   { id:'par',                title:'Polyarthrite Rhumatoïde',         specialty:'Rhumatologie', keywords:['polyarthrite rhumatoïde','par','pr','arthrite rhumatoïde','anti-ccp','acpa','facteur rhumatoïde','méthotrexate','mtx','dmard','biothérapie','anti-tnf','jak','hydroxychloroquine','sulfasalazine','léflunomide','pannus','érosion','felty','nodule rhumatoïde','c1-c2','pneumopathie interstitielle','traiter à la cible','acr','eular','déviation cubitale'] },
   { id:'goutte',             title:'Goutte & Arthrites Microcristallines', specialty:'Rhumatologie', keywords:['goutte','gout','urate','acide urique','uricémie','podagre','colchicine','allopurinol','fébuxostat','probénécide','tophus','hyperuricémie','pseudogoutte','ppc','pyrophosphate','chondrocalcinose','cristaux','diurétique','xanthine oxydase','360','300'] },
   { id:'spondylarthrites',   title:'Spondylarthrites',               specialty:'Rhumatologie', keywords:['spondylarthrite','spondylarthrite ankylosante','axiale','non radiographique','sacro-iliite','hla-b27','lombalgie inflammatoire','enthésite','dactylite','talalgie','uvéite','psoriasique','rhumatisme psoriasique','arthrite réactionnelle','mii','syndesmophyte','anti-il-17','anti-tnf'] },
@@ -50645,6 +51149,7 @@ const SEARCH_INDEX = [
   { id:'neo-poumon',    title:'Néo. Poumon — Cancer Pulmonaire',       specialty:'Pneumologie',   keywords:['cancer poumon','cpnpc','cppc','adénocarcinome','carcinoïde','nodule','egfr','alk','pd-l1','immunothérapie','tabac','dépistage','TDM','stadification','paranéoplasique','svcs'] },
   { id:'amiante',       title:'Amiante & Maladies Professionnelles',   specialty:'Pneumologie',   keywords:['amiante','asbestose','mésothéliome','chrysotile','amphibole','fibrose','plaques pleurales','cancer poumon','professionnel'] },
   { id:'niveau-soins',  title:'Niveau de Soins & Approche Palliative', specialty:'Pneumologie',   keywords:['niveau de soins','amm','palliatif','réanimation','dnr','soins de confort','opioïdes','dyspnée','prognose','fin de vie'] },
+  { id:'chocs',              title:'Les Chocs — Soins Critiques',    specialty:'Soins critiques', keywords:['choc','chocs','hypovolémique','cardiogénique','distributif','obstructif','septique','sepsis','anaphylaxie','neurogénique','tamponnade','pneumothorax sous tension','embolie pulmonaire','lactate','hypoperfusion','vasopresseur','noradrénaline','adrénaline','dobutamine','vasopressine','inotrope','remplissage','cristalloïde','indice de choc','pression pulsée','pouls paradoxal','lever de jambes','marbrures','réanimation','tam','échographie au chevet'] },
   // Gynécologie — nouvelles sections
   { id:'gyneco-anatomie', title:'Anatomie de l\'Appareil Reproducteur', specialty:'Gynécologie', keywords:['ovaires','trompes','utérus','col','vagin','vulve','zone de transformation','amh','inhibine','réserve ovarienne'] },
   { id:'cycles-hormonaux', title:'Cycles Menstruels & Hormones Reproductrices', specialty:'Gynécologie', keywords:['cycle menstruel','œstrogène','progestérone','FSH','LH','axe hypothalamo-hypophyso-ovarien','ovulation','follicule','corps jaune','SOPK'] },
@@ -50846,7 +51351,11 @@ const SECTION_ORDER = [
   // Microbiologie
   'infections','antibiotherapie','itss',
   // Pneumologie
-  'anatomie-tfr','pneumo-eval','pneumo-gazo','aso','apnee-centrale','asthme','mpoc','pneumo-aco','pneumo-o2','pneumo-pneumonie','epanchement-pleural','pneumo-autres-patho','pneumo-ira','pneumo-htp','neo-poumon','amiante','niveau-soins','amm',
+  'anatomie-tfr','pneumo-eval','pneumo-gazo','aso','apnee-centrale','asthme','mpoc','pneumo-aco','pneumo-o2','pneumo-pneumonie','epanchement-pleural','pneumo-autres-patho','pneumo-ira','pneumo-htp','neo-poumon','amiante',
+  // Soins critiques
+  'chocs',
+  // Soins palliatifs
+  'niveau-soins','amm',
   // Hématologie
   'hemostase','thrombolyse','antiplaquettaires','tests-coag','anticoag-parenteraux','warfarine','aod','tvp','ep','periop-anticoag','fsc-anemie',
   // Neurologie
@@ -50867,6 +51376,8 @@ const SECTION_ORDER = [
   'gyneco-anatomie','cycles-hormonaux','contraception','sua','cancer-col','cancer-endo','menopause','survivance',
   // Prévention & Dépistage
   'depistage',
+  // Imagerie
+  'imagerie-thorax',
   // Rhumatologie
   'arthrite-approche','par','goutte','spondylarthrites','connectivites',
   // Musculosquelettique
@@ -50880,6 +51391,8 @@ const SECTION_ORDER = [
 
 // Section titles for display in nav buttons
 const SECTION_TITLES = {
+  'imagerie-thorax':'Imagerie du Thorax',
+  'chocs':'Les Chocs',
   'ordonnances':'Normes des Ordonnances',
   'arthrite-approche':'Approche Douleur Articulaire','par':'Polyarthrite Rhumatoïde','goutte':'Goutte & Microcristaux','spondylarthrites':'Spondylarthrites','connectivites':'Connectivites & Vascularites',
   'geriatrie-eval':'Évaluation Gériatrique','delirium':'Délirium','tnc':'Troubles Neurocognitifs','chutes':'Chutes & Mobilité','polypharmacie':'Polypharmacie & Déprescription',
@@ -51634,6 +52147,16 @@ function switchHtpTx(n){
 
 
 
+
+
+function switchChocTx(n){
+  [0,1,2].forEach(function(i){
+    var pnl=document.getElementById("chocp"+i);
+    var btn=document.getElementById("choctab"+i);
+    if(pnl) pnl.style.display=(i===n)?"block":"none";
+    if(btn){btn.style.background=(i===n)?"#0a7a4e":"#e0e0e0";btn.style.color=(i===n)?"#fff":"#333";}
+  });
+}
 
 function switchParTx(n){
   [0,1,2].forEach(function(i){
