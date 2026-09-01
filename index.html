@@ -1114,6 +1114,7 @@ m
         <div class="nav-item" onclick="showSection('pneumo-aco')">ACO</div>
         <div class="nav-item" onclick="showSection('pneumo-o2')">O₂ Domicile & Conduite</div>
         <div class="nav-item" onclick="showSection('pneumo-pneumonie')">Pneumonie</div>
+        <div class="nav-item" onclick="showSection('tuberculose')">Tuberculose</div>
         <div class="nav-item" onclick="showSection('epanchement-pleural')">Épanchement Pleural</div>
         <div class="nav-item" onclick="showSection('pneumo-autres-patho')">Autres Patho. Pulmonaires</div>
         <div class="nav-item" onclick="showSection('pneumo-ira')">Insuffisance Respiratoire</div>
@@ -1187,6 +1188,7 @@ m
         <span class="emoji">🧓</span> Gériatrie
         <svg class="chevron" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>      </div>
       <div class="specialty-items">
+        <div class="nav-item" onclick="showSection('vieillissement')">Le Vieillissement</div>
         <div class="nav-item" onclick="showSection('geriatrie-eval')">Évaluation &amp; Fragilité</div>
         <div class="nav-item" onclick="showSection('delirium')">Délirium</div>
         <div class="nav-item" onclick="showSection('tnc')">Troubles Neurocognitifs</div>
@@ -1423,7 +1425,7 @@ m
           <div class="home-card-icon" style="background:#e0f2fe;color:#0369a1">🫁</div>
           <div class="home-card-body">
             <div class="home-card-name">Pneumologie</div>
-            <div class="home-card-count">16 sections</div>
+            <div class="home-card-count">17 sections</div>
           </div>
         </div>
         <div class="home-card" onclick="showSection('chocs'); openGroup('grp-soinscritiques')">
@@ -1454,11 +1456,11 @@ m
             <div class="home-card-count">14 sections</div>
           </div>
         </div>
-        <div class="home-card" onclick="showSection('geriatrie-eval'); openGroup('grp-geriatrie')">
+        <div class="home-card" onclick="showSection('vieillissement'); openGroup('grp-geriatrie')">
           <div class="home-card-icon" style="background:#f5f3ff;color:#6d28d9">🧓</div>
           <div class="home-card-body">
             <div class="home-card-name">Gériatrie</div>
-            <div class="home-card-count">5 sections</div>
+            <div class="home-card-count">6 sections</div>
           </div>
         </div>
         <div class="home-card" onclick="showSection('avc'); openGroup('grp-neuro')">
@@ -21967,6 +21969,249 @@ function switchAcoTx(n) {
   </div>
 </div>
 
+    <div class="section" id="sec-tuberculose">
+      <div class="section-header">
+        <div class="section-accent" style="background:#065f46">🦠</div>
+        <div class="section-title"><h1>Tuberculose</h1><div class="breadcrumb">Pneumologie <span class="breadcrumb-sep">·</span> Normes canadiennes 8<sup>e</sup> éd. <span class="breadcrumb-sep">·</span> ITL &amp; TB active <span class="breadcrumb-sep">·</span> MADO</div></div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;">
+        <button onclick="goToBlock('tb-1')" style="background:#374151;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧬 Latente vs active</button>
+        <button onclick="goToBlock('tb-2')" style="background:#b45309;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">⚠️ Qui dépister</button>
+        <button onclick="goToBlock('tb-3')" style="background:#0369a1;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧪 TCT &amp; IGRA</button>
+        <button onclick="goToBlock('tb-4')" style="background:#c0392b;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🫁 TB active — présentation</button>
+        <button onclick="goToBlock('tb-5')" style="background:#0f766e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🔬 Diagnostic</button>
+        <button onclick="goToBlock('tb-6')" style="background:#0a7a4e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">💊 Traitement préventif (ITL)</button>
+        <button onclick="goToBlock('tb-7')" style="background:#6d28d9;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">💉 TB active — traitement</button>
+        <button onclick="goToBlock('tb-8')" style="background:#0891b2;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">📋 Santé publique &amp; IPS</button>
+        <button onclick="goToBlock('tb-9')" style="background:#dc2626;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🚨 Red flags</button>
+      </div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:20px;">
+        <div style="flex:1;min-width:95px;background:#DCFCE7;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#15803d;">3HP · 4R</div><div style="font-size:11px;color:#555;margin-top:4px;">1<sup>re</sup> intention — ITL</div></div>
+        <div style="flex:1;min-width:95px;background:#FEF9C3;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#854d0e;">9H</div><div style="font-size:11px;color:#555;margin-top:4px;">2<sup>e</sup> intention si rifamycine impossible</div></div>
+        <div style="flex:1;min-width:95px;background:#FEE2E2;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#b91c1c;">MADO</div><div style="font-size:11px;color:#555;margin-top:4px;">Déclaration obligatoire</div></div>
+        <div style="flex:1;min-width:95px;background:#EEF2FF;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#1C3F8F;">Latence</div><div style="font-size:11px;color:#555;margin-top:4px;">Ce qui rend la TB unique</div></div>
+      </div>
+
+      <div class="block def" style="margin-top:14px;">
+        <div class="block-title" id="tb-1"><span class="tag">🧬 Infection latente vs maladie active</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>La tuberculose est une maladie infectieuse chronique dotée d'un <em>stade latent unique</em></strong>, causée par le bacille acido-alcoolo-résistant <strong><em>Mycobacterium tuberculosis</em></strong>. C'est cette latence — l'organisme héberge le bacille vivant mais contrôlé, sans symptôme ni contagiosité — qui structure toute la prise en charge. <span style="font-size:11px;color:#64748b;">📚 <em>Goldman-Cecil, ch. 308</em></span></div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:20%;"></th><th style="width:38%;">Infection tuberculeuse latente (ITL)</th><th>Tuberculose active (maladie)</th></tr></thead>
+          <tbody>
+            <tr style="background:#f0fdf4;"><td><strong>Symptômes</strong></td><td>🎯 <strong>Aucun</strong></td><td>Toux prolongée, fièvre, sueurs nocturnes, perte de poids</td></tr>
+            <tr><td><strong>Contagiosité</strong></td><td>🎯 <strong>Non contagieuse</strong></td><td><strong>Contagieuse</strong> si atteinte pulmonaire ou laryngée</td></tr>
+            <tr style="background:#e8f4fd;"><td><strong>Radiographie</strong></td><td>Normale, ou séquelles anciennes (nodule calcifié, fibrose apicale)</td><td>Anormale dans la majorité des cas</td></tr>
+            <tr><td><strong>Bactériologie</strong></td><td>Négative</td><td>Positive (frottis, culture, TAAN)</td></tr>
+            <tr style="background:#fff3cd;"><td><strong>TCT / IGRA</strong></td><td><strong>Positif</strong></td><td>Souvent positif — ⚠️ <strong>mais peut être négatif</strong> : ne sert pas à exclure une TB active</td></tr>
+            <tr><td><strong>Traitement</strong></td><td><strong>TPT</strong> — traitement préventif, 1 seul médicament ou 2 selon le schéma</td><td><strong>Multithérapie prolongée</strong>, en spécialité</td></tr>
+            <tr style="background:#fce4ec;"><td><strong>Enjeu</strong></td><td>🎯 <strong>Empêcher la réactivation</strong></td><td>🚨 <strong>Guérir et interrompre la transmission</strong></td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">⏳ <strong>Le risque de réactivation :</strong> la majorité des personnes infectées ne développeront jamais la maladie. Le risque est <strong>maximal dans les deux premières années</strong> suivant l'infection, puis persiste à bas bruit toute la vie — et <strong>remonte fortement si l'immunité se dégrade</strong>. C'est exactement pourquoi on dépiste avant une immunosuppression.</div>
+
+        <div class="key-fact red" style="margin-top:8px;">🦠 <strong>Formes graves à connaître :</strong> la <strong>TB miliaire</strong> comporte une <strong>létalité élevée</strong>, en partie à cause des retards diagnostiques. La <strong>méningite tuberculeuse</strong> laisse de <strong>lourdes séquelles neurologiques</strong> et comporte une mortalité élevée. La <strong>TB multirésistante (TB-MR)</strong> et ultrarésistante s'accompagnent de taux élevés d'échec thérapeutique et de mortalité. Chez les personnes vivant avec le <strong>VIH</strong>, la mortalité précoce est élevée. <span style="font-size:11px;color:#64748b;">📚 <em>Goldman-Cecil, ch. 308</em></span></div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;border-left-color:#b45309;">
+        <div class="block-title" id="tb-2"><span class="tag">⚠️ Qui dépister pour une ITL</span></div>
+
+        <div class="key-fact red" style="margin-top:10px;">🎯 <strong>Le principe qui évite le dépistage inutile :</strong> on ne dépiste que les personnes chez qui <strong>on traitera si le test est positif</strong>. Dépister sans intention de traiter crée de l'anxiété, des examens en cascade et des faux positifs sans bénéfice.<br>➜ Il faut donc <strong>deux conditions</strong> : un <strong>risque d'infection</strong> ou un <strong>risque de réactivation</strong>.</div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;border-left:4px solid #1d4ed8;">
+            <strong style="color:#1d4ed8;">🌍 Risque accru d'<em>infection</em></strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Contacts étroits</strong> d'un cas de TB active contagieuse 🎯<br><strong>Personnes nées ou ayant vécu</strong> dans un pays à forte incidence<br><strong>Communautés inuites et des Premières Nations</strong> touchées par des taux élevés<br><strong>Milieux de vie collectifs</strong> : détention, refuges, itinérance<br><strong>Travailleurs de la santé</strong> exposés<br>Voyage prolongé en région de forte incidence</div>
+          </div>
+          <div style="background:#fce4ec;border-radius:10px;padding:14px;border-left:4px solid #c0392b;">
+            <strong style="color:#c0392b;">🛡️ Risque accru de <em>réactivation</em></strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🚨 <strong>VIH</strong> — le facteur de risque le plus puissant<br>🚨 <strong>Avant un anti-TNF ou une autre biothérapie</strong> ⭐<br><strong>Transplantation d'organe</strong> — dépister <strong>avant</strong> la greffe<br><strong>Corticothérapie prolongée</strong> ou autre immunosuppression<br><strong>Insuffisance rénale terminale / dialyse</strong><br><strong>Silicose</strong> · <strong>néoplasie hématologique</strong><br>Diabète · dénutrition · tabagisme<br><strong>Séquelles fibronodulaires</strong> à la radiographie chez une personne jamais traitée</div>
+          </div>
+        </div>
+
+        <div class="key-fact green" style="margin-top:12px;">🎯 <strong>Le contexte que vous rencontrerez le plus souvent en première ligne :</strong> le <strong>dépistage avant l'amorce d'une biothérapie</strong> — polyarthrite rhumatoïde, spondylarthrite, maladie inflammatoire de l'intestin, psoriasis. Les anti-TNF réactivent une TB latente, parfois sous forme disséminée. Ce dépistage est <strong>obligatoire avant de commencer</strong>.<br>➜ Voir <em>Polyarthrite rhumatoïde</em>, <em>Spondylarthrites</em> et <em>MII</em></div>
+      </div>
+
+      <div class="block para" style="margin-top:14px;border-left-color:#0369a1;">
+        <div class="block-title" id="tb-3"><span class="tag">🧪 Test cutané (TCT) &amp; IGRA</span></div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:18%;"></th><th style="width:38%;">TCT (Mantoux)</th><th>IGRA (test sanguin)</th></tr></thead>
+          <tbody>
+            <tr style="background:#e8f4fd;"><td><strong>Principe</strong></td><td>Injection intradermique de tuberculine, <strong>lecture de l'induration à 48–72 h</strong></td><td>Dosage de l'<strong>interféron gamma</strong> libéré par les lymphocytes exposés à des antigènes spécifiques</td></tr>
+            <tr><td><strong>Visites</strong></td><td><strong>2 visites</strong> — pose puis lecture</td><td>🎯 <strong>1 seule visite</strong>, une prise de sang</td></tr>
+            <tr style="background:#f0fdf4;"><td><strong>Effet du BCG</strong></td><td>⚠️ <strong>Faux positifs</strong> possibles</td><td>🎯 <strong>Non influencé par le BCG</strong> — avantage majeur chez les personnes vaccinées</td></tr>
+            <tr><td><strong>Mesure</strong></td><td><strong>Induration en mm</strong> — jamais l'érythème<br>Le seuil de positivité <strong>varie selon le risque</strong> de la personne</td><td>Résultat qualitatif : positif, négatif, indéterminé</td></tr>
+            <tr style="background:#fff3cd;"><td><strong>Limites</strong></td><td>Lecture opérateur-dépendante · nécessite le retour du patient · effet de rappel possible</td><td>Coût et accès · résultats <strong>indéterminés</strong> possibles, surtout en immunosuppression</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="key-fact red" style="margin-top:12px;">🚨 <strong>Le piège le plus important :</strong> <strong>ni le TCT ni l'IGRA ne distinguent l'ITL de la TB active</strong>, et <strong>ni l'un ni l'autre ne permet d'exclure une TB active</strong> — ils peuvent être négatifs en maladie sévère ou en immunosuppression profonde.<br>➜ <strong>Avant de traiter une ITL, il faut TOUJOURS avoir écarté une TB active</strong> : symptômes, radiographie pulmonaire, et prélèvements si indiqués. Traiter une TB active avec un seul médicament <strong>fabrique de la résistance</strong>.</div>
+
+        <div class="key-fact blue" style="margin-top:8px;">📗 <strong>Pour les indications précises et les seuils :</strong> se référer au <strong>chapitre 4 des Normes canadiennes pour la lutte antituberculeuse, 8<sup>e</sup> édition</strong> (ASPC), qui détaille le choix du test et l'interprétation selon le contexte. Chez l'enfant, l'IGRA peut soutenir le diagnostic de TB active <strong>en complément</strong> des données cliniques, radiologiques et microbiologiques — jamais seul.</div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;border-left-color:#c0392b;">
+        <div class="block-title" id="tb-4"><span class="tag">🫁 Tuberculose active — présentation</span></div>
+
+        <div class="key-fact orange" style="margin-top:10px;">🎯 <strong>Le signal d'alarme :</strong> une <strong>toux qui dure plus de 2 à 3 semaines</strong> chez une personne ayant un facteur de risque. C'est la présentation la plus fréquente — et la plus souvent attribuée à autre chose pendant des semaines.</div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-top:12px;">
+          <div style="background:#fce4ec;border-radius:10px;padding:14px;">
+            <strong style="color:#c0392b;">🫁 TB pulmonaire</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Toux prolongée</strong>, initialement sèche puis productive<br><strong>Hémoptysies</strong><br><strong>Fièvre</strong> · <strong>sueurs nocturnes</strong> · <strong>perte de poids</strong> · anorexie · fatigue<br>Douleur thoracique pleurétique</div>
+          </div>
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+            <strong style="color:#1d4ed8;">🩻 Radiographie</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Réactivation :</strong> opacités des <strong>segments apicaux et postérieurs des lobes supérieurs</strong>, <strong>cavitation</strong><br><strong>Primo-infection :</strong> adénopathies hilaires, opacité de n'importe quel lobe, épanchement<br>⚠️ Chez l'<strong>immunosupprimé</strong>, la présentation est souvent <strong>atypique</strong> — parfois radiographie normale<br>➜ Voir <em>Imagerie du thorax</em></div>
+          </div>
+          <div style="background:#ede9fe;border-radius:10px;padding:14px;">
+            <strong style="color:#6d28d9;">🌐 TB extrapulmonaire</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Ganglionnaire</strong> — adénopathie cervicale chronique indolore<br><strong>Pleurale</strong> — épanchement exsudatif lymphocytaire<br><strong>Vertébrale</strong> (mal de Pott) · <strong>rénale</strong> · <strong>péricardique</strong> · <strong>péritonéale</strong> · gastro-intestinale<br>🚨 <strong>Méningée</strong> et <strong>miliaire</strong> — formes graves</div>
+          </div>
+          <div style="background:#f1f5f9;border-radius:10px;padding:14px;">
+            <strong style="color:#334155;">👥 Populations particulières</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>VIH</strong> — présentation atypique, plus souvent extrapulmonaire et disséminée<br><strong>Personne âgée</strong> — symptômes frustes, perte de poids et fatigue au premier plan<br><strong>Enfant</strong> — pauci-bacillaire, diagnostic plus difficile</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block para" style="margin-top:14px;border-left-color:#0f766e;">
+        <div class="block-title" id="tb-5"><span class="tag">🔬 Diagnostic de la TB active</span></div>
+
+        <div class="criteria-list" style="margin-top:12px;">
+          <div class="criteria-item"><div class="criteria-num red">1</div><span>🚨 <strong>Isoler d'emblée</strong> si suspicion de TB pulmonaire — précautions aériennes, sans attendre la confirmation</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">2</div><span><strong>Radiographie pulmonaire</strong></span></div>
+          <div class="criteria-item"><div class="criteria-num blue">3</div><span><strong>Expectorations</strong> — habituellement <strong>3 échantillons</strong>, dont un du matin, pour : <strong>frottis (BAAR)</strong>, <strong>culture</strong> (test de référence, mais lente) et <strong>TAAN</strong> (rapide, identifie aussi la résistance à la rifampicine)<br>💡 Induction des expectorations si le patient ne crache pas</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">4</div><span><strong>Antibiogramme</strong> — indispensable, la résistance change tout le traitement</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">5</div><span><strong>Dépistage du VIH</strong> chez tout cas de TB active</span></div>
+          <div class="criteria-item"><div class="criteria-num red">!</div><span><strong>Prélèvements du site atteint</strong> si TB extrapulmonaire — ponction pleurale, biopsie ganglionnaire, LCR : <strong>toujours demander culture ET histologie</strong></span></div>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">⚠️ <strong>Deux nuances à retenir :</strong> ① un <strong>frottis négatif n'exclut pas la TB</strong> — la culture peut être positive plus tard, et les formes pauci-bacillaires sont fréquentes chez l'enfant et l'immunosupprimé; ② la <strong>culture prend des semaines</strong>, ce qui explique que le traitement soit souvent amorcé sur une forte présomption clinique.</div>
+      </div>
+
+      <div class="block rx" style="margin-top:14px;">
+        <div class="block-title" id="tb-6"><span class="tag">💊 Traitement préventif de la tuberculose (TPT)</span></div>
+
+        <div class="key-fact red" style="margin-top:10px;">🚨 <strong>Règle absolue avant d'amorcer un TPT : avoir écarté une TB active.</strong> Un traitement préventif est une monothérapie ou une bithérapie — l'administrer à une personne atteinte de TB active <strong>sélectionne des résistances</strong>.</div>
+
+        <div class="key-fact blue" style="margin-top:10px;">📗 <strong>Source :</strong> <em>Normes canadiennes pour la lutte antituberculeuse, 8<sup>e</sup> édition</em> — chapitre sur le traitement préventif chez l'adulte (ASPC).</div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:18%;">Schéma</th><th style="width:16%;">Durée</th><th style="width:26%;">Dose</th><th>Effets indésirables courants</th></tr></thead>
+          <tbody>
+            <tr style="background:#dcfce7;"><td colspan="4"><strong>SCHÉMAS DE PREMIÈRE INTENTION</strong> — recommandation forte</td></tr>
+            <tr style="background:#f0fdf4;"><td><strong>3HP</strong><br><em>rifapentine + isoniazide</em></td><td><strong>3 mois</strong><br>12 doses<br><strong>1×/semaine</strong></td><td><strong>Isoniazide</strong> 15 mg/kg (max 900 mg)<br><strong>Rifapentine</strong> selon le poids, max 900 mg</td><td><strong>Réactions pseudogrippales</strong>, interactions médicamenteuses</td></tr>
+            <tr style="background:#f0fdf4;"><td><strong>4R</strong><br><em>rifampicine</em></td><td><strong>4 mois</strong><br>120 doses<br>quotidien</td><td><strong>10 mg/kg</strong> (max 600 mg)</td><td><strong>Éruptions cutanées</strong>, interactions médicamenteuses</td></tr>
+            <tr style="background:#fef9c3;"><td colspan="4"><strong>SECONDE INTENTION</strong> — si une rifamycine est impossible (intolérance, contre-indication, non réaliste)</td></tr>
+            <tr style="background:#fff8e1;"><td><strong>9H</strong><br><em>isoniazide</em></td><td><strong>9 mois</strong><br>270 doses<br>quotidien</td><td><strong>5 mg/kg</strong> (max 300 mg)</td><td>🚨 <strong>Hépatotoxicité</strong>, <strong>neuropathie périphérique</strong></td></tr>
+            <tr style="background:#f1f5f9;"><td colspan="4"><strong>SCHÉMAS ALTERNATIFS</strong></td></tr>
+            <tr><td><strong>6H</strong></td><td>6 mois · 180 doses</td><td>5 mg/kg (max 300 mg)</td><td>Hépatotoxicité, neuropathie périphérique</td></tr>
+            <tr><td><strong>3HR</strong></td><td>3 mois · 90 doses</td><td>INH 5 mg/kg + rifampicine 10 mg/kg</td><td>⚠️ <strong>Rôle très limité au Canada</strong> — aucun avantage démontré sur les schémas d'INH seul, avec les mêmes interactions que 4R et 3HP</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">🇨🇦 <strong>Deux particularités canadiennes à connaître :</strong><br>① <strong>La rifapentine n'est pas encore approuvée par Santé Canada.</strong> Elle est accessible via un <strong>règlement sur les besoins urgents en santé publique</strong>, qui permet aux praticiens de première ligne d'y accéder pour le TPT partout au Canada. Le schéma <strong>3HP est la norme de soins au Nunavut</strong>.<br>② Le schéma <strong>1HP (rifapentine + isoniazide quotidien × 1 mois) ne doit pas être utilisé au Canada</strong> en dehors du contexte du VIH, faute de données en milieu à faible fardeau.</div>
+
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">👥 Situations particulières</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;">
+          <div style="background:#fce4ec;border-radius:10px;padding:14px;">
+            <strong style="color:#c0392b;">🤰 Grossesse &amp; allaitement</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🎯 <strong>Si un TPT est administré pendant la grossesse, privilégier le 4R</strong> (rifampicine quotidienne × 4 mois).<br>⚠️ <strong>Éviter les schémas à base d'isoniazide jusqu'à 3 mois post-partum</strong>, sauf circonstances exceptionnelles — risque accru d'hépatotoxicité pendant la grossesse et les 3 premiers mois post-partum.<br>💡 INH et rifampicine passent dans le lait maternel en <strong>quantités bien inférieures aux doses thérapeutiques néonatales</strong> — risque très improbable pour le nourrisson.</div>
+          </div>
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+            <strong style="color:#1d4ed8;">🫀 Transplantation &amp; anticoagulants</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Dépister et traiter AVANT la greffe</strong> si le test est positif.<br>⚠️ Les patients <strong>transplantés</strong> et ceux sous <strong>anticoagulants oraux directs</strong> sont de <strong>mauvais candidats aux rifamycines</strong> — interactions majeures.<br>➜ Après greffe : privilégier le <strong>9H</strong> ou un schéma sans rifamycine, en raison du <strong>risque de rejet</strong> lié à la modification pharmacodynamique.</div>
+          </div>
+          <div style="background:#ede9fe;border-radius:10px;padding:14px;">
+            <strong style="color:#6d28d9;">🦠 VIH</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Un TPT contenant une <strong>rifamycine</strong> semble plus sûr et au moins aussi efficace que l'INH seul.<br>💊 <strong>Éfavirenz</strong> : sûr avec rifampicine ou rifapentine, <strong>sans ajustement</strong><br>💊 <strong>Dolutégravir</strong> : dose à <strong>doubler avec la rifampicine</strong> (mais pas avec la rifapentine)<br>➜ <strong>Impliquer un spécialiste du VIH</strong> dans le choix</div>
+          </div>
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;">
+            <strong style="color:#d35400;">🧬 Contact d'un cas résistant</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Isolat <strong>résistant à l'INH</strong> → suggérer <strong>4R</strong><br>Isolat <strong>résistant à la rifampicine</strong> → suggérer <strong>9H</strong><br><strong>TB-MR</strong> (résistant aux deux) → lévofloxacine ou moxifloxacine <strong>6 à 9 mois</strong> si la souche source est sensible aux fluoroquinolones<br>🎯 <strong>Tout contact d'un cas de TB-MR doit être suivi 2 ans</strong></div>
+          </div>
+        </div>
+
+        <div class="key-fact green" style="margin-top:12px;">🩺 <strong>Surveillance pendant le TPT :</strong> évaluer <strong>l'observance</strong> et les <strong>symptômes d'hépatotoxicité</strong> à chaque contact — nausées, anorexie, douleur de l'hypocondre droit, ictère, urines foncées. <strong>Bilan hépatique</strong> selon le profil de risque (âge, alcool, hépatopathie, grossesse, autres hépatotoxiques). Ajouter la <strong>pyridoxine</strong> avec l'isoniazide chez les personnes à risque de neuropathie. Prévenir de la <strong>coloration orangée des sécrétions</strong> sous rifamycine — et de l'interaction avec les <strong>contraceptifs hormonaux</strong> (voir <em>Contraception</em>).</div>
+      </div>
+
+      <div class="block rx" style="margin-top:14px;border-left-color:#6d28d9;">
+        <div class="block-title" id="tb-7"><span class="tag">💉 Tuberculose active — principes du traitement</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>Le traitement de la TB active relève de la spécialité et de la santé publique</strong> — il n'est pas amorcé en première ligne. Ce qu'il faut en connaître, c'est la logique, la durée, les effets indésirables à surveiller et les motifs d'alerte, parce que <strong>c'est vous qui verrez le patient entre les rendez-vous</strong>.</div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;border-left:4px solid #1d4ed8;">
+            <strong style="color:#1d4ed8;">⚙️ Les principes</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Multithérapie</strong> — jamais un seul médicament : la monothérapie génère de la résistance<br><strong>Deux phases</strong> : une <strong>phase intensive</strong> à plusieurs agents, puis une <strong>phase de continuation</strong> plus courte en nombre de molécules<br><strong>Durée prolongée</strong>, plusieurs mois<br><strong>Traitement guidé par l'antibiogramme</strong><br><strong>Thérapie sous observation directe (TOD)</strong> souvent organisée par la santé publique</div>
+          </div>
+          <div style="background:#fce4ec;border-radius:10px;padding:14px;border-left:4px solid #c0392b;">
+            <strong style="color:#c0392b;">⚠️ Effets indésirables à surveiller</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🚨 <strong>Hépatotoxicité</strong> — isoniazide, rifampicine, pyrazinamide<br><strong>Neuropathie périphérique</strong> — isoniazide (prévenue par la pyridoxine)<br><strong>Névrite optique</strong> — éthambutol : surveiller <strong>vision et perception des couleurs</strong><br><strong>Hyperuricémie et arthralgies</strong> — pyrazinamide<br><strong>Interactions</strong> — les rifamycines sont de <strong>puissants inducteurs enzymatiques</strong> : contraceptifs, anticoagulants, antirétroviraux, immunosuppresseurs<br><strong>Coloration orangée</strong> des urines, larmes, verres de contact</div>
+          </div>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">📗 <strong>Pour les schémas et les doses exactes</strong>, se référer aux <strong>Normes canadiennes pour la lutte antituberculeuse, 8<sup>e</sup> édition</strong> — chapitre 5 (traitement de la TB active), chapitre 8 (TB pharmacorésistante) et chapitre 10 (populations particulières). <strong>Ne pas se fier à une mémoire approximative pour ces schémas.</strong></div>
+      </div>
+
+      <div class="block para" style="margin-top:14px;border-left-color:#0891b2;">
+        <div class="block-title" id="tb-8"><span class="tag">📋 Santé publique &amp; rôle de l'IPS</span></div>
+
+        <div class="key-fact red" style="margin-top:10px;">⚖️ <strong>La tuberculose est une MADO</strong> — maladie à déclaration obligatoire à la direction de santé publique. La déclaration déclenche l'<strong>enquête épidémiologique</strong> et le <strong>dépistage des contacts</strong>, qui ne relèvent pas de vous mais que vous amorcez en déclarant.</div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:12px;">
+          <div style="background:#fce4ec;border-radius:10px;padding:14px;">
+            <strong style="color:#c0392b;">🚨 Isolement</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Précautions aériennes</strong> dès la suspicion de TB pulmonaire ou laryngée — <strong>sans attendre la confirmation</strong><br>Chambre à pression négative en établissement · masque N95 pour le personnel · masque de procédure pour le patient lors des déplacements<br>La levée de l'isolement suit des critères précis — décision de santé publique</div>
+          </div>
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+            <strong style="color:#1d4ed8;">🩺 Ce que fait l'IPS</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Penser à la TB</strong> devant une toux prolongée avec facteurs de risque<br><strong>Dépister l'ITL</strong> dans les indications reconnues — surtout <strong>avant une biothérapie</strong><br><strong>Écarter une TB active</strong> avant tout TPT<br><strong>Amorcer et suivre le TPT</strong> selon les normes<br><strong>Déclarer</strong> · <strong>isoler</strong> · <strong>orienter</strong><br><strong>Soutenir l'observance</strong> — c'est le déterminant principal du succès</div>
+          </div>
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+            <strong style="color:#15803d;">🤝 Enjeux d'équité</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">La TB touche de façon disproportionnée les <strong>communautés inuites et des Premières Nations</strong>, les personnes nées à l'étranger, en situation d'itinérance ou incarcérées.<br>➜ Barrières d'accès, méfiance historique envers le système, logement surpeuplé, insécurité alimentaire<br>🎯 <strong>Une approche adaptée culturellement et sans jugement fait partie du traitement</strong> — l'observance sur plusieurs mois en dépend.</div>
+          </div>
+          <div style="background:#f1f5f9;border-radius:10px;padding:14px;">
+            <strong style="color:#334155;">📚 Références</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Normes canadiennes pour la lutte antituberculeuse, 8<sup>e</sup> éd.</strong> (ASPC) — la référence<br>Direction de santé publique régionale — soutien à l'enquête et au dépistage des contacts<br>Société canadienne de pédiatrie pour la TB de l'enfant</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block flag" style="margin-top:14px;">
+        <div class="block-title" id="tb-9"><span class="tag">🚨 Red flags &amp; pièges</span></div>
+
+        <div class="flag-list" style="margin-top:12px;">
+          <div class="flag-item">🚨 <strong>Toux &gt; 2–3 semaines</strong> avec fièvre, sueurs nocturnes ou perte de poids chez une personne à risque — isoler et investiguer</div>
+          <div class="flag-item">🚨 <strong>Hémoptysies</strong> chez une personne née en région de forte incidence ou immunosupprimée</div>
+          <div class="flag-item">🚨 <strong>Amorcer une biothérapie sans avoir dépisté l'ITL</strong> — risque de réactivation, parfois disséminée</div>
+          <div class="flag-item">🚨 <strong>Traiter une ITL sans avoir écarté une TB active</strong> — génère de la résistance</div>
+          <div class="flag-item">🚨 <strong>Céphalées, confusion ou signes neurologiques</strong> chez un patient tuberculeux — méningite tuberculeuse : mortalité et séquelles élevées</div>
+          <div class="flag-item"><strong>Ictère, nausées, douleur de l'hypocondre droit</strong> sous traitement — hépatotoxicité : cesser et évaluer</div>
+          <div class="flag-item"><strong>Baisse de vision ou de la perception des couleurs</strong> sous éthambutol — névrite optique</div>
+          <div class="flag-item">⚠️ <strong>Frottis négatif interprété comme excluant la TB</strong> — la culture peut être positive</div>
+          <div class="flag-item">⚠️ <strong>TCT ou IGRA négatif utilisé pour exclure une TB active</strong> — ils ne servent pas à cela</div>
+          <div class="flag-item">⚠️ <strong>Oublier l'interaction rifamycine – contraceptif hormonal</strong> — grossesse non planifiée</div>
+          <div class="flag-item">⚠️ <strong>Oublier de déclarer</strong> — la MADO déclenche le dépistage des contacts</div>
+          <div class="flag-item">⚠️ <strong>Schéma à base d'isoniazide en grossesse ou dans les 3 mois post-partum</strong> — privilégier le 4R</div>
+        </div>
+
+        <div class="key-fact green" style="margin-top:12px;">✅ <strong>La démarche en 5 temps :</strong> ① <strong>y penser</strong> (toux prolongée + facteur de risque) · ② <strong>isoler</strong> si suspicion pulmonaire · ③ <strong>écarter la TB active</strong> avant tout TPT · ④ <strong>choisir le schéma</strong> — 3HP ou 4R en première intention, 9H si rifamycine impossible, <strong>4R en grossesse</strong> · ⑤ <strong>déclarer, orienter et soutenir l'observance</strong>.</div>
+      </div>
+    </div>
+
     <div class="section" id="sec-epanchement-pleural">
       <div class="section-header">
         <div class="section-accent" style="background:#7f1d1d">🫁</div>
@@ -30540,7 +30785,224 @@ function switchEpiTx(n) {
 </div>
 
 
-<div class="section" id="sec-geriatrie-eval">
+<div class="section" id="sec-vieillissement">
+      <div class="section-header">
+        <div class="section-accent" style="background:#a16207">⏳</div>
+        <div class="section-title"><h1>Le vieillissement</h1><div class="breadcrumb">Gériatrie <span class="breadcrumb-sep">·</span> Changements physiologiques <span class="breadcrumb-sep">·</span> Normal vs pathologique <span class="breadcrumb-sep">·</span> Réserve</div></div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;">
+        <button onclick="goToBlock('vie-1')" style="background:#374151;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧬 Principes généraux</button>
+        <button onclick="goToBlock('vie-2')" style="background:#c0392b;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🫀 Cardiovasculaire</button>
+        <button onclick="goToBlock('vie-3')" style="background:#0369a1;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🫁 Respiratoire &amp; rénal</button>
+        <button onclick="goToBlock('vie-4')" style="background:#6d28d9;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧠 Neuro &amp; cognition</button>
+        <button onclick="goToBlock('vie-5')" style="background:#0891b2;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">👁️ Sensoriel &amp; sommeil</button>
+        <button onclick="goToBlock('vie-6')" style="background:#b45309;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🦴 MSK, peau &amp; digestif</button>
+        <button onclick="goToBlock('vie-7')" style="background:#0f766e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🛡️ Immunité &amp; endocrinien</button>
+        <button onclick="goToBlock('vie-8')" style="background:#0a7a4e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">⚖️ Normal vs pathologique</button>
+        <button onclick="goToBlock('vie-9')" style="background:#dc2626;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🚨 Ce qui n'est JAMAIS normal</button>
+      </div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:20px;">
+        <div style="flex:1;min-width:95px;background:#FEF3C7;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#92400e;">Réserve ↓</div><div style="font-size:11px;color:#555;margin-top:4px;">Le concept qui explique tout</div></div>
+        <div style="flex:1;min-width:95px;background:#EEF2FF;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#1C3F8F;">≈ 25 %</div><div style="font-size:11px;color:#555;margin-top:4px;">Perte auditive après 65 ans</div></div>
+        <div style="flex:1;min-width:95px;background:#F3E8FF;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#6d28d9;">−50 %</div><div style="font-size:11px;color:#555;margin-top:4px;">Lumière transmise par le cristallin</div></div>
+        <div style="flex:1;min-width:95px;background:#FEE2E2;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#b91c1c;">Iatrogénie</div><div style="font-size:11px;color:#555;margin-top:4px;">Bien plus fréquente qu'à 40 ans</div></div>
+      </div>
+
+      <div class="block def" style="margin-top:14px;">
+        <div class="block-title" id="vie-1"><span class="tag">🧬 Principes généraux du vieillissement</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>Le concept central — la réserve fonctionnelle.</strong> Chaque organe possède une capacité bien supérieure à ce qu'exige le repos. Le vieillissement <strong>n'abolit pas la fonction de base</strong> : il <strong>érode la marge</strong> entre l'état de repos et la capacité maximale.<br>➜ Conséquence : une personne âgée en bonne santé va parfaitement bien <strong>au repos</strong>, mais tolère mal <strong>le stress</strong> — infection, chirurgie, déshydratation, nouveau médicament. C'est cette perte de marge, et non la fonction elle-même, qui définit la vulnérabilité.</div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-top:12px;">
+          <div style="background:#fef3c7;border-radius:10px;padding:14px;">
+            <strong style="color:#92400e;">📉 Une perte non linéaire</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Le déclin ne se fait pas au même rythme selon les organes ni selon les personnes.<br>🎯 <strong>La variabilité interindividuelle AUGMENTE avec l'âge</strong> — deux personnes de 85 ans se ressemblent bien moins que deux personnes de 25 ans.<br>➜ C'est pourquoi <strong>l'âge chronologique prédit si mal</strong> l'état réel.</div>
+          </div>
+          <div style="background:#fce4ec;border-radius:10px;padding:14px;">
+            <strong style="color:#c0392b;">⚠️ Vulnérabilité iatrogène</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Les personnes âgées constituent <strong>la majorité des patients</strong> en médecine et présentent <strong>beaucoup plus de complications iatrogènes</strong> que les adultes jeunes.<br>➜ Les changements physiologiques du vieillissement <em>et</em> les maladies chroniques contribuent ensemble à cette vulnérabilité. <span style="font-size:11px;color:#64748b;">📚 <em>Goldman-Cecil, ch. 22</em></span></div>
+          </div>
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+            <strong style="color:#1d4ed8;">🔥 Inflammation chronique de bas grade</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Le vieillissement s'accompagne d'une <strong>dérégulation des systèmes de réponse au stress</strong> — <strong>système nerveux sympathique</strong>, <strong>axe hypothalamo-hypophyso-surrénalien</strong> et <strong>inflammation</strong>.<br>➜ Cette dérégulation relie entre eux les <strong>changements d'organes</strong>, les <strong>maladies chroniques</strong>, la <strong>dépression</strong>, le <strong>déclin cognitif léger</strong> et le <strong>déclin fonctionnel</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Goldman-Cecil, ch. 22</em></span></div>
+          </div>
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+            <strong style="color:#15803d;">🎯 Vers la fragilité</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Beaucoup de ces changements convergent vers la <strong>fragilité</strong> — la <strong>vulnérabilité de fin de vie aux issues défavorables</strong> — de plus en plus utilisée comme <strong>outil de dépistage clinique</strong> pour évaluer le risque et cibler les interventions.<br>➜ Voir <em>Évaluation gériatrique &amp; fragilité</em></div>
+          </div>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">📏 <strong>Deux façons de mesurer la fragilité :</strong><br><strong>Modèle du phénotype physique</strong> (syndrome biologique) — 5 critères : <strong>lenteur, faible activité, faiblesse, perte de poids, épuisement</strong>. <strong>Fragile = ≥ 3 critères</strong> · pré-fragile = 1 à 2 · robuste = 0.<br><strong>Modèle d'accumulation de déficits</strong> (comorbidité) — nombre de déficits présents divisé par le nombre de déficits considérés : une <strong>proportion plus élevée = fragilité plus grande</strong>.<br><em>D'autres instruments existent (VES-13, modèles par domaines fonctionnels).</em> <span style="font-size:11px;color:#64748b;">📚 <em>Goldman-Cecil, ch. 22</em></span></div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;border-left-color:#c0392b;">
+        <div class="block-title" id="vie-2"><span class="tag">🫀 Système cardiovasculaire</span></div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:30%;">Changement physiologique</th><th style="width:32%;">Conséquence clinique</th><th>Ce que ça implique en pratique</th></tr></thead>
+          <tbody>
+            <tr style="background:#fce4ec;"><td><strong>Rigidification artérielle</strong> — perte d'élastine, dépôt de collagène</td><td>↑ <strong>TA systolique</strong>, <strong>pression pulsée élargie</strong><br>→ <strong>HTA systolique isolée</strong>, typique du sujet âgé</td><td>Traiter, mais avec prudence — le risque d'hypotension orthostatique est élevé<br>➜ Voir <em>HTA</em></td></tr>
+            <tr><td><strong>Hypertrophie et rigidité ventriculaire gauche</strong> — remplissage diastolique altéré</td><td><strong>Dépendance accrue à la contraction auriculaire</strong> pour le remplissage</td><td>🎯 Explique la <strong>mauvaise tolérance de la fibrillation auriculaire</strong> : perte de la systole auriculaire → chute du débit<br>➜ Prédisposition à l'<strong>IC à fraction d'éjection préservée</strong></td></tr>
+            <tr style="background:#e8f4fd;"><td><strong>↓ réponse aux catécholamines</strong> — désensibilisation bêta-adrénergique</td><td><strong>↓ fréquence cardiaque maximale</strong>, ↓ capacité d'augmenter le débit à l'effort</td><td>La tachycardie compensatrice est <strong>émoussée</strong> — une FC « normale » peut masquer une hypovolémie</td></tr>
+            <tr><td>🎯 <strong>Baroréflexe émoussé</strong></td><td><strong>Hypotension orthostatique</strong> et postprandiale fréquentes</td><td><strong>Mesurer la TA couchée puis debout</strong> · cause majeure de chutes et de syncopes<br>➜ Voir <em>Chutes</em>, <em>Syncope</em></td></tr>
+            <tr style="background:#f0fdf4;"><td><strong>Fibrose du système de conduction</strong>, perte de cellules du nœud sinusal</td><td>Bradycardies, blocs, <strong>fibrillation auriculaire</strong></td><td>➜ Voir <em>FA &amp; arythmies</em></td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="key-fact red" style="margin-top:12px;">🎯 <strong>La synthèse cardiovasculaire :</strong> le cœur âgé <strong>fonctionne bien au repos mais s'adapte mal</strong>. Il tolère mal la <strong>tachycardie</strong>, mal l'<strong>hypovolémie</strong>, mal la <strong>surcharge volémique</strong> — la marge entre « trop sec » et « trop rempli » se rétrécit considérablement. C'est ce qui rend la réanimation liquidienne du sujet âgé si délicate.</div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;border-left-color:#0369a1;">
+        <div class="block-title" id="vie-3"><span class="tag">🫁 Systèmes respiratoire &amp; rénal</span></div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
+          <div style="background:#e0f2fe;border-radius:10px;padding:14px;border-left:4px solid #0369a1;">
+            <strong style="color:#0369a1;">🫁 Respiratoire</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Rigidité de la paroi thoracique</strong> et ↓ force des muscles respiratoires<br><strong>Perte de recul élastique pulmonaire</strong> → fermeture précoce des petites voies aériennes<br>➜ ↑ <strong>volume résiduel</strong>, ↓ <strong>VEMS et CVF</strong>, ↓ <strong>PaO₂</strong> avec l'âge<br><strong>↓ réflexe de toux</strong> et <strong>↓ clairance mucociliaire</strong><br><br>🎯 <strong>Conséquences :</strong> risque accru de <strong>pneumonie et d'aspiration</strong> · moindre réserve devant une atteinte respiratoire · <strong>désaturation plus rapide</strong><br>⚠️ Ne pas attribuer une dyspnée nouvelle au seul vieillissement</div>
+          </div>
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;border-left:4px solid #1d4ed8;">
+            <strong style="color:#1d4ed8;">🫘 Rénal</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>↓ nombre de néphrons</strong> et ↓ flux sanguin rénal<br>➜ <strong>↓ débit de filtration glomérulaire</strong><br>🚨 <strong>MAIS la créatinine reste souvent normale</strong>, parce que la masse musculaire diminue en parallèle<br><strong>↓ capacité de concentration et de dilution</strong> des urines<br><strong>↓ réponse à l'ADH et à l'aldostérone</strong> · <strong>↓ sensation de soif</strong><br><br>🎯 <strong>Conséquences :</strong> <strong>déshydratation</strong> et <strong>hyponatrémie</strong> faciles · <strong>ajustement posologique obligatoire</strong> · vulnérabilité aux AINS et aux produits de contraste<br>➜ Voir <em>Polypharmacie</em>, <em>Dysnatrémie</em>, <em>IRA</em></div>
+          </div>
+        </div>
+
+        <div class="key-fact red" style="margin-top:12px;">🚨 <strong>Le piège rénal le plus dangereux du vieillissement :</strong> une <strong>créatinine « normale » chez une personne âgée peut masquer une insuffisance rénale significative</strong>. Toujours <strong>estimer la fonction rénale</strong> avant de doser un médicament à élimination rénale — et se rappeler que les formules d'estimation ont elles-mêmes des limites en gériatrie.</div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;border-left-color:#6d28d9;">
+        <div class="block-title" id="vie-4"><span class="tag">🧠 Système nerveux &amp; cognition</span></div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
+          <div style="background:#ede9fe;border-radius:10px;padding:14px;border-left:4px solid #6d28d9;">
+            <strong style="color:#6d28d9;">🧠 Changements structurels</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>↓ volume cérébral</strong>, surtout frontal et hippocampique<br><strong>↓ neurotransmetteurs</strong> — dont l'<strong>acétylcholine</strong><br>➜ Explique la <strong>sensibilité extrême aux anticholinergiques</strong><br><strong>↓ vitesse de conduction nerveuse</strong><br><strong>↓ proprioception</strong> et réflexes posturaux<br><strong>Barrière hématoencéphalique plus perméable</strong><br>➜ Sensibilité accrue aux <strong>benzodiazépines, opioïdes, antipsychotiques</strong></div>
+          </div>
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;border-left:4px solid #15803d;">
+            <strong style="color:#15803d;">🧩 Cognition — ce qui change normalement</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>✅ Vieillissement normal :</strong><br>• <strong>Ralentissement</strong> du traitement de l'information<br>• <strong>Manque du mot</strong> occasionnel, avec récupération ultérieure<br>• Besoin de <strong>plus de temps</strong> pour apprendre du nouveau<br>• Difficulté à faire <strong>deux choses à la fois</strong><br>🎯 <strong>Ce qui est préservé :</strong> vocabulaire, connaissances générales, mémoire ancienne, <strong>capacité de jugement</strong>, <strong>autonomie</strong><br><br><strong>❌ PAS le vieillissement normal :</strong> oublis qui <strong>nuisent aux activités quotidiennes</strong>, désorientation, changement de personnalité, difficulté à gérer médicaments ou finances<br>➜ Voir <em>Troubles neurocognitifs</em></div>
+          </div>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">🎯 <strong>La distinction pratique :</strong> dans le vieillissement normal, la personne <strong>oublie un détail mais se rappelle l'événement</strong>, et compense avec des stratégies (listes, rappels) — <strong>son autonomie reste intacte</strong>. Dans le TNC, l'oubli <strong>porte sur l'événement entier</strong> et <strong>interfère avec le fonctionnement</strong>.</div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;border-left-color:#0891b2;">
+        <div class="block-title" id="vie-5"><span class="tag">👁️ Sensoriel &amp; sommeil</span></div>
+
+        <div class="key-fact red" style="margin-top:10px;">🎯 <strong>Pourquoi ce bloc mérite votre attention :</strong> les déficits sensoriels sont <strong>faciles à corriger</strong> et pourtant systématiquement négligés. Ils sont <strong>facteurs de risque de délirium, de chutes, de déclin cognitif et d'isolement</strong>. Vérifier que lunettes et appareils auditifs sont <strong>portés et fonctionnels</strong> est l'un des gestes au meilleur rendement de toute la gériatrie.</div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:18%;">Sens</th><th style="width:38%;">Changements</th><th>Conséquences</th></tr></thead>
+          <tbody>
+            <tr style="background:#e0f2fe;"><td><strong>👂 Audition</strong></td><td>Une <strong>perte auditive apparaît chez environ 25 % des personnes de plus de 65 ans</strong><br>La <strong>↓ transmission neurale</strong> entraîne une difficulté à <strong>distinguer les sons importants du bruit de fond</strong><br>La <strong>presbyacousie</strong> diminue l'audition des <strong>sons aigus</strong></td><td>🎯 Explique le « <strong>j'entends mais je ne comprends pas</strong> » et la difficulté en groupe<br>➜ Isolement, dépression, <strong>faux diagnostic de trouble cognitif</strong><br>💡 <strong>Parler plus grave et plus lentement</strong>, pas plus fort</td></tr>
+            <tr><td><strong>👁️ Vision</strong></td><td><strong>Épaississement et rigidification du cristallin</strong> → ↓ mise au point de près (<strong>presbytie</strong>) et <strong>↑ éblouissement</strong><br>🎯 <strong>La transmission de la lumière à travers le cristallin peut diminuer de 50 % ou plus</strong> — d'où un besoin de <strong>lumière ambiante nettement accru</strong><br><strong>Décollement du vitré</strong> → corps flottants<br><strong>↓ production de larmes</strong> → sécheresse oculaire</td><td>🎯 Au total, l'acuité décline au point qu'environ <strong>40 % des hommes et 60 % des femmes de plus de 65 ans</strong> ont une acuité de 20/70 ou moins<br>➜ <strong>Chutes</strong>, difficulté de conduite, perte d'autonomie<br>💡 <strong>Améliorer l'éclairage</strong> est une intervention à part entière</td></tr>
+            <tr style="background:#f0fdf4;"><td><strong>👅 Goût &amp; odorat</strong></td><td>↓ nombre de papilles gustatives · ↓ olfaction</td><td><strong>↓ appétit</strong> et <strong>dénutrition</strong> · risque de ne pas détecter fumée ou aliments avariés</td></tr>
+            <tr><td><strong>🤚 Toucher &amp; proprioception</strong></td><td>↓ sensibilité tactile, vibratoire et proprioceptive</td><td><strong>Instabilité posturale</strong> · risque de blessure non perçue — surtout aux pieds en diabète</td></tr>
+            <tr style="background:#f1f5f9;"><td><strong>😴 Sommeil</strong></td><td><strong>Avance de phase</strong> (endormissement et réveil plus tôt) · ↓ sommeil profond · <strong>fragmentation</strong> · ↑ réveils nocturnes</td><td>⚠️ <strong>Le besoin total de sommeil ne diminue pas beaucoup</strong> — c'est sa qualité et sa répartition qui changent<br>🚨 <strong>Ce n'est PAS une indication d'hypnotique</strong> — voir <em>Polypharmacie</em></td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;border-left-color:#b45309;">
+        <div class="block-title" id="vie-6"><span class="tag">🦴 Musculosquelettique, peau &amp; digestif</span></div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:12px;">
+          <div style="background:#fef3c7;border-radius:10px;padding:14px;">
+            <strong style="color:#92400e;">💪 Muscle — sarcopénie</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>↓ masse et force musculaires</strong>, surtout des <strong>fibres rapides</strong><br>➜ ↓ vitesse de marche, difficulté à se lever d'une chaise<br>🎯 <strong>En grande partie réversible</strong> : l'<strong>exercice en résistance</strong> et un <strong>apport protéique suffisant</strong> font remonter la force à tout âge<br>⚠️ L'<strong>immobilisation accélère brutalement</strong> la perte — quelques jours d'alitement suffisent</div>
+          </div>
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+            <strong style="color:#1d4ed8;">🦴 Os &amp; articulations</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>↓ densité osseuse</strong> — accélérée après la ménopause<br><strong>↓ hauteur</strong>, cyphose dorsale<br><strong>Amincissement du cartilage</strong>, ↓ souplesse ligamentaire<br>➜ <strong>Fractures de fragilité</strong>, arthrose<br>➜ Voir <em>Chutes &amp; mobilité</em></div>
+          </div>
+          <div style="background:#fce4ec;border-radius:10px;padding:14px;">
+            <strong style="color:#c0392b;">🩹 Peau</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Amincissement de l'épiderme et du derme</strong>, ↓ collagène et élastine<br><strong>↓ vascularisation</strong> et ↓ tissu adipeux sous-cutané<br>➜ <strong>Fragilité cutanée</strong>, <strong>cicatrisation ralentie</strong>, <strong>plaies de pression</strong>, ↓ thermorégulation<br>💡 <strong>Purpura sénile</strong> : condition <strong>fréquente et bénigne</strong> due à une production de collagène altérée et à la fragilité capillaire. <strong>En l'absence d'autres signes de maladie, aucune investigation n'est nécessaire</strong> <span style="font-size:11px;color:#64748b;">📚 <em>Goldman-Cecil, ch. 22</em></span></div>
+          </div>
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+            <strong style="color:#15803d;">🫃 Digestif</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>↓ salivation</strong>, problèmes dentaires<br><strong>↓ motilité œsophagienne</strong> et ralentissement de la vidange gastrique<br><strong>↑ pH gastrique</strong> → ↓ absorption de fer, B12, calcium<br><strong>Constipation</strong> favorisée par ↓ motilité colique, immobilité, médicaments, faibles apports<br>⚠️ Le <strong>fécalome</strong> est une cause classique et réversible de délirium et d'agitation</div>
+          </div>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">🩹 <strong>Sur les plaies de pression :</strong> ce sont des complications <strong>graves mais évitables de l'immobilité</strong>. La prévention — mobilisation précoce, changements de position, nutrition — l'emporte très largement sur le traitement une fois la plaie installée. <span style="font-size:11px;color:#64748b;">📚 <em>Goldman-Cecil, ch. 22</em></span></div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;border-left-color:#0f766e;">
+        <div class="block-title" id="vie-7"><span class="tag">🛡️ Immunité, endocrinien &amp; hématologique</span></div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:12px;">
+          <div style="background:#e0f2fe;border-radius:10px;padding:14px;">
+            <strong style="color:#0369a1;">🛡️ Immunosénescence</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>↓ fonction des lymphocytes T</strong>, involution thymique<br><strong>↓ réponse vaccinale</strong><br><strong>↑ auto-anticorps</strong> · inflammation chronique de bas grade<br>🎯 <strong>Conséquences cliniques majeures :</strong><br>• Infections <strong>plus fréquentes et plus graves</strong><br>• <strong>Réponse fébrile atténuée</strong> — l'absence de fièvre n'exclut pas l'infection<br>• <strong>Réactivation</strong> : zona, tuberculose latente<br>• Vaccination d'autant plus importante</div>
+          </div>
+          <div style="background:#fef3c7;border-radius:10px;padding:14px;">
+            <strong style="color:#92400e;">🦋 Endocrinien</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>↓ tolérance au glucose</strong> — insulinorésistance<br><strong>↓ hormones sexuelles</strong> — ménopause, baisse progressive de la testostérone<br><strong>↓ vitamine D</strong> — synthèse cutanée réduite et exposition moindre<br><strong>Modifications thyroïdiennes</strong> : ⚠️ présentation <strong>atypique</strong> — l'hyperthyroïdie peut se présenter sous <strong>forme apathique</strong><br>➜ Voir <em>Hyperthyroïdie</em>, <em>Diabète</em></div>
+          </div>
+          <div style="background:#fce4ec;border-radius:10px;padding:14px;">
+            <strong style="color:#c0392b;">🩸 Hématologique</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>↓ réserve médullaire</strong> — la production de base reste normale, mais la réponse au stress est diminuée<br>🚨 <strong>L'anémie n'est PAS une conséquence normale du vieillissement</strong> — elle doit toujours être investiguée<br>État <strong>procoagulant</strong> relatif<br>➜ Voir <em>FSC &amp; anémie</em></div>
+          </div>
+          <div style="background:#f1f5f9;border-radius:10px;padding:14px;">
+            <strong style="color:#334155;">🌡️ Thermorégulation</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>↓ perception du chaud et du froid</strong>, ↓ sudation, ↓ vasoconstriction<br>➜ Vulnérabilité à l'<strong>hypothermie</strong> et au <strong>coup de chaleur</strong><br>🚨 Une <strong>hypothermie</strong> en contexte infectieux est un <strong>signe de gravité</strong>, pas de bénignité</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block rx" style="margin-top:14px;">
+        <div class="block-title" id="vie-8"><span class="tag">⚖️ Distinguer le normal du pathologique</span></div>
+
+        <div class="key-fact red" style="margin-top:10px;">🎯 <strong>L'enjeu de tout ce bloc :</strong> deux erreurs symétriques et également coûteuses. <strong>Attribuer au vieillissement</strong> ce qui est une maladie traitable — et <strong>médicaliser</strong> un changement normal. La première prive d'un traitement; la seconde expose à des examens et à des médicaments inutiles.</div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:30%;">Observation</th><th style="width:32%;">✅ Vieillissement normal</th><th>❌ Signal pathologique</th></tr></thead>
+          <tbody>
+            <tr style="background:#f0fdf4;"><td><strong>Mémoire</strong></td><td>Manque du mot, ralentissement, besoin de plus de temps · <strong>autonomie préservée</strong></td><td><strong>Oublis qui nuisent aux activités</strong>, désorientation, difficulté avec médicaments ou finances</td></tr>
+            <tr><td><strong>Marche</strong></td><td>Légère ↓ de la vitesse, pas plus prudent</td><td><strong>Instabilité, chutes, besoin d'aide nouveau</strong></td></tr>
+            <tr style="background:#e8f4fd;"><td><strong>Fatigue</strong></td><td>Récupération plus lente après un effort</td><td><strong>Épuisement, ↓ des activités habituelles</strong> — critère de fragilité</td></tr>
+            <tr><td><strong>Poids</strong></td><td>Stable, ou variation lente et modeste</td><td>🚨 <strong>Perte de poids involontaire</strong> — jamais normale</td></tr>
+            <tr style="background:#fff3cd;"><td><strong>Sommeil</strong></td><td>Avance de phase, sommeil plus fragmenté</td><td>Insomnie invalidante, <strong>somnolence diurne excessive</strong>, apnée</td></tr>
+            <tr><td><strong>Humeur</strong></td><td>Adaptation aux pertes, deuils traversés</td><td>🚨 <strong>Dépression</strong> — jamais une conséquence normale de l'âge</td></tr>
+            <tr style="background:#fce4ec;"><td><strong>Continence</strong></td><td>Mictions nocturnes un peu plus fréquentes</td><td>🚨 <strong>Incontinence</strong> — fréquente, mais <strong>jamais « normale »</strong> : elle s'investigue</td></tr>
+            <tr><td><strong>Confusion</strong></td><td>—</td><td>🚨 <strong>Jamais normale</strong> — délirium jusqu'à preuve du contraire</td></tr>
+            <tr style="background:#f1f5f9;"><td><strong>Douleur</strong></td><td>—</td><td>🚨 <strong>Jamais un effet de l'âge</strong> — elle a une cause</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="key-fact green" style="margin-top:12px;">💡 <strong>Le test qui tranche presque toujours :</strong> « <strong>est-ce que ça l'empêche de faire ce qu'elle faisait avant?</strong> » Le vieillissement normal <strong>ralentit</strong>; la maladie <strong>empêche</strong>. Et un changement <strong>rapide</strong> n'est jamais du vieillissement — le vieillissement est lent, par définition.</div>
+      </div>
+
+      <div class="block flag" style="margin-top:14px;">
+        <div class="block-title" id="vie-9"><span class="tag">🚨 Ce qui n'est JAMAIS le vieillissement normal</span></div>
+
+        <div class="flag-list" style="margin-top:12px;">
+          <div class="flag-item">🚨 <strong>Confusion aiguë</strong> — délirium, chercher une cause organique</div>
+          <div class="flag-item">🚨 <strong>Perte de poids involontaire</strong> — néoplasie, dénutrition, dépression, dysphagie, hyperthyroïdie</div>
+          <div class="flag-item">🚨 <strong>Anémie</strong> — toujours investiguer, jamais « l'âge »</div>
+          <div class="flag-item">🚨 <strong>Dépression</strong> — traitable, et à risque suicidaire élevé chez l'homme âgé</div>
+          <div class="flag-item">🚨 <strong>Douleur</strong> — elle a une cause, et elle se traite</div>
+          <div class="flag-item"><strong>Chutes</strong> — événement sentinelle, jamais une fatalité</div>
+          <div class="flag-item"><strong>Incontinence urinaire</strong> — fréquente mais pas normale : souvent médicamenteuse, fonctionnelle ou liée à un fécalome</div>
+          <div class="flag-item"><strong>Déclin fonctionnel rapide</strong> — cherche une cause aiguë</div>
+          <div class="flag-item"><strong>Perte d'autonomie dans les AVQ ou les AVD</strong></div>
+          <div class="flag-item">⚠️ <strong>Absence de fièvre en contexte infectieux</strong> — ne rassure pas : la réponse fébrile est atténuée</div>
+          <div class="flag-item">⚠️ <strong>Créatinine normale</strong> — n'exclut pas une insuffisance rénale significative</div>
+        </div>
+
+        <div class="key-fact blue" style="margin-top:12px;">✅ <strong>Ce qu'il faut retenir :</strong> le vieillissement <strong>réduit la réserve, pas la fonction de repos</strong>. Il <strong>ralentit</strong> sans empêcher. Il est <strong>lent et progressif</strong>. Tout ce qui est <strong>rapide, invalidant ou douloureux</strong> est une maladie — et mérite le même sérieux diagnostique qu'à 40 ans.</div>
+      </div>
+    </div>
+
+    <div class="section" id="sec-geriatrie-eval">
       <div class="section-header">
         <div class="section-accent" style="background:#7c3aed">🧓</div>
         <div class="section-title"><h1>Évaluation gériatrique &amp; fragilité</h1><div class="breadcrumb">Gériatrie <span class="breadcrumb-sep">·</span> AAPA — MSSS <span class="breadcrumb-sep">·</span> Signes AÎNÉES <span class="breadcrumb-sep">·</span> Déclin fonctionnel</div></div>
@@ -50998,6 +51460,7 @@ const SEARCH_INDEX = [
   { id:'mpoc',                title:'MPOC',                           specialty:'Pneumologie',    keywords:['mpoc','emphysème','bronchite chronique','gold','spirométrie'] },
   { id:'pneumo-aco',            title:'ACO — Chevauchement Asthme-MPOC',  specialty:'Pneumologie',    keywords:['aco','chevauchement','asthme mpoc','overlap','csc/bala/amla'] },
   { id:'pneumo-pneumonie',      title:'Pneumonie',                          specialty:'Pneumologie',    keywords:['pneumonie','pac','streptocoque','legionella','pneumocoque','curb65','psi'] },
+  { id:'tuberculose',        title:'Tuberculose',                    specialty:'Pneumologie',     keywords:['tuberculose','tb','mycobacterium','bacille de koch','baar','itl','infection tuberculeuse latente','tpt','traitement préventif','tct','mantoux','tuberculine','igra','quantiferon','3hp','4r','9h','6h','rifampicine','rifapentine','isoniazide','inh','pyrazinamide','éthambutol','pyridoxine','hépatotoxicité','miliaire','méningite tuberculeuse','mal de pott','tb-mr','multirésistante','biothérapie','anti-tnf','mado','isolement','précautions aériennes','normes canadiennes','aspc','nunavut','cavitation','expectorations','taan'] },
   { id:'pneumo-autres-patho',   title:'Autres Pathologies Pulmonaires',    specialty:'Pneumologie',    keywords:['bronchite aiguë','bronchiectasie','pneumonite','fibrose pulmonaire','oap','épanchement pleural','hypertension pulmonaire'] },
     { id:'hemostase',            title:'Bases de l\'hémostase',              specialty:'Hématologie',    keywords:['hémostase','plaquettes','coagulation','fibrinolyse','facteurs','cascade','von willebrand','hémophilie','fibrine','d-dimères'] },
   { id:'thrombolyse',           title:'Thrombolyse thérapeutique',            specialty:'Hématologie',    keywords:['thrombolyse','fibrinolytiques','altéplase','tpa','tnkase','streptokinase','ep massive'] },
@@ -51016,6 +51479,7 @@ const SEARCH_INDEX = [
   { id:'syncope',             title:'Syncope',                        specialty:'Neurologie',     keywords:['syncope','lipothymie','vasovagale','orthostatique','tilt test','presyncope','adams-stokes'] },
   { id:'douleur',          title:'Douleur & Analgésie',            specialty:'Neurologie',     keywords:['douleur','analgésie','opioïde','morphine','hydromorphone','oxycodone','fentanyl','tramadol','acétaminophène','ains','cox-2','naloxone','surdosage','conversion','équi-analgésie','nociceptif','neuropathique','multimodale','palier oms','kétorolac','célécoxib','codéine','buprénorphine','méthadone','tapentadol'] },
   { id:'geriatrie-eval',     title:'Évaluation Gériatrique & Fragilité', specialty:'Gériatrie',    keywords:['gériatrie','personne âgée','aîné','aapa','aînées','ainees','fragilité','frailty','déclin fonctionnel','iatrogène','avq','avd','autonomie','syndrome gériatrique','présentation atypique','sarcopénie','dénutrition','immobilisation','maltraitance','proche aidant','chsld','rpa','mandat de protection','évaluation gériatrique'] },
+  { id:'vieillissement',     title:'Le Vieillissement',              specialty:'Gériatrie',       keywords:['vieillissement','sénescence','âge','réserve physiologique','physiologique','normal vs pathologique','sarcopénie','presbyacousie','presbytie','purpura sénile','immunosénescence','baroréflexe','hypotension orthostatique','débit de filtration','créatinine','thermorégulation','fragilité','phénotype','rockwood','fried','déficits','plaie de pression','avance de phase','déclin cognitif','anticholinergique'] },
   { id:'delirium',           title:'Délirium — État Confusionnel Aigu', specialty:'Gériatrie',    keywords:['délirium','delirium','état confusionnel','confusion aiguë','cam','confusion assessment method','hypoactif','hyperactif','inattention','fluctuation','fécalome','globe vésical','contention','sevrage','anticholinergique','aapa','3 d','démence délirium dépression'] },
   { id:'tnc',                title:'Troubles Neurocognitifs (TNC)',   specialty:'Gériatrie',    keywords:['tnc','trouble neurocognitif','démence','alzheimer','corps de lewy','frontotemporal','vasculaire','moca','mmse','ad8','scpd','comportement','errance','syndrome crépusculaire','donépézil','rivastigmine','galantamine','mémantine','inhibiteur cholinestérase','aptitude','saaq','conduite automobile','mandat de protection','inesss','hydrocéphalie'] },
   { id:'chutes',             title:'Chutes & Mobilité',              specialty:'Gériatrie',    keywords:['chute','chutes','équilibre','marche','mobilité','tug','timed up and go','hypotension orthostatique','peur de tomber','pied','imp','inspq','ergothérapie','barres d appui','fracture de fragilité','ostéoporose','hanche','nycturie','chaussures','domicile','syncope'] },
@@ -51351,7 +51815,7 @@ const SECTION_ORDER = [
   // Microbiologie
   'infections','antibiotherapie','itss',
   // Pneumologie
-  'anatomie-tfr','pneumo-eval','pneumo-gazo','aso','apnee-centrale','asthme','mpoc','pneumo-aco','pneumo-o2','pneumo-pneumonie','epanchement-pleural','pneumo-autres-patho','pneumo-ira','pneumo-htp','neo-poumon','amiante',
+  'anatomie-tfr','pneumo-eval','pneumo-gazo','aso','apnee-centrale','asthme','mpoc','pneumo-aco','pneumo-o2','pneumo-pneumonie','tuberculose','epanchement-pleural','pneumo-autres-patho','pneumo-ira','pneumo-htp','neo-poumon','amiante',
   // Soins critiques
   'chocs',
   // Soins palliatifs
@@ -51361,7 +51825,7 @@ const SECTION_ORDER = [
   // Neurologie
   'avc','sep','migraine','parkinson','epilepsie','vertige','syncope','douleur',
   // Gériatrie
-  'geriatrie-eval','delirium','tnc','chutes','polypharmacie',
+  'vieillissement','geriatrie-eval','delirium','tnc','chutes','polypharmacie',
   // Urologie
   'uro-physio','uro-sbau','uro-hbp','uro-cancer-prostate','uro-vha','uro-incontinence','uro-iu-recidivante','uro-pna','uro-sgu','uro-orchi','uro-prostatite','uro-de','uro-cystite','uro-lithiase',
   // Gastro-entérologie
@@ -51391,6 +51855,8 @@ const SECTION_ORDER = [
 
 // Section titles for display in nav buttons
 const SECTION_TITLES = {
+  'vieillissement':'Le Vieillissement',
+  'tuberculose':'Tuberculose',
   'imagerie-thorax':'Imagerie du Thorax',
   'chocs':'Les Chocs',
   'ordonnances':'Normes des Ordonnances',
