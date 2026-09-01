@@ -1229,6 +1229,8 @@ m
         <svg class="chevron" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>      </div>
       <div class="specialty-items">
         <div class="nav-item" onclick="showSection('imagerie-thorax')">Imagerie du Thorax</div>
+        <div class="nav-item" onclick="showSection('imagerie-abdo')">Imagerie de l'Abdomen</div>
+        <div class="nav-item" onclick="showSection('neuro-imagerie')">Neuro-imagerie</div>
       </div>
     </div>
 
@@ -1524,7 +1526,7 @@ m
           <div class="home-card-icon" style="background:#f8fafc;color:#475569">🩻</div>
           <div class="home-card-body">
             <div class="home-card-name">Imagerie</div>
-            <div class="home-card-count">1 section</div>
+            <div class="home-card-count">3 sections</div>
           </div>
         </div>
         <div class="home-card" onclick="showSection('arthrite-approche'); openGroup('grp-rhumato')">
@@ -48904,6 +48906,456 @@ Revoir rapidement si nouvelle Sx ou changement de dose<br>
       </div>
     </div>
 
+    <div class="section" id="sec-imagerie-abdo">
+      <div class="section-header">
+        <div class="section-accent" style="background:#6b7280">🫄</div>
+        <div class="section-title"><h1>Imagerie de l'abdomen</h1><div class="breadcrumb">Imagerie <span class="breadcrumb-sep">·</span> ASP · Échographie · TDM <span class="breadcrumb-sep">·</span> Choisir la modalité</div></div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;">
+        <button onclick="goToBlock('iab-1')" style="background:#374151;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧭 Choisir la modalité</button>
+        <button onclick="goToBlock('iab-2')" style="background:#0369a1;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🔍 Lecture de l'ASP</button>
+        <button onclick="goToBlock('iab-3')" style="background:#dc2626;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🚨 Air libre</button>
+        <button onclick="goToBlock('iab-4')" style="background:#b45309;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🌀 Occlusion &amp; iléus</button>
+        <button onclick="goToBlock('iab-5')" style="background:#0f766e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🔊 Échographie</button>
+        <button onclick="goToBlock('iab-6')" style="background:#6d28d9;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">📷 TDM — protocoles</button>
+        <button onclick="goToBlock('iab-7')" style="background:#c0392b;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🩺 Par présentation clinique</button>
+        <button onclick="goToBlock('iab-8')" style="background:#0891b2;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">⚠️ Sécurité &amp; contraste</button>
+        <button onclick="goToBlock('iab-9')" style="background:#991b1b;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🚨 Red flags</button>
+      </div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:20px;">
+        <div style="flex:1;min-width:95px;background:#F1F5F9;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#334155;">Écho d'abord</div><div style="font-size:11px;color:#555;margin-top:4px;">Biliaire · rein · gynéco · jeune</div></div>
+        <div style="flex:1;min-width:95px;background:#EEF2FF;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#1C3F8F;">TDM</div><div style="font-size:11px;color:#555;margin-top:4px;">Abdomen aigu indifférencié</div></div>
+        <div style="flex:1;min-width:95px;background:#FEE2E2;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#b91c1c;">Debout</div><div style="font-size:11px;color:#555;margin-top:4px;">Sinon l'air libre est invisible</div></div>
+        <div style="flex:1;min-width:95px;background:#DCFCE7;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#15803d;">ASP</div><div style="font-size:11px;color:#555;margin-top:4px;">Rendement faible — indications étroites</div></div>
+      </div>
+
+      <div class="block def" style="margin-top:14px;">
+        <div class="block-title" id="iab-1"><span class="tag">🧭 Choisir la bonne modalité</span></div>
+
+        <div class="key-fact red" style="margin-top:10px;">🎯 <strong>Le message principal, et il surprend :</strong> la <strong>radiographie simple de l'abdomen (ASP) est moins sensible et moins spécifique que la TDM</strong> pour détecter les anomalies abdominales majeures. Elle conserve toutefois trois avantages réels — <strong>disponibilité, faible coût et portabilité</strong> —, ce qui permet d'obtenir rapidement des images chez une personne souffrant de douleur abdominale, de symptômes obstructifs ou d'un tableau d'abdomen aigu. Mais elle est <strong>largement surprescrite par réflexe</strong> : une ASP normale ne rassure sur presque rien. <span style="font-size:11px;color:#64748b;">📚 <em>Goldman-Cecil, 26<sup>e</sup> éd., ch. 124</em></span></div>
+
+        <div class="key-fact blue" style="margin-top:8px;">🎯 <strong>Ce que la combinaison « couché + debout (ou décubitus latéral) » permet réellement de diagnostiquer</strong>, selon Goldman-Cecil : <strong>occlusion du grêle ou du côlon</strong>, <strong>iléus</strong>, <strong>volvulus</strong>, <strong>pneumopéritoine</strong>, <strong>intestin ischémique ou nécrotique avec air pariétal (pneumatose)</strong>, <strong>aérobilie</strong> et <strong>gaz dans le système porte</strong>. Des <strong>ASP en série</strong> sont particulièrement utiles pour suivre l'évolution d'une occlusion ou d'un iléus chez une personne hospitalisée.</div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:18%;">Modalité</th><th style="width:36%;">Bonne indication</th><th>Limites</th></tr></thead>
+          <tbody>
+            <tr style="background:#f1f5f9;"><td><strong>ASP</strong><br><em>radiographie simple</em></td><td><strong>Suspicion d'occlusion</strong> · <strong>air libre</strong> (cliché <strong>debout</strong> ou décubitus latéral) · <strong>corps étranger</strong> radio-opaque · <strong>position d'un tube ou d'une sonde</strong></td><td>⚠️ <strong>Rendement faible</strong> dans la douleur abdominale non spécifique<br>Ne voit ni l'appendicite, ni la diverticulite, ni la plupart des calculs biliaires</td></tr>
+            <tr style="background:#f0fdf4;"><td><strong>Échographie</strong><br><em>1<sup>re</sup> intention souvent</em></td><td>🎯 <strong>Voies biliaires</strong> ⭐ · <strong>reins et voies urinaires</strong> · <strong>gynécologique</strong> · <strong>AAA</strong> · ascite · appendicite chez l'<strong>enfant</strong> et la <strong>femme enceinte</strong> · guidage de ponction</td><td>Opérateur-dépendante · gênée par les <strong>gaz digestifs</strong> et l'<strong>obésité</strong> · vue limitée du rétropéritoine</td></tr>
+            <tr style="background:#e8f4fd;"><td><strong>TDM abdomino-pelvien</strong></td><td>🎯 <strong>Abdomen aigu indifférencié</strong> chez l'adulte · appendicite, diverticulite, occlusion, perforation, abcès, <strong>ischémie mésentérique</strong>, traumatisme, bilan d'extension</td><td><strong>Irradiation</strong> · <strong>produit de contraste</strong> — fonction rénale et allergie<br><strong>Trouvailles fortuites</strong> fréquentes → examens en cascade</td></tr>
+            <tr><td><strong>IRM</strong></td><td>Voies biliaires (<strong>cholangio-IRM</strong>) · foie · pelvis · <strong>grossesse</strong> quand l'échographie ne suffit pas · MII chez le jeune, pour éviter l'irradiation répétée</td><td>Accès, durée, coût · contre-indications (voir bloc Sécurité)</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="key-fact blue" style="margin-top:12px;">🧠 <strong>La règle de décision en une phrase :</strong> <strong>si la question porte sur le foie, la vésicule, les reins, l'utérus ou les ovaires → échographie.</strong> <strong>Si la question est « qu'est-ce qui se passe dans cet abdomen? » → TDM.</strong> Et chez la <strong>femme enceinte</strong> ou l'<strong>enfant</strong>, on commence par l'échographie, quitte à passer à l'IRM.</div>
+      </div>
+
+      <div class="block rx" style="margin-top:14px;border-left-color:#0369a1;">
+        <div class="block-title" id="iab-2"><span class="tag">🔍 Lire une radiographie simple de l'abdomen</span></div>
+
+        <div class="key-fact green" style="margin-top:10px;">🎯 <strong>Comme au thorax, un ordre fixe protège contre l'oubli.</strong> Et la première question est celle de l'<strong>incidence</strong> : sans cliché <strong>debout</strong> (ou en décubitus latéral gauche), on ne verra <strong>ni air libre ni niveaux hydro-aériques</strong>.</div>
+
+        <div class="criteria-list" style="margin-top:12px;">
+          <div class="criteria-item"><div class="criteria-num blue">1</div><span><strong>Qualité et incidence</strong> — couché ou debout? Tout l'abdomen est-il inclus, des coupoles au pubis?</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">2</div><span><strong>Gaz digestifs</strong> — répartition, calibre des anses, <strong>niveaux hydro-aériques</strong> sur le cliché debout, <strong>présence de gaz dans le rectum</strong> (argument contre une occlusion complète)</span></div>
+          <div class="criteria-item"><div class="criteria-num red">3</div><span>🚨 <strong>Air anormal</strong> — <strong>air libre sous les coupoles</strong>, air dans la paroi digestive (pneumatose), air dans les voies biliaires (aérobilie), air dans la veine porte</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">4</div><span><strong>Contours des organes</strong> — foie, rate, reins, psoas, vessie · effacement d'un contour = collection ou masse adjacente</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">5</div><span><strong>Calcifications</strong> — calculs urinaires ⭐ (les biliaires sont majoritairement <strong>invisibles</strong>), phlébolithes pelviens, calcifications pancréatiques, <strong>calcification de la paroi aortique</strong></span></div>
+          <div class="criteria-item"><div class="criteria-num blue">6</div><span><strong>Os</strong> — rachis lombaire, bassin, hanches, sacro-iliaques · une <strong>fracture</strong> ou une lésion lytique se voit ici</span></div>
+          <div class="criteria-item"><div class="criteria-num red">!</div><span><strong>Bases pulmonaires et matériel</strong> — une <strong>pneumonie basale</strong> peut se présenter comme une douleur abdominale · vérifier tubes, sondes, drains, prothèses</span></div>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">📏 <strong>Repères de calibre :</strong> l'<strong>intestin grêle</strong> est dilaté au-delà d'environ <strong>3 cm</strong>, le <strong>côlon</strong> au-delà d'environ <strong>6 cm</strong>, et le <strong>cæcum</strong> au-delà d'environ <strong>9 cm</strong>. 🚨 Un <strong>cæcum très dilaté</strong> comporte un <strong>risque de perforation</strong> — c'est un signal d'urgence.</div>
+
+        <div class="key-fact blue" style="margin-top:8px;">🔎 <strong>Distinguer grêle et côlon sur l'image :</strong> le <strong>grêle</strong> est <strong>central</strong>, avec des <strong>valvules conniventes traversant toute la largeur</strong> de l'anse. Le <strong>côlon</strong> est <strong>périphérique</strong>, avec des <strong>haustrations qui ne traversent PAS toute la largeur</strong>. Cette distinction oriente d'emblée le niveau de l'obstacle.</div>
+      </div>
+
+      <div class="block flag" style="margin-top:14px;">
+        <div class="block-title" id="iab-3"><span class="tag">🚨 L'air libre — pneumopéritoine</span></div>
+
+        <div class="key-fact red" style="margin-top:10px;">🚨 <strong>Un croissant clair sous la coupole diaphragmatique sur un cliché DEBOUT signe une perforation d'organe creux</strong> — urgence chirurgicale. C'est probablement le signe le plus important de toute l'imagerie abdominale simple.</div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
+          <div style="background:#fef2f2;border-radius:10px;padding:14px;border-left:4px solid #c0392b;">
+            <strong style="color:#c0392b;">⚠️ Le piège de l'incidence</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🚨 <strong>Sur un cliché COUCHÉ, l'air libre ne migre pas sous les coupoles</strong> — le signe classique est absent.<br>➜ Il faut un cliché <strong>debout</strong>, ou en <strong>décubitus latéral gauche</strong> si la personne ne peut se lever (l'air se collecte alors entre le foie et la paroi).<br>➜ Idéalement, laisser la personne <strong>en position quelques minutes</strong> avant le cliché.<br>🎯 <strong>Si vous ne précisez pas l'incidence sur la requête, vous risquez de recevoir un cliché couché — et de manquer la perforation.</strong></div>
+          </div>
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;border-left:4px solid #1d4ed8;">
+            <strong style="color:#1d4ed8;">🔍 Causes &amp; nuances</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Causes :</strong> ulcère perforé, perforation diverticulaire ou tumorale, ischémie, traumatisme<br><br>⚠️ <strong>Air libre « normal » :</strong> après une <strong>chirurgie abdominale récente</strong> ou une <strong>laparoscopie</strong>, l'air résiduel persiste plusieurs jours — ne pas conclure à une perforation<br><br>🎯 <strong>La TDM est bien plus sensible</strong> que l'ASP pour détecter un petit pneumopéritoine — en cas de forte suspicion clinique avec ASP normale, elle s'impose</div>
+          </div>
+        </div>
+
+        <div class="key-fact blue" style="margin-top:12px;">🔬 <strong>Et si la personne ne peut ni se lever ni se coucher sur le côté?</strong> Goldman-Cecil rapporte que le <strong>cliché couché conserve une sensibilité supérieure à 50 %</strong> pour détecter des <strong>signes INDIRECTS</strong> d'air libre — c'est peu, mais ce n'est pas nul, et il faut savoir les nommer sur une requête :<br><br>• 🎯 <strong>Signe de Rigler</strong> — du gaz <strong>des deux côtés de la paroi intestinale</strong>, qui devient anormalement bien dessinée<br>• Collections <strong>linéaires</strong> de gaz dans l'espace <strong>sous-hépatique</strong><br>• Collection <strong>triangulaire</strong> de gaz dans le récessus postérieur de la <strong>poche de Morrison</strong> (fossette hépato-rénale)<br>• Gaz soulignant le <strong>ligament falciforme</strong><br><br>➜ Et dès qu'un de ces signes apparaît, <strong>la TDM précise la sévérité et l'étendue</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Goldman-Cecil, 26<sup>e</sup> éd., ch. 124</em></span></div>
+
+        <div class="key-fact orange" style="margin-top:12px;">🫁 <strong>Ne pas confondre :</strong> le <strong>signe de Chilaiditi</strong> — interposition du côlon entre le foie et le diaphragme — <strong>mime un pneumopéritoine</strong>. On le reconnaît aux <strong>haustrations visibles</strong> dans la clarté sous-diaphragmatique. C'est bénin.</div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;border-left-color:#b45309;">
+        <div class="block-title" id="iab-4"><span class="tag">🌀 Occlusion, iléus &amp; pièges</span></div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:20%;"></th><th style="width:36%;">Occlusion mécanique</th><th>Iléus paralytique</th></tr></thead>
+          <tbody>
+            <tr style="background:#fff3cd;"><td><strong>Mécanisme</strong></td><td><strong>Obstacle</strong> — adhérences ⭐, hernie, tumeur, volvulus, iléus biliaire</td><td><strong>Paralysie</strong> — postopératoire, péritonite, médicaments (opioïdes), troubles électrolytiques, sepsis</td></tr>
+            <tr><td><strong>Distribution des gaz</strong></td><td>Dilatation <strong>en amont</strong>, <strong>vacuité en aval</strong> 🎯<br>Peu ou pas de gaz dans le rectum si occlusion complète</td><td>Dilatation <strong>diffuse</strong>, grêle <strong>et</strong> côlon, <strong>gaz jusqu'au rectum</strong></td></tr>
+            <tr style="background:#f0fdf4;"><td><strong>Niveaux hydro-aériques</strong></td><td>Nombreux, <strong>étagés</strong>, parfois « en tuyau d'orgue »</td><td>Présents mais diffus</td></tr>
+            <tr><td><strong>Bruits</strong></td><td>Augmentés puis <strong>métalliques</strong>, puis silence si souffrance</td><td><strong>Diminués ou absents</strong> d'emblée</td></tr>
+            <tr style="background:#e8f4fd;"><td><strong>Conduite</strong></td><td><strong>TDM</strong> pour localiser l'obstacle, en préciser la cause et chercher des signes de <strong>souffrance intestinale</strong></td><td>Traiter la <strong>cause</strong> — électrolytes, médicaments, infection</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="key-fact red" style="margin-top:12px;">🚨 <strong>Les signes de souffrance intestinale — l'urgence dans l'urgence :</strong> <strong>épaississement de la paroi</strong>, <strong>défaut de rehaussement</strong> après contraste, <strong>pneumatose pariétale</strong> (air dans la paroi), <strong>air dans la veine porte</strong>, <strong>liquide libre</strong>. Ces signes transforment une occlusion en <strong>urgence chirurgicale immédiate</strong>.</div>
+
+        <div class="key-fact orange" style="margin-top:8px;">🌀 <strong>Deux tableaux à reconnaître :</strong> le <strong>volvulus du sigmoïde</strong> donne une image classique — un <strong>sigmoïde massivement dilaté s'étendant du pelvis vers l'abdomen supérieur, en « U inversé »</strong> ou en « grain de café » —, surtout chez la personne âgée ou institutionnalisée <span style="font-size:11px;color:#64748b;">📚 <em>Goldman-Cecil, ch. 124</em></span>. L'<strong>iléus biliaire</strong> associe occlusion + <strong>aérobilie</strong> + calcul ectopique — rare, mais la triade est reconnaissable.</div>
+
+        <div class="key-fact green" style="margin-top:8px;">🔎 <strong>Ce que l'ASP montre encore utilement</strong> — au-delà de l'occlusion et de l'air libre : du <strong>gaz extraluminal dans un abcès abdominal</strong>, du gaz pariétal ou porte en cas d'<strong>ischémie intestinale</strong>, et des <strong>calcifications anormales</strong> — <strong>calculs rénaux</strong>, <strong>appendicolithe</strong>, ou <strong>corps étrangers radio-opaques</strong> tels qu'une aiguille ou une compresse laissée après chirurgie. <span style="font-size:11px;color:#64748b;">📚 <em>Goldman-Cecil, ch. 124</em></span></div>
+      </div>
+
+      <div class="block para" style="margin-top:14px;border-left-color:#0f766e;">
+        <div class="block-title" id="iab-5"><span class="tag">🔊 Échographie abdominale</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>C'est l'examen de première intention le plus souvent justifié en première ligne</strong> — pas d'irradiation, pas de contraste, accessible, et excellent pour les questions les plus fréquentes.</div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-top:12px;">
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+            <strong style="color:#15803d;">🟢 Excellente pour</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Lithiase vésiculaire</strong> ⭐ — modalité de choix<br><strong>Cholécystite</strong> — paroi épaissie, liquide périvésiculaire, <strong>Murphy échographique</strong><br><strong>Dilatation des voies biliaires</strong><br><strong>Hydronéphrose</strong> et calculs rénaux<br><strong>AAA</strong> — mesure fiable du diamètre<br><strong>Ascite</strong>, épanchement<br><strong>Gynécologique</strong> — grossesse ectopique, torsion, kyste<br><strong>Stéatose hépatique</strong></div>
+          </div>
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;">
+            <strong style="color:#d35400;">🟡 Limitée pour</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Pancréas</strong> — souvent masqué par les gaz<br><strong>Rétropéritoine</strong> et <strong>tube digestif</strong><br><strong>Appendicite chez l'adulte</strong> — variable; excellente chez l'<strong>enfant</strong> et la <strong>femme enceinte</strong><br><strong>Cholédocholithiase</strong> — voit la dilatation, mais souvent <strong>pas le calcul lui-même</strong><br>⚠️ Personne obèse ou abdomen très aérique</div>
+          </div>
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+            <strong style="color:#1d4ed8;">💡 Optimiser l'examen</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>À jeun</strong> pour l'étude biliaire — une vésicule contractée après un repas est ininterprétable<br><strong>Vessie pleine</strong> pour l'étude pelvienne<br>Préciser la <strong>question clinique</strong> sur la requête — « douleur abdominale » oriente mal le radiologue<br>🎯 <strong>Une bonne requête améliore le rendement de l'examen</strong></div>
+          </div>
+          <div style="background:#ede9fe;border-radius:10px;padding:14px;">
+            <strong style="color:#6d28d9;">🔗 Renvois</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">➜ <em>Calculs biliaires</em> · <em>Cholécystite</em> · <em>Cholédocholithiase</em><br>➜ <em>Lithiase urinaire</em> · <em>Anévrisme</em><br>➜ <em>Stéatose</em> · <em>Cirrhose</em> · <em>Hypertension portale</em></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block para" style="margin-top:14px;border-left-color:#6d28d9;">
+        <div class="block-title" id="iab-6"><span class="tag">📷 TDM — protocoles &amp; ce que ça change</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>Le protocole n'est pas un détail technique — il détermine ce que l'examen peut répondre.</strong> Préciser la question clinique permet au radiologue de choisir le bon protocole; une requête vague donne un examen mal ciblé.</div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:24%;">Protocole</th><th style="width:32%;">Indication</th><th>Particularités</th></tr></thead>
+          <tbody>
+            <tr style="background:#e8f4fd;"><td><strong>TDM avec contraste IV</strong></td><td>🎯 <strong>Le plus courant</strong> — abdomen aigu, appendicite, diverticulite, abcès, occlusion, tumeur</td><td>Nécessite une <strong>fonction rénale</strong> acceptable et l'absence d'allergie<br>Le contraste permet de voir le <strong>rehaussement</strong> — donc la perfusion et l'inflammation</td></tr>
+            <tr><td><strong>TDM sans contraste</strong></td><td><strong>Colique néphrétique</strong> ⭐ · hémorragie aiguë · contre-indication au contraste</td><td>Les calculs sont visibles <strong>sans</strong> contraste — l'ajouter les masquerait<br>➜ Voir <em>Lithiase urinaire</em>, où l'échographie reste le 1<sup>er</sup> choix recommandé</td></tr>
+            <tr style="background:#fce4ec;"><td><strong>Angio-TDM</strong></td><td>🚨 <strong>Ischémie mésentérique</strong> · anévrisme et dissection · hémorragie digestive active</td><td>Temps artériel précoce · 🎯 <strong>Devant une douleur abdominale disproportionnée à l'examen, il faut le demander explicitement</strong> — une TDM standard peut manquer l'ischémie</td></tr>
+            <tr><td><strong>TDM avec contraste oral</strong></td><td>Recherche de <strong>fuite anastomotique</strong>, certaines collections</td><td>Allonge le délai — pas systématique dans l'urgence</td></tr>
+            <tr style="background:#f0fdf4;"><td><strong>Cholangio-IRM</strong></td><td><strong>Cholédocholithiase</strong>, anatomie biliaire</td><td>Non irradiant, sans contraste iodé · alternative diagnostique à la CPRE, qui reste thérapeutique</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">🔎 <strong>Les trouvailles fortuites — un problème réel :</strong> la TDM abdominale révèle fréquemment des <strong>nodules surrénaliens, kystes rénaux, lésions hépatiques ou nodules pulmonaires basaux</strong> sans rapport avec la plainte. Chacun peut déclencher une cascade d'examens, d'anxiété et de coûts. <strong>Suivre les recommandations de suivi du rapport plutôt que d'improviser</strong>, et expliquer à la personne ce que cela signifie — et ne signifie pas.</div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;border-left-color:#c0392b;">
+        <div class="block-title" id="iab-7"><span class="tag">🩺 Quelle imagerie pour quelle présentation</span></div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:26%;">Présentation</th><th style="width:26%;">1<sup>er</sup> choix</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr style="background:#f0fdf4;"><td><strong>Douleur de l'hypocondre droit</strong></td><td>🎯 <strong>Échographie</strong></td><td>Lithiase, cholécystite, dilatation biliaire · à jeun<br>➜ <em>Calculs biliaires</em>, <em>Cholécystite</em></td></tr>
+            <tr><td><strong>Douleur de la fosse iliaque droite</strong></td><td><strong>Adulte : TDM</strong><br><strong>Enfant, femme enceinte : échographie</strong></td><td>⚠️ Toujours <strong>β-hCG</strong> chez la personne en âge de procréer<br>➜ <em>Appendicite</em></td></tr>
+            <tr style="background:#e8f4fd;"><td><strong>Douleur de la fosse iliaque gauche</strong></td><td><strong>TDM</strong></td><td>Diverticulite, abcès, perforation · l'imagerie change la conduite (drainage?)<br>➜ <em>Diverticulite</em></td></tr>
+            <tr><td><strong>Colique néphrétique</strong></td><td><strong>Échographie + radiographie simple</strong>, puis TDM faible dose si nécessaire</td><td>🎯 Recommandation canadienne — limiter l'irradiation<br>➜ <em>Lithiase urinaire</em></td></tr>
+            <tr style="background:#fce4ec;"><td>🚨 <strong>Douleur disproportionnée à l'examen</strong></td><td>🚨 <strong>Angio-TDM</strong></td><td><strong>Ischémie mésentérique</strong> — mortalité élevée, diagnostic souvent tardif · terrain : FA, athérosclérose, bas débit</td></tr>
+            <tr><td>🚨 <strong>Douleur + hypotension + &gt; 50 ans</strong></td><td>🚨 <strong>Échographie au chevet, puis angio-TDM si stable</strong></td><td><strong>AAA rompu</strong> — ne pas retarder la chirurgie chez l'instable<br>➜ <em>Anévrisme</em>, <em>Les Chocs</em></td></tr>
+            <tr style="background:#fff3cd;"><td><strong>Distension, vomissements, arrêt des matières</strong></td><td><strong>ASP debout</strong> puis <strong>TDM</strong></td><td>Occlusion — la TDM localise l'obstacle et cherche la souffrance</td></tr>
+            <tr><td><strong>Douleur pelvienne chez la femme</strong></td><td><strong>Échographie pelvienne</strong> (± endovaginale)</td><td>⚠️ <strong>β-hCG d'abord</strong> — grossesse ectopique, torsion, AIP<br>➜ <em>ITSS</em>, <em>SUA</em></td></tr>
+            <tr style="background:#f1f5f9;"><td><strong>Ictère</strong></td><td><strong>Échographie</strong> — dilatation ou non des voies biliaires</td><td>Puis cholangio-IRM ou TDM selon le résultat<br>➜ <em>Anatomie foie &amp; voies biliaires</em></td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="key-fact red" style="margin-top:12px;">👵 <strong>Chez la personne âgée, abaisser le seuil d'imagerie.</strong> La présentation est atypique — <strong>douleur atténuée, défense peu marquée même en péritonite, absence de fièvre</strong> —, et les diagnostics graves (ischémie mésentérique, perforation, anévrisme) y sont plus fréquents. Un examen abdominal rassurant chez une personne âgée <strong>ne rassure pas</strong>. ➜ Voir <em>Le vieillissement</em>.</div>
+      </div>
+
+      <div class="block para" style="margin-top:14px;border-left-color:#0891b2;">
+        <div class="block-title" id="iab-8"><span class="tag">⚠️ Sécurité, contraste &amp; grossesse</span></div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:12px;">
+          <div style="background:#fce4ec;border-radius:10px;padding:14px;">
+            <strong style="color:#c0392b;">🧪 Contraste iodé &amp; rein</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Vérifier la fonction rénale</strong> avant une TDM avec contraste, surtout si IRC, diabète, déshydratation, âge avancé ou néphrotoxiques concomitants<br><strong>Hydratation</strong> selon les protocoles locaux<br>💊 <strong>Metformine</strong> — suspension à considérer selon la fonction rénale et le protocole de l'établissement<br>⚠️ <strong>Ne jamais retarder un examen vital</strong> pour cette raison — le risque d'un diagnostic manqué dépasse souvent celui du contraste</div>
+          </div>
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;">
+            <strong style="color:#d35400;">🤧 Allergie au contraste</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Documenter la <strong>nature exacte</strong> de la réaction antérieure — beaucoup de « allergies » sont des <strong>bouffées de chaleur ou des nausées</strong>, effets attendus et non allergiques<br>Une <strong>vraie réaction</strong> impose un protocole de prémédication et une discussion avec la radiologie<br>⚠️ L'allergie aux fruits de mer <strong>n'est pas</strong> une contre-indication au contraste iodé</div>
+          </div>
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+            <strong style="color:#1d4ed8;">🤰 Grossesse</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🎯 <strong>Échographie en premier</strong>, toujours<br>Puis <strong>IRM sans gadolinium</strong> si l'échographie ne répond pas<br>⚠️ <strong>Le gadolinium traverse le placenta</strong> — à éviter<br>🚨 <strong>Mais une TDM ne doit jamais être refusée si elle est vitale</strong> — un diagnostic manqué met en danger la mère <em>et</em> le fœtus<br><strong>β-hCG avant toute imagerie irradiante</strong> chez la personne en âge de procréer</div>
+          </div>
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+            <strong style="color:#15803d;">☢️ Irradiation</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Une <strong>TDM abdominale irradie nettement plus</strong> qu'une radiographie simple<br>Enjeu réel chez le <strong>jeune</strong> et en cas d'examens <strong>répétés</strong> — MII, lithiase récidivante<br>➜ Privilégier <strong>échographie et IRM</strong> dans ces populations · <strong>protocoles à faible dose</strong> quand disponibles<br>🎯 Principe <strong>ALARA</strong> : la dose la plus faible raisonnablement possible</div>
+          </div>
+        </div>
+
+        <div class="key-fact green" style="margin-top:12px;">💡 <strong>La question qui précède toute requête :</strong> « <strong>le résultat va-t-il changer ma conduite?</strong> » Si la réponse est non, l'examen expose sans bénéfice — irradiation, trouvailles fortuites, délais, coûts. C'est le principe de <em>Choisir avec soin</em>.</div>
+      </div>
+
+      <div class="block flag" style="margin-top:14px;">
+        <div class="block-title" id="iab-9"><span class="tag">🚨 Red flags &amp; pièges</span></div>
+
+        <div class="flag-list" style="margin-top:12px;">
+          <div class="flag-item">🚨 <strong>Air libre sous les coupoles</strong> — perforation : urgence chirurgicale</div>
+          <div class="flag-item">🚨 <strong>Pneumatose pariétale ou air dans la veine porte</strong> — souffrance ou nécrose intestinale</div>
+          <div class="flag-item">🚨 <strong>Douleur disproportionnée à l'examen</strong> — ischémie mésentérique : angio-TDM, ne pas temporiser</div>
+          <div class="flag-item">🚨 <strong>Cæcum très dilaté</strong> — risque de perforation imminente</div>
+          <div class="flag-item">🚨 <strong>Douleur abdominale + hypotension chez un plus de 50 ans</strong> — AAA rompu jusqu'à preuve du contraire</div>
+          <div class="flag-item">⚠️ <strong>Demander un ASP couché pour chercher de l'air libre</strong> — il sera invisible : préciser <strong>debout</strong> sur la requête</div>
+          <div class="flag-item">⚠️ <strong>Conclure « ASP normale, donc rien de grave »</strong> — son rendement est faible; elle n'exclut ni appendicite, ni diverticulite, ni ischémie</div>
+          <div class="flag-item">⚠️ <strong>Oublier la β-hCG</strong> avant une imagerie irradiante</div>
+          <div class="flag-item">⚠️ <strong>Chercher des calculs biliaires sur une radiographie</strong> — la majorité sont radio-transparents : c'est l'échographie qu'il faut</div>
+          <div class="flag-item">⚠️ <strong>Échographie biliaire non à jeun</strong> — vésicule contractée, examen ininterprétable</div>
+          <div class="flag-item">⚠️ <strong>Requête vague</strong> — « douleur abdominale » sans question clinique donne un protocole mal ciblé</div>
+          <div class="flag-item">⚠️ <strong>Se fier à un examen abdominal rassurant chez une personne âgée</strong> — la présentation est atténuée</div>
+        </div>
+
+        <div class="key-fact green" style="margin-top:12px;">✅ <strong>La démarche en 4 temps :</strong> ① <strong>formuler la question clinique</strong> précise · ② <strong>choisir la modalité</strong> qui y répond — écho pour les organes pleins et le pelvis, TDM pour l'abdomen aigu indifférencié · ③ <strong>préciser l'incidence et le protocole</strong> sur la requête, avec la fonction rénale et la β-hCG · ④ <strong>interpréter avec la clinique</strong> — un examen normal n'exclut pas un abdomen chirurgical.</div>
+      </div>
+    </div>
+
+    <div class="section" id="sec-neuro-imagerie">
+      <div class="section-header">
+        <div class="section-accent" style="background:#4c1d95">🧠</div>
+        <div class="section-title"><h1>Neuro-imagerie</h1><div class="breadcrumb">Imagerie <span class="breadcrumb-sep">·</span> TDM vs IRM <span class="breadcrumb-sep">·</span> AVC · HSA · Hématomes <span class="breadcrumb-sep">·</span> Céphalée</div></div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;">
+        <button onclick="goToBlock('nim-1')" style="background:#374151;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧭 TDM ou IRM</button>
+        <button onclick="goToBlock('nim-2')" style="background:#0369a1;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🔍 Lecture de base</button>
+        <button onclick="goToBlock('nim-3')" style="background:#dc2626;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🩸 AVC — ischémique vs hémorragique</button>
+        <button onclick="goToBlock('nim-4')" style="background:#991b1b;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">⚡ Hémorragie sous-arachnoïdienne</button>
+        <button onclick="goToBlock('nim-5')" style="background:#b45309;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧊 Hématomes extra-axiaux</button>
+        <button onclick="goToBlock('nim-6')" style="background:#6d28d9;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🤕 Céphalée &amp; traumatisme</button>
+        <button onclick="goToBlock('nim-7')" style="background:#0f766e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧩 Autres indications</button>
+        <button onclick="goToBlock('nim-8')" style="background:#0891b2;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">⚠️ Sécurité de l'IRM</button>
+        <button onclick="goToBlock('nim-9')" style="background:#c0392b;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🚨 Red flags</button>
+      </div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:20px;">
+        <div style="flex:1;min-width:95px;background:#FEE2E2;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#b91c1c;">≈ 20 %</div><div style="font-size:11px;color:#555;margin-top:4px;">Des AVC sont hémorragiques</div></div>
+        <div style="flex:1;min-width:95px;background:#F3E8FF;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#6d28d9;">75 / 25</div><div style="font-size:11px;color:#555;margin-top:4px;">Intracérébrale / sous-arachnoïdienne</div></div>
+        <div style="flex:1;min-width:95px;background:#EEF2FF;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#1C3F8F;">TDM sans</div><div style="font-size:11px;color:#555;margin-top:4px;">Examen de choix en aigu</div></div>
+        <div style="flex:1;min-width:95px;background:#DCFCE7;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#15803d;">Diffusion</div><div style="font-size:11px;color:#555;margin-top:4px;">IRM — ischémie précoce</div></div>
+      </div>
+
+      <div class="block def" style="margin-top:14px;">
+        <div class="block-title" id="nim-1"><span class="tag">🧭 TDM ou IRM — comment trancher</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>La règle simple :</strong> en <strong>urgence</strong>, c'est la <strong>TDM sans contraste</strong> — rapide, disponible, et elle répond à la question la plus pressante : <strong>y a-t-il du sang?</strong> L'<strong>IRM</strong> vient ensuite pour ce que la TDM voit mal : ischémie précoce, fosse postérieure, moelle, lésions inflammatoires ou infiltrantes.</div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:18%;"></th><th style="width:38%;">TDM cérébrale</th><th>IRM cérébrale</th></tr></thead>
+          <tbody>
+            <tr style="background:#e8f4fd;"><td><strong>Disponibilité</strong></td><td>🎯 <strong>Rapide, partout, quelques minutes</strong></td><td>Accès limité, examen long (30–60 min)</td></tr>
+            <tr><td><strong>Sang aigu</strong></td><td>🎯 <strong>Excellente</strong> — le sang frais est <strong>spontanément hyperdense (blanc)</strong></td><td>Bonne, mais l'aspect varie selon l'âge du saignement</td></tr>
+            <tr style="background:#f0fdf4;"><td><strong>Ischémie précoce</strong></td><td>⚠️ <strong>Souvent normale dans les premières heures</strong></td><td>🎯 <strong>Séquence de diffusion : positive en quelques minutes</strong></td></tr>
+            <tr><td><strong>Fosse postérieure</strong></td><td>⚠️ <strong>Artéfacts osseux</strong> — tronc et cervelet mal vus</td><td>🎯 <strong>Nettement supérieure</strong></td></tr>
+            <tr style="background:#fff3cd;"><td><strong>Os &amp; fractures</strong></td><td>🎯 <strong>Supérieure</strong></td><td>Médiocre pour l'os cortical</td></tr>
+            <tr><td><strong>Substance blanche, inflammation, tumeur</strong></td><td>Limitée</td><td>🎯 <strong>Bien supérieure</strong> — SEP, encéphalite, métastases</td></tr>
+            <tr style="background:#f1f5f9;"><td><strong>Irradiation</strong></td><td>Oui</td><td>🎯 <strong>Aucune</strong></td></tr>
+            <tr><td><strong>Patient agité ou instable</strong></td><td>🎯 <strong>Réalisable</strong></td><td>Difficile — immobilité prolongée requise</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">💉 <strong>Quand ajouter du contraste :</strong> le contraste sert à révéler une <strong>rupture de la barrière hématoencéphalique</strong> — <strong>tumeur, métastase, abcès, inflammation, méningite</strong>. Il est <strong>inutile</strong> dans l'AVC aigu, le traumatisme et l'hémorragie : ces questions se règlent <strong>sans contraste</strong>. Demander du contraste sans raison ajoute un risque sans bénéfice.</div>
+      </div>
+
+      <div class="block rx" style="margin-top:14px;border-left-color:#0369a1;">
+        <div class="block-title" id="nim-2"><span class="tag">🔍 Lecture de base d'une TDM cérébrale</span></div>
+
+        <div class="key-fact green" style="margin-top:10px;">🎯 <strong>Vous ne remplacerez pas le radiologue</strong> — mais savoir reconnaître une hémorragie évidente, un effet de masse ou un effacement des sillons vous permet de <strong>comprendre l'urgence</strong> et de lire un rapport avec sens critique.</div>
+
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">⚫⚪ Les densités à reconnaître</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;">
+          <div style="background:#fff;border:2px solid #cbd5e1;border-radius:10px;padding:14px;">
+            <strong style="color:#0f172a;">⚪ Hyperdense (blanc)</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;color:#334155;"><strong>Sang aigu</strong> 🎯 · os · calcifications · contraste<br>➜ <em>C'est ce qui rend la TDM si efficace en urgence</em></div>
+          </div>
+          <div style="background:#94a3b8;border-radius:10px;padding:14px;">
+            <strong style="color:#0f172a;">⬜ Isodense (gris)</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;color:#1e293b;">Parenchyme normal<br>⚠️ <strong>Un hématome sous-dural subaigu devient isodense</strong> — donc facile à manquer</div>
+          </div>
+          <div style="background:#334155;border-radius:10px;padding:14px;">
+            <strong style="color:#f1f5f9;">⬛ Hypodense (noir)</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;color:#e2e8f0;"><strong>Ischémie constituée</strong> · œdème · LCR · graisse · air<br>➜ <em>L'infarctus « noircit » avec le temps</em></div>
+          </div>
+        </div>
+
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">🧭 Séquence de lecture</div>
+        <div class="criteria-list">
+          <div class="criteria-item"><div class="criteria-num red">1</div><span>🚨 <strong>Du sang?</strong> — chercher toute zone spontanément blanche : parenchyme, espaces sous-arachnoïdiens, ventricules, espaces extra-axiaux</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">2</div><span><strong>Symétrie</strong> — comparer systématiquement les deux hémisphères</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">3</div><span><strong>Sillons corticaux et citernes</strong> — leur <strong>effacement</strong> signe un œdème ou un effet de masse</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">4</div><span><strong>Ventricules</strong> — taille (hydrocéphalie?), symétrie, <strong>déviation de la ligne médiane</strong> 🚨</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">5</div><span><strong>Différenciation substance grise / substance blanche</strong> — sa <strong>perte</strong> est un signe précoce d'ischémie</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">6</div><span><strong>Os et parties molles</strong> — fracture, hématome du scalp, sinus</span></div>
+          <div class="criteria-item"><div class="criteria-num red">!</div><span><strong>Comparer avec les examens antérieurs</strong> — une hypodensité stable depuis des années n'est pas un événement aigu</span></div>
+        </div>
+
+        <div class="key-fact red" style="margin-top:12px;">🚨 <strong>Les signes d'effet de masse à reconnaître :</strong> <strong>déviation de la ligne médiane</strong>, <strong>effacement des sillons</strong> et des <strong>citernes de la base</strong>, <strong>compression ventriculaire</strong>, <strong>hydrocéphalie</strong>. Ils annoncent l'<strong>engagement cérébral</strong> — c'est une urgence neurochirurgicale.</div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;border-left-color:#dc2626;">
+        <div class="block-title" id="nim-3"><span class="tag">🩸 AVC — distinguer ischémique et hémorragique</span></div>
+
+        <div class="key-fact red" style="margin-top:10px;">🚨 <strong>La raison d'être de l'imagerie en urgence :</strong> l'hémorragie intracérébrale se présente souvent par un <strong>déficit neurologique focal aigu</strong> qu'il est <strong>difficile de distinguer d'un AVC ischémique sur les seuls éléments cliniques</strong>. C'est la <strong>TDM sans contraste qui est l'examen diagnostique de choix</strong> — et cette distinction commande tout le traitement : thrombolyser un hémorragique serait catastrophique. <span style="font-size:11px;color:#64748b;">📚 <em>Goldman-Cecil, ch. 380</em></span></div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;border-left:4px solid #1d4ed8;">
+            <strong style="color:#1d4ed8;">🧊 AVC ischémique — ce qu'on voit</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">⚠️ <strong>La TDM est souvent NORMALE dans les premières heures</strong> — c'est attendu, et cela n'écarte pas le diagnostic<br><br><strong>Signes précoces</strong> (subtils, cherchés par le radiologue) :<br>• <strong>Perte de la différenciation substance grise / blanche</strong><br>• <strong>Effacement des sillons</strong> corticaux<br>• Hypodensité du noyau lenticulaire<br>• <strong>Artère cérébrale moyenne hyperdense</strong> — thrombus visible<br><br>🎯 <strong>Le rôle de la TDM initiale est surtout d'ÉCARTER une hémorragie</strong> avant thrombolyse<br>➜ Score <strong>ASPECTS</strong> · ➜ voir <em>AVC</em></div>
+          </div>
+          <div style="background:#fef2f2;border-radius:10px;padding:14px;border-left:4px solid #c0392b;">
+            <strong style="color:#c0392b;">🩸 Hémorragie intracérébrale</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Environ 20 % des AVC</strong> sont dus à une hémorragie intracrânienne spontanée, dont <strong>~75 % intracérébrales</strong> et <strong>~25 % sous-arachnoïdiennes</strong><br><br>Cause la plus fréquente : <strong>rupture des petites artères perforantes</strong> dans le parenchyme — d'où les localisations profondes typiques (noyaux gris, thalamus, protubérance, cervelet), liées à l'<strong>hypertension</strong><br><br>À la TDM : <strong>hyperdensité spontanée</strong>, ± œdème périlésionnel, ± <strong>inondation ventriculaire</strong><br><br>🎯 <strong>Traitement :</strong> contrôle de la <strong>tension artérielle</strong> et de l'<strong>œdème cérébral</strong>, prise en charge intensive des complications, et <strong>renversement rapide de toute anticoagulation</strong> <span style="font-size:11px;color:#64748b;">📚 <em>Goldman-Cecil, ch. 380</em></span></div>
+          </div>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">🔬 <strong>L'IRM avec diffusion</strong> détecte l'ischémie <strong>en quelques minutes</strong>, bien avant la TDM. Elle est déterminante pour confirmer un <strong>petit infarctus</strong>, distinguer un <strong>AIT d'un AVC constitué</strong> — voir <em>AIT</em> — et explorer la <strong>fosse postérieure</strong>, où la TDM est aveuglée par les artéfacts osseux.</div>
+
+        <div class="key-fact blue" style="margin-top:8px;">🩻 <strong>Imagerie vasculaire :</strong> l'<strong>angio-TDM</strong> identifie l'<strong>occlusion de gros vaisseau</strong>, qui conditionne la <strong>thrombectomie</strong>. L'imagerie de <strong>perfusion</strong> aide à sélectionner les patients dans les fenêtres élargies. ➜ Voir <em>Thrombectomie</em> et <em>Thrombolyse</em>.</div>
+      </div>
+
+      <div class="block flag" style="margin-top:14px;">
+        <div class="block-title" id="nim-4"><span class="tag">⚡ Hémorragie sous-arachnoïdienne</span></div>
+
+        <div class="key-fact red" style="margin-top:10px;">🚨 <strong>Le diagnostic à ne jamais manquer.</strong> L'HSA est causée par la rupture de vaisseaux <strong>à la surface du cerveau</strong>, le plus souvent un <strong>anévrisme sacciforme congénital</strong>. Elle se présente classiquement par une <strong>céphalée d'une sévérité extrême</strong>, suivie d'une <strong>raideur de nuque, de nausées, de vomissements et souvent d'une perte de conscience</strong>. <strong>Le diagnostic rapide est critique.</strong> <span style="font-size:11px;color:#64748b;">📚 <em>Goldman-Cecil, ch. 380</em></span></div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
+          <div style="background:#fce4ec;border-radius:10px;padding:14px;border-left:4px solid #c0392b;">
+            <strong style="color:#c0392b;">🎯 Reconnaître</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🚨 <strong>Céphalée en coup de tonnerre</strong> — intensité <strong>maximale d'emblée</strong>, souvent décrite comme « la pire de ma vie »<br><strong>Raideur de nuque</strong> · nausées, vomissements<br><strong>Perte de conscience</strong> initiale fréquente<br>Photophobie · déficit focal · convulsion<br><br>⚠️ <strong>Céphalée sentinelle</strong> — un saignement d'alarme peut précéder de jours à semaines la rupture majeure. Une céphalée inhabituelle chez un patient qui « va bien » maintenant <strong>ne doit pas être banalisée</strong>.</div>
+          </div>
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;border-left:4px solid #1d4ed8;">
+            <strong style="color:#1d4ed8;">🔬 Démarche diagnostique</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>①</strong> <strong>TDM cérébrale SANS contraste, immédiate</strong> — sang hyperdense dans les espaces sous-arachnoïdiens, citernes de la base, scissures<br>⚠️ <strong>Sa sensibilité décroît avec le temps écoulé</strong> : excellente très tôt, elle diminue nettement après quelques jours<br><br><strong>②</strong> <strong>Si la TDM est négative mais la suspicion clinique persiste : ponction lombaire</strong> — recherche de <strong>xanthochromie</strong> et d'hématies non décroissantes<br><br><strong>③</strong> 🎯 <strong>L'angiographie cérébrale est l'examen définitif</strong> pour identifier l'anévrisme<br>➜ L'angio-TDM sert souvent de première étape vasculaire</div>
+          </div>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">🎯 <strong>Le message pour la première ligne :</strong> une <strong>TDM normale n'exclut pas une HSA</strong> lorsque le tableau est évocateur — c'est l'erreur classique. Devant une <strong>céphalée en coup de tonnerre</strong>, l'orientation en urgence est obligatoire, et la démarche ne s'arrête pas à une TDM négative.</div>
+
+        <div class="key-fact green" style="margin-top:8px;">🛠️ <strong>Traitement :</strong> les objectifs sont de <strong>minimiser la lésion cérébrale précoce</strong> et de <strong>prévenir le resaignement</strong>. Pour un anévrisme sacciforme rompu, le traitement est le <strong>clippage chirurgical</strong> ou l'<strong>embolisation endovasculaire (coiling)</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Goldman-Cecil, ch. 380</em></span></div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;border-left-color:#b45309;">
+        <div class="block-title" id="nim-5"><span class="tag">🧊 Hématomes extra-axiaux</span></div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:18%;"></th><th style="width:36%;">Hématome SOUS-DURAL</th><th>Hématome ÉPIDURAL (extradural)</th></tr></thead>
+          <tbody>
+            <tr style="background:#fff3cd;"><td><strong>Forme à la TDM</strong></td><td>🎯 <strong>En croissant</strong>, concave vers le cerveau</td><td>🎯 <strong>Biconvexe</strong>, en lentille</td></tr>
+            <tr><td><strong>Limites</strong></td><td><strong>Franchit les sutures</strong> osseuses<br>Ne franchit pas la faux ni la tente</td><td><strong>Ne franchit PAS les sutures</strong></td></tr>
+            <tr style="background:#e8f4fd;"><td><strong>Origine</strong></td><td><strong>Veines ponts</strong> — saignement lent</td><td><strong>Artère méningée moyenne</strong> — saignement rapide · souvent <strong>fracture temporale</strong> associée</td></tr>
+            <tr><td><strong>Terrain</strong></td><td>🎯 <strong>Personne âgée</strong> (atrophie → veines tendues), <strong>anticoagulation</strong>, alcool, chutes répétées</td><td>Sujet plus jeune, traumatisme net</td></tr>
+            <tr style="background:#fce4ec;"><td><strong>Évolution</strong></td><td>Peut être <strong>aigu, subaigu ou chronique</strong> — parfois des <strong>semaines</strong> après un traumatisme <strong>mineur ou oublié</strong></td><td>🚨 <strong>Intervalle libre</strong> classique puis détérioration rapide</td></tr>
+            <tr><td><strong>Piège</strong></td><td>🚨 <strong>À la phase subaiguë, il devient ISODENSE</strong> — donc presque invisible, surtout s'il est bilatéral et symétrique<br>💡 Chercher l'<strong>effacement des sillons</strong> et la <strong>déviation de la ligne médiane</strong></td><td>Urgence neurochirurgicale immédiate</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="key-fact red" style="margin-top:12px;">🚨 <strong>Le scénario le plus fréquent en première ligne :</strong> une <strong>personne âgée sous anticoagulant</strong> qui présente une <strong>confusion, une céphalée, une somnolence ou un déclin fonctionnel progressif</strong> — parfois <strong>sans traumatisme rapporté</strong>, ou après une chute jugée banale des semaines plus tôt. <strong>Hématome sous-dural chronique jusqu'à preuve du contraire : seuil très bas d'imagerie.</strong><br>➜ Voir <em>Chutes</em>, <em>Délirium</em>, <em>TNC</em></div>
+      </div>
+
+      <div class="block rx" style="margin-top:14px;border-left-color:#6d28d9;">
+        <div class="block-title" id="nim-6"><span class="tag">🤕 Céphalée &amp; traumatisme crânien — quand imager</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>La majorité des céphalées ne nécessitent aucune imagerie.</strong> Ce qui justifie d'imager, ce sont les <strong>signaux d'alarme</strong> — pas la sévérité de la douleur ni l'inquiétude seule. Imager sans indication expose à l'irradiation et aux trouvailles fortuites.</div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
+          <div style="background:#fef2f2;border-radius:10px;padding:14px;border-left:4px solid #c0392b;">
+            <strong style="color:#c0392b;">🚩 Céphalée — signaux qui imposent l'imagerie</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🚨 <strong>Coup de tonnerre</strong> — maximale d'emblée → HSA<br><strong>Déficit neurologique</strong> focal, œdème papillaire, convulsion<br><strong>Altération de l'état de conscience</strong> ou du comportement<br><strong>Fièvre + raideur de nuque</strong> → méningite<br><strong>Début après 50 ans</strong> · <strong>changement de patron</strong> chez un migraineux connu<br><strong>Aggravation à la manœuvre de Valsalva</strong>, réveil nocturne, pire au décubitus → hypertension intracrânienne<br><strong>Immunosuppression</strong> ou <strong>néoplasie</strong> connue<br><strong>Anticoagulation</strong> ou traumatisme récent<br>➜ Voir <em>Migraine &amp; céphalées</em></div>
+          </div>
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;border-left:4px solid #1d4ed8;">
+            <strong style="color:#1d4ed8;">🤕 Traumatisme crânien</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Des <strong>règles de décision validées</strong> — dont la <strong>règle canadienne pour la TDM cérébrale</strong> — guident l'indication et évitent des examens inutiles.<br><br><strong>Éléments qui pèsent lourd :</strong><br>• <strong>Anticoagulation ou antiplaquettaire</strong> 🚨 — seuil très bas<br>• <strong>Âge avancé</strong><br>• Perte de conscience, amnésie, vomissements répétés<br>• <strong>Score de Glasgow abaissé</strong> ou qui ne remonte pas<br>• Signes de <strong>fracture de la base du crâne</strong> — ecchymose périorbitaire ou rétro-auriculaire, otorrhée ou rhinorrhée de LCR<br>• Mécanisme dangereux<br>⚠️ <strong>Ces règles ne s'appliquent pas aux patients anticoagulés</strong> — leur risque justifie l'imagerie plus largement</div>
+          </div>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">⏳ <strong>Le piège du traumatisme « bénin » chez la personne âgée anticoagulée :</strong> l'examen initial et même la TDM initiale peuvent être normaux, et l'<strong>hématome se constituer secondairement</strong>, sur des heures à des semaines. Donner des <strong>consignes de surveillance écrites</strong> et un motif de reconsultation clair fait partie de la prise en charge.</div>
+      </div>
+
+      <div class="block para" style="margin-top:14px;border-left-color:#0f766e;">
+        <div class="block-title" id="nim-7"><span class="tag">🧩 Autres indications courantes</span></div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:26%;">Situation</th><th style="width:26%;">Examen</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr style="background:#f0fdf4;"><td><strong>Convulsion inaugurale</strong></td><td><strong>IRM</strong> (TDM en urgence)</td><td>Chercher une lésion structurelle · ➜ voir <em>Épilepsie</em></td></tr>
+            <tr><td><strong>Suspicion de SEP</strong></td><td>🎯 <strong>IRM cérébrale et médullaire</strong> avec gadolinium</td><td>Dissémination dans l'espace et le temps · ➜ voir <em>Sclérose en plaques</em></td></tr>
+            <tr style="background:#e8f4fd;"><td><strong>Déclin cognitif</strong></td><td><strong>TDM ou IRM</strong> selon le contexte</td><td>Écarter hématome sous-dural, hydrocéphalie à pression normale, tumeur, AVC<br>➜ Voir <em>TNC</em></td></tr>
+            <tr><td><strong>Vertige avec signes centraux</strong></td><td>🎯 <strong>IRM</strong> — la TDM est <strong>insuffisante</strong> pour la fosse postérieure</td><td>Un AVC cérébelleux peut se présenter comme un vertige isolé<br>➜ Voir <em>Vertige</em></td></tr>
+            <tr style="background:#fce4ec;"><td><strong>Suspicion de méningite</strong></td><td><strong>TDM avant PL</strong> dans certaines situations</td><td>Si signes focaux, œdème papillaire, convulsion, immunosuppression, état de conscience altéré<br>⚠️ <strong>Ne jamais retarder l'antibiothérapie</strong> pour l'imagerie<br>➜ Voir <em>Infections</em></td></tr>
+            <tr><td><strong>Néoplasie connue + symptôme neuro</strong></td><td><strong>IRM avec contraste</strong></td><td>Métastases · compression médullaire si atteinte rachidienne<br>➜ Voir <em>Urgences oncologiques</em></td></tr>
+            <tr style="background:#f1f5f9;"><td><strong>Céphalée + déficit visuel chez &gt; 50 ans</strong></td><td>Imagerie <strong>selon le contexte</strong>, mais surtout <strong>VS et CRP en urgence</strong></td><td>🚨 <strong>Artérite à cellules géantes</strong> — ne pas se laisser distraire par l'imagerie<br>➜ Voir <em>Connectivites &amp; vascularites</em></td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+
+      <div class="block para" style="margin-top:14px;border-left-color:#0891b2;">
+        <div class="block-title" id="nim-8"><span class="tag">⚠️ Sécurité de l'IRM &amp; du gadolinium</span></div>
+
+        <div class="key-fact red" style="margin-top:10px;">🚨 <strong>L'IRM est un aimant permanent, toujours actif.</strong> Les incidents graves surviennent quand un objet ferromagnétique entre dans la salle, ou quand un implant n'a pas été déclaré. <strong>Le questionnaire de sécurité n'est pas une formalité administrative.</strong></div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
+          <div style="background:#fef2f2;border-radius:10px;padding:14px;border-left:4px solid #c0392b;">
+            <strong style="color:#c0392b;">⛔ À déclarer impérativement</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Stimulateur cardiaque</strong> ou <strong>défibrillateur</strong> — certains modèles récents sont compatibles, mais cela <strong>doit être vérifié</strong><br><strong>Neurostimulateur</strong>, pompe implantée, implant cochléaire<br><strong>Clips d'anévrisme</strong> anciens<br><strong>Corps étranger métallique intraoculaire</strong> 🚨 — antécédent de meulage ou de soudure sans protection<br>Certaines valves, stents, prothèses — la plupart sont compatibles après un délai<br><strong>Grossesse</strong> · <strong>claustrophobie</strong> sévère</div>
+          </div>
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;border-left:4px solid #1d4ed8;">
+            <strong style="color:#1d4ed8;">💉 Gadolinium</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Vérifier la fonction rénale</strong> avant administration<br>⚠️ Risque de <strong>fibrose systémique néphrogénique</strong> en insuffisance rénale sévère — rare avec les agents actuels, mais la prudence demeure<br>⚠️ <strong>Traverse le placenta</strong> — <strong>éviter en grossesse</strong><br>💡 Le gadolinium n'est <strong>pas</strong> le contraste iodé de la TDM : une allergie à l'un ne présume pas de l'autre</div>
+          </div>
+        </div>
+
+        <div class="key-fact green" style="margin-top:12px;">🎯 <strong>Ce que vous pouvez faire au moment de la requête :</strong> mentionner la <strong>fonction rénale</strong>, les <strong>implants</strong>, une <strong>grossesse possible</strong> et la <strong>claustrophobie</strong>. Un examen annulé sur place pour un implant non déclaré, c'est un délai diagnostique — et parfois une hospitalisation prolongée.</div>
+      </div>
+
+      <div class="block flag" style="margin-top:14px;">
+        <div class="block-title" id="nim-9"><span class="tag">🚨 Red flags &amp; pièges</span></div>
+
+        <div class="flag-list" style="margin-top:12px;">
+          <div class="flag-item">🚨 <strong>Céphalée en coup de tonnerre</strong> — HSA : TDM urgente, et <strong>une TDM négative n'exclut pas le diagnostic</strong></div>
+          <div class="flag-item">🚨 <strong>Déficit neurologique focal aigu</strong> — TDM sans contraste immédiate pour écarter une hémorragie avant toute thrombolyse</div>
+          <div class="flag-item">🚨 <strong>Traumatisme crânien sous anticoagulant</strong> — seuil d'imagerie très bas, y compris pour un traumatisme jugé mineur</div>
+          <div class="flag-item">🚨 <strong>Confusion ou déclin progressif chez une personne âgée</strong> — hématome sous-dural chronique, même sans traumatisme rapporté</div>
+          <div class="flag-item">🚨 <strong>Déviation de la ligne médiane, effacement des citernes</strong> — engagement : urgence neurochirurgicale</div>
+          <div class="flag-item">🚨 <strong>Céphalée + fièvre + raideur de nuque</strong> — méningite : <strong>ne pas retarder l'antibiothérapie</strong> pour l'imagerie</div>
+          <div class="flag-item">⚠️ <strong>Conclure « TDM normale, donc pas d'AVC »</strong> — elle est souvent normale dans les premières heures d'une ischémie</div>
+          <div class="flag-item">⚠️ <strong>Se fier à la TDM pour la fosse postérieure</strong> — artéfacts osseux : c'est l'IRM qu'il faut</div>
+          <div class="flag-item">⚠️ <strong>Manquer un hématome sous-dural subaigu isodense</strong> — chercher l'effacement des sillons et l'asymétrie</div>
+          <div class="flag-item">⚠️ <strong>Demander du contraste dans l'AVC aigu ou le traumatisme</strong> — inutile, et il ajoute un risque</div>
+          <div class="flag-item">⚠️ <strong>Ne pas déclarer un implant</strong> avant une IRM</div>
+          <div class="flag-item">⚠️ <strong>Imager une céphalée sans signal d'alarme</strong> — irradiation et trouvailles fortuites sans bénéfice</div>
+        </div>
+
+        <div class="key-fact green" style="margin-top:12px;">✅ <strong>La démarche en 4 temps :</strong> ① <strong>y a-t-il un signal d'alarme?</strong> — sinon, souvent pas d'imagerie · ② <strong>urgence → TDM sans contraste</strong> : la question est « y a-t-il du sang? » · ③ <strong>IRM</strong> pour l'ischémie précoce, la fosse postérieure, la substance blanche, la moelle · ④ <strong>vérifier fonction rénale, implants et grossesse</strong> avant contraste ou IRM.</div>
+      </div>
+    </div>
+
     <div class="section" id="sec-arthrite-approche">
       <div class="section-header">
         <div class="section-accent" style="background:#0e7490">🔎</div>
@@ -51915,6 +52367,8 @@ const SEARCH_INDEX = [
   { id:'msk',                 title:'Musculosquelettique & MSK',          specialty:'Rhumatologie',       keywords:['msk','musculosquelettique','arthrite','tendinite','bursite','fracture','lombalgie','genou','épaule','hanche','ottawa','sport'] },
   { id:'arthrite-approche',  title:'Approche de la Douleur Articulaire', specialty:'Rhumatologie', keywords:['arthrite','arthralgie','douleur articulaire','inflammatoire','mécanique','raideur matinale','monoarthrite','oligoarthrite','polyarthrite','synovite','ponction articulaire','liquide synovial','cristaux','septique','facteur rhumatoïde','anti-ccp','aan','ana','hla-b27','vs','crp','ipd','dactylite','enthésite'] },
   { id:'imagerie-thorax',    title:'Imagerie du Thorax',             specialty:'Imagerie',        keywords:['radiographie','rayon x','thorax','poumon','cliché','pa','ap','silhouette','bronchogramme aérique','opacité','atélectasie','pneumothorax','épanchement pleural','kerley','cardiomégalie','rapport cardiothoracique','médiastin','hile','coupole','cul-de-sac','air libre','pénétration','rotation','inspiration','tdm','angio-tdm','échographie pulmonaire','tep','nodule','masse','lecture systématique','spine sign','hilum overlay','mach'] },
+  { id:'imagerie-abdo',      title:'Imagerie de l\u2019Abdomen',       specialty:'Imagerie',        keywords:['asp','radiographie abdomen','abdomen sans pr\u00e9paration','air libre','pneumop\u00e9ritoine','rigler','morrison','ligament falciforme','chilaiditi','occlusion','il\u00e9us','volvulus','grain de caf\u00e9','u invers\u00e9','niveaux hydro-a\u00e9riques','valvules conniventes','haustrations','pneumatose','a\u00e9robilie','gaz portal','\u00e9chographie abdominale','murphy \u00e9chographique','tdm abdominal','angio-tdm','isch\u00e9mie m\u00e9sent\u00e9rique','cholangio-irm','contraste iod\u00e9','n\u00e9phropathie de contraste','metformine','trouvaille fortuite','alara','choisir avec soin','c\u00e6cum','appendicolithe','goldman'] },
+  { id:'neuro-imagerie',     title:'Neuro-imagerie',                 specialty:'Imagerie',        keywords:['tdm c\u00e9r\u00e9brale','scan c\u00e9r\u00e9bral','irm c\u00e9r\u00e9brale','diffusion','hyperdense','hypodense','isodense','avc','isch\u00e9mique','h\u00e9morragique','h\u00e9morragie intrac\u00e9r\u00e9brale','hsa','h\u00e9morragie sous-arachno\u00efdienne','coup de tonnerre','an\u00e9vrisme','xanthochromie','ponction lombaire','angiographie c\u00e9r\u00e9brale','clippage','coiling','h\u00e9matome sous-dural','sous-dural','\u00e9pidural','extradural','veines ponts','art\u00e8re m\u00e9ning\u00e9e moyenne','intervalle libre','ligne m\u00e9diane','engagement','hydroc\u00e9phalie','c\u00e9phal\u00e9e','red flags c\u00e9phal\u00e9e','traumatisme cr\u00e2nien','glasgow','r\u00e8gle canadienne','gadolinium','fibrose systémique n\u00e9phrog\u00e9nique','implant','pacemaker','claustrophobie','fosse post\u00e9rieure','aspects','thrombectomie','goldman'] },
   { id:'par',                title:'Polyarthrite Rhumatoïde',         specialty:'Rhumatologie', keywords:['polyarthrite rhumatoïde','par','pr','arthrite rhumatoïde','anti-ccp','acpa','facteur rhumatoïde','méthotrexate','mtx','dmard','biothérapie','anti-tnf','jak','hydroxychloroquine','sulfasalazine','léflunomide','pannus','érosion','felty','nodule rhumatoïde','c1-c2','pneumopathie interstitielle','traiter à la cible','acr','eular','déviation cubitale'] },
   { id:'goutte',             title:'Goutte & Arthrites Microcristallines', specialty:'Rhumatologie', keywords:['goutte','gout','urate','acide urique','uricémie','podagre','colchicine','allopurinol','fébuxostat','probénécide','tophus','hyperuricémie','pseudogoutte','ppc','pyrophosphate','chondrocalcinose','cristaux','diurétique','xanthine oxydase','360','300'] },
   { id:'spondylarthrites',   title:'Spondylarthrites',               specialty:'Rhumatologie', keywords:['spondylarthrite','spondylarthrite ankylosante','axiale','non radiographique','sacro-iliite','hla-b27','lombalgie inflammatoire','enthésite','dactylite','talalgie','uvéite','psoriasique','rhumatisme psoriasique','arthrite réactionnelle','mii','syndesmophyte','anti-il-17','anti-tnf'] },
@@ -52201,7 +52655,7 @@ const SECTION_ORDER = [
   // Prévention & Dépistage
   'depistage',
   // Imagerie
-  'imagerie-thorax',
+  'imagerie-thorax','imagerie-abdo','neuro-imagerie',
   // Rhumatologie
   'arthrite-approche','par','goutte','spondylarthrites','connectivites',
   // Musculosquelettique
@@ -52219,6 +52673,8 @@ const SECTION_TITLES = {
   'vieillissement':'Le Vieillissement',
   'tuberculose':'Tuberculose',
   'imagerie-thorax':'Imagerie du Thorax',
+  'imagerie-abdo':'Imagerie de l\'Abdomen',
+  'neuro-imagerie':'Neuro-imagerie',
   'chocs':'Les Chocs',
   'ordonnances':'Normes des Ordonnances',
   'arthrite-approche':'Approche Douleur Articulaire','par':'Polyarthrite Rhumatoïde','goutte':'Goutte & Microcristaux','spondylarthrites':'Spondylarthrites','connectivites':'Connectivites & Vascularites',
