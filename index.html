@@ -1034,6 +1034,7 @@ m
         <div class="nav-item" onclick="showSection('fa')">FA & Arythmies</div>
         <div class="nav-item" onclick="showSection('arythmies')">Flutter &amp; TSVP</div>
         <div class="nav-item" onclick="showSection('ic')">Insuffisance Cardiaque</div>
+        <div class="nav-item" onclick="showSection('chirurgie-cardiaque')">Chirurgie Cardiaque</div>
         <div class="nav-item" onclick="showSection('stenose-aortique')">Sténose Aortique</div>
         <div class="nav-item" onclick="showSection('pericardite')">Péricardite & Endocardite</div>
         <div class="nav-item" onclick="showSection('map')">MAP</div>
@@ -1404,7 +1405,7 @@ m
           <div class="home-card-icon" style="background:#ffe8e8;color:#b91c1c">🫀</div>
           <div class="home-card-body">
             <div class="home-card-name">Cardiologie</div>
-            <div class="home-card-count">11 sections</div>
+            <div class="home-card-count">12 sections</div>
           </div>
         </div>
         <div class="home-card" onclick="showSection('rein-anatomie'); openGroup('grp-nephro')">
@@ -7030,6 +7031,237 @@ function icTabSwitch(type) {
     </div>
   </div>
 </div>
+    <div class="section" id="sec-chirurgie-cardiaque">
+      <div class="section-header">
+        <div class="section-accent" style="background:#9f1239">🫀</div>
+        <div class="section-title"><h1>Chirurgie cardiaque</h1><div class="breadcrumb">Cardiologie <span class="breadcrumb-sep">·</span> Pontage &amp; valves <span class="breadcrumb-sep">·</span> Complications <span class="breadcrumb-sep">·</span> Suivi en 1<sup>re</sup> ligne</div></div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;">
+        <button onclick="goToBlock('cch-1')" style="background:#374151;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🗂️ Les interventions</button>
+        <button onclick="goToBlock('cch-2')" style="background:#c0392b;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">⚖️ Pontage vs ICP</button>
+        <button onclick="goToBlock('cch-3')" style="background:#6d28d9;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🫀 Chirurgie valvulaire</button>
+        <button onclick="goToBlock('cch-4')" style="background:#0369a1;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">⚙️ CEC &amp; voies d'abord</button>
+        <button onclick="goToBlock('cch-5')" style="background:#0f766e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🛏️ Postopératoire immédiat</button>
+        <button onclick="goToBlock('cch-6')" style="background:#b45309;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">⚠️ Complications</button>
+        <button onclick="goToBlock('cch-7')" style="background:#0a7a4e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">📋 Suivi en 1<sup>re</sup> ligne</button>
+        <button onclick="goToBlock('cch-8')" style="background:#0891b2;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">💊 Anticoagulation des valves</button>
+        <button onclick="goToBlock('cch-9')" style="background:#dc2626;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🚨 Red flags</button>
+      </div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:20px;">
+        <div style="flex:1;min-width:95px;background:#FEE2E2;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#b91c1c;">Pontage</div><div style="font-size:11px;color:#555;margin-top:4px;">Supérieur si diabète ou SYNTAX élevé</div></div>
+        <div style="flex:1;min-width:95px;background:#F3E8FF;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#6d28d9;">FA post-op</div><div style="font-size:11px;color:#555;margin-top:4px;">La complication la plus fréquente</div></div>
+        <div style="flex:1;min-width:95px;background:#FEF9C3;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#854d0e;">Mécanique</div><div style="font-size:11px;color:#555;margin-top:4px;">Warfarine à vie — jamais d'AOD</div></div>
+        <div style="flex:1;min-width:95px;background:#DCFCE7;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#15803d;">Réadaptation</div><div style="font-size:11px;color:#555;margin-top:4px;">Bénéfice démontré, sous-utilisée</div></div>
+      </div>
+
+      <div class="block def" style="margin-top:14px;">
+        <div class="block-title" id="cch-1"><span class="tag">🗂️ Les grandes interventions</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>Votre rôle en première ligne :</strong> vous n'opérerez personne, mais vous verrez ces patients <strong>avant</strong> (optimisation, orientation), <strong>après</strong> (suivi, complications, médication) et <strong>longtemps après</strong> (surveillance des valves, facteurs de risque). Comprendre ce qui a été fait change la qualité de ce suivi.</div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:24%;">Intervention</th><th style="width:32%;">Principe</th><th>Ce qu'il faut retenir</th></tr></thead>
+          <tbody>
+            <tr style="background:#fce4ec;"><td><strong>Pontage aortocoronarien (PAC)</strong></td><td>Greffons contournant les sténoses coronariennes<br><strong>Artère mammaire interne gauche</strong> vers l'IVA ⭐, <strong>artère radiale</strong>, <strong>veine saphène</strong></td><td>🎯 Le <strong>greffon mammaire interne a une perméabilité à long terme nettement supérieure</strong> aux greffons veineux — c'est pourquoi il est réservé à l'artère la plus importante<br>Les greffons veineux se dégradent avec les années</td></tr>
+            <tr><td><strong>Remplacement valvulaire</strong></td><td>Prothèse <strong>mécanique</strong> ou <strong>biologique</strong></td><td>Choix déterminé par l'<strong>âge</strong>, le <strong>désir de grossesse</strong> et la <strong>capacité à prendre une anticoagulation</strong> — voir bloc dédié</td></tr>
+            <tr style="background:#f0fdf4;"><td><strong>Réparation valvulaire</strong></td><td>Plastie, surtout <strong>mitrale</strong></td><td>🎯 <strong>Préférée au remplacement quand elle est possible</strong> : conserve la valve native, évite l'anticoagulation à vie, meilleure fonction ventriculaire à long terme</td></tr>
+            <tr><td><strong>TAVI</strong><br><em>implantation valvulaire aortique par cathéter</em></td><td>Valve biologique déployée par voie <strong>percutanée</strong>, le plus souvent fémorale</td><td>Développé pour les patients à risque chirurgical élevé, ses indications se sont <strong>élargies</strong><br>➜ Voir <em>Sténose aortique</em></td></tr>
+            <tr style="background:#e8f4fd;"><td><strong>Chirurgie de l'aorte</strong></td><td>Remplacement de l'aorte ascendante ou de la crosse, ± valve aortique</td><td>Anévrisme, <strong>dissection</strong> · souvent en urgence<br>➜ Voir <em>Anévrisme</em></td></tr>
+            <tr><td><strong>Autres</strong></td><td>Fermeture de communication, <strong>myectomie</strong>, transplantation, assistance ventriculaire</td><td>Prise en charge très spécialisée</td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;border-left-color:#c0392b;">
+        <div class="block-title" id="cch-2"><span class="tag">⚖️ Revascularisation — pontage ou angioplastie?</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>La décision n'appartient ni au cardiologue seul ni au chirurgien seul.</strong> Elle se prend en <strong>réunion multidisciplinaire</strong> — cardiologue interventionnel, chirurgien, et selon le cas diabétologue — en tenant compte de l'anatomie, des comorbidités et des préférences du patient.</div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:34%;">Situation</th><th style="width:22%;">Tendance</th><th>Pourquoi</th></tr></thead>
+          <tbody>
+            <tr style="background:#fce4ec;"><td><strong>Diabète + maladie multitronculaire stable</strong></td><td>🎯 <strong>Pontage</strong></td><td>Le pontage offre généralement des <strong>résultats supérieurs</strong> : ↓ mortalité toutes causes et ↓ revascularisations répétées à long terme</td></tr>
+            <tr><td><strong>Anatomie complexe — score SYNTAX élevé</strong></td><td><strong>Pontage</strong></td><td>Supériorité démontrée pour les <strong>lésions complexes peu propices à l'angioplastie</strong></td></tr>
+            <tr style="background:#e8f4fd;"><td><strong>Sténose du tronc commun gauche</strong></td><td><strong>Pontage</strong> historiquement privilégié · l'ICP est une option selon le <strong>score SYNTAX</strong></td><td>Également privilégié en cas de <strong>dysfonction ventriculaire gauche</strong> ou de <strong>diabète</strong></td></tr>
+            <tr><td><strong>Maladie stable, faible score SYNTAX</strong></td><td><strong>ICP</strong> est une alternative</td><td>⚠️ Mais un <strong>écart subsiste</strong> en faveur du pontage sur les <strong>récidives de revascularisation</strong></td></tr>
+            <tr style="background:#f0fdf4;"><td><strong>SCA — infarctus aigu</strong></td><td>🚨 <strong>ICP primaire</strong></td><td>La rapidité prime · le pontage garde sa place en cas d'anatomie non traitable ou de complication mécanique<br>➜ Voir <em>SCA</em></td></tr>
+            <tr><td><strong>Risque chirurgical très élevé, fragilité</strong></td><td>ICP ou traitement médical</td><td>La <strong>fragilité</strong> et l'espérance de vie pèsent autant que l'anatomie<br>➜ Voir <em>Évaluation gériatrique</em></td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">💡 <strong>Le message à transmettre au patient :</strong> ni l'une ni l'autre des interventions n'est « meilleure » dans l'absolu. L'ICP est <strong>moins invasive avec une récupération plus rapide</strong>; le pontage offre une <strong>durabilité supérieure</strong> et moins de reprises, au prix d'une chirurgie lourde. Le bon choix dépend de l'anatomie, du diabète et de ce que la personne valorise.</div>
+
+        <div class="key-fact red" style="margin-top:8px;">⚠️ <strong>Un point souvent mal compris :</strong> la revascularisation <strong>soulage l'angine et, dans certaines situations, améliore le pronostic</strong> — mais elle <strong>ne guérit pas la maladie coronarienne</strong>. Le traitement médical optimal, la statine et le contrôle des facteurs de risque restent indispensables <strong>après</strong> la chirurgie. C'est un message que beaucoup de patients n'ont pas intégré.</div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;border-left-color:#6d28d9;">
+        <div class="block-title" id="cch-3"><span class="tag">🫀 Chirurgie valvulaire — mécanique ou biologique</span></div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:18%;"></th><th style="width:34%;">Prothèse MÉCANIQUE</th><th>Prothèse BIOLOGIQUE</th></tr></thead>
+          <tbody>
+            <tr style="background:#ede9fe;"><td><strong>Durabilité</strong></td><td>🎯 <strong>Très longue — souvent à vie</strong></td><td><strong>Limitée</strong> — dégénérescence structurelle, d'autant plus rapide que le patient est jeune</td></tr>
+            <tr><td><strong>Anticoagulation</strong></td><td>🚨 <strong>Warfarine à vie, obligatoire</strong></td><td>Anticoagulation <strong>temporaire</strong> ou non requise selon le contexte</td></tr>
+            <tr style="background:#f0fdf4;"><td><strong>Candidat typique</strong></td><td><strong>Patient jeune</strong> capable et désireux de prendre une anticoagulation fiable</td><td><strong>Patient plus âgé</strong>, ou pour qui l'anticoagulation est risquée ou impossible<br><strong>Désir de grossesse</strong></td></tr>
+            <tr><td><strong>Inconvénients</strong></td><td>Contrainte de l'INR à vie · risque hémorragique · <strong>clic audible</strong><br>⛔ <strong>Tératogénicité de la warfarine</strong> — enjeu majeur chez la femme en âge de procréer</td><td><strong>Réintervention probable</strong> après quelques années à quelques décennies</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="key-fact red" style="margin-top:12px;">🤰 <strong>La conversation à ne pas manquer chez la femme en âge de procréer :</strong> le choix de prothèse <strong>engage le projet de grossesse pour des décennies</strong>. La warfarine est tératogène, et la gestion de l'anticoagulation d'une valve mécanique pendant une grossesse est complexe et risquée. <strong>Cette discussion doit avoir lieu AVANT la chirurgie</strong>, pas après. Voir <em>Contraception</em>.</div>
+
+        <div class="key-fact green" style="margin-top:8px;">🦷 <strong>Prophylaxie de l'endocardite :</strong> les porteurs de <strong>prothèse valvulaire</strong> figurent parmi les patients à <strong>risque le plus élevé</strong> et relèvent d'une prophylaxie antibiotique avant certains gestes dentaires. <strong>L'hygiène dentaire quotidienne et les visites régulières comptent davantage que l'antibiotique ponctuel.</strong><br>➜ Voir <em>Péricardite &amp; endocardite</em></div>
+      </div>
+
+      <div class="block para" style="margin-top:14px;border-left-color:#0369a1;">
+        <div class="block-title" id="cch-4"><span class="tag">⚙️ CEC &amp; voies d'abord</span></div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;border-left:4px solid #1d4ed8;">
+            <strong style="color:#1d4ed8;">🔄 Circulation extracorporelle (CEC)</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Machine cœur-poumon qui <strong>assure la circulation et l'oxygénation</strong> pendant que le cœur est arrêté par cardioplégie.<br><br>⚠️ <strong>Elle a un coût physiologique :</strong><br>• <strong>Réponse inflammatoire systémique</strong><br>• <strong>Coagulopathie</strong> et dysfonction plaquettaire<br>• <strong>Hémodilution</strong>, troubles électrolytiques<br>• Risque de <strong>micro-embolies</strong> → contribue au <strong>délirium</strong> et aux troubles cognitifs postopératoires<br>• Atteinte rénale<br>🎯 Ceci explique une bonne part des complications postopératoires.</div>
+          </div>
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;border-left:4px solid #15803d;">
+            <strong style="color:#15803d;">🔪 Voies d'abord</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Sternotomie médiane</strong> — voie classique<br>➜ <strong>Précautions sternales</strong> pendant la consolidation : pas de charge lourde, pas de traction avec les bras, technique de toux avec coussin<br>➜ Consolidation osseuse sur <strong>plusieurs semaines</strong> — conduite automobile et retour au travail à valider<br><br><strong>Approches mini-invasives</strong> — mini-thoracotomie, chirurgie robotique : moins de douleur, récupération plus rapide, mais toutes les interventions ne s'y prêtent pas<br><br><strong>Voie percutanée</strong> — TAVI : pas de sternotomie, récupération beaucoup plus rapide</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block para" style="margin-top:14px;border-left-color:#0f766e;">
+        <div class="block-title" id="cch-5"><span class="tag">🛏️ Postopératoire immédiat — ce qui se passe aux soins</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>Pourquoi le savoir même si vous ne travaillez pas aux soins intensifs :</strong> comprendre la trajectoire vous permet d'interpréter le résumé de congé, de reconnaître ce qui s'écarte du parcours normal, et de répondre aux questions du patient et de ses proches.</div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-top:12px;">
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+            <strong style="color:#1d4ed8;">🔧 Le matériel en place</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Drains médiastinaux et pleuraux</strong> — surveiller le débit<br><strong>Électrodes épicardiques</strong> temporaires<br><strong>Cathéters</strong> artériel et central<br>Sonde urinaire · tube endotrachéal initialement</div>
+          </div>
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+            <strong style="color:#15803d;">📊 Ce qu'on surveille</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Hémodynamie</strong> et rythme<br><strong>Saignement</strong> — débit des drains<br><strong>Diurèse</strong> et fonction rénale<br><strong>Électrolytes</strong> — surtout <strong>potassium et magnésium</strong>, qui influencent le risque d'arythmie<br><strong>Glycémie</strong> — le contrôle glycémique réduit les infections<br><strong>État neurologique</strong></div>
+          </div>
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;">
+            <strong style="color:#d35400;">🚀 Récupération accélérée</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Extubation précoce</strong><br><strong>Mobilisation précoce</strong> 🎯 — prévient le déconditionnement, la thrombose et le délirium<br><strong>Analgésie efficace</strong> — une douleur mal contrôlée empêche de tousser et de bouger<br><strong>Physiothérapie respiratoire</strong> et spirométrie incitative<br>Retrait rapide des cathéters</div>
+          </div>
+          <div style="background:#f1f5f9;border-radius:10px;padding:14px;">
+            <strong style="color:#334155;">💊 Médication reprise</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Aspirine</strong> — essentielle à la perméabilité des greffons après un pontage<br><strong>Bêtabloquant</strong> — réduit la FA postopératoire<br><strong>Statine</strong><br>IECA/ARA selon la fonction ventriculaire<br>Anticoagulation selon le type de valve</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;border-left-color:#b45309;">
+        <div class="block-title" id="cch-6"><span class="tag">⚠️ Complications — précoces et tardives</span></div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:22%;">Complication</th><th style="width:30%;">Présentation</th><th>Conduite</th></tr></thead>
+          <tbody>
+            <tr style="background:#ede9fe;"><td>🎯 <strong>Fibrillation auriculaire postopératoire</strong><br><em>la plus fréquente</em></td><td>Survient typiquement dans les <strong>premiers jours</strong>, souvent vers le 2<sup>e</sup>–3<sup>e</sup> jour<br>Palpitations, hypotension, ou asymptomatique</td><td>Contrôle du rythme ou de la fréquence · <strong>corriger potassium et magnésium</strong><br>⚠️ <strong>Décision d'anticoagulation</strong> selon la durée et le risque thromboembolique<br>Souvent <strong>transitoire</strong>, mais elle augmente le risque d'AVC et la durée de séjour<br>➜ Voir <em>FA</em></td></tr>
+            <tr><td>🚨 <strong>Tamponnade</strong></td><td><strong>Hypotension, jugulaires distendues, bruits assourdis</strong>, chute du débit des drains puis collapsus</td><td>🚨 <strong>Urgence</strong> — échographie et reprise chirurgicale<br>➜ Voir <em>Les Chocs</em></td></tr>
+            <tr style="background:#fce4ec;"><td>🚨 <strong>Saignement / reprise</strong></td><td>Débit élevé des drains, chute de l'hémoglobine, instabilité</td><td>Corriger la coagulopathie · reprise au bloc si saignement chirurgical</td></tr>
+            <tr><td><strong>Infection de plaie sternale · médiastinite</strong></td><td>🚨 <strong>Douleur sternale nouvelle, écoulement, instabilité sternale (« clic »), fièvre</strong><br>Souvent <strong>1 à 3 semaines</strong> après la chirurgie — donc <strong>après le congé</strong></td><td>🚨 <strong>Urgence</strong> — orientation immédiate en chirurgie cardiaque<br>Facteurs de risque : <strong>diabète</strong>, obésité, MPOC, tabagisme, prélèvement des deux mammaires<br>🎯 <strong>C'est vous qui la verrez en première ligne</strong></td></tr>
+            <tr style="background:#e8f4fd;"><td><strong>Délirium postopératoire</strong></td><td>Confusion fluctuante, souvent aux jours 2 à 5</td><td>Très fréquent, surtout chez la personne âgée · multifactoriel (CEC, douleur, médicaments, sommeil)<br>➜ Voir <em>Délirium</em></td></tr>
+            <tr><td><strong>Insuffisance rénale aiguë</strong></td><td>↑ créatinine, oligurie</td><td>CEC, hypoperfusion, néphrotoxiques · ➜ Voir <em>IRA</em></td></tr>
+            <tr style="background:#f0fdf4;"><td><strong>AVC / troubles cognitifs</strong></td><td>Déficit focal, ou plainte cognitive persistante</td><td>Micro-embolies, athérome aortique, FA · ➜ Voir <em>AVC</em></td></tr>
+            <tr><td><strong>Épanchement pleural / péricardique</strong></td><td>Dyspnée, douleur thoracique, parfois <strong>tardif</strong></td><td>Fréquent après chirurgie · ponction si mal toléré<br>➜ Voir <em>Épanchement pleural</em></td></tr>
+            <tr style="background:#fff3cd;"><td><strong>Syndrome post-péricardiotomie</strong></td><td><strong>Fièvre, douleur péricardique, frottement</strong>, épanchement — <strong>semaines après</strong> la chirurgie</td><td>Réaction inflammatoire · AINS ou colchicine selon le contexte<br>⚠️ À distinguer d'une infection</td></tr>
+            <tr><td><strong>Douleur &amp; engourdissement</strong></td><td>Douleur sternale, thoracique, du site de prélèvement du greffon (jambe, avant-bras)</td><td>Attendue et prolongée · rassurer, analgésie adéquate<br>⚠️ Distinguer d'une <strong>angine récidivante</strong></td></tr>
+            <tr style="background:#f1f5f9;"><td><strong>Dysfonction ou thrombose de prothèse</strong></td><td><strong>Nouveau souffle</strong>, dyspnée, insuffisance cardiaque, embolie<br>Disparition du <strong>clic</strong> d'une valve mécanique</td><td>🚨 Échographie urgente · anticoagulation inadéquate à rechercher</td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+
+      <div class="block rx" style="margin-top:14px;">
+        <div class="block-title" id="cch-7"><span class="tag">📋 Suivi en première ligne</span></div>
+
+        <div class="key-fact green" style="margin-top:10px;">🎯 <strong>C'est ici que se joue votre contribution réelle.</strong> Le chirurgien règle l'anatomie; la <strong>prévention secondaire, l'observance et la réadaptation</strong> déterminent ce qui arrive ensuite — et elles vous appartiennent.</div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:12px;">
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+            <strong style="color:#15803d;">🏃 Réadaptation cardiaque</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🎯 <strong>Bénéfice démontré sur la mortalité, les réhospitalisations et la qualité de vie</strong> — et pourtant <strong>largement sous-utilisée</strong>.<br>➜ <strong>Y orienter systématiquement</strong>, ce n'est pas optionnel<br>Programme supervisé : exercice, éducation, soutien psychologique, gestion des facteurs de risque</div>
+          </div>
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+            <strong style="color:#1d4ed8;">💊 Traitement médical à maintenir</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Aspirine</strong> — perméabilité des greffons<br><strong>Statine</strong> à haute intensité<br><strong>Bêtabloquant</strong> selon l'indication<br><strong>IECA/ARA</strong> selon la fonction VG et les comorbidités<br>⚠️ <strong>Vérifier que rien n'a été « perdu » au congé</strong> — les omissions de transition sont fréquentes</div>
+          </div>
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;">
+            <strong style="color:#d35400;">🎯 Facteurs de risque</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🚭 <strong>Cessation tabagique</strong> — l'intervention la plus rentable, y compris pour la perméabilité des greffons<br><strong>TA, lipides, diabète</strong> aux cibles<br>Poids, alimentation, activité physique<br>➜ Voir <em>HTA</em>, <em>Dyslipidémie</em>, <em>Diabète</em></div>
+          </div>
+          <div style="background:#ede9fe;border-radius:10px;padding:14px;">
+            <strong style="color:#6d28d9;">🩹 Soins de la plaie &amp; précautions</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Surveiller <strong>sternum et site de prélèvement du greffon</strong> — jambe souvent œdématiée, cicatrisation plus lente<br><strong>Précautions sternales</strong> jusqu'à consolidation<br><strong>Conduite automobile</strong> — délai à respecter, à valider avec l'équipe</div>
+          </div>
+          <div style="background:#fce4ec;border-radius:10px;padding:14px;">
+            <strong style="color:#c0392b;">🧠 Le volet psychologique</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🎯 <strong>Dépression et anxiété sont fréquentes après une chirurgie cardiaque</strong>, et associées à de moins bons résultats.<br>Peur de l'effort, peur de mourir, troubles du sommeil, fatigue prolongée<br>➜ <strong>Dépister activement</strong> — la personne n'en parlera pas spontanément<br><strong>Sexualité</strong> : sujet quasi jamais abordé, souvent source d'inquiétude</div>
+          </div>
+          <div style="background:#f1f5f9;border-radius:10px;padding:14px;">
+            <strong style="color:#334155;">💉 Prévention</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Vaccination</strong> — influenza annuelle, pneumocoque<br><strong>Hygiène dentaire</strong> et suivi régulier — surtout si prothèse valvulaire<br><strong>Prophylaxie de l'endocardite</strong> selon l'indication</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block rx" style="margin-top:14px;border-left-color:#0891b2;">
+        <div class="block-title" id="cch-8"><span class="tag">💊 Anticoagulation des prothèses valvulaires</span></div>
+
+        <div class="key-fact red" style="margin-top:10px;">🚨 <strong>La règle la plus importante de toute la section :</strong> les <strong>anticoagulants oraux directs (AOD) sont CONTRE-INDIQUÉS</strong> avec une <strong>valve mécanique</strong>. Seule la <strong>warfarine</strong> convient. Cette erreur de substitution est grave et peut être fatale — thrombose de prothèse.<br>➜ Voir <em>Warfarine</em> et <em>AOD</em></div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:12px;">
+          <div style="background:#fef2f2;border-radius:10px;padding:14px;border-left:4px solid #c0392b;">
+            <strong style="color:#c0392b;">⚙️ Valve mécanique</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Warfarine à vie</strong>, avec cible d'INR déterminée par le <strong>type de valve</strong>, sa <strong>position</strong> (mitrale plus exigeante qu'aortique) et les <strong>facteurs de risque</strong> du patient<br>⛔ <strong>Jamais d'AOD</strong><br>Aspirine parfois associée selon le contexte<br>🎯 <strong>Ne jamais interrompre sans plan de relais</strong> établi avec l'équipe traitante</div>
+          </div>
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;border-left:4px solid #15803d;">
+            <strong style="color:#15803d;">🌿 Valve biologique</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Anticoagulation <strong>temporaire</strong> en postopératoire selon la position et le protocole, puis <strong>antiplaquettaire</strong> en général<br>⚠️ Sauf autre indication d'anticoagulation — <strong>fibrillation auriculaire</strong> notamment</div>
+          </div>
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;border-left:4px solid #1d4ed8;">
+            <strong style="color:#1d4ed8;">🔪 Gestion périopératoire</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Toute chirurgie ou geste invasif chez un porteur de valve mécanique exige un <strong>plan de relais</strong> explicite — souvent une <strong>héparinothérapie de relais</strong><br>🎯 <strong>Décision partagée avec cardiologie</strong>, jamais improvisée<br>➜ Voir <em>Gestion périopératoire des anticoagulants</em></div>
+          </div>
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;border-left:4px solid #d35400;">
+            <strong style="color:#d35400;">📋 Enseignement au patient</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Régularité des <strong>INR</strong> · <strong>constance de l'apport en vitamine K</strong> (ne pas éliminer les légumes verts, les <strong>garder stables</strong>)<br><strong>Interactions</strong> nombreuses — antibiotiques, antifongiques, PSN<br><strong>Signes de saignement</strong> et conduite à tenir<br>Carte d'identification du porteur de prothèse</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block flag" style="margin-top:14px;">
+        <div class="block-title" id="cch-9"><span class="tag">🚨 Red flags</span></div>
+
+        <div class="flag-list" style="margin-top:12px;">
+          <div class="flag-item">🚨 <strong>Douleur sternale nouvelle, écoulement, instabilité sternale ou fièvre</strong> — <strong>médiastinite</strong> : orientation immédiate, souvent 1 à 3 semaines après le congé</div>
+          <div class="flag-item">🚨 <strong>Hypotension avec jugulaires distendues et bruits assourdis</strong> — tamponnade</div>
+          <div class="flag-item">🚨 <strong>Nouveau souffle, ou disparition du clic</strong> d'une valve mécanique — dysfonction ou thrombose de prothèse</div>
+          <div class="flag-item">🚨 <strong>Fièvre inexpliquée chez un porteur de prothèse valvulaire</strong> — endocardite jusqu'à preuve du contraire : hémocultures avant antibiotiques</div>
+          <div class="flag-item">🚨 <strong>AOD prescrit à un porteur de valve mécanique</strong> — erreur potentiellement fatale, à corriger sans délai</div>
+          <div class="flag-item"><strong>Angine récidivante</strong> — occlusion de greffon ou progression de la maladie native</div>
+          <div class="flag-item"><strong>Dyspnée nouvelle ou progressive</strong> — épanchement, insuffisance cardiaque, dysfonction valvulaire</div>
+          <div class="flag-item"><strong>Fièvre avec douleur péricardique et frottement, semaines après</strong> — syndrome post-péricardiotomie, à distinguer d'une infection</div>
+          <div class="flag-item"><strong>Confusion</strong> en postopératoire — délirium : chercher une cause, ne pas banaliser</div>
+          <div class="flag-item"><strong>Déficit neurologique focal</strong> — AVC</div>
+          <div class="flag-item"><strong>Palpitations ou irrégularité</strong> — FA postopératoire, avec sa question d'anticoagulation</div>
+          <div class="flag-item">⚠️ <strong>Médicaments de prévention secondaire absents du congé</strong> — vérifier systématiquement aspirine et statine</div>
+        </div>
+
+        <div class="key-fact green" style="margin-top:12px;">✅ <strong>La visite de suivi post-chirurgie cardiaque en 6 points :</strong> ① <strong>plaies</strong> — sternum et site de greffon · ② <strong>symptômes cardiaques</strong> — angine, dyspnée, palpitations · ③ <strong>médication</strong> — aspirine, statine, bêtabloquant, anticoagulation vérifiées · ④ <strong>réadaptation cardiaque</strong> — orienté? y va-t-il? · ⑤ <strong>humeur, sommeil, fatigue, sexualité</strong> · ⑥ <strong>facteurs de risque</strong> — tabac en priorité.</div>
+      </div>
+    </div>
+
     <div class="section" id="sec-stenose-aortique">
       <div class="section-header">
         <div class="section-accent" style="background:#1C3F8F">🫀</div>
@@ -28419,18 +28651,19 @@ TEV &lt; 3 mois</div>
         <div class="section-title"><h1>AVC</h1><div class="breadcrumb">Neurologie <span class="breadcrumb-sep">·</span> Section 31</div></div>
       </div>
       <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;">
-        <button onclick="goToBlock('avc-1')" style="background:#374151;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">📌 Classification</button>
-        <button onclick="goToBlock('avc-2')" style="background:#6d28d9;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">🔍 Clinique FAST</button>
-        <button onclick="goToBlock('avc-3')" style="background:#b45309;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">🧪 Paraclinique</button>
-        <button onclick="goToBlock('avc-5')" style="background:#c0392b;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">🚨 Red Flags</button>
-        <button onclick="goToBlock('avc-nihss')" style="background:#374151;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">📊 NIHSS</button>
-        <button onclick="goToBlock('avc-thrombo')" style="background:#c0392b;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">💊 Thrombolyse</button>
-        <button onclick="goToBlock('avc-aspects')" style="background:#7c3aed;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">🧠 ASPECTS</button>
-        <button onclick="goToBlock('avc-thrombect')" style="background:#b45309;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">🔬 Thrombectomie</button>
-        <button onclick="goToBlock('avc-support')" style="background:#065f46;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">🏥 Soins aigus</button>
-        <button onclick="goToBlock('avc-moyen-terme')" style="background:#4f46e5;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">🛡 Prévention 2°</button>
-        <button onclick="goToBlock('avc-traitement')" style="background:#0a7a4e;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">💊 Anticoag FA</button>
-        <button onclick="goToBlock('avc-complications')" style="background:#c0392b;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">⚠ Complications</button>
+        <button onclick="goToBlock('avc-1')" style="background:#374151;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">📌 Classification</button>
+        <button onclick="goToBlock('avc-ait')" style="background:#7c3aed;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">⚡ AIT</button>
+        <button onclick="goToBlock('avc-2')" style="background:#c0392b;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🔍 Clinique FAST</button>
+        <button onclick="goToBlock('avc-3')" style="background:#0f766e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧪 Paraclinique</button>
+        <button onclick="goToBlock('avc-nihss')" style="background:#0369a1;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">📊 NIHSS</button>
+        <button onclick="goToBlock('avc-thrombo')" style="background:#0a7a4e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">💊 Thrombolyse</button>
+        <button onclick="goToBlock('avc-aspects')" style="background:#6d28d9;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧠 ASPECTS</button>
+        <button onclick="goToBlock('avc-thrombect')" style="background:#0891b2;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🔬 Thrombectomie</button>
+        <button onclick="goToBlock('avc-support')" style="background:#b45309;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🏥 Soins aigus</button>
+        <button onclick="goToBlock('avc-traitement')" style="background:#065f46;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">💊 Anticoag FA</button>
+        <button onclick="goToBlock('avc-moyen-terme')" style="background:#92400e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🛡️ Prévention 2°</button>
+        <button onclick="goToBlock('avc-complications')" style="background:#475569;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">⚠️ Complications</button>
+        <button onclick="goToBlock('avc-5')" style="background:#dc2626;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🚨 Red flags</button>
       </div>
       <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:20px;">
         <div style="flex:1;min-width:100px;background:#FEE2E2;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:15px;font-weight:800;color:#c0392b;">4,5h</div><div style="font-size:11px;color:#555;margin-top:4px;">Fenêtre thrombolyse IV</div></div>
@@ -28447,6 +28680,52 @@ TEV &lt; 3 mois</div>
         <div class="key-fact black" style="margin-top:8px;"><strong>AIT :</strong> Symptômes identiques mais résolution &lt; 24h — précède souvent un AVC</div>
         <div class="key-fact green" style="margin-top:8px;font-size:13px;"><strong>Types ischémiques :</strong> Athrothrombotique · Cardio-embolique (FA, appendice OG) · Lacunaire (HTA → petites artères) · Cryptogénique<br><strong>Hémorragiques :</strong> HSA (rupture anévrisme → <em>coup de tonnerre</em>) · HIP (HTA + angiopathie amyloïde)</div>
       </div>
+      <div class="block clin" style="margin-top:14px;border-left-color:#7c3aed;">
+        <div class="block-title" id="avc-ait"><span class="tag">⚡ AIT — accident ischémique transitoire</span></div>
+
+        <div class="key-fact red" style="margin-top:10px;">🚨 <strong>Le message central : l'AIT est une urgence, pas un événement rassurant.</strong> Le fait que les symptômes aient disparu ne diminue en rien le risque — il l'annonce. <strong>Le risque d'AVC constitué est maximal dans les 48 premières heures</strong>, et une évaluation urgente avec amorce de la prévention secondaire réduit ce risque de façon majeure. « Ça s'est replacé tout seul » est précisément la phrase qui doit vous alarmer.</div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
+          <div style="background:#ede9fe;border-radius:10px;padding:14px;border-left:4px solid #6d28d9;">
+            <strong style="color:#6d28d9;">📖 Définition — elle a changé</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Ancienne définition (temporelle) :</strong> déficit neurologique focal d'origine ischémique régressant en <strong>moins de 24 h</strong>.<br><br>🎯 <strong>Définition actuelle (tissulaire) :</strong> épisode transitoire de dysfonction neurologique causé par une ischémie focale, <strong>SANS infarctus aigu à l'imagerie</strong>.<br>➜ Conséquence pratique : si l'IRM montre une lésion ischémique, <strong>c'est un AVC constitué</strong>, même si les symptômes ont duré 10 minutes et ont complètement régressé.<br>⚠️ La distinction AIT / AVC mineur importe moins que l'urgence de la prise en charge — elle est <strong>identique</strong> dans les deux cas.</div>
+          </div>
+          <div style="background:#fce4ec;border-radius:10px;padding:14px;border-left:4px solid #c0392b;">
+            <strong style="color:#c0392b;">🔍 Reconnaître — et ne pas confondre</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>En faveur d'un AIT :</strong> début <strong>brutal</strong>, déficit <strong>focal</strong> et <strong>négatif</strong> (perte de fonction), territoire vasculaire cohérent, durée typique de <strong>quelques minutes</strong><br><strong>Amaurose fugace</strong> — cécité monoculaire transitoire « en rideau » : AIT rétinien, territoire carotidien<br><br><strong>⚠️ Principaux imitateurs :</strong><br>• <strong>Migraine avec aura</strong> — progression lente, symptômes <strong>positifs</strong> (scintillements), céphalée<br>• <strong>Crise épileptique</strong> — symptômes positifs, phase postcritique<br>• <strong>Hypoglycémie</strong> 🎯 — <strong>toujours mesurer la glycémie</strong><br>• Syncope, vertige périphérique, trouble anxieux, hypotension</div>
+          </div>
+        </div>
+
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">📊 Score ABCD2 — utilité et limites</div>
+        <div style="overflow-x:auto;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:16%;">Lettre</th><th style="width:44%;">Critère</th><th>Points</th></tr></thead>
+          <tbody>
+            <tr style="background:#e8f4fd;"><td><strong>A</strong> — Age</td><td>≥ 60 ans</td><td>1</td></tr>
+            <tr><td><strong>B</strong> — Blood pressure</td><td>TA ≥ 140/90 mmHg à l'évaluation</td><td>1</td></tr>
+            <tr style="background:#f0fdf4;"><td><strong>C</strong> — Clinique</td><td><strong>Faiblesse unilatérale</strong><br><em>ou</em> trouble du langage sans faiblesse</td><td><strong>2</strong><br>1</td></tr>
+            <tr><td><strong>D</strong> — Durée</td><td><strong>≥ 60 minutes</strong><br><em>ou</em> 10 à 59 minutes</td><td><strong>2</strong><br>1</td></tr>
+            <tr style="background:#fff3cd;"><td><strong>D</strong> — Diabète</td><td>Diabète connu</td><td>1</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <div class="key-fact orange" style="margin-top:12px;">⚠️ <strong>Comment l'utiliser — et surtout comment ne pas l'utiliser :</strong> un score <strong>≥ 4</strong> identifie un risque élevé justifiant un bilan urgent. <strong>Mais un score bas ne rassure PAS</strong> : le score ne détecte ni une <strong>sténose carotidienne serrée</strong>, ni une <strong>fibrillation auriculaire</strong>, ni des <strong>épisodes répétés</strong> — trois situations à très haut risque avec un ABCD2 potentiellement faible.<br>🎯 <strong>La conduite moderne : évaluer TOUS les AIT en urgence</strong>, en se servant du score comme d'un argument de priorisation, jamais comme d'un feu vert pour temporiser.</div>
+
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">🧪 Bilan étiologique — à faire sans délai</div>
+        <div class="criteria-list">
+          <div class="criteria-item"><div class="criteria-num red">1</div><span><strong>Imagerie cérébrale</strong> — TDM d'emblée; <strong>IRM avec diffusion</strong> plus sensible pour distinguer AIT et infarctus constitué</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">2</div><span>🎯 <strong>Imagerie vasculaire cervicale et intracrânienne</strong> — écho-Doppler carotidien ou angio-TDM : une <strong>sténose carotidienne serrée symptomatique</strong> se revascularise <strong>rapidement</strong>, le bénéfice décroît avec le délai</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">3</div><span><strong>ECG</strong>, puis <strong>monitorage prolongé du rythme</strong> (Holter) — rechercher une <strong>fibrillation auriculaire paroxystique</strong>, qui change complètement le traitement</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">4</div><span><strong>Échographie cardiaque</strong> selon le contexte — source embolique</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">5</div><span><strong>Bilan</strong> : glycémie et HbA1c, bilan lipidique, FSC, ionogramme, créatinine, coagulation</span></div>
+          <div class="criteria-item"><div class="criteria-num red">!</div><span>Chez le <strong>sujet jeune sans facteur de risque</strong> : penser à la <strong>dissection artérielle</strong> (douleur cervicale, traumatisme même mineur), au <strong>foramen ovale perméable</strong> et au <strong>syndrome des antiphospholipides</strong> — voir <em>Connectivites</em></span></div>
+        </div>
+
+        <div class="key-fact green" style="margin-top:14px;">💊 <strong>Prévention secondaire — à amorcer immédiatement, sans attendre le bilan complet :</strong> <strong>antiplaquettaire</strong> (une bithérapie temporaire est indiquée dans certaines situations à haut risque, sur avis spécialisé), <strong>statine à haute intensité</strong>, <strong>contrôle tensionnel</strong>, <strong>cessation tabagique</strong>, <strong>traitement du diabète</strong>.<br>⚠️ <strong>Si une fibrillation auriculaire est trouvée, c'est une anticoagulation — pas un antiplaquettaire.</strong> ➜ Voir <em>Anticoag FA</em> ci-dessous et la section <em>FA</em>.</div>
+
+        <div class="key-fact blue" style="margin-top:8px;">🩺 <strong>Ce que fait l'IPS devant un AIT :</strong> <strong>ne pas rassurer et renvoyer à la maison.</strong> Mesurer la glycémie, faire un ECG, évaluer la TA, et <strong>orienter en urgence</strong> — clinique d'AIT rapide ou urgence selon les ressources locales et le délai depuis l'épisode. Amorcer la prévention secondaire si l'orientation immédiate n'est pas possible. Documenter précisément <strong>l'heure de début, la durée et la nature du déficit</strong> : ces informations décident de la suite.</div>
+      </div>
+
       <div class="block clin" style="margin-top:14px;">
         <div class="block-title" id="avc-2"><span class="tag">🔍 Clinique — FAST + Territoires</span></div>
         <div class="key-fact blue"><strong>FAST :</strong> Faiblesse visage · Arm (bras) · Speech (parole) · Time → appeler 911</div>
@@ -28477,8 +28756,8 @@ TEV &lt; 3 mois</div>
       </div>
       <div class="block flag" style="margin-top:14px;">
         
-  <div class="block rx" id="avc-nihss">
-    <div class="block-title"><span class="tag">📊 NIHSS — National Institutes of Health Stroke Scale</span></div>
+  <div class="block rx">
+    <div class="block-title" id="avc-nihss"><span class="tag">📊 NIHSS — National Institutes of Health Stroke Scale</span></div>
     <div class="content-text">Score de sévérité neurologique — évalué à l'admission, 24h, 7 jours et à la sortie.</div>
     <table>
       <thead><tr><th>Score</th><th>Sévérité</th></tr></thead>
@@ -28493,8 +28772,8 @@ TEV &lt; 3 mois</div>
     <div class="key-fact green" style="margin-top:8px;font-size:13px;"><strong>Domaines évalués (11 items) :</strong> Vigilance · Regard · Champ visuel · Paralysie faciale · Motricité des 4 membres · Ataxie · Sensibilité · Langage · Dysarthrie · Extinction/inattention</div>
   </div>
 
-  <div class="block rx" id="avc-thrombo">
-    <div class="block-title"><span class="tag">💊 Thrombolyse IV (Alteplase / tPA)</span></div>
+  <div class="block rx">
+    <div class="block-title" id="avc-thrombo"><span class="tag">💊 Thrombolyse IV (Alteplase / tPA)</span></div>
     <table>
       <thead><tr><th>Critère</th><th>Détail</th></tr></thead>
       <tbody>
@@ -28506,8 +28785,8 @@ TEV &lt; 3 mois</div>
     <div class="key-fact red" style="margin-top:8px;font-size:13px;"><strong>CI absolues :</strong> Hémorragie intracrânienne sur imagerie · Chirurgie majeure &lt; 14j · HTA &gt; 185/110 non contrôlée · Anticoag thérapeutique · TCA ↑ · Thrombocytopénie &lt; 100k · Glycémie &lt; 2,7 ou &gt; 22,2<br><strong>⚠ Ne pas retarder pour bilan étendu — TIME IS BRAIN</strong></div>
   </div>
 
-  <div class="block def" id="avc-aspects" style="margin-top:14px;">
-    <div class="block-title"><span class="tag">🧠 Score ASPECTS</span></div>
+  <div class="block def" style="margin-top:14px;">
+    <div class="block-title" id="avc-aspects"><span class="tag">🧠 Score ASPECTS</span></div>
     <div class="content-text"><strong>Alberta Stroke Program Early CT Score</strong> — évalue l'étendue des changements ischémiques précoces au TDM (territoire ACM).</div>
     <table>
       <thead><tr><th>Score</th><th>Interprétation</th></tr></thead>
@@ -28521,8 +28800,8 @@ TEV &lt; 3 mois</div>
     <div class="key-fact green" style="font-size:13px;margin-top:8px;">10 régions évaluées (noyaux caudé, lenticulaire, capsule interne, ruban insulaire, cortex M1–M6). 1 point retiré par région atteinte.</div>
   </div>
 
-  <div class="block rx" id="avc-thrombect">
-    <div class="block-title"><span class="tag">🔬 Thrombectomie mécanique</span></div>
+  <div class="block rx">
+    <div class="block-title" id="avc-thrombect"><span class="tag">🔬 Thrombectomie mécanique</span></div>
     <table>
       <thead><tr><th>Critère</th><th>Détail</th></tr></thead>
       <tbody>
@@ -28536,8 +28815,8 @@ TEV &lt; 3 mois</div>
     <div class="key-fact green" style="margin-top:8px;font-size:13px;"><strong>Combinaison optimale :</strong> Thrombolyse IV (si éligible) + thrombectomie = meilleure recanalisation</div>
   </div>
 
-  <div class="block def" id="avc-support" style="margin-top:14px;">
-    <div class="block-title"><span class="tag">🏥 Soins aigus — Support général</span></div>
+  <div class="block def" style="margin-top:14px;">
+    <div class="block-title" id="avc-support"><span class="tag">🏥 Soins aigus — Support général</span></div>
     <table>
       <thead><tr><th>Paramètre</th><th>Cible</th></tr></thead>
       <tbody>
@@ -28552,8 +28831,8 @@ TEV &lt; 3 mois</div>
     </table>
   </div>
 
-  <div class="block rx" id="avc-traitement" style="margin-top:14px;">
-    <div class="block-title"><span class="tag">💊 Traitement — Phase aig&uuml;e &amp; Moyen-long terme</span></div>
+  <div class="block rx" style="margin-top:14px;">
+    <div class="block-title" id="avc-traitement"><span class="tag">💊 Traitement — Phase aig&uuml;e &amp; Moyen-long terme</span></div>
 
     <div style="display:flex;gap:6px;flex-wrap:wrap;margin:10px 0 12px;">
       <button onclick="showPanel('avctx','avctx0',2)" data-panel="avctx0" style="background:#dc2626;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">🚨 Phase aig&uuml;e</button>
@@ -28656,8 +28935,8 @@ TEV &lt; 3 mois</div>
 
 
 
-  <div class="block def" id="avc-moyen-terme" style="margin-top:14px;">
-    <div class="block-title"><span class="tag">📋 Suivi à moyen-long terme</span></div>
+  <div class="block def" style="margin-top:14px;">
+    <div class="block-title" id="avc-moyen-terme"><span class="tag">📋 Suivi à moyen-long terme</span></div>
     <table>
       <thead><tr><th>Paramètre</th><th>Cible / Conduite</th></tr></thead>
       <tbody>
@@ -28669,8 +28948,8 @@ TEV &lt; 3 mois</div>
     </table>
   </div>
 
-  <div class="block def" id="avc-complications" style="margin-top:14px;">
-    <div class="block-title"><span class="tag">⚠ Complications &amp; Prise en charge</span></div>
+  <div class="block def" style="margin-top:14px;">
+    <div class="block-title" id="avc-complications"><span class="tag">⚠ Complications &amp; Prise en charge</span></div>
     <table>
       <thead><tr><th>Complication</th><th>Traitement</th></tr></thead>
       <tbody>
@@ -35767,7 +36046,10 @@ function switchEpiTx(n) {
     <button onclick="goToBlock('mii-3')" style="background:#b45309;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">📊 Tableau comparatif</button>
     <button onclick="goToBlock('mii-bilan')" style="background:#7c3aed;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">📋 Bilan pré-biologique</button>
     <button onclick="goToBlock('mii-4')" style="background:#7c3aed;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">💊 Pyramide Rx</button>
-    <button onclick="goToBlock('mii-6')" style="background:#065f46;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">🩺 Suivi IPS</button>
+    <button onclick="goToBlock('mii-mei')" style="background:#7c3aed;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🌐 Manif. extra-intestinales</button>
+        <button onclick="goToBlock('mii-sev')" style="background:#c0392b;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🌡️ Sévérité d'une poussée</button>
+        <button onclick="goToBlock('mii-surv')" style="background:#0891b2;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🔭 Surveillance long terme</button>
+        <button onclick="goToBlock('mii-6')" style="background:#065f46;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">🩺 Suivi IPS</button>
   </div>
   <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:20px;">
     <div style="flex:1;min-width:100px;background:#F3E8FF;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#7c3aed;">Crohn</div><div style="font-size:11px;color:#555;margin-top:4px;">Tout TD · Transmurale · Discontinue</div></div>
@@ -36047,7 +36329,84 @@ function switchEpiTx(n) {
     <div class="key-fact orange" style="margin-top:14px;"><strong>Grossesse &amp; MII :</strong> MTX cesser ≥6 sem avant conception (homme ET femme) · Anti-TNF/vedolizumab : cesser idéalement au 3e trimestre · Allaitement : AZA/6-MP faibles concentrations (données rassurantes) · MTX CI allaitement.</div>
   </div>
 
-  <div class="block clin" style="margin-top:14px;">
+  <div class="block clin" style="margin-top:14px;border-left-color:#7c3aed;">
+        <div class="block-title" id="mii-mei"><span class="tag">🌐 Manifestations extra-intestinales</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>Une MII n'est pas une maladie de l'intestin seulement.</strong> Les manifestations extra-intestinales sont fréquentes, parfois <strong>révélatrices — elles peuvent précéder les symptômes digestifs de plusieurs années</strong> — et certaines évoluent <strong>indépendamment</strong> de l'activité intestinale. C'est souvent en première ligne qu'on les voit en premier.</div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:18%;">Système</th><th style="width:34%;">Manifestation</th><th>Lien avec l'activité digestive</th></tr></thead>
+          <tbody>
+            <tr style="background:#ede9fe;"><td><strong>Articulaire</strong><br><em>le plus fréquent</em></td><td><strong>Arthrite périphérique</strong> — souvent asymétrique, grosses articulations<br><strong>Spondylarthrite axiale</strong> · sacro-iliite<br><strong>Enthésite</strong>, dactylite</td><td>Périphérique : <strong>suit</strong> souvent l'activité intestinale<br>🎯 <strong>Axiale : évolue INDÉPENDAMMENT</strong> — traiter la MII ne règle pas le dos<br>➜ Voir <em>Spondylarthrites</em></td></tr>
+            <tr><td><strong>Cutané</strong></td><td><strong>Érythème noueux</strong> — nodules douloureux des jambes<br><strong>Pyoderma gangrenosum</strong> — ulcère à bords violacés, souvent après un traumatisme minime</td><td>Érythème noueux : <strong>parallèle</strong> à l'activité<br>Pyoderma : <strong>indépendant</strong> · ⚠️ ne pas débrider — cela aggrave</td></tr>
+            <tr style="background:#e8f4fd;"><td><strong>Oculaire</strong></td><td>🚨 <strong>Uvéite</strong> — œil rouge douloureux, photophobie<br>Épisclérite</td><td>Uvéite : indépendante · <strong>urgence ophtalmologique</strong><br>Épisclérite : parallèle à l'activité</td></tr>
+            <tr><td><strong>Hépatobiliaire</strong></td><td>🚨 <strong>Cholangite sclérosante primitive</strong> — surtout associée à la <strong>colite ulcéreuse</strong></td><td>🎯 <strong>Indépendante</strong> de l'activité intestinale · ↑ risque de <strong>cholangiocarcinome</strong> et de <strong>cancer colorectal</strong> — surveillance renforcée<br>➜ Voir <em>Cholangite</em></td></tr>
+            <tr style="background:#f0fdf4;"><td><strong>Osseux</strong></td><td><strong>Ostéopénie et ostéoporose</strong></td><td>Multifactoriel : <strong>inflammation, corticostéroïdes, malabsorption, carence en vitamine D</strong><br>➜ Voir <em>Chutes &amp; mobilité</em></td></tr>
+            <tr><td><strong>Vasculaire</strong></td><td>🚨 <strong>Risque thromboembolique augmenté</strong>, surtout en poussée</td><td>Y penser devant une dyspnée ou un œdème de membre<br>➜ Voir <em>TVP</em>, <em>Embolie pulmonaire</em></td></tr>
+            <tr style="background:#f1f5f9;"><td><strong>Hématologique</strong></td><td><strong>Anémie</strong> — carence martiale, inflammation, carence en <strong>B12</strong> (résection ou atteinte iléale)</td><td>Très fréquente et sous-traitée<br>➜ Voir <em>FSC &amp; anémie</em></td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">🔎 <strong>Le réflexe inverse, tout aussi utile :</strong> devant une <strong>spondylarthrite, une uvéite récidivante ou un pyoderma gangrenosum</strong>, chercher des symptômes digestifs — diarrhée chronique, sang dans les selles, douleur abdominale, perte de poids. <strong>L'atteinte articulaire peut précéder la MII de plusieurs années.</strong></div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;border-left-color:#c0392b;">
+        <div class="block-title" id="mii-sev"><span class="tag">🌡️ Évaluer la sévérité d'une poussée</span></div>
+
+        <div class="key-fact red" style="margin-top:10px;">🚨 <strong>Pourquoi ce bloc compte :</strong> une poussée sévère de colite ulcéreuse est une <strong>urgence médicale</strong>, pas un ajustement de traitement à faire en externe. Le risque de <strong>mégacôlon toxique</strong> et de perforation impose une hospitalisation.</div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
+          <div style="background:#fef2f2;border-radius:10px;padding:14px;border-left:4px solid #c0392b;">
+            <strong style="color:#c0392b;">🚨 Poussée sévère — critères d'alerte</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>≥ 6 selles sanglantes par jour</strong><br><strong>Fièvre</strong><br><strong>Tachycardie</strong><br><strong>Anémie</strong> significative<br><strong>VS ou CRP élevées</strong><br>➜ Ces critères, dérivés des travaux classiques sur la colite ulcéreuse, définissent la <strong>poussée sévère nécessitant une hospitalisation</strong><br>🚨 <strong>Distension abdominale, douleur intense, arrêt des selles, altération de l'état général</strong> → suspecter un <strong>mégacôlon toxique</strong> : urgence chirurgicale potentielle</div>
+          </div>
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;border-left:4px solid #1d4ed8;">
+            <strong style="color:#1d4ed8;">🧪 Outils de suivi de l'activité</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Calprotectine fécale</strong> 🎯 — marqueur d'inflammation <strong>intestinale</strong>; utile pour distinguer une poussée d'un <strong>syndrome de l'intestin irritable surajouté</strong>, fréquent en MII quiescente<br><strong>CRP</strong> — peu sensible dans la CU distale<br><strong>FSC, ferritine, albumine</strong><br><strong>Coprocultures et recherche de <em>C. difficile</em></strong> 🚨 — <strong>toujours</strong> devant une poussée : l'infection <strong>mime et aggrave</strong> la poussée<br>➜ Voir <em>C. difficile</em><br><strong>Endoscopie</strong> — référence pour l'activité muqueuse</div>
+          </div>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">🎯 <strong>Le piège le plus fréquent en première ligne :</strong> attribuer d'emblée des symptômes à une poussée. Avant d'escalader le traitement immunosuppresseur, <strong>écarter une infection</strong> — <em>C. difficile</em> en tête —, un <strong>abcès</strong> (Crohn), une <strong>sténose</strong>, ou un <strong>SII surajouté</strong>. Ces quatre situations se traitent différemment, et l'immunosuppression aggrave la première.</div>
+      </div>
+
+      <div class="block rx" style="margin-top:14px;border-left-color:#0891b2;">
+        <div class="block-title" id="mii-surv"><span class="tag">🔭 Surveillance à long terme</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>C'est le volet qui vous revient le plus.</strong> Le gastroentérologue règle le traitement de fond; la <strong>surveillance du cancer, de l'os, des carences, des vaccins et de la grossesse</strong> se joue en première ligne — et c'est là que les oublis coûtent cher.</div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:12px;">
+          <div style="background:#fce4ec;border-radius:10px;padding:14px;">
+            <strong style="color:#c0392b;">🎗️ Cancer colorectal</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🎯 <strong>La colite ulcéreuse ET la maladie de Crohn colique augmentent le risque de cancer colorectal.</strong> <span style="font-size:11px;color:#64748b;">📚 <em>Goldman-Cecil, ch. 132</em></span><br><br>Facteurs qui majorent le risque : <strong>durée</strong> de la maladie, <strong>étendue</strong> de l'atteinte colique, <strong>inflammation persistante</strong>, <strong>cholangite sclérosante primitive</strong> 🚨, antécédent familial de CCR<br><br>➜ <strong>Coloscopies de surveillance avec biopsies</strong> selon un calendrier déterminé par le gastroentérologue — <strong>différent du dépistage populationnel</strong><br>⚠️ <strong>Ne pas se fier au dépistage habituel par RSOSi</strong> chez ces patients<br>➜ Voir <em>Cancer colorectal</em></div>
+          </div>
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+            <strong style="color:#1d4ed8;">🦴 Santé osseuse</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Risque augmenté par <strong>inflammation chronique, corticostéroïdes répétés, malabsorption, carence en vitamine D, tabagisme</strong><br>➜ <strong>Calcium et vitamine D</strong> · <strong>ostéodensitométrie</strong> selon le risque · exercice en charge<br>➜ Limiter les cures répétées de corticostéroïdes — c'est un signal que le traitement de fond est insuffisant</div>
+          </div>
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+            <strong style="color:#15803d;">🥗 Carences nutritionnelles</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Fer</strong> — anémie très fréquente, doser la <strong>ferritine</strong> et pas seulement l'hémoglobine<br><strong>Vitamine B12</strong> 🎯 — atteinte ou <strong>résection iléale</strong> terminale<br><strong>Folates</strong> — surtout sous <strong>méthotrexate</strong> ou sulfasalazine<br><strong>Vitamine D</strong>, calcium, zinc<br>Dénutrition et perte de poids en poussée</div>
+          </div>
+          <div style="background:#ede9fe;border-radius:10px;padding:14px;">
+            <strong style="color:#6d28d9;">💉 Vaccination &amp; infections</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🎯 <strong>Mettre à jour AVANT l'immunosuppression</strong><br>Influenza annuel · pneumocoque · <strong>hépatite B</strong> · zona · VPH selon l'âge<br>⛔ <strong>Vaccins vivants contre-indiqués</strong> sous biothérapie ou immunosuppresseur<br>🚨 <strong>Dépistage tuberculose et hépatites avant biothérapie</strong> — ➜ voir <em>Tuberculose</em><br>Seuil bas d'évaluation devant toute fièvre</div>
+          </div>
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;">
+            <strong style="color:#d35400;">🤰 Grossesse</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🎯 <strong>Le meilleur prédicteur d'une grossesse sans complication est une maladie en RÉMISSION à la conception</strong> — planifier plutôt qu'improviser<br>⛔ <strong>Méthotrexate contre-indiqué</strong> — arrêt anticipé, contraception requise<br>Plusieurs traitements de fond sont compatibles — <strong>ne pas les cesser sans avis</strong> : une poussée est plus dangereuse que le médicament<br>Supplémentation en <strong>folates</strong><br>➜ Voir <em>Contraception</em></div>
+          </div>
+          <div style="background:#f1f5f9;border-radius:10px;padding:14px;">
+            <strong style="color:#334155;">🚭 Tabac — l'effet paradoxal</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🎯 <strong>Maladie de Crohn</strong> : le tabac <strong>aggrave</strong> nettement — plus de poussées, plus de chirurgies, plus de récidives postopératoires. <strong>La cessation fait partie du traitement.</strong><br><strong>Colite ulcéreuse</strong> : association inverse décrite — mais <strong>cela ne justifie jamais de fumer</strong>, vu les risques par ailleurs.</div>
+          </div>
+        </div>
+
+        <div class="key-fact green" style="margin-top:12px;">✅ <strong>La visite de suivi MII en 6 points :</strong> ① <strong>activité</strong> — selles, sang, douleur, poids, calprotectine · ② <strong>manifestations extra-intestinales</strong> — articulations, yeux, peau · ③ <strong>traitement</strong> — observance, tolérance, bilans de surveillance · ④ <strong>carences</strong> — fer, B12, vitamine D · ⑤ <strong>prévention</strong> — vaccins, os, coloscopie de surveillance · ⑥ <strong>tabac, humeur et projet de grossesse</strong>.</div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;">
     <div class="block-title" id="mii-6"><span class="tag">🩺 Suivi IPS — MII</span></div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;margin-top:10px;">
       <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
@@ -51433,6 +51792,7 @@ const SEARCH_INDEX = [
   { id:'arythmies',           title:'Flutter & Arythmies',            specialty:'Cardiologie',    keywords:['flutter','arythmie','tachycardie','bradycardie'] },
   { id:'ic',                  title:'Insuffisance Cardiaque',         specialty:'Cardiologie',    keywords:['ic','insuffisance cardiaque','hfref','hfpef','bnp','sacubitril','entresto'] },
   { id:'stenose-aortique',    title:'Sténose Aortique',               specialty:'Cardiologie',    keywords:['sténose aortique','sa','rva','tavi'] },
+  { id:'chirurgie-cardiaque',title:'Chirurgie Cardiaque',           specialty:'Cardiologie',     keywords:['chirurgie cardiaque','pontage','pac','pontage aortocoronarien','cabg','mammaire interne','saphène','radiale','icp','angioplastie','syntax','tronc commun','valve','prothèse','mécanique','biologique','tavi','plastie mitrale','sternotomie','cec','circulation extracorporelle','cardioplégie','fa postopératoire','médiastinite','tamponnade','post-péricardiotomie','réadaptation cardiaque','warfarine','inr','endocardite','précautions sternales','greffon'] },
   { id:'pericardite',         title:'Péricardite & Myocardite',       specialty:'Cardiologie',    keywords:['péricardite','myocardite','colchicine'] },
   { id:'map',                 title:'MAP — Maladie Artérielle Périphérique',specialty:'Cardiologie',keywords:['map','artérielle','abi','claudication'] },
   { id:'ira',                 title:'IRA — Insuffisance Rénale Aiguë',specialty:'Néphrologie',    keywords:['ira','insuffisance rénale aiguë','créatinine','oligurie'] },
@@ -51805,7 +52165,7 @@ document.addEventListener('click', e => {
 const SECTION_ORDER = [
   'home','calculateurs',
   // Cardiologie
-  'hta','athero','dyslipidémie','mcas','sca','fa','arythmies','ic','stenose-aortique','pericardite','map',
+  'hta','athero','dyslipidémie','mcas','sca','fa','arythmies','ic','chirurgie-cardiaque','stenose-aortique','pericardite','map',
   // Néphrologie
   'anevrisme','rein-anatomie','ira','irc','proteinurie','nephritique','nephrotique','biopsie-renale','diuretiques','acidose',
   // Endocrinologie
@@ -51855,6 +52215,7 @@ const SECTION_ORDER = [
 
 // Section titles for display in nav buttons
 const SECTION_TITLES = {
+  'chirurgie-cardiaque':'Chirurgie Cardiaque',
   'vieillissement':'Le Vieillissement',
   'tuberculose':'Tuberculose',
   'imagerie-thorax':'Imagerie du Thorax',
