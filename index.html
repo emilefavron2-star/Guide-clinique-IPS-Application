@@ -1266,6 +1266,7 @@ m
         <div class="nav-item" onclick="showSection('ddx-abdo')">Douleur abdominale — Approche &amp; DDx</div>
         <div class="nav-item" onclick="showSection('appendicite')">Appendicite</div>
         <div class="nav-item" onclick="showSection('mii')">MII — Crohn &amp; Colite ulcéreuse</div>
+        <div class="nav-item" onclick="showSection('nutrition')">Nutrition &amp; dénutrition</div>
         <div class="nav-item" onclick="showSection('diverticulite')">Diverticulite aiguë</div>
         <div class="nav-item" onclick="showSection('ccr')">Cancer Colorectal</div>
         <div class="nav-item" onclick="showSection('ugd')">UGD</div>
@@ -1478,7 +1479,7 @@ m
           <div class="home-card-icon" style="background:#f0fdf4;color:#065f46">🫃</div>
           <div class="home-card-body">
             <div class="home-card-name">Gastro-entérologie</div>
-            <div class="home-card-count">10 sections</div>
+            <div class="home-card-count">11 sections</div>
           </div>
         </div>
         <div class="home-card" onclick="showSection('anatomie-foie'); openGroup('grp-hepato')">
@@ -36822,7 +36823,304 @@ function switchEpiTx(n) {
   </div>
 </div>
 
-<div class="section" id="sec-diverticulite">
+<div class="section" id="sec-nutrition">
+      <div class="section-header">
+        <div class="section-accent" style="background:#65a30d">🍽️</div>
+        <div class="section-title"><h1>Nutrition &amp; dénutrition</h1><div class="breadcrumb">Gastro-entérologie <span class="breadcrumb-sep">·</span> Dépistage · Évaluation <span class="breadcrumb-sep">·</span> Support nutritionnel <span class="breadcrumb-sep">·</span> Renutrition</div></div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;">
+        <button onclick="goToBlock('nut-1')" style="background:#374151;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">📌 Reconnaître la dénutrition</button>
+        <button onclick="goToBlock('nut-2')" style="background:#0369a1;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🔎 Dépistage — CNST</button>
+        <button onclick="goToBlock('nut-3')" style="background:#b91c1c;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧪 Évaluation — le piège de l'albumine</button>
+        <button onclick="goToBlock('nut-4')" style="background:#b45309;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🔢 Besoins énergétiques</button>
+        <button onclick="goToBlock('nut-5')" style="background:#0f766e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🪜 Support nutritionnel</button>
+        <button onclick="goToBlock('nut-6')" style="background:#991b1b;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">⚡ Syndrome de renutrition</button>
+        <button onclick="goToBlock('nut-7')" style="background:#6d28d9;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧬 Carences &amp; malabsorption</button>
+        <button onclick="goToBlock('nut-8')" style="background:#c0392b;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🚨 Red flags</button>
+      </div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:20px;">
+        <div style="flex:1;min-width:95px;background:#FEE2E2;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#b91c1c;">40 %</div><div style="font-size:11px;color:#555;margin-top:4px;">Des patients hospitalisés</div></div>
+        <div style="flex:1;min-width:95px;background:#DCFCE7;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#15803d;">2 questions</div><div style="font-size:11px;color:#555;margin-top:4px;">CNST — dépistage complet</div></div>
+        <div style="flex:1;min-width:95px;background:#FEF3C7;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#b45309;">20–25</div><div style="font-size:11px;color:#555;margin-top:4px;">kcal/kg/jour</div></div>
+        <div style="flex:1;min-width:95px;background:#EEF2FF;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#1C3F8F;">↓ PO₄</div><div style="font-size:11px;color:#555;margin-top:4px;">Signature de la renutrition</div></div>
+      </div>
+
+      <div class="block def" style="margin-top:14px;">
+        <div class="block-title" id="nut-1"><span class="tag">📌 Reconnaître la dénutrition</span></div>
+
+        <div class="key-fact red" style="margin-top:10px;">🎯 <strong>Le chiffre qui devrait changer la pratique :</strong> jusqu'à <strong>40 % des personnes hospitalisées</strong> présentent une <strong>dénutrition protéino-énergétique</strong> — perte de masse musculaire squelettique et de masse grasse, liée à une maladie aiguë ou chronique. C'est un diagnostic <strong>fréquent et pourtant régulièrement omis</strong>, parce qu'on ne le cherche pas. <span style="font-size:11px;color:#64748b;">📚 <em>Goldman-Cecil, 26<sup>e</sup> éd., ch. 204</em></span></div>
+
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">⚖️ Quand la suspecter — les trois seuils</div>
+        <div class="criteria-list">
+          <div class="criteria-item"><div class="criteria-num red">1</div><span>🎯 <strong>Perte de poids involontaire de 5 à 10 % ou plus</strong> du poids habituel, sur quelques semaines à quelques mois</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">2</div><span><strong>Poids inférieur à 90 % du poids idéal</strong></span></div>
+          <div class="criteria-item"><div class="criteria-num blue">3</div><span><strong>IMC inférieur à 18,5 kg/m²</strong></span></div>
+          <div class="criteria-item"><div class="criteria-num blue">+</div><span><strong>Circonférence brachiale</strong> — inférieure à <strong>24 cm chez l'homme</strong> ou <strong>19 cm chez la femme</strong> évoque une dénutrition <span style="font-size:11px;color:#64748b;">📚 <em>Goldman, ch. 204</em></span></span></div>
+        </div>
+
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">🔬 Pourquoi la maladie dénutrit — les trois mécanismes qui s'additionnent</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;">
+          <div style="background:#fce4ec;border-radius:10px;padding:14px;">
+            <strong style="color:#c0392b;">📉 Apports diminués</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Anorexie liée à la maladie · nausées · douleur · <strong>jeûnes répétés pour examens</strong> · dysphagie · dépression<br>⚠️ <strong>Hydratation IV prolongée au dextrose 5 % sans support nutritionnel</strong> — piège classique : la personne reçoit des liquides, pas des nutriments</div>
+          </div>
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;">
+            <strong style="color:#d35400;">💧 Pertes augmentées</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Diarrhée · vomissements · <strong>drainage de plaies</strong> · fistules · dialyse · polyurie<br>Médicaments : <strong>corticostéroïdes, chimiothérapie, diurétiques, antirejet</strong> — catabolisme musculaire, lésion digestive, pertes d'électrolytes et de vitamines hydrosolubles</div>
+          </div>
+          <div style="background:#ede9fe;border-radius:10px;padding:14px;">
+            <strong style="color:#6d28d9;">🔥 Besoins augmentés</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">L'inflammation élève les hormones cataboliques — <strong>cortisol, catécholamines, glucagon</strong> — et libère des cytokines (IL-1, IL-6, IL-8, TNF-α)<br>🎯 Il en résulte une <strong>résistance périphérique à l'insuline et à l'IGF-I</strong> : les hormones anaboliques ne fonctionnent plus<br>➜ <strong>On ne peut pas nourrir contre une inflammation active</strong> — il faut aussi traiter la cause</div>
+          </div>
+          <div style="background:#f1f5f9;border-radius:10px;padding:14px;">
+            <strong style="color:#334155;">🛏️ Immobilité</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Alitement, mobilité réduite, curarisation sous ventilation → <strong>fonte musculaire par synthèse protéique altérée</strong><br>➜ La nutrition seule ne suffit pas : <strong>la mobilisation fait partie du traitement</strong><br>➜ Voir <em>Le Vieillissement</em>, <em>Évaluation gériatrique</em></div>
+          </div>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">⚠️ <strong>Les conséquences ne sont pas cosmétiques :</strong> l'érosion de la masse maigre s'accompagne de <strong>faiblesse et fatigue</strong>, d'un <strong>taux d'infections plus élevé</strong>, d'une <strong>cicatrisation altérée</strong> et d'une <strong>convalescence retardée</strong>. Chez une personne hospitalisée, la dénutrition allonge le séjour et aggrave le pronostic de la maladie qui l'a amenée. <span style="font-size:11px;color:#64748b;">📚 <em>Goldman, ch. 204</em></span></div>
+      </div>
+
+      <div class="block para" style="margin-top:14px;border-left-color:#0369a1;">
+        <div class="block-title" id="nut-2"><span class="tag">🔎 Dépistage — l'outil canadien tient en deux questions</span></div>
+
+        <div class="key-fact green" style="margin-top:10px;">🍁 <strong>Le <em>Canadian Nutrition Screening Tool</em> (CNST)</strong>, développé par le <strong>Canadian Malnutrition Task Force</strong> (2014), est l'outil de dépistage validé en soins aigus au Canada. Il est <strong>court, fiable, prend environ deux minutes</strong> — et surtout, il <strong>n'a pas à être administré par une nutritionniste</strong> : n'importe quel membre de l'équipe peut le faire.</div>
+
+        <div style="background:#0f172a;border-radius:10px;padding:16px;margin-top:12px;">
+          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#94a3b8;margin-bottom:10px;">Le CNST au complet</div>
+          <div style="background:#1e293b;border-radius:8px;padding:14px;margin-bottom:10px;">
+            <div style="color:#93c5fd;font-size:12px;font-weight:700;margin-bottom:6px;">QUESTION 1</div>
+            <div style="color:#f1f5f9;font-size:14px;line-height:1.6;">« Avez-vous <strong>perdu du poids au cours des 6 derniers mois</strong>, sans avoir essayé d'en perdre? »</div>
+          </div>
+          <div style="background:#1e293b;border-radius:8px;padding:14px;margin-bottom:10px;">
+            <div style="color:#93c5fd;font-size:12px;font-weight:700;margin-bottom:6px;">QUESTION 2</div>
+            <div style="color:#f1f5f9;font-size:14px;line-height:1.6;">« Avez-vous <strong>mangé moins que d'habitude pendant plus d'une semaine</strong>? »</div>
+          </div>
+          <div style="background:#7f1d1d;border-radius:8px;padding:12px 14px;">
+            <div style="color:#fecaca;font-size:13px;line-height:1.6;">🎯 <strong>DEUX « OUI » = risque nutritionnel</strong> → la personne requiert une <strong>évaluation nutritionnelle formelle</strong> pour poser le diagnostic de dénutrition.</div>
+          </div>
+        </div>
+
+        <div class="key-fact blue" style="margin-top:12px;">👵 <strong>En ambulatoire et chez la personne âgée</strong>, le <strong>Mini Nutritional Assessment (MNA)</strong> repère les personnes qui nécessitent une évaluation formelle par une nutritionniste. <span style="font-size:11px;color:#64748b;">📚 <em>Goldman, ch. 204</em></span> ➜ Voir <em>Évaluation gériatrique globale</em>, où la dénutrition fait partie des syndromes gériatriques à dépister.</div>
+
+        <div class="key-fact orange" style="margin-top:8px;">💡 <strong>Le message pratique :</strong> le dépistage ne coûte presque rien — deux questions — alors que la dénutrition non repérée coûte cher. <strong>Un dépistage positif n'est pas un diagnostic</strong> : il déclenche l'évaluation et, le plus souvent, une <strong>consultation en nutrition</strong>.</div>
+      </div>
+
+      <div class="block para" style="margin-top:14px;border-left-color:#b91c1c;">
+        <div class="block-title" id="nut-3"><span class="tag">🧪 Évaluation — et le piège de l'albumine</span></div>
+
+        <div class="key-fact red" style="margin-top:10px;">🚨 <strong>À corriger si vous l'avez appris autrement : l'albumine n'est PAS un marqueur de l'état nutritionnel.</strong> Chez la personne hospitalisée, et particulièrement aux soins intensifs, l'albumine, la préalbumine et la transferrine sont <strong>basses de façon quasi systématique</strong> et <strong>manquent totalement de spécificité</strong>. Leurs concentrations dépendent de facteurs non nutritionnels : <strong>inflammation, infection, statut volémique, fuite capillaire, fonction hépatique, clairance protéique anormale</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Goldman-Cecil, 26<sup>e</sup> éd., ch. 204</em></span></div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
+          <div style="background:#fef2f2;border-radius:10px;padding:14px;border-left:4px solid #c0392b;">
+            <strong style="color:#c0392b;">❌ Ce que l'albumine ne peut pas faire</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Sa <strong>demi-vie est de 18 à 21 jours</strong> : elle reste basse <strong>malgré une alimentation adéquate</strong> et met des semaines à répondre à une renutrition.<br><br>➜ Une albumine basse chez une personne malade signale surtout de l'<strong>inflammation</strong>, pas nécessairement une dénutrition.<br>➜ Une albumine qui remonte ne prouve pas que la nutrition fonctionne.<br><br>🚨 <strong>Ne jamais fonder une décision nutritionnelle sur l'albumine seule.</strong></div>
+          </div>
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;border-left:4px solid #15803d;">
+            <strong style="color:#15803d;">✅ Ce qui est utile</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>L'histoire du poids</strong> — ampleur et rapidité de la perte 🎯<br><strong>Le patron d'alimentation</strong> et les apports réels<br><strong>L'examen physique</strong> — fonte musculaire (temporale, deltoïde, interosseux), perte de tissu adipeux, œdème<br><strong>Micronutriments ciblés</strong> — cuivre, thiamine, 25-OH-vitamine D, B6, folate, B12<br><strong>Électrolytes</strong> — magnésium, potassium, <strong>phosphore</strong><br><br>💡 La <strong>préalbumine</strong>, dont la demi-vie n'est que de quelques jours, peut servir d'indicateur <em>grossier</em> — <strong>uniquement en ambulatoire, chez une personne cliniquement stable</strong>.</div>
+          </div>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">⚖️ <strong>Quel poids utiliser?</strong> Aux soins intensifs, le poids mesuré reflète surtout les <strong>liquides administrés</strong> et dépasse largement le poids réel. Le meilleur paramètre est le <strong>poids « sec » le plus récent</strong>, ou le <strong>poids préopératoire</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Goldman, ch. 204</em></span></div>
+
+        <div class="key-fact blue" style="margin-top:8px;">🧩 <strong>Pourquoi il n'existe pas de test unique :</strong> Goldman-Cecil est explicite — <strong>aucun test simple et pratique ne mesure l'état nutritionnel protéino-énergétique global</strong>. L'évaluation reste une <strong>intégration</strong> : antécédents, sévérité de la maladie, pertes liquidiennes, examen physique, histoire pondérale, apports, fonction des organes, et dosages ciblés. C'est un raisonnement clinique, pas un chiffre.</div>
+      </div>
+
+      <div class="block rx" style="margin-top:14px;border-left-color:#b45309;">
+        <div class="block-title" id="nut-4"><span class="tag">🔢 Estimer les besoins</span></div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:12px;">
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;">
+            <strong style="color:#d35400;">⚡ Énergie — la méthode simple</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🎯 <strong>20 à 25 kcal/kg/jour</strong>, à partir du poids réel « sec »<br><em>Méthode simple et relativement exacte</em> <span style="font-size:11px;color:#64748b;">📚 <em>Goldman, ch. 204</em></span></div>
+          </div>
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+            <strong style="color:#1d4ed8;">🧮 Harris-Benedict</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Estime la <strong>dépense énergétique de base</strong> (DEB) selon l'âge, le sexe, le poids et la taille.<br><br><strong>Homme :</strong> 66 + (13,7 × poids kg) + (5,0 × taille cm) − (6,8 × âge)<br><strong>Femme :</strong> 655 + (9,6 × poids kg) + (1,8 × taille cm) − (4,7 × âge)<br><br>➜ Besoin d'entretien ≈ <strong>1,3 × DEB</strong> chez une personne ambulatoire</div>
+          </div>
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+            <strong style="color:#15803d;">🥩 Protéines</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Les besoins peuvent atteindre <strong>1,5 à 2,0 g/kg/jour</strong> en situation de catabolisme<br><em>— nettement au-dessus des apports d'une personne en santé</em><br><br>⚠️ Ajuster en <strong>insuffisance rénale</strong> et en <strong>insuffisance hépatique</strong><br>➜ Voir <em>IRC</em>, <em>Cirrhose</em></div>
+          </div>
+          <div style="background:#fce4ec;border-radius:10px;padding:14px;">
+            <strong style="color:#c0392b;">🚨 Ne pas suralimenter</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">La <strong>suralimentation provoque ses propres complications</strong> : surproduction de CO₂ et <strong>hypercapnie</strong>, azotémie, hyperglycémie, troubles électrolytiques, <strong>stéatose et atteinte hépatique</strong>.<br><br>🎯 <strong>Plus n'est pas mieux</strong> — c'est une erreur fréquente quand on veut « rattraper » vite.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block rx" style="margin-top:14px;border-left-color:#0f766e;">
+        <div class="block-title" id="nut-5"><span class="tag">🪜 Le support nutritionnel — toujours par le chemin le plus physiologique</span></div>
+
+        <div class="key-fact green" style="margin-top:10px;">🎯 <strong>Le principe qui gouverne toute la décision :</strong> <strong>« si le tube digestif fonctionne, on l'utilise »</strong>. On ne monte d'un échelon que lorsque le précédent ne suffit pas ou n'est pas possible — et l'on <strong>redescend dès que la fonction digestive le permet</strong>.</div>
+
+        <div style="background:#0f172a;border-radius:10px;padding:14px;margin-top:12px;">
+          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#94a3b8;margin-bottom:8px;">Schéma &mdash; l&rsquo;escalier du support nutritionnel</div>
+          <svg viewBox="0 0 620 250" style="width:100%;height:auto;" role="img" aria-label="Escalier du support nutritionnel de la voie orale a la nutrition parenterale">
+            <!-- marches -->
+            <rect x="24" y="186" width="132" height="46" rx="7" fill="#166534"/>
+            <text x="90" y="206" text-anchor="middle" fill="#dcfce7" font-size="12.5" font-weight="700">1. VOIE ORALE</text>
+            <text x="90" y="223" text-anchor="middle" fill="#bbf7d0" font-size="10.5">enrichir, fractionner</text>
+
+            <rect x="164" y="140" width="132" height="46" rx="7" fill="#15803d"/>
+            <text x="230" y="160" text-anchor="middle" fill="#dcfce7" font-size="12.5" font-weight="700">2. SUPPLÉMENTS</text>
+            <text x="230" y="177" text-anchor="middle" fill="#bbf7d0" font-size="10.5">oraux, vitamines, oligoéléments</text>
+
+            <rect x="304" y="94" width="132" height="46" rx="7" fill="#0f766e"/>
+            <text x="370" y="114" text-anchor="middle" fill="#ccfbf1" font-size="12.5" font-weight="700">3. ENTÉRALE</text>
+            <text x="370" y="131" text-anchor="middle" fill="#99f6e4" font-size="10.5">gavage — SNG, gastrostomie</text>
+
+            <rect x="444" y="48" width="152" height="46" rx="7" fill="#b45309"/>
+            <text x="520" y="68" text-anchor="middle" fill="#fef3c7" font-size="12.5" font-weight="700">4. PARENTÉRALE</text>
+            <text x="520" y="85" text-anchor="middle" fill="#fde68a" font-size="10.5">périphérique ou centrale</text>
+
+            <!-- contremarches -->
+            <g stroke="#475569" stroke-width="2">
+              <path d="M 156,186 L 164,186"/><path d="M 296,140 L 304,140"/><path d="M 436,94 L 444,94"/>
+            </g>
+            <!-- flèche montante -->
+            <path d="M 40,172 L 40,60 L 430,60" fill="none" stroke="#64748b" stroke-width="1.6" stroke-dasharray="5,4"/>
+            <text x="120" y="52" fill="#94a3b8" font-size="11">on monte seulement si l&rsquo;échelon précédent ne suffit pas</text>
+            <!-- flèche de retour -->
+            <path d="M 520,110 Q 520,160 300,208 L 160,214" fill="none" stroke="#4ade80" stroke-width="2.2"/>
+            <path d="M 160,214 L 172,209" stroke="#4ade80" stroke-width="2.2" fill="none"/>
+            <path d="M 160,214 L 172,219" stroke="#4ade80" stroke-width="2.2" fill="none"/>
+            <text x="356" y="242" text-anchor="middle" fill="#4ade80" font-size="11.5" font-weight="700">et l&rsquo;on redescend dès que le tube digestif refonctionne</text>
+          </svg>
+        </div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:20%;">Voie</th><th style="width:34%;">Indication</th><th>Points de vigilance</th></tr></thead>
+          <tbody>
+            <tr style="background:#f0fdf4;"><td><strong>Orale enrichie</strong></td><td>Apports insuffisants mais déglutition et digestion intactes</td><td>Enrichir et fractionner les repas · respecter les préférences · <strong>traiter ce qui empêche de manger</strong> : douleur, nausées, constipation, mucite, dentition, dépression</td></tr>
+            <tr><td><strong>Suppléments oraux</strong></td><td>Complément énergétique et protéique · multivitamines et oligoéléments</td><td>À prendre <strong>entre</strong> les repas, pour ne pas les remplacer</td></tr>
+            <tr style="background:#e8f4fd;"><td><strong>Nutrition entérale</strong><br><em>gavage</em></td><td>🎯 <strong>Tube digestif fonctionnel</strong> mais apports oraux impossibles ou insuffisants — dysphagie, AVC, atteinte de l'état de conscience, cancer ORL</td><td>Préserve la <strong>barrière intestinale</strong> · moins de complications infectieuses que la voie parentérale · surveiller tolérance digestive et <strong>risque d'aspiration</strong></td></tr>
+            <tr style="background:#fff3cd;"><td><strong>Nutrition parentérale</strong></td><td>Réservée aux personnes <strong>dénutries ou à haut risque</strong> chez qui l'alimentation entérale est <strong>impossible</strong> ou ne peut couvrir les besoins — occlusion, fistule à haut débit, grêle court, ischémie mésentérique</td><td>🚨 <strong>À cesser dès que la fonction digestive permet la voie entérale</strong> <span style="font-size:11px;color:#64748b;">📚 <em>Goldman, ch. 204</em></span></td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="key-fact red" style="margin-top:12px;">🚨 <strong>La voie centrale n'est pas anodine</strong> — elle comporte un <strong>taux nettement plus élevé de complications mécaniques, métaboliques et infectieuses</strong> que la voie périphérique. Mécaniques : <strong>pneumothorax, hémothorax, malposition, thrombose</strong>. Infectieuses : <strong>bactériémie sur cathéter</strong>, infections fongiques, parfois par translocation bactérienne intestinale. 💡 Le risque augmente avec les accès <strong>non sous-claviers</strong> (jugulaire, fémoral) et avec les <strong>cathéters multi-usages</strong> dont la voie de nutrition sert aussi aux prélèvements ou aux médicaments — <strong>d'où la règle d'une lumière dédiée</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Goldman, ch. 204</em></span></div>
+
+        <div class="key-fact orange" style="margin-top:8px;">🍬 <strong>L'hyperglycémie sous nutrition parentérale</strong> est fréquente et associée à <strong>plus d'infections nosocomiales</strong>. Elle est favorisée par : un contrôle glycémique déjà mauvais au départ, un <strong>dextrose trop concentré (&gt; 10 %) ou augmenté trop vite</strong>, une insulinothérapie insuffisante, une surveillance glycémique trop espacée, et l'usage de <strong>corticostéroïdes ou de vasopresseurs</strong> comme la noradrénaline — qui stimulent la néoglucogenèse et induisent une insulinorésistance. ➜ Voir <em>Les Chocs</em>, <em>Diabète</em>.</div>
+      </div>
+
+      <div class="block flag" style="margin-top:14px;">
+        <div class="block-title" id="nut-6"><span class="tag">⚡ Le syndrome de renutrition inappropriée</span></div>
+
+        <div class="key-fact red" style="margin-top:10px;">🚨 <strong>C'est le piège majeur de toute cette section — et il est iatrogène.</strong> On veut bien faire, on nourrit une personne dénutrie, et c'est <strong>l'acte de nourrir</strong> qui la met en danger. La cause est un apport <strong>excessif de dextrose</strong> — au-delà d'environ <strong>150 à 250 g</strong>, soit le contenu d'un litre de solution parentérale à 15–25 %. <span style="font-size:11px;color:#64748b;">📚 <em>Goldman-Cecil, ch. 204</em></span></div>
+
+        <div style="background:#0f172a;border-radius:10px;padding:14px;margin-top:12px;">
+          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#94a3b8;margin-bottom:8px;">Schéma &mdash; la chaîne causale, du glucose à l&rsquo;arrêt cardiaque</div>
+          <svg viewBox="0 0 620 268" style="width:100%;height:auto;" role="img" aria-label="Mecanisme du syndrome de renutrition inappropriee">
+            <!-- étape 1 -->
+            <rect x="24" y="22" width="150" height="46" rx="8" fill="#b45309"/>
+            <text x="99" y="42" text-anchor="middle" fill="#fef3c7" font-size="12.5" font-weight="700">DEXTROSE ++</text>
+            <text x="99" y="59" text-anchor="middle" fill="#fde68a" font-size="10.5">&gt; 150–250 g</text>
+            <path d="M 178,45 L 208,45" stroke="#94a3b8" stroke-width="2.4"/>
+            <path d="M 208,45 L 200,40" stroke="#94a3b8" stroke-width="2.4"/><path d="M 208,45 L 200,50" stroke="#94a3b8" stroke-width="2.4"/>
+            <!-- étape 2 -->
+            <rect x="212" y="22" width="150" height="46" rx="8" fill="#7c3aed"/>
+            <text x="287" y="42" text-anchor="middle" fill="#ede9fe" font-size="12.5" font-weight="700">INSULINE ↑↑</text>
+            <text x="287" y="59" text-anchor="middle" fill="#ddd6fe" font-size="10.5">libération massive</text>
+            <!-- deux branches -->
+            <path d="M 287,72 L 287,88 L 150,88 L 150,104" fill="none" stroke="#94a3b8" stroke-width="2.4"/>
+            <path d="M 150,104 L 145,96"/><path d="M 150,104 L 155,96"/>
+            <g stroke="#94a3b8" stroke-width="2.4" fill="none"><path d="M 150,104 L 145,96"/><path d="M 150,104 L 155,96"/></g>
+            <path d="M 287,72 L 287,88 L 452,88 L 452,104" fill="none" stroke="#94a3b8" stroke-width="2.4"/>
+            <g stroke="#94a3b8" stroke-width="2.4" fill="none"><path d="M 452,104 L 447,96"/><path d="M 452,104 L 457,96"/></g>
+            <!-- branche gauche : shift électrolytique -->
+            <rect x="24" y="108" width="252" height="66" rx="8" fill="#1e3a8a"/>
+            <text x="150" y="128" text-anchor="middle" fill="#dbeafe" font-size="12" font-weight="700">Entrée intracellulaire</text>
+            <text x="150" y="147" text-anchor="middle" fill="#bfdbfe" font-size="13" font-weight="800">↓ PHOSPHORE ↓ K⁺ ↓ Mg²⁺</text>
+            <text x="150" y="165" text-anchor="middle" fill="#93c5fd" font-size="10.5">consommés aussi par la glycolyse</text>
+            <!-- branche droite : rétention -->
+            <rect x="326" y="108" width="252" height="66" rx="8" fill="#0f766e"/>
+            <text x="452" y="128" text-anchor="middle" fill="#ccfbf1" font-size="12" font-weight="700">Effet rénal de l&rsquo;insuline</text>
+            <text x="452" y="147" text-anchor="middle" fill="#99f6e4" font-size="13" font-weight="800">RÉTENTION Na⁺ ET EAU</text>
+            <text x="452" y="165" text-anchor="middle" fill="#5eead4" font-size="10.5">+ hypermétabolisme</text>
+            <!-- thiamine -->
+            <rect x="24" y="182" width="252" height="34" rx="7" fill="#78350f"/>
+            <text x="150" y="204" text-anchor="middle" fill="#fde68a" font-size="12" font-weight="700">Le glucose CONSOMME la thiamine</text>
+            <!-- convergence -->
+            <path d="M 150,220 L 150,232 L 300,232" fill="none" stroke="#ef4444" stroke-width="2.4"/>
+            <path d="M 452,178 L 452,232 L 320,232" fill="none" stroke="#ef4444" stroke-width="2.4"/>
+            <rect x="176" y="238" width="268" height="26" rx="7" fill="#7f1d1d"/>
+            <text x="310" y="256" text-anchor="middle" fill="#fecaca" font-size="12" font-weight="700">ARYTHMIES · INSUFFISANCE CARDIAQUE</text>
+          </svg>
+          <div style="background:#7f1d1d;border-radius:8px;padding:10px 12px;margin-top:10px;font-size:12.5px;line-height:1.6;color:#fecaca;">
+            🫀 <strong>Pourquoi le cœur lâche :</strong> la rétention hydrosodée, la chute brutale des électrolytes et l'hypermétabolisme s'additionnent — <strong>et le muscle cardiaque est déjà atrophié</strong> par la dénutrition prolongée. Le risque est maximal en cas de <strong>cardiopathie préexistante</strong>.
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
+          <div style="background:#fef2f2;border-radius:10px;padding:14px;border-left:4px solid #c0392b;">
+            <strong style="color:#c0392b;">🎯 Qui est à risque</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Dénutrition préexistante</strong><br><strong>Déplétion électrolytique</strong> déjà présente<br><strong>Alcoolisme</strong> ⭐<br>🚨 <strong>Hydratation intraveineuse prolongée (dextrose 5 %) sans support nutritionnel</strong> — situation <em>courante à l'hôpital</em> et facile à manquer<br><br>À élargir en pratique : jeûne prolongé, anorexie, chirurgie bariatrique, cancer avancé, personne âgée fragile</div>
+          </div>
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;border-left:4px solid #15803d;">
+            <strong style="color:#15803d;">🛡️ Comment le prévenir</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>①</strong> <strong>Identifier</strong> les personnes à risque <em>avant</em> de commencer<br><strong>②</strong> Débuter le <strong>dextrose à faible concentration</strong> et progresser sur plusieurs jours<br><strong>③</strong> <strong>Supplémenter d'emblée</strong> potassium, magnésium et <strong>phosphore</strong>, selon les taux sanguins et la fonction rénale<br><strong>④</strong> 🎯 <strong>THIAMINE 100 mg/jour pendant 3 à 5 jours</strong><br><strong>⑤</strong> Surveiller <strong>glycémie, électrolytes, bilan liquidien</strong> de près<br><br>⚠️ <strong>Ne pas précipiter le congé</strong> d'une personne qui vient de débuter une nutrition parentérale : 2 à 3 jours de surveillance sont nécessaires. <span style="font-size:11px;color:#64748b;">📚 <em>Goldman, ch. 204</em></span></div>
+          </div>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">💊 <strong>La thiamine avant le glucose — une règle qui vaut au-delà de la nutrition.</strong> Puisque le métabolisme des glucides <strong>consomme</strong> la thiamine, administrer du glucose à une personne carencée peut <strong>précipiter une encéphalopathie de Wernicke</strong>. C'est pourquoi, chez une personne alcoolique ou dénutrie, <strong>la thiamine se donne avant ou avec le glucose</strong>, jamais après. ➜ Voir <em>Troubles liés à l'alcool</em>.</div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;border-left-color:#6d28d9;">
+        <div class="block-title" id="nut-7"><span class="tag">🧬 Carences &amp; malabsorption</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>Le raisonnement : la carence suit l'anatomie.</strong> Chaque nutriment est absorbé à un endroit précis du tube digestif — donc <strong>savoir quel segment est atteint ou réséqué prédit la carence</strong>. C'est particulièrement vrai en maladie de Crohn, où l'atteinte iléale est fréquente.</div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:20%;">Nutriment</th><th style="width:24%;">Site d'absorption</th><th style="width:28%;">Contextes à risque</th><th>Manifestations</th></tr></thead>
+          <tbody>
+            <tr style="background:#fce4ec;"><td><strong>Fer</strong></td><td><strong>Duodénum</strong> et jéjunum proximal</td><td>Saignement digestif, maladie cœliaque, gastrectomie, IPP au long cours, MII</td><td>Anémie microcytaire, fatigue, pica<br>➜ Voir <em>FSC &amp; Anémie</em></td></tr>
+            <tr><td><strong>Vitamine B12</strong></td><td>🎯 <strong>Iléon terminal</strong> (avec le facteur intrinsèque)</td><td>⭐ <strong>Crohn iléal ou résection iléale</strong> · gastrectomie · anémie pernicieuse · metformine · IPP</td><td>Anémie macrocytaire, <strong>atteinte neurologique</strong> — paresthésies, ataxie, atteinte cognitive<br>🚨 L'atteinte neurologique peut précéder l'anémie</td></tr>
+            <tr style="background:#f0fdf4;"><td><strong>Folate</strong></td><td>Jéjunum</td><td>Alcoolisme, grossesse, méthotrexate, sulfasalazine, apports insuffisants</td><td>Anémie macrocytaire · <strong>sans</strong> atteinte neurologique<br>⚠️ Ne jamais corriger un folate sans avoir vérifié la B12</td></tr>
+            <tr><td><strong>Vitamines liposolubles</strong><br><em>A, D, E, K</em></td><td>Nécessitent des <strong>sels biliaires</strong> et l'intégrité de l'iléon</td><td>Cholestase, maladie biliaire, insuffisance pancréatique exocrine, grêle court, résection iléale<br>➜ Voir <em>Cholestase</em>, <em>Pancréatite</em></td><td><strong>D</strong> : ostéomalacie, ostéoporose · <strong>K</strong> : allongement du RNI, saignements · <strong>A</strong> : héméralopie · <strong>E</strong> : neuropathie</td></tr>
+            <tr style="background:#ede9fe;"><td><strong>Calcium &amp; vitamine D</strong></td><td>Duodénum et jéjunum</td><td>🚨 <strong>Corticothérapie prolongée</strong> (fréquente en MII) · malabsorption · âge</td><td><strong>Ostéoporose</strong> — dépistage et supplémentation indiqués<br>➜ Voir <em>Ostéoporose</em></td></tr>
+            <tr><td><strong>Zinc</strong></td><td>Grêle proximal</td><td>Diarrhée chronique, fistules, grêle court, brûlures</td><td>Retard de cicatrisation, dysgueusie, éruption périorificielle, alopécie</td></tr>
+            <tr style="background:#fff3cd;"><td><strong>Thiamine (B1)</strong></td><td>Jéjunum</td><td>🚨 <strong>Alcoolisme</strong> · vomissements prolongés · renutrition · chirurgie bariatrique</td><td><strong>Wernicke</strong> — confusion, ataxie, ophtalmoplégie · béribéri cardiaque<br>🚨 Urgence thérapeutique</td></tr>
+            <tr><td><strong>Magnésium</strong></td><td>Grêle et côlon</td><td>Diarrhée, alcoolisme, <strong>IPP au long cours</strong>, diurétiques</td><td>Arythmies, tétanie · <strong>entretient une hypokaliémie et une hypocalcémie réfractaires</strong> <span style="font-size:11px;color:#64748b;">📚 <em>Goldman, ch. 111</em></span></td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="key-fact red" style="margin-top:12px;">🚨 <strong>Le piège du magnésium :</strong> une <strong>hypokaliémie ou une hypocalcémie qui ne se corrige pas malgré la supplémentation</strong> doit faire doser le magnésium. Tant que le magnésium n'est pas corrigé, les deux autres ne le seront pas. ➜ Voir <em>Troubles électrolytiques</em>.</div>
+
+        <div class="key-fact orange" style="margin-top:8px;">🔗 <strong>Les carences propres aux MII</strong> — B12 en cas d'atteinte ou de résection iléale, fer par saignement chronique, vitamine D et calcium sous corticothérapie — sont détaillées dans la section <em>Maladies inflammatoires de l'intestin</em>, avec le suivi correspondant.</div>
+      </div>
+
+      <div class="block flag" style="margin-top:14px;">
+        <div class="block-title" id="nut-8"><span class="tag">🚨 Red flags &amp; pièges</span></div>
+
+        <div class="flag-list" style="margin-top:12px;">
+          <div class="flag-item">🚨 <strong>Perte de poids involontaire de 5 à 10 % ou plus</strong> — chercher une néoplasie, une malabsorption, une dépression, une dysphagie, une hyperthyroïdie</div>
+          <div class="flag-item">🚨 <strong>Chute du phosphore dans les jours suivant le début d'une alimentation</strong> — syndrome de renutrition : ralentir et supplémenter</div>
+          <div class="flag-item">🚨 <strong>Confusion, ataxie, ophtalmoplégie</strong> chez une personne dénutrie ou alcoolique — Wernicke : thiamine en urgence</div>
+          <div class="flag-item">🚨 <strong>Paresthésies ou ataxie avec B12 basse</strong> — l'atteinte neurologique peut précéder l'anémie et devenir irréversible</div>
+          <div class="flag-item">🚨 <strong>Fièvre chez une personne sous nutrition parentérale par voie centrale</strong> — bactériémie sur cathéter jusqu'à preuve du contraire</div>
+          <div class="flag-item">⚠️ <strong>Utiliser l'albumine comme marqueur nutritionnel</strong> — demi-vie de 18 à 21 jours, dominée par l'inflammation</div>
+          <div class="flag-item">⚠️ <strong>Donner du glucose avant la thiamine</strong> chez une personne à risque — peut précipiter une encéphalopathie de Wernicke</div>
+          <div class="flag-item">⚠️ <strong>Vouloir rattraper vite</strong> — la suralimentation cause hypercapnie, hyperglycémie, stéatose hépatique</div>
+          <div class="flag-item">⚠️ <strong>Recourir à la voie parentérale alors que le tube digestif fonctionne</strong> — plus de complications, sans bénéfice</div>
+          <div class="flag-item">⚠️ <strong>Maintenir une nutrition parentérale</strong> après le retour de la fonction digestive</div>
+          <div class="flag-item">⚠️ <strong>Hydrater au dextrose 5 % pendant des jours</strong> en croyant nourrir — c'est précisément un facteur de risque de renutrition</div>
+          <div class="flag-item">⚠️ <strong>Corriger un folate sans vérifier la B12</strong> — l'anémie se corrige, l'atteinte neurologique progresse</div>
+          <div class="flag-item">⚠️ <strong>Supplémenter K⁺ ou Ca²⁺ sans doser le magnésium</strong> quand la correction échoue</div>
+          <div class="flag-item">⚠️ <strong>Se fier au poids mesuré aux soins intensifs</strong> — il reflète les liquides administrés, pas la masse corporelle</div>
+        </div>
+
+        <div class="key-fact green" style="margin-top:12px;">✅ <strong>À retenir en quatre temps :</strong> ① <strong>dépister</strong> — deux questions du CNST, chez tout le monde · ② <strong>évaluer</strong> — histoire du poids, apports, examen physique, micronutriments ciblés, <strong>jamais l'albumine seule</strong> · ③ <strong>nourrir par le chemin le plus physiologique</strong>, et redescendre l'escalier dès que possible · ④ <strong>chez la personne à risque, commencer lentement, supplémenter phosphore, potassium, magnésium, et donner la thiamine</strong>.</div>
+      </div>
+    </div>
+
+    <div class="section" id="sec-diverticulite">
   <div class="section-header">
     <div class="section-accent" style="background:#92400e">🫃</div>
     <div class="section-title"><h1>Diverticulite aiguë</h1><div class="breadcrumb">Gastro-entérologie · Non compliquée &amp; Compliquée</div></div>
@@ -53268,6 +53566,7 @@ const SEARCH_INDEX = [
   { id:'migraine',            title:'Migraine & Céphalées',               specialty:'Neurologie',          keywords:['migraine','céphalée','triptan','sumatriptan','cgrp','érénumab','galcanézumab','fremanézumab','eptinézumab','préventif','horton','cluster','tension','com','aura','photophobie','phonophobie','antalgique'] },
   { id:'parkinson',           title:'Parkinson & Tremblement Essentiel',  specialty:'Neurologie',          keywords:['parkinson','tremblement','lévodopa','sinemet','rasagiline','pramipexole','ropinirole','dopamine','wearing-off','dyskinésie','dbs','tremblement essentiel','propranolol','primidone','apomorphine'] },
   { id:'mii',                 title:'Maladies Inflammatoires Intestinales',specialty:'Gastro-entérologie', keywords:['mii','crohn','colite ulcéreuse','rch','vedolizumab','adalimumab','infliximab','ustekinumab','risankizumab','mésalamine','corticostéroïde','biologiques','poussée','rémission'] },
+  { id:'nutrition',         title:'Nutrition & Dénutrition',        specialty:'Gastro-entérologie', keywords:['nutrition','dénutrition','malnutrition','cnst','dépistage nutritionnel','mna','mini nutritional assessment','perte de poids','imc','circonférence brachiale','albumine','préalbumine','harris-benedict','besoins énergétiques','besoins protéiques','kcal/kg','support nutritionnel','nutrition entérale','gavage','nutrition parentérale','npt','tpn','syndrome de renutrition','renutrition inappropriée','refeeding','phosphore','hypophosphatémie','thiamine','wernicke','malabsorption','carence','b12','folate','fer','zinc','magnésium','vitamines liposolubles','iléon terminal','suralimentation','goldman'] },
   { id:'diverticulite',       title:'Diverticulite',                      specialty:'Gastro-entérologie', keywords:['diverticulite','diverticule','colon','abcès','perforation','amoxicilline','ciprofloxacine','scanner','hinchey'] },
   { id:'ddx-abdo',            title:'Douleur Abdominale — Approche & DDx', specialty:'Gastro-entérologie', keywords:['douleur abdominale','ddx','abdomen','abdomen aigu','fosses iliaques','quadrants','diagnostic différentiel','approche','évaluation','viscérale','pariétale','référée','péritonite','occlusion','ischémie mésentérique'] },
   { id:'anatomie-foie',       title:'Anatomie du Foie',                   specialty:'Hépato-biliaire',    keywords:['anatomie foie','segments','lobes','veine porte','artère hépatique','canaux biliaires','couinaud'] },
@@ -53560,7 +53859,7 @@ const SECTION_ORDER = [
   // Urologie
   'uro-physio','uro-sbau','uro-hbp','uro-cancer-prostate','uro-vha','uro-incontinence','uro-iu-recidivante','uro-pna','uro-sgu','uro-orchi','uro-prostatite','uro-de','uro-cystite','uro-lithiase',
   // Gastro-entérologie
-  'ddx-abdo','appendicite','mii','diverticulite','ccr','ugd','constipation','diarrhee','mrgo','cdiff',
+  'ddx-abdo','appendicite','mii','nutrition','diverticulite','ccr','ugd','constipation','diarrhee','mrgo','cdiff',
   // Hépato-biliaire
   'anatomie-foie','fonctions-foie','calculs-biliaires','cholecystite','choledocholithiase','cholangite','pancreatite','steatose','cirrhose','htp','preop',
   // Santé mentale
@@ -53596,7 +53895,8 @@ const SECTION_TITLES = {
   'ordonnances':'Normes des Ordonnances',
   'arthrite-approche':'Approche Douleur Articulaire','par':'Polyarthrite Rhumatoïde','goutte':'Goutte & Microcristaux','spondylarthrites':'Spondylarthrites','connectivites':'Connectivites & Vascularites',
   'geriatrie-eval':'Évaluation Gériatrique','delirium':'Délirium','tnc':'Troubles Neurocognitifs','chutes':'Chutes & Mobilité','polypharmacie':'Polypharmacie & Déprescription',
-  'athero':'Athérosclérose','anevrisme':'Anévrisme','rein-anatomie':'Anatomie Rein','bases-endo':'Bases Physiologiques Endo.','pneumo-eval':'Évaluation Pulmonaire','pneumo-gazo':'Gazométrie & Acide-Base','pneumo-aco':'ACO','pneumo-o2':'O₂ Domicile & Conduite','pneumo-pneumonie':'Pneumonie','pneumo-autres-patho':'Autres Patho. Pulmonaires','pneumo-ira':'Insuffisance Respiratoire','pneumo-htp':'HTP & Cor Pulmonale','douleur':'Douleur & Analgésie','ddx-abdo':'Douleur Abdominale — DDx','mii':'MII — Crohn & Colite','diverticulite':'Diverticulite Aiguë','choledocholithiase':'Cholédocholithiase','cholangite':'Cholangite','pancreatite':'Pancréatite Aiguë','msk':'Guide MSK','quiz':'Quiz',
+  'athero':'Athérosclérose','anevrisme':'Anévrisme','rein-anatomie':'Anatomie Rein','bases-endo':'Bases Physiologiques Endo.','pneumo-eval':'Évaluation Pulmonaire','pneumo-gazo':'Gazométrie & Acide-Base','pneumo-aco':'ACO','pneumo-o2':'O₂ Domicile & Conduite','pneumo-pneumonie':'Pneumonie','pneumo-autres-patho':'Autres Patho. Pulmonaires','pneumo-ira':'Insuffisance Respiratoire','pneumo-htp':'HTP & Cor Pulmonale','douleur':'Douleur & Analgésie','ddx-abdo':'Douleur Abdominale — DDx','mii':'MII — Crohn & Colite',
+  'nutrition':'Nutrition & Dénutrition','diverticulite':'Diverticulite Aiguë','choledocholithiase':'Cholédocholithiase','cholangite':'Cholangite','pancreatite':'Pancréatite Aiguë','msk':'Guide MSK','quiz':'Quiz',
   'home':'Accueil','calculateurs':'Calculateurs',
   'hta':'HTA (Primaire & Secondaire)','dyslipidémie':'Dyslipidémie',
   'mcas':'MCAS & Angine','sca':'SCA','fa':'Fibrillation Auriculaire','arythmies':'Flutter & Arythmies',
