@@ -1019,6 +1019,17 @@ m
       </div>
     </div>
     <div style="height:2px;background:var(--cream3);margin:4px 0 8px;"></div>
+    <!-- Méthode clinique -->
+    <div class="specialty-group" id="grp-methode">
+      <div class="specialty-header" onclick="toggleGroup('grp-methode')">
+        <span class="emoji">🩺</span> Méthode clinique
+        <svg class="chevron" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>      </div>
+      <div class="specialty-items">
+        <div class="nav-item" onclick="showSection('entrevue')">L'entrevue médicale</div>
+        <div class="nav-item" onclick="showSection('raisonnement')">Le raisonnement clinique</div>
+      </div>
+    </div>
+
 
     <!-- Cardiologie -->
     <div class="specialty-group open" id="grp-cardio">
@@ -1415,6 +1426,13 @@ m
       <div class="home-divider"></div>
 
       <div class="home-grid">
+        <div class="home-card" onclick="showSection('entrevue'); openGroup('grp-methode')">
+          <div class="home-card-icon" style="background:#fef2f2;color:#be123c">🩺</div>
+          <div class="home-card-body">
+            <div class="home-card-name">Méthode clinique</div>
+            <div class="home-card-count">2 sections</div>
+          </div>
+        </div>
         <div class="home-card" onclick="showSection('hta'); openGroup('grp-cardio')">
           <div class="home-card-icon" style="background:#ffe8e8;color:#b91c1c">🫀</div>
           <div class="home-card-body">
@@ -1595,6 +1613,363 @@ m
     </div>
 
     <!-- CALCULATEURS -->
+    <div class="section" id="sec-entrevue">
+      <div class="section-header">
+        <div class="section-accent" style="background:#0369a1">💬</div>
+        <div class="section-title"><h1>L'entrevue médicale</h1><div class="breadcrumb">Méthode clinique <span class="breadcrumb-sep">·</span> Structure · Techniques <span class="breadcrumb-sep">·</span> Communication difficile</div></div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;">
+        <button onclick="goToBlock('ent-1')" style="background:#374151;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🗺️ Structure de l'entrevue</button>
+        <button onclick="goToBlock('ent-2')" style="background:#0369a1;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🚪 Accueil &amp; contrat initial</button>
+        <button onclick="goToBlock('ent-3')" style="background:#b45309;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">📖 Caractériser le symptôme</button>
+        <button onclick="goToBlock('ent-4')" style="background:#0f766e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🗣️ Techniques de communication</button>
+        <button onclick="goToBlock('ent-5')" style="background:#6d28d9;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧭 Qui est cette personne</button>
+        <button onclick="goToBlock('ent-6')" style="background:#c2410c;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">💛 Situations difficiles</button>
+        <button onclick="goToBlock('ent-7')" style="background:#15803d;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🚪 Conclure l'entrevue</button>
+      </div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:20px;">
+        <div style="flex:1;min-width:95px;background:#DCFCE7;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#15803d;">Ouvrir</div><div style="font-size:11px;color:#555;margin-top:4px;">Puis resserrer</div></div>
+        <div style="flex:1;min-width:95px;background:#EEF2FF;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#1C3F8F;">Le silence</div><div style="font-size:11px;color:#555;margin-top:4px;">Ne pas le rompre le premier</div></div>
+        <div style="flex:1;min-width:95px;background:#FEF3C7;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#b45309;">Contrat</div><div style="font-size:11px;color:#555;margin-top:4px;">S'entendre sur le programme</div></div>
+        <div style="flex:1;min-width:95px;background:#F3E8FF;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#6d28d9;">MCCP</div><div style="font-size:11px;color:#555;margin-top:4px;">La maladie ET la personne</div></div>
+      </div>
+
+      <div class="block def" style="margin-top:14px;">
+        <div class="block-title" id="ent-1"><span class="tag">🗺️ La structure de l'entrevue</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>L'entrevue n'est pas un interrogatoire, c'est une structure.</strong> Elle a un début, un développement et une fin — et chacun a une fonction précise. Sauter l'ouverture pour « gagner du temps » coûte presque toujours plus cher ensuite. <span style="font-size:11px;color:#64748b;">📚 <em>Ratté, Thériault, Collin, Cauchon,</em> Démarche clinique<em>, 3<sup>e</sup> éd., ch. 2</em></span></div>
+
+        <div style="background:#f8fafc;border:1px solid #cbd5e1;border-radius:10px;padding:14px;margin-top:12px;">
+          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin-bottom:8px;">Sch&eacute;ma &mdash; ouvrir large, puis resserrer</div>
+          <svg viewBox="0 0 620 250" style="width:100%;height:auto;" role="img" aria-label="Structure de l entrevue medicale en entonnoir de la question ouverte a la synthese">
+            <path d="M 30,30 L 300,30 L 250,96 L 80,96 Z" fill="#DCFCE7"/>
+            <text x="165" y="56" text-anchor="middle" fill="#15803d" font-size="13" font-weight="700">① OUVRIR</text>
+            <text x="165" y="80" text-anchor="middle" fill="#334155" font-size="11.5">&laquo; Qu&rsquo;est-ce qui vous am&egrave;ne aujourd&rsquo;hui ? &raquo;</text>
+            <path d="M 80,102 L 250,102 L 215,164 L 115,164 Z" fill="#FEF3C7"/>
+            <text x="165" y="126" text-anchor="middle" fill="#b45309" font-size="13" font-weight="700">② EXPLORER</text>
+            <text x="165" y="150" text-anchor="middle" fill="#334155" font-size="11.5">caract&eacute;riser &middot; pr&eacute;ciser &middot; d&eacute;partager</text>
+            <rect x="115" y="170" width="100" height="46" rx="7" fill="#EEF2FF"/>
+            <text x="165" y="190" text-anchor="middle" fill="#1C3F8F" font-size="12.5" font-weight="700">③ SYNTHÈSE</text>
+            <text x="165" y="208" text-anchor="middle" fill="#1C3F8F" font-size="11.5">v&eacute;rifier &amp; conclure</text>
+            <rect x="330" y="30" width="270" height="58" rx="8" fill="#f1f5f9"/>
+            <text x="344" y="52" fill="#0f172a" font-size="12" font-weight="700">Le patient raconte, vous &eacute;coutez</text>
+            <text x="344" y="72" fill="#334155" font-size="11.5">Les hypoth&egrave;ses se forment d&eacute;j&agrave;</text>
+            <rect x="330" y="96" width="270" height="58" rx="8" fill="#fff3cd"/>
+            <text x="344" y="118" fill="#b45309" font-size="12" font-weight="700">Vous dirigez vers ce qui d&eacute;partage</text>
+            <text x="344" y="138" fill="#334155" font-size="11.5">Questions cibl&eacute;es &middot; revue des syst&egrave;mes</text>
+            <rect x="330" y="162" width="270" height="58" rx="8" fill="#eef2ff"/>
+            <text x="344" y="184" fill="#1C3F8F" font-size="12" font-weight="700">Vous r&eacute;sumez &agrave; voix haute</text>
+            <text x="344" y="204" fill="#334155" font-size="11.5">&laquo; Ai-je bien compris ? &raquo; &middot; plan &middot; filet</text>
+            <text x="310" y="240" text-anchor="middle" fill="#64748b" font-size="11.5">Le r&eacute;sum&eacute; &agrave; voix haute est le contr&ocirc;le de qualit&eacute; de l&rsquo;entrevue</text>
+          </svg>
+        </div>
+
+        <div class="key-fact green" style="margin-top:12px;">💜 <strong>La méthode clinique centrée sur le patient (MCCP)</strong> — le principe qui traverse toute l'entrevue : explorer <strong>à la fois la maladie et l'expérience qu'en fait la personne</strong>. Concrètement, quatre choses à connaître en plus des symptômes : <strong>ce qu'elle en pense</strong> (ses idées sur la cause), <strong>ce qu'elle craint</strong>, <strong>ce que ça l'empêche de faire</strong> (retentissement), et <strong>ce qu'elle attend</strong> de la consultation. 🎯 <strong>Une consultation qui répond au symptôme sans répondre à l'attente laisse la personne insatisfaite</strong> — et souvent, non observante.</div>
+      </div>
+
+      <div class="block rx" style="margin-top:14px;border-left-color:#0369a1;">
+        <div class="block-title" id="ent-2"><span class="tag">🚪 L'accueil &amp; le contrat initial</span></div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;border-left:4px solid #15803d;">
+            <strong style="color:#15803d;">👋 Accueillir</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Se présenter, nommer son rôle · vérifier l'identité · s'installer à hauteur de regard<br><br>🎯 <strong>Ouvrir par une question réellement ouverte :</strong><br>« <em>Qu'est-ce qui vous amène aujourd'hui ?</em> »<br>« <em>Qu'est-ce que je peux faire pour vous aider ?</em> » <span style="font-size:11px;color:#64748b;">📚 <em>Démarche clinique, ch. 2</em></span><br><br>⚠️ <strong>Puis se taire.</strong> Une écoute non interrompue de quelques dizaines de secondes suffit le plus souvent — et livre l'essentiel.</div>
+          </div>
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;border-left:4px solid #d35400;">
+            <strong style="color:#d35400;">📋 Le contrat initial</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🎯 <strong>S'entendre explicitement sur le programme de la rencontre</strong>, avant de plonger dans le premier symptôme.<br><br>• Recenser <strong>tous</strong> les motifs : « <em>Y a-t-il autre chose ?</em> » — à répéter jusqu'à épuisement<br>• <strong>Prioriser ensemble</strong> ce qui sera traité aujourd'hui<br>• Annoncer le déroulement et le temps disponible<br><br>💡 <strong>C'est ce qui évite le « oh, en passant, docteur… » de la main sur la poignée de porte</strong> — le motif le plus important arrive souvent en dernier si on ne l'a pas cherché au début.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;border-left-color:#b45309;">
+        <div class="block-title" id="ent-3"><span class="tag">📖 Caractériser un symptôme</span></div>
+
+        <div class="key-fact orange" style="margin-top:10px;">🎯 <strong>Un symptôme mal caractérisé se paie en examens inutiles.</strong> La caractérisation n'est pas une formalité : <strong>c'est elle qui génère et départage les hypothèses</strong>. Le <strong>mode d'apparition</strong> et l'<strong>évolution</strong> sont les éléments les plus rentables. ➜ Voir <em>Le raisonnement clinique</em>.</div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:16%;">Dimension</th><th style="width:34%;">Ce qu'on demande</th><th>Pourquoi ça compte</th></tr></thead>
+          <tbody>
+            <tr style="background:#fff3cd;"><td>🎯 <strong>Mode d'apparition</strong></td><td>« <em>Comment ça a commencé ? Vous faisiez quoi ?</em> »<br>Brutal ou progressif ?</td><td>⭐ <strong>Subit et rapidement évolutif</strong> → mécanique, obstructif, vasculaire<br><strong>Insidieux</strong> → inflammatoire, infectieux, néoplasique</td></tr>
+            <tr><td><strong>Évolution</strong></td><td>« <em>Depuis, c'est pareil, pire, ou mieux ?</em> »<br>Continu ou par épisodes ?</td><td>Distingue aigu, chronique, récidivant · une aggravation progressive inquiète davantage</td></tr>
+            <tr style="background:#f1f5f9;"><td><strong>Localisation</strong></td><td>« <em>Montrez-moi où.</em> » · irradiation</td><td>Oriente vers les structures anatomiques en présence</td></tr>
+            <tr><td><strong>Qualité</strong></td><td>Laisser décrire <strong>avec ses mots</strong> avant de proposer des qualificatifs</td><td>⚠️ Suggérer « serrement ? brûlure ? » trop tôt <strong>induit</strong> la réponse</td></tr>
+            <tr style="background:#f0fdf4;"><td><strong>Intensité</strong></td><td>Échelle · et surtout : <strong>retentissement fonctionnel</strong></td><td>« Ça vous empêche de faire quoi ? » est plus informatif qu'un chiffre</td></tr>
+            <tr><td><strong>Facteurs modifiants</strong></td><td>Ce qui aggrave, ce qui soulage · position, effort, repas, respiration</td><td>Très discriminant — <em>soulagé par le repos</em> vs <em>réveille la nuit</em></td></tr>
+            <tr style="background:#e8f4fd;"><td><strong>Symptômes associés</strong></td><td>Ciblés selon les hypothèses en présence</td><td>🎯 C'est ici qu'on cherche les <strong>données discriminantes</strong> et les <strong>drapeaux rouges</strong></td></tr>
+            <tr><td><strong>Contexte</strong></td><td>Épisodes antérieurs semblables · traitements déjà essayés · ce que la personne en pense</td><td>Le « déjà vécu » a une valeur diagnostique réelle</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="key-fact blue" style="margin-top:12px;">🔍 <strong>La revue des systèmes</strong> vient après la caractérisation, pas avant. Elle se fait <strong>ciblée</strong> selon les hypothèses — général, ophtalmologique, ORL, cardiaque, respiratoire, digestif, urinaire, gynécologique, neurologique, locomoteur, cutané, psychique, hématologique, endocrinien. 💡 <strong>Une revue exhaustive systématique n'est ni réaliste ni utile en consultation</strong> : elle produit du bruit. On l'élargit quand le tableau reste flou.</div>
+      </div>
+
+      <div class="block rx" style="margin-top:14px;border-left-color:#0f766e;">
+        <div class="block-title" id="ent-4"><span class="tag">🗣️ Les techniques qui font la différence</span></div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:12px;">
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+            <strong style="color:#1d4ed8;">❓ Ouverte ou fermée</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Ouverte</strong> — pour explorer, en début d'entrevue et à chaque nouveau sujet<br><em>« Parlez-moi de cette douleur. »</em><br><br><strong>Fermée</strong> — pour préciser et départager, une fois les hypothèses posées<br><em>« Est-ce que ça vous réveille la nuit ? »</em><br><br>🎯 <strong>L'erreur classique est de fermer trop tôt</strong> : on obtient alors les réponses aux questions qu'on a pensé poser, et rien d'autre.</div>
+          </div>
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+            <strong style="color:#15803d;">👂 L'écoute active</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Maintenir la cohérence entre les langages verbal et non verbal</strong> · se montrer ouvert et disponible aux propos de la personne <span style="font-size:11px;color:#64748b;">📚 <em>GPHC, Habiletés cliniques</em></span><br><br><strong>Facilitateurs :</strong> hochement, « mm-hm », relance par le dernier mot<br><br>🎯 <strong>Le silence est un outil.</strong> Le principe de base : <strong>le clinicien doit être capable de tolérer lui-même le silence</strong>, et ne pas chercher à le rompre systématiquement avant la personne. <span style="font-size:11px;color:#64748b;">📚 <em>Démarche clinique</em></span></div>
+          </div>
+          <div style="background:#ede9fe;border-radius:10px;padding:14px;">
+            <strong style="color:#6d28d9;">🔄 Reformuler, clarifier, résumer</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Quatre outils de vérification : la <strong>rétroaction</strong>, la <strong>reformulation</strong>, la <strong>clarification</strong> et le <strong>résumé</strong>.<br><br>🎯 <strong>Le résumé à voix haute est le contrôle de qualité de l'entrevue</strong> — il vérifie votre compréhension, montre que vous avez écouté, et laisse à la personne l'occasion de corriger.<br><br><em>« Si je résume : depuis trois semaines… Ai-je bien compris ? »</em></div>
+          </div>
+          <div style="background:#fce4ec;border-radius:10px;padding:14px;">
+            <strong style="color:#c0392b;">💛 L'empathie, concrètement</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Ce n'est pas une attitude vague — ce sont des énoncés :<br><br>• <strong>Nommer l'émotion perçue</strong>, quitte à se faire corriger : <em>« Je vois que vous êtes contrarié. »</em><br>• <strong>Normaliser</strong> quand c'est approprié : <em>« La façon dont vous vous sentez est normale dans les circonstances. »</em><br>• <strong>Demeurer indulgent</strong> <span style="font-size:11px;color:#64748b;">📚 <em>GPHC, Habiletés cliniques</em></span><br><br>⚠️ Ces énoncés sont généralement appréciés, mais <strong>peuvent être moins appropriés avec certaines personnes</strong> — observer la réaction et s'ajuster.</div>
+          </div>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">🪞 <strong>Une exigence dont on parle peu :</strong> connaître <strong>son propre système de valeurs</strong>. « <em>Il serait illusoire de se croire totalement neutre.</em> » Étant donné les sujets délicats abordés en entrevue — sexualité, consommation, croyances, fin de vie —, <strong>savoir où sont ses propres réactions est ce qui permet de ne pas les laisser dicter l'entrevue</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Démarche clinique, ch. 2</em></span></div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;border-left-color:#6d28d9;">
+        <div class="block-title" id="ent-5"><span class="tag">🧭 Qui est cette personne</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>Cette partie n'est pas administrative — elle modifie les probabilités diagnostiques avant même le premier symptôme.</strong> ➜ C'est l'étape « identifier la victime » du <em>raisonnement clinique</em>.</div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-top:12px;">
+          <div style="background:#f1f5f9;border-radius:10px;padding:14px;">
+            <strong style="color:#334155;">📇 Le socle</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Antécédents médicaux et chirurgicaux</strong><br><strong>Antécédents familiaux pertinents</strong> — en lien avec l'histoire actuelle, pas exhaustifs<br><strong>Médication</strong> complète, incluant <strong>MVL et produits naturels</strong><br><strong>Allergies</strong> et nature exacte de la réaction<br>➜ Voir <em>MVL &amp; PSN</em>, <em>Polypharmacie</em></div>
+          </div>
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;">
+            <strong style="color:#d35400;">🚬 Habitudes de vie</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Tabac</strong> — statut et paquets-années<br><strong>Alcool</strong> et autres substances<br><strong>Activité physique</strong> — la sédentarité est reconnue comme l'un des plus grands facteurs de risque<br>Alimentation · sommeil<br>➜ Voir <em>Prévention &amp; dépistage</em></div>
+          </div>
+          <div style="background:#ede9fe;border-radius:10px;padding:14px;">
+            <strong style="color:#6d28d9;">🏠 Le contexte de vie</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Travail et expositions · logement · <strong>réseau de soutien</strong> · situation financière · autonomie fonctionnelle<br><br>🎯 <strong>Ce contexte détermine souvent ce qui est réellement faisable</strong> comme plan de traitement — et donc son succès.</div>
+          </div>
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+            <strong style="color:#15803d;">💬 Les sujets délicats</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Sexualité, violence, consommation, santé mentale : les aborder <strong>par une question ouverte et normalisante</strong>.<br><br><em>« Avez-vous des préoccupations en lien avec votre vie sexuelle ? »</em> <span style="font-size:11px;color:#64748b;">📚 <em>Démarche clinique, ch. 2</em></span><br><br>💡 Annoncer qu'on pose ces questions <strong>à tout le monde</strong> réduit le sentiment d'être visé.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block flag" style="margin-top:14px;">
+        <div class="block-title" id="ent-6"><span class="tag">💛 Les situations difficiles</span></div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:24%;">Situation</th><th>Ce qui aide</th></tr></thead>
+          <tbody>
+            <tr style="background:#fce4ec;"><td>🚨 <strong>Annoncer une mauvaise nouvelle</strong></td><td><strong>Préparer</strong> le cadre — lieu calme, temps, personne de confiance présente si souhaité<br><strong>Vérifier ce que la personne sait déjà</strong> et ce qu'elle veut savoir<br><strong>Prévenir</strong> — une phrase d'avertissement avant l'annonce<br><strong>Annoncer simplement</strong>, sans jargon, puis <strong>se taire</strong> et laisser la réaction venir<br><strong>Accueillir l'émotion</strong> avant d'expliquer la suite — l'information ne passe pas pendant le choc<br><strong>Résumer, planifier, offrir un filet</strong> et un rendez-vous rapproché</td></tr>
+            <tr><td><strong>Personne en colère</strong></td><td>Ne pas se défendre d'emblée · <strong>nommer et normaliser</strong> : « <em>Effectivement, l'attente a été longue, d'autant plus que vous êtes inquiet.</em> » <span style="font-size:11px;color:#64748b;">📚 <em>GPHC</em></span><br>Chercher ce qu'il y a <strong>sous</strong> la colère — souvent de la peur ou un sentiment de ne pas être pris au sérieux</td></tr>
+            <tr style="background:#f1f5f9;"><td><strong>Entrevue qui déborde</strong></td><td>Revenir au <strong>contrat initial</strong> : « <em>Nous avions convenu de traiter X aujourd'hui; pour Y, je vous propose un autre rendez-vous.</em> »<br>💡 Recadrer avec respect vaut mieux qu'une consultation bâclée sur tous les fronts</td></tr>
+            <tr><td><strong>Personne peu loquace</strong></td><td><strong>Tolérer le silence</strong> · questions ouvertes plus concrètes (« Racontez-moi votre journée d'hier ») · vérifier s'il y a une gêne, une barrière linguistique, une atteinte cognitive ou une dépression</td></tr>
+            <tr style="background:#fff3cd;"><td><strong>Tiers présent</strong></td><td>Clarifier le rôle et le souhait de la personne · <strong>prévoir un moment seul à seul</strong> quand c'est possible — indispensable s'il y a un doute de <strong>violence</strong> ou de <strong>maltraitance</strong><br>➜ Voir <em>Évaluation gériatrique</em></td></tr>
+            <tr><td><strong>Barrière de langue</strong></td><td>Recourir à un <strong>interprète</strong> plutôt qu'à un proche quand c'est possible · s'adresser <strong>à la personne</strong>, pas à l'interprète · phrases courtes</td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+
+      <div class="block rx" style="margin-top:14px;border-left-color:#15803d;">
+        <div class="block-title" id="ent-7"><span class="tag">🚪 Conclure — l'étape qu'on bâcle</span></div>
+
+        <div class="key-fact green" style="margin-top:10px;">🎯 <strong>La fin de l'entrevue détermine ce qui sera réellement fait.</strong> C'est là que se joue l'adhésion au plan — et pourtant c'est l'étape la plus souvent expédiée, faute de temps.</div>
+
+        <div class="criteria-list" style="margin-top:12px;">
+          <div class="criteria-item"><div class="criteria-num blue">1</div><span><strong>Résumer</strong> ce qui a été compris, et le faire valider</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">2</div><span><strong>Expliquer</strong> l'hypothèse et le plan <strong>sans jargon</strong> · nommer l'incertitude quand elle existe plutôt que de la masquer</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">3</div><span><strong>Vérifier la compréhension</strong> — faire reformuler : « <em>Pour être sûr d'avoir été clair, pouvez-vous me redire ce que vous allez faire ?</em> »</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">4</div><span><strong>Convenir du plan ensemble</strong> — un plan que la personne juge irréalisable ne sera pas suivi</span></div>
+          <div class="criteria-item"><div class="criteria-num red">!</div><span>🚨 <strong>Le filet de sécurité</strong> — <strong>dire explicitement ce qui doit faire reconsulter, et où aller</strong>. C'est l'élément de sécurité le plus important de toute la consultation, et le plus souvent omis</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">5</div><span><strong>Ouvrir une dernière fois</strong> : « <em>Y a-t-il autre chose dont vous vouliez me parler ?</em> » · préciser le suivi</span></div>
+        </div>
+
+        <div class="key-fact green" style="margin-top:12px;">✅ <strong>À retenir :</strong> ① <strong>ouvrir large et se taire</strong> · ② <strong>faire le contrat</strong> avant de plonger · ③ <strong>caractériser</strong> avant de fermer les questions · ④ <strong>résumer à voix haute</strong> · ⑤ <strong>ne jamais partir sans filet de sécurité</strong>.</div>
+      </div>
+    </div>
+
+    <div class="section" id="sec-raisonnement">
+      <div class="section-header">
+        <div class="section-accent" style="background:#0f766e">🧠</div>
+        <div class="section-title"><h1>Le raisonnement clinique</h1><div class="breadcrumb">Méthode clinique <span class="breadcrumb-sep">·</span> Générer · Raffiner · Vérifier <span class="breadcrumb-sep">·</span> Biais cognitifs</div></div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;">
+        <button onclick="goToBlock('rc-1')" style="background:#374151;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🎯 Le principe</button>
+        <button onclick="goToBlock('rc-2')" style="background:#0369a1;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">💡 Générer des hypothèses</button>
+        <button onclick="goToBlock('rc-3')" style="background:#b45309;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🔬 Raffiner &amp; hiérarchiser</button>
+        <button onclick="goToBlock('rc-4')" style="background:#991b1b;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🐍 Les diagnostics dangereux</button>
+        <button onclick="goToBlock('rc-5')" style="background:#c0392b;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🪤 Les biais cognitifs</button>
+        <button onclick="goToBlock('rc-6')" style="background:#15803d;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🛠️ Optimiser son raisonnement</button>
+      </div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:20px;">
+        <div style="flex:1;min-width:95px;background:#DCFCE7;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#15803d;">Tôt</div><div style="font-size:11px;color:#555;margin-top:4px;">Générer les hypothèses</div></div>
+        <div style="flex:1;min-width:95px;background:#EEF2FF;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#1C3F8F;">2 à 3</div><div style="font-size:11px;color:#555;margin-top:4px;">Hypothèses de travail finales</div></div>
+        <div style="flex:1;min-width:95px;background:#FEE2E2;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#b91c1c;">Ancrage</div><div style="font-size:11px;color:#555;margin-top:4px;">Le biais le plus fréquent</div></div>
+        <div style="flex:1;min-width:95px;background:#FEF3C7;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#b45309;">Organiser</div><div style="font-size:11px;color:#555;margin-top:4px;">&gt; accumuler des listes</div></div>
+      </div>
+
+      <div class="block def" style="margin-top:14px;">
+        <div class="block-title" id="rc-1"><span class="tag">🎯 Le principe qui gouverne tout le reste</span></div>
+
+        <div class="key-fact green" style="margin-top:10px;">🎯 <strong>« La clé d'un bon raisonnement réside dans l'organisation et la mobilisation des connaissances du clinicien. »</strong> Ce n'est donc <strong>pas la quantité de connaissances qui distingue un bon raisonnement, mais leur organisation</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Ratté, Thériault, Collin, Cauchon,</em> Démarche clinique<em>, 3<sup>e</sup> éd., ch. 1</em></span></div>
+
+        <div class="key-fact blue" style="margin-top:8px;">💡 <strong>Et la génération d'hypothèses doit être PRÉCOCE.</strong> Il est démontré que <strong>le clinicien qui considère le bon diagnostic tôt dans sa démarche a significativement plus de chances d'arriver à la solution clinique</strong> <span style="font-size:11px;color:#64748b;">(Gruppen, Palchik et coll., 1993, cités dans <em>Démarche clinique</em>)</span>. Attendre d'avoir « toutes les données » avant de penser est contre-productif : on ne sait alors pas quelles données chercher.</div>
+
+        <div style="background:#f8fafc;border:1px solid #cbd5e1;border-radius:10px;padding:14px;margin-top:12px;">
+          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin-bottom:8px;">Sch&eacute;ma &mdash; l&rsquo;entonnoir du raisonnement</div>
+          <svg viewBox="0 0 620 250" style="width:100%;height:auto;" role="img" aria-label="Les trois etapes du raisonnement clinique en entonnoir">
+            <!-- étape 1 -->
+            <path d="M 20,30 L 300,30 L 250,110 L 70,110 Z" fill="#DCFCE7"/>
+            <text x="160" y="58" text-anchor="middle" fill="#15803d" font-size="13" font-weight="700">① GÉNÉRER</text>
+            <text x="160" y="80" text-anchor="middle" fill="#334155" font-size="11.5">largement — courants, rares</text>
+            <text x="160" y="98" text-anchor="middle" fill="#334155" font-size="11.5">mais graves, et le bon</text>
+            <!-- étape 2 -->
+            <path d="M 70,116 L 250,116 L 210,180 L 110,180 Z" fill="#FEF3C7"/>
+            <text x="160" y="140" text-anchor="middle" fill="#b45309" font-size="13" font-weight="700">② RAFFINER</text>
+            <text x="160" y="162" text-anchor="middle" fill="#334155" font-size="11.5">questionnaire &amp; examen ciblés</text>
+            <!-- étape 3 -->
+            <rect x="110" y="186" width="100" height="44" rx="7" fill="#EEF2FF"/>
+            <text x="160" y="204" text-anchor="middle" fill="#1C3F8F" font-size="12.5" font-weight="700">③ VÉRIFIER</text>
+            <text x="160" y="222" text-anchor="middle" fill="#1C3F8F" font-size="12" font-weight="700">2 à 3 hypothèses</text>
+            <!-- annotations à droite -->
+            <rect x="320" y="30" width="284" height="60" rx="8" fill="#f1f5f9"/>
+            <text x="334" y="52" fill="#0f172a" font-size="12" font-weight="700">Une bonne liste initiale contient :</text>
+            <text x="334" y="72" fill="#334155" font-size="11.5">les diagnostics COURANTS + les RARES mais</text>
+            <text x="334" y="86" fill="#334155" font-size="11.5">GRAVES + idéalement le BON</text>
+            <rect x="320" y="98" width="284" height="60" rx="8" fill="#fff3cd"/>
+            <text x="334" y="120" fill="#b45309" font-size="12" font-weight="700">Le questionnaire ne sert pas à tout ratisser</text>
+            <text x="334" y="140" fill="#334155" font-size="11.5">mais à <tspan font-weight="700">départager</tspan> les hypothèses en</text>
+            <text x="334" y="154" fill="#334155" font-size="11.5">présence — d&rsquo;où l&rsquo;intérêt de les poser d&rsquo;abord</text>
+            <rect x="320" y="166" width="284" height="64" rx="8" fill="#fee2e2"/>
+            <text x="334" y="188" fill="#b91c1c" font-size="12" font-weight="700">🚩 À chaque étape :</text>
+            <text x="334" y="208" fill="#334155" font-size="11.5">« Qu&rsquo;est-ce qui, dans ce tableau, pourrait</text>
+            <text x="334" y="222" fill="#334155" font-size="11.5">être <tspan font-weight="700">grave</tspan> et que je ne dois pas manquer ? »</text>
+          </svg>
+        </div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;border-left-color:#0369a1;">
+        <div class="block-title" id="rc-2"><span class="tag">💡 Six façons de générer des hypothèses</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>Devant une plainte, on ne part pas de rien : on choisit une stratégie d'ouverture.</strong> Chacune produit une liste différente, et c'est précisément l'intérêt d'en connaître plusieurs — quand l'une n'aboutit pas, on change d'angle. <span style="font-size:11px;color:#64748b;">📚 <em>Démarche clinique, ch. 1</em></span></div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;margin-top:12px;">
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+            <strong style="color:#1d4ed8;">① Par catégorie physiopathologique</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Mécanique · péri-articulaire · inflammatoire · infectieux · néoplasique · vasculaire · métabolique · référé<br><br><em>Exemple, pour une douleur au genou :</em> problème mécanique (entorse, déchirure méniscale, fracture, arthrose), péri-articulaire (bursite, tendinite, cellulite), inflammatoire intra-articulaire (arthrite septique, microcristalline, systémique), ou <strong>douleur référée</strong> (hanche).</div>
+          </div>
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;">
+            <strong style="color:#d35400;">② Par le mode de présentation ⭐</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🎯 <strong>C'est l'un des éléments les plus rentables du tableau clinique</strong> : comment le problème a commencé, et comment il a évolué.<br><br><strong>Apparition subite et rapidement évolutive</strong> → mécanique (torsion, rupture, déchirure, compression, fracture), <strong>obstructif</strong> ou <strong>vasculaire</strong><br><br><strong>Apparition insidieuse, évolution plus lente</strong> → <strong>inflammatoire, infectieux ou néoplasique</strong></div>
+          </div>
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+            <strong style="color:#15803d;">③ Par la présentation typique</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">« <em>La clinique est une jungle peuplée de drôles d'animaux.</em> » Il faut d'abord <strong>reconnaître les présentations typiques</strong> — apprendre les signes et symptômes des maladies fréquentes avec leur présentation usuelle (le <strong>prototype</strong>).<br><br>🎯 <strong>C'est ce qui permet ensuite de repérer l'ATYPIQUE :</strong> si vous connaissez bien le portrait type, une situation hors norme déclenche intuitivement une remise en question.</div>
+          </div>
+          <div style="background:#ede9fe;border-radius:10px;padding:14px;">
+            <strong style="color:#6d28d9;">④ Par localisation anatomique ou système</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">« Qu'y a-t-il à cet endroit? »<br><br><em>Exemple, quadrant inférieur droit chez la femme :</em> côlon droit et appendice — mais aussi l'<strong>ovaire droit</strong>, d'où kyste rompu, abcès tubo-ovarien, <strong>grossesse ectopique</strong>.<br><br>Ou par système : digestif, urinaire, gynécologique, vasculaire, musculosquelettique.<br><br><em>En traumatisme :</em> passer en revue les structures — os, cartilage, capsule, ménisque, tendon, muscle, bourse, nerf.</div>
+          </div>
+          <div style="background:#f1f5f9;border-radius:10px;padding:14px;">
+            <strong style="color:#334155;">⑤ Par le « déjà vécu »</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">L'impression du patient que « c'est comme la dernière fois » a une <strong>valeur diagnostique réelle</strong> — mais il faut se positionner dessus.<br><br>🎯 Si une douleur thoracique <strong>ressemble à l'angor du passé</strong>, cet élément mérite une attention capitale.<br><br>⚠️ Mais l'inverse existe : le patient peut attribuer à tort son symptôme à une maladie connue.</div>
+          </div>
+          <div style="background:#fce4ec;border-radius:10px;padding:14px;">
+            <strong style="color:#c0392b;">⑥ Par les diagnostics dangereux</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">L'approche <strong>pronostique</strong> — voir le bloc dédié plus bas. C'est celle qui permet d'<strong>évoluer en clinique de façon sécuritaire</strong>.</div>
+          </div>
+        </div>
+
+        <div class="key-fact red" style="margin-top:12px;">🚨 <strong>Liste apprise par cœur ou schéma de classification? La critique est sévère et mérite d'être entendue :</strong> apprendre des listes de diagnostics est courant — mais « <em>on se souvient davantage du livre ou de la page du livre où se trouve la liste plutôt que de son contenu</em> ». Un usage abusif des listes produit une <strong>pensée dispersée</strong> : beaucoup de connaissances, mais mal organisées, et une incapacité à faire les liens nécessaires.<br><br>🎯 <strong>Le SCHÉMA DE CLASSIFICATION est plus efficace</strong>, parce qu'il guide le raisonnement par étapes successives. <em>Devant un problème articulaire :</em> l'atteinte est-elle <strong>mono ou polyarticulaire</strong>? <strong>symétrique ou asymétrique</strong>? <strong>mécanique ou inflammatoire</strong>? À chaque caractéristique s'associe un groupe de diagnostics, et le cheminement rapproche de la solution. <span style="font-size:11px;color:#64748b;">📚 <em>Démarche clinique, ch. 1</em></span></div>
+
+        <div class="key-fact green" style="margin-top:8px;">🔗 <strong>Ce guide est bâti sur ce principe</strong> — les blocs « approche » sont des schémas de classification, pas des listes : <em>Arythmies</em> (QRS fin ou large × régulier ou irrégulier), <em>Approche de la douleur articulaire</em>, <em>Imagerie de l'abdomen</em> (quelle question, quelle modalité), <em>DDx douleur abdominale</em>. Commencez par eux plutôt que par la section de la maladie que vous soupçonnez.</div>
+      </div>
+
+      <div class="block rx" style="margin-top:14px;border-left-color:#b45309;">
+        <div class="block-title" id="rc-3"><span class="tag">🔬 Raffiner, hiérarchiser, vérifier</span></div>
+
+        <div class="key-fact orange" style="margin-top:10px;">🎯 <strong>L'étape 2 n'est pas « ramasser toutes les données », c'est DÉPARTAGER.</strong> Le questionnaire et l'examen physique sont <strong>ciblés</strong>, et servent à remettre en cause les hypothèses initiales, en rejeter, en générer de nouvelles, et les <strong>hiérarchiser selon leur probabilité</strong> — pour aboutir à <strong>seulement deux ou trois hypothèses de travail</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Démarche clinique, ch. 1</em></span></div>
+
+        <div class="criteria-list" style="margin-top:12px;">
+          <div class="criteria-item"><div class="criteria-num blue">1</div><span>🎯 <strong>Identifier la « victime »</strong> — <em>qui</em> est cette personne? L'âge, le sexe, les habitudes et les comorbidités modifient les probabilités avant même le premier symptôme. On intègre ici les <strong>données épidémiologiques</strong> : prévalence des maladies, présence ou absence de facteurs de risque</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">2</div><span><strong>Traduire en langage médical</strong> — la <strong>transformation sémantique</strong> : convertir le récit du patient en termes cliniques (« une grosse douleur qui est devenue insoutenable » → douleur d'installation progressive, d'intensité sévère, avec impotence fonctionnelle)</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">3</div><span><strong>Chercher les données DISCRIMINANTES</strong> — celles qui <em>séparent</em> les hypothèses, pas celles qui sont simplement présentes. Une donnée compatible avec tous les diagnostics envisagés n'aide pas</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">4</div><span><strong>Vérifier la cohérence temporelle</strong> — <em>exemple du manuel :</em> une blessure traumatique importante fait mal <strong>immédiatement ou très rapidement</strong>, puis diminue avec le repos. Une douleur qui apparaît <strong>deux jours après</strong> un traumatisme mineur, progressive, avec œdème, rougeur et chaleur, oriente plutôt vers un <strong>processus inflammatoire</strong></span></div>
+          <div class="criteria-item"><div class="criteria-num red">!</div><span>🚨 <strong>Peser la valeur de chaque donnée</strong> — toutes n'ont pas le même poids. La fièvre attire l'attention et reçoit habituellement une valeur importante, mais elle peut <strong>confondre</strong> si le reste du tableau ne concorde pas (état général préservé, évolution favorable). Se demander : cette donnée est-elle vraiment aussi payante que je le crois?</span></div>
+        </div>
+      </div>
+
+      <div class="block flag" style="margin-top:14px;">
+        <div class="block-title" id="rc-4"><span class="tag">🐍 Chercher activement les diagnostics dangereux</span></div>
+
+        <div class="key-fact red" style="margin-top:10px;">🎯 <strong>L'image du manuel est juste :</strong> « <em>Dans la jungle clinique, la plupart des serpents sont inoffensifs, mais il existe des espèces dont la morsure est mortelle.</em> » Le devoir du clinicien est de <strong>reconnaître les serpents dangereux et de les rechercher activement</strong> — pas d'attendre qu'ils se manifestent. <span style="font-size:11px;color:#64748b;">📚 <em>Démarche clinique, ch. 1</em></span></div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
+          <div style="background:#fef2f2;border-radius:10px;padding:14px;border-left:4px solid #c0392b;">
+            <strong style="color:#c0392b;">🚩 Les réflexes de sécurité classiques</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🚨 <strong>« Toute femme en âge de procréer est enceinte jusqu'à preuve du contraire »</strong> — pour ne pas manquer la <strong>grossesse ectopique</strong><br><br>🚨 <strong>Douleur lombaire + syncope</strong> ou <strong>+ instabilité des signes vitaux</strong> chez une personne âgée → <strong>anévrisme de l'aorte abdominale rompu</strong><br><br>🚨 <strong>Mal de tête explosif</strong> → <strong>hémorragie sous-arachnoïdienne</strong><br><br>➜ Voir <em>Neuro-imagerie</em>, <em>Imagerie de l'abdomen</em>, <em>Contraception</em></div>
+          </div>
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;border-left:4px solid #d35400;">
+            <strong style="color:#d35400;">🚩 Les drapeaux rouges transversaux</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Certaines données sont des drapeaux rouges parce qu'elles s'associent à des maladies graves, <strong>quel que soit le contexte</strong> :<br><br>• <strong>Perte de poids involontaire</strong><br>• <strong>Expulsion de sang par un orifice</strong><br>• <strong>Hypotension significative</strong><br><br>🎯 <strong>Leur recherche systématique est ce qui permet d'évoluer en clinique de façon sécuritaire.</strong></div>
+          </div>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">💡 <strong>La question à se poser à voix haute avant de conclure :</strong> « <strong>Qu'est-ce qui, dans ce tableau, pourrait être grave — et puis-je vraiment l'exclure?</strong> » Dans l'exemple du manuel, même après avoir jugé le tableau atypique, les auteurs reviennent à la question : <em>et si c'était bel et bien une arthrite septique? Pouvons-nous vraiment exclure cette hypothèse?</em></div>
+      </div>
+
+      <div class="block flag" style="margin-top:14px;">
+        <div class="block-title" id="rc-5"><span class="tag">🪤 Les quatre biais cognitifs à connaître</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">🧩 <strong>Pourquoi ces biais existent :</strong> le travail clinique se fait à un rythme soutenu, avec des décisions rapides. On s'appuie donc sur des <strong>heuristiques</strong> — des processus de pensée rapides et intuitifs qui économisent du temps. Ils fonctionnent la plupart du temps. <strong>Les biais sont leur revers.</strong> <span style="font-size:11px;color:#64748b;">📚 <em>Démarche clinique, ch. 1, section 1.5.2</em></span></div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:20%;">Biais</th><th style="width:36%;">Mécanisme</th><th>Comment s'en prémunir</th></tr></thead>
+          <tbody>
+            <tr style="background:#fce4ec;"><td>🚨 <strong>Biais d'ancrage</strong><br><em>ou fermeture prématurée</em><br><strong>Le plus fréquent</strong></td><td>On se fixe sur une première impression et on <strong>cesse de la remettre en question</strong> à mesure que la démarche avance. « L'ancrage vient en quelque sorte figer » le raisonnement, et cette fermeture prématurée <strong>empêche une vision plus large du problème</strong></td><td>🎯 <strong>Se demander explicitement : « Qu'est-ce que ça pourrait être d'autre? »</strong> avant de conclure<br>Réévaluer quand une nouvelle donnée arrive, surtout si elle ne colle pas</td></tr>
+            <tr><td><strong>Biais de confirmation</strong></td><td>Un diagnostic plausible étant en tête, le clinicien cherche <strong>involontairement</strong> ce qui le confirme — et accorde moins de poids à ce qui le contredit</td><td>Chercher activement la <strong>donnée qui infirmerait</strong> l'hypothèse<br>« Quel élément, s'il était présent, me ferait changer d'avis? »</td></tr>
+            <tr style="background:#f1f5f9;"><td><strong>Biais de représentativité</strong></td><td>Inhérent à la pensée intuitive : on reconnaît une <strong>analogie avec un cas déjà rencontré</strong>. Cela fonctionne la majorité du temps — mais parfois la similarité apparente <strong>n'est pas appropriée</strong> à la nouvelle situation</td><td>Vérifier que les <strong>différences</strong> entre les deux cas ne sont pas déterminantes<br>Se méfier du « c'est exactement comme… »</td></tr>
+            <tr><td><strong>Disponibilité</strong></td><td>On envisage un diagnostic <strong>simplement parce qu'il vient spontanément à l'esprit</strong> — souvent parce qu'on vient de le voir, de le lire, ou qu'il a marqué</td><td>Se demander si ce diagnostic est vraiment <strong>probable ici</strong>, ou seulement <strong>récent dans ma mémoire</strong></td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="key-fact green" style="margin-top:12px;">✅ <strong>La bonne nouvelle, et le manuel insiste dessus :</strong> les sources d'erreur qui viennent <strong>du clinicien lui-même</strong> sont, la plupart du temps, <strong>identifiables et évitables</strong>. Deux leviers concrets :<br><br><strong>①</strong> <strong>Reconnaître ses états émotionnels altérés</strong> — <strong>fatigue, manque de sommeil, anxiété, préjugés</strong>. C'est nommé en premier, avant toute technique.<br><strong>②</strong> <strong>Bien organiser ses connaissances</strong>, pour dépendre le moins possible des raccourcis intuitifs.</div>
+      </div>
+
+      <div class="block rx" style="margin-top:14px;border-left-color:#15803d;">
+        <div class="block-title" id="rc-6"><span class="tag">🛠️ Optimiser son raisonnement</span></div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:12px;">
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+            <strong style="color:#15803d;">🖼️ Se représenter le problème</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Formuler le cas en <strong>une phrase de synthèse</strong>, en termes médicaux — âge, terrain, chronologie, symptôme cardinal, éléments discriminants.<br><br>💡 Si vous n'arrivez pas à formuler cette phrase, c'est que le problème n'est pas encore clair : c'est un <strong>signal, pas un détail</strong>.</div>
+          </div>
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+            <strong style="color:#1d4ed8;">📚 Construire une banque de scripts</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Un <strong>script clinique</strong> est la représentation organisée d'une maladie : qui elle touche, comment elle se présente, ce qui la distingue, ce qui l'accompagne.<br><br>🎯 <strong>C'est ce que fait ce guide</strong> — chaque section est un script. Les relire régulièrement les consolide bien mieux que de mémoriser des listes.</div>
+          </div>
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;">
+            <strong style="color:#d35400;">🧮 Éviter la surcharge cognitive</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">La mémoire de travail est limitée. <strong>Externaliser</strong> — écrire, schématiser, utiliser un aide-mémoire — libère des ressources pour raisonner.<br><br>💡 Consulter une référence au chevet n'est pas un aveu de faiblesse : c'est une <strong>stratégie de réduction de la charge cognitive</strong>.</div>
+          </div>
+          <div style="background:#ede9fe;border-radius:10px;padding:14px;">
+            <strong style="color:#6d28d9;">🪞 Développer sa métacognition</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Penser à sa propre façon de penser.</strong> S'arrêter délibérément avant de conclure et se demander :<br>• Sur quoi repose ma conclusion?<br>• Ai-je cherché ce qui la contredit?<br>• Suis-je fatigué, pressé, influencé?<br><br>🎯 C'est le seul rempart réellement efficace contre les biais.</div>
+          </div>
+        </div>
+
+        <div class="key-fact green" style="margin-top:12px;">✅ <strong>En résumé :</strong> ① <strong>générer tôt et largement</strong> — courants, rares mais graves, et le bon · ② <strong>raffiner par un questionnaire ciblé</strong> vers 2 ou 3 hypothèses · ③ <strong>chercher activement le dangereux</strong> · ④ <strong>se relire avant de conclure</strong> : « qu'est-ce que ça pourrait être d'autre? »</div>
+      </div>
+    </div>
+
     <div class="section" id="sec-calculateurs">
       <div class="section-header">
         <div class="section-accent" style="background:var(--yellow)">🧮</div>
@@ -54597,7 +54972,9 @@ Fer &rarr; constipation · interactions chélation nombreuses</div>
 // ═══ SEARCH INDEX ═══
 const SEARCH_INDEX = [
   { id:'home',                title:'Accueil',                        specialty:'',               keywords:['accueil'] },
-  { id:'calculateurs',        title:'Calculateurs & Outils',          specialty:'',               keywords:['calculateur','score','framingham','cha2ds2','has-bled','wells','grace','timi','nihss','curb','meld'] },
+    { id:'entrevue',            title:'L\'Entrevue Médicale',            specialty:'Méthode clinique',  keywords:['entrevue','entrevue médicale','communication','accueil','contrat initial','question ouverte','question fermée','écoute active','silence','empathie','reformulation','résumé','clarification','mccp','méthode clinique centrée sur le patient','motif de consultation','histoire de la maladie actuelle','hma','caractériser un symptôme','mode d apparition','revue des systèmes','habitudes de vie','antécédents','mauvaise nouvelle','annonce','colère','interprète','filet de sécurité','reconsulter','gphc','démarche clinique'] },
+  { id:'raisonnement',        title:'Le Raisonnement Clinique',       specialty:'Méthode clinique',  keywords:['raisonnement clinique','hypothèse','hypothèse diagnostique','générer des hypothèses','schéma de classification','liste apprise par coeur','pensée dispersée','présentation typique','prototype','mode de présentation','localisation anatomique','identifier la victime','transformation sémantique','donnée discriminante','drapeau rouge','diagnostic dangereux','biais cognitif','ancrage','fermeture prématurée','biais de confirmation','représentativité','disponibilité','heuristique','métacognition','script clinique','surcharge cognitive','démarche clinique'] },
+{ id:'calculateurs',        title:'Calculateurs & Outils',          specialty:'',               keywords:['calculateur','score','framingham','cha2ds2','has-bled','wells','grace','timi','nihss','curb','meld'] },
     { id:'ecg',                 title:'ECG — Lecture systématique',     specialty:'Cardiologie',     keywords:['ecg','électrocardiogramme','tracé','grille','calibration','25 mm/s','petit carreau','rythme sinusal','fréquence cardiaque','1500','300 150 100','intervalle pr','qrs','qt','qtc','bazett','torsade de pointes','axe qrs','déviation axiale','di','avf','progression onde r','transition','territoire','antéroseptal','antéro-apical','antérolatéral','inférieur','postérieur','iva','interventriculaire antérieure','lad','circonflexe','coronaire droite','sus-décalage','sous-décalage','stemi','image en miroir','onde q','onde t hyperaiguë','bav','wenckebach','mobitz','bloc auriculoventriculaire','bloc de branche','bbg','bbd','oreilles de lapin','hypertrophie','lilly'] },
 { id:'hta',                 title:'HTA (Primaire & Secondaire)',     specialty:'Cardiologie',    keywords:['hta','hypertension','tension','bithérapie','ieca','ara','diurétique','bcc','mapa','secondaire','hyperaldostéronisme','phéochromocytome','cushing','coarctation','rénovasculaire','mpad','sprint','réfractaire'] },
   { id:'dyslipidémie',        title:'Dyslipidémie',                   specialty:'Cardiologie',    keywords:['dyslipidémie','dlp','ldl','statine','ézétimibe','pcsk9','framingham','cholestérol'] },
@@ -54982,7 +55359,10 @@ document.addEventListener('click', e => {
 // ═══ SECTION NAVIGATION ═══
 // Ordered list of all section IDs (matches sidebar order)
 const SECTION_ORDER = [
-  'home','calculateurs',
+  'home',
+  // Méthode clinique
+  'entrevue','raisonnement',
+  'calculateurs',
   // Cardiologie
   'ecg','arythmies','hta','athero','dyslipidémie','mcas','sca','fa','ic','chirurgie-cardiaque','stenose-aortique','pericardite','map',
   // Néphrologie
@@ -55048,7 +55428,9 @@ const SECTION_TITLES = {
   'geriatrie-eval':'Évaluation Gériatrique','delirium':'Délirium','tnc':'Troubles Neurocognitifs','chutes':'Chutes & Mobilité','polypharmacie':'Polypharmacie & Déprescription',
   'athero':'Athérosclérose','anevrisme':'Anévrisme','rein-anatomie':'Anatomie Rein','bases-endo':'Bases Physiologiques Endo.','pneumo-eval':'Évaluation Pulmonaire','pneumo-gazo':'Gazométrie & Acide-Base','pneumo-aco':'ACO','pneumo-o2':'O₂ Domicile & Conduite','pneumo-pneumonie':'Pneumonie','pneumo-autres-patho':'Autres Patho. Pulmonaires','pneumo-ira':'Insuffisance Respiratoire','pneumo-htp':'HTP & Cor Pulmonale','douleur':'Douleur & Analgésie','ddx-abdo':'Douleur Abdominale — DDx','mii':'MII — Crohn & Colite',
   'nutrition':'Nutrition & Dénutrition','diverticulite':'Diverticulite Aiguë','choledocholithiase':'Cholédocholithiase','cholangite':'Cholangite','pancreatite':'Pancréatite Aiguë','msk':'Guide MSK','quiz':'Quiz',
-  'home':'Accueil','calculateurs':'Calculateurs',
+  'home':'Accueil','entrevue':'L\'Entrevue Médicale',
+  'raisonnement':'Le Raisonnement Clinique',
+  'calculateurs':'Calculateurs',
   'ecg':'ECG — Lecture systématique',
   'hta':'HTA (Primaire & Secondaire)','dyslipidémie':'Dyslipidémie',
   'mcas':'MCAS & Angine','sca':'SCA','fa':'Fibrillation Auriculaire','arythmies':'Arythmies',
