@@ -1026,6 +1026,7 @@ m
         <span class="emoji">🫀</span> Cardiologie
         <svg class="chevron" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>      </div>
       <div class="specialty-items">
+        <div class="nav-item" onclick="showSection('ecg')">ECG — Lecture systématique</div>
         <div class="nav-item" onclick="showSection('hta')">HTA (Primaire &amp; Secondaire)</div>
         <div class="nav-item" onclick="showSection('athero')">Athérosclérose</div>
         <div class="nav-item" onclick="showSection('dyslipidémie')">Dyslipidémie</div>
@@ -1418,7 +1419,7 @@ m
           <div class="home-card-icon" style="background:#ffe8e8;color:#b91c1c">🫀</div>
           <div class="home-card-body">
             <div class="home-card-name">Cardiologie</div>
-            <div class="home-card-count">12 sections</div>
+            <div class="home-card-count">13 sections</div>
           </div>
         </div>
         <div class="home-card" onclick="showSection('rein-anatomie'); openGroup('grp-nephro')">
@@ -2056,7 +2057,474 @@ m
      
     </div>
 
-<div class="section" id="sec-hta">
+<div class="section" id="sec-ecg">
+      <div class="section-header">
+        <div class="section-accent" style="background:#be123c">📈</div>
+        <div class="section-title"><h1>ECG — Lecture systématique</h1><div class="breadcrumb">Cardiologie <span class="breadcrumb-sep">·</span> Grille &amp; intervalles · Axe <span class="breadcrumb-sep">·</span> Territoires <span class="breadcrumb-sep">·</span> Ischémie · Blocs</div></div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;">
+        <button onclick="goToBlock('ecg-1')" style="background:#374151;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">📐 La grille &amp; le tracé</button>
+        <button onclick="goToBlock('ecg-2')" style="background:#0369a1;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧭 Lecture en 8 temps</button>
+        <button onclick="goToBlock('ecg-3')" style="background:#0f766e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">💓 Rythme &amp; fréquence</button>
+        <button onclick="goToBlock('ecg-4')" style="background:#b45309;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">📏 Intervalles &amp; QTc</button>
+        <button onclick="goToBlock('ecg-5')" style="background:#6d28d9;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧲 Axe QRS</button>
+        <button onclick="goToBlock('ecg-6')" style="background:#be123c;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🗺️ Territoires &amp; artères</button>
+        <button onclick="goToBlock('ecg-7')" style="background:#991b1b;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🚨 Ischémie &amp; miroir</button>
+        <button onclick="goToBlock('ecg-8')" style="background:#4338ca;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🚧 Blocs — BAV &amp; branches</button>
+        <button onclick="goToBlock('ecg-9')" style="background:#c0392b;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🚨 Red flags</button>
+      </div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:20px;">
+        <div style="flex:1;min-width:95px;background:#FEE2E2;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#b91c1c;">25 mm/s</div><div style="font-size:11px;color:#555;margin-top:4px;">Vitesse standard</div></div>
+        <div style="flex:1;min-width:95px;background:#FEF3C7;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#b45309;">1 mm = 0,04 s</div><div style="font-size:11px;color:#555;margin-top:4px;">Petit carreau</div></div>
+        <div style="flex:1;min-width:95px;background:#EEF2FF;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#1C3F8F;">1500</div><div style="font-size:11px;color:#555;margin-top:4px;">÷ petits carreaux = FC</div></div>
+        <div style="flex:1;min-width:95px;background:#F3E8FF;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#6d28d9;">−30° à +90°</div><div style="font-size:11px;color:#555;margin-top:4px;">Axe QRS normal</div></div>
+      </div>
+
+      <div class="block def" style="margin-top:14px;">
+        <div class="block-title" id="ecg-1"><span class="tag">📐 La grille, la calibration &amp; le tracé normal</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>Tout part du papier.</strong> L'enregistrement se fait à la <strong>vitesse standard de 25 mm/s</strong>, sur une grille de lignes espacées de 1 mm, chaque cinquième ligne étant plus épaisse. Horizontalement, <strong>1 mm = 0,04 s</strong> et <strong>5 mm (une ligne épaisse) = 0,2 s</strong>. Verticalement, <strong>1 mm = 0,1 mV</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Lilly,</em> Pathophysiology of Heart Disease<em>, ch. 4</em></span></div>
+
+        <div style="background:#fff;border:1px solid #cbd5e1;border-radius:10px;padding:14px;margin-top:12px;">
+          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin-bottom:8px;">Schéma &mdash; un cycle P-QRS-T sur la grille</div>
+          <svg viewBox="0 0 620 280" style="width:100%;height:auto;" role="img" aria-label="Trace ECG normal annote sur la grille millimetree">
+            <defs>
+              <pattern id="ecgGridSmall" width="10" height="10" patternUnits="userSpaceOnUse">
+                <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#fbcfd4" stroke-width="0.6"/>
+              </pattern>
+              <pattern id="ecgGridBig" width="50" height="50" patternUnits="userSpaceOnUse">
+                <rect width="50" height="50" fill="url(#ecgGridSmall)"/>
+                <path d="M 50 0 L 0 0 0 50" fill="none" stroke="#ef9aa6" stroke-width="1.3"/>
+              </pattern>
+            </defs>
+            <rect x="0" y="0" width="620" height="280" fill="url(#ecgGridBig)"/>
+
+            <!-- signal de calibration : 10 mm = 1,0 mV -->
+            <path d="M 10,200 L 25,200 L 25,100 L 45,100 L 45,200 L 60,200" fill="none" stroke="#0f172a" stroke-width="2.4"/>
+            <text x="12" y="92" fill="#0f172a" font-size="10.5" font-weight="700">calibration 1,0 mV = 10 mm</text>
+
+            <!-- tracé : ligne de base y=200 -->
+            <path d="M 60,200 L 90,200
+                     Q 105,178 120,200
+                     L 150,200
+                     L 155,210 L 165,110 L 175,220 L 180,200
+                     L 215,200
+                     Q 245,165 275,200
+                     L 320,200
+                     Q 335,178 350,200
+                     L 380,200
+                     L 385,210 L 395,110 L 405,220 L 410,200
+                     L 445,200
+                     Q 475,165 505,200
+                     L 610,200"
+                  fill="none" stroke="#0f172a" stroke-width="2.6" stroke-linejoin="round"/>
+
+            <!-- étiquettes des ondes -->
+            <text x="105" y="168" text-anchor="middle" fill="#1d4ed8" font-size="13" font-weight="700">P</text>
+            <text x="152" y="228" fill="#1d4ed8" font-size="12" font-weight="700">Q</text>
+            <text x="165" y="102" text-anchor="middle" fill="#1d4ed8" font-size="13" font-weight="700">R</text>
+            <text x="178" y="238" fill="#1d4ed8" font-size="12" font-weight="700">S</text>
+            <text x="245" y="155" text-anchor="middle" fill="#1d4ed8" font-size="13" font-weight="700">T</text>
+
+            <!-- intervalle PR -->
+            <g stroke="#15803d" stroke-width="1.8">
+              <line x1="90" y1="248" x2="150" y2="248"/>
+              <line x1="90" y1="243" x2="90" y2="253"/><line x1="150" y1="243" x2="150" y2="253"/>
+            </g>
+            <text x="120" y="266" text-anchor="middle" fill="#15803d" font-size="11.5" font-weight="700">PR 0,12–0,20 s</text>
+
+            <!-- QRS -->
+            <g stroke="#c0392b" stroke-width="1.8">
+              <line x1="150" y1="72" x2="180" y2="72"/>
+              <line x1="150" y1="67" x2="150" y2="77"/><line x1="180" y1="67" x2="180" y2="77"/>
+            </g>
+            <text x="165" y="62" text-anchor="middle" fill="#c0392b" font-size="11.5" font-weight="700">QRS &lt; 0,12 s</text>
+
+            <!-- QT -->
+            <g stroke="#6d28d9" stroke-width="1.8">
+              <line x1="150" y1="248" x2="275" y2="248" stroke-dasharray="4,3"/>
+              <line x1="275" y1="243" x2="275" y2="253"/>
+            </g>
+            <text x="232" y="266" text-anchor="middle" fill="#6d28d9" font-size="11.5" font-weight="700">QT</text>
+
+            <!-- segment ST -->
+            <circle cx="197" cy="200" r="4.5" fill="none" stroke="#b45309" stroke-width="2"/>
+            <text x="197" y="186" text-anchor="middle" fill="#b45309" font-size="11" font-weight="700">ST</text>
+
+            <!-- RR -->
+            <g stroke="#0f766e" stroke-width="1.8">
+              <line x1="165" y1="256" x2="395" y2="256"/>
+              <line x1="165" y1="251" x2="165" y2="261"/><line x1="395" y1="251" x2="395" y2="261"/>
+            </g>
+            <text x="330" y="274" text-anchor="middle" fill="#0f766e" font-size="11.5" font-weight="700">intervalle R–R</text>
+          </svg>
+        </div>
+
+        <div class="key-fact red" style="margin-top:12px;">⚠️ <strong>Vérifier la calibration AVANT d'appliquer un critère de voltage.</strong> L'appareil inscrit un signal de <strong>1,0 mV</strong> en début ou en fin de tracé; au réglage standard il mesure <strong>10 mm</strong> de haut. Devant des complexes très amples — <strong>hypertrophie ventriculaire gauche, bloc de branche</strong> —, on enregistre parfois à <strong>demi-voltage</strong> pour que tout entre dans la feuille : le signal de calibration ne fait alors que <strong>5 mm</strong>. 🚨 <strong>Si vous ne le remarquez pas, vous sous-estimez de moitié toutes les amplitudes</strong> et vous manquerez l'hypertrophie que vous cherchiez. <span style="font-size:11px;color:#64748b;">📚 <em>Lilly, ch. 4</em></span></div>
+      </div>
+
+      <div class="block rx" style="margin-top:14px;border-left-color:#0369a1;">
+        <div class="block-title" id="ecg-2"><span class="tag">🧭 Lire dans le même ordre, chaque fois</span></div>
+
+        <div class="key-fact green" style="margin-top:10px;">🎯 <strong>Comme au thorax et à l'abdomen : c'est l'ordre fixe qui protège contre l'oubli.</strong> Beaucoup d'anomalies sont subtiles et se manquent quand on saute directement à ce qu'on cherche. Voici la séquence classique.</div>
+
+        <div class="criteria-list" style="margin-top:12px;">
+          <div class="criteria-item"><div class="criteria-num red">1</div><span><strong>Calibration</strong> — le signal de 1,0 mV fait-il bien 10 mm? Et la vitesse est-elle de 25 mm/s?</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">2</div><span><strong>Rythme</strong> — est-il sinusal? Les quatre critères sont au bloc suivant</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">3</div><span><strong>Fréquence</strong> — trois méthodes selon que le rythme est régulier ou non</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">4</div><span><strong>Intervalles</strong> — PR, QRS, QT et QTc</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">5</div><span><strong>Axe</strong> du QRS dans le plan frontal</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">6</div><span><strong>Ondes P</strong> — morphologie, taille : hypertrophie auriculaire?</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">7</div><span><strong>QRS</strong> — voltage (hypertrophie ventriculaire), <strong>ondes Q pathologiques</strong>, progression de l'onde R</span></div>
+          <div class="criteria-item"><div class="criteria-num red">!</div><span>🚨 <strong>ST et T</strong> — sus-décalage, sous-décalage, inversion : c'est ici que se joue l'ischémie aiguë</span></div>
+          <div class="criteria-item"><div class="criteria-num red">+</div><span>🎯 <strong>Et toujours : comparer avec un tracé antérieur.</strong> Un bloc de branche gauche ancien et un bloc de branche gauche nouveau n'ont pas du tout la même signification</span></div>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">💡 <strong>Le principe qui vaut pour tout l'ECG :</strong> il ne se lit <strong>jamais isolément</strong>. Le même sous-décalage ST signifie une chose chez une personne avec douleur thoracique, une autre sous digoxine, une autre encore en hypokaliémie. <strong>Le tracé se lit avec la personne devant soi.</strong></div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;border-left-color:#0f766e;">
+        <div class="block-title" id="ecg-3"><span class="tag">💓 Rythme sinusal &amp; calcul de la fréquence</span></div>
+
+        <div class="key-fact green" style="margin-top:10px;">✅ <strong>Les quatre critères du rythme sinusal</strong> — ils doivent <strong>tous</strong> être remplis : <strong>①</strong> chaque onde P est suivie d'un QRS · <strong>②</strong> chaque QRS est précédé d'une onde P · <strong>③</strong> l'onde P est <strong>positive en DI, DII et DIII</strong> · <strong>④</strong> l'intervalle PR est <strong>supérieur à 0,12 s</strong> (plus de 3 petits carreaux). <span style="font-size:11px;color:#64748b;">📚 <em>Lilly, ch. 4</em></span><br><br>Ensuite, la fréquence qualifie le rythme : <strong>60 à 100/min</strong> = rythme sinusal normal · <strong>&lt; 60</strong> = bradycardie sinusale · <strong>&gt; 100</strong> = tachycardie sinusale.</div>
+
+        <div style="background:#fff;border:1px solid #cbd5e1;border-radius:10px;padding:14px;margin-top:12px;">
+          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin-bottom:8px;">Schéma &mdash; trois façons de calculer la fréquence</div>
+          <svg viewBox="0 0 620 250" style="width:100%;height:auto;" role="img" aria-label="Trois methodes de calcul de la frequence cardiaque a l ECG">
+            <defs>
+              <pattern id="ecgFCS" width="10" height="10" patternUnits="userSpaceOnUse">
+                <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#fbcfd4" stroke-width="0.6"/>
+              </pattern>
+              <pattern id="ecgFCB" width="50" height="50" patternUnits="userSpaceOnUse">
+                <rect width="50" height="50" fill="url(#ecgFCS)"/>
+                <path d="M 50 0 L 0 0 0 50" fill="none" stroke="#ef9aa6" stroke-width="1.3"/>
+              </pattern>
+            </defs>
+            <rect x="0" y="0" width="620" height="140" fill="url(#ecgFCB)"/>
+            <!-- 3 QRS espacés de 4 grands carreaux (200px) -->
+            <path d="M 20,100 L 55,100 L 60,110 L 70,40 L 80,120 L 85,100 L 220,100
+                     L 225,110 L 235,40 L 245,120 L 250,100 L 385,100
+                     L 390,110 L 400,40 L 410,120 L 415,100 L 610,100"
+                  fill="none" stroke="#0f172a" stroke-width="2.6" stroke-linejoin="round"/>
+            <!-- comptage des grands carreaux -->
+            <g stroke="#be123c" stroke-width="1.8">
+              <line x1="70" y1="132" x2="235" y2="132"/>
+              <line x1="70" y1="127" x2="70" y2="137"/><line x1="235" y1="127" x2="235" y2="137"/>
+            </g>
+            <g font-size="12" font-weight="700" fill="#be123c" text-anchor="middle">
+              <text x="95" y="126">300</text><text x="135" y="126">150</text>
+              <text x="175" y="126">100</text><text x="215" y="126">75</text>
+            </g>
+            <!-- méthodes -->
+            <g font-size="12.5">
+              <rect x="10" y="150" width="196" height="88" rx="8" fill="#EEF2FF"/>
+              <text x="24" y="170" fill="#1C3F8F" font-weight="700">① Rythme RÉGULIER</text>
+              <text x="24" y="190" fill="#334155">FC = 1500 ÷ nombre de</text>
+              <text x="24" y="207" fill="#334155">PETITS carreaux entre 2 QRS</text>
+              <text x="24" y="228" fill="#64748b" font-size="11.5">le calcul exact</text>
+
+              <rect x="212" y="150" width="196" height="88" rx="8" fill="#FEE2E2"/>
+              <text x="226" y="170" fill="#b91c1c" font-weight="700">② Compter les GRANDS</text>
+              <text x="226" y="190" fill="#334155" font-weight="700">300 – 150 – 100 – 75 – 60 – 50</text>
+              <text x="226" y="207" fill="#334155">un chiffre par grand carreau</text>
+              <text x="226" y="228" fill="#64748b" font-size="11.5">rapide, de tête, au chevet</text>
+
+              <rect x="414" y="150" width="196" height="88" rx="8" fill="#FEF3C7"/>
+              <text x="428" y="170" fill="#b45309" font-weight="700">③ Rythme IRRÉGULIER</text>
+              <text x="428" y="190" fill="#334155">Compter les complexes</text>
+              <text x="428" y="207" fill="#334155">sur <tspan font-weight="700">6 secondes</tspan> × 10</text>
+              <text x="428" y="228" fill="#64748b" font-size="11.5">repères de 3 s en marge</text>
+            </g>
+          </svg>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">⚠️ <strong>En fibrillation auriculaire, les deux premières méthodes ne s'appliquent pas</strong> — l'irrégularité les rend fausses. Il faut compter sur 6 secondes. Le papier porte d'ailleurs des <strong>repères espacés de 3 secondes</strong> en haut ou en bas du tracé, précisément pour cela. ➜ Voir <em>Fibrillation auriculaire</em>.</div>
+      </div>
+
+      <div class="block para" style="margin-top:14px;border-left-color:#b45309;">
+        <div class="block-title" id="ecg-4"><span class="tag">📏 Intervalles &amp; QT corrigé</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">💡 <strong>Une règle de mesure souvent ignorée :</strong> chaque intervalle se mesure <strong>dans la dérivation où il est le plus long</strong> — ils varient d'une dérivation à l'autre. Mesurer au hasard, c'est sous-estimer. <span style="font-size:11px;color:#64748b;">📚 <em>Lilly, ch. 4</em></span></div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:14%;">Intervalle</th><th style="width:22%;">Mesuré de … à …</th><th style="width:16%;">Normale</th><th>Si allongé / raccourci</th></tr></thead>
+          <tbody>
+            <tr style="background:#e8f4fd;"><td><strong>PR</strong></td><td>Début de l'onde P → début du QRS</td><td><strong>0,12 – 0,20 s</strong><br><em>3 à 5 petits carreaux</em></td><td><strong>Allongé</strong> → bloc auriculoventriculaire (voir bloc Blocs)<br><strong>Court</strong> → préexcitation (voie accessoire)</td></tr>
+            <tr><td><strong>QRS</strong></td><td>Début → fin du complexe QRS</td><td><strong>&lt; 0,12 s</strong><br><em>moins de 3 petits carreaux</em></td><td>🚨 <strong>Élargi</strong> → bloc de branche, rythme ventriculaire, hyperkaliémie, stimulateur, certaines intoxications<br>➜ Voir <em>Dyskaliémies</em></td></tr>
+            <tr style="background:#fce4ec;"><td><strong>QT</strong></td><td>Début du QRS → <strong>fin de l'onde T</strong></td><td>Dépend de la fréquence → <strong>corriger</strong></td><td>🚨 <strong>QTc long</strong> → risque de <strong>torsades de pointes</strong> : médicaments, hypokaliémie, hypomagnésémie, hypocalcémie, congénital</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
+          <div style="background:#ede9fe;border-radius:10px;padding:14px;border-left:4px solid #6d28d9;">
+            <strong style="color:#6d28d9;">🧮 Corriger le QT — formule de Bazett</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Le QT <strong>raccourcit quand la fréquence monte</strong> : il faut donc le corriger avant de l'interpréter.<br><br><div style="background:#fff;border-radius:8px;padding:10px;text-align:center;font-size:15px;font-weight:700;color:#4c1d95;">QTc = QT ÷ √(R–R)</div><br><strong>Exemple de Lilly :</strong> QT = 8 petits carreaux = <strong>0,32 s</strong>; R–R = 15 petits carreaux = <strong>0,6 s</strong>.<br>QTc = 0,32 ÷ √0,6 = 0,32 ÷ 0,775 = <strong>0,41 s</strong><br><br>⚠️ <strong>Le R–R s'exprime en secondes, pas en carreaux</strong> — c'est l'erreur de calcul la plus fréquente.</div>
+          </div>
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;border-left:4px solid #15803d;">
+            <strong style="color:#15803d;">👁️ La règle rapide, au chevet</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🎯 <strong>Si la fréquence est entre 60 et 100/min</strong> : le QT est normal lorsqu'il occupe <strong>visuellement moins de la moitié de l'intervalle entre deux QRS consécutifs</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Lilly, ch. 4</em></span><br><br>💡 Utile pour un premier coup d'œil — mais <strong>hors de cette plage de fréquence, elle ne tient plus</strong> : il faut calculer.<br><br>➜ Les seuils d'alerte et les médicaments en cause sont détaillés dans <em>Flutter &amp; Arythmies</em> (amiodarone) et dans le <em>Répertoire des médicaments</em>.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block para" style="margin-top:14px;border-left-color:#6d28d9;">
+        <div class="block-title" id="ecg-5"><span class="tag">🧲 L'axe du QRS en deux dérivations</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>L'axe moyen du QRS</strong> est la moyenne des forces électriques du plan frontal pendant la dépolarisation ventriculaire. <strong>Il est normal entre −30° et +90°.</strong> Plus négatif que −30° = <strong>déviation axiale gauche</strong>; au-delà de +90° = <strong>déviation axiale droite</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Lilly, ch. 4</em></span></div>
+
+        <div style="background:#fff;border:1px solid #cbd5e1;border-radius:10px;padding:14px;margin-top:12px;">
+          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin-bottom:8px;">Schéma &mdash; deux dérivations suffisent : DI et aVF</div>
+          <svg viewBox="0 0 620 280" style="width:100%;height:auto;" role="img" aria-label="Determination rapide de l axe QRS avec les derivations DI et aVF">
+            <!-- quadrants -->
+            <rect x="150" y="30" width="150" height="110" fill="#DCFCE7"/>
+            <rect x="300" y="30" width="150" height="110" fill="#EEF2FF"/>
+            <rect x="150" y="140" width="150" height="110" fill="#FEF3C7"/>
+            <rect x="300" y="140" width="150" height="110" fill="#FEE2E2"/>
+            <!-- axes -->
+            <line x1="150" y1="140" x2="450" y2="140" stroke="#334155" stroke-width="2"/>
+            <line x1="300" y1="30" x2="300" y2="250" stroke="#334155" stroke-width="2"/>
+            <text x="458" y="136" fill="#334155" font-size="12" font-weight="700">DI +</text>
+            <text x="126" y="136" fill="#334155" font-size="12" font-weight="700">DI −</text>
+            <text x="300" y="266" text-anchor="middle" fill="#334155" font-size="12" font-weight="700">aVF +</text>
+            <text x="300" y="22" text-anchor="middle" fill="#334155" font-size="12" font-weight="700">aVF −</text>
+            <!-- quadrant labels -->
+            <text x="225" y="70" text-anchor="middle" fill="#15803d" font-size="12.5" font-weight="700">DI +  aVF −</text>
+            <text x="225" y="92" text-anchor="middle" fill="#15803d" font-size="12" font-weight="700">DÉVIATION GAUCHE</text>
+            <text x="225" y="112" text-anchor="middle" fill="#334155" font-size="11">(ou variante normale</text>
+            <text x="225" y="128" text-anchor="middle" fill="#334155" font-size="11">jusqu&rsquo;à −30°)</text>
+
+            <text x="375" y="78" text-anchor="middle" fill="#1C3F8F" font-size="12.5" font-weight="700">DI +  aVF +</text>
+            <text x="375" y="100" text-anchor="middle" fill="#1C3F8F" font-size="13" font-weight="700">✅ AXE NORMAL</text>
+
+            <text x="225" y="185" text-anchor="middle" fill="#b45309" font-size="12.5" font-weight="700">DI −  aVF −</text>
+            <text x="225" y="207" text-anchor="middle" fill="#b45309" font-size="12" font-weight="700">AXE INDÉTERMINÉ</text>
+            <text x="225" y="226" text-anchor="middle" fill="#334155" font-size="11">« terre de personne »</text>
+
+            <text x="375" y="185" text-anchor="middle" fill="#b91c1c" font-size="12.5" font-weight="700">DI −  aVF +</text>
+            <text x="375" y="207" text-anchor="middle" fill="#b91c1c" font-size="12" font-weight="700">DÉVIATION DROITE</text>
+
+            <!-- légende méthode -->
+            <rect x="10" y="30" width="126" height="220" rx="8" fill="#f1f5f9"/>
+            <text x="24" y="54" fill="#0f172a" font-size="12.5" font-weight="700">La méthode</text>
+            <text x="24" y="78" fill="#334155" font-size="11.5">① Regarder si le</text>
+            <text x="24" y="94" fill="#334155" font-size="11.5">QRS est globalement</text>
+            <text x="24" y="110" fill="#334155" font-size="11.5">positif ou négatif</text>
+            <text x="24" y="126" fill="#334155" font-size="11.5">en <tspan font-weight="700">DI</tspan></text>
+            <text x="24" y="150" fill="#334155" font-size="11.5">② Même chose</text>
+            <text x="24" y="166" fill="#334155" font-size="11.5">en <tspan font-weight="700">aVF</tspan></text>
+            <text x="24" y="190" fill="#334155" font-size="11.5">③ Croiser les deux</text>
+            <text x="24" y="206" fill="#334155" font-size="11.5">dans le tableau</text>
+            <text x="24" y="234" fill="#64748b" font-size="11">Normale : −30° à +90°</text>
+          </svg>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">🔍 <strong>Ce que la déviation peut signaler :</strong> une <strong>déviation gauche</strong> évoque une hémibloc antérieur gauche, une hypertrophie ventriculaire gauche ou un infarctus inférieur ancien. Une <strong>déviation droite</strong> évoque une hypertrophie ventriculaire droite, une embolie pulmonaire, une MPOC ou un hémibloc postérieur gauche. 💡 Comme toujours, <strong>l'axe seul ne diagnostique rien</strong> — il oriente.</div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;border-left-color:#be123c;">
+        <div class="block-title" id="ecg-6"><span class="tag">🗺️ Territoires — quelles dérivations, quelle artère</span></div>
+
+        <div class="key-fact red" style="margin-top:10px;">🎯 <strong>C'est le tableau qui transforme un ECG en information anatomique.</strong> Les dérivations qui présentent l'anomalie indiquent <strong>la paroi atteinte</strong>, et donc <strong>l'artère probablement en cause</strong>. C'est ce qui permet d'anticiper les complications avant même la coronarographie.</div>
+
+        <div style="background:#0f172a;border-radius:10px;padding:14px;margin-top:12px;">
+          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#94a3b8;margin-bottom:8px;">Schéma &mdash; les 12 dérivations regroupées par territoire</div>
+          <svg viewBox="0 0 620 250" style="width:100%;height:auto;" role="img" aria-label="Correspondance entre derivations ECG territoires myocardiques et arteres coronaires">
+            <!-- INFÉRIEUR -->
+            <rect x="12" y="20" width="142" height="200" rx="9" fill="#78350f"/>
+            <text x="83" y="44" text-anchor="middle" fill="#fde68a" font-size="13" font-weight="700">INFÉRIEUR</text>
+            <rect x="28" y="58" width="110" height="72" rx="7" fill="#fbbf24"/>
+            <text x="83" y="84" text-anchor="middle" fill="#451a03" font-size="17" font-weight="800">II · III</text>
+            <text x="83" y="112" text-anchor="middle" fill="#451a03" font-size="17" font-weight="800">aVF</text>
+            <text x="83" y="158" text-anchor="middle" fill="#fde68a" font-size="12.5" font-weight="700">Coronaire droite</text>
+            <text x="83" y="176" text-anchor="middle" fill="#fed7aa" font-size="11.5">(RCA)</text>
+            <text x="83" y="202" text-anchor="middle" fill="#fecaca" font-size="11" font-weight="700">🚨 bradycardie · BAV</text>
+
+            <!-- ANTÉRO-SEPTAL -->
+            <rect x="164" y="20" width="142" height="200" rx="9" fill="#7f1d1d"/>
+            <text x="235" y="44" text-anchor="middle" fill="#fecaca" font-size="13" font-weight="700">ANTÉROSEPTAL</text>
+            <rect x="180" y="58" width="110" height="72" rx="7" fill="#f87171"/>
+            <text x="235" y="102" text-anchor="middle" fill="#450a0a" font-size="19" font-weight="800">V1 · V2</text>
+            <text x="235" y="158" text-anchor="middle" fill="#fecaca" font-size="12.5" font-weight="700">IVA (LAD)</text>
+            <text x="235" y="176" text-anchor="middle" fill="#fed7d7" font-size="11.5">interventriculaire ant.</text>
+
+            <!-- ANTÉRO-APICAL -->
+            <rect x="316" y="20" width="142" height="200" rx="9" fill="#7f1d1d"/>
+            <text x="387" y="44" text-anchor="middle" fill="#fecaca" font-size="13" font-weight="700">ANTÉRO-APICAL</text>
+            <rect x="332" y="58" width="110" height="72" rx="7" fill="#f87171"/>
+            <text x="387" y="102" text-anchor="middle" fill="#450a0a" font-size="19" font-weight="800">V3 · V4</text>
+            <text x="387" y="158" text-anchor="middle" fill="#fecaca" font-size="12.5" font-weight="700">IVA distale</text>
+            <text x="387" y="184" text-anchor="middle" fill="#fecaca" font-size="11" font-weight="700">🚨 territoire étendu</text>
+            <text x="387" y="200" text-anchor="middle" fill="#fed7d7" font-size="11">→ choc cardiogénique</text>
+
+            <!-- ANTÉRO-LATÉRAL -->
+            <rect x="468" y="20" width="140" height="200" rx="9" fill="#1e3a8a"/>
+            <text x="538" y="44" text-anchor="middle" fill="#dbeafe" font-size="13" font-weight="700">ANTÉROLATÉRAL</text>
+            <rect x="484" y="58" width="108" height="72" rx="7" fill="#60a5fa"/>
+            <text x="538" y="86" text-anchor="middle" fill="#172554" font-size="16" font-weight="800">V5 · V6</text>
+            <text x="538" y="112" text-anchor="middle" fill="#172554" font-size="16" font-weight="800">I · aVL</text>
+            <text x="538" y="158" text-anchor="middle" fill="#dbeafe" font-size="12.5" font-weight="700">Circonflexe</text>
+            <text x="538" y="176" text-anchor="middle" fill="#bfdbfe" font-size="11.5">(CFX)</text>
+          </svg>
+          <div style="background:#1e293b;border-radius:8px;padding:10px 12px;margin-top:10px;font-size:12.5px;line-height:1.6;color:#e2e8f0;">
+            📚 <em>D'après Lilly, tableau 4-4 — « Localization of Myocardial Infarction ».</em> Ce sont les correspondances <strong>les plus fréquentes</strong>, pas des règles absolues : la dominance coronarienne varie d'une personne à l'autre.
+          </div>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">🔄 <strong>Le territoire postérieur — celui qu'on manque.</strong> Il n'a <strong>pas de dérivation qui le regarde directement</strong> sur un ECG standard. Lilly signale que des <strong>ondes R initiales hautes en V1-V2</strong> peuvent traduire un <strong>infarctus postérieur</strong>, et non un antéroseptal. 🎯 Devant un <strong>sous-décalage ST en V1-V3 avec grandes ondes R</strong>, il faut penser à un infarctus postérieur et demander les <strong>dérivations postérieures</strong> (V7-V9).</div>
+
+        <div class="key-fact blue" style="margin-top:8px;">💡 <strong>La progression de l'onde R</strong> — normalement, l'onde R <strong>grandit progressivement de V1 à V6</strong>, et devient plus haute que l'onde S n'est profonde en <strong>V3 ou V4</strong> : c'est la <strong>dérivation de transition</strong>. Une <strong>mauvaise progression de l'onde R</strong> peut traduire un infarctus antérieur ancien, une hypertrophie ventriculaire gauche, une MPOC — ou simplement un <strong>mauvais positionnement des électrodes</strong>, cause bien plus fréquente qu'on ne le croit. <span style="font-size:11px;color:#64748b;">📚 <em>Lilly, ch. 4</em></span></div>
+      </div>
+
+      <div class="block flag" style="margin-top:14px;">
+        <div class="block-title" id="ecg-7"><span class="tag">🚨 Ischémie — sus-décalage, sous-décalage &amp; image en miroir</span></div>
+
+        <div style="background:#fff;border:1px solid #cbd5e1;border-radius:10px;padding:14px;margin-top:12px;">
+          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin-bottom:8px;">Schéma &mdash; reconnaître le segment ST</div>
+          <svg viewBox="0 0 620 200" style="width:100%;height:auto;" role="img" aria-label="Segment ST normal, sus-decale et sous-decale">
+            <defs>
+              <pattern id="ecgSTS" width="10" height="10" patternUnits="userSpaceOnUse">
+                <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#fbcfd4" stroke-width="0.6"/>
+              </pattern>
+              <pattern id="ecgSTB" width="50" height="50" patternUnits="userSpaceOnUse">
+                <rect width="50" height="50" fill="url(#ecgSTS)"/>
+                <path d="M 50 0 L 0 0 0 50" fill="none" stroke="#ef9aa6" stroke-width="1.3"/>
+              </pattern>
+            </defs>
+            <rect x="0" y="0" width="620" height="200" fill="url(#ecgSTB)"/>
+            <!-- NORMAL -->
+            <text x="100" y="26" text-anchor="middle" fill="#15803d" font-size="12.5" font-weight="700">NORMAL</text>
+            <path d="M 20,120 L 45,120 Q 55,106 65,120 L 80,120 L 84,128 L 92,60 L 100,138 L 105,120 L 130,120 Q 150,96 170,120 L 190,120"
+                  fill="none" stroke="#0f172a" stroke-width="2.6" stroke-linejoin="round"/>
+            <line x1="20" y1="120" x2="190" y2="120" stroke="#15803d" stroke-width="1" stroke-dasharray="4,3"/>
+            <text x="100" y="164" text-anchor="middle" fill="#334155" font-size="11.5">ST au niveau de la ligne de base</text>
+
+            <!-- SUS-DÉCALAGE -->
+            <text x="310" y="26" text-anchor="middle" fill="#b91c1c" font-size="12.5" font-weight="700">SUS-DÉCALAGE ST</text>
+            <path d="M 225,120 L 250,120 Q 260,106 270,120 L 285,120 L 289,128 L 297,60 L 305,132 L 310,100 L 335,100 Q 355,74 375,100 L 395,100"
+                  fill="none" stroke="#0f172a" stroke-width="2.6" stroke-linejoin="round"/>
+            <line x1="225" y1="120" x2="395" y2="120" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4,3"/>
+            <g stroke="#b91c1c" stroke-width="1.8">
+              <line x1="340" y1="120" x2="340" y2="100"/>
+              <line x1="336" y1="120" x2="344" y2="120"/><line x1="336" y1="100" x2="344" y2="100"/>
+            </g>
+            <text x="310" y="164" text-anchor="middle" fill="#b91c1c" font-size="11.5" font-weight="700">🚨 lésion transmurale — STEMI</text>
+            <text x="310" y="181" text-anchor="middle" fill="#334155" font-size="11">urgence de reperfusion</text>
+
+            <!-- SOUS-DÉCALAGE -->
+            <text x="520" y="26" text-anchor="middle" fill="#b45309" font-size="12.5" font-weight="700">SOUS-DÉCALAGE ST</text>
+            <path d="M 430,120 L 455,120 Q 465,106 475,120 L 490,120 L 494,128 L 502,60 L 510,138 L 515,140 L 540,140 Q 560,124 580,140 L 600,140"
+                  fill="none" stroke="#0f172a" stroke-width="2.6" stroke-linejoin="round"/>
+            <line x1="430" y1="120" x2="600" y2="120" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4,3"/>
+            <g stroke="#b45309" stroke-width="1.8">
+              <line x1="545" y1="120" x2="545" y2="140"/>
+              <line x1="541" y1="120" x2="549" y2="120"/><line x1="541" y1="140" x2="549" y2="140"/>
+            </g>
+            <text x="520" y="164" text-anchor="middle" fill="#b45309" font-size="11.5" font-weight="700">ischémie sous-endocardique</text>
+            <text x="520" y="181" text-anchor="middle" fill="#334155" font-size="11">ou image en miroir</text>
+          </svg>
+        </div>
+
+        <div class="key-fact red" style="margin-top:12px;">🪞 <strong>L'image en miroir — le concept qui évite deux erreurs opposées.</strong> Un sus-décalage dans un territoire s'accompagne souvent d'un <strong>sous-décalage dans les dérivations opposées</strong> : ce n'est pas une deuxième zone ischémique, c'est <strong>la même lésion vue de l'autre côté</strong>. Deux conséquences pratiques :<br><br>• 🚨 <strong>Un sous-décalage isolé en V1-V3</strong> peut être le <strong>miroir d'un infarctus postérieur</strong> — donc un STEMI qui ne dit pas son nom<br>• ⚠️ <strong>Ne pas décrire les modifications réciproques comme une atteinte multi-territoriale</strong> — cela fausse l'évaluation de l'étendue</div>
+
+        <div class="key-fact orange" style="margin-top:8px;">⏱️ <strong>L'ECG évolue dans le temps — un seul tracé ne suffit pas.</strong> Dans les toutes premières minutes, on peut ne voir que des <strong>ondes T amples et pointues</strong> (« hyperaiguës »), avant tout sus-décalage. Puis apparaissent le sus-décalage, l'inversion des ondes T, et enfin les <strong>ondes Q pathologiques</strong>, qui témoignent d'une nécrose constituée. 🎯 <strong>Devant une douleur thoracique avec ECG initial normal, il faut répéter le tracé</strong> et le comparer — la comparaison sérielle vaut mieux qu'un tracé isolé. ➜ Voir <em>SCA</em> pour la conduite et la reperfusion, <em>MCAS</em> pour l'angine stable.</div>
+
+        <div class="key-fact blue" style="margin-top:8px;">🔍 <strong>Toutes les sus-élévations ne sont pas des infarctus.</strong> Le différentiel comprend la <strong>péricardite</strong> (sus-décalage <em>diffus</em>, concave, avec sous-décalage du PR — et sans distribution par territoire), la <strong>repolarisation précoce</strong> (variante bénigne fréquente chez le jeune), l'<strong>anévrisme ventriculaire</strong> (sus-décalage figé, persistant), le <strong>bloc de branche gauche</strong> et le <strong>syndrome de Brugada</strong>. 🎯 <strong>La distribution par territoire est l'élément qui distingue le mieux</strong> l'infarctus de la péricardite. ➜ Voir <em>Péricardite &amp; Myocardite</em>.</div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;border-left-color:#4338ca;">
+        <div class="block-title" id="ecg-8"><span class="tag">🚧 Les blocs — auriculoventriculaires &amp; de branche</span></div>
+
+        <div style="background:#fff;border:1px solid #cbd5e1;border-radius:10px;padding:14px;margin-top:12px;">
+          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin-bottom:8px;">Schéma &mdash; les blocs auriculoventriculaires</div>
+          <svg viewBox="0 0 620 330" style="width:100%;height:auto;" role="img" aria-label="Blocs auriculoventriculaires du premier au troisieme degre">
+            <!-- BAV 1 -->
+            <text x="12" y="20" fill="#1d4ed8" font-size="12.5" font-weight="700">BAV 1er DEGRÉ — PR long mais CONSTANT, aucun QRS manquant</text>
+            <path d="M 12,58 Q 26,44 40,58 L 78,58 L 82,66 L 90,26 L 98,72 L 102,58
+                     L 162,58 Q 176,44 190,58 L 228,58 L 232,66 L 240,26 L 248,72 L 252,58
+                     L 312,58 Q 326,44 340,58 L 378,58 L 382,66 L 390,26 L 398,72 L 402,58 L 608,58"
+                  fill="none" stroke="#0f172a" stroke-width="2.4" stroke-linejoin="round"/>
+            <g stroke="#1d4ed8" stroke-width="1.6">
+              <line x1="26" y1="80" x2="86" y2="80"/><line x1="176" y1="80" x2="236" y2="80"/><line x1="326" y1="80" x2="386" y2="80"/>
+            </g>
+            <text x="56" y="94" text-anchor="middle" fill="#1d4ed8" font-size="11" font-weight="700">&gt; 0,20 s</text>
+            <text x="206" y="94" text-anchor="middle" fill="#1d4ed8" font-size="11" font-weight="700">identique</text>
+            <text x="356" y="94" text-anchor="middle" fill="#1d4ed8" font-size="11" font-weight="700">identique</text>
+
+            <!-- BAV 2 Mobitz I -->
+            <text x="12" y="128" fill="#b45309" font-size="12.5" font-weight="700">BAV 2e DEGRÉ — MOBITZ I (Wenckebach) : PR s&rsquo;allonge, puis un QRS TOMBE</text>
+            <path d="M 12,166 Q 26,152 40,166 L 66,166 L 70,174 L 78,134 L 86,180 L 90,166
+                     L 150,166 Q 164,152 178,166 L 214,166 L 218,174 L 226,134 L 234,180 L 238,166
+                     L 298,166 Q 312,152 326,166 L 372,166 L 376,174 L 384,134 L 392,180 L 396,166
+                     L 456,166 Q 470,152 484,166 L 608,166"
+                  fill="none" stroke="#0f172a" stroke-width="2.4" stroke-linejoin="round"/>
+            <g stroke="#b45309" stroke-width="1.6">
+              <line x1="26" y1="190" x2="70" y2="190"/><line x1="164" y1="190" x2="218" y2="190"/><line x1="312" y1="190" x2="376" y2="190"/>
+            </g>
+            <text x="48" y="204" text-anchor="middle" fill="#b45309" font-size="11" font-weight="700">court</text>
+            <text x="191" y="204" text-anchor="middle" fill="#b45309" font-size="11" font-weight="700">plus long</text>
+            <text x="344" y="204" text-anchor="middle" fill="#b45309" font-size="11" font-weight="700">encore plus</text>
+            <text x="512" y="190" text-anchor="middle" fill="#c0392b" font-size="12" font-weight="700">P seule ⟶ QRS absent</text>
+            <line x1="470" y1="150" x2="470" y2="176" stroke="#c0392b" stroke-width="1.6" stroke-dasharray="3,3"/>
+
+            <!-- BAV 3 -->
+            <text x="12" y="238" fill="#b91c1c" font-size="12.5" font-weight="700">🚨 BAV 3e DEGRÉ (complet) : P et QRS totalement DISSOCIÉS</text>
+            <path d="M 12,276 Q 24,262 36,276 L 96,276 Q 108,262 120,276 L 180,276 Q 192,262 204,276
+                     L 264,276 Q 276,262 288,276 L 348,276 Q 360,262 372,276 L 432,276 Q 444,262 456,276
+                     L 516,276 Q 528,262 540,276 L 608,276"
+                  fill="none" stroke="#94a3b8" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M 12,276 L 56,276 L 62,288 L 74,244 L 86,292 L 92,276
+                     L 236,276 L 242,288 L 254,244 L 266,292 L 272,276
+                     L 416,276 L 422,288 L 434,244 L 446,292 L 452,276 L 608,276"
+                  fill="none" stroke="#0f172a" stroke-width="2.6" stroke-linejoin="round"/>
+            <text x="12" y="312" fill="#64748b" font-size="11">─ ondes P (gris) : rythme régulier, rapide</text>
+            <text x="330" y="312" fill="#0f172a" font-size="11" font-weight="700">─ QRS (noir) : lent, régulier, indépendant</text>
+            <text x="12" y="328" fill="#b91c1c" font-size="11.5" font-weight="700">🚨 Urgence — évaluation pour stimulation cardiaque</text>
+          </svg>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">🎯 <strong>Mobitz I ou Mobitz II — la distinction qui change la conduite.</strong> Dans le <strong>Mobitz I (Wenckebach)</strong>, le PR <strong>s'allonge progressivement</strong> avant la pause : le bloc siège dans le nœud AV, il est souvent bénin et peut répondre à l'atropine. Dans le <strong>Mobitz II</strong>, le PR reste <strong>constant</strong> et un QRS tombe <strong>sans avertissement</strong> : le bloc est infranodal, il est <strong>imprévisible et peut évoluer vers un bloc complet</strong> — il justifie une évaluation pour stimulation. 🚨 <strong>Un Mobitz II ne se surveille pas passivement.</strong></div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:22%;">Bloc de branche</th><th style="width:20%;">QRS</th><th style="width:28%;">Morphologie</th><th>Signification</th></tr></thead>
+          <tbody>
+            <tr style="background:#e8f4fd;"><td><strong>Bloc de branche DROIT</strong></td><td>≥ 0,12 s</td><td><strong>V1 :</strong> aspect <strong>rsR′</strong> — « oreilles de lapin »<br><strong>V6 :</strong> onde S large</td><td>Peut être bénin, y compris chez une personne sans cardiopathie<br>Aussi : embolie pulmonaire, atteinte du cœur droit</td></tr>
+            <tr style="background:#fce4ec;"><td>🚨 <strong>Bloc de branche GAUCHE</strong></td><td>≥ 0,12 s</td><td><strong>V1 :</strong> QS ou rS profond<br><strong>V6 :</strong> onde R large, souvent crochetée</td><td>🚨 <strong>Presque toujours pathologique</strong> — cardiopathie sous-jacente<br>⚠️ <strong>Il masque l'interprétation du segment ST</strong> : un BBG <strong>nouveau</strong> avec douleur thoracique se traite comme un équivalent de STEMI<br>➜ Voir <em>SCA</em></td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="key-fact blue" style="margin-top:12px;">💡 <strong>Le moyen mnémotechnique du « W-M » :</strong> en bloc <strong>gauche</strong>, on cherche un <strong>W en V1</strong> et un <strong>M en V6</strong>. En bloc <strong>droit</strong>, c'est l'inverse : <strong>M en V1</strong> (les oreilles de lapin) et <strong>W en V6</strong>. Imparfait mais commode. ⚠️ <strong>Et le point le plus important reste la comparaison</strong> : un bloc de branche gauche <strong>ancien</strong> et un bloc de branche gauche <strong>nouveau</strong> n'ont pas la même signification du tout.</div>
+      </div>
+
+      <div class="block flag" style="margin-top:14px;">
+        <div class="block-title" id="ecg-9"><span class="tag">🚨 Red flags &amp; pièges</span></div>
+
+        <div class="flag-list" style="margin-top:12px;">
+          <div class="flag-item">🚨 <strong>Sus-décalage ST dans un territoire cohérent</strong> — STEMI : urgence de reperfusion</div>
+          <div class="flag-item">🚨 <strong>Bloc de branche gauche NOUVEAU + douleur thoracique</strong> — équivalent de STEMI</div>
+          <div class="flag-item">🚨 <strong>Sous-décalage en V1-V3 avec grandes ondes R</strong> — infarctus postérieur : demander V7-V9</div>
+          <div class="flag-item">🚨 <strong>BAV complet ou Mobitz II</strong> — évaluation pour stimulation, ne pas surveiller passivement</div>
+          <div class="flag-item">🚨 <strong>QRS large avec ondes T amples et pointues</strong> — hyperkaliémie : urgence ➜ voir <em>Dyskaliémies</em></div>
+          <div class="flag-item">🚨 <strong>QTc allongé</strong> — risque de torsades de pointes : réviser les médicaments, corriger K⁺, Mg²⁺, Ca²⁺</div>
+          <div class="flag-item">🚨 <strong>Tachycardie à QRS large</strong> — traiter comme une tachycardie ventriculaire jusqu'à preuve du contraire</div>
+          <div class="flag-item">⚠️ <strong>Ne pas vérifier la calibration</strong> — à demi-voltage, toutes les amplitudes sont divisées par deux</div>
+          <div class="flag-item">⚠️ <strong>Conclure « ECG normal, donc pas d'infarctus »</strong> — l'ECG initial peut être normal : le répéter et comparer</div>
+          <div class="flag-item">⚠️ <strong>Prendre les modifications en miroir pour une deuxième zone ischémique</strong></div>
+          <div class="flag-item">⚠️ <strong>Confondre péricardite et infarctus</strong> — la péricardite donne un sus-décalage <em>diffus</em>, sans distribution par territoire</div>
+          <div class="flag-item">⚠️ <strong>Calculer le QTc avec le R–R en carreaux</strong> au lieu de secondes</div>
+          <div class="flag-item">⚠️ <strong>Interpréter une mauvaise progression de l'onde R</strong> sans vérifier la <strong>position des électrodes</strong></div>
+          <div class="flag-item">⚠️ <strong>Lire l'ECG sans le tracé antérieur</strong> quand il en existe un</div>
+        </div>
+
+        <div class="key-fact green" style="margin-top:12px;">✅ <strong>À retenir :</strong> ① <strong>toujours le même ordre</strong> — calibration, rythme, fréquence, intervalles, axe, P, QRS, ST-T · ② <strong>les dérivations disent le territoire</strong>, et le territoire suggère l'artère · ③ <strong>un tracé isolé ne suffit pas</strong> : répéter et comparer · ④ <strong>l'ECG se lit avec la personne</strong>, jamais seul.</div>
+      </div>
+    </div>
+
+    <div class="section" id="sec-hta">
       <div class="section-header">
         <div class="section-accent">🫀</div>
         <div class="section-title">
@@ -53647,7 +54115,8 @@ Fer &rarr; constipation · interactions chélation nombreuses</div>
 const SEARCH_INDEX = [
   { id:'home',                title:'Accueil',                        specialty:'',               keywords:['accueil'] },
   { id:'calculateurs',        title:'Calculateurs & Outils',          specialty:'',               keywords:['calculateur','score','framingham','cha2ds2','has-bled','wells','grace','timi','nihss','curb','meld'] },
-  { id:'hta',                 title:'HTA (Primaire & Secondaire)',     specialty:'Cardiologie',    keywords:['hta','hypertension','tension','bithérapie','ieca','ara','diurétique','bcc','mapa','secondaire','hyperaldostéronisme','phéochromocytome','cushing','coarctation','rénovasculaire','mpad','sprint','réfractaire'] },
+    { id:'ecg',                 title:'ECG — Lecture systématique',     specialty:'Cardiologie',     keywords:['ecg','électrocardiogramme','tracé','grille','calibration','25 mm/s','petit carreau','rythme sinusal','fréquence cardiaque','1500','300 150 100','intervalle pr','qrs','qt','qtc','bazett','torsade de pointes','axe qrs','déviation axiale','di','avf','progression onde r','transition','territoire','antéroseptal','antéro-apical','antérolatéral','inférieur','postérieur','iva','interventriculaire antérieure','lad','circonflexe','coronaire droite','sus-décalage','sous-décalage','stemi','image en miroir','onde q','onde t hyperaiguë','bav','wenckebach','mobitz','bloc auriculoventriculaire','bloc de branche','bbg','bbd','oreilles de lapin','hypertrophie','lilly'] },
+{ id:'hta',                 title:'HTA (Primaire & Secondaire)',     specialty:'Cardiologie',    keywords:['hta','hypertension','tension','bithérapie','ieca','ara','diurétique','bcc','mapa','secondaire','hyperaldostéronisme','phéochromocytome','cushing','coarctation','rénovasculaire','mpad','sprint','réfractaire'] },
   { id:'dyslipidémie',        title:'Dyslipidémie',                   specialty:'Cardiologie',    keywords:['dyslipidémie','dlp','ldl','statine','ézétimibe','pcsk9','framingham','cholestérol'] },
   { id:'mcas',                title:'MCAS & Angine Stable',           specialty:'Cardiologie',    keywords:['mcas','angine','coronarien','stent','nitrates'] },
   { id:'sca',                 title:'SCA — Syndromes Coronariens Aigus',specialty:'Cardiologie', keywords:['sca','stemi','nstemi','infarctus','troponine'] },
@@ -54032,7 +54501,7 @@ document.addEventListener('click', e => {
 const SECTION_ORDER = [
   'home','calculateurs',
   // Cardiologie
-  'hta','athero','dyslipidémie','mcas','sca','fa','arythmies','ic','chirurgie-cardiaque','stenose-aortique','pericardite','map',
+  'ecg','hta','athero','dyslipidémie','mcas','sca','fa','arythmies','ic','chirurgie-cardiaque','stenose-aortique','pericardite','map',
   // Néphrologie
   'anevrisme','rein-anatomie','ira','irc','proteinurie','nephritique','nephrotique','biopsie-renale','diuretiques','acidose',
   // Endocrinologie
@@ -54097,6 +54566,7 @@ const SECTION_TITLES = {
   'athero':'Athérosclérose','anevrisme':'Anévrisme','rein-anatomie':'Anatomie Rein','bases-endo':'Bases Physiologiques Endo.','pneumo-eval':'Évaluation Pulmonaire','pneumo-gazo':'Gazométrie & Acide-Base','pneumo-aco':'ACO','pneumo-o2':'O₂ Domicile & Conduite','pneumo-pneumonie':'Pneumonie','pneumo-autres-patho':'Autres Patho. Pulmonaires','pneumo-ira':'Insuffisance Respiratoire','pneumo-htp':'HTP & Cor Pulmonale','douleur':'Douleur & Analgésie','ddx-abdo':'Douleur Abdominale — DDx','mii':'MII — Crohn & Colite',
   'nutrition':'Nutrition & Dénutrition','diverticulite':'Diverticulite Aiguë','choledocholithiase':'Cholédocholithiase','cholangite':'Cholangite','pancreatite':'Pancréatite Aiguë','msk':'Guide MSK','quiz':'Quiz',
   'home':'Accueil','calculateurs':'Calculateurs',
+  'ecg':'ECG — Lecture systématique',
   'hta':'HTA (Primaire & Secondaire)','dyslipidémie':'Dyslipidémie',
   'mcas':'MCAS & Angine','sca':'SCA','fa':'Fibrillation Auriculaire','arythmies':'Flutter & Arythmies',
   'ic':'Insuffisance Cardiaque','stenose-aortique':'Sténose Aortique','pericardite':'Péricardite & Myocardite',
