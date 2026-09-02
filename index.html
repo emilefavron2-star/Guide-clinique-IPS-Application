@@ -1163,6 +1163,7 @@ m
         <div class="nav-item" onclick="showSection('ep')">Embolie pulmonaire</div>
         <div class="nav-item" onclick="showSection('periop-anticoag')">Gestion périopératoire</div>
         <div class="nav-item" onclick="showSection('fsc-anemie')">FSC & Anémie</div>
+        <div class="nav-item" onclick="showSection('transfusion')">Sécurité transfusionnelle</div>
       </div>
     </div>
 
@@ -1449,7 +1450,7 @@ m
           <div class="home-card-icon" style="background:#fff1f2;color:#be123c">🩸</div>
           <div class="home-card-body">
             <div class="home-card-name">Hématologie</div>
-            <div class="home-card-count">11 sections</div>
+            <div class="home-card-count">12 sections</div>
           </div>
         </div>
         <div class="home-card" onclick="showSection('uro-physio'); openGroup('grp-uro')">
@@ -28647,7 +28648,325 @@ TEV &lt; 3 mois</div>
   </div>
 </div>
 
-<div class="section" id="sec-avc">
+<div class="section" id="sec-transfusion">
+      <div class="section-header">
+        <div class="section-accent" style="background:#b91c1c">🩸</div>
+        <div class="section-title"><h1>Sécurité transfusionnelle</h1><div class="breadcrumb">Hématologie <span class="breadcrumb-sep">·</span> Produits sanguins · Compatibilité <span class="breadcrumb-sep">·</span> Réactions transfusionnelles <span class="breadcrumb-sep">·</span> Hémovigilance</div></div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;">
+        <button onclick="goToBlock('tsf-1')" style="background:#374151;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🍁 Système du sang au Québec</button>
+        <button onclick="goToBlock('tsf-2')" style="background:#b91c1c;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🅰️ Compatibilité ABO &amp; Rh</button>
+        <button onclick="goToBlock('tsf-3')" style="background:#0369a1;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">✅ Administration sécuritaire</button>
+        <button onclick="goToBlock('tsf-4')" style="background:#c2410c;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🌡️ Fièvre pendant la transfusion</button>
+        <button onclick="goToBlock('tsf-5')" style="background:#7c3aed;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🫁 TACO vs TRALI</button>
+        <button onclick="goToBlock('tsf-6')" style="background:#0f766e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🤧 Allergie &amp; hypotension</button>
+        <button onclick="goToBlock('tsf-7')" style="background:#4338ca;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">⏳ Réactions retardées</button>
+        <button onclick="goToBlock('tsf-8')" style="background:#166534;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🚑 Conduite immédiate</button>
+        <button onclick="goToBlock('tsf-9')" style="background:#991b1b;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🚨 Red flags</button>
+      </div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:20px;">
+        <div style="flex:1;min-width:95px;background:#FEE2E2;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#b91c1c;">STOP</div><div style="font-size:11px;color:#555;margin-top:4px;">Toute réaction → arrêter</div></div>
+        <div style="flex:1;min-width:95px;background:#FEF3C7;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#b45309;">&gt; 38 °C ou +1 °C</div><div style="font-size:11px;color:#555;margin-top:4px;">Définition de la fièvre</div></div>
+        <div style="flex:1;min-width:95px;background:#EEF2FF;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#1C3F8F;">1 culot</div><div style="font-size:11px;color:#555;margin-top:4px;">≈ +10 g/L d'Hb</div></div>
+        <div style="flex:1;min-width:95px;background:#F3E8FF;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#6d28d9;">Erreur humaine</div><div style="font-size:11px;color:#555;margin-top:4px;">1<sup>re</sup> cause d'incompatibilité ABO</div></div>
+      </div>
+
+      <div class="block def" style="margin-top:14px;">
+        <div class="block-title" id="tsf-1"><span class="tag">🍁 Le système du sang au Québec &amp; les produits</span></div>
+
+        <div class="key-fact red" style="margin-top:10px;">🍁 <strong>Le Québec a son propre circuit — c'est une particularité à connaître.</strong> C'est <strong>Héma-Québec</strong>, et non la Société canadienne du sang, qui approvisionne les établissements québécois. Et la <strong>surveillance des réactions transfusionnelles est coordonnée par l'INSPQ</strong>, sur mandat du MSSS : le guide de déclaration de la Société canadienne du sang <strong>exclut explicitement le Québec</strong>. Une procédure trouvée sur un site canadien anglophone ne s'applique donc pas telle quelle ici.</div>
+
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">🧊 Produits labiles vs produits stables</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+          <div style="background:#fce4ec;border-radius:10px;padding:14px;border-left:4px solid #c0392b;">
+            <strong style="color:#c0392b;">🩸 Produits sanguins LABILES</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Issus directement d'un don, <strong>durée de conservation courte</strong> :<br>• <strong>Culots globulaires</strong> (concentrés de globules rouges)<br>• <strong>Plaquettes</strong><br>• <strong>Plasma congelé</strong><br>• <strong>Cryoprécipités</strong><br><br>⚠️ Ce sont eux qui exposent aux <strong>réactions transfusionnelles classiques</strong> décrites dans cette section.</div>
+          </div>
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;border-left:4px solid #1d4ed8;">
+            <strong style="color:#1d4ed8;">💊 Produits sanguins STABLES</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Produits <strong>fractionnés dérivés du plasma</strong>, traités industriellement :<br>• <strong>Albumine</strong><br>• <strong>Immunoglobulines</strong> (IgIV, Ig spécifiques)<br>• <strong>Concentrés de facteurs</strong> de coagulation<br><br>Risque infectieux quasi nul grâce aux procédés d'inactivation, mais <strong>les réactions allergiques restent possibles</strong>.</div>
+          </div>
+        </div>
+
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">🛡️ Composants modifiés — quand et pourquoi</div>
+        <div style="overflow-x:auto;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:22%;">Modification</th><th style="width:34%;">Ce que ça retire</th><th>Indication</th></tr></thead>
+          <tbody>
+            <tr style="background:#f0fdf4;"><td><strong>Déleucocytation</strong><br><em>leucoréduction</em></td><td>Les <strong>leucocytes du donneur</strong></td><td>🎯 <strong>Systématique au Canada.</strong> A fait chuter l'incidence des réactions fébriles non hémolytiques et de l'allo-immunisation HLA</td></tr>
+            <tr><td><strong>Irradiation</strong></td><td>Rend les <strong>lymphocytes du donneur incapables de se greffer</strong></td><td>🚨 <strong>Prévient la réaction du greffon contre l'hôte transfusionnelle (TA-GvHD)</strong>, presque toujours mortelle · pour les personnes immunosupprimées, selon les recommandations du CCN 2018</td></tr>
+            <tr style="background:#e8f4fd;"><td><strong>Lavage</strong></td><td>Le <strong>plasma</strong> du produit</td><td>Antécédent de <strong>réaction allergique sévère</strong> · procédé laborieux qui raccourcit la durée de conservation — à réserver aux cas justifiés</td></tr>
+            <tr><td><strong>Phénotypage étendu</strong><br><em>antigène-négatif</em></td><td>Les antigènes contre lesquels la personne a des anticorps</td><td>Allo-anticorps connus · phénotypes rares · <strong>drépanocytose</strong> : compatibilité Rh et K recommandée (ICTMG)</td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;border-left-color:#b91c1c;">
+        <div class="block-title" id="tsf-2"><span class="tag">🅰️ Compatibilité ABO &amp; Rh</span></div>
+
+        <div class="key-fact red" style="margin-top:10px;">🚨 <strong>C'est ici que se jouent les accidents mortels.</strong> Une réaction hémolytique aiguë par incompatibilité ABO survient dans environ <strong>1 transfusion sur 100 000</strong>. Environ <strong>50 % des transfusions ABO-incompatibles n'ont aucun effet</strong> — mais <strong>5 % sont fatales</strong>. Et la cause dominante n'est ni biologique ni technique : c'est l'<strong>erreur humaine d'identification</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Goldman-Cecil, 26<sup>e</sup> éd., ch. 167</em></span></div>
+
+        <div style="background:#0f172a;border-radius:10px;padding:14px;margin-top:12px;">
+          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#94a3b8;margin-bottom:8px;">Schéma &mdash; le sens de la compatibilité s&rsquo;inverse entre culots et plasma</div>
+          <svg viewBox="0 0 620 300" style="width:100%;height:auto;" role="img" aria-label="Compatibilite ABO pour les culots globulaires et pour le plasma">
+            <!-- Titres -->
+            <text x="150" y="22" text-anchor="middle" fill="#fca5a5" font-size="13.5" font-weight="700">CULOTS GLOBULAIRES</text>
+            <text x="470" y="22" text-anchor="middle" fill="#93c5fd" font-size="13.5" font-weight="700">PLASMA</text>
+            <line x1="310" y1="16" x2="310" y2="272" stroke="#475569" stroke-width="1.5" stroke-dasharray="5,5"/>
+
+            <!-- ══ CULOTS : O donneur universel ══ -->
+            <rect x="24" y="34" width="252" height="46" rx="8" fill="#7f1d1d"/>
+            <text x="150" y="55" text-anchor="middle" fill="#fecaca" font-size="12.5" font-weight="700">On regarde les ANTIGÈNES du donneur</text>
+            <text x="150" y="72" text-anchor="middle" fill="#fca5a5" font-size="11.5">contre les anticorps du receveur</text>
+            <!-- pyramide O en bas (donne à tous) -->
+            <g font-size="13" font-weight="700">
+              <rect x="96" y="92" width="108" height="34" rx="6" fill="#334155"/><text x="150" y="115" text-anchor="middle" fill="#f8fafc">AB</text>
+              <rect x="52" y="136" width="86" height="34" rx="6" fill="#3b4657"/><text x="95" y="159" text-anchor="middle" fill="#f8fafc">A</text>
+              <rect x="162" y="136" width="86" height="34" rx="6" fill="#3b4657"/><text x="205" y="159" text-anchor="middle" fill="#f8fafc">B</text>
+              <rect x="96" y="180" width="108" height="34" rx="6" fill="#dc2626"/><text x="150" y="203" text-anchor="middle" fill="#fff">O</text>
+            </g>
+            <g stroke="#dc2626" stroke-width="2.4" fill="none">
+              <path d="M 150,178 L 150,130"/><path d="M 128,180 L 95,174"/><path d="M 172,180 L 205,174"/>
+            </g>
+            <text x="150" y="234" text-anchor="middle" fill="#fca5a5" font-size="12" font-weight="700">O = donneur universel</text>
+            <text x="150" y="252" text-anchor="middle" fill="#cbd5e1" font-size="11.5">AB = receveur universel</text>
+            <text x="150" y="270" text-anchor="middle" fill="#94a3b8" font-size="11">(O n&rsquo;a ni antigène A ni antigène B)</text>
+
+            <!-- ══ PLASMA : AB donneur universel ══ -->
+            <rect x="344" y="34" width="252" height="46" rx="8" fill="#1e3a8a"/>
+            <text x="470" y="55" text-anchor="middle" fill="#dbeafe" font-size="12.5" font-weight="700">On regarde les ANTICORPS du donneur</text>
+            <text x="470" y="72" text-anchor="middle" fill="#93c5fd" font-size="11.5">contre les antigènes du receveur</text>
+            <g font-size="13" font-weight="700">
+              <rect x="416" y="92" width="108" height="34" rx="6" fill="#2563eb"/><text x="470" y="115" text-anchor="middle" fill="#fff">AB</text>
+              <rect x="372" y="136" width="86" height="34" rx="6" fill="#3b4657"/><text x="415" y="159" text-anchor="middle" fill="#f8fafc">A</text>
+              <rect x="482" y="136" width="86" height="34" rx="6" fill="#3b4657"/><text x="525" y="159" text-anchor="middle" fill="#f8fafc">B</text>
+              <rect x="416" y="180" width="108" height="34" rx="6" fill="#334155"/><text x="470" y="203" text-anchor="middle" fill="#f8fafc">O</text>
+            </g>
+            <g stroke="#2563eb" stroke-width="2.4" fill="none">
+              <path d="M 470,128 L 470,178"/><path d="M 448,126 L 415,134"/><path d="M 492,126 L 525,134"/>
+            </g>
+            <text x="470" y="234" text-anchor="middle" fill="#93c5fd" font-size="12" font-weight="700">AB = donneur universel</text>
+            <text x="470" y="252" text-anchor="middle" fill="#cbd5e1" font-size="11.5">O = receveur universel</text>
+            <text x="470" y="270" text-anchor="middle" fill="#94a3b8" font-size="11">(AB n&rsquo;a ni anti-A ni anti-B)</text>
+
+            <rect x="24" y="278" width="572" height="0" fill="none"/>
+          </svg>
+          <div style="background:#78350f;border-radius:8px;padding:10px 12px;margin-top:10px;font-size:12.5px;line-height:1.6;color:#fde68a;">
+            🎯 <strong>C'est le piège classique, et il se retient par le raisonnement, pas par cœur :</strong> pour les <strong>globules rouges</strong>, on transfuse une <strong>cellule</strong>, donc ce qui compte est l'<strong>antigène</strong> qu'elle porte — O n'en a aucun, il passe partout. Pour le <strong>plasma</strong>, on transfuse un <strong>liquide contenant des anticorps</strong> — AB n'en a aucun, c'est donc lui qui passe partout. <strong>Le sens s'inverse.</strong>
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:12px;">
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;">
+            <strong style="color:#d35400;">🔬 Les tests pré-transfusionnels</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Groupage ABO et Rh</strong> du receveur<br><strong>Recherche d'anticorps irréguliers</strong> (RAI) — dépiste les allo-anticorps acquis par grossesse ou transfusion antérieure<br><strong>Épreuve de compatibilité croisée</strong> (crossmatch) entre le sérum du receveur et les globules du donneur<br><br>💡 Beaucoup d'établissements exigent <strong>deux groupages sur deux prélèvements distincts</strong> avant de délivrer des culots iso-groupe — précisément pour rattraper une erreur d'identification.</div>
+          </div>
+          <div style="background:#ede9fe;border-radius:10px;padding:14px;">
+            <strong style="color:#6d28d9;">🅾️ Le facteur Rh (D)</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Une personne <strong>D-négative ne fabrique pas d'anti-D spontanément</strong> — seulement après exposition (transfusion, grossesse). <span style="font-size:11px;color:#64748b;">📚 <em>Goldman, ch. 167</em></span><br><br>🚨 <strong>Enjeu majeur chez la femme en âge de procréer</strong> : une allo-immunisation anti-D expose les grossesses futures à la maladie hémolytique du fœtus et du nouveau-né.<br>➜ Voir <em>Grossesse</em></div>
+          </div>
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+            <strong style="color:#15803d;">🚑 En situation d'urgence vitale</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Quand on ne peut attendre le groupage :<br><strong>Culots O</strong> — et de préférence <strong>O D-négatif chez la femme en âge de procréer</strong><br><strong>Plasma AB</strong><br><br>⚠️ La réserve de O D-négatif est limitée : elle se justifie par l'urgence, pas par la commodité.<br>➜ Voir <em>Les Chocs</em></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block rx" style="margin-top:14px;border-left-color:#0369a1;">
+        <div class="block-title" id="tsf-3"><span class="tag">✅ Administration sécuritaire</span></div>
+
+        <div class="key-fact red" style="margin-top:10px;">🚨 <strong>La transfusion ABO-incompatible résulte presque toujours d'une erreur d'identification</strong> — mauvaise identification lors du prélèvement pré-transfusionnel, erreur de groupage, ou erreur d'appariement entre la personne et le produit <strong>au moment de brancher</strong>. Ce n'est pas un problème de laboratoire : c'est un problème de vérification au chevet. <span style="font-size:11px;color:#64748b;">📚 <em>Goldman, ch. 167</em></span></div>
+
+        <div class="criteria-list" style="margin-top:12px;">
+          <div class="criteria-item"><div class="criteria-num blue">1</div><span><strong>Consentement éclairé</strong> — bénéfices, risques, solutions de rechange. Documenter. Vérifier un éventuel <strong>refus de produits sanguins</strong> (notamment Témoins de Jéhovah) et les alternatives convenues</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">2</div><span><strong>Évaluation pré-transfusionnelle</strong> — antécédent de réaction? <strong>Statut volémique</strong> et facteurs de risque de surcharge (insuffisance cardiaque, coronaropathie, insuffisance rénale, âge extrême)? Besoin de produits modifiés?</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">3</div><span><strong>Signes vitaux de base</strong> juste avant le branchement — sans eux, impossible d'affirmer plus tard qu'il y a eu une variation</span></div>
+          <div class="criteria-item"><div class="criteria-num red">!</div><span>🚨 <strong>Double vérification au chevet</strong> — identité de la personne (deux identifiants), concordance avec le bracelet, groupe du produit, numéro d'unité, date d'expiration, <strong>inspection visuelle du sac</strong> (coloration anormale, agrégats, hémolyse)</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">4</div><span><strong>Surveillance rapprochée dans les 15 premières minutes</strong> — la plupart des réactions graves se déclarent tôt · rester disponible · <strong>débit lent au début</strong></span></div>
+          <div class="criteria-item"><div class="criteria-num blue">5</div><span><strong>Une unité à la fois</strong> chez une personne stable qui ne saigne pas, puis <strong>réévaluer</strong> avant d'en donner une autre <span style="font-size:11px;color:#64748b;">📚 <em>Guide clinique SCS, ch. 10</em></span></span></div>
+          <div class="criteria-item"><div class="criteria-num blue">6</div><span><strong>Surveillance jusqu'à plusieurs heures après</strong> — le TACO peut survenir jusqu'à <strong>12 h</strong> après, le TRALI jusqu'à <strong>6 h</strong>, la dyspnée associée jusqu'à <strong>24 h</strong></span></div>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">💊 <strong>La prémédication systématique n'est pas justifiée.</strong> Les données sont faibles, et l'<strong>acétaminophène et la diphenhydramine se sont montrés inefficaces</strong> pour prévenir les réactions fébriles non hémolytiques comme les réactions allergiques. On ne la considère qu'<strong>au cas par cas</strong>, chez une personne ayant déjà réagi. <span style="font-size:11px;color:#64748b;">📚 <em>Guide clinique de la transfusion, Société canadienne du sang, ch. 10 (2022)</em></span></div>
+
+        <div class="key-fact blue" style="margin-top:8px;">📊 <strong>Rendement attendu — utile pour juger de l'efficacité :</strong> <strong>1 culot globulaire ≈ +10 g/L d'hémoglobine</strong> · <strong>1 dose adulte de plaquettes ≈ +15 à 25 × 10⁹/L</strong>, en l'absence de saignement, de consommation ou de séquestration. 🚨 <strong>Une hémoglobine qui n'augmente pas, ou qui baisse</strong>, doit faire chercher un saignement actif ou une hémolyse. <span style="font-size:11px;color:#64748b;">📚 <em>Guide clinique SCS, ch. 10</em></span><br>➜ Les <strong>seuils transfusionnels</strong> sont traités dans <em>FSC &amp; Anémie</em>.</div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;border-left-color:#c2410c;">
+        <div class="block-title" id="tsf-4"><span class="tag">🌡️ Fièvre pendant une transfusion</span></div>
+
+        <div class="key-fact orange" style="margin-top:10px;">🌡️ <strong>Définition :</strong> une <strong>hausse de plus de 1 °C</strong> et/ou une <strong>température supérieure à 38 °C</strong>, pendant la transfusion ou jusqu'à <strong>4 heures après</strong> la fin. <span style="font-size:11px;color:#64748b;">📚 <em>Guide clinique SCS, ch. 10</em></span></div>
+
+        <div class="key-fact red" style="margin-top:8px;">🚨 <strong>Le raisonnement essentiel :</strong> la fièvre est le symptôme le plus fréquent — et le plus banal en apparence. Mais elle est aussi le <strong>premier signe des trois réactions les plus graves</strong>. <strong>On ne peut pas distinguer cliniquement une réaction fébrile bénigne d'une hémolyse aiguë au moment où la fièvre apparaît.</strong> C'est pourquoi la règle est d'<strong>arrêter d'abord et de trancher ensuite</strong>.</div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:22%;">Cause</th><th style="width:14%;">Fréquence</th><th style="width:30%;">Ce qui oriente</th><th>Conduite</th></tr></thead>
+          <tbody>
+            <tr style="background:#f0fdf4;"><td><strong>Réaction fébrile non hémolytique</strong> (RFNH)</td><td>La plus fréquente<br><em>≈ 2,4 / 1000 transfusions au Canada</em></td><td>Fièvre, frissons, rigidités, douleur — <strong>sans</strong> hémolyse ni hypotension ni hypoxémie<br>Cytokines des leucocytes, ou anticorps du receveur contre les leucocytes du donneur</td><td>Arrêter, aviser la banque de sang<br><strong>Soutien</strong> ± acétaminophène<br>Frissons sévères : la mépéridine peut être envisagée<br>💡 La déleucocytation en a fait chuter l'incidence</td></tr>
+            <tr style="background:#fce4ec;"><td>🚨 <strong>Réaction hémolytique aiguë</strong> (RHA)</td><td>≈ 1/100 000 (ABO)</td><td>🚨 Fièvre, frissons, <strong>douleur lombaire ou au flanc</strong>, douleur thoracique ou abdominale, <strong>hémoglobinurie</strong>, dyspnée, hypotension, <strong>oligo-anurie</strong>, saignement diffus (CIVD)<br>Souvent au <strong>tout début</strong> de la transfusion</td><td>🚨 <strong>ARRÊT IMMÉDIAT</strong> · aviser la banque de sang<br><strong>Hydratation</strong>, surveillance étroite, soutien de la fonction rénale<br>Labo : test de Coombs direct positif, LDH ↑, bilirubine ↑, haptoglobine ↓, crossmatch incompatible</td></tr>
+            <tr style="background:#fff3cd;"><td>🚨 <strong>Contamination bactérienne</strong> (BACON)</td><td>Sepsis lié aux plaquettes ≈ 1/100 000</td><td>🚨 Fièvre <strong>élevée</strong>, <strong>tachycardie</strong>, <strong>hypotension</strong> — tableau septique franc<br>Surtout avec les <strong>plaquettes</strong> (conservées à température ambiante)<br>Germes : <em>S. aureus</em>, <em>S. epidermidis</em>, <em>B. cereus</em>, <em>E. coli</em>, <em>Serratia</em>, <em>Klebsiella</em>, <em>Pseudomonas</em></td><td>🚨 <strong>ARRÊT IMMÉDIAT</strong><br><strong>Hémocultures chez la personne ET culture de l'unité</strong><br><strong>Antibiothérapie empirique</strong><br>Aviser la banque de sang — d'autres produits du même don doivent être retirés</td></tr>
+            <tr><td><strong>TRALI</strong></td><td>≈ 1/60 000</td><td>Fièvre <em>possible</em>, mais le tableau est dominé par l'<strong>hypoxémie</strong> → voir bloc suivant</td><td>Arrêt, soutien respiratoire</td></tr>
+            <tr style="background:#f1f5f9;"><td><strong>Cause non transfusionnelle</strong></td><td>—</td><td>Sepsis sous-jacent, autre foyer infectieux — la transfusion n'est qu'une coïncidence temporelle</td><td>Diagnostic d'exclusion — <strong>après</strong> avoir écarté les causes ci-dessus</td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+
+      <div class="block para" style="margin-top:14px;border-left-color:#7c3aed;">
+        <div class="block-title" id="tsf-5"><span class="tag">🫁 TACO vs TRALI — la distinction qui change le traitement</span></div>
+
+        <div class="key-fact red" style="margin-top:10px;">🚨 <strong>Pourquoi cette distinction est capitale :</strong> les deux donnent une <strong>dyspnée avec œdème pulmonaire bilatéral</strong> pendant ou après une transfusion. Mais le <strong>TACO se traite par diurétiques</strong>, alors que <strong>dans le TRALI la diurèse n'est pas indiquée</strong> — elle peut aggraver une personne déjà hypotendue. Se tromper de diagnostic, c'est se tromper de traitement. <span style="font-size:11px;color:#64748b;">📚 <em>Guide clinique SCS, ch. 10</em></span></div>
+
+        <div style="background:#0f172a;border-radius:10px;padding:14px;margin-top:12px;">
+          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#94a3b8;margin-bottom:8px;">Schéma &mdash; deux œdèmes pulmonaires, deux mécanismes opposés</div>
+          <svg viewBox="0 0 620 250" style="width:100%;height:auto;" role="img" aria-label="TACO surcharge volemique contre TRALI lesion pulmonaire">
+            <!-- TACO -->
+            <text x="150" y="22" text-anchor="middle" fill="#60a5fa" font-size="13.5" font-weight="700">TACO &mdash; surcharge</text>
+            <rect x="24" y="34" width="252" height="120" rx="8" fill="#0b0f17"/>
+            <!-- coeur dilaté + vaisseaux gonflés -->
+            <path d="M 150,62 Q 208,80 212,112 Q 214,142 150,148 Q 86,142 88,112 Q 92,80 150,62 Z" fill="#e2e8f0"/>
+            <text x="150" y="118" text-anchor="middle" fill="#334155" font-size="12" font-weight="700">cœur dilaté</text>
+            <g stroke="#8a94a3" stroke-width="5" fill="none">
+              <path d="M 118,66 L 96,44"/><path d="M 182,66 L 204,44"/>
+            </g>
+            <text x="150" y="176" text-anchor="middle" fill="#60a5fa" font-size="12" font-weight="700">Trop de volume dans le circuit</text>
+            <text x="150" y="194" text-anchor="middle" fill="#cbd5e1" font-size="11.5">Pression hydrostatique ↑</text>
+            <rect x="24" y="206" width="252" height="34" rx="7" fill="#1e3a8a"/>
+            <text x="150" y="228" text-anchor="middle" fill="#dbeafe" font-size="12.5" font-weight="700">→ DIURÉTIQUES</text>
+            <line x1="310" y1="30" x2="310" y2="240" stroke="#475569" stroke-width="1.5" stroke-dasharray="5,5"/>
+            <!-- TRALI -->
+            <text x="470" y="22" text-anchor="middle" fill="#f87171" font-size="13.5" font-weight="700">TRALI &mdash; lésion</text>
+            <rect x="344" y="34" width="252" height="120" rx="8" fill="#0b0f17"/>
+            <!-- capillaire qui fuit -->
+            <rect x="380" y="76" width="180" height="30" rx="14" fill="#3f4a5a" stroke="#f8fafc" stroke-width="2.5" stroke-dasharray="7,5"/>
+            <text x="470" y="96" text-anchor="middle" fill="#cbd5e1" font-size="11" font-weight="600">capillaire lésé</text>
+            <g fill="#e2e8f0">
+              <circle cx="402" cy="122" r="4"/><circle cx="436" cy="130" r="4"/><circle cx="470" cy="124" r="4"/>
+              <circle cx="504" cy="132" r="4"/><circle cx="538" cy="122" r="4"/>
+              <circle cx="418" cy="60" r="4"/><circle cx="470" cy="54" r="4"/><circle cx="522" cy="60" r="4"/>
+            </g>
+            <text x="470" y="176" text-anchor="middle" fill="#f87171" font-size="12" font-weight="700">La paroi laisse fuir le liquide</text>
+            <text x="470" y="194" text-anchor="middle" fill="#cbd5e1" font-size="11.5">Perméabilité ↑ — volémie normale</text>
+            <rect x="344" y="206" width="252" height="34" rx="7" fill="#7f1d1d"/>
+            <text x="470" y="228" text-anchor="middle" fill="#fecaca" font-size="12.5" font-weight="700">→ SOUTIEN, PAS de diurèse</text>
+          </svg>
+        </div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:26%;"></th><th style="width:37%;">TACO — surcharge circulatoire</th><th>TRALI — lésion pulmonaire aiguë</th></tr></thead>
+          <tbody>
+            <tr style="background:#e8f4fd;"><td><strong>Délai</strong></td><td>Pendant, ou jusqu'à <strong>12 h</strong> après</td><td>Pendant, ou dans les <strong>6 h</strong> suivant la fin</td></tr>
+            <tr><td><strong>Mécanisme</strong></td><td>Œdème <strong>cardiogénique</strong> — pression hydrostatique</td><td>Œdème <strong>non cardiogénique</strong> — perméabilité capillaire · mécanisme en « deux temps », souvent des anticorps anti-HLA ou anti-HNA du donneur</td></tr>
+            <tr style="background:#f0fdf4;"><td><strong>Fièvre</strong></td><td>Typiquement <strong>absente</strong> (mais possible)</td><td><strong>Peut être présente</strong></td></tr>
+            <tr><td><strong>Tension artérielle</strong></td><td>Plutôt <strong>augmentée</strong> 🎯</td><td>Plutôt <strong>diminuée</strong> 🎯</td></tr>
+            <tr style="background:#fff3cd;"><td><strong>Surcharge volémique</strong></td><td><strong>Oui</strong> — bilan liquidien positif, turgescence jugulaire, œdème périphérique</td><td><strong>Inconstante</strong></td></tr>
+            <tr><td><strong>BNP / NT-proBNP</strong></td><td><strong>Élevé</strong> — utile : hausse &gt; 1,5 × la valeur pré-transfusionnelle</td><td><strong>Inconstant</strong></td></tr>
+            <tr style="background:#fce4ec;"><td>🎯 <strong>Réponse aux diurétiques</strong></td><td><strong>Oui</strong> — c'est le traitement</td><td><strong>Inconstante</strong> — 🚨 <strong>la diurèse n'est pas indiquée</strong></td></tr>
+            <tr><td><strong>Traitement</strong></td><td>Arrêt · <strong>diurétiques</strong> · oxygène · <strong>position assise</strong></td><td>Arrêt · <strong>soutien respiratoire</strong>, intubation au besoin · rôle des corticostéroïdes incertain</td></tr>
+            <tr style="background:#f1f5f9;"><td><strong>Évolution</strong></td><td>Rapide sous diurétiques</td><td>Amélioration en <strong>2 à 4 jours</strong> chez la majorité · <strong>mortalité de 5 à 10 %</strong> <span style="font-size:11px;color:#64748b;">📚 <em>Goldman, ch. 167</em></span></td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;border-left:4px solid #1d4ed8;">
+            <strong style="color:#1d4ed8;">🛡️ Prévenir le TACO</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Repérer les personnes à risque : <strong>insuffisance cardiaque</strong>, <strong>coronaropathie</strong>, <strong>insuffisance rénale</strong>, <strong>âges extrêmes</strong><br>➜ <strong>Une unité à la fois</strong>, puis réévaluer<br>➜ <strong>Débit plus lent</strong><br>➜ <strong>Diurétique pré-transfusionnel</strong> à considérer<br>➜ Ne transfuser que ce qui est nécessaire</div>
+          </div>
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;border-left:4px solid #15803d;">
+            <strong style="color:#15803d;">📉 Le TRALI recule</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Son incidence a <strong>nettement diminué</strong> depuis que le plasma et les plaquettes proviennent de <strong>donneurs masculins, de femmes nullipares ou de donneuses sans anticorps anti-HLA</strong> — puisque la grossesse est la principale source d'immunisation anti-HLA. <span style="font-size:11px;color:#64748b;">📚 <em>Goldman, ch. 167</em></span><br><br>💡 Un bel exemple de mesure de sécurité fondée sur le mécanisme.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;border-left-color:#0f766e;">
+        <div class="block-title" id="tsf-6"><span class="tag">🤧 Réactions allergiques &amp; hypotension</span></div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;border-left:4px solid #15803d;">
+            <strong style="color:#15803d;">🟢 Réaction allergique MINEURE</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Urticaire</strong>, prurit, bouffées vasomotrices, symptômes respiratoires hauts légers, symptômes digestifs<br>Plus fréquente avec les <strong>plaquettes et le plasma</strong> — les produits les plus riches en plasma<br><br>🎯 <strong>C'est la seule réaction où l'on peut reprendre la transfusion</strong> : arrêt temporaire, antihistaminique, puis <strong>reprise à débit ralenti</strong> s'il n'y a aucun signe de gravité<br><br>Réactions répétées → envisager des produits <strong>lavés</strong> ou déplasmatisés</div>
+          </div>
+          <div style="background:#fef2f2;border-radius:10px;padding:14px;border-left:4px solid #c0392b;">
+            <strong style="color:#c0392b;">🚨 ANAPHYLAXIE</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Rare — environ <strong>1 / 50 000</strong> transfusions de culots<br><strong>Enrouement, stridor, sibilances, dyspnée, hypotension, symptômes digestifs, choc</strong><br><br>🚨 <strong>ARRÊT DÉFINITIF</strong> · <strong>ABC</strong> · <strong>ADRÉNALINE</strong> · antihistaminiques, corticostéroïdes, bêta-2 agonistes inhalés<br><br>⚠️ Devant une hypotension, garder le différentiel ouvert : <strong>sepsis, réaction bradykinique, hémolyse aiguë</strong> peuvent se ressembler<br>➜ Voir <em>Les Chocs</em></div>
+          </div>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">🔄 <strong>Une notion qui a changé — attention aux notes de cours anciennes :</strong> on a longtemps enseigné que l'anaphylaxie transfusionnelle était liée au <strong>déficit en IgA avec anti-IgA</strong>. Les données récentes montrent que cette association <strong>n'est pas solide</strong>. Des anticorps <strong>anti-haptoglobine</strong>, un transfert passif d'IgE ou le transfert d'allergènes alimentaires ont aussi été rapportés. <span style="font-size:11px;color:#64748b;">📚 <em>Guide clinique SCS, ch. 10 (2022)</em></span> — Goldman, plus ancien sur ce point, recommande encore de doser les IgA après une réaction sévère.</div>
+
+        <div class="key-fact blue" style="margin-top:8px;">💧 <strong>Hypotension bradykinique — le lien avec les IECA :</strong> le contact du facteur XII avec des <strong>surfaces chargées négativement</strong> (filtres, tubulures, membranes de dialyse) génère de la <strong>bradykinine</strong>. Or l'enzyme de conversion l'inactive — donc sous <strong>IECA</strong>, la bradykinine s'accumule et l'hypotension survient. Le système d'hémovigilance retient une <strong>chute de la tension systolique ≥ 30 mmHg avec une systolique &lt; 80 mmHg</strong>. Conduite : arrêter, remplir si nécessaire. En aphérèse, <strong>l'IECA doit être suspendu avant la procédure</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Guide clinique SCS, ch. 10</em></span></div>
+      </div>
+
+      <div class="block para" style="margin-top:14px;border-left-color:#4338ca;">
+        <div class="block-title" id="tsf-7"><span class="tag">⏳ Réactions retardées</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>Le fil conducteur :</strong> ces réactions surviennent des <strong>jours à des semaines</strong> plus tard, souvent après le congé — donc <strong>hors du contexte où l'on pense encore à la transfusion</strong>. Devant une cytopénie, un ictère ou une éruption inexpliqués, <strong>demander si la personne a été transfusée récemment</strong> fait partie de l'anamnèse.</div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:22%;">Réaction</th><th style="width:14%;">Délai</th><th style="width:32%;">Tableau</th><th>Conduite &amp; prévention</th></tr></thead>
+          <tbody>
+            <tr style="background:#e8f4fd;"><td><strong>Réaction hémolytique RETARDÉE</strong> (RHR)</td><td>&gt; 24 h · médiane <strong>1 à 2 semaines</strong></td><td>🎯 <strong>Hémoglobine qui n'augmente pas, ou qui baisse</strong> après transfusion<br>Ictère, fébricule, malaise, dorsalgie · rarement insuffisance rénale<br>Beaucoup <strong>moins sévère</strong> qu'une hémolyse aiguë<br>Allo-anticorps en cause : anti-E, Jk<sup>a</sup>, c, Fy<sup>a</sup>, K</td><td>Labo : LDH ↑, haptoglobine ↓, <strong>Coombs direct positif</strong><br><strong>Prévention :</strong> transfuser seulement si nécessaire · <strong>conserver l'historique d'anticorps au dossier</strong> · partage d'information entre banques de sang · culots antigène-négatifs pour l'avenir</td></tr>
+            <tr style="background:#fce4ec;"><td>🚨 <strong>Réaction du greffon contre l'hôte transfusionnelle</strong> (TA-GvHD)</td><td>Jours à semaines</td><td>🚨 <strong>Pancytopénie profonde</strong>, éruption érythémateuse ou érythrodermie, atteinte hépatique, symptômes digestifs<br>Greffe des lymphocytes du donneur chez une personne immunosupprimée<br>⚠️ <strong>Mortalité proche de 100 %</strong></td><td>🎯 <strong>Prévention par IRRADIATION</strong> des produits cellulaires — c'est la seule stratégie efficace<br><strong>À risque :</strong> déficits immunitaires congénitaux, lymphome de Hodgkin, leucémie aiguë, greffe de cellules souches, produits d'un <strong>proche parent</strong>, produits HLA-compatibles, transfusion intra-utérine</td></tr>
+            <tr><td><strong>Purpura post-transfusionnel</strong> (PPT)</td><td><strong>1 à 3 semaines</strong></td><td><strong>Thrombopénie profonde</strong> (&lt; 10 × 10⁹/L), purpura, ecchymoses, saignement muqueux<br>Allo-anticorps antiplaquettaires, le plus souvent <strong>anti-HPA-1a</strong><br>⚠️ Mortalité de 10 à 20 % par hémorragie</td><td>🎯 <strong>Immunoglobulines intraveineuses</strong> — traitement de première intention</td></tr>
+            <tr style="background:#f1f5f9;"><td><strong>Allo-immunisation</strong></td><td>Semaines</td><td>Apparition d'anticorps sans hémolyse immédiate — <strong>complique les transfusions futures</strong> et, chez la femme, les <strong>grossesses futures</strong></td><td>Documenter au dossier · phénotypage étendu préventif dans certaines populations (drépanocytose)</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">⚙️ <strong>Ne pas oublier l'hémolyse non immunologique :</strong> elle n'a rien à voir avec les anticorps. Un produit <strong>réchauffé au-delà de 45 °C</strong>, transfusé par une <strong>aiguille de trop petit calibre</strong>, à travers un <strong>filtre obstrué</strong>, ou <strong>périmé ou mal conservé</strong>, hémolyse mécaniquement. C'est une cause évitable, entièrement liée à la technique. <span style="font-size:11px;color:#64748b;">📚 <em>Guide clinique SCS, ch. 10</em></span></div>
+      </div>
+
+      <div class="block rx" style="margin-top:14px;border-left-color:#166534;">
+        <div class="block-title" id="tsf-8"><span class="tag">🚑 Conduite immédiate &amp; hémovigilance</span></div>
+
+        <div class="key-fact red" style="margin-top:10px;">🚨 <strong>Le réflexe, quelle que soit la réaction suspectée :</strong> <strong>ARRÊTER la transfusion</strong>, <strong>garder la voie veineuse perméable</strong> avec du salin, <strong>évaluer</strong>, <strong>aviser la banque de sang</strong>. On ne cherche pas à identifier la réaction avant d'arrêter — l'inverse serait dangereux, puisque les réactions bénignes et mortelles débutent de la même façon.</div>
+
+        <div class="criteria-list" style="margin-top:12px;">
+          <div class="criteria-item"><div class="criteria-num red">1</div><span>🚨 <strong>ARRÊTER la transfusion</strong> — immédiatement, sans attendre d'avoir un diagnostic</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">2</div><span><strong>Maintenir la voie veineuse</strong> avec du <strong>NaCl 0,9 %</strong> par une nouvelle tubulure — ne pas rincer avec le produit restant</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">3</div><span><strong>Évaluer : ABC et signes vitaux</strong> · comparer avec les valeurs pré-transfusionnelles</span></div>
+          <div class="criteria-item"><div class="criteria-num red">!</div><span>🚨 <strong>REVÉRIFIER l'identité</strong> de la personne et l'étiquette du produit — c'est le geste qui rattrape une erreur d'appariement, la cause dominante des accidents ABO</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">4</div><span><strong>Aviser la banque de sang et le médecin</strong> · <strong>conserver le sac et la tubulure</strong> — ils font partie de l'enquête</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">5</div><span><strong>Prélèvements selon le tableau</strong> — bilan d'hémolyse (FSC, LDH, bilirubine, haptoglobine, Coombs direct), analyse d'urine à la recherche d'hémoglobinurie, <strong>hémocultures + culture de l'unité</strong> si suspicion de contamination</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">6</div><span><strong>Traiter selon le mécanisme</strong> — adrénaline si anaphylaxie · diurétiques si TACO · <strong>pas de diurèse</strong> si TRALI · antibiotiques si contamination · hydratation si hémolyse</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">7</div><span><strong>Déclarer</strong> — et <strong>documenter la réaction au dossier</strong>, pour que la prochaine transfusion en tienne compte</span></div>
+        </div>
+
+        <div class="key-fact blue" style="margin-top:12px;">🍁 <strong>Hémovigilance au Québec — le vocabulaire officiel, et il est précis :</strong><br><br>• Un <strong>INCIDENT</strong> est une erreur ou un problème <strong>détecté AVANT</strong> que le produit ne soit transfusé.<br>• Un <strong>ACCIDENT</strong> est toute erreur reconnue ou toute réaction indésirable <strong>détectée APRÈS le début</strong> de l'administration.<br><br>La coordination du système québécois est assurée par l'<strong>INSPQ</strong>, sur mandat du <strong>MSSS</strong>. Dans chaque établissement, un <strong>agent de sécurité transfusionnelle</strong> coordonne l'enquête et la déclaration. 🎯 <strong>Déclarer un incident — donc une erreur rattrapée à temps — fait partie du système au même titre que déclarer un accident</strong> : c'est ce qui permet de corriger les processus avant qu'un patient ne soit atteint.</div>
+      </div>
+
+      <div class="block flag" style="margin-top:14px;">
+        <div class="block-title" id="tsf-9"><span class="tag">🚨 Red flags &amp; pièges</span></div>
+
+        <div class="flag-list" style="margin-top:12px;">
+          <div class="flag-item">🚨 <strong>Fièvre + douleur lombaire + urines foncées</strong> pendant une transfusion — hémolyse aiguë : arrêt immédiat</div>
+          <div class="flag-item">🚨 <strong>Fièvre élevée + hypotension + tachycardie</strong>, surtout avec des plaquettes — contamination bactérienne : cultures et antibiotiques</div>
+          <div class="flag-item">🚨 <strong>Dyspnée avec hypotension</strong> pendant ou après une transfusion — penser TRALI : ne pas donner de diurétique par réflexe</div>
+          <div class="flag-item">🚨 <strong>Stridor, sibilances, hypotension</strong> — anaphylaxie : adrénaline, arrêt définitif</div>
+          <div class="flag-item">🚨 <strong>Hémoglobine qui ne monte pas après transfusion</strong> — saignement actif, hémolyse, ou réaction hémolytique retardée</div>
+          <div class="flag-item">🚨 <strong>Pancytopénie + éruption + atteinte hépatique</strong> chez une personne immunosupprimée transfusée — TA-GvHD : mortalité proche de 100 %</div>
+          <div class="flag-item">⚠️ <strong>Attendre d'avoir un diagnostic avant d'arrêter</strong> — on arrête d'abord, on réfléchit ensuite</div>
+          <div class="flag-item">⚠️ <strong>Traiter un TRALI comme un TACO</strong> — la diurèse n'y est pas indiquée et peut nuire</div>
+          <div class="flag-item">⚠️ <strong>Prémédiquer systématiquement</strong> — acétaminophène et diphenhydramine sont inefficaces en prévention</div>
+          <div class="flag-item">⚠️ <strong>Reprendre une transfusion après une réaction</strong> — seule la réaction allergique <em>mineure</em> le permet</div>
+          <div class="flag-item">⚠️ <strong>Confondre le sens de la compatibilité</strong> — O donneur universel pour les <em>culots</em>, AB donneur universel pour le <em>plasma</em></div>
+          <div class="flag-item">⚠️ <strong>Oublier le statut Rh chez une femme en âge de procréer</strong> — l'allo-immunisation anti-D compromet les grossesses futures</div>
+          <div class="flag-item">⚠️ <strong>Ne pas déclarer un incident rattrapé à temps</strong> — c'est précisément ce qui permet de corriger le système</div>
+          <div class="flag-item">⚠️ <strong>Ne pas penser à une transfusion récente</strong> devant une cytopénie ou un ictère inexpliqué après un congé</div>
+        </div>
+
+        <div class="key-fact green" style="margin-top:12px;">✅ <strong>À retenir en quatre temps :</strong> ① <strong>avant</strong> — consentement, évaluation du risque de surcharge, double vérification au chevet · ② <strong>pendant</strong> — surveillance rapprochée les 15 premières minutes, une unité à la fois · ③ <strong>devant toute réaction</strong> — arrêter, garder la veine, réévaluer l'identité, aviser la banque de sang · ④ <strong>après</strong> — documenter au dossier et déclarer, incident comme accident.</div>
+      </div>
+    </div>
+
+    <div class="section" id="sec-avc">
       <div class="section-header">
         <div class="section-accent" style="background:#4c1d95">🧠</div>
         <div class="section-title"><h1>AVC</h1><div class="breadcrumb">Neurologie <span class="breadcrumb-sep">·</span> Section 31</div></div>
@@ -52882,6 +53201,7 @@ const SEARCH_INDEX = [
   { id:'ep',                    title:'Embolie pulmonaire',                   specialty:'Hématologie',    keywords:['embolie pulmonaire','ep','wells ep','angio-tdm','spesi','pesi','tpa','ep massive','sPESI'] },
   { id:'periop-anticoag',       title:'Gestion périopératoire anticoagulants',specialty:'Hématologie',    keywords:['périopératoire','bridging','arrêt anticoagulant','règle 1-2-4','chads2','risque thrombotique'] },
   { id:'fsc-anemie',          title:'FSC & Anémie',                   specialty:'Hématologie',    keywords:['fsc','anémie','hémoglobine','ferritine','b12','folate'] },
+  { id:'transfusion',       title:'Sécurité Transfusionnelle',     specialty:'Hématologie',    keywords:['transfusion','sécurité transfusionnelle','culot globulaire','concentré globulaire','plaquettes','plasma','cryoprécipité','albumine','produits labiles','produits stables','héma-québec','abo','rh','anti-d','groupe sanguin','compatibilité','crossmatch','épreuve de compatibilité','rai','coombs','donneur universel','receveur universel','réaction transfusionnelle','rfnh','fébrile non hémolytique','hémolytique aiguë','hémolytique retardée','taco','trali','surcharge circulatoire','lésion pulmonaire','bacon','contamination bactérienne','anaphylaxie','urticaire','bradykinine','ieca','ta-gvhd','greffon contre hôte','purpura post-transfusionnel','ppt','allo-immunisation','irradiation','déleucocytation','lavage','hémovigilance','inspq','msss','incident','accident','agent de sécurité transfusionnelle','goldman'] },
   { id:'avc',                 title:'AVC',                            specialty:'Neurologie',     keywords:['avc','ischémie cérébrale','tpa','alteplase','nihss'] },
   { id:'epilepsie',           title:'Épilepsie',                      specialty:'Neurologie',     keywords:['épilepsie','crise','anticonvulsivant','lévétiracétam','valproate','lamotrigine'] },
   { id:'vertige',             title:'Vertige & Étourdissement',       specialty:'Neurologie',     keywords:['vertige','vppb','labyrinthite','épley','dix-hallpike'] },
@@ -53232,7 +53552,7 @@ const SECTION_ORDER = [
   // Soins palliatifs
   'niveau-soins','amm',
   // Hématologie
-  'hemostase','thrombolyse','antiplaquettaires','tests-coag','anticoag-parenteraux','warfarine','aod','tvp','ep','periop-anticoag','fsc-anemie',
+  'hemostase','thrombolyse','antiplaquettaires','tests-coag','anticoag-parenteraux','warfarine','aod','tvp','ep','periop-anticoag','fsc-anemie','transfusion',
   // Neurologie
   'avc','sep','migraine','parkinson','epilepsie','vertige','syncope','douleur',
   // Gériatrie
@@ -53290,6 +53610,7 @@ const SECTION_TITLES = {
   'infections':'Infections Courantes','antibiotherapie':'Antibiothérapie',
   'aso':'ASO','apnee-centrale':'Apnée Centrale','asthme':'Asthme','mpoc':'MPOC',
   'hemostase':'Hémostase','thrombolyse':'Thrombolyse','antiplaquettaires':'Antiplaquettaires','tests-coag':'Tests coag.','anticoag-parenteraux':'Anticoag. parentéraux','warfarine':'Warfarine','aod':'AOD','tvp':'TVP','ep':'Embolie pulmonaire','periop-anticoag':'Périopératoire anticoag.','fsc-anemie':'FSC & Anémie',
+  'transfusion':'Sécurité Transfusionnelle',
   'avc':'AVC','epilepsie':'Épilepsie','vertige':'Vertige','syncope':'Syncope','sep':'Sclérose en plaques','migraine':'Migraine & Céphalées','parkinson':'Parkinson & Tremblement essentiel',
   'uro-physio':'Physiologie miction','uro-sbau':'SBAU','uro-hbp':'HBP','uro-vha':'Vessie hyperactive','uro-incontinence':'Incontinence urinaire','uro-pna':'Pyélonéphrite aiguë','uro-cancer-prostate':'Cancer prostate','uro-iu-recidivante':'IU récidivantes','uro-sgu':'SGU ménopause','uro-orchi':'Orchi-épididymite','uro-prostatite':'Prostatite aiguë','uro-de':'Dysfonction érectile','uro-cystite':'Cystite — IU basse',
   'anatomie-foie':'Anatomie Foie','fonctions-foie':'Fonctions Foie',
