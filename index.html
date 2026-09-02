@@ -1026,6 +1026,8 @@ m
         <svg class="chevron" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>      </div>
       <div class="specialty-items">
         <div class="nav-item" onclick="showSection('entrevue')">L'entrevue médicale</div>
+        <div class="nav-item" onclick="showSection('questionnaire')">Le questionnaire</div>
+        <div class="nav-item" onclick="showSection('examen-physique')">L'examen physique</div>
         <div class="nav-item" onclick="showSection('raisonnement')">Le raisonnement clinique</div>
       </div>
     </div>
@@ -1430,7 +1432,7 @@ m
           <div class="home-card-icon" style="background:#fef2f2;color:#be123c">🩺</div>
           <div class="home-card-body">
             <div class="home-card-name">Méthode clinique</div>
-            <div class="home-card-count">2 sections</div>
+            <div class="home-card-count">4 sections</div>
           </div>
         </div>
         <div class="home-card" onclick="showSection('hta'); openGroup('grp-cardio')">
@@ -1790,6 +1792,427 @@ m
         </div>
 
         <div class="key-fact green" style="margin-top:12px;">✅ <strong>À retenir :</strong> ① <strong>ouvrir large et se taire</strong> · ② <strong>faire le contrat</strong> avant de plonger · ③ <strong>caractériser</strong> avant de fermer les questions · ④ <strong>résumer à voix haute</strong> · ⑤ <strong>ne jamais partir sans filet de sécurité</strong>.</div>
+      </div>
+    </div>
+
+    <div class="section" id="sec-questionnaire">
+      <div class="section-header">
+        <div class="section-accent" style="background:#b45309">📝</div>
+        <div class="section-title"><h1>Le questionnaire</h1><div class="breadcrumb">Méthode clinique <span class="breadcrumb-sep">·</span> PQRST · AMPLE <span class="breadcrumb-sep">·</span> Revue des systèmes <span class="breadcrumb-sep">·</span> Être concis</div></div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;">
+        <button onclick="goToBlock('qst-1')" style="background:#b45309;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🔤 PQRST</button>
+        <button onclick="goToBlock('qst-2')" style="background:#991b1b;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🚑 AMPLE — en urgence</button>
+        <button onclick="goToBlock('qst-3')" style="background:#374151;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">📇 Antécédents &amp; habitudes</button>
+        <button onclick="goToBlock('qst-4')" style="background:#0369a1;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🗂️ Revue des systèmes</button>
+        <button onclick="goToBlock('qst-5')" style="background:#0f766e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🎯 Questionner par système</button>
+        <button onclick="goToBlock('qst-6')" style="background:#15803d;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">⏱️ Être concis</button>
+      </div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:20px;">
+        <div style="flex:1;min-width:95px;background:#FEF3C7;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#b45309;">PQRST</div><div style="font-size:11px;color:#555;margin-top:4px;">S = symptômes associés</div></div>
+        <div style="flex:1;min-width:95px;background:#FEE2E2;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#b91c1c;">AMPLE</div><div style="font-size:11px;color:#555;margin-top:4px;">L'essentiel en urgence</div></div>
+        <div style="flex:1;min-width:95px;background:#EEF2FF;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#1C3F8F;">21</div><div style="font-size:11px;color:#555;margin-top:4px;">Systèmes à la revue</div></div>
+        <div style="flex:1;min-width:95px;background:#DCFCE7;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#15803d;">Cibler</div><div style="font-size:11px;color:#555;margin-top:4px;">&gt; ratisser large</div></div>
+      </div>
+
+      <div class="block def" style="margin-top:14px;">
+        <div class="block-title" id="qst-1"><span class="tag">🔤 PQRST — caractériser la plainte</span></div>
+
+        <div class="key-fact orange" style="margin-top:10px;">⚠️ <strong>Une précision importante sur l'acronyme.</strong> Vos manuels — <em>GPHC</em> et <em>Démarche clinique</em> — enseignent <strong>PQRST</strong>, où le <strong>S signifie « Symptômes associés »</strong>. La variante <strong>PQRSTU</strong>, répandue en sciences infirmières, découpe autrement : S pour Sévérité, T pour Temps, U pour la compréhension du patient (<em>understanding</em>). <strong>Les deux couvrent le même terrain</strong> — la sévérité est simplement logée dans le Q (quantité) chez GPHC, et la compréhension du patient relève de la MCCP. 🎯 <strong>Utilisez la version enseignée dans votre programme</strong>; le tableau ci-dessous suit celle de vos manuels et signale où se rangent les éléments du PQRSTU.</div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:8%;"></th><th style="width:22%;">Signification</th><th style="width:36%;">Ce qu'on explore</th><th>Formulation</th></tr></thead>
+          <tbody>
+            <tr style="background:#fff3cd;"><td style="font-size:19px;font-weight:800;color:#b45309;text-align:center;">P</td><td><strong>Provoqué / Pallié</strong></td><td>Élément causal · ce qui <strong>aggrave</strong> ou <strong>soulage</strong> : position, mouvement, nourriture, médicament, repos</td><td>« <em>Qu'est-ce qui déclenche ? Qu'est-ce qui soulage ?</em> »<br>« <em>Y a-t-il une position qui aide ?</em> »</td></tr>
+            <tr><td style="font-size:19px;font-weight:800;color:#b45309;text-align:center;">Q</td><td><strong>Qualité / Quantité</strong></td><td><strong>Type</strong> de douleur (serrement, brûlure, coup de poignard) et <strong>intensité</strong> sur une échelle de 1 à 10<br><em>→ c'est ici que loge la « Sévérité » du PQRSTU</em></td><td>« <em>Décrivez-moi la douleur</em> » — laisser répondre <strong>avant</strong> de proposer des qualificatifs<br>« <em>Sur 10 ?</em> » · « <em>Ça vous empêche de faire quoi ?</em> »</td></tr>
+            <tr style="background:#fff3cd;"><td style="font-size:19px;font-weight:800;color:#b45309;text-align:center;">R</td><td><strong>Région / Irradiation</strong></td><td><strong>Localisé ou diffus</strong> · <strong>profond ou superficiel</strong> · trajet de l'irradiation</td><td>« <em>Montrez-moi avec un doigt.</em> »<br>« <em>Est-ce que ça part ailleurs ?</em> »</td></tr>
+            <tr style="background:#fce4ec;"><td style="font-size:19px;font-weight:800;color:#c0392b;text-align:center;">S</td><td>🎯 <strong>Symptômes associés</strong></td><td>Chercher les symptômes qui <strong>appuient le diagnostic différentiel</strong> — et rechercher les <strong>drapeaux rouges</strong><br><em>→ c'est le cœur du raisonnement, pas une simple case à cocher</em></td><td>Questions <strong>ciblées</strong> selon les hypothèses en présence<br>➜ Voir <em>Le raisonnement clinique</em></td></tr>
+            <tr><td style="font-size:19px;font-weight:800;color:#b45309;text-align:center;">T</td><td><strong>Temps</strong></td><td><strong>Durée</strong> (aigu vs chronique) · <strong>contexte d'apparition</strong> et périodicité (subit vs progressif, constant vs intermittent, fréquence) · <strong>évolution</strong> (croissant vs stable)</td><td>« <em>Depuis quand ? Comment ça a commencé ?</em> »<br>« <em>Depuis, c'est pareil, pire ou mieux ?</em> »</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <div style="font-size:11px;color:#64748b;margin-top:6px;">📚 <em>GPHC — Petit guide des habiletés cliniques (2018), ch. 1 « Communication » · GPHC — Petit guide de l'entrevue médicale (2016)</em></div>
+
+        <div class="key-fact blue" style="margin-top:12px;">🎯 <strong>Avant le PQRST, une question ouverte.</strong> Les manuels sont explicites : commencer par « <em>Pourriez-vous me parler davantage de votre [raison de consultation] ?</em> », puis seulement structurer. <strong>Attaquer directement par le P ferme l'entrevue trop tôt</strong> — on obtient alors les réponses aux questions qu'on a pensé poser, et rien d'autre.</div>
+
+        <div class="key-fact red" style="margin-top:8px;">🚨 <strong>Les deux lettres les plus rentables sont le T et le S.</strong> Le <strong>mode d'apparition</strong> (T) oriente à lui seul de grandes catégories : <strong>subit et rapidement évolutif</strong> → mécanique, obstructif, vasculaire; <strong>insidieux</strong> → inflammatoire, infectieux, néoplasique. Et les <strong>symptômes associés</strong> (S) sont ce qui départage réellement les hypothèses.</div>
+      </div>
+
+      <div class="block flag" style="margin-top:14px;">
+        <div class="block-title" id="qst-2"><span class="tag">🚑 AMPLE — le questionnaire d'urgence</span></div>
+
+        <div class="key-fact orange" style="margin-top:10px;">⚠️ <strong>Transparence sur la source :</strong> l'acronyme <strong>AMPLE n'apparaît dans aucun de vos trois manuels</strong> (GPHC Entrevue, GPHC Habiletés, Démarche clinique) — je l'ai vérifié. Il vient de la formation en <strong>traumatologie et soins d'urgence</strong> (tradition ATLS) et y est d'usage courant. Le contenu ci-dessous relève donc de connaissances générales, pas de vos sources validées : <strong>vérifiez la formulation exacte attendue dans votre programme</strong>.</div>
+
+        <div class="key-fact blue" style="margin-top:8px;">🎯 <strong>À quoi il sert :</strong> quand le temps manque — urgence, instabilité, transfert, préparation à une intervention —, AMPLE fournit <strong>le minimum vital de renseignements</strong> permettant d'agir sans danger. Ce n'est pas un questionnaire complet, c'est un filet.</div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-top:12px;">
+          <div style="background:#fee2e2;border-radius:10px;padding:14px;">
+            <strong style="color:#b91c1c;font-size:15px;">A — Allergies</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Allergies médicamenteuses et autres · <strong>nature exacte</strong> de la réaction<br>⚠️ Beaucoup d'« allergies » rapportées sont des <strong>effets indésirables attendus</strong> — nausées, bouffées de chaleur<br>➜ Voir <em>Sécurité transfusionnelle</em></div>
+          </div>
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;">
+            <strong style="color:#b45309;font-size:15px;">M — Médicaments</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Liste complète, <strong>incluant MVL et produits naturels</strong><br>🚨 Repérer d'emblée : <strong>anticoagulants</strong>, antiplaquettaires, bêta-bloqueurs, insuline, corticostéroïdes, immunosuppresseurs<br>➜ Voir <em>MVL &amp; PSN</em>, <em>Polypharmacie</em></div>
+          </div>
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+            <strong style="color:#1d4ed8;font-size:15px;">P — Passé médical</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Antécédents pertinents · chirurgies · <strong>grossesse possible</strong><br>🎯 Chez la personne en âge de procréer, la <strong>β-hCG</strong> découle directement de cette question</div>
+          </div>
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+            <strong style="color:#15803d;font-size:15px;">L — Last meal</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Dernier repas</strong> et dernière prise liquidienne — heure précise<br>🎯 Déterminant si une <strong>sédation, une intubation ou une chirurgie</strong> se profile<br>🚨 Penser aux <strong>agonistes du GLP-1</strong>, qui retardent la vidange gastrique<br>➜ Voir <em>Évaluation préopératoire</em></div>
+          </div>
+          <div style="background:#ede9fe;border-radius:10px;padding:14px;">
+            <strong style="color:#6d28d9;font-size:15px;">E — Événements</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Ce qui a mené à la situation actuelle · circonstances · <strong>mécanisme</strong> s'il y a traumatisme<br>💡 Certains ajoutent l'<strong>Environnement</strong> — exposition, température, toxiques</div>
+          </div>
+        </div>
+
+        <div class="key-fact green" style="margin-top:12px;">💡 <strong>AMPLE et PQRST ne s'opposent pas :</strong> le <strong>PQRST caractérise la plainte</strong>, AMPLE <strong>sécurise le contexte</strong>. En situation aiguë, on fait souvent AMPLE d'abord — puis on revient au PQRST une fois la personne stabilisée. ➜ Voir <em>Les Chocs</em>.</div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;border-left-color:#374151;">
+        <div class="block-title" id="qst-3"><span class="tag">📇 Antécédents &amp; habitudes de vie</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">💬 <strong>Annoncer le plan avant de commencer</strong>, comme le proposent les manuels : « <em>Comme je ne vous connais pas beaucoup, je vais vous poser des questions générales sur vos antécédents médicaux et habitudes de vie, puis nous nous attarderons à votre raison de consultation principale. Cela vous convient-il ?</em> » <span style="font-size:11px;color:#64748b;">📚 <em>GPHC, Habiletés cliniques</em></span></div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
+          <div style="background:#f1f5f9;border-radius:10px;padding:14px;">
+            <strong style="color:#334155;">📋 Antécédents personnels</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Médicaux</strong> — « <em>Êtes-vous connu pour des problèmes de santé ?</em> » puis, en lien avec la raison de consultation : « <em>Quelqu'un vous a-t-il déjà dit que vous souffriez de… ?</em> »<br><strong>Chirurgicaux</strong> — « <em>Avez-vous eu des chirurgies dans le passé ?</em> »<br><strong>Psychiatriques</strong> — « <em>Avez-vous déjà consulté un psychologue ou un psychiatre ?</em> »<br><strong>Accidents, traumatismes, transfusions</strong><br><strong>Vaccination</strong> — « <em>Votre vaccination est-elle à jour ?</em> »<br><br>💡 <strong>Si pertinent :</strong> obstétricaux avec le <strong>GTPAL</strong> (Grossesses, à Terme, Prématurées, Avortements, enfants vivants) · pédiatriques (histoire gestationnelle et développementale, école, amis)</div>
+          </div>
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;">
+            <strong style="color:#d35400;">🚬 Habitudes de vie</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Pour chaque substance : <strong>type, quantité, fréquence, durée d'exposition</strong><br><br><strong>Tabac</strong> — actuel ou passé, en <strong>paquets-année</strong><br><strong>Alcool</strong> — repères des manuels : <strong>homme &lt; 15 consommations/semaine</strong>, <strong>femme &lt; 10/semaine</strong><br><strong>Drogues</strong> — modalité (inhalation, injection…)<br><br>🎯 <strong>Si pertinent, le CAGE :</strong> avez-vous déjà tenté d'arrêter ? · vous a-t-on fait des reproches ? · vous sentez-vous coupable ? · consommez-vous le matin pour mieux vous réveiller ?<br><br><strong>Aussi :</strong> activité physique, alimentation, sexualité (orientation, partenaires, protection), sommeil, emploi, conjoint et enfants, niveau de stress, loisirs</div>
+          </div>
+        </div>
+        <div style="font-size:11px;color:#64748b;margin-top:6px;">📚 <em>GPHC — Petit guide des habiletés cliniques (2018), ch. 1</em></div>
+      </div>
+
+      <div class="block para" style="margin-top:14px;border-left-color:#0369a1;">
+        <div class="block-title" id="qst-4"><span class="tag">🗂️ La revue des systèmes — de la tête aux pieds</span></div>
+
+        <div class="key-fact orange" style="margin-top:10px;">⚠️ <strong>Ne pas la dérouler en entier à chaque consultation.</strong> Cette liste est un <strong>aide-mémoire</strong>, pas un script : une revue exhaustive systématique produit surtout du bruit. On l'utilise <strong>ciblée</strong> selon les hypothèses — et on l'élargit quand le tableau reste flou. <span style="font-size:11px;color:#64748b;">📚 <em>Liste d'après GPHC, Habiletés cliniques, ch. 1</em></span></div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:10px;margin-top:12px;font-size:12.5px;line-height:1.65;">
+          <div style="background:#f1f5f9;border-radius:9px;padding:12px;"><strong style="color:#334155;">1. Général</strong><br>Perte de poids, perte d'appétit, fatigue, fièvre/frissons, <strong>sudation nocturne</strong></div>
+          <div style="background:#fdf2f8;border-radius:9px;padding:12px;"><strong style="color:#9d174d;">2. Peau</strong><br>Lésion, prurit, peau sèche/grasse, ecchymose, ictère, changement des ongles ou cheveux</div>
+          <div style="background:#f1f5f9;border-radius:9px;padding:12px;"><strong style="color:#334155;">3. Tête</strong><br>Trauma, céphalée</div>
+          <div style="background:#eff6ff;border-radius:9px;padding:12px;"><strong style="color:#1d4ed8;">4. Ophtalmo</strong><br>Douleur oculaire, rougeur, larmoiement, démangeaison, sécheresse, vision floue, perte de vision, <strong>diplopie</strong>, scotome, éclairs/scintillements, photophobie</div>
+          <div style="background:#eff6ff;border-radius:9px;padding:12px;"><strong style="color:#1d4ed8;">5. Oreille</strong><br>Perte d'audition, acouphène, vertige, écoulement, otalgie</div>
+          <div style="background:#eff6ff;border-radius:9px;padding:12px;"><strong style="color:#1d4ed8;">6. Nez</strong><br>Congestion, rhinite, éternuement, démangeaison, épistaxis</div>
+          <div style="background:#eff6ff;border-radius:9px;padding:12px;"><strong style="color:#1d4ed8;">7. Bouche / gorge</strong><br>Dents et gencives, halitose, ulcération, douleur, <strong>dysphagie</strong>, voix rauque</div>
+          <div style="background:#f1f5f9;border-radius:9px;padding:12px;"><strong style="color:#334155;">8. Cou</strong><br>Masse, gonflement, douleur</div>
+          <div style="background:#fdf2f8;border-radius:9px;padding:12px;"><strong style="color:#9d174d;">9. Sein</strong><br>Changement de la peau, masse, douleur, écoulement<br>➜ <em>Cancer du sein</em></div>
+          <div style="background:#fee2e2;border-radius:9px;padding:12px;"><strong style="color:#b91c1c;">10. Cardiaque</strong><br>Douleur thoracique, dyspnée, palpitations, syncope, signes d'IC : <strong>orthopnée, DPN, OMI</strong></div>
+          <div style="background:#ecfeff;border-radius:9px;padding:12px;"><strong style="color:#0e7490;">11. Respiratoire</strong><br>Douleur thoracique, dyspnée, toux, expectorations, <strong>hémoptysies</strong>, wheezing, stridor · <strong>facteurs de risque d'EP</strong> : hospitalisation, immobilisation ou voyage, chirurgie récente, hormonothérapie</div>
+          <div style="background:#fef3c7;border-radius:9px;padding:12px;"><strong style="color:#b45309;">12. Gastro-intestinal</strong><br>Dysphagie, odynophagie, régurgitation, No/Vo, dyspepsie, douleur abdominale, ballonnement, diarrhée, constipation, <strong>saignement</strong> (hématémèse, rectorragie, méléna, hématochézie), ténesme</div>
+          <div style="background:#f0fdfa;border-radius:9px;padding:12px;"><strong style="color:#0f766e;">13. Urinaire</strong><br>Polyurie, pollakiurie, nycturie, dysurie, hématurie, urgence, incontinence · <strong>symptômes obstructifs</strong> : jet faible, hésitation, poussée, gouttes terminales, vidange incomplète · douleur sus-pubienne ou au flanc</div>
+          <div style="background:#eef2ff;border-radius:9px;padding:12px;"><strong style="color:#4338ca;">14. Génital masculin</strong><br>Douleur ou masse testiculaire, œdème scrotal, écoulement urétral, hernie, antécédents d'ITSS, libido</div>
+          <div style="background:#fdf2f8;border-radius:9px;padding:12px;"><strong style="color:#9d174d;">15. Génital féminin</strong><br>Ménarche, DDM, cycle (durée, régularité, flot), ménorragie, métrorragie, dysménorrhée, leucorrhée, démangeaison, lésion, habitudes sexuelles, contraception, coïtarche, dyspareunie, libido, ménopause<br>➜ <em>SUA</em>, <em>Contraception</em></div>
+          <div style="background:#fee2e2;border-radius:9px;padding:12px;"><strong style="color:#b91c1c;">16. Vasculaire</strong><br>Claudication, œdème de jambe, varices, thrombose ou embolie<br>➜ <em>TVP</em>, <em>MAP</em></div>
+          <div style="background:#fff7ed;border-radius:9px;padding:12px;"><strong style="color:#c2410c;">17. Locomoteur</strong><br>Myalgie, arthralgie, gonflement articulaire, rougeur, <strong>raideur matinale</strong>, limitation des mouvements<br>➜ <em>Approche de la douleur articulaire</em></div>
+          <div style="background:#f5f3ff;border-radius:9px;padding:12px;"><strong style="color:#6d28d9;">18. Neurologique</strong><br>Lipothymie/syncope, diplopie, baisse de vision, dysarthrie, dysphagie, parésie, paresthésie, trouble de la démarche, incoordination, tremblement, étourdissement, confusion, trouble cognitif</div>
+          <div style="background:#fef2f2;border-radius:9px;padding:12px;"><strong style="color:#c0392b;">19. Hématologique</strong><br>Ecchymoses ou saignement facile, pétéchies, purpura, adénopathies, symptômes d'anémie (fatigue, pâleur, dyspnée, perte sanguine, palpitations), infections répétées</div>
+          <div style="background:#f0fdf4;border-radius:9px;padding:12px;"><strong style="color:#15803d;">20. Endocrinien</strong><br>Intolérance au chaud ou au froid, changement de poids ou d'appétit, sueurs excessives · <strong>les 4 P du diabète</strong> : polyurie, polyphagie, polydipsie, perte de poids</div>
+          <div style="background:#f5f3ff;border-radius:9px;padding:12px;"><strong style="color:#6d28d9;">21. Psychiatrique</strong><br>Humeur triste, <strong>idées suicidaires</strong>, stresseurs, anxiété, phobie, hallucination, délire, mémoire</div>
+        </div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;border-left-color:#0f766e;">
+        <div class="block-title" id="qst-5"><span class="tag">🎯 Questionner par système — les questions qui paient</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>Pour chaque système, quelques questions font presque tout le travail diagnostique.</strong> Ce tableau les isole — celles qui <strong>départagent</strong> — et signale ce qu'il ne faut jamais oublier de demander. <span style="font-size:11px;color:#64748b;">📚 <em>D'après GPHC — Petit guide de l'entrevue médicale (2016), chapitres par système</em></span></div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:16%;">Système</th><th style="width:42%;">Les questions discriminantes</th><th>🚨 Ne jamais oublier</th></tr></thead>
+          <tbody>
+            <tr style="background:#fee2e2;"><td><strong>Cardiovasculaire</strong></td><td>Douleur : <strong>à l'effort ou au repos ?</strong> soulagée par le repos ? irradiation ?<br>Dyspnée : <strong>à quel effort exactement</strong> (nombre de marches, distance) ?<br><strong>Orthopnée</strong> (combien d'oreillers ?) · <strong>DPN</strong> · <strong>OMI</strong><br>Palpitations : <strong>régulières ou irrégulières</strong> ? début et fin brusques ?</td><td>🚨 <strong>Syncope</strong> — à l'effort ? sans prodrome ?<br>🚨 <strong>Antécédents familiaux de mort subite</strong><br>➜ <em>Arythmies</em>, <em>SCA</em></td></tr>
+            <tr><td><strong>Respiratoire</strong></td><td>Toux : sèche ou productive ? <strong>couleur des expectorations</strong> ? depuis quand ?<br>Dyspnée : <strong>d'effort ou de repos</strong> ? positionnelle ?<br>Wheezing, stridor · exposition professionnelle · <strong>tabac en paquets-année</strong></td><td>🚨 <strong>Hémoptysies</strong><br>🚨 <strong>Facteurs de risque d'EP</strong> — immobilisation, chirurgie, voyage, hormonothérapie, néoplasie<br>➜ <em>EP</em>, <em>MPOC</em></td></tr>
+            <tr style="background:#fef3c7;"><td><strong>Digestif</strong></td><td>Douleur : <strong>rapport avec les repas</strong> ? localisation, irradiation ?<br><strong>Changement du transit</strong> — et depuis quand ?<br>Dysphagie : <strong>aux solides, aux liquides, ou les deux</strong> ? progressive ?</td><td>🚨 <strong>Saignement</strong> — méléna, rectorragie, hématémèse<br>🚨 <strong>Perte de poids involontaire</strong> · dysphagie progressive<br>➜ <em>DDx douleur abdominale</em></td></tr>
+            <tr><td><strong>Urinaire</strong></td><td>Séparer <strong>irritatif</strong> (dysurie, pollakiurie, urgence) et <strong>obstructif</strong> (jet faible, hésitation, vidange incomplète)<br>Douleur : sus-pubienne ou au <strong>flanc</strong> ?</td><td>🚨 <strong>Hématurie</strong> — surtout indolore<br>🚨 <strong>Fièvre + douleur au flanc</strong> → pyélonéphrite<br>➜ <em>Cystite</em>, <em>Lithiase urinaire</em></td></tr>
+            <tr style="background:#f5f3ff;"><td><strong>Neurologique</strong></td><td><strong>Début brutal ou progressif</strong> ? — la question qui sépare tout<br>Déficit : <strong>focal ou diffus</strong> ? évolution ?<br>Céphalée : <strong>est-ce la pire de votre vie</strong> ? maximale d'emblée ?</td><td>🚨 <strong>Coup de tonnerre</strong> → HSA<br>🚨 <strong>Déficit focal brutal</strong> → AVC · heure exacte du début<br>➜ <em>AVC</em>, <em>Neuro-imagerie</em></td></tr>
+            <tr><td><strong>Locomoteur</strong></td><td><strong>Mécanique ou inflammatoire ?</strong> — raideur matinale <strong>&lt; ou &gt; 30 min</strong>, douleur au repos améliorée par le mouvement<br><strong>Mono ou polyarticulaire</strong> ? symétrique ?</td><td>🚨 <strong>Articulation chaude et rouge + fièvre</strong> → arthrite septique<br>➜ <em>Approche de la douleur articulaire</em></td></tr>
+            <tr style="background:#f0fdf4;"><td><strong>Endocrinien</strong></td><td><strong>Intolérance au chaud ou au froid</strong> · changement de poids <em>avec appétit conservé</em><br>Les <strong>4 P</strong> du diabète</td><td>🚨 Perte de poids <strong>malgré un appétit augmenté</strong> → hyperthyroïdie, diabète<br>➜ <em>Diabète</em>, <em>Hyperthyroïdie</em></td></tr>
+            <tr><td><strong>Psychique</strong></td><td>Humeur, intérêt, sommeil, appétit, énergie, concentration<br>Fonctionnement : <strong>« qu'est-ce que ça vous empêche de faire ? »</strong></td><td>🚨 <strong>Idées suicidaires — les demander directement</strong>, cela n'induit pas le risque<br>➜ <em>Santé mentale</em></td></tr>
+            <tr style="background:#fef2f2;"><td><strong>Hématologique</strong></td><td>Saignements faciles, ecchymoses spontanées · symptômes d'anémie · infections répétées</td><td>🚨 <strong>Sudations nocturnes + perte de poids + adénopathies</strong> → symptômes B<br>➜ <em>FSC &amp; Anémie</em></td></tr>
+            <tr><td><strong>Cutané</strong></td><td>Évolution de la lésion · prurit · exposition, nouveaux produits, médicaments récents</td><td>🚨 <strong>Lésion qui change</strong> — taille, couleur, bords, saignement<br>➜ <em>Dermatologie</em></td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+
+      <div class="block rx" style="margin-top:14px;border-left-color:#15803d;">
+        <div class="block-title" id="qst-6"><span class="tag">⏱️ Être concis sans être expéditif</span></div>
+
+        <div class="key-fact green" style="margin-top:10px;">🎯 <strong>La concision ne vient pas de questions plus rapides — elle vient de MEILLEURES questions.</strong> Un questionnaire concis est un questionnaire <strong>guidé par des hypothèses</strong> : on ne demande que ce qui peut faire changer d'avis.</div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:12px;">
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+            <strong style="color:#15803d;">✅ Ce qui fait gagner du temps</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Une vraie question ouverte au début</strong>, puis se taire — c'est contre-intuitif, mais l'écoute non interrompue <strong>raccourcit</strong> l'entrevue<br><strong>Le contrat initial</strong> — recenser tous les motifs d'emblée évite le « en passant, docteur » final<br><strong>Poser ses hypothèses tôt</strong> — on sait alors quoi demander<br><strong>Une question à la fois</strong>, formulée simplement<br><strong>Le résumé à voix haute</strong> — corrige les malentendus avant qu'ils ne coûtent cher</div>
+          </div>
+          <div style="background:#fef2f2;border-radius:10px;padding:14px;">
+            <strong style="color:#c0392b;">❌ Ce qui en fait perdre</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Fermer les questions trop tôt</strong> — on n'obtient que ce qu'on a pensé demander<br><strong>Dérouler les 21 systèmes</strong> sans ciblage<br><strong>Enchaîner deux ou trois questions</strong> d'un coup — la personne ne répond qu'à la dernière<br><strong>Les questions suggestives</strong> — « <em>C'est comme un serrement ?</em> » induit la réponse<br><strong>Interrompre dans les premières secondes</strong><br><strong>Reposer ce qui est déjà au dossier</strong></div>
+          </div>
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;">
+            <strong style="color:#d35400;">🎯 Le questionnaire ciblé en 5 temps</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>①</strong> Question ouverte · écouter sans interrompre<br><strong>②</strong> <strong>Formuler 2 ou 3 hypothèses</strong> dans sa tête<br><strong>③</strong> <strong>PQRST</strong> pour caractériser<br><strong>④</strong> <strong>Symptômes associés ciblés</strong> — ceux qui départagent les hypothèses, plus les drapeaux rouges<br><strong>⑤</strong> Antécédents, médicaments et habitudes <strong>pertinents</strong> à ces hypothèses<br><br>💡 <strong>La revue des systèmes s'élargit seulement si le tableau reste flou.</strong></div>
+          </div>
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+            <strong style="color:#1d4ed8;">⏳ Quand le temps manque vraiment</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Nommer la contrainte</strong> plutôt que de l'imposer : « <em>Il nous reste dix minutes; je propose qu'on règle X aujourd'hui et qu'on se revoie pour Y.</em> »<br><br>🎯 <strong>Et ne jamais sacrifier deux choses</strong>, même sous pression : les <strong>drapeaux rouges</strong> et le <strong>filet de sécurité</strong> — ce qui doit faire reconsulter, et où aller.</div>
+          </div>
+        </div>
+
+        <div class="key-fact green" style="margin-top:12px;">✅ <strong>À retenir :</strong> ① <strong>ouvrir, puis se taire</strong> · ② <strong>PQRST</strong> — le T et le S sont les plus rentables · ③ <strong>AMPLE</strong> quand ça presse · ④ <strong>revue des systèmes ciblée</strong>, jamais déroulée en entier · ⑤ <strong>drapeaux rouges et filet de sécurité</strong> sont non négociables.</div>
+      </div>
+    </div>
+
+    <div class="section" id="sec-examen-physique">
+      <div class="section-header">
+        <div class="section-accent" style="background:#0f766e">🩻</div>
+        <div class="section-title"><h1>L'examen physique</h1><div class="breadcrumb">Méthode clinique <span class="breadcrumb-sep">·</span> MEGACV · Signes vitaux <span class="breadcrumb-sep">·</span> Examen par système</div></div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;">
+        <button onclick="goToBlock('exp-1')" style="background:#374151;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🔢 Les 4 temps</button>
+        <button onclick="goToBlock('exp-2')" style="background:#6d28d9;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">👁️ MEGACV</button>
+        <button onclick="goToBlock('exp-3')" style="background:#b91c1c;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">📊 Signes vitaux</button>
+        <button onclick="goToBlock('exp-4')" style="background:#be123c;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🫀 Cardiovasculaire</button>
+        <button onclick="goToBlock('exp-5')" style="background:#0891b2;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🫁 Respiratoire</button>
+        <button onclick="goToBlock('exp-6')" style="background:#b45309;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🫄 Abdomen</button>
+        <button onclick="goToBlock('exp-7')" style="background:#4338ca;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧠 Neurologique</button>
+        <button onclick="goToBlock('exp-8')" style="background:#c2410c;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🦴 Locomoteur &amp; autres</button>
+        <button onclick="goToBlock('exp-9')" style="background:#15803d;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🎯 Cibler l'examen</button>
+      </div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:20px;">
+        <div style="flex:1;min-width:95px;background:#F3E8FF;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#6d28d9;">MEGACV</div><div style="font-size:11px;color:#555;margin-top:4px;">Avant de toucher</div></div>
+        <div style="flex:1;min-width:95px;background:#FEE2E2;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#b91c1c;">FRAM</div><div style="font-size:11px;color:#555;margin-top:4px;">Caractériser le pouls</div></div>
+        <div style="flex:1;min-width:95px;background:#FEF3C7;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#b45309;">80 %</div><div style="font-size:11px;color:#555;margin-top:4px;">Brassard / circonférence</div></div>
+        <div style="flex:1;min-width:95px;background:#DCFCE7;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#15803d;">Abdomen</div><div style="font-size:11px;color:#555;margin-top:4px;">Ausculter AVANT de palper</div></div>
+      </div>
+
+      <div class="block def" style="margin-top:14px;">
+        <div class="block-title" id="exp-1"><span class="tag">🔢 Les quatre temps — et l'exception</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>L'ordre classique : inspection → palpation → percussion → auscultation.</strong> Il va du moins au plus intrusif, et surtout : <strong>l'inspection livre déjà l'essentiel</strong>, à condition de ne pas la bâcler pour se précipiter sur le stéthoscope.</div>
+
+        <div style="background:#f8fafc;border:1px solid #cbd5e1;border-radius:10px;padding:14px;margin-top:12px;">
+          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin-bottom:8px;">Sch&eacute;ma &mdash; l&rsquo;ordre, et l&rsquo;exception abdominale</div>
+          <svg viewBox="0 0 620 210" style="width:100%;height:auto;" role="img" aria-label="Ordre de l examen physique et inversion pour l abdomen">
+            <text x="20" y="24" fill="#0f172a" font-size="12.5" font-weight="700">PARTOUT</text>
+            <rect x="20" y="34" width="130" height="42" rx="8" fill="#DCFCE7"/>
+            <text x="85" y="60" text-anchor="middle" fill="#15803d" font-size="12.5" font-weight="700">① Inspection</text>
+            <rect x="166" y="34" width="130" height="42" rx="8" fill="#FEF3C7"/>
+            <text x="231" y="60" text-anchor="middle" fill="#b45309" font-size="12.5" font-weight="700">② Palpation</text>
+            <rect x="312" y="34" width="130" height="42" rx="8" fill="#EEF2FF"/>
+            <text x="377" y="60" text-anchor="middle" fill="#1C3F8F" font-size="12.5" font-weight="700">③ Percussion</text>
+            <rect x="458" y="34" width="142" height="42" rx="8" fill="#F3E8FF"/>
+            <text x="529" y="60" text-anchor="middle" fill="#6d28d9" font-size="12.5" font-weight="700">④ Auscultation</text>
+            <g stroke="#94a3b8" stroke-width="2" fill="none">
+              <path d="M 154,55 L 162,55"/><path d="M 300,55 L 308,55"/><path d="M 446,55 L 454,55"/>
+            </g>
+            <text x="20" y="118" fill="#b91c1c" font-size="12.5" font-weight="700">ABDOMEN &mdash; l&rsquo;auscultation passe en 2e</text>
+            <rect x="20" y="128" width="130" height="42" rx="8" fill="#DCFCE7"/>
+            <text x="85" y="154" text-anchor="middle" fill="#15803d" font-size="12.5" font-weight="700">① Inspection</text>
+            <rect x="166" y="128" width="130" height="42" rx="8" fill="#F3E8FF"/>
+            <text x="231" y="154" text-anchor="middle" fill="#6d28d9" font-size="12.5" font-weight="700">② Auscultation</text>
+            <rect x="312" y="128" width="130" height="42" rx="8" fill="#EEF2FF"/>
+            <text x="377" y="154" text-anchor="middle" fill="#1C3F8F" font-size="12.5" font-weight="700">③ Percussion</text>
+            <rect x="458" y="128" width="142" height="42" rx="8" fill="#FEF3C7"/>
+            <text x="529" y="154" text-anchor="middle" fill="#b45309" font-size="12.5" font-weight="700">④ Palpation</text>
+            <g stroke="#94a3b8" stroke-width="2" fill="none">
+              <path d="M 154,149 L 162,149"/><path d="M 300,149 L 308,149"/><path d="M 446,149 L 454,149"/>
+            </g>
+            <rect x="20" y="182" width="580" height="24" rx="6" fill="#7f1d1d"/>
+            <text x="310" y="199" text-anchor="middle" fill="#fecaca" font-size="12" font-weight="700">Palper d&rsquo;abord modifierait le p&eacute;ristaltisme qu&rsquo;on cherche &agrave; &eacute;couter</text>
+          </svg>
+        </div>
+
+        <div class="key-fact green" style="margin-top:12px;">✅ <strong>Trois principes de base, avant tout :</strong> <strong>lavage des mains</strong> · <strong>salutations, explications et obtention du consentement</strong> · <strong>comparer les deux côtés</strong> systématiquement. <span style="font-size:11px;color:#64748b;">📚 <em>GPHC — Petit guide des habiletés cliniques (2018)</em></span> Et toujours : découvrir la région examinée, sans exposer plus que nécessaire.</div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;border-left-color:#6d28d9;">
+        <div class="block-title" id="exp-2"><span class="tag">👁️ MEGACV — l'examen général</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>MEGACV structure les premières secondes</strong>, avant tout examen ciblé. C'est l'ossature utilisée dans tout le <em>Petit guide des habiletés cliniques</em>, pour chaque pathologie — et elle vous fera repérer l'essentiel <strong>depuis la porte</strong>.</div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-top:12px;">
+          <div style="background:#ede9fe;border-radius:10px;padding:14px;">
+            <strong style="color:#6d28d9;font-size:15px;">M — Mobilité / Posture</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Mouvements spontanés · position adoptée · démarche · tonus<br><br>💡 <strong>La position en dit long :</strong> immobile et recroquevillé (péritonite) · agité et incapable de trouver une position (colique néphrétique) · penché en avant (péricardite, détresse respiratoire)</div>
+          </div>
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+            <strong style="color:#1d4ed8;font-size:15px;">É — État d'éveil / Conscience</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Degré d'activité · réactivité à l'environnement · orientation<br><br>🚨 Toute <strong>altération</strong> réoriente immédiatement la priorité<br>➜ Voir <em>Délirium</em></div>
+          </div>
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+            <strong style="color:#15803d;font-size:15px;">G — Grandeur / Grosseur</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Taille, poids, IMC · morphologie<br><br>💡 <strong>Répartition</strong> des graisses : centripète en hypercorticisme<br>➜ Voir <em>Nutrition &amp; dénutrition</em></div>
+          </div>
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;">
+            <strong style="color:#d35400;font-size:15px;">A — Apparence générale</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Personne souffrante ? · hygiène et autonomie · faciès · dyspnée au repos ou à la parole<br><br>🎯 <strong>« A-t-elle l'air malade ? »</strong> — cette impression globale est étonnamment prédictive et mérite d'être notée</div>
+          </div>
+          <div style="background:#fce4ec;border-radius:10px;padding:14px;">
+            <strong style="color:#c0392b;font-size:15px;">C — Coloration</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Pâleur</strong> (anémie) · <strong>cyanose</strong> centrale ou périphérique · <strong>ictère</strong> · rougeur · marbrures<br><br>🚨 Les <strong>marbrures</strong> sont un signe d'hypoperfusion<br>➜ Voir <em>Les Chocs</em></div>
+          </div>
+          <div style="background:#f1f5f9;border-radius:10px;padding:14px;">
+            <strong style="color:#334155;font-size:15px;">V — Signes Vitaux</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">FC · TA · FR · SaO₂ · température<br><br>➜ Détaillés au bloc suivant</div>
+          </div>
+        </div>
+        <div style="font-size:11px;color:#64748b;margin-top:8px;">📚 <em>GPHC — Petit guide des habiletés cliniques (2018) — structure employée dans les 21 chapitres</em></div>
+      </div>
+
+      <div class="block para" style="margin-top:14px;border-left-color:#b91c1c;">
+        <div class="block-title" id="exp-3"><span class="tag">📊 Signes vitaux — les détails qui comptent</span></div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
+          <div style="background:#fee2e2;border-radius:10px;padding:14px;border-left:4px solid #b91c1c;">
+            <strong style="color:#b91c1c;">💓 Le pouls — FRAM</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Palper avec <strong>l'index et le majeur</strong> — carotidien, brachial, radial, fémoral, poplité, tibial postérieur, pédieux.<br><br><strong>F — Fréquence</strong> : sur <strong>15 s si régulier</strong>; sur <strong>60 s si rapide, lent ou irrégulier</strong><br>Normale 60–100 · tachycardie &gt; 100 · bradycardie &lt; 60<br><strong>R — Rythme</strong> : régulier ou irrégulier<br><strong>A — Amplitude</strong> : normale · <strong>filante</strong> (hémorragie) · <strong>bondissante</strong> (hyperthyroïdie)<br><strong>M — Morphologie</strong> : normale · <strong>montée lente et retardée</strong> (sténose aortique) · <strong>dicrote</strong> (insuffisance aortique)<br><span style="font-size:11px;color:#64748b;">📚 <em>GPHC, Habiletés cliniques</em></span></div>
+          </div>
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;border-left:4px solid #d35400;">
+            <strong style="color:#d35400;">🩺 La tension artérielle</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🎯 <strong>Choix du brassard :</strong> la chambre gonflable doit correspondre à <strong>80 % de la circonférence du bras</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>GPHC</em></span><br>⚠️ Un brassard trop petit <strong>surestime</strong> la tension — erreur fréquente chez la personne obèse<br><br><strong>Chez la personne âgée</strong>, les manuels signalent plusieurs pièges :<br>• <strong>Effet du sarrau blanc</strong> et <strong>pseudohypertension</strong> (manœuvre d'Osler)<br>• <strong>Différence fréquente entre les deux bras</strong> — mesurer les deux au moins une fois<br>• <strong>Trou auscultatoire</strong> fréquent<br>• 🚨 <strong>Hypotension orthostatique très fréquente</strong><br>➜ Voir <em>HTA</em>, <em>Chutes</em></div>
+          </div>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">🫁 <strong>Fréquence respiratoire — le signe vital le plus négligé et le plus prédictif.</strong> La compter <strong>discrètement</strong>, sur une minute complète : une personne qui se sait observée modifie sa respiration. 💡 Chez la personne âgée, une <strong>respiration de Cheyne-Stokes</strong> peut être physiologique. <span style="font-size:11px;color:#64748b;">📚 <em>GPHC, ch. Gériatrie</em></span></div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;border-left-color:#be123c;">
+        <div class="block-title" id="exp-4"><span class="tag">🫀 Examen cardiovasculaire</span></div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:16%;">Temps</th><th style="width:40%;">Ce qu'on fait</th><th>Ce qu'on cherche</th></tr></thead>
+          <tbody>
+            <tr style="background:#fce4ec;"><td><strong>Inspection</strong></td><td>Cou et thorax · <strong>turgescence jugulaire</strong> — plus facile à repérer <strong>en s'accroupissant</strong> pour avoir une vision plus horizontale du cou <span style="font-size:11px;color:#64748b;">📚 <em>Démarche clinique, ch. 4</em></span></td><td>Distension jugulaire · OMI · cyanose · <strong>choc apexien visible</strong></td></tr>
+            <tr><td><strong>Palpation</strong></td><td>🎯 Séquence des manuels : repérer le <strong>choc apexien</strong>, puis palper le <strong>foyer tricuspidien</strong> (région xiphoïdienne), le <strong>rebord sternal gauche</strong>, le <strong>foyer pulmonaire</strong>, le <strong>foyer aortique</strong>, et terminer par la recherche d'une <strong>hyperdynamie du cœur droit</strong> <span style="font-size:11px;color:#64748b;">📚 <em>Démarche clinique, ch. 4</em></span></td><td>Choc apexien <strong>déplacé</strong> (dilatation) ou <strong>soutenu</strong> (hypertrophie) · <strong>frémissement</strong> (souffle intense) · soulèvement parasternal</td></tr>
+            <tr style="background:#f1f5f9;"><td><strong>Auscultation</strong></td><td>Aux <strong>quatre foyers</strong>, membrane puis cupule · en décubitus, puis assis penché en avant et en <strong>décubitus latéral gauche</strong></td><td><strong>B1, B2</strong> · B3 (surcharge), B4 (rigidité) · <strong>souffles</strong> : timing, intensité, irradiation · frottement péricardique<br>➜ Voir <em>Sténose aortique</em>, <em>Péricardite</em></td></tr>
+            <tr><td><strong>Vasculaire</strong></td><td>Pouls périphériques comparés · temps de remplissage capillaire · recherche d'<strong>OMI</strong></td><td>🚨 <strong>Asymétrie des pouls</strong> → dissection, MAP<br>➜ Voir <em>MAP</em>, <em>TVP</em></td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;border-left-color:#0891b2;">
+        <div class="block-title" id="exp-5"><span class="tag">🫁 Examen respiratoire</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>La séquence complète :</strong> inspection → palpation → percussion → auscultation du <strong>murmure vésiculaire (MV)</strong> et des <strong>bruits surajoutés (adventices)</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Démarche clinique, ch. 5</em></span> Toujours comparer <strong>côté à côté</strong>, de haut en bas, en avant et en arrière.</div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:18%;">Temps</th><th style="width:36%;">Ce qu'on cherche</th><th>Interprétation</th></tr></thead>
+          <tbody>
+            <tr style="background:#ecfeff;"><td><strong>Inspection</strong></td><td><strong>Tirage</strong> · utilisation des muscles accessoires · <strong>asymétrie</strong> d'expansion · déformation thoracique · fréquence et amplitude respiratoires</td><td>Le tirage signe un travail respiratoire augmenté — signe précoce et fiable</td></tr>
+            <tr><td><strong>Palpation</strong></td><td>Expansion thoracique symétrique · <strong>vibrations vocales</strong> (« dites 33 »)</td><td>🎯 <strong>Vibrations augmentées</strong> → consolidation<br>🎯 <strong>Vibrations abolies</strong> → épanchement ou pneumothorax</td></tr>
+            <tr style="background:#f0fdf4;"><td><strong>Percussion</strong></td><td>Comparer les deux côtés, de haut en bas</td><td><strong>Matité</strong> → épanchement, consolidation<br><strong>Tympanisme</strong> → pneumothorax, hyperinflation</td></tr>
+            <tr><td><strong>Auscultation</strong></td><td><strong>MV</strong> présent, diminué ou aboli · <strong>bruits surajoutés</strong> : crépitants, ronchi, sibilances (wheezing), stridor, frottement pleural</td><td><strong>Crépitants localisés</strong> → pneumonie · <strong>bilatéraux aux bases</strong> → œdème<br><strong>Sibilances</strong> → obstruction bronchique<br>🚨 <strong>Stridor</strong> → obstruction haute</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="key-fact red" style="margin-top:12px;">🎯 <strong>Deux triades à reconnaître, tirées des manuels :</strong><br><br>• <strong>Pneumonie</strong> — fièvre, tachypnée, tachycardie, hypoxémie, <strong>baisse du murmure vésiculaire avec crépitants localisés</strong>; si la consolidation est importante, les <strong>vibrations vocales augmentent</strong><br>• 🚨 <strong>Pneumothorax</strong> — <strong>absence de vibrations vocales</strong> du côté atteint, <strong>tympanisme</strong> à la percussion, <strong>absence de murmure vésiculaire</strong><br><br><span style="font-size:11px;color:#64748b;">📚 <em>Démarche clinique</em></span> 💡 Les manuels notent que l'<strong>échographie au chevet</strong> est sensible pour confirmer ces diagnostics. ➜ Voir <em>Imagerie du thorax</em>.</div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;border-left-color:#b45309;">
+        <div class="block-title" id="exp-6"><span class="tag">🫄 Examen de l'abdomen</span></div>
+
+        <div class="key-fact red" style="margin-top:10px;">🚨 <strong>L'ordre change ici :</strong> inspection → <strong>auscultation</strong> → percussion → palpation. <span style="font-size:11px;color:#64748b;">📚 <em>Démarche clinique, ch. 6</em></span> On ausculte avant de toucher, parce que <strong>palper modifie le péristaltisme qu'on veut écouter</strong>. Et on <strong>palpe la zone douloureuse en DERNIER</strong>.</div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:18%;">Temps</th><th style="width:36%;">Ce qu'on fait</th><th>Ce qu'on cherche</th></tr></thead>
+          <tbody>
+            <tr style="background:#fff3cd;"><td><strong>① Inspection</strong></td><td>Forme · cicatrices · circulation collatérale · mouvements respiratoires abdominaux</td><td><strong>Distension</strong> (iléus, occlusion, ascite) · hernies · ecchymoses</td></tr>
+            <tr><td><strong>② Auscultation</strong></td><td>Avant toute palpation · écouter suffisamment longtemps avant de conclure à l'absence</td><td><strong>Péristaltisme</strong> présent, augmenté, métallique ou absent<br>Souffles vasculaires (aorte, rénales)</td></tr>
+            <tr style="background:#f0fdf4;"><td><strong>③ Percussion</strong></td><td>Les quatre quadrants · recherche de <strong>matité déclive</strong></td><td><strong>Tympanisme</strong> diffus (gaz) · <strong>matité</strong> (masse, ascite)<br>Taille du foie et de la rate</td></tr>
+            <tr><td><strong>④ Palpation</strong></td><td><strong>Superficielle d'abord</strong>, puis profonde · <strong>zone douloureuse en dernier</strong> · observer le visage, pas la main</td><td>🚨 <strong>Défense</strong> · <strong>ressaut</strong> · <strong>rigidité</strong> → irritation péritonéale<br>Masses · hépatomégalie · splénomégalie · globe vésical<br>🚨 <strong>Masse pulsatile</strong> → anévrisme</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">🔬 <strong>L'échographie ciblée au chevet (ECC) change la donne.</strong> Les manuels le formulent bien : elle « <em>permet de visualiser en temps réel ce que nous pouvons seulement inférer avec les méthodes traditionnelles</em> » — par exemple <strong>voir l'ascite</strong> plutôt que de tenter de la déduire d'une matité déclive. <span style="font-size:11px;color:#64748b;">📚 <em>Démarche clinique, ch. 3 — Introduction à l'échographie ciblée au chevet</em></span> ➜ Voir <em>Imagerie de l'abdomen</em>.</div>
+
+        <div class="key-fact blue" style="margin-top:8px;">👵 <strong>Chez la personne âgée, l'examen abdominal est trompeur</strong> — la douleur est atténuée et la défense peut manquer <strong>même en péritonite</strong>. Un abdomen « souple » n'y a pas la même valeur rassurante. ➜ Voir <em>Le vieillissement</em>.</div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;border-left-color:#4338ca;">
+        <div class="block-title" id="exp-7"><span class="tag">🧠 Examen neurologique</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>L'examen neurologique complet est long — il se fait donc CIBLÉ selon l'hypothèse.</strong> La question qui guide tout : <strong>l'atteinte est-elle centrale ou périphérique, et à quel niveau ?</strong></div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-top:12px;">
+          <div style="background:#eef2ff;border-radius:10px;padding:14px;">
+            <strong style="color:#4338ca;">🧩 État mental &amp; langage</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Vigilance · orientation · attention · mémoire<br><strong>Langage</strong> : expression, compréhension, dénomination, répétition<br>➜ Voir <em>TNC</em>, <em>Délirium</em>, <em>AVC</em></div>
+          </div>
+          <div style="background:#f5f3ff;border-radius:10px;padding:14px;">
+            <strong style="color:#6d28d9;">👁️ Nerfs crâniens</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Pupilles · champs visuels · oculomotricité · <strong>sensibilité et motricité faciales</strong> · audition · déglutition · langue<br><br>🚨 <strong>Paralysie faciale :</strong> Bell touche <strong>tout</strong> le visage; l'AVC épargne le front<br>➜ Voir <em>AVC</em></div>
+          </div>
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+            <strong style="color:#1d4ed8;">💪 Motricité</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Tonus</strong> · <strong>force</strong> cotée de 0 à 5, comparée<br>Recherche d'un déficit <strong>focal</strong> ou <strong>proximal vs distal</strong><br><br>💡 La <strong>rigidité</strong> caractérise une atteinte extrapyramidale (Parkinson) — parfois révélée par une manœuvre de distraction controlatérale <span style="font-size:11px;color:#64748b;">📚 <em>Démarche clinique, ch. 11</em></span></div>
+          </div>
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+            <strong style="color:#15803d;">🔨 Réflexes</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Le <strong>réflexe ostéotendineux</strong> répond à un <strong>étirement brusque du muscle</strong>, perçu par les fuseaux musculaires <span style="font-size:11px;color:#64748b;">📚 <em>Démarche clinique, ch. 11</em></span><br><br><strong>Vifs</strong> → atteinte centrale · <strong>abolis</strong> → atteinte périphérique<br><strong>Cutané plantaire</strong> · comparer les deux côtés</div>
+          </div>
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;">
+            <strong style="color:#d35400;">✋ Sensibilité</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Tact, douleur, température (voies spinothalamiques) · vibration et proprioception (cordons postérieurs)<br><br>🎯 <strong>Chercher un niveau sensitif</strong> ou une distribution en <strong>dermatome</strong> — c'est ce qui localise</div>
+          </div>
+          <div style="background:#fce4ec;border-radius:10px;padding:14px;">
+            <strong style="color:#c0392b;">🚶 Coordination &amp; démarche</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Doigt-nez · talon-genou · mouvements alternés · Romberg<br><strong>Démarche</strong> — le test global le plus rentable<br><br>🚨 <strong>Incapacité à tenir debout ou à marcher</strong> avec un vertige → penser cérébelleux<br>➜ Voir <em>Vertige</em>, <em>Chutes</em></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;border-left-color:#c2410c;">
+        <div class="block-title" id="exp-8"><span class="tag">🦴 Locomoteur, ORL, peau &amp; autres</span></div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:18%;">Système</th><th style="width:40%;">Séquence</th><th>Signes clés</th></tr></thead>
+          <tbody>
+            <tr style="background:#fff7ed;"><td><strong>Locomoteur</strong></td><td>🎯 <strong>Regarder — Bouger — Palper</strong>, puis manœuvres spécifiques<br>Amplitudes <strong>actives puis passives</strong> · toujours comparer au côté sain</td><td>Épanchement · chaleur · rougeur · déformation · <strong>limitation active vs passive</strong><br>🚨 <strong>Articulation chaude, rouge, avec fièvre</strong> → arthrite septique<br>➜ <em>Approche de la douleur articulaire</em></td></tr>
+            <tr><td><strong>ORL / cou</strong></td><td>Otoscopie · examen de la bouche et du pharynx · palpation du <strong>cou et de la thyroïde</strong> (par derrière, faire déglutir) · aires ganglionnaires</td><td>Tympan · adénopathies (taille, mobilité, sensibilité) · <strong>nodule ou goitre</strong><br>➜ <em>Nodule thyroïdien</em></td></tr>
+            <tr style="background:#fdf2f8;"><td><strong>Peau</strong></td><td>Décrire : <strong>type de lésion élémentaire</strong>, couleur, bordure, <strong>disposition</strong> et <strong>distribution</strong> · examiner <strong>toute</strong> la peau, ongles et cuir chevelu inclus</td><td>Un vocabulaire précis vaut mieux qu'une impression : macule, papule, plaque, vésicule, pustule, nodule<br>➜ <em>Dermatologie</em></td></tr>
+            <tr><td><strong>Sein</strong></td><td>Inspection bras levés et abaissés · palpation systématique <strong>des quatre quadrants et du prolongement axillaire</strong> · aires ganglionnaires <span style="font-size:11px;color:#64748b;">📚 <em>Démarche clinique, ch. 10</em></span></td><td>Masse (taille, mobilité, consistance) · rétraction cutanée ou mamelonnaire · écoulement<br>➜ <em>Cancer du sein</em></td></tr>
+            <tr style="background:#f0fdfa;"><td><strong>Génito-urinaire</strong></td><td>Toujours <strong>expliquer</strong>, obtenir le consentement, prévoir un <strong>accompagnement</strong> · exposer le minimum</td><td>Globe vésical · douleur au flanc · examen prostatique ou pelvien selon l'indication<br>➜ <em>Cystite</em>, <em>ITSS</em></td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+
+      <div class="block rx" style="margin-top:14px;border-left-color:#15803d;">
+        <div class="block-title" id="exp-9"><span class="tag">🎯 Cibler l'examen — et le documenter</span></div>
+
+        <div class="key-fact green" style="margin-top:10px;">🎯 <strong>L'examen physique n'est pas un rituel exhaustif : c'est un TEST de vos hypothèses.</strong> On examine ce qui peut faire changer d'avis. Un examen « complet » fait sans question précise est long, fatigant et pauvre en information.</div>
+
+        <div class="criteria-list" style="margin-top:12px;">
+          <div class="criteria-item"><div class="criteria-num blue">1</div><span><strong>Toujours faire MEGACV et les signes vitaux</strong> — c'est le socle, quelle que soit la plainte</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">2</div><span><strong>Examiner le système en cause à fond</strong>, et les systèmes voisins qui figurent au différentiel</span></div>
+          <div class="criteria-item"><div class="criteria-num red">!</div><span>🚨 <strong>Chercher activement les signes qui confirmeraient un diagnostic grave</strong> — même s'il paraît improbable. C'est le pendant physique de la recherche des drapeaux rouges</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">3</div><span><strong>Documenter les négatifs pertinents</strong> — « pas de défense, pas de ressaut » a une valeur clinique et légale · un signe non consigné est réputé non recherché</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">4</div><span><strong>Décrire plutôt qu'interpréter</strong> — « crépitants aux deux bases » vaut mieux que « OAP » dans la section examen; l'interprétation appartient à l'impression clinique</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">5</div><span><strong>Réexaminer</strong> quand l'évolution ne suit pas — l'examen d'il y a six heures ne dit rien de maintenant</span></div>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">⚖️ <strong>Connaître les limites de ses propres signes.</strong> Beaucoup de manœuvres classiques ont une <strong>sensibilité et une spécificité modestes</strong>, et une <strong>reproductibilité inter-observateur médiocre</strong>. 🎯 Cela ne les rend pas inutiles — mais un signe isolé ne devrait <strong>jamais</strong> emporter la décision à lui seul, et un examen normal n'exclut pas grand-chose lorsque l'anamnèse inquiète.</div>
+
+        <div class="key-fact green" style="margin-top:8px;">✅ <strong>À retenir :</strong> ① <strong>MEGACV puis signes vitaux</strong>, toujours · ② <strong>inspection → palpation → percussion → auscultation</strong>, sauf à l'abdomen · ③ <strong>zone douloureuse en dernier</strong> · ④ <strong>comparer les deux côtés</strong> · ⑤ <strong>examiner pour tester une hypothèse</strong>, pas pour remplir une grille.</div>
       </div>
     </div>
 
@@ -54973,7 +55396,9 @@ Fer &rarr; constipation · interactions chélation nombreuses</div>
 const SEARCH_INDEX = [
   { id:'home',                title:'Accueil',                        specialty:'',               keywords:['accueil'] },
     { id:'entrevue',            title:'L\'Entrevue Médicale',            specialty:'Méthode clinique',  keywords:['entrevue','entrevue médicale','communication','accueil','contrat initial','question ouverte','question fermée','écoute active','silence','empathie','reformulation','résumé','clarification','mccp','méthode clinique centrée sur le patient','motif de consultation','histoire de la maladie actuelle','hma','caractériser un symptôme','mode d apparition','revue des systèmes','habitudes de vie','antécédents','mauvaise nouvelle','annonce','colère','interprète','filet de sécurité','reconsulter','gphc','démarche clinique'] },
-  { id:'raisonnement',        title:'Le Raisonnement Clinique',       specialty:'Méthode clinique',  keywords:['raisonnement clinique','hypothèse','hypothèse diagnostique','générer des hypothèses','schéma de classification','liste apprise par coeur','pensée dispersée','présentation typique','prototype','mode de présentation','localisation anatomique','identifier la victime','transformation sémantique','donnée discriminante','drapeau rouge','diagnostic dangereux','biais cognitif','ancrage','fermeture prématurée','biais de confirmation','représentativité','disponibilité','heuristique','métacognition','script clinique','surcharge cognitive','démarche clinique'] },
+    { id:'questionnaire',       title:'Le Questionnaire',               specialty:'Méthode clinique',  keywords:['questionnaire','pqrst','pqrstu','provoqué','pallié','qualité','quantité','région','irradiation','symptômes associés','temps','ample','allergies','dernier repas','last meal','événements','revue des systèmes','tête aux pieds','antécédents','gtpal','cage','paquets-année','habitudes de vie','anamnèse','questionnaire ciblé','être concis','question ouverte','drapeau rouge','4 p','gphc','démarche clinique'] },
+  { id:'examen-physique',     title:'L\'Examen Physique',              specialty:'Méthode clinique',  keywords:['examen physique','megacv','inspection','palpation','percussion','auscultation','signes vitaux','fram','pouls','brassard','tension artérielle','pseudohypertension','osler','trou auscultatoire','hypotension orthostatique','choc apexien','foyer aortique','foyer pulmonaire','tricuspidien','turgescence jugulaire','murmure vésiculaire','vibrations vocales','matité','tympanisme','crépitants','défense','ressaut','péristaltisme','échographie ciblée','ecc','réflexe ostéotendineux','dermatome','romberg','démarche','gphc','démarche clinique'] },
+{ id:'raisonnement',        title:'Le Raisonnement Clinique',       specialty:'Méthode clinique',  keywords:['raisonnement clinique','hypothèse','hypothèse diagnostique','générer des hypothèses','schéma de classification','liste apprise par coeur','pensée dispersée','présentation typique','prototype','mode de présentation','localisation anatomique','identifier la victime','transformation sémantique','donnée discriminante','drapeau rouge','diagnostic dangereux','biais cognitif','ancrage','fermeture prématurée','biais de confirmation','représentativité','disponibilité','heuristique','métacognition','script clinique','surcharge cognitive','démarche clinique'] },
 { id:'calculateurs',        title:'Calculateurs & Outils',          specialty:'',               keywords:['calculateur','score','framingham','cha2ds2','has-bled','wells','grace','timi','nihss','curb','meld'] },
     { id:'ecg',                 title:'ECG — Lecture systématique',     specialty:'Cardiologie',     keywords:['ecg','électrocardiogramme','tracé','grille','calibration','25 mm/s','petit carreau','rythme sinusal','fréquence cardiaque','1500','300 150 100','intervalle pr','qrs','qt','qtc','bazett','torsade de pointes','axe qrs','déviation axiale','di','avf','progression onde r','transition','territoire','antéroseptal','antéro-apical','antérolatéral','inférieur','postérieur','iva','interventriculaire antérieure','lad','circonflexe','coronaire droite','sus-décalage','sous-décalage','stemi','image en miroir','onde q','onde t hyperaiguë','bav','wenckebach','mobitz','bloc auriculoventriculaire','bloc de branche','bbg','bbd','oreilles de lapin','hypertrophie','lilly'] },
 { id:'hta',                 title:'HTA (Primaire & Secondaire)',     specialty:'Cardiologie',    keywords:['hta','hypertension','tension','bithérapie','ieca','ara','diurétique','bcc','mapa','secondaire','hyperaldostéronisme','phéochromocytome','cushing','coarctation','rénovasculaire','mpad','sprint','réfractaire'] },
@@ -55361,7 +55786,7 @@ document.addEventListener('click', e => {
 const SECTION_ORDER = [
   'home',
   // Méthode clinique
-  'entrevue','raisonnement',
+  'entrevue','questionnaire','examen-physique','raisonnement',
   'calculateurs',
   // Cardiologie
   'ecg','arythmies','hta','athero','dyslipidémie','mcas','sca','fa','ic','chirurgie-cardiaque','stenose-aortique','pericardite','map',
@@ -55429,6 +55854,8 @@ const SECTION_TITLES = {
   'athero':'Athérosclérose','anevrisme':'Anévrisme','rein-anatomie':'Anatomie Rein','bases-endo':'Bases Physiologiques Endo.','pneumo-eval':'Évaluation Pulmonaire','pneumo-gazo':'Gazométrie & Acide-Base','pneumo-aco':'ACO','pneumo-o2':'O₂ Domicile & Conduite','pneumo-pneumonie':'Pneumonie','pneumo-autres-patho':'Autres Patho. Pulmonaires','pneumo-ira':'Insuffisance Respiratoire','pneumo-htp':'HTP & Cor Pulmonale','douleur':'Douleur & Analgésie','ddx-abdo':'Douleur Abdominale — DDx','mii':'MII — Crohn & Colite',
   'nutrition':'Nutrition & Dénutrition','diverticulite':'Diverticulite Aiguë','choledocholithiase':'Cholédocholithiase','cholangite':'Cholangite','pancreatite':'Pancréatite Aiguë','msk':'Guide MSK','quiz':'Quiz',
   'home':'Accueil','entrevue':'L\'Entrevue Médicale',
+  'questionnaire':'Le Questionnaire',
+  'examen-physique':'L\'Examen Physique',
   'raisonnement':'Le Raisonnement Clinique',
   'calculateurs':'Calculateurs',
   'ecg':'ECG — Lecture systématique',
