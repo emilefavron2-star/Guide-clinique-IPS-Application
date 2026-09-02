@@ -12834,6 +12834,85 @@ function switchSN(n) {
             <tr><td><span class="drug-badge warn">Vaptans</span></td><td>Tube collecteur (V2)</td><td>Antagonistes récepteur AVP-V2 → aquarèse sans perte Na⁺</td><td>↑ excrétion eau libre seulement</td><td>Tolvaptan (SIADH · IC + hypoNa)</td></tr>
           </tbody>
         </table>
+
+        <div style="background:#f8fafc;border:1px solid #cbd5e1;border-radius:10px;padding:14px;margin-top:12px;">
+          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin-bottom:8px;">Sch&eacute;ma &mdash; o&ugrave; chaque classe agit le long du n&eacute;phron</div>
+          <svg viewBox="0 0 620 330" style="width:100%;height:auto;" role="img" aria-label="Sites d action des diuretiques le long du nephron">
+            <!-- ══ le tube du néphron ══ -->
+            <!-- glomérule -->
+            <circle cx="88" cy="66" r="26" fill="#fca5a5" stroke="#b91c1c" stroke-width="2.5"/>
+            <text x="88" y="71" text-anchor="middle" fill="#7f1d1d" font-size="11" font-weight="700">glom.</text>
+            <text x="88" y="30" text-anchor="middle" fill="#334155" font-size="11.5" font-weight="700">filtration</text>
+
+            <!-- tube proximal -> anse -> distal -> collecteur, en un seul trait épais -->
+            <path d="M 114,66 L 200,66
+                     L 200,236 Q 200,262 226,262 Q 252,262 252,236 L 252,66
+                     L 356,66
+                     L 356,150 L 470,150
+                     L 470,300"
+                  fill="none" stroke="#93c5fd" stroke-width="17" stroke-linejoin="round" stroke-linecap="round"/>
+            <path d="M 114,66 L 200,66
+                     L 200,236 Q 200,262 226,262 Q 252,262 252,236 L 252,66
+                     L 356,66
+                     L 356,150 L 470,150
+                     L 470,300"
+                  fill="none" stroke="#1d4ed8" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="0.5"/>
+
+            <!-- étiquettes des segments -->
+            <text x="157" y="52" text-anchor="middle" fill="#334155" font-size="11.5" font-weight="700">tube proximal</text>
+            <text x="226" y="294" text-anchor="middle" fill="#334155" font-size="11.5" font-weight="700">anse de Henle</text>
+            <text x="304" y="52" text-anchor="middle" fill="#334155" font-size="11.5" font-weight="700">tube distal</text>
+            <text x="500" y="230" fill="#334155" font-size="11.5" font-weight="700">tube</text>
+            <text x="500" y="246" fill="#334155" font-size="11.5" font-weight="700">collecteur</text>
+            <text x="470" y="318" text-anchor="middle" fill="#64748b" font-size="11">urine</text>
+
+            <!-- ① proximal : AC, osmotiques, iSGLT2 -->
+            <circle cx="157" cy="66" r="11" fill="#fff" stroke="#7c3aed" stroke-width="3"/>
+            <text x="157" y="71" text-anchor="middle" fill="#7c3aed" font-size="12" font-weight="800">1</text>
+            <rect x="10" y="96" width="176" height="66" rx="8" fill="#ede9fe"/>
+            <text x="22" y="116" fill="#6d28d9" font-size="12" font-weight="700">① Tube proximal</text>
+            <text x="22" y="134" fill="#334155" font-size="11.5">Inhib. anhydrase carbonique</text>
+            <text x="22" y="150" fill="#334155" font-size="11.5">Osmotiques &middot; iSGLT2</text>
+
+            <!-- ② anse -->
+            <circle cx="226" cy="262" r="11" fill="#fff" stroke="#b91c1c" stroke-width="3"/>
+            <text x="226" y="267" text-anchor="middle" fill="#b91c1c" font-size="12" font-weight="800">2</text>
+            <rect x="10" y="176" width="176" height="82" rx="8" fill="#fee2e2"/>
+            <text x="22" y="196" fill="#b91c1c" font-size="12" font-weight="700">② Anse ascendante</text>
+            <text x="22" y="214" fill="#334155" font-size="11.5" font-weight="700">Diur&eacute;tiques de l&rsquo;anse</text>
+            <text x="22" y="230" fill="#334155" font-size="11.5">bloquent le <tspan font-weight="700">NKCC2</tspan></text>
+            <text x="22" y="248" fill="#7f1d1d" font-size="11.5" font-weight="700">les plus puissants</text>
+
+            <!-- ③ distal -->
+            <circle cx="356" cy="108" r="11" fill="#fff" stroke="#b45309" stroke-width="3"/>
+            <text x="356" y="113" text-anchor="middle" fill="#b45309" font-size="12" font-weight="800">3</text>
+            <rect x="288" y="176" width="176" height="66" rx="8" fill="#fef3c7"/>
+            <text x="300" y="196" fill="#b45309" font-size="12" font-weight="700">③ Tube distal</text>
+            <text x="300" y="214" fill="#334155" font-size="11.5" font-weight="700">Thiazidiques</text>
+            <text x="300" y="230" fill="#334155" font-size="11.5">bloquent le <tspan font-weight="700">NCCT</tspan></text>
+
+            <!-- ④ collecteur -->
+            <circle cx="470" cy="212" r="11" fill="#fff" stroke="#15803d" stroke-width="3"/>
+            <text x="470" y="217" text-anchor="middle" fill="#15803d" font-size="12" font-weight="800">4</text>
+            <rect x="478" y="30" width="132" height="112" rx="8" fill="#dcfce7"/>
+            <text x="490" y="50" fill="#15803d" font-size="12" font-weight="700">④ Tube collecteur</text>
+            <text x="490" y="70" fill="#334155" font-size="11.5" font-weight="700">&Eacute;pargneurs K&#8314;</text>
+            <text x="490" y="86" fill="#334155" font-size="11.5">antagonistes de</text>
+            <text x="490" y="102" fill="#334155" font-size="11.5">l&rsquo;aldost&eacute;rone (ARM)</text>
+            <text x="490" y="124" fill="#334155" font-size="11.5" font-weight="700">Vaptans (V2)</text>
+          </svg>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px;">
+            <div style="background:#fee2e2;border-left:4px solid #b91c1c;border-radius:8px;padding:10px 12px;font-size:12.5px;line-height:1.6;">
+              🎯 <strong>Pourquoi les diur&eacute;tiques de l&rsquo;anse sont les plus puissants :</strong> l&rsquo;anse ascendante r&eacute;absorbe la <strong>plus grande fraction du sodium filtr&eacute;</strong> parmi les segments accessibles aux diur&eacute;tiques. Bloquer ce segment lib&egrave;re donc bien plus de sodium que bloquer le tube distal.
+            </div>
+            <div style="background:#e8f4fd;border-left:4px solid #1d4ed8;border-radius:8px;padding:10px 12px;font-size:12.5px;line-height:1.6;">
+              🔗 <strong>Le blocage s&eacute;quentiel du n&eacute;phron :</strong> associer un <strong>thiazidique (③)</strong> &agrave; un <strong>diur&eacute;tique de l&rsquo;anse (②)</strong> bloque deux segments successifs et contourne la r&eacute;sistance &mdash; d&rsquo;o&ugrave; l&rsquo;usage de la <strong>m&eacute;tolazone</strong> dans l&rsquo;insuffisance cardiaque r&eacute;fractaire. 🚨 Puissant, mais surveillance &eacute;troite du K&#8314; et de la vol&eacute;mie.
+            </div>
+          </div>
+          <div style="background:#fff3cd;border-left:4px solid #d35400;border-radius:8px;padding:10px 12px;margin-top:10px;font-size:12.5px;line-height:1.6;">
+            💡 <strong>La position explique aussi les effets sur le calcium</strong>, qui surprennent souvent : les <strong>diur&eacute;tiques de l&rsquo;anse font PERDRE du calcium</strong> (utile en hypercalc&eacute;mie), alors que les <strong>thiazidiques le RETIENNENT</strong> (utile en hypercalciurie et lithiase calcique, mais risque d&rsquo;hypercalc&eacute;mie). Deux segments voisins, deux effets opposés.
+          </div>
+        </div>
       </div>
 
       <div class="block rx" style="margin-top:14px;">
@@ -29923,6 +30002,74 @@ TEV &lt; 3 mois</div>
             <tr><td>Hémorragique</td><td>Céphalée en coup de tonnerre (HSA) · Triade de Cushing · N/V · Perte conscience</td></tr>
           </tbody>
         </table>
+        <div style="background:#f8fafc;border:1px solid #cbd5e1;border-radius:10px;padding:14px;margin-top:12px;">
+          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin-bottom:8px;">Sch&eacute;ma &mdash; le territoire explique le d&eacute;ficit</div>
+          <svg viewBox="0 0 620 320" style="width:100%;height:auto;" role="img" aria-label="Territoires des arteres cerebrales anterieure moyenne et posterieure et deficits correspondants">
+            <!-- ══ VUE LATÉRALE ══ -->
+            <text x="150" y="20" text-anchor="middle" fill="#334155" font-size="12.5" font-weight="700">VUE LAT&Eacute;RALE (face externe)</text>
+            <!-- hémisphère schématique -->
+            <path d="M 40,150 Q 40,50 150,50 Q 260,50 260,150 Q 260,215 150,215 Q 40,215 40,150 Z"
+                  fill="#f1f5f9" stroke="#64748b" stroke-width="2"/>
+            <!-- territoire ACM : le gros de la face latérale -->
+            <path d="M 62,150 Q 62,72 150,72 Q 228,72 236,142 Q 232,196 150,198 Q 70,196 62,150 Z"
+                  fill="#93c5fd" opacity="0.85"/>
+            <!-- territoire ACP : postérieur (droite de l'image = occipital) -->
+            <path d="M 236,142 Q 260,150 252,178 Q 236,200 198,198 Q 226,176 236,142 Z"
+                  fill="#c4b5fd" opacity="0.9"/>
+            <!-- liseré ACA visible au sommet -->
+            <path d="M 62,150 Q 62,72 150,72 Q 228,72 236,142 L 224,138 Q 216,86 150,86 Q 76,86 74,150 Z"
+                  fill="#fca5a5" opacity="0.9"/>
+            <!-- homonculus : jambe au sommet, bras puis face plus bas -->
+            <text x="150" y="66" text-anchor="middle" fill="#7f1d1d" font-size="10.5" font-weight="700">jambe</text>
+            <text x="150" y="112" text-anchor="middle" fill="#1e3a8a" font-size="10.5" font-weight="700">bras</text>
+            <text x="150" y="140" text-anchor="middle" fill="#1e3a8a" font-size="10.5" font-weight="700">face</text>
+            <text x="150" y="170" text-anchor="middle" fill="#1e3a8a" font-size="10.5" font-weight="700">langage</text>
+            <text x="228" y="180" text-anchor="middle" fill="#4c1d95" font-size="10.5" font-weight="700">vision</text>
+            <text x="150" y="234" text-anchor="middle" fill="#64748b" font-size="10.5">avant &#8592;</text>
+
+            <!-- ══ VUE MÉDIALE ══ -->
+            <text x="450" y="20" text-anchor="middle" fill="#334155" font-size="12.5" font-weight="700">VUE M&Eacute;DIALE (face interne)</text>
+            <path d="M 340,150 Q 340,50 450,50 Q 560,50 560,150 Q 560,215 450,215 Q 340,215 340,150 Z"
+                  fill="#f1f5f9" stroke="#64748b" stroke-width="2"/>
+            <!-- ACA domine la face médiale -->
+            <path d="M 362,150 Q 362,72 450,72 Q 520,72 532,132 Q 500,150 452,150 Q 400,150 362,178 Z"
+                  fill="#fca5a5" opacity="0.9"/>
+            <!-- ACP : occipital médial -->
+            <path d="M 532,132 Q 556,148 548,180 Q 528,200 480,198 Q 520,172 532,132 Z"
+                  fill="#c4b5fd" opacity="0.9"/>
+            <text x="440" y="108" text-anchor="middle" fill="#7f1d1d" font-size="11" font-weight="700">JAMBE</text>
+            <text x="440" y="126" text-anchor="middle" fill="#7f1d1d" font-size="10.5">et pied</text>
+            <text x="524" y="176" text-anchor="middle" fill="#4c1d95" font-size="10.5" font-weight="700">cortex</text>
+            <text x="524" y="190" text-anchor="middle" fill="#4c1d95" font-size="10.5" font-weight="700">visuel</text>
+
+            <!-- ══ LÉGENDE ══ -->
+            <rect x="40" y="250" width="176" height="26" rx="6" fill="#fca5a5"/>
+            <text x="128" y="268" text-anchor="middle" fill="#7f1d1d" font-size="12" font-weight="700">ACA &mdash; c&eacute;r&eacute;brale ant&eacute;rieure</text>
+            <rect x="224" y="250" width="176" height="26" rx="6" fill="#93c5fd"/>
+            <text x="312" y="268" text-anchor="middle" fill="#1e3a8a" font-size="12" font-weight="700">ACM &mdash; c&eacute;r&eacute;brale moyenne</text>
+            <rect x="408" y="250" width="176" height="26" rx="6" fill="#c4b5fd"/>
+            <text x="496" y="268" text-anchor="middle" fill="#4c1d95" font-size="12" font-weight="700">ACP &mdash; c&eacute;r&eacute;brale post&eacute;rieure</text>
+
+            <rect x="40" y="284" width="544" height="28" rx="6" fill="#0f172a"/>
+            <text x="312" y="303" text-anchor="middle" fill="#f8fafc" font-size="12" font-weight="700">La cl&eacute; : l&rsquo;homonculus a la JAMBE sur la face m&eacute;diale &mdash; territoire de l&rsquo;ACA</text>
+          </svg>
+        </div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:16%;">Territoire</th><th style="width:26%;">D&eacute;ficit moteur/sensitif</th><th>Signes qui l&rsquo;identifient</th></tr></thead>
+          <tbody>
+            <tr style="background:#fce4ec;"><td><strong>ACA</strong><br><em>c&eacute;r&eacute;brale ant&eacute;rieure</em></td><td>🎯 <strong>Membre INF&Eacute;RIEUR</strong> controlat&eacute;ral, nettement plus que le bras et la face</td><td>Abulie, apathie, ralentissement · incontinence urinaire · r&eacute;flexes archa&iuml;ques (grasping) · parfois mutisme akin&eacute;tique si bilat&eacute;ral</td></tr>
+            <tr style="background:#e8f4fd;"><td><strong>ACM</strong><br><em>c&eacute;r&eacute;brale moyenne</em><br>⭐ la plus fr&eacute;quente</td><td>🎯 <strong>FACE et membre SUP&Eacute;RIEUR</strong> controlat&eacute;raux, plus que la jambe</td><td>🚨 <strong>H&eacute;misph&egrave;re dominant</strong> (gauche chez la plupart) &rarr; <strong>aphasie</strong><br>🚨 <strong>H&eacute;misph&egrave;re non dominant</strong> &rarr; <strong>h&eacute;min&eacute;gligence</strong>, anosognosie<br>D&eacute;viation du regard <strong>vers</strong> la l&eacute;sion · h&eacute;mianopsie<br><span style="font-size:11px;color:#64748b;">📚 <em>Goldman ch. 378 : l&rsquo;ACM irrigue l&rsquo;essentiel des lobes frontal, pari&eacute;tal et de la portion lat&eacute;rale du temporal</em></span></td></tr>
+            <tr style="background:#ede9fe;"><td><strong>ACP</strong><br><em>c&eacute;r&eacute;brale post&eacute;rieure</em></td><td>Souvent <strong>peu ou pas de d&eacute;ficit moteur</strong> &mdash; c&rsquo;est ce qui trompe</td><td>🎯 <strong>H&eacute;mianopsie homonyme</strong> controlat&eacute;rale, souvent avec &eacute;pargne maculaire<br>Troubles visuels complexes · atteinte de la m&eacute;moire (hippocampe) · alexie sans agraphie</td></tr>
+            <tr style="background:#fff3cd;"><td>🚨 <strong>Circulation post&eacute;rieure</strong><br><em>vert&eacute;bro-basilaire</em></td><td>Variable, parfois <strong>bilat&eacute;ral</strong></td><td>🚨 <strong>Les 5 D :</strong> <strong>D</strong>iplopie, <strong>D</strong>ysarthrie, <strong>D</strong>ysphagie, <strong>D</strong>ysm&eacute;trie/ataxie, <strong>D</strong>izziness (vertige)<br>🎯 <strong>Syndrome crois&eacute;</strong> &mdash; atteinte d&rsquo;un nerf cr&acirc;nien d&rsquo;un c&ocirc;t&eacute; et des voies longues de l&rsquo;autre : signature du tronc c&eacute;r&eacute;bral<br>⚠️ La TDM voit mal la fosse post&eacute;rieure &rarr; <strong>IRM</strong><br>➜ Voir <em>Neuro-imagerie</em>, <em>Vertige</em></td></tr>
+            <tr><td><strong>Lacunaire</strong><br><em>petites art&egrave;res perforantes</em></td><td>Syndromes <strong>purs</strong></td><td>H&eacute;mipar&eacute;sie motrice pure · syndrome sensitif pur · h&eacute;mipar&eacute;sie ataxique · dysarthrie-main malhabile<br>🎯 <strong>Sans</strong> aphasie, <strong>sans</strong> n&eacute;gligence, <strong>sans</strong> atteinte du champ visuel &mdash; c&rsquo;est l&rsquo;absence de signes corticaux qui oriente<br>Terrain : hypertension, diab&egrave;te</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="key-fact red" style="margin-top:12px;">🚨 <strong>Les deux tableaux les plus souvent manqu&eacute;s</strong> parce qu&rsquo;ils ne ressemblent pas &agrave; l&rsquo;image classique de l&rsquo;AVC :<br><br>• <strong>ACP</strong> &mdash; la personne n&rsquo;a <strong>pas de faiblesse</strong>, seulement un trouble visuel qu&rsquo;elle d&eacute;crit mal. Le d&eacute;pistage FAST, centr&eacute; sur face-bras-parole, <strong>ne le d&eacute;tecte pas</strong>.<br>• <strong>Circulation post&eacute;rieure</strong> &mdash; un <strong>vertige isol&eacute;</strong> peut &ecirc;tre un AVC c&eacute;r&eacute;belleux. Chercher les signes associ&eacute;s : ataxie tronculaire, incapacit&eacute; &agrave; tenir debout, nystagmus atypique, c&eacute;phal&eacute;e occipitale.</div>
+
         <div class="key-fact orange" style="margin-top:8px;font-size:13px;">⚠️ <strong>Paralysie de Bell vs AVC :</strong> Bell touche TOUT le visage · AVC touche seulement la portion inférieure</div>
       </div>
       <div class="block para" style="margin-top:14px;">
