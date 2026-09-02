@@ -1161,9 +1161,19 @@ m
         <div class="nav-item" onclick="showSection('aod')">AOD</div>
         <div class="nav-item" onclick="showSection('tvp')">TVP</div>
         <div class="nav-item" onclick="showSection('ep')">Embolie pulmonaire</div>
-        <div class="nav-item" onclick="showSection('periop-anticoag')">Gestion périopératoire</div>
         <div class="nav-item" onclick="showSection('fsc-anemie')">FSC & Anémie</div>
         <div class="nav-item" onclick="showSection('transfusion')">Sécurité transfusionnelle</div>
+      </div>
+    </div>
+
+    <!-- Périopératoire -->
+    <div class="specialty-group" id="grp-periop">
+      <div class="specialty-header" onclick="toggleGroup('grp-periop')">
+        <span class="emoji">🏥</span> Périopératoire
+        <svg class="chevron" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>      </div>
+      <div class="specialty-items">
+        <div class="nav-item" onclick="showSection('periop-anticoag')">Anticoagulants périop.</div>
+        <div class="nav-item" onclick="showSection('preop')">Évaluation préopératoire</div>
       </div>
     </div>
 
@@ -1312,7 +1322,6 @@ m
         <div class="nav-item" onclick="showSection('steatose')">Maladie hépatique — Stéatose/Fibrose</div>
         <div class="nav-item" onclick="showSection('cirrhose')">Cirrhose hépatique</div>
         <div class="nav-item" onclick="showSection('htp')">Hypertension portale</div>
-        <div class="nav-item" onclick="showSection('preop')">Évaluation préopératoire</div>
       </div>
     </div>
 
@@ -1451,7 +1460,14 @@ m
           <div class="home-card-icon" style="background:#fff1f2;color:#be123c">🩸</div>
           <div class="home-card-body">
             <div class="home-card-name">Hématologie</div>
-            <div class="home-card-count">12 sections</div>
+            <div class="home-card-count">11 sections</div>
+          </div>
+        </div>
+        <div class="home-card" onclick="showSection('periop-anticoag'); openGroup('grp-periop')">
+          <div class="home-card-icon" style="background:#ecfeff;color:#0e7490">🏥</div>
+          <div class="home-card-body">
+            <div class="home-card-name">Périopératoire</div>
+            <div class="home-card-count">2 sections</div>
           </div>
         </div>
         <div class="home-card" onclick="showSection('uro-physio'); openGroup('grp-uro')">
@@ -1486,7 +1502,7 @@ m
           <div class="home-card-icon" style="background:#fefce8;color:#ca8a04">⚗️</div>
           <div class="home-card-body">
             <div class="home-card-name">Hépato-biliaire</div>
-            <div class="home-card-count">11 sections</div>
+            <div class="home-card-count">10 sections</div>
           </div>
         </div>
         <div class="home-card" onclick="showSection('antidepresseurs'); openGroup('grp-psy')">
@@ -27805,178 +27821,7 @@ function switchAodInd(n) {
 <!-- ═══════════════════════════════════════════════════════════════
      10. GESTION PÉRIOPÉRATOIRE DES ANTICOAGULANTS
 ═══════════════════════════════════════════════════════════════ -->
-<div class="section" id="sec-periop-anticoag">
-  <div class="section-header">
-    <div class="section-accent" style="background:#0a7a4e">⚕️</div>
-    <div class="section-title">
-      <h1>Gestion périopératoire des anticoagulants</h1>
-      <div class="breadcrumb">Hématologie <span class="breadcrumb-sep">·</span> Thrombose Canada 2022</div>
-    </div>
-  </div>
-
-  <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;">
-    <button onclick="goToBlock('periop-1')" style="background:#374151;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">Risque thrombo.</button>
-    <button onclick="goToBlock('periop-2')" style="background:#6d28d9;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">Risque hémo.</button>
-    <button onclick="goToBlock('periop-3')" style="background:#c0392b;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">Règle 1-2-4</button>
-    <button onclick="goToBlock('periop-4')" style="background:#0f766e;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">Antiplaquettaires</button>
-    <button onclick="goToBlock('periop-5')" style="background:#0a7a4e;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">Reprise postop</button>
-    <button onclick="goToBlock('periop-6')" style="background:#7b3fa0;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">Messages clés</button>
-  </div>
-
-  <div class="key-fact blue" style="margin-bottom:14px;">
-    📞 Appels fréquents des cabinets dentaires, centres d'endoscopie, gastro/pneumo. On évalue <strong>2 axes :</strong> risque thrombotique (de la maladie) + risque de saignement (de la procédure).
-  </div>
-
-  <!-- 10.1 Risque thrombotique -->
-  <!-- Stat-cards -->
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:16px;">
-    <div style="background:#e8f4fd;border-radius:10px;padding:11px;text-align:center;border-left:4px solid #0369a1;"><div style="font-size:12px;font-weight:800;color:#0369a1;">Warfarine arrêt</div><div style="font-size:11px;color:#555;margin-top:3px;">5j avant · INR &lt;1.5 ← chir</div></div>
-    <div style="background:#fce4ec;border-radius:10px;padding:11px;text-align:center;border-left:4px solid #dc2626;"><div style="font-size:12px;font-weight:800;color:#dc2626;">Risque élevé</div><div style="font-size:11px;color:#555;margin-top:3px;">Bridge HBPM thérapeutique</div></div>
-    <div style="background:#fff3cd;border-radius:10px;padding:11px;text-align:center;border-left:4px solid #f59e0b;"><div style="font-size:12px;font-weight:800;color:#f59e0b;">AOD arrêt</div><div style="font-size:11px;color:#555;margin-top:3px;">24–48h (normal) · 48–72h (haut risque)</div></div>
-    <div style="background:#f0fdf4;border-radius:10px;padding:11px;text-align:center;border-left:4px solid #16a34a;"><div style="font-size:12px;font-weight:800;color:#16a34a;">Reprise anticoag</div><div style="font-size:11px;color:#555;margin-top:3px;">J1–2 post-op si hémostase stable</div></div>
-  </div>
-  <div class="block def" style="margin-top:14px;border-left:4px solid #c0392b;">
-    <div class="block-title" id="periop-1"><span class="tag">10.1 — Risque thrombotique (Maladie)</span></div>
-    <div style="overflow-x:auto;margin-top:8px;">
-      <table>
-        <thead><tr><th>Risque</th><th>Valve mécanique</th><th>FA</th><th>TEV</th></tr></thead>
-        <tbody>
-          <tr style="background:#fce4ec;">
-            <td><strong style="color:#c0392b;">🔴 Élevé<br>(ne pas arrêter)</strong></td>
-            <td>Toute valve mitrale ; aortique ancienne ; ATCD AVC/ICT &lt;6 mois</td>
-            <td>CHADS₂ 5–6 ; AVC/ICT &lt;3 mois ; valvulopathie rhumatismale</td>
-            <td>TEV &lt;3 mois ; thrombophilie sévère (SAPL, déficit AT III)</td>
-          </tr>
-          <tr style="background:#fff8e1;">
-            <td><strong style="color:#d35400;">🟡 Modéré</strong></td>
-            <td>Valve aortique à double ailette + ≥1 FR</td>
-            <td>CHADS₂ 3–4</td>
-            <td>TEV 3–12 mois ; TEV récidivante ; cancer actif ; thrombophilie non sévère</td>
-          </tr>
-          <tr style="background:#e8f8f5;">
-            <td><strong style="color:#0a7a4e;">🟢 Faible<br>(arrêt OK)</strong></td>
-            <td>Valve aortique double ailette sans FA ni autre FR</td>
-            <td>CHADS₂ 0–2 sans ATCD AVC/ICT</td>
-            <td>TEV unique &gt;12 mois sans autre FR</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="key-fact black" style="margin-top:10px;">
-      ➡️ Risque élevé = on essaie de ne pas arrêter. Risque faible / TEV &gt;12 mois = arrêt facile.
-    </div>
-  </div>
-
-  <!-- 10.2 Risque de saignement procédure -->
-  <div class="block para" style="border-left:4px solid #1d4ed8;margin-top:14px;">
-    <div class="block-title" id="periop-2"><span class="tag">10.2 — Risque hémorragique de la procédure</span></div>
-    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:8px;font-size:13px;">
-      <div style="background:#e8f8f5;border-radius:8px;padding:12px;">
-        <strong style="color:#0a7a4e;">🟢 Faible / Très faible<br>(souvent pas d'arrêt)</strong>
-        <div style="font-size:13px;line-height:1.7;">Cataracte, biopsie cutanée<br>
-Gastroscopie / coloscopie <em>sans biopsie</em><br>
-Coronarographie radiale<br>
-Extraction 1–2 dents, plombage, détartrage, endodontie</div>
-      </div>
-      <div style="background:#fff8e1;border-radius:8px;padding:12px;">
-        <strong style="color:#d35400;">🟡 Modéré</strong>
-        <div style="font-size:13px;line-height:1.7;">Chirurgie abdominale (cholécystectomie, hernie, colectomie)<br>
-Chirurgie mammaire<br>
-Gastro/colo avec biopsie<br>
-Biopsie médullaire / ganglionnaire<br>
-Extractions dentaires multiples</div>
-      </div>
-      <div style="background:#fce4ec;border-radius:8px;padding:12px;">
-        <strong style="color:#c0392b;">🔴 Élevé</strong>
-        <div style="font-size:13px;line-height:1.7;">Anesthésie neuraxiale (rachi/épidurale)<br>
-Neurochirurgie<br>
-Chirurgie cardiaque, vasculaire majeure<br>
-Orthopédie majeure (hanche/genou)<br>
-Résection pulmonaire<br>
-Urologique (prostate/vessie)<br>
-Polypectomie colique</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Règle 1-2-4 AOD -->
-  <div class="block def" style="border-left:4px solid #7b3fa0;margin-top:14px;">
-    <div class="block-title" id="periop-3"><span class="tag">10.3 — ⚡ Règle 1–2–4 (arrêt préopératoire des AOD)</span></div>
-    <div class="content-text">Combinaison fonction rénale + risque de saignement. Applicable à tous les AOD (dabigatran le plus sensible à l'IR — clairance rénale 85%).</div>
-    <div style="overflow-x:auto;margin-top:8px;">
-      <table>
-        <thead><tr><th>Situation</th><th>Jours d'arrêt avant la procédure</th></tr></thead>
-        <tbody>
-          <tr style="background:#e8f8f5;"><td>Fonction rénale normale + <strong>petit risque</strong> de saignement</td><td><strong>1 jour</strong></td></tr>
-          <tr style="background:#fff8e1;"><td>IR légère (DFGe 30–60) <strong>OU</strong> haut risque de saignement (fonction rénale normale)</td><td><strong>2 jours</strong></td></tr>
-          <tr style="background:#fce4ec;"><td>IR ET haut risque de saignement</td><td><strong>4 jours</strong> minimum</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="key-fact black" style="margin-top:10px;">
-      💡 <strong>En pratique :</strong> TEV &gt;1 an + petit geste → souvent aucun arrêt ou 1 jour. La règle 1–2–4 est plus logique que les monographies (souvent floues : « 1 à 2 jours »).
-    </div>
-  </div>
-
-  <!-- Antiplaquettaires préop -->
-  <div class="block para" style="margin-top:14px;">
-    <div class="block-title" id="periop-4"><span class="tag">Arrêt préopératoire des antiplaquettaires</span></div>
-    <div style="overflow-x:auto;margin-top:8px;">
-      <table>
-        <thead><tr><th>Médicament</th><th>Arrêt avant chirurgie</th><th>Raison</th></tr></thead>
-        <tbody>
-          <tr><td><strong>AAS 80 mg</strong></td><td>7–10 jours (si arrêt indiqué)</td><td>Irréversible sur durée de vie plaquettaire</td></tr>
-          <tr style="background:#f8f9fa;"><td><strong>Clopidogrel (Plavix)</strong></td><td>5–7 jours</td><td>Irréversible</td></tr>
-          <tr><td><strong>Prasugrel (Effient)</strong></td><td>7 jours</td><td>Irréversible — plus potent</td></tr>
-          <tr style="background:#f8f9fa;"><td><strong>Ticagrelor (Brilinta)</strong></td><td>3–5 jours</td><td>✅ Réversible → effet résiduel quasi nul à 4j</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-
-  <!-- Reprise postopératoire -->
-  <div class="block def" style="margin-top:14px;background:#e8f8f5;">
-    <div class="block-title" id="periop-5"><span class="tag">10.4 — Reprise postopératoire</span></div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:8px;font-size:13px;">
-      <div>
-        <strong style="color:#0a7a4e;">⏱️ Délai de reprise AOD :</strong>
-        <div style="font-size:13px;line-height:1.8;"><strong>24h</strong> après fin de la chirurgie (standard)<br>
-<strong>48h</strong> si doute sur hémostase<br>
-<strong>72h</strong> si gros doute (dose prophylactique possible dans l'intervalle)<br>
-Règle : « 24h après la fin de la chirurgie », pas « le lendemain matin » (si geste à 15h → reprendre le lendemain à 15h)</div>
-      </div>
-      <div>
-        <strong style="color:#0a7a4e;">🎉 Avantages des AOD vs warfarine périop :</strong>
-        <div style="font-size:13px;line-height:1.8;">Action rapide (2–4h) → <strong>plus de bridging</strong> à l'héparine nécessaire<br>
-<strong>Plus d'INR sériés</strong> à faire<br>
-Reprise simple et prévisible<br>
-« La fin du monde n'existe plus »</div>
-      </div>
-    </div>
-    <div style="margin-top:12px;font-size:13px;">
-      <strong>Bridging héparine (warfarine) — Quand utiliser encore :</strong>
-      <div style="font-size:13px;line-height:1.8;">Valve mécanique mitrale ou aortique ancienne (risque élevé) + chirurgie à haut risque hémorragique<br>
-CHADS₂ ≥ 5 avec interruption warfarine &gt; 5 jours<br>
-TEV &lt; 3 mois</div>
-    </div>
-  </div>
-
-  <!-- Messages clés -->
-  <div class="block def" style="margin-top:14px;border-left:4px solid #7b3fa0;">
-    <div class="block-title" id="periop-6"><span class="tag">⭐ Messages clés — Anticoagulation périopératoire</span></div>
-    <div style="display:flex;flex-direction:column;gap:8px;margin-top:8px;font-size:13px;">
-      <div style="background:#e8f4ff;border-radius:8px;padding:10px;"><strong>1.</strong> Les AOD sont la priorité : aussi efficaces que la warfarine et <strong>≥2× moins d'hémorragies intracrâniennes</strong></div>
-      <div style="background:#e8f4ff;border-radius:8px;padding:10px;"><strong>2.</strong> Apixaban et rivaroxaban se donnent d'emblée (TVP/EP) ; dabigatran et édoxaban nécessitent HBPM 5–10j</div>
-      <div style="background:#e8f8f5;border-radius:8px;padding:10px;"><strong>3.</strong> Réduction de dose à 6 mois (apixaban 2,5 BID / rivaroxaban 10 DIE) : avantage majeur, <em>impossible avec warfarine</em></div>
-      <div style="background:#e8f8f5;border-radius:8px;padding:10px;"><strong>4.</strong> Warfarine réservée surtout aux valves mécaniques (facteur IX/voie intrinsèque)</div>
-      <div style="background:#fff8e1;border-radius:8px;padding:10px;"><strong>5.</strong> Durée TEV : provoquée = 3 mois ; non provoquée / cancer = long terme (~4–5%/an récidive)</div>
-      <div style="background:#fff8e1;border-radius:8px;padding:10px;"><strong>6.</strong> Règle 1–2–4 pour arrêt préop, reprise à 24h post-op, plus de bridging systématique</div>
-      <div style="background:#fce4ec;border-radius:8px;padding:10px;"><strong>7.</strong> D-dimères = exclure une TEV en BASSE probabilité seulement. Si Wells ≥2 (TVP) → aller directement à l'écho Doppler</div>
-    </div>
-  </div>
-</div>
-
-    <div class="section" id="sec-fsc-anemie">
+<div class="section" id="sec-fsc-anemie">
       <div class="section-header">
         <div class="section-accent" style="background:#7c2d12">🩸</div>
         <div class="section-title"><h1>FSC & Anémies</h1><div class="breadcrumb">Hématologie <span class="breadcrumb-sep">·</span> Section 27</div></div>
@@ -28967,7 +28812,556 @@ TEV &lt; 3 mois</div>
       </div>
     </div>
 
-    <div class="section" id="sec-avc">
+    <div class="section" id="sec-periop-anticoag">
+  <div class="section-header">
+    <div class="section-accent" style="background:#0a7a4e">⚕️</div>
+    <div class="section-title">
+      <h1>Gestion périopératoire des anticoagulants</h1>
+      <div class="breadcrumb">Hématologie <span class="breadcrumb-sep">·</span> Thrombose Canada 2022</div>
+    </div>
+  </div>
+
+  <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;">
+    <button onclick="goToBlock('periop-1')" style="background:#374151;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">Risque thrombo.</button>
+    <button onclick="goToBlock('periop-2')" style="background:#6d28d9;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">Risque hémo.</button>
+    <button onclick="goToBlock('periop-3')" style="background:#c0392b;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">Règle 1-2-4</button>
+    <button onclick="goToBlock('periop-4')" style="background:#0f766e;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">Antiplaquettaires</button>
+    <button onclick="goToBlock('periop-5')" style="background:#0a7a4e;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">Reprise postop</button>
+    <button onclick="goToBlock('periop-6')" style="background:#7b3fa0;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">Messages clés</button>
+  </div>
+
+  <div class="key-fact blue" style="margin-bottom:14px;">
+    📞 Appels fréquents des cabinets dentaires, centres d'endoscopie, gastro/pneumo. On évalue <strong>2 axes :</strong> risque thrombotique (de la maladie) + risque de saignement (de la procédure).
+  </div>
+
+  <!-- 10.1 Risque thrombotique -->
+  <!-- Stat-cards -->
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:16px;">
+    <div style="background:#e8f4fd;border-radius:10px;padding:11px;text-align:center;border-left:4px solid #0369a1;"><div style="font-size:12px;font-weight:800;color:#0369a1;">Warfarine arrêt</div><div style="font-size:11px;color:#555;margin-top:3px;">5j avant · INR &lt;1.5 ← chir</div></div>
+    <div style="background:#fce4ec;border-radius:10px;padding:11px;text-align:center;border-left:4px solid #dc2626;"><div style="font-size:12px;font-weight:800;color:#dc2626;">Risque élevé</div><div style="font-size:11px;color:#555;margin-top:3px;">Bridge HBPM thérapeutique</div></div>
+    <div style="background:#fff3cd;border-radius:10px;padding:11px;text-align:center;border-left:4px solid #f59e0b;"><div style="font-size:12px;font-weight:800;color:#f59e0b;">AOD arrêt</div><div style="font-size:11px;color:#555;margin-top:3px;">24–48h (normal) · 48–72h (haut risque)</div></div>
+    <div style="background:#f0fdf4;border-radius:10px;padding:11px;text-align:center;border-left:4px solid #16a34a;"><div style="font-size:12px;font-weight:800;color:#16a34a;">Reprise anticoag</div><div style="font-size:11px;color:#555;margin-top:3px;">J1–2 post-op si hémostase stable</div></div>
+  </div>
+  <div class="block def" style="margin-top:14px;border-left:4px solid #c0392b;">
+    <div class="block-title" id="periop-1"><span class="tag">10.1 — Risque thrombotique (Maladie)</span></div>
+    <div style="overflow-x:auto;margin-top:8px;">
+      <table>
+        <thead><tr><th>Risque</th><th>Valve mécanique</th><th>FA</th><th>TEV</th></tr></thead>
+        <tbody>
+          <tr style="background:#fce4ec;">
+            <td><strong style="color:#c0392b;">🔴 Élevé<br>(ne pas arrêter)</strong></td>
+            <td>Toute valve mitrale ; aortique ancienne ; ATCD AVC/ICT &lt;6 mois</td>
+            <td>CHADS₂ 5–6 ; AVC/ICT &lt;3 mois ; valvulopathie rhumatismale</td>
+            <td>TEV &lt;3 mois ; thrombophilie sévère (SAPL, déficit AT III)</td>
+          </tr>
+          <tr style="background:#fff8e1;">
+            <td><strong style="color:#d35400;">🟡 Modéré</strong></td>
+            <td>Valve aortique à double ailette + ≥1 FR</td>
+            <td>CHADS₂ 3–4</td>
+            <td>TEV 3–12 mois ; TEV récidivante ; cancer actif ; thrombophilie non sévère</td>
+          </tr>
+          <tr style="background:#e8f8f5;">
+            <td><strong style="color:#0a7a4e;">🟢 Faible<br>(arrêt OK)</strong></td>
+            <td>Valve aortique double ailette sans FA ni autre FR</td>
+            <td>CHADS₂ 0–2 sans ATCD AVC/ICT</td>
+            <td>TEV unique &gt;12 mois sans autre FR</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="key-fact black" style="margin-top:10px;">
+      ➡️ Risque élevé = on essaie de ne pas arrêter. Risque faible / TEV &gt;12 mois = arrêt facile.
+    </div>
+  </div>
+
+  <!-- 10.2 Risque de saignement procédure -->
+  <div class="block para" style="border-left:4px solid #1d4ed8;margin-top:14px;">
+    <div class="block-title" id="periop-2"><span class="tag">10.2 — Risque hémorragique de la procédure</span></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:8px;font-size:13px;">
+      <div style="background:#e8f8f5;border-radius:8px;padding:12px;">
+        <strong style="color:#0a7a4e;">🟢 Faible / Très faible<br>(souvent pas d'arrêt)</strong>
+        <div style="font-size:13px;line-height:1.7;">Cataracte, biopsie cutanée<br>
+Gastroscopie / coloscopie <em>sans biopsie</em><br>
+Coronarographie radiale<br>
+Extraction 1–2 dents, plombage, détartrage, endodontie</div>
+      </div>
+      <div style="background:#fff8e1;border-radius:8px;padding:12px;">
+        <strong style="color:#d35400;">🟡 Modéré</strong>
+        <div style="font-size:13px;line-height:1.7;">Chirurgie abdominale (cholécystectomie, hernie, colectomie)<br>
+Chirurgie mammaire<br>
+Gastro/colo avec biopsie<br>
+Biopsie médullaire / ganglionnaire<br>
+Extractions dentaires multiples</div>
+      </div>
+      <div style="background:#fce4ec;border-radius:8px;padding:12px;">
+        <strong style="color:#c0392b;">🔴 Élevé</strong>
+        <div style="font-size:13px;line-height:1.7;">Anesthésie neuraxiale (rachi/épidurale)<br>
+Neurochirurgie<br>
+Chirurgie cardiaque, vasculaire majeure<br>
+Orthopédie majeure (hanche/genou)<br>
+Résection pulmonaire<br>
+Urologique (prostate/vessie)<br>
+Polypectomie colique</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Règle 1-2-4 AOD -->
+  <div class="block def" style="border-left:4px solid #7b3fa0;margin-top:14px;">
+    <div class="block-title" id="periop-3"><span class="tag">10.3 — ⚡ Règle 1–2–4 (arrêt préopératoire des AOD)</span></div>
+    <div class="content-text">Combinaison fonction rénale + risque de saignement. Applicable à tous les AOD (dabigatran le plus sensible à l'IR — clairance rénale 85%).</div>
+    <div style="overflow-x:auto;margin-top:8px;">
+      <table>
+        <thead><tr><th>Situation</th><th>Jours d'arrêt avant la procédure</th></tr></thead>
+        <tbody>
+          <tr style="background:#e8f8f5;"><td>Fonction rénale normale + <strong>petit risque</strong> de saignement</td><td><strong>1 jour</strong></td></tr>
+          <tr style="background:#fff8e1;"><td>IR légère (DFGe 30–60) <strong>OU</strong> haut risque de saignement (fonction rénale normale)</td><td><strong>2 jours</strong></td></tr>
+          <tr style="background:#fce4ec;"><td>IR ET haut risque de saignement</td><td><strong>4 jours</strong> minimum</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="key-fact black" style="margin-top:10px;">
+      💡 <strong>En pratique :</strong> TEV &gt;1 an + petit geste → souvent aucun arrêt ou 1 jour. La règle 1–2–4 est plus logique que les monographies (souvent floues : « 1 à 2 jours »).
+    </div>
+  </div>
+
+  <!-- Antiplaquettaires préop -->
+  <div class="block para" style="margin-top:14px;">
+    <div class="block-title" id="periop-4"><span class="tag">Arrêt préopératoire des antiplaquettaires</span></div>
+    <div style="overflow-x:auto;margin-top:8px;">
+      <table>
+        <thead><tr><th>Médicament</th><th>Arrêt avant chirurgie</th><th>Raison</th></tr></thead>
+        <tbody>
+          <tr><td><strong>AAS 80 mg</strong></td><td>7–10 jours (si arrêt indiqué)</td><td>Irréversible sur durée de vie plaquettaire</td></tr>
+          <tr style="background:#f8f9fa;"><td><strong>Clopidogrel (Plavix)</strong></td><td>5–7 jours</td><td>Irréversible</td></tr>
+          <tr><td><strong>Prasugrel (Effient)</strong></td><td>7 jours</td><td>Irréversible — plus potent</td></tr>
+          <tr style="background:#f8f9fa;"><td><strong>Ticagrelor (Brilinta)</strong></td><td>3–5 jours</td><td>✅ Réversible → effet résiduel quasi nul à 4j</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Reprise postopératoire -->
+  <div class="block def" style="margin-top:14px;background:#e8f8f5;">
+    <div class="block-title" id="periop-5"><span class="tag">10.4 — Reprise postopératoire</span></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:8px;font-size:13px;">
+      <div>
+        <strong style="color:#0a7a4e;">⏱️ Délai de reprise AOD :</strong>
+        <div style="font-size:13px;line-height:1.8;"><strong>24h</strong> après fin de la chirurgie (standard)<br>
+<strong>48h</strong> si doute sur hémostase<br>
+<strong>72h</strong> si gros doute (dose prophylactique possible dans l'intervalle)<br>
+Règle : « 24h après la fin de la chirurgie », pas « le lendemain matin » (si geste à 15h → reprendre le lendemain à 15h)</div>
+      </div>
+      <div>
+        <strong style="color:#0a7a4e;">🎉 Avantages des AOD vs warfarine périop :</strong>
+        <div style="font-size:13px;line-height:1.8;">Action rapide (2–4h) → <strong>plus de bridging</strong> à l'héparine nécessaire<br>
+<strong>Plus d'INR sériés</strong> à faire<br>
+Reprise simple et prévisible<br>
+« La fin du monde n'existe plus »</div>
+      </div>
+    </div>
+    <div style="margin-top:12px;font-size:13px;">
+      <strong>Bridging héparine (warfarine) — Quand utiliser encore :</strong>
+      <div style="font-size:13px;line-height:1.8;">Valve mécanique mitrale ou aortique ancienne (risque élevé) + chirurgie à haut risque hémorragique<br>
+CHADS₂ ≥ 5 avec interruption warfarine &gt; 5 jours<br>
+TEV &lt; 3 mois</div>
+    </div>
+  </div>
+
+  <!-- Messages clés -->
+  <div class="block def" style="margin-top:14px;border-left:4px solid #7b3fa0;">
+    <div class="block-title" id="periop-6"><span class="tag">⭐ Messages clés — Anticoagulation périopératoire</span></div>
+    <div style="display:flex;flex-direction:column;gap:8px;margin-top:8px;font-size:13px;">
+      <div style="background:#e8f4ff;border-radius:8px;padding:10px;"><strong>1.</strong> Les AOD sont la priorité : aussi efficaces que la warfarine et <strong>≥2× moins d'hémorragies intracrâniennes</strong></div>
+      <div style="background:#e8f4ff;border-radius:8px;padding:10px;"><strong>2.</strong> Apixaban et rivaroxaban se donnent d'emblée (TVP/EP) ; dabigatran et édoxaban nécessitent HBPM 5–10j</div>
+      <div style="background:#e8f8f5;border-radius:8px;padding:10px;"><strong>3.</strong> Réduction de dose à 6 mois (apixaban 2,5 BID / rivaroxaban 10 DIE) : avantage majeur, <em>impossible avec warfarine</em></div>
+      <div style="background:#e8f8f5;border-radius:8px;padding:10px;"><strong>4.</strong> Warfarine réservée surtout aux valves mécaniques (facteur IX/voie intrinsèque)</div>
+      <div style="background:#fff8e1;border-radius:8px;padding:10px;"><strong>5.</strong> Durée TEV : provoquée = 3 mois ; non provoquée / cancer = long terme (~4–5%/an récidive)</div>
+      <div style="background:#fff8e1;border-radius:8px;padding:10px;"><strong>6.</strong> Règle 1–2–4 pour arrêt préop, reprise à 24h post-op, plus de bridging systématique</div>
+      <div style="background:#fce4ec;border-radius:8px;padding:10px;"><strong>7.</strong> D-dimères = exclure une TEV en BASSE probabilité seulement. Si Wells ≥2 (TVP) → aller directement à l'écho Doppler</div>
+    </div>
+  </div>
+</div>
+
+    <div class="section" id="sec-preop">
+      <div class="section-header">
+        <div class="section-accent" style="background:#065f46">🏥</div>
+        <div class="section-title"><h1>Évaluation préopératoire & risque cardiovasculaire</h1><div class="breadcrumb">Périopératoire <span class="breadcrumb-sep">·</span> Risque cardiaque · Bilans · Jeûne · Médicaments</div></div>
+      </div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;">
+        <button onclick="goToBlock('preo-8')" style="background:#065f46;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">🫀 Risque cardiaque</button>
+        <button onclick="goToBlock('preop-resp')" style="background:#0369a1;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">🫁 Risque respiratoire</button>
+        <button onclick="goToBlock('preop-labo')" style="background:#0369a1;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧪 Quels bilans</button>
+        <button onclick="goToBlock('preop-pulm')" style="background:#0891b2;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🫁 Risque pulmonaire &amp; STOP-BANG</button>
+        <button onclick="goToBlock('preop-jeune')" style="background:#b45309;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🍽️ Jeûne &amp; GLP-1</button>
+        <button onclick="goToBlock('preop-med')" style="background:#166534;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">💊 Médicaments</button>
+        <button onclick="goToBlock('preop-endoc')" style="background:#7c3aed;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧬 Diabète · cortico · thyroïde</button>
+        <button onclick="goToBlock('preop-age')" style="background:#c0392b;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">👵 Personne âgée &amp; anémie</button>
+      </div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:20px;">
+        <div style="flex:1;min-width:100px;background:#FEE2E2;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#c0392b;">RCRI ≥ 3</div><div style="font-size:11px;color:#555;margin-top:4px;">Risque cardiaque élevé</div></div>
+        <div style="flex:1;min-width:100px;background:#FEF9C3;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#92400e;">HbA1c &lt; 8,5 %</div><div style="font-size:11px;color:#555;margin-top:4px;">Objectif périopératoire</div></div>
+        <div style="flex:1;min-width:100px;background:#EEF2FF;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#1C3F8F;">SCC 2017</div><div style="font-size:11px;color:#555;margin-top:4px;">Lignes directrices clés</div></div>
+      </div>
+            <!-- Stat-cards -->
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:16px;">
+              <div style="background:#fff3cd;border-radius:10px;padding:11px;text-align:center;border-left:4px solid #f59e0b;"><div style="font-size:12px;font-weight:800;color:#f59e0b;">HbA1c préop</div><div style="font-size:11px;color:#555;margin-top:3px;">&lt;8.5% idéalement (&lt;9% acceptable)</div></div>
+              <div style="background:#e8f4fd;border-radius:10px;padding:11px;text-align:center;border-left:4px solid #0369a1;"><div style="font-size:12px;font-weight:800;color:#0369a1;">Antiplaq. arrêt</div><div style="font-size:11px;color:#555;margin-top:3px;">AAS 7–10j · clopidogrel 5–7j</div></div>
+              <div style="background:#fce4ec;border-radius:10px;padding:11px;text-align:center;border-left:4px solid #dc2626;"><div style="font-size:12px;font-weight:800;color:#dc2626;">Beta-bloqueur</div><div style="font-size:11px;color:#555;margin-top:3px;">Continuer si déjà en place</div></div>
+              <div style="background:#f0fdf4;border-radius:10px;padding:11px;text-align:center;border-left:4px solid #16a34a;"><div style="font-size:12px;font-weight:800;color:#16a34a;">TA cible</div><div style="font-size:11px;color:#555;margin-top:3px;">&lt;160/100 avant chir élective</div></div>
+            </div>
+            <div class="block def" style="margin-top:14px;">
+        <div class="block-title" id="preo-8"><span class="tag">🗺️ Algorithme SCC 2017 — Évaluation cardiaque préopératoire étape par étape</span></div>
+        <div class="key-fact blue" style="margin-bottom:10px;font-size:12px;">Ce guide synthétise les 7 étapes de l'évaluation cardiaque préopératoire (SCC 2017) dans l'ordre clinique à suivre. Utilisez les onglets ci-dessous pour naviguer étape par étape.</div>
+
+        <div style="display:flex;gap:6px;flex-wrap:wrap;margin:8px 0 12px;">
+          <button onclick="showPanel('preoa','preoa0',7)" data-panel="preoa0" style="background:#1C3F8F;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">① Urgence?</button>
+          <button onclick="showPanel('preoa','preoa1',7)" data-panel="preoa1" style="background:#1C3F8F;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">② Critères</button>
+          <button onclick="showPanel('preoa','preoa2',7)" data-panel="preoa2" style="background:#1C3F8F;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">③ Anamnèse & EP</button>
+          <button onclick="showPanel('preoa','preoa3',7)" data-panel="preoa3" style="background:#1C3F8F;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">④ RCRI</button>
+          <button onclick="showPanel('preoa','preoa4',7)" data-panel="preoa4" style="background:#1C3F8F;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">⑤ NT-proBNP/BNP</button>
+          <button onclick="showPanel('preoa','preoa5',7)" data-panel="preoa5" style="background:#1C3F8F;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">⑥ Médications</button>
+          <button onclick="showPanel('preoa','preoa6',7)" data-panel="preoa6" style="background:#c0392b;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">⑦ Postop</button>
+        </div>
+
+        <div id="preoa0" style="display:block;">
+          <div class="key-fact green" style="margin-bottom:8px;font-size:12px;"><strong>Question 1 — La chirurgie est-elle urgente ou semi-urgente ?</strong></div>
+          <table style="font-size:12px;">
+            <thead><tr><th>Niveau d'urgence</th><th>Exemples</th><th>Conduite</th></tr></thead>
+            <tbody>
+              <tr><td><strong>🚨 Urgence absolue</strong></td><td>Rupture d'anévrisme, trauma sévère, ischémie aiguë</td><td><span class="drug-badge warn">Opérer SANS évaluation cardiaque additionnelle</span></td></tr>
+              <tr><td><strong>⚡ Urgente / semi-urgente</strong></td><td>Fracture de hanche, occlusion intestinale, cancer à potentiel métastatique</td><td>Opérer; évaluation cardiaque <strong>uniquement</strong> si condition instable connue ou suspicion valvulopathie sévère/HTAP non diagnostiquée</td></tr>
+              <tr><td><strong>📅 Élective + condition instable</strong></td><td>Angine instable, IC décompensée, arythmie significative, valvulopathie sévère symptomatique</td><td><span class="drug-badge red">Stabiliser AVANT l'opération</span></td></tr>
+              <tr><td><strong>✅ Élective + patient stable</strong></td><td>Toute chirurgie élective chez patient stable</td><td>→ <strong>Passer à l'étape ②</strong> : vérifier les critères d'évaluation</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div id="preoa1" style="display:none;">
+          <div class="key-fact green" style="margin-bottom:8px;font-size:12px;"><strong>Question 2 — Ce patient nécessite-t-il une évaluation cardiaque formelle ?</strong></div>
+          <table style="font-size:12px;">
+            <thead><tr><th>Critère</th><th>Inclus?</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Âge ≥ 45 ans</strong></td><td>✅ Inclus → évaluer</td></tr>
+              <tr><td><strong>18–44 ans + maladie cardiovasculaire significative</strong><br><span style="font-size:11px;color:#666;">Coronaropathie · MCV · MAP · IC · HTAP sévère · Sténose aortique ou mitrale sévère · Cardiomyopathie obstructive sévère</span></td><td>✅ Inclus → évaluer</td></tr>
+              <tr><td><strong>Chirurgie nécessitant hospitalisation &gt; 24 h</strong></td><td>✅ Critère supplémentaire requis</td></tr>
+              <tr><td><strong>&lt; 45 ans sans MCV significative</strong></td><td>❌ <strong>Pas d'indication formelle</strong> → évaluation de routine (signes vitaux, examen, médication)</td></tr>
+            </tbody>
+          </table>
+          <div class="key-fact blue" style="margin-top:8px;font-size:12px;">Si inclus → <strong>Passer à l'étape ③</strong> : anamnèse complète et examen physique</div>
+        </div>
+
+        <div id="preoa2" style="display:none;">
+          <div class="key-fact green" style="margin-bottom:8px;font-size:12px;"><strong>Étape 3 — Anamnèse ciblée + examen physique</strong></div>
+          <table style="font-size:12px;">
+            <thead><tr><th>Composante</th><th>Éléments clés à rechercher</th></tr></thead>
+            <tbody>
+              <tr><td><strong>ATCD cardiovasculaires</strong></td><td>IM · AVC/ICT · IC · MAP · FA · Diabète <strong>insulinodépendant</strong> · IRC</td></tr>
+              <tr><td><strong>Symptômes actuels</strong></td><td>Angine · Dyspnée · Orthopnée · DPN · Palpitations · Syncope</td></tr>
+              <tr><td><strong>Capacité fonctionnelle (METs)</strong></td><td>⚠️ <strong>Pas un outil principal (SCC 2017)</strong> — auto-déclaré, peu prédictif seul<br>Repère : ≥ 4 METs = monter 1 étage / marcher en côte / jardinage léger</td></tr>
+              <tr><td><strong>Examen physique</strong></td><td>Signes vitaux · Souffle (sténose aortique?) · B3 · Râles pulmonaires · Œdème · Pouls périphériques</td></tr>
+              <tr><td><strong>Médicaments à noter</strong></td><td>Antiplaquettaires · Anticoagulants · β-bloquants · IECA/ARA · Statines · Hypoglycémiants</td></tr>
+            </tbody>
+          </table>
+          <div class="key-fact blue" style="margin-top:8px;font-size:12px;">→ <strong>Passer à l'étape ④</strong> : calculer le score RCRI</div>
+        </div>
+
+        <div id="preoa3" style="display:none;">
+          <div class="key-fact green" style="margin-bottom:8px;font-size:12px;"><strong>Étape 4 — Calculer le score RCRI (1 point par critère)</strong></div>
+          <div style="background:#fff;border:1px solid #d1d5db;border-radius:8px;padding:10px;font-size:12px;">
+            <div style="display:grid;gap:5px;">
+              <label style="display:flex;align-items:center;gap:8px;cursor:pointer;"><input type="checkbox" id="rcri1" onchange="calcRCRI()" style="width:14px;height:14px;"> Antécédent de <strong>cardiopathie ischémique</strong> (IM, ondes Q, angine, test effort +, nitrates)</label>
+              <label style="display:flex;align-items:center;gap:8px;cursor:pointer;"><input type="checkbox" id="rcri2" onchange="calcRCRI()" style="width:14px;height:14px;"> Antécédent d'<strong>insuffisance cardiaque congestive</strong> (œdème pulm., DPN, B3, râles, ICT RXP)</label>
+              <label style="display:flex;align-items:center;gap:8px;cursor:pointer;"><input type="checkbox" id="rcri3" onchange="calcRCRI()" style="width:14px;height:14px;"> Antécédent de <strong>maladie cérébrovasculaire</strong> (AVC, ICT)</label>
+              <label style="display:flex;align-items:center;gap:8px;cursor:pointer;"><input type="checkbox" id="rcri4" onchange="calcRCRI()" style="width:14px;height:14px;"> <strong>Insulinothérapie</strong> pour le diabète</label>
+              <label style="display:flex;align-items:center;gap:8px;cursor:pointer;"><input type="checkbox" id="rcri5" onchange="calcRCRI()" style="width:14px;height:14px;"> <strong>Créatinine préopératoire &gt; 177 µmol/L</strong> (&gt; 2,0 mg/dL)</label>
+              <label style="display:flex;align-items:center;gap:8px;cursor:pointer;"><input type="checkbox" id="rcri6" onchange="calcRCRI()" style="width:14px;height:14px;"> <strong>Chirurgie à haut risque</strong> (intra-péritonéale lourde, intra-thoracique, vasculaire suprainguinale)</label>
+            </div>
+            <div id="rcri-result" style="margin-top:10px;padding:8px 12px;border-radius:6px;background:#EEF2FF;font-weight:700;text-align:center;">RCRI = 0 &nbsp;→&nbsp; Risque ~0,4 %</div>
+          </div>
+          <div class="key-fact blue" style="margin-top:8px;font-size:12px;">→ <strong>Passer à l'étape ⑤</strong> : faut-il doser le NT-proBNP/BNP ?</div>
+        </div>
+
+        <div id="preoa4" style="display:none;">
+          <div class="key-fact green" style="margin-bottom:8px;font-size:12px;"><strong>Étape 5 — NT-proBNP / BNP préopératoire (recommandation FORTE SCC 2017)</strong></div>
+          <table style="font-size:12px;">
+            <thead><tr><th>Indication</th><th>Conduite</th></tr></thead>
+            <tbody>
+              <tr><td>Âge ≥ 65 ans</td><td rowspan="3" style="vertical-align:middle;"><strong>✅ Doser NT-proBNP ou BNP</strong></td></tr>
+              <tr><td>45–64 ans + MCV significative</td></tr>
+              <tr><td>RCRI ≥ 1 (peu importe l'âge)</td></tr>
+              <tr><td>&lt; 45 ans, pas de MCV, RCRI = 0</td><td>❌ Pas d'indication systématique</td></tr>
+            </tbody>
+          </table>
+          <table style="font-size:12px;margin-top:8px;">
+            <thead><tr><th>Résultat</th><th>Interprétation</th><th>Risque IM/décès à 30 j</th></tr></thead>
+            <tbody>
+              <tr><td>NT-proBNP <strong>&lt; 300 ng/L</strong> · BNP <strong>&lt; 92 µg/L</strong></td><td style="color:#16a34a;">✅ Risque faible</td><td>~4,9 %</td></tr>
+              <tr><td>NT-proBNP <strong>≥ 300 ng/L</strong> · BNP <strong>≥ 92 µg/L</strong></td><td style="color:#dc2626;">🔴 Risque élevé</td><td><strong>~21,8 %</strong> → troponine postop obligatoire</td></tr>
+            </tbody>
+          </table>
+          <div class="key-fact green" style="margin-top:8px;font-size:12px;">❌ <strong>NON recommandés en routine</strong> : écho de repos · angio-TDM coronarienne · épreuve d'effort · écho de stress / isotopique<br>✅ <strong>Exception écho</strong> : suspicion valvulopathie obstructive sévère méconnue ou HTAP sévère à l'examen physique</div>
+          <div class="key-fact blue" style="margin-top:8px;font-size:12px;">→ <strong>Passer à l'étape ⑥</strong> : ajuster les médicaments</div>
+        </div>
+
+        <div id="preoa5" style="display:none;">
+          <div class="key-fact green" style="margin-bottom:8px;font-size:12px;"><strong>Étape 6 — Gestion des médicaments en périopératoire (SCC 2017)</strong></div>
+          <table style="font-size:12px;">
+            <thead><tr><th>Médicament</th><th>Conduite</th></tr></thead>
+            <tbody>
+              <tr><td><strong>AAS (Aspirine)</strong></td><td>❌ <strong>Ne pas débuter ni continuer</strong> en prévention périopératoire<br>✅ Exceptions : endoprothèse coronarienne récente, endartériectomie carotidienne</td></tr>
+              <tr><td><strong>β-bloquants</strong></td><td>❌ <strong>Ne PAS débuter dans les 24 h avant</strong> la chirurgie (↑ AVC et mortalité)<br>✅ Continuer si déjà en cours et bien toléré</td></tr>
+              <tr><td><strong>IECA / ARA</strong></td><td>⏸️ <strong>Suspendre 24 h avant</strong> la chirurgie (↓ risque hypotension peropératoire)</td></tr>
+              <tr><td><strong>Statines</strong></td><td>→ Débuter si lésion myocardique périopératoire détectée (avec AAS)</td></tr>
+              <tr><td><strong>Tabac</strong></td><td>💬 <strong>Faciliter l'abandon avant la chirurgie</strong> (recommandation forte SCC 2017)</td></tr>
+              <tr><td><strong>Anticoagulants / P2Y12</strong></td><td>⚠️ Gestion individualisée selon indication et risque hémorragique → avis spécialisé</td></tr>
+            </tbody>
+          </table>
+          <div class="key-fact blue" style="margin-top:8px;font-size:12px;">→ <strong>Passer à l'étape ⑦</strong> : planifier la surveillance postopératoire</div>
+        </div>
+
+        <div id="preoa6" style="display:none;">
+          <div class="key-fact green" style="margin-bottom:8px;font-size:12px;"><strong>Étape 7 — Surveillance postopératoire</strong></div>
+          <table style="font-size:12px;">
+            <thead><tr><th>Quand surveiller la troponine?</th><th>Conduite</th></tr></thead>
+            <tbody>
+              <tr><td>NT-proBNP/BNP préop <strong>élevé</strong></td><td rowspan="3" style="vertical-align:middle;"><strong>Troponine quotidienne × 48–72 h postop</strong> + ECG à la salle de réveil</td></tr>
+              <tr><td>BNP non mesuré + <strong>RCRI ≥ 1</strong></td></tr>
+              <tr><td>BNP non mesuré + <strong>45–64 ans avec MCV</strong> ou <strong>≥ 65 ans</strong></td></tr>
+            </tbody>
+          </table>
+          <table style="font-size:12px;margin-top:8px;">
+            <thead><tr><th>Si lésion myocardique / IM postopératoire détecté</th></tr></thead>
+            <tbody>
+              <tr><td>→ Débuter <strong>AAS + statine</strong><br>→ Envisager prise en charge partagée (médecine interne / cardiologie)<br>→ ⚠️ <strong>Sans troponine, &gt; 50 % des IM périopératoires passent inaperçus</strong> (silencieux)</td></tr>
+            </tbody>
+          </table>
+          <div class="key-fact blue" style="margin-top:10px;font-size:12px;">✅ <strong>Résumé clinique IPS :</strong> Évaluer urgence → Vérifier critères (âge/MCV) → Anamnèse + EP → RCRI → NT-proBNP si indiqué → Ajuster médicaments → Troponine postop si facteurs de risque</div>
+        </div>
+      </div>
+
+
+      <div class="block para" style="margin-top:14px;">
+        <div class="block-title" id="preop-resp"><span class="tag">🫁 Bilan respiratoire préopératoire</span> <a href="https://inesss.algorithmes-onco.info/fr/algorithmes-d-investigation-de-traitement-et-de-suivi-du-cancer-du-poumon#signet900" target="_blank" style="font-size:12px;color:var(--accent);margin-left:8px;">[détails INESSS]</a></div>
+        <div class="content-text">L'évaluation respiratoire préopératoire consiste à soumettre le patient à différents tests de façon séquentielle afin d'évaluer son risque chirurgical. Elle se divise en <strong>3 étapes</strong> :</div>
+
+        <div class="key-fact green" style="margin:10px 0 6px;">
+          <strong>Étape 1 — VEMS et DLCO</strong><br>
+          Si VEMS <em>et</em> DLCO <strong>&gt; 80 %</strong> → risque faible, aucun autre test requis.<br>
+          Sinon → estimer VEMS et DLCO postopératoires prédits (POP) → étape 2.
+        </div>
+
+        <div class="key-fact green" style="margin:6px 0;">
+          <strong>Étape 2 — VEMS et DLCO POP</strong><br>
+          Si VEMS <em>et</em> DLCO POP <strong>&gt; 60 %</strong> → risque faible, aucun autre test requis.<br>
+          Si l'une des valeurs <strong>&lt; 60 %</strong> → test à l'effort → étape 3.
+        </div>
+
+        <div class="key-fact green" style="margin:6px 0;">
+          <strong>Étape 3 — Test à l'effort</strong><br>
+          <strong>3a. VO₂max (privilégié) :</strong>
+          <table style="margin-top:6px;font-size:12px;">
+            <thead><tr><th>Risque</th><th>VO₂max absolu</th><th>VO₂max prédit</th></tr></thead>
+            <tbody>
+              <tr><td><span class="drug-badge ok">Faible</span></td><td>&gt; 20 ml/kg/min</td><td>&gt; 75 %</td></tr>
+              <tr><td><span class="drug-badge warn">Modéré</span></td><td>10–20 ml/kg/min</td><td>35–75 %</td></tr>
+              <tr><td><span class="drug-badge ci">Élevé</span></td><td>&lt; 10 ml/kg/min</td><td>&lt; 35 %</td></tr>
+            </tbody>
+          </table>
+          <p style="margin-top:8px;font-size:13px;"><strong>3b. Alternatif (ACCP)</strong> — si VEMS et DLCO POP toutes deux &gt; 30 % mais l'une &lt; 60 % :<br>
+          Test de montée en escalier <strong>&gt; 22 m</strong> <em>ou</em> test de marche <strong>&gt; 400 m</strong> → risque faible.<br>
+          Échec ou VEMS/DLCO POP &lt; 30 % → procéder au test VO₂max (étape 3a).</p>
+        </div>
+
+        <table style="margin-top:10px;font-size:12px;">
+          <thead><tr><th>Niveau de risque</th><th>Interprétation</th></tr></thead>
+          <tbody>
+            <tr><td><span class="drug-badge ok">Faible</span></td><td>Mortalité attendue &lt; 1 % · Résection majeure possible</td></tr>
+            <tr><td><span class="drug-badge warn">Modéré</span></td><td>Morbidité/mortalité variable selon valeurs POP et tolérance à l'effort · Discussion risques/bénéfices requise</td></tr>
+            <tr><td><span class="drug-badge ci">Élevé</span></td><td>Mortalité après résection majeure &gt; 10 % · Risque morbidité cardiopulmonaire sévère considérable · Perte de fonction résiduelle attendue</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="block para" style="margin-top:14px;border-left-color:#0369a1;">
+        <div class="block-title" id="preop-labo"><span class="tag">🧪 Quels bilans préopératoires — et surtout, lesquels éviter</span></div>
+
+        <div class="key-fact red" style="margin-top:10px;">🎯 <strong>Le principe, et il va à l'encontre de la pratique répandue : les bilans préopératoires systématiques ne sont pas justifiés.</strong> Le tableau ci-dessous donne, pour chaque test, la proportion de résultats anormaux <strong>et</strong> la proportion qui <strong>modifie réellement la prise en charge</strong>. L'écart entre les deux colonnes est la démonstration chiffrée du problème. <span style="font-size:11px;color:#64748b;">📚 <em>Goldman-Cecil, 26<sup>e</sup> éd., ch. 403</em></span></div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:20%;">Test</th><th style="width:12%;">% anormaux</th><th style="width:14%;">% modifiant la conduite</th><th>Indication</th></tr></thead>
+          <tbody>
+            <tr style="background:#f1f5f9;"><td><strong>Hémoglobine</strong></td><td>1,8 %</td><td style="color:#c0392b;font-weight:700;">0,1 %</td><td>Perte sanguine majeure attendue · symptômes d'anémie · maladie rénale chronique</td></tr>
+            <tr><td><strong>Leucocytes</strong></td><td>0,7 %</td><td style="color:#c0392b;font-weight:700;">0,0 %</td><td>Infection suspectée · syndrome myéloprolifératif · médicaments myélotoxiques</td></tr>
+            <tr style="background:#f1f5f9;"><td><strong>Plaquettes</strong></td><td>0,9 %</td><td style="color:#c0392b;font-weight:700;">0,02 %</td><td>Diathèse hémorragique · néoplasie myéloproliférative · myélotoxiques</td></tr>
+            <tr><td><strong>RNI / temps de prothrombine</strong></td><td>0,3 %</td><td style="color:#c0392b;font-weight:700;">0,0 %</td><td>Diathèse hémorragique · <strong>maladie hépatique</strong> · <strong>dénutrition</strong> · antibiotiques · anticoagulants</td></tr>
+            <tr style="background:#f0fdf4;"><td><strong>Électrolytes</strong></td><td>12,7 %</td><td style="font-weight:700;">1,8 %</td><td>Maladie rénale · médicaments modifiant les électrolytes — diurétiques, digoxine, IECA, ARA</td></tr>
+            <tr><td><strong>Glycémie</strong></td><td>9,3 %</td><td style="font-weight:700;">0,5 %</td><td>Diabète connu · corticostéroïdes · obésité morbide</td></tr>
+            <tr style="background:#f0fdf4;"><td>🎯 <strong>Fonction rénale</strong></td><td>8,2 %</td><td style="color:#15803d;font-weight:700;">2,6 %</td><td>Maladie rénale · diabète · HTA · <strong>chirurgie majeure</strong> · âge avancé · médicaments néphrotoxiques</td></tr>
+            <tr><td><strong>Bilan hépatique</strong></td><td>0,4 %</td><td style="color:#c0392b;font-weight:700;">0,1 %</td><td>Maladie hépatique connue · <strong>albumine si risque de nutrition parentérale postopératoire</strong></td></tr>
+            <tr style="background:#fce4ec;"><td>⚠️ <strong>Analyse d'urine</strong></td><td>19,1 %</td><td style="font-weight:700;">1,4 %</td><td>🚫 <strong>Aucune indication</strong> sauf symptômes urinaires ou instrumentation prévue — bien qu'elle soit souvent demandée avant une arthroplastie ou une chirurgie du rachis</td></tr>
+            <tr style="background:#f0fdf4;"><td>🎯 <strong>ECG</strong></td><td>29,6 %</td><td style="color:#15803d;font-weight:700;">2,6 %</td><td>Chirurgie vasculaire · chirurgie à risque intermédiaire avec <strong>au moins 1 facteur du RCRI</strong><br>🚫 <strong>Non indiqué</strong> chez une personne asymptomatique pour une procédure à faible risque, ni <strong>sur la seule base de l'âge</strong></td></tr>
+            <tr><td>🎯 <strong>Radiographie pulmonaire</strong></td><td>21,2 %</td><td style="color:#15803d;font-weight:700;">3,0 %</td><td>Uniquement si <strong>atteinte cardiopulmonaire aiguë suspectée</strong> à l'anamnèse et à l'examen physique</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">💡 <strong>Ce que ces chiffres enseignent :</strong> l'<strong>analyse d'urine</strong> est anormale une fois sur cinq et ne change la conduite que dans 1,4 % des cas — elle génère surtout des antibiothérapies inutiles pour des bactériuries asymptomatiques. À l'inverse, la <strong>fonction rénale</strong>, l'<strong>ECG ciblé</strong> et la <strong>radiographie orientée par la clinique</strong> ont le meilleur rendement. 🎯 <strong>La question à se poser reste toujours la même : le résultat va-t-il changer ce que je fais?</strong></div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;border-left-color:#0891b2;">
+        <div class="block-title" id="preop-pulm"><span class="tag">🫁 Risque pulmonaire &amp; dépistage de l'apnée du sommeil</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>Le prédicteur le plus fort n'est pas le patient — c'est la chirurgie.</strong> Les deux déterminants principaux des complications pulmonaires postopératoires sont le <strong>type de chirurgie</strong> et la <strong>proximité de l'incision au diaphragme</strong>. La fonction pulmonaire chute d'environ <strong>50 % après une chirurgie intrathoracique ou abdominale haute</strong>, et d'environ <strong>25 % après une chirurgie abdominale basse</strong> — sans revenir à la normale avant plusieurs semaines. <span style="font-size:11px;color:#64748b;">📚 <em>Goldman, ch. 403</em></span></div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:12px;">
+          <div style="background:#fce4ec;border-radius:10px;padding:14px;">
+            <strong style="color:#c0392b;">👤 Facteurs liés à la personne</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>MPOC</strong> — environ <strong>double</strong> le risque, selon la sévérité<br>🎯 <strong>L'asthme BIEN CONTRÔLÉ n'augmente PAS le risque</strong> — nuance importante<br><strong>Tabagisme actif</strong> — surtout selon le nombre de paquets-années<br><strong>Apnée obstructive du sommeil</strong> — hypercapnie, hypoxémie, complications des voies aériennes<br><strong>Obésité</strong> — atélectasies<br>Âge avancé · mauvais état fonctionnel · hypertension pulmonaire · atteinte de l'état mental · immunosuppression (corticostéroïdes, alcool, diabète)</div>
+          </div>
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;">
+            <strong style="color:#d35400;">🔪 Facteurs liés à la procédure</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Incision près du diaphragme</strong> ⭐<br><strong>Chirurgie d'urgence</strong><br><strong>Durée &gt; 2 à 6 heures</strong><br><strong>Sonde nasogastrique postopératoire de routine</strong><br><br>💡 La <strong>laparoscopie</strong> s'associe à moins de complications pulmonaires et à des séjours plus courts que la voie ouverte</div>
+          </div>
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+            <strong style="color:#15803d;">🛡️ Ce qui réduit le risque</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🎯 <strong>Cessation tabagique — au moins 4 à 8 semaines avant</strong>, idéalement 8<br><strong>Manœuvres d'expansion pulmonaire</strong> — spirométrie incitative ou exercices de respiration profonde<br><strong>Contrôle de la douleur</strong> — permet de respirer profondément; l'analgésie épidurale et l'ACP intraveineuse valent mieux que les opioïdes parentéraux au besoin<br>Optimiser MPOC et asthme (bronchodilatateurs, corticostéroïdes) · traiter les exacerbations bactériennes<br><strong>Éviter</strong> les bloqueurs neuromusculaires de longue durée et la sonde nasogastrique systématique</div>
+          </div>
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+            <strong style="color:#1d4ed8;">🚫 Ce qui ne sert pas</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Les <strong>épreuves de fonction respiratoire</strong> ne sont <strong>pas plus prédictives que l'évaluation clinique</strong> pour la chirurgie non thoracique<br>Le <strong>gaz artériel préopératoire</strong> n'apporte guère<br><br>💡 Elles gardent leur place avant une <strong>résection pulmonaire</strong> — voir le bloc précédent</div>
+          </div>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">😴 <strong>Dépister l'apnée obstructive du sommeil avant la chirurgie</strong> — l'outil recommandé est le <strong>STOP-BANG</strong>, et un score de <strong>5 ou plus</strong> évoque une apnée <strong>modérée à sévère</strong>, avec un risque accru d'hypoventilation et de complications postopératoires. <span style="font-size:11px;color:#64748b;">📚 <em>Goldman, ch. 403</em></span></div>
+
+        <div style="background:#0f172a;border-radius:10px;padding:14px;margin-top:12px;">
+          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#94a3b8;margin-bottom:8px;">STOP-BANG &mdash; 8 items, 1 point chacun</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+            <div style="background:#1e293b;border-radius:8px;padding:12px;">
+              <div style="color:#93c5fd;font-size:12px;font-weight:700;margin-bottom:6px;">STOP — les symptômes</div>
+              <div style="color:#e2e8f0;font-size:12.5px;line-height:1.8;"><strong>S</strong>noring — ronflement bruyant<br><strong>T</strong>ired — fatigue ou somnolence diurne<br><strong>O</strong>bserved — apnées observées<br><strong>P</strong>ressure — hypertension artérielle</div>
+            </div>
+            <div style="background:#1e293b;border-radius:8px;padding:12px;">
+              <div style="color:#fca5a5;font-size:12px;font-weight:700;margin-bottom:6px;">BANG — les données objectives</div>
+              <div style="color:#e2e8f0;font-size:12.5px;line-height:1.8;"><strong>B</strong>MI — IMC &gt; 35 kg/m²<br><strong>A</strong>ge — plus de 50 ans<br><strong>N</strong>eck — tour de cou &gt; 40 cm<br><strong>G</strong>ender — sexe masculin</div>
+            </div>
+          </div>
+          <div style="background:#7f1d1d;border-radius:8px;padding:10px 12px;margin-top:10px;color:#fecaca;font-size:12.5px;line-height:1.6;">
+            🎯 <strong>Score ≥ 5 → apnée modérée à sévère probable</strong> → aviser l'équipe d'anesthésie, prévoir une surveillance postopératoire accrue et une <strong>prudence particulière avec les opioïdes et les sédatifs</strong>.
+          </div>
+        </div>
+      </div>
+
+      <div class="block flag" style="margin-top:14px;">
+        <div class="block-title" id="preop-jeune"><span class="tag">🍽️ Jeûne préopératoire &amp; agonistes du GLP-1</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>Le jeûne moderne est bien plus court qu'on ne le croit.</strong> Les jeûnes prolongés « à minuit » ne sont plus recommandés : ils déshydratent, aggravent l'inconfort et n'améliorent pas la sécurité. <span style="font-size:11px;color:#64748b;">📚 <em>La Société canadienne des anesthésiologistes renvoie, dans son</em> Guide d'exercice de l'anesthésie<em>, aux lignes directrices de l'ASA (2017) — il n'existe pas de ligne directrice canadienne distincte sur le jeûne.</em></span></div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:26%;">Délai minimal avant l'anesthésie</th><th>Ce qui est concerné</th></tr></thead>
+          <tbody>
+            <tr style="background:#f0fdf4;"><td><strong>2 heures</strong></td><td>🎯 <strong>Liquides clairs</strong> — eau, jus sans pulpe, thé ou café <strong>noir</strong>, boissons glucidiques claires</td></tr>
+            <tr><td><strong>4 heures</strong></td><td><strong>Lait maternel</strong></td></tr>
+            <tr style="background:#fff3cd;"><td><strong>6 heures</strong></td><td><strong>Repas léger</strong> · lait non humain · préparation pour nourrisson</td></tr>
+            <tr><td><strong>8 heures ou plus</strong></td><td><strong>Repas gras ou frit</strong> · viande</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="key-fact red" style="margin-top:12px;">🚨 <strong>L'enjeu de sécurité le plus récent — et vous le rencontrerez en première ligne : les agonistes du GLP-1.</strong> Ces médicaments <strong>retardent la vidange gastrique</strong>. Des personnes ayant <strong>parfaitement respecté le jeûne</strong> ont régurgité de grandes quantités d'aliments non digérés à l'induction ou à l'extubation. Une étude rapporte un risque <strong>5 fois plus élevé</strong> de contenu gastrique résiduel chez les personnes ayant pris du sémaglutide dans les <strong>30 jours précédents</strong>, <strong>malgré le respect des consignes de jeûne</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>ISMP Canada, bulletin vol. 23 n° 9, 27 septembre 2023 · la Société canadienne des anesthésiologistes a émis un avis à ses membres en juin 2023</em></span></div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
+          <div style="background:#fef2f2;border-radius:10px;padding:14px;border-left:4px solid #c0392b;">
+            <strong style="color:#c0392b;">💊 Les molécules commercialisées au Canada</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><span class="drug-badge">sémaglutide</span> Ozempic, Rybelsus<br><span class="drug-badge">liraglutide</span> Victoza, Saxenda<br><span class="drug-badge">dulaglutide</span> Trulicity<br><span class="drug-badge">lixisénatide</span> Adlyxine, Soliqua<br><br>⚠️ <strong>Le piège du registre :</strong> ces produits <strong>peuvent ne pas figurer au dossier pharmacologique provincial</strong> lorsqu'ils ne sont pas couverts — et l'Ozempic est fréquemment utilisé <strong>hors indication pour la perte de poids</strong>. <strong>Il faut donc poser la question directement.</strong></div>
+          </div>
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;border-left:4px solid #15803d;">
+            <strong style="color:#15803d;">✅ Ce que vous pouvez faire</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>①</strong> <strong>Demander systématiquement</strong> si la personne prend un agoniste du GLP-1, et pour quelle indication<br><strong>②</strong> <strong>Documenter</strong> : date de début, date de la <strong>dernière dose</strong>, toute <strong>augmentation récente</strong> de dose<br><strong>③</strong> Demander s'il y a eu <strong>nausées, vomissements ou distension</strong> sous traitement — si oui, la personne doit être considérée comme ayant l'<strong>estomac plein</strong>, qu'elle ait jeûné ou non<br><strong>④</strong> <strong>Aborder la question tôt</strong>, dès la planification — pas dans les jours précédant l'intervention</div>
+          </div>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">⏸️ <strong>Faut-il interrompre le médicament?</strong> L'approche proposée est d'interrompre <strong>au moins trois demi-vies</strong> avant l'intervention, ce qui élimine environ <strong>88 %</strong> du médicament — pour le <strong>sémaglutide, dont la demi-vie est d'environ une semaine, cela représente trois semaines</strong>.<br><br>• <strong>Prise pour la perte de poids</strong> → interrompre au moins trois demi-vies<br>• <strong>Prise pour un diabète de type 2</strong> → <strong>consulter en endocrinologie</strong> pour peser risques et bénéfices et assurer la transition du traitement antidiabétique<br><br>🚨 <strong>Et surtout : prolonger la période de jeûne n'est PAS recommandé</strong> — les données probantes manquent. Si l'interruption est impossible, les mesures d'atténuation relèvent de l'équipe d'anesthésie : <strong>induction en séquence rapide</strong>, <strong>échographie gastrique au point d'intervention</strong>, période de liquides clairs, éviter la sédation profonde si possible, voire <strong>report de l'intervention</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>ISMP Canada 2023</em></span></div>
+      </div>
+
+      <div class="block rx" style="margin-top:14px;border-left-color:#166534;">
+        <div class="block-title" id="preop-med"><span class="tag">💊 Gestion périopératoire des médicaments</span></div>
+
+        <div class="key-fact orange" style="margin-top:10px;">⚠️ <strong>Ce tableau vient d'une source américaine (Goldman-Cecil).</strong> Il est fiable pour les <strong>principes</strong> — continuer ou suspendre —, mais pour tout ce qui touche l'<strong>anticoagulation et les antiplaquettaires</strong>, la référence à suivre est <strong>Thrombosis Canada</strong>, détaillée dans la section <em>Gestion périopératoire des anticoagulants</em>. Ne pas appliquer les délais américains sans les confronter à la source canadienne.</div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:24%;">Classe</th><th>Conduite</th></tr></thead>
+          <tbody>
+            <tr style="background:#fce4ec;"><td>🚨 <strong>Anticoagulants</strong><br><em>héparines, warfarine, AOD</em></td><td>➜ <strong>Voir la section dédiée</strong> — Thrombosis Canada, règle 1-2-4 pour les AOD, relais selon le risque thromboembolique</td></tr>
+            <tr><td>🚨 <strong>Antiplaquettaires</strong></td><td>➜ <strong>Voir la section dédiée.</strong> Principe général : poursuivre pour la chirurgie mineure · <strong>exception majeure : endoprothèse coronarienne récente</strong>, où l'arrêt expose à une thrombose de stent — décision partagée avec la cardiologie</td></tr>
+            <tr style="background:#e8f4fd;"><td><strong>Cardiovasculaires</strong></td><td><strong>Poursuivre la plupart</strong> · <strong>bêta-bloqueur : continuer s'il est déjà en place</strong> — ne pas l'introduire à la dernière minute<br><strong>Suspendre les diurétiques le matin</strong> de la chirurgie, surtout en cas de déplétion volémique<br>Envisager de <strong>cesser IECA et ARA au moins 12 h avant</strong>, sauf en insuffisance cardiaque ou HTA non maîtrisée<br>💡 <strong>Cesser la tamsulosine avant une chirurgie de la cataracte</strong> — syndrome de l'iris flasque</td></tr>
+            <tr><td><strong>Hypolipémiants</strong></td><td>🎯 <strong>Poursuivre les statines</strong> · cesser les autres agents</td></tr>
+            <tr style="background:#f0fdf4;"><td><strong>Respiratoires &amp; digestifs</strong></td><td><strong>Poursuivre</strong></td></tr>
+            <tr><td><strong>Antidiabétiques</strong></td><td>Voir le bloc suivant</td></tr>
+            <tr style="background:#ede9fe;"><td><strong>Psychotropes</strong></td><td><strong>Poursuivre</strong> ISRS, antidépresseurs tricycliques, benzodiazépines, lithium, antipsychotiques<br>⚠️ <strong>IMAO : habituellement cesser 10 à 14 jours avant</strong></td></tr>
+            <tr><td><strong>Contraceptifs oraux, hormonothérapie, MSRE</strong></td><td>Ne les cesser (3 semaines avant) que chez les personnes à <strong>haut risque de thromboembolie veineuse périopératoire</strong>; sinon poursuivre<br>➜ Voir <em>Contraception</em>, <em>TVP</em></td></tr>
+            <tr style="background:#fff3cd;"><td><strong>Thyroïde</strong></td><td>Poursuivre l'hormonothérapie substitutive · poursuivre les antithyroïdiens et <strong>reporter la chirurgie jusqu'au contrôle de l'hyperthyroïdie</strong></td></tr>
+          </tbody>
+        </table>
+        </div>
+        <div style="font-size:11px;color:#64748b;margin-top:6px;">📚 <em>Goldman-Cecil, 26<sup>e</sup> éd., ch. 403, tableau 403-2</em></div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;border-left-color:#7c3aed;">
+        <div class="block-title" id="preop-endoc"><span class="tag">🧬 Diabète, corticostéroïdes &amp; thyroïde</span></div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;margin-top:12px;">
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+            <strong style="color:#1d4ed8;">🍬 Diabète</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🎯 <strong>Cible glycémique périopératoire : environ 7,8 à 10,0 mmol/L</strong> — <strong>pas</strong> un contrôle serré <span style="font-size:11px;color:#64748b;">(Goldman donne 140–180 mg/dL; converti ici en unités canadiennes)</span><br><br><strong>Diabète contrôlé par la diète</strong> → simple surveillance glycémique, insuline rapide au besoin<br><strong>Antidiabétiques oraux</strong> → ne pas les prendre le matin de la chirurgie; reprendre à la reprise alimentaire<br><strong>Insuline, type 1</strong> → 🚨 <strong>toujours maintenir une forme d'insuline</strong> (basale ou intraveineuse)<br><strong>Insuline, type 2</strong> → environ <strong>la moitié aux deux tiers de l'insuline intermédiaire</strong> le matin; poursuivre la basale, dose parfois réduite si contrôle serré, hypoglycémies antérieures ou insuffisance rénale<br><br>⚠️ Une <strong>hyperglycémie marquée nuit à la cicatrisation</strong> et à la fonction leucocytaire<br>➜ Voir <em>Diabète</em></div>
+          </div>
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;">
+            <strong style="color:#d35400;">💉 Corticostéroïdes &amp; axe HHS</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Le stress chirurgical active l'axe hypothalamo-hypophyso-surrénalien. Une personne sous corticostéroïdes exogènes peut être <strong>incapable d'y répondre</strong> → <strong>hypotension et choc</strong>.<br><br>🟢 <strong>Pas de supplémentation nécessaire</strong> si : <strong>≤ 5 mg de prednisone/jour</strong>, traitement à jours alternés, ou <strong>durée &lt; 3 semaines</strong><br>🔴 <strong>Supplémentation justifiée</strong> si : <strong>&gt; 20 mg de prednisone/jour depuis plus de 3 semaines</strong><br>🟡 <strong>Zone grise</strong> (doses intermédiaires, fortes doses dans la dernière année) → test de stimulation à l'ACTH si le temps le permet, ou supplémentation empirique<br><br>💡 Doses de stress selon l'ampleur : usuelle pour une procédure mineure; hydrocortisone <strong>50 mg IV puis 25 mg q8h</strong> pour un stress modéré; <strong>75–100 mg IV puis 50 mg q8h</strong> pour un stress majeur, puis retour à la dose usuelle</div>
+          </div>
+          <div style="background:#fce4ec;border-radius:10px;padding:14px;">
+            <strong style="color:#c0392b;">🦋 Thyroïde</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🚨 <strong>Hyperthyroïdie non traitée ou méconnue = risque de tempête thyroïdienne postopératoire.</strong><br>➜ <strong>Reporter la chirurgie élective</strong> tant que la personne est symptomatique ou tachycarde au repos, jusqu'à l'euthyroïdie<br>➜ En urgence : bêta-bloqueurs, antithyroïdiens et iode pour ramener la fréquence sous 90/min, plus corticostéroïdes<br><br>🟢 <strong>L'hypothyroïdie légère à modérée est bien tolérée</strong> — elle ne justifie pas de reporter<br>➜ Une hypothyroïdie <strong>franchement symptomatique</strong> se traite plusieurs semaines avant une chirurgie élective<br>➜ Voir <em>Hypothyroïdie</em>, <em>Hyperthyroïdie</em></div>
+          </div>
+        </div>
+        <div style="font-size:11px;color:#64748b;margin-top:8px;">📚 <em>Goldman-Cecil, 26<sup>e</sup> éd., ch. 403 — source américaine : principes et seuils physiopathologiques; confronter les cibles glycémiques aux recommandations de Diabète Canada.</em></div>
+      </div>
+
+      <div class="block flag" style="margin-top:14px;">
+        <div class="block-title" id="preop-age"><span class="tag">👵 La personne âgée &amp; l'anémie préopératoire</span></div>
+
+        <div class="key-fact red" style="margin-top:10px;">🎯 <strong>Chez la personne âgée, le risque opératoire ne se résume pas au cœur et aux poumons.</strong> Les complications qui déterminent réellement le retour à domicile sont souvent <strong>gériatriques</strong> : délirium postopératoire, perte d'autonomie fonctionnelle, chutes, dénutrition. Une évaluation cardiaque parfaite ne les prédit pas.</div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:12px;">
+          <div style="background:#ede9fe;border-radius:10px;padding:14px;">
+            <strong style="color:#6d28d9;">🧩 Fragilité</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">La <strong>fragilité prédit indépendamment</strong> les complications, la perte d'autonomie et la mortalité — au-delà de l'âge chronologique.<br>➜ La dépister <strong>avant</strong> une chirurgie élective permet d'anticiper les besoins de réadaptation et d'éclairer la décision opératoire elle-même.<br>➜ Voir <em>Évaluation gériatrique globale</em> pour les outils</div>
+          </div>
+          <div style="background:#fef2f2;border-radius:10px;padding:14px;">
+            <strong style="color:#c0392b;">🌀 Délirium postopératoire</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🚨 Complication <strong>fréquente, grave et largement évitable</strong>.<br><strong>Facteurs modifiables avant l'opération :</strong> polypharmacie et médicaments anticholinergiques ou sédatifs, douleur mal contrôlée, déficits sensoriels non corrigés (<strong>lunettes, appareils auditifs</strong>), déshydratation, immobilité.<br>➜ Voir <em>Délirium</em> et <em>Polypharmacie &amp; déprescription</em></div>
+          </div>
+          <div style="background:#fce4ec;border-radius:10px;padding:14px;">
+            <strong style="color:#c0392b;">🩸 Anémie préopératoire</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🎯 <strong>À corriger AVANT la chirurgie, pas à transfuser pendant.</strong> L'anémie préopératoire s'associe à plus de transfusions et à de moins bons résultats.<br>➜ La dépister <strong>suffisamment tôt</strong> pour permettre un bilan étiologique et un traitement — le fer intraveineux demande des semaines pour agir.<br>⚠️ Chercher la <strong>cause</strong> : une anémie ferriprive chez un adulte impose de chercher un saignement digestif.<br>➜ Voir <em>FSC &amp; Anémie</em>, <em>Sécurité transfusionnelle</em></div>
+          </div>
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+            <strong style="color:#15803d;">🍽️ Dénutrition</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Elle altère la <strong>cicatrisation</strong>, augmente les <strong>infections</strong> et retarde la convalescence.<br>➜ Le dépistage prend deux questions (CNST)<br>➜ Voir <em>Nutrition &amp; dénutrition</em><br><br>💡 Goldman note d'ailleurs que la <strong>dénutrition</strong> figure parmi les indications légitimes d'un <strong>RNI préopératoire</strong>.</div>
+          </div>
+        </div>
+
+        <div class="key-fact green" style="margin-top:12px;">✅ <strong>La consultation préopératoire en quatre questions :</strong> ① <strong>la chirurgie est-elle urgente</strong>, et la personne est-elle <strong>stable</strong>? · ② <strong>quel est le risque cardiaque</strong> — RCRI, puis BNP ou NT-proBNP selon l'algorithme de la SCC · ③ <strong>quels examens changeront réellement la conduite</strong>, et lesquels puis-je ne pas demander? · ④ <strong>qu'est-ce qui est modifiable d'ici là</strong> — tabac, anémie, dénutrition, médicaments, contrôle de l'hyperthyroïdie, agoniste du GLP-1?</div>
+      </div>
+    </div>
+
+<div class="section" id="sec-avc">
       <div class="section-header">
         <div class="section-accent" style="background:#4c1d95">🧠</div>
         <div class="section-title"><h1>AVC</h1><div class="breadcrumb">Neurologie <span class="breadcrumb-sep">·</span> Section 31</div></div>
@@ -41917,384 +42311,6 @@ Revoir rapidement si nouvelle Sx ou changement de dose<br>
   </div>
 </div>
 
-<div class="section" id="sec-preop">
-      <div class="section-header">
-        <div class="section-accent" style="background:#065f46">🏥</div>
-        <div class="section-title"><h1>Évaluation préopératoire & risque cardiovasculaire</h1><div class="breadcrumb">Hépato-biliaire <span class="breadcrumb-sep">·</span> Section 10</div></div>
-      </div>
-
-      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;">
-        <button onclick="goToBlock('preo-8')" style="background:#065f46;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">🫀 Risque cardiaque</button>
-        <button onclick="goToBlock('preop-resp')" style="background:#0369a1;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">🫁 Risque respiratoire</button>
-        <button onclick="goToBlock('preop-labo')" style="background:#0369a1;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧪 Quels bilans</button>
-        <button onclick="goToBlock('preop-pulm')" style="background:#0891b2;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🫁 Risque pulmonaire &amp; STOP-BANG</button>
-        <button onclick="goToBlock('preop-jeune')" style="background:#b45309;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🍽️ Jeûne &amp; GLP-1</button>
-        <button onclick="goToBlock('preop-med')" style="background:#166534;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">💊 Médicaments</button>
-        <button onclick="goToBlock('preop-endoc')" style="background:#7c3aed;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧬 Diabète · cortico · thyroïde</button>
-        <button onclick="goToBlock('preop-age')" style="background:#c0392b;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">👵 Personne âgée &amp; anémie</button>
-      </div>
-
-      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:20px;">
-        <div style="flex:1;min-width:100px;background:#FEE2E2;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#c0392b;">RCRI ≥ 3</div><div style="font-size:11px;color:#555;margin-top:4px;">Risque cardiaque élevé</div></div>
-        <div style="flex:1;min-width:100px;background:#FEF9C3;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#92400e;">HbA1c &lt; 8,5 %</div><div style="font-size:11px;color:#555;margin-top:4px;">Objectif périopératoire</div></div>
-        <div style="flex:1;min-width:100px;background:#EEF2FF;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#1C3F8F;">SCC 2017</div><div style="font-size:11px;color:#555;margin-top:4px;">Lignes directrices clés</div></div>
-      </div>
-            <!-- Stat-cards -->
-            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:16px;">
-              <div style="background:#fff3cd;border-radius:10px;padding:11px;text-align:center;border-left:4px solid #f59e0b;"><div style="font-size:12px;font-weight:800;color:#f59e0b;">HbA1c préop</div><div style="font-size:11px;color:#555;margin-top:3px;">&lt;8.5% idéalement (&lt;9% acceptable)</div></div>
-              <div style="background:#e8f4fd;border-radius:10px;padding:11px;text-align:center;border-left:4px solid #0369a1;"><div style="font-size:12px;font-weight:800;color:#0369a1;">Antiplaq. arrêt</div><div style="font-size:11px;color:#555;margin-top:3px;">AAS 7–10j · clopidogrel 5–7j</div></div>
-              <div style="background:#fce4ec;border-radius:10px;padding:11px;text-align:center;border-left:4px solid #dc2626;"><div style="font-size:12px;font-weight:800;color:#dc2626;">Beta-bloqueur</div><div style="font-size:11px;color:#555;margin-top:3px;">Continuer si déjà en place</div></div>
-              <div style="background:#f0fdf4;border-radius:10px;padding:11px;text-align:center;border-left:4px solid #16a34a;"><div style="font-size:12px;font-weight:800;color:#16a34a;">TA cible</div><div style="font-size:11px;color:#555;margin-top:3px;">&lt;160/100 avant chir élective</div></div>
-            </div>
-            <div class="block def" style="margin-top:14px;">
-        <div class="block-title" id="preo-8"><span class="tag">🗺️ Algorithme SCC 2017 — Évaluation cardiaque préopératoire étape par étape</span></div>
-        <div class="key-fact blue" style="margin-bottom:10px;font-size:12px;">Ce guide synthétise les 7 étapes de l'évaluation cardiaque préopératoire (SCC 2017) dans l'ordre clinique à suivre. Utilisez les onglets ci-dessous pour naviguer étape par étape.</div>
-
-        <div style="display:flex;gap:6px;flex-wrap:wrap;margin:8px 0 12px;">
-          <button onclick="showPanel('preoa','preoa0',7)" data-panel="preoa0" style="background:#1C3F8F;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">① Urgence?</button>
-          <button onclick="showPanel('preoa','preoa1',7)" data-panel="preoa1" style="background:#1C3F8F;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">② Critères</button>
-          <button onclick="showPanel('preoa','preoa2',7)" data-panel="preoa2" style="background:#1C3F8F;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">③ Anamnèse & EP</button>
-          <button onclick="showPanel('preoa','preoa3',7)" data-panel="preoa3" style="background:#1C3F8F;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">④ RCRI</button>
-          <button onclick="showPanel('preoa','preoa4',7)" data-panel="preoa4" style="background:#1C3F8F;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">⑤ NT-proBNP/BNP</button>
-          <button onclick="showPanel('preoa','preoa5',7)" data-panel="preoa5" style="background:#1C3F8F;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">⑥ Médications</button>
-          <button onclick="showPanel('preoa','preoa6',7)" data-panel="preoa6" style="background:#c0392b;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">⑦ Postop</button>
-        </div>
-
-        <div id="preoa0" style="display:block;">
-          <div class="key-fact green" style="margin-bottom:8px;font-size:12px;"><strong>Question 1 — La chirurgie est-elle urgente ou semi-urgente ?</strong></div>
-          <table style="font-size:12px;">
-            <thead><tr><th>Niveau d'urgence</th><th>Exemples</th><th>Conduite</th></tr></thead>
-            <tbody>
-              <tr><td><strong>🚨 Urgence absolue</strong></td><td>Rupture d'anévrisme, trauma sévère, ischémie aiguë</td><td><span class="drug-badge warn">Opérer SANS évaluation cardiaque additionnelle</span></td></tr>
-              <tr><td><strong>⚡ Urgente / semi-urgente</strong></td><td>Fracture de hanche, occlusion intestinale, cancer à potentiel métastatique</td><td>Opérer; évaluation cardiaque <strong>uniquement</strong> si condition instable connue ou suspicion valvulopathie sévère/HTAP non diagnostiquée</td></tr>
-              <tr><td><strong>📅 Élective + condition instable</strong></td><td>Angine instable, IC décompensée, arythmie significative, valvulopathie sévère symptomatique</td><td><span class="drug-badge red">Stabiliser AVANT l'opération</span></td></tr>
-              <tr><td><strong>✅ Élective + patient stable</strong></td><td>Toute chirurgie élective chez patient stable</td><td>→ <strong>Passer à l'étape ②</strong> : vérifier les critères d'évaluation</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div id="preoa1" style="display:none;">
-          <div class="key-fact green" style="margin-bottom:8px;font-size:12px;"><strong>Question 2 — Ce patient nécessite-t-il une évaluation cardiaque formelle ?</strong></div>
-          <table style="font-size:12px;">
-            <thead><tr><th>Critère</th><th>Inclus?</th></tr></thead>
-            <tbody>
-              <tr><td><strong>Âge ≥ 45 ans</strong></td><td>✅ Inclus → évaluer</td></tr>
-              <tr><td><strong>18–44 ans + maladie cardiovasculaire significative</strong><br><span style="font-size:11px;color:#666;">Coronaropathie · MCV · MAP · IC · HTAP sévère · Sténose aortique ou mitrale sévère · Cardiomyopathie obstructive sévère</span></td><td>✅ Inclus → évaluer</td></tr>
-              <tr><td><strong>Chirurgie nécessitant hospitalisation &gt; 24 h</strong></td><td>✅ Critère supplémentaire requis</td></tr>
-              <tr><td><strong>&lt; 45 ans sans MCV significative</strong></td><td>❌ <strong>Pas d'indication formelle</strong> → évaluation de routine (signes vitaux, examen, médication)</td></tr>
-            </tbody>
-          </table>
-          <div class="key-fact blue" style="margin-top:8px;font-size:12px;">Si inclus → <strong>Passer à l'étape ③</strong> : anamnèse complète et examen physique</div>
-        </div>
-
-        <div id="preoa2" style="display:none;">
-          <div class="key-fact green" style="margin-bottom:8px;font-size:12px;"><strong>Étape 3 — Anamnèse ciblée + examen physique</strong></div>
-          <table style="font-size:12px;">
-            <thead><tr><th>Composante</th><th>Éléments clés à rechercher</th></tr></thead>
-            <tbody>
-              <tr><td><strong>ATCD cardiovasculaires</strong></td><td>IM · AVC/ICT · IC · MAP · FA · Diabète <strong>insulinodépendant</strong> · IRC</td></tr>
-              <tr><td><strong>Symptômes actuels</strong></td><td>Angine · Dyspnée · Orthopnée · DPN · Palpitations · Syncope</td></tr>
-              <tr><td><strong>Capacité fonctionnelle (METs)</strong></td><td>⚠️ <strong>Pas un outil principal (SCC 2017)</strong> — auto-déclaré, peu prédictif seul<br>Repère : ≥ 4 METs = monter 1 étage / marcher en côte / jardinage léger</td></tr>
-              <tr><td><strong>Examen physique</strong></td><td>Signes vitaux · Souffle (sténose aortique?) · B3 · Râles pulmonaires · Œdème · Pouls périphériques</td></tr>
-              <tr><td><strong>Médicaments à noter</strong></td><td>Antiplaquettaires · Anticoagulants · β-bloquants · IECA/ARA · Statines · Hypoglycémiants</td></tr>
-            </tbody>
-          </table>
-          <div class="key-fact blue" style="margin-top:8px;font-size:12px;">→ <strong>Passer à l'étape ④</strong> : calculer le score RCRI</div>
-        </div>
-
-        <div id="preoa3" style="display:none;">
-          <div class="key-fact green" style="margin-bottom:8px;font-size:12px;"><strong>Étape 4 — Calculer le score RCRI (1 point par critère)</strong></div>
-          <div style="background:#fff;border:1px solid #d1d5db;border-radius:8px;padding:10px;font-size:12px;">
-            <div style="display:grid;gap:5px;">
-              <label style="display:flex;align-items:center;gap:8px;cursor:pointer;"><input type="checkbox" id="rcri1" onchange="calcRCRI()" style="width:14px;height:14px;"> Antécédent de <strong>cardiopathie ischémique</strong> (IM, ondes Q, angine, test effort +, nitrates)</label>
-              <label style="display:flex;align-items:center;gap:8px;cursor:pointer;"><input type="checkbox" id="rcri2" onchange="calcRCRI()" style="width:14px;height:14px;"> Antécédent d'<strong>insuffisance cardiaque congestive</strong> (œdème pulm., DPN, B3, râles, ICT RXP)</label>
-              <label style="display:flex;align-items:center;gap:8px;cursor:pointer;"><input type="checkbox" id="rcri3" onchange="calcRCRI()" style="width:14px;height:14px;"> Antécédent de <strong>maladie cérébrovasculaire</strong> (AVC, ICT)</label>
-              <label style="display:flex;align-items:center;gap:8px;cursor:pointer;"><input type="checkbox" id="rcri4" onchange="calcRCRI()" style="width:14px;height:14px;"> <strong>Insulinothérapie</strong> pour le diabète</label>
-              <label style="display:flex;align-items:center;gap:8px;cursor:pointer;"><input type="checkbox" id="rcri5" onchange="calcRCRI()" style="width:14px;height:14px;"> <strong>Créatinine préopératoire &gt; 177 µmol/L</strong> (&gt; 2,0 mg/dL)</label>
-              <label style="display:flex;align-items:center;gap:8px;cursor:pointer;"><input type="checkbox" id="rcri6" onchange="calcRCRI()" style="width:14px;height:14px;"> <strong>Chirurgie à haut risque</strong> (intra-péritonéale lourde, intra-thoracique, vasculaire suprainguinale)</label>
-            </div>
-            <div id="rcri-result" style="margin-top:10px;padding:8px 12px;border-radius:6px;background:#EEF2FF;font-weight:700;text-align:center;">RCRI = 0 &nbsp;→&nbsp; Risque ~0,4 %</div>
-          </div>
-          <div class="key-fact blue" style="margin-top:8px;font-size:12px;">→ <strong>Passer à l'étape ⑤</strong> : faut-il doser le NT-proBNP/BNP ?</div>
-        </div>
-
-        <div id="preoa4" style="display:none;">
-          <div class="key-fact green" style="margin-bottom:8px;font-size:12px;"><strong>Étape 5 — NT-proBNP / BNP préopératoire (recommandation FORTE SCC 2017)</strong></div>
-          <table style="font-size:12px;">
-            <thead><tr><th>Indication</th><th>Conduite</th></tr></thead>
-            <tbody>
-              <tr><td>Âge ≥ 65 ans</td><td rowspan="3" style="vertical-align:middle;"><strong>✅ Doser NT-proBNP ou BNP</strong></td></tr>
-              <tr><td>45–64 ans + MCV significative</td></tr>
-              <tr><td>RCRI ≥ 1 (peu importe l'âge)</td></tr>
-              <tr><td>&lt; 45 ans, pas de MCV, RCRI = 0</td><td>❌ Pas d'indication systématique</td></tr>
-            </tbody>
-          </table>
-          <table style="font-size:12px;margin-top:8px;">
-            <thead><tr><th>Résultat</th><th>Interprétation</th><th>Risque IM/décès à 30 j</th></tr></thead>
-            <tbody>
-              <tr><td>NT-proBNP <strong>&lt; 300 ng/L</strong> · BNP <strong>&lt; 92 µg/L</strong></td><td style="color:#16a34a;">✅ Risque faible</td><td>~4,9 %</td></tr>
-              <tr><td>NT-proBNP <strong>≥ 300 ng/L</strong> · BNP <strong>≥ 92 µg/L</strong></td><td style="color:#dc2626;">🔴 Risque élevé</td><td><strong>~21,8 %</strong> → troponine postop obligatoire</td></tr>
-            </tbody>
-          </table>
-          <div class="key-fact green" style="margin-top:8px;font-size:12px;">❌ <strong>NON recommandés en routine</strong> : écho de repos · angio-TDM coronarienne · épreuve d'effort · écho de stress / isotopique<br>✅ <strong>Exception écho</strong> : suspicion valvulopathie obstructive sévère méconnue ou HTAP sévère à l'examen physique</div>
-          <div class="key-fact blue" style="margin-top:8px;font-size:12px;">→ <strong>Passer à l'étape ⑥</strong> : ajuster les médicaments</div>
-        </div>
-
-        <div id="preoa5" style="display:none;">
-          <div class="key-fact green" style="margin-bottom:8px;font-size:12px;"><strong>Étape 6 — Gestion des médicaments en périopératoire (SCC 2017)</strong></div>
-          <table style="font-size:12px;">
-            <thead><tr><th>Médicament</th><th>Conduite</th></tr></thead>
-            <tbody>
-              <tr><td><strong>AAS (Aspirine)</strong></td><td>❌ <strong>Ne pas débuter ni continuer</strong> en prévention périopératoire<br>✅ Exceptions : endoprothèse coronarienne récente, endartériectomie carotidienne</td></tr>
-              <tr><td><strong>β-bloquants</strong></td><td>❌ <strong>Ne PAS débuter dans les 24 h avant</strong> la chirurgie (↑ AVC et mortalité)<br>✅ Continuer si déjà en cours et bien toléré</td></tr>
-              <tr><td><strong>IECA / ARA</strong></td><td>⏸️ <strong>Suspendre 24 h avant</strong> la chirurgie (↓ risque hypotension peropératoire)</td></tr>
-              <tr><td><strong>Statines</strong></td><td>→ Débuter si lésion myocardique périopératoire détectée (avec AAS)</td></tr>
-              <tr><td><strong>Tabac</strong></td><td>💬 <strong>Faciliter l'abandon avant la chirurgie</strong> (recommandation forte SCC 2017)</td></tr>
-              <tr><td><strong>Anticoagulants / P2Y12</strong></td><td>⚠️ Gestion individualisée selon indication et risque hémorragique → avis spécialisé</td></tr>
-            </tbody>
-          </table>
-          <div class="key-fact blue" style="margin-top:8px;font-size:12px;">→ <strong>Passer à l'étape ⑦</strong> : planifier la surveillance postopératoire</div>
-        </div>
-
-        <div id="preoa6" style="display:none;">
-          <div class="key-fact green" style="margin-bottom:8px;font-size:12px;"><strong>Étape 7 — Surveillance postopératoire</strong></div>
-          <table style="font-size:12px;">
-            <thead><tr><th>Quand surveiller la troponine?</th><th>Conduite</th></tr></thead>
-            <tbody>
-              <tr><td>NT-proBNP/BNP préop <strong>élevé</strong></td><td rowspan="3" style="vertical-align:middle;"><strong>Troponine quotidienne × 48–72 h postop</strong> + ECG à la salle de réveil</td></tr>
-              <tr><td>BNP non mesuré + <strong>RCRI ≥ 1</strong></td></tr>
-              <tr><td>BNP non mesuré + <strong>45–64 ans avec MCV</strong> ou <strong>≥ 65 ans</strong></td></tr>
-            </tbody>
-          </table>
-          <table style="font-size:12px;margin-top:8px;">
-            <thead><tr><th>Si lésion myocardique / IM postopératoire détecté</th></tr></thead>
-            <tbody>
-              <tr><td>→ Débuter <strong>AAS + statine</strong><br>→ Envisager prise en charge partagée (médecine interne / cardiologie)<br>→ ⚠️ <strong>Sans troponine, &gt; 50 % des IM périopératoires passent inaperçus</strong> (silencieux)</td></tr>
-            </tbody>
-          </table>
-          <div class="key-fact blue" style="margin-top:10px;font-size:12px;">✅ <strong>Résumé clinique IPS :</strong> Évaluer urgence → Vérifier critères (âge/MCV) → Anamnèse + EP → RCRI → NT-proBNP si indiqué → Ajuster médicaments → Troponine postop si facteurs de risque</div>
-        </div>
-      </div>
-
-
-      <div class="block para" style="margin-top:14px;">
-        <div class="block-title" id="preop-resp"><span class="tag">🫁 Bilan respiratoire préopératoire</span> <a href="https://inesss.algorithmes-onco.info/fr/algorithmes-d-investigation-de-traitement-et-de-suivi-du-cancer-du-poumon#signet900" target="_blank" style="font-size:12px;color:var(--accent);margin-left:8px;">[détails INESSS]</a></div>
-        <div class="content-text">L'évaluation respiratoire préopératoire consiste à soumettre le patient à différents tests de façon séquentielle afin d'évaluer son risque chirurgical. Elle se divise en <strong>3 étapes</strong> :</div>
-
-        <div class="key-fact green" style="margin:10px 0 6px;">
-          <strong>Étape 1 — VEMS et DLCO</strong><br>
-          Si VEMS <em>et</em> DLCO <strong>&gt; 80 %</strong> → risque faible, aucun autre test requis.<br>
-          Sinon → estimer VEMS et DLCO postopératoires prédits (POP) → étape 2.
-        </div>
-
-        <div class="key-fact green" style="margin:6px 0;">
-          <strong>Étape 2 — VEMS et DLCO POP</strong><br>
-          Si VEMS <em>et</em> DLCO POP <strong>&gt; 60 %</strong> → risque faible, aucun autre test requis.<br>
-          Si l'une des valeurs <strong>&lt; 60 %</strong> → test à l'effort → étape 3.
-        </div>
-
-        <div class="key-fact green" style="margin:6px 0;">
-          <strong>Étape 3 — Test à l'effort</strong><br>
-          <strong>3a. VO₂max (privilégié) :</strong>
-          <table style="margin-top:6px;font-size:12px;">
-            <thead><tr><th>Risque</th><th>VO₂max absolu</th><th>VO₂max prédit</th></tr></thead>
-            <tbody>
-              <tr><td><span class="drug-badge ok">Faible</span></td><td>&gt; 20 ml/kg/min</td><td>&gt; 75 %</td></tr>
-              <tr><td><span class="drug-badge warn">Modéré</span></td><td>10–20 ml/kg/min</td><td>35–75 %</td></tr>
-              <tr><td><span class="drug-badge ci">Élevé</span></td><td>&lt; 10 ml/kg/min</td><td>&lt; 35 %</td></tr>
-            </tbody>
-          </table>
-          <p style="margin-top:8px;font-size:13px;"><strong>3b. Alternatif (ACCP)</strong> — si VEMS et DLCO POP toutes deux &gt; 30 % mais l'une &lt; 60 % :<br>
-          Test de montée en escalier <strong>&gt; 22 m</strong> <em>ou</em> test de marche <strong>&gt; 400 m</strong> → risque faible.<br>
-          Échec ou VEMS/DLCO POP &lt; 30 % → procéder au test VO₂max (étape 3a).</p>
-        </div>
-
-        <table style="margin-top:10px;font-size:12px;">
-          <thead><tr><th>Niveau de risque</th><th>Interprétation</th></tr></thead>
-          <tbody>
-            <tr><td><span class="drug-badge ok">Faible</span></td><td>Mortalité attendue &lt; 1 % · Résection majeure possible</td></tr>
-            <tr><td><span class="drug-badge warn">Modéré</span></td><td>Morbidité/mortalité variable selon valeurs POP et tolérance à l'effort · Discussion risques/bénéfices requise</td></tr>
-            <tr><td><span class="drug-badge ci">Élevé</span></td><td>Mortalité après résection majeure &gt; 10 % · Risque morbidité cardiopulmonaire sévère considérable · Perte de fonction résiduelle attendue</td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="block para" style="margin-top:14px;border-left-color:#0369a1;">
-        <div class="block-title" id="preop-labo"><span class="tag">🧪 Quels bilans préopératoires — et surtout, lesquels éviter</span></div>
-
-        <div class="key-fact red" style="margin-top:10px;">🎯 <strong>Le principe, et il va à l'encontre de la pratique répandue : les bilans préopératoires systématiques ne sont pas justifiés.</strong> Le tableau ci-dessous donne, pour chaque test, la proportion de résultats anormaux <strong>et</strong> la proportion qui <strong>modifie réellement la prise en charge</strong>. L'écart entre les deux colonnes est la démonstration chiffrée du problème. <span style="font-size:11px;color:#64748b;">📚 <em>Goldman-Cecil, 26<sup>e</sup> éd., ch. 403</em></span></div>
-
-        <div style="overflow-x:auto;margin-top:12px;">
-        <table style="font-size:12px;">
-          <thead><tr><th style="width:20%;">Test</th><th style="width:12%;">% anormaux</th><th style="width:14%;">% modifiant la conduite</th><th>Indication</th></tr></thead>
-          <tbody>
-            <tr style="background:#f1f5f9;"><td><strong>Hémoglobine</strong></td><td>1,8 %</td><td style="color:#c0392b;font-weight:700;">0,1 %</td><td>Perte sanguine majeure attendue · symptômes d'anémie · maladie rénale chronique</td></tr>
-            <tr><td><strong>Leucocytes</strong></td><td>0,7 %</td><td style="color:#c0392b;font-weight:700;">0,0 %</td><td>Infection suspectée · syndrome myéloprolifératif · médicaments myélotoxiques</td></tr>
-            <tr style="background:#f1f5f9;"><td><strong>Plaquettes</strong></td><td>0,9 %</td><td style="color:#c0392b;font-weight:700;">0,02 %</td><td>Diathèse hémorragique · néoplasie myéloproliférative · myélotoxiques</td></tr>
-            <tr><td><strong>RNI / temps de prothrombine</strong></td><td>0,3 %</td><td style="color:#c0392b;font-weight:700;">0,0 %</td><td>Diathèse hémorragique · <strong>maladie hépatique</strong> · <strong>dénutrition</strong> · antibiotiques · anticoagulants</td></tr>
-            <tr style="background:#f0fdf4;"><td><strong>Électrolytes</strong></td><td>12,7 %</td><td style="font-weight:700;">1,8 %</td><td>Maladie rénale · médicaments modifiant les électrolytes — diurétiques, digoxine, IECA, ARA</td></tr>
-            <tr><td><strong>Glycémie</strong></td><td>9,3 %</td><td style="font-weight:700;">0,5 %</td><td>Diabète connu · corticostéroïdes · obésité morbide</td></tr>
-            <tr style="background:#f0fdf4;"><td>🎯 <strong>Fonction rénale</strong></td><td>8,2 %</td><td style="color:#15803d;font-weight:700;">2,6 %</td><td>Maladie rénale · diabète · HTA · <strong>chirurgie majeure</strong> · âge avancé · médicaments néphrotoxiques</td></tr>
-            <tr><td><strong>Bilan hépatique</strong></td><td>0,4 %</td><td style="color:#c0392b;font-weight:700;">0,1 %</td><td>Maladie hépatique connue · <strong>albumine si risque de nutrition parentérale postopératoire</strong></td></tr>
-            <tr style="background:#fce4ec;"><td>⚠️ <strong>Analyse d'urine</strong></td><td>19,1 %</td><td style="font-weight:700;">1,4 %</td><td>🚫 <strong>Aucune indication</strong> sauf symptômes urinaires ou instrumentation prévue — bien qu'elle soit souvent demandée avant une arthroplastie ou une chirurgie du rachis</td></tr>
-            <tr style="background:#f0fdf4;"><td>🎯 <strong>ECG</strong></td><td>29,6 %</td><td style="color:#15803d;font-weight:700;">2,6 %</td><td>Chirurgie vasculaire · chirurgie à risque intermédiaire avec <strong>au moins 1 facteur du RCRI</strong><br>🚫 <strong>Non indiqué</strong> chez une personne asymptomatique pour une procédure à faible risque, ni <strong>sur la seule base de l'âge</strong></td></tr>
-            <tr><td>🎯 <strong>Radiographie pulmonaire</strong></td><td>21,2 %</td><td style="color:#15803d;font-weight:700;">3,0 %</td><td>Uniquement si <strong>atteinte cardiopulmonaire aiguë suspectée</strong> à l'anamnèse et à l'examen physique</td></tr>
-          </tbody>
-        </table>
-        </div>
-
-        <div class="key-fact orange" style="margin-top:12px;">💡 <strong>Ce que ces chiffres enseignent :</strong> l'<strong>analyse d'urine</strong> est anormale une fois sur cinq et ne change la conduite que dans 1,4 % des cas — elle génère surtout des antibiothérapies inutiles pour des bactériuries asymptomatiques. À l'inverse, la <strong>fonction rénale</strong>, l'<strong>ECG ciblé</strong> et la <strong>radiographie orientée par la clinique</strong> ont le meilleur rendement. 🎯 <strong>La question à se poser reste toujours la même : le résultat va-t-il changer ce que je fais?</strong></div>
-      </div>
-
-      <div class="block clin" style="margin-top:14px;border-left-color:#0891b2;">
-        <div class="block-title" id="preop-pulm"><span class="tag">🫁 Risque pulmonaire &amp; dépistage de l'apnée du sommeil</span></div>
-
-        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>Le prédicteur le plus fort n'est pas le patient — c'est la chirurgie.</strong> Les deux déterminants principaux des complications pulmonaires postopératoires sont le <strong>type de chirurgie</strong> et la <strong>proximité de l'incision au diaphragme</strong>. La fonction pulmonaire chute d'environ <strong>50 % après une chirurgie intrathoracique ou abdominale haute</strong>, et d'environ <strong>25 % après une chirurgie abdominale basse</strong> — sans revenir à la normale avant plusieurs semaines. <span style="font-size:11px;color:#64748b;">📚 <em>Goldman, ch. 403</em></span></div>
-
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:12px;">
-          <div style="background:#fce4ec;border-radius:10px;padding:14px;">
-            <strong style="color:#c0392b;">👤 Facteurs liés à la personne</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>MPOC</strong> — environ <strong>double</strong> le risque, selon la sévérité<br>🎯 <strong>L'asthme BIEN CONTRÔLÉ n'augmente PAS le risque</strong> — nuance importante<br><strong>Tabagisme actif</strong> — surtout selon le nombre de paquets-années<br><strong>Apnée obstructive du sommeil</strong> — hypercapnie, hypoxémie, complications des voies aériennes<br><strong>Obésité</strong> — atélectasies<br>Âge avancé · mauvais état fonctionnel · hypertension pulmonaire · atteinte de l'état mental · immunosuppression (corticostéroïdes, alcool, diabète)</div>
-          </div>
-          <div style="background:#fff3cd;border-radius:10px;padding:14px;">
-            <strong style="color:#d35400;">🔪 Facteurs liés à la procédure</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Incision près du diaphragme</strong> ⭐<br><strong>Chirurgie d'urgence</strong><br><strong>Durée &gt; 2 à 6 heures</strong><br><strong>Sonde nasogastrique postopératoire de routine</strong><br><br>💡 La <strong>laparoscopie</strong> s'associe à moins de complications pulmonaires et à des séjours plus courts que la voie ouverte</div>
-          </div>
-          <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
-            <strong style="color:#15803d;">🛡️ Ce qui réduit le risque</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🎯 <strong>Cessation tabagique — au moins 4 à 8 semaines avant</strong>, idéalement 8<br><strong>Manœuvres d'expansion pulmonaire</strong> — spirométrie incitative ou exercices de respiration profonde<br><strong>Contrôle de la douleur</strong> — permet de respirer profondément; l'analgésie épidurale et l'ACP intraveineuse valent mieux que les opioïdes parentéraux au besoin<br>Optimiser MPOC et asthme (bronchodilatateurs, corticostéroïdes) · traiter les exacerbations bactériennes<br><strong>Éviter</strong> les bloqueurs neuromusculaires de longue durée et la sonde nasogastrique systématique</div>
-          </div>
-          <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
-            <strong style="color:#1d4ed8;">🚫 Ce qui ne sert pas</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Les <strong>épreuves de fonction respiratoire</strong> ne sont <strong>pas plus prédictives que l'évaluation clinique</strong> pour la chirurgie non thoracique<br>Le <strong>gaz artériel préopératoire</strong> n'apporte guère<br><br>💡 Elles gardent leur place avant une <strong>résection pulmonaire</strong> — voir le bloc précédent</div>
-          </div>
-        </div>
-
-        <div class="key-fact orange" style="margin-top:12px;">😴 <strong>Dépister l'apnée obstructive du sommeil avant la chirurgie</strong> — l'outil recommandé est le <strong>STOP-BANG</strong>, et un score de <strong>5 ou plus</strong> évoque une apnée <strong>modérée à sévère</strong>, avec un risque accru d'hypoventilation et de complications postopératoires. <span style="font-size:11px;color:#64748b;">📚 <em>Goldman, ch. 403</em></span></div>
-
-        <div style="background:#0f172a;border-radius:10px;padding:14px;margin-top:12px;">
-          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#94a3b8;margin-bottom:8px;">STOP-BANG &mdash; 8 items, 1 point chacun</div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
-            <div style="background:#1e293b;border-radius:8px;padding:12px;">
-              <div style="color:#93c5fd;font-size:12px;font-weight:700;margin-bottom:6px;">STOP — les symptômes</div>
-              <div style="color:#e2e8f0;font-size:12.5px;line-height:1.8;"><strong>S</strong>noring — ronflement bruyant<br><strong>T</strong>ired — fatigue ou somnolence diurne<br><strong>O</strong>bserved — apnées observées<br><strong>P</strong>ressure — hypertension artérielle</div>
-            </div>
-            <div style="background:#1e293b;border-radius:8px;padding:12px;">
-              <div style="color:#fca5a5;font-size:12px;font-weight:700;margin-bottom:6px;">BANG — les données objectives</div>
-              <div style="color:#e2e8f0;font-size:12.5px;line-height:1.8;"><strong>B</strong>MI — IMC &gt; 35 kg/m²<br><strong>A</strong>ge — plus de 50 ans<br><strong>N</strong>eck — tour de cou &gt; 40 cm<br><strong>G</strong>ender — sexe masculin</div>
-            </div>
-          </div>
-          <div style="background:#7f1d1d;border-radius:8px;padding:10px 12px;margin-top:10px;color:#fecaca;font-size:12.5px;line-height:1.6;">
-            🎯 <strong>Score ≥ 5 → apnée modérée à sévère probable</strong> → aviser l'équipe d'anesthésie, prévoir une surveillance postopératoire accrue et une <strong>prudence particulière avec les opioïdes et les sédatifs</strong>.
-          </div>
-        </div>
-      </div>
-
-      <div class="block flag" style="margin-top:14px;">
-        <div class="block-title" id="preop-jeune"><span class="tag">🍽️ Jeûne préopératoire &amp; agonistes du GLP-1</span></div>
-
-        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>Le jeûne moderne est bien plus court qu'on ne le croit.</strong> Les jeûnes prolongés « à minuit » ne sont plus recommandés : ils déshydratent, aggravent l'inconfort et n'améliorent pas la sécurité. <span style="font-size:11px;color:#64748b;">📚 <em>La Société canadienne des anesthésiologistes renvoie, dans son</em> Guide d'exercice de l'anesthésie<em>, aux lignes directrices de l'ASA (2017) — il n'existe pas de ligne directrice canadienne distincte sur le jeûne.</em></span></div>
-
-        <div style="overflow-x:auto;margin-top:12px;">
-        <table style="font-size:12px;">
-          <thead><tr><th style="width:26%;">Délai minimal avant l'anesthésie</th><th>Ce qui est concerné</th></tr></thead>
-          <tbody>
-            <tr style="background:#f0fdf4;"><td><strong>2 heures</strong></td><td>🎯 <strong>Liquides clairs</strong> — eau, jus sans pulpe, thé ou café <strong>noir</strong>, boissons glucidiques claires</td></tr>
-            <tr><td><strong>4 heures</strong></td><td><strong>Lait maternel</strong></td></tr>
-            <tr style="background:#fff3cd;"><td><strong>6 heures</strong></td><td><strong>Repas léger</strong> · lait non humain · préparation pour nourrisson</td></tr>
-            <tr><td><strong>8 heures ou plus</strong></td><td><strong>Repas gras ou frit</strong> · viande</td></tr>
-          </tbody>
-        </table>
-        </div>
-
-        <div class="key-fact red" style="margin-top:12px;">🚨 <strong>L'enjeu de sécurité le plus récent — et vous le rencontrerez en première ligne : les agonistes du GLP-1.</strong> Ces médicaments <strong>retardent la vidange gastrique</strong>. Des personnes ayant <strong>parfaitement respecté le jeûne</strong> ont régurgité de grandes quantités d'aliments non digérés à l'induction ou à l'extubation. Une étude rapporte un risque <strong>5 fois plus élevé</strong> de contenu gastrique résiduel chez les personnes ayant pris du sémaglutide dans les <strong>30 jours précédents</strong>, <strong>malgré le respect des consignes de jeûne</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>ISMP Canada, bulletin vol. 23 n° 9, 27 septembre 2023 · la Société canadienne des anesthésiologistes a émis un avis à ses membres en juin 2023</em></span></div>
-
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
-          <div style="background:#fef2f2;border-radius:10px;padding:14px;border-left:4px solid #c0392b;">
-            <strong style="color:#c0392b;">💊 Les molécules commercialisées au Canada</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><span class="drug-badge">sémaglutide</span> Ozempic, Rybelsus<br><span class="drug-badge">liraglutide</span> Victoza, Saxenda<br><span class="drug-badge">dulaglutide</span> Trulicity<br><span class="drug-badge">lixisénatide</span> Adlyxine, Soliqua<br><br>⚠️ <strong>Le piège du registre :</strong> ces produits <strong>peuvent ne pas figurer au dossier pharmacologique provincial</strong> lorsqu'ils ne sont pas couverts — et l'Ozempic est fréquemment utilisé <strong>hors indication pour la perte de poids</strong>. <strong>Il faut donc poser la question directement.</strong></div>
-          </div>
-          <div style="background:#f0fdf4;border-radius:10px;padding:14px;border-left:4px solid #15803d;">
-            <strong style="color:#15803d;">✅ Ce que vous pouvez faire</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>①</strong> <strong>Demander systématiquement</strong> si la personne prend un agoniste du GLP-1, et pour quelle indication<br><strong>②</strong> <strong>Documenter</strong> : date de début, date de la <strong>dernière dose</strong>, toute <strong>augmentation récente</strong> de dose<br><strong>③</strong> Demander s'il y a eu <strong>nausées, vomissements ou distension</strong> sous traitement — si oui, la personne doit être considérée comme ayant l'<strong>estomac plein</strong>, qu'elle ait jeûné ou non<br><strong>④</strong> <strong>Aborder la question tôt</strong>, dès la planification — pas dans les jours précédant l'intervention</div>
-          </div>
-        </div>
-
-        <div class="key-fact orange" style="margin-top:12px;">⏸️ <strong>Faut-il interrompre le médicament?</strong> L'approche proposée est d'interrompre <strong>au moins trois demi-vies</strong> avant l'intervention, ce qui élimine environ <strong>88 %</strong> du médicament — pour le <strong>sémaglutide, dont la demi-vie est d'environ une semaine, cela représente trois semaines</strong>.<br><br>• <strong>Prise pour la perte de poids</strong> → interrompre au moins trois demi-vies<br>• <strong>Prise pour un diabète de type 2</strong> → <strong>consulter en endocrinologie</strong> pour peser risques et bénéfices et assurer la transition du traitement antidiabétique<br><br>🚨 <strong>Et surtout : prolonger la période de jeûne n'est PAS recommandé</strong> — les données probantes manquent. Si l'interruption est impossible, les mesures d'atténuation relèvent de l'équipe d'anesthésie : <strong>induction en séquence rapide</strong>, <strong>échographie gastrique au point d'intervention</strong>, période de liquides clairs, éviter la sédation profonde si possible, voire <strong>report de l'intervention</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>ISMP Canada 2023</em></span></div>
-      </div>
-
-      <div class="block rx" style="margin-top:14px;border-left-color:#166534;">
-        <div class="block-title" id="preop-med"><span class="tag">💊 Gestion périopératoire des médicaments</span></div>
-
-        <div class="key-fact orange" style="margin-top:10px;">⚠️ <strong>Ce tableau vient d'une source américaine (Goldman-Cecil).</strong> Il est fiable pour les <strong>principes</strong> — continuer ou suspendre —, mais pour tout ce qui touche l'<strong>anticoagulation et les antiplaquettaires</strong>, la référence à suivre est <strong>Thrombosis Canada</strong>, détaillée dans la section <em>Gestion périopératoire des anticoagulants</em>. Ne pas appliquer les délais américains sans les confronter à la source canadienne.</div>
-
-        <div style="overflow-x:auto;margin-top:12px;">
-        <table style="font-size:12px;">
-          <thead><tr><th style="width:24%;">Classe</th><th>Conduite</th></tr></thead>
-          <tbody>
-            <tr style="background:#fce4ec;"><td>🚨 <strong>Anticoagulants</strong><br><em>héparines, warfarine, AOD</em></td><td>➜ <strong>Voir la section dédiée</strong> — Thrombosis Canada, règle 1-2-4 pour les AOD, relais selon le risque thromboembolique</td></tr>
-            <tr><td>🚨 <strong>Antiplaquettaires</strong></td><td>➜ <strong>Voir la section dédiée.</strong> Principe général : poursuivre pour la chirurgie mineure · <strong>exception majeure : endoprothèse coronarienne récente</strong>, où l'arrêt expose à une thrombose de stent — décision partagée avec la cardiologie</td></tr>
-            <tr style="background:#e8f4fd;"><td><strong>Cardiovasculaires</strong></td><td><strong>Poursuivre la plupart</strong> · <strong>bêta-bloqueur : continuer s'il est déjà en place</strong> — ne pas l'introduire à la dernière minute<br><strong>Suspendre les diurétiques le matin</strong> de la chirurgie, surtout en cas de déplétion volémique<br>Envisager de <strong>cesser IECA et ARA au moins 12 h avant</strong>, sauf en insuffisance cardiaque ou HTA non maîtrisée<br>💡 <strong>Cesser la tamsulosine avant une chirurgie de la cataracte</strong> — syndrome de l'iris flasque</td></tr>
-            <tr><td><strong>Hypolipémiants</strong></td><td>🎯 <strong>Poursuivre les statines</strong> · cesser les autres agents</td></tr>
-            <tr style="background:#f0fdf4;"><td><strong>Respiratoires &amp; digestifs</strong></td><td><strong>Poursuivre</strong></td></tr>
-            <tr><td><strong>Antidiabétiques</strong></td><td>Voir le bloc suivant</td></tr>
-            <tr style="background:#ede9fe;"><td><strong>Psychotropes</strong></td><td><strong>Poursuivre</strong> ISRS, antidépresseurs tricycliques, benzodiazépines, lithium, antipsychotiques<br>⚠️ <strong>IMAO : habituellement cesser 10 à 14 jours avant</strong></td></tr>
-            <tr><td><strong>Contraceptifs oraux, hormonothérapie, MSRE</strong></td><td>Ne les cesser (3 semaines avant) que chez les personnes à <strong>haut risque de thromboembolie veineuse périopératoire</strong>; sinon poursuivre<br>➜ Voir <em>Contraception</em>, <em>TVP</em></td></tr>
-            <tr style="background:#fff3cd;"><td><strong>Thyroïde</strong></td><td>Poursuivre l'hormonothérapie substitutive · poursuivre les antithyroïdiens et <strong>reporter la chirurgie jusqu'au contrôle de l'hyperthyroïdie</strong></td></tr>
-          </tbody>
-        </table>
-        </div>
-        <div style="font-size:11px;color:#64748b;margin-top:6px;">📚 <em>Goldman-Cecil, 26<sup>e</sup> éd., ch. 403, tableau 403-2</em></div>
-      </div>
-
-      <div class="block clin" style="margin-top:14px;border-left-color:#7c3aed;">
-        <div class="block-title" id="preop-endoc"><span class="tag">🧬 Diabète, corticostéroïdes &amp; thyroïde</span></div>
-
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;margin-top:12px;">
-          <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
-            <strong style="color:#1d4ed8;">🍬 Diabète</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🎯 <strong>Cible glycémique périopératoire : environ 7,8 à 10,0 mmol/L</strong> — <strong>pas</strong> un contrôle serré <span style="font-size:11px;color:#64748b;">(Goldman donne 140–180 mg/dL; converti ici en unités canadiennes)</span><br><br><strong>Diabète contrôlé par la diète</strong> → simple surveillance glycémique, insuline rapide au besoin<br><strong>Antidiabétiques oraux</strong> → ne pas les prendre le matin de la chirurgie; reprendre à la reprise alimentaire<br><strong>Insuline, type 1</strong> → 🚨 <strong>toujours maintenir une forme d'insuline</strong> (basale ou intraveineuse)<br><strong>Insuline, type 2</strong> → environ <strong>la moitié aux deux tiers de l'insuline intermédiaire</strong> le matin; poursuivre la basale, dose parfois réduite si contrôle serré, hypoglycémies antérieures ou insuffisance rénale<br><br>⚠️ Une <strong>hyperglycémie marquée nuit à la cicatrisation</strong> et à la fonction leucocytaire<br>➜ Voir <em>Diabète</em></div>
-          </div>
-          <div style="background:#fff3cd;border-radius:10px;padding:14px;">
-            <strong style="color:#d35400;">💉 Corticostéroïdes &amp; axe HHS</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Le stress chirurgical active l'axe hypothalamo-hypophyso-surrénalien. Une personne sous corticostéroïdes exogènes peut être <strong>incapable d'y répondre</strong> → <strong>hypotension et choc</strong>.<br><br>🟢 <strong>Pas de supplémentation nécessaire</strong> si : <strong>≤ 5 mg de prednisone/jour</strong>, traitement à jours alternés, ou <strong>durée &lt; 3 semaines</strong><br>🔴 <strong>Supplémentation justifiée</strong> si : <strong>&gt; 20 mg de prednisone/jour depuis plus de 3 semaines</strong><br>🟡 <strong>Zone grise</strong> (doses intermédiaires, fortes doses dans la dernière année) → test de stimulation à l'ACTH si le temps le permet, ou supplémentation empirique<br><br>💡 Doses de stress selon l'ampleur : usuelle pour une procédure mineure; hydrocortisone <strong>50 mg IV puis 25 mg q8h</strong> pour un stress modéré; <strong>75–100 mg IV puis 50 mg q8h</strong> pour un stress majeur, puis retour à la dose usuelle</div>
-          </div>
-          <div style="background:#fce4ec;border-radius:10px;padding:14px;">
-            <strong style="color:#c0392b;">🦋 Thyroïde</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🚨 <strong>Hyperthyroïdie non traitée ou méconnue = risque de tempête thyroïdienne postopératoire.</strong><br>➜ <strong>Reporter la chirurgie élective</strong> tant que la personne est symptomatique ou tachycarde au repos, jusqu'à l'euthyroïdie<br>➜ En urgence : bêta-bloqueurs, antithyroïdiens et iode pour ramener la fréquence sous 90/min, plus corticostéroïdes<br><br>🟢 <strong>L'hypothyroïdie légère à modérée est bien tolérée</strong> — elle ne justifie pas de reporter<br>➜ Une hypothyroïdie <strong>franchement symptomatique</strong> se traite plusieurs semaines avant une chirurgie élective<br>➜ Voir <em>Hypothyroïdie</em>, <em>Hyperthyroïdie</em></div>
-          </div>
-        </div>
-        <div style="font-size:11px;color:#64748b;margin-top:8px;">📚 <em>Goldman-Cecil, 26<sup>e</sup> éd., ch. 403 — source américaine : principes et seuils physiopathologiques; confronter les cibles glycémiques aux recommandations de Diabète Canada.</em></div>
-      </div>
-
-      <div class="block flag" style="margin-top:14px;">
-        <div class="block-title" id="preop-age"><span class="tag">👵 La personne âgée &amp; l'anémie préopératoire</span></div>
-
-        <div class="key-fact red" style="margin-top:10px;">🎯 <strong>Chez la personne âgée, le risque opératoire ne se résume pas au cœur et aux poumons.</strong> Les complications qui déterminent réellement le retour à domicile sont souvent <strong>gériatriques</strong> : délirium postopératoire, perte d'autonomie fonctionnelle, chutes, dénutrition. Une évaluation cardiaque parfaite ne les prédit pas.</div>
-
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:12px;">
-          <div style="background:#ede9fe;border-radius:10px;padding:14px;">
-            <strong style="color:#6d28d9;">🧩 Fragilité</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;">La <strong>fragilité prédit indépendamment</strong> les complications, la perte d'autonomie et la mortalité — au-delà de l'âge chronologique.<br>➜ La dépister <strong>avant</strong> une chirurgie élective permet d'anticiper les besoins de réadaptation et d'éclairer la décision opératoire elle-même.<br>➜ Voir <em>Évaluation gériatrique globale</em> pour les outils</div>
-          </div>
-          <div style="background:#fef2f2;border-radius:10px;padding:14px;">
-            <strong style="color:#c0392b;">🌀 Délirium postopératoire</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🚨 Complication <strong>fréquente, grave et largement évitable</strong>.<br><strong>Facteurs modifiables avant l'opération :</strong> polypharmacie et médicaments anticholinergiques ou sédatifs, douleur mal contrôlée, déficits sensoriels non corrigés (<strong>lunettes, appareils auditifs</strong>), déshydratation, immobilité.<br>➜ Voir <em>Délirium</em> et <em>Polypharmacie &amp; déprescription</em></div>
-          </div>
-          <div style="background:#fce4ec;border-radius:10px;padding:14px;">
-            <strong style="color:#c0392b;">🩸 Anémie préopératoire</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🎯 <strong>À corriger AVANT la chirurgie, pas à transfuser pendant.</strong> L'anémie préopératoire s'associe à plus de transfusions et à de moins bons résultats.<br>➜ La dépister <strong>suffisamment tôt</strong> pour permettre un bilan étiologique et un traitement — le fer intraveineux demande des semaines pour agir.<br>⚠️ Chercher la <strong>cause</strong> : une anémie ferriprive chez un adulte impose de chercher un saignement digestif.<br>➜ Voir <em>FSC &amp; Anémie</em>, <em>Sécurité transfusionnelle</em></div>
-          </div>
-          <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
-            <strong style="color:#15803d;">🍽️ Dénutrition</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Elle altère la <strong>cicatrisation</strong>, augmente les <strong>infections</strong> et retarde la convalescence.<br>➜ Le dépistage prend deux questions (CNST)<br>➜ Voir <em>Nutrition &amp; dénutrition</em><br><br>💡 Goldman note d'ailleurs que la <strong>dénutrition</strong> figure parmi les indications légitimes d'un <strong>RNI préopératoire</strong>.</div>
-          </div>
-        </div>
-
-        <div class="key-fact green" style="margin-top:12px;">✅ <strong>La consultation préopératoire en quatre questions :</strong> ① <strong>la chirurgie est-elle urgente</strong>, et la personne est-elle <strong>stable</strong>? · ② <strong>quel est le risque cardiaque</strong> — RCRI, puis BNP ou NT-proBNP selon l'algorithme de la SCC · ③ <strong>quels examens changeront réellement la conduite</strong>, et lesquels puis-je ne pas demander? · ④ <strong>qu'est-ce qui est modifiable d'ici là</strong> — tabac, anémie, dénutrition, médicaments, contrôle de l'hyperthyroïdie, agoniste du GLP-1?</div>
-      </div>
-    </div>
-
 <div class="section" id="sec-antidepresseurs">
       <div class="section-header"><div class="section-accent">💭</div><div class="section-title"><h1>Antidépresseurs &amp; Rôle de l&apos;IPSSA</h1><div class="breadcrumb">Santé mentale <span class="breadcrumb-sep">·</span> Section</div></div></div>
 
@@ -54032,7 +54048,9 @@ const SECTION_ORDER = [
   // Soins palliatifs
   'niveau-soins','amm',
   // Hématologie
-  'hemostase','thrombolyse','antiplaquettaires','tests-coag','anticoag-parenteraux','warfarine','aod','tvp','ep','periop-anticoag','fsc-anemie','transfusion',
+  'hemostase','thrombolyse','antiplaquettaires','tests-coag','anticoag-parenteraux','warfarine','aod','tvp','ep','fsc-anemie','transfusion',
+  // Périopératoire
+  'periop-anticoag','preop',
   // Neurologie
   'avc','sep','migraine','parkinson','epilepsie','vertige','syncope','douleur',
   // Gériatrie
@@ -54042,7 +54060,7 @@ const SECTION_ORDER = [
   // Gastro-entérologie
   'ddx-abdo','appendicite','mii','nutrition','diverticulite','ccr','ugd','constipation','diarrhee','mrgo','cdiff',
   // Hépato-biliaire
-  'anatomie-foie','fonctions-foie','calculs-biliaires','cholecystite','choledocholithiase','cholangite','pancreatite','steatose','cirrhose','htp','preop',
+  'anatomie-foie','fonctions-foie','calculs-biliaires','cholecystite','choledocholithiase','cholangite','pancreatite','steatose','cirrhose','htp',
   // Santé mentale
   'antidepresseurs','stabilisateurs','antipsychotiques','hypnotiques','tdah','tdc','anxiete','bipolaire','schizophrenie','toc-tspt',
   // Oncologie
