@@ -1985,10 +1985,12 @@ m
         <button onclick="goToBlock('exp-mental')" style="background:#7c3aed;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧩 Examen mental</button>
         <button onclick="goToBlock('exp-tetecou')" style="background:#0891b2;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">👁️ Tête, cou &amp; peau</button>
         <button onclick="goToBlock('exp-4')" style="background:#be123c;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🫀 Cardiovasculaire</button>
+        <button onclick="goToBlock('exp-vasc')" style="background:#b91c1c;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🩸 Vasculaire périph.</button>
         <button onclick="goToBlock('exp-5')" style="background:#0284c7;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🫁 Respiratoire</button>
+        <button onclick="goToBlock('exp-sein')" style="background:#db2777;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🎗️ Seins &amp; aisselles</button>
         <button onclick="goToBlock('exp-6')" style="background:#b45309;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🫄 Abdomen</button>
+        <button onclick="goToBlock('exp-gu')" style="background:#0f766e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🩺 Génito-urinaire</button>
         <button onclick="goToBlock('exp-7')" style="background:#4338ca;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧠 Neurologique</button>
-        <button onclick="goToBlock('exp-8')" style="background:#0f766e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🦴 Autres régions</button>
         <button onclick="goToBlock('exp-msk')" style="background:#c2410c;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🦴 Locomoteur détaillé</button>
         <button onclick="goToBlock('exp-pop')" style="background:#9d174d;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">👶 Populations</button>
         <button onclick="goToBlock('exp-9')" style="background:#15803d;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🎯 Cibler l'examen</button>
@@ -2161,7 +2163,48 @@ m
         </div>
       </div>
 
-      <div class="block clin" style="margin-top:14px;border-left-color:#0891b2;">
+      <div class="block clin" style="margin-top:14px;border-left-color:#b91c1c;">
+        <div class="block-title" id="exp-vasc"><span class="tag">🩸 Vasculaire périphérique</span></div>
+        <p style="font-size:13px;color:#475569;">L&#39;examen cardiaque s&#39;arrête au thorax ; celui-ci commence aux extrémités. Devant une <strong>jambe douloureuse, froide, œdématiée ou ulcérée</strong>, c&#39;est lui qui tranche. <span style="font-size:11px;color:#64748b;">📚 <em>GPHC — Habiletés cliniques, ch. 4, p. 139-141</em></span></p>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;margin-top:10px;">
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+            <strong style="color:#1d4ed8;">🔴 Pouls — les sept sites</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Carotidien · radial · brachial · fémoral · poplité · <strong>tibial postérieur</strong> · <strong>pédieux</strong><br>Toujours <strong>comparer les deux côtés</strong> et coter 0 (absent) à 3+ (bondissant)<br>Le pédieux est absent chez <strong>~10 % des sujets normaux</strong> — c&#39;est l&#39;asymétrie qui compte, pas l&#39;absence isolée</div>
+          </div>
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;">
+            <strong style="color:#d35400;">🔊 Souffles à ausculter</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Carotides · aorte abdominale · artères rénales · iliaques · fémorales<br>Un souffle abdominal impose de <strong>réausculter le cœur</strong> pour confirmer l&#39;origine abdominale (et non une irradiation valvulaire)</div>
+          </div>
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+            <strong style="color:#15803d;">📐 Différentiel tensionnel</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Mesurer la TA <strong>aux deux bras</strong><br>Écart de TAS <strong>&ge; 20 mmHg</strong> → sténose sous-clavière, coarctation, <strong>dissection aortique</strong><br>Retenir ensuite le bras le plus élevé pour tout suivi</div>
+          </div>
+          <div style="background:#ede9fe;border-radius:10px;padding:14px;">
+            <strong style="color:#6d28d9;">🧪 Manœuvres</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Changement de couleur postural</strong> : pâleur marquée à l&#39;élévation des MI puis érythème déclive (« pied de homard ») → <em>insuffisance artérielle</em><br><strong>Remplissage capillaire</strong> &gt; 3 s<br><strong>ITB</strong> (index tibio-brachial) : &le; 0,90 confirme la MAP ; &gt; 1,40 = artères incompressibles (diabète, IRC)</div>
+          </div>
+        </div>
+
+        <div style="overflow-x:auto;margin-top:14px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:20%;">Élément</th><th style="width:40%;">Insuffisance artérielle</th><th>Insuffisance veineuse</th></tr></thead>
+          <tbody>
+            <tr style="background:#f8f9fa;"><td><strong>Peau</strong></td><td>Mince, luisante, atrophique · <strong>perte de pilosité</strong> distale · ongles épaissis et striés</td><td>Épaissie · <strong>hyperpigmentation brunâtre</strong> (dermatite de stase) · rétrécissement cicatriciel de la jambe · varicosités</td></tr>
+            <tr><td><strong>Œdème</strong></td><td><strong>Absent</strong></td><td><strong>À godet</strong>, déclive, s&#39;améliore en surélevant</td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>Température</strong></td><td><strong>Froideur</strong></td><td>Normale</td></tr>
+            <tr><td><strong>Localisation de l&#39;ulcère</strong></td><td>Zones <strong>distales</strong> : pointe des orteils, espaces interdigitaux, saillies osseuses (malléole <strong>externe</strong>, têtes métatarsiennes)</td><td>Surtout la <strong>malléole interne</strong></td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>Apparence de l&#39;ulcère</strong></td><td>Rebords <strong>nets et réguliers</strong>, plaie sur fond érythémateux · nécrose possible (<em>blue toe</em>)</td><td>Rebords <strong>irréguliers</strong>, plaie <strong>exsudative</strong> sur fond de fibrine</td></tr>
+            <tr><td><strong>Pouls</strong></td><td><strong>Diminués ou absents</strong></td><td>Normaux, mais difficiles à palper sous l&#39;œdème</td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>Douleur</strong></td><td>Claudication à la marche, évoluant vers la <strong>douleur de repos</strong> (soulagée jambe pendante)</td><td>Lourdeur en fin de journée, <strong>soulagée par l&#39;élévation</strong></td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="key-fact red" style="margin-top:12px;">🚨 <strong>TVP — ne pas se fier à l&#39;examen physique.</strong> Le GPHC est explicite : l&#39;érythème, la douleur à la palpation, le cordon veineux palpable et le <strong>signe de Homans n&#39;ont aucune valeur discriminante</strong>. C&#39;est le <strong>score de Wells</strong> combiné aux D-dimères et à l&#39;échographie qui décide. <span style="font-size:11px;color:#64748b;">📚 <em>GPHC — Habiletés cliniques, p. 141</em></span> &nbsp;➜ <em>TVP</em></div>
+      </div>
+
+<div class="block clin" style="margin-top:14px;border-left-color:#0891b2;">
         <div class="block-title" id="exp-5"><span class="tag">🫁 Examen respiratoire</span></div>
 
         <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>La séquence complète :</strong> inspection → palpation → percussion → auscultation du <strong>murmure vésiculaire (MV)</strong> et des <strong>bruits surajoutés (adventices)</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Démarche clinique, ch. 5</em></span> Toujours comparer <strong>côté à côté</strong>, de haut en bas, en avant et en arrière.</div>
@@ -2181,7 +2224,48 @@ m
         <div class="key-fact red" style="margin-top:12px;">🎯 <strong>Deux triades à reconnaître, tirées des manuels :</strong><br><br>• <strong>Pneumonie</strong> — fièvre, tachypnée, tachycardie, hypoxémie, <strong>baisse du murmure vésiculaire avec crépitants localisés</strong>; si la consolidation est importante, les <strong>vibrations vocales augmentent</strong><br>• 🚨 <strong>Pneumothorax</strong> — <strong>absence de vibrations vocales</strong> du côté atteint, <strong>tympanisme</strong> à la percussion, <strong>absence de murmure vésiculaire</strong><br><br><span style="font-size:11px;color:#64748b;">📚 <em>Démarche clinique</em></span> 💡 Les manuels notent que l'<strong>échographie au chevet</strong> est sensible pour confirmer ces diagnostics. ➜ Voir <em>Imagerie du thorax</em>.</div>
       </div>
 
-      <div class="block clin" style="margin-top:14px;border-left-color:#b45309;">
+      <div class="block clin" style="margin-top:14px;border-left-color:#be123c;">
+        <div class="block-title" id="exp-sein"><span class="tag">🎗️ Seins &amp; aisselles</span></div>
+        <p style="font-size:13px;color:#475569;">Un examen en <strong>trois positions</strong> : assise bras le long du corps, assise avec manœuvres de mise en tension, puis couchée bras derrière la tête. Chaque changement de position peut révéler une rétraction invisible dans la précédente. <span style="font-size:11px;color:#64748b;">📚 <em>GPHC — Habiletés cliniques, ch. 3, p. 96</em></span></p>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;margin-top:10px;">
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+            <strong style="color:#1d4ed8;">👁️ Inspection — volume &amp; contour</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Patiente <strong>assise, dénudée jusqu&#39;à la ceinture</strong><br>Asymétrie <strong>nouvelle ou progressive</strong> — une légère asymétrie stable est <strong>normale</strong><br>Voussure · pli · déformation · <strong>rétraction</strong> · aplatissement</div>
+          </div>
+          <div style="background:#fce4ec;border-radius:10px;padding:14px;">
+            <strong style="color:#c0392b;">🔺 Inspection — mamelons</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Symétrie de dimension, forme et <strong>direction</strong> · mamelon surnuméraire<br><strong>Rétraction ou aplatissement</strong> — mais un mamelon invaginé <strong>depuis l&#39;adolescence</strong> est non pathologique<br>Lésions cutanées (eczéma, ulcération, érythème) · écoulement ou sécrétions séchées</div>
+          </div>
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;">
+            <strong style="color:#d35400;">🩹 Inspection — peau</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Coloration (rouge, bleue) · épaississement · <strong>saillie des pores</strong><br><strong>Œdème en peau d&#39;orange</strong>, lymphœdème<br>Signes inflammatoires : rougeur, chaleur → penser au <strong>carcinome inflammatoire</strong></div>
+          </div>
+          <div style="background:#ede9fe;border-radius:10px;padding:14px;">
+            <strong style="color:#6d28d9;">🙌 Changements de position</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Refaire l&#39;inspection complète à chaque position :<br>① bras <strong>levés au-dessus de la tête</strong><br>② bras levés avec légère flexion du thorax<br>③ <strong>contraction du muscle pectoral</strong> (mains sur les hanches, pousser)<br>Chercher surtout <strong>rétraction et déformation</strong></div>
+          </div>
+        </div>
+
+        <div class="key-fact blue" style="margin-top:12px;">✋ <strong>Palpation.</strong> Assise, sein « en étau » pour une recherche bimanuelle ; puis <strong>décubitus dorsal, bras derrière la tête</strong>. Palper chaque quadrant en mouvements circulaires ou linéaires avec la <strong>pulpe des doigts</strong>, en <strong>commençant par le sein présumé sain</strong> — et sans oublier le <strong>prolongement axillaire (lobe de Spence)</strong>.</div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
+          <div style="background:#f0fdf4;border-left:4px solid #15803d;border-radius:8px;padding:14px;">
+            <strong style="color:#15803d;">✅ Trouvailles physiologiques</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Le sein adulte présente une <strong>nodularité physiologique</strong> — texture bilatérale non homogène, qui <strong>augmente avant les menstruations</strong><br>La palpation peut provoquer une <strong>sensibilité bilatérale</strong> liée au cycle ou au SPM</div>
+          </div>
+          <div style="background:#fef2f2;border-left:4px solid #c0392b;border-radius:8px;padding:14px;">
+            <strong style="color:#c0392b;">🚨 Ce qui inquiète</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Masse : décrire <strong>position, taille, consistance, forme, délimitation, mobilité, sensibilité</strong><br><strong>Signe du plateau</strong> : voussure apparaissant quand on pince une lésion cancéreuse<br><strong>Écoulement</strong> au pincement du mamelon — qualifier couleur, consistance, endroit, volume (sanglant ou unipore = suspect)</div>
+          </div>
+        </div>
+
+        <div class="key-fact yellow" style="margin-top:12px;">🎯 <strong>Le piège à écarter systématiquement</strong> — une douleur d&#39;origine <strong>musculosquelettique</strong> irradiée au sein. La distinction est simple : une douleur musculosquelettique reste <strong>toujours au même endroit</strong>, tandis qu&#39;une douleur d&#39;origine mammaire <strong>change de localisation selon la position</strong>.</div>
+
+        <div class="key-fact purple" style="margin-top:10px;">🔗 <strong>Aisselles — les quatre groupes.</strong> Centraux (région supérieure de l&#39;aisselle) · antérieurs (pli axillaire antérieur, face interne du grand pectoral) · postérieurs (pli axillaire postérieur, profonds) · latéraux (le long de l&#39;humérus). Le territoire de drainage axillaire couvre <strong>bras, sein et thorax</strong>. &nbsp;➜ <em>Cancer du sein</em></div>
+      </div>
+
+<div class="block clin" style="margin-top:14px;border-left-color:#b45309;">
         <div class="block-title" id="exp-6"><span class="tag">🫄 Examen de l'abdomen</span></div>
 
         <div class="key-fact red" style="margin-top:10px;">🚨 <strong>L'ordre change ici :</strong> inspection → <strong>auscultation</strong> → percussion → palpation. <span style="font-size:11px;color:#64748b;">📚 <em>Démarche clinique, ch. 6</em></span> On ausculte avant de toucher, parce que <strong>palper modifie le péristaltisme qu'on veut écouter</strong>. Et on <strong>palpe la zone douloureuse en DERNIER</strong>.</div>
@@ -2203,7 +2287,159 @@ m
         <div class="key-fact blue" style="margin-top:8px;">👵 <strong>Chez la personne âgée, l'examen abdominal est trompeur</strong> — la douleur est atténuée et la défense peut manquer <strong>même en péritonite</strong>. Un abdomen « souple » n'y a pas la même valeur rassurante. ➜ Voir <em>Le vieillissement</em>.</div>
       </div>
 
-      <div class="block clin" style="margin-top:14px;border-left-color:#4338ca;">
+      <div class="block clin" style="margin-top:14px;border-left-color:#0f766e;">
+        <div class="block-title" id="exp-gu"><span class="tag">🩺 Génito-urinaire &amp; anorectal</span></div>
+        <p style="font-size:13px;color:#475569;">Le seul examen où la <strong>confiance conditionne la qualité du geste</strong> : le relâchement musculaire de la personne dépend directement de ce qu&#39;on lui explique. Verbaliser chaque étape, <strong>pendant</strong> qu&#39;on la réalise. <span style="font-size:11px;color:#64748b;">📚 <em>GPHC — Habiletés cliniques, ch. 3, p. 98-100</em></span></p>
+
+        <div class="key-fact ink" style="margin-top:10px;">🤝 <strong>Avant de commencer, dans tous les cas.</strong> Salutations, explications, <strong>consentement explicite</strong> · lavage des mains et enfilage d&#39;un <strong>seul gant</strong> (une main contaminée, une main propre) · exposer le minimum · offrir une <strong>tierce personne (chaperon)</strong> — le GPHC la juge <strong>préférable pour raisons médicolégales</strong> lorsque l&#39;examinateur est un homme et la patiente une femme.</div>
+
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;">
+          <button onclick="showPanel('gu','gu0',5)" id="gubtn0" style="background:#0f766e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;transition:.15s;" data-panel="gu0">🚻 Rénal &amp; vésical</button>
+          <button onclick="showPanel('gu','gu1',5)" id="gubtn1" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;transition:.15s;" data-panel="gu1">♀️ Organes génitaux féminins</button>
+          <button onclick="showPanel('gu','gu2',5)" id="gubtn2" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;transition:.15s;" data-panel="gu2">♂️ Organes génitaux masculins</button>
+          <button onclick="showPanel('gu','gu3',5)" id="gubtn3" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;transition:.15s;" data-panel="gu3">🔎 Toucher rectal &amp; prostate</button>
+          <button onclick="showPanel('gu','gu4',5)" id="gubtn4" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;transition:.15s;" data-panel="gu4">🚑 Scrotum aigu</button>
+        </div>
+
+        <!-- ── gu0 : rénal & vésical ── -->
+        <div id="gu0" style="margin-top:12px;">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;">
+            <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+              <strong style="color:#1d4ed8;">🫘 Reins</strong>
+              <div style="font-size:13px;line-height:1.7;margin-top:8px;">Palpation <strong>bimanuelle en inspiration profonde</strong><br>Le GPHC le dit franchement : la palpation des reins <strong>apporte rarement de l&#39;information pertinente</strong>. Le rein gauche est souvent inaccessible, sa position étant plus haute que le droit.<br>Chercher une augmentation de volume → <em>masse rénale, reins polykystiques</em></div>
+            </div>
+            <div style="background:#fce4ec;border-radius:10px;padding:14px;">
+              <strong style="color:#c0392b;">👊 Punch rénal</strong>
+              <div style="font-size:13px;line-height:1.7;margin-top:8px;">Percussion de l&#39;<strong>angle costovertébral</strong><br>Douleur → <strong>pyélonéphrite</strong><br>Manœuvre à faire <strong>en fin d&#39;examen</strong> : elle est désagréable et fausse la coopération pour la suite</div>
+            </div>
+            <div style="background:#fff3cd;border-radius:10px;padding:14px;">
+              <strong style="color:#d35400;">💧 Vessie</strong>
+              <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Percuter</strong> à la recherche d&#39;une matité sus-pubienne → <strong>globe vésical</strong><br><strong>Palper</strong> à la recherche d&#39;une sensibilité sus-pubienne → <em>cystite</em><br>La matité qui remonte de la symphyse vers l&#39;ombilic est la signature du globe</div>
+            </div>
+            <div style="background:#f1f5f9;border-radius:10px;padding:14px;">
+              <strong style="color:#334155;">🔗 Aires ganglionnaires inguinales</strong>
+              <div style="font-size:13px;line-height:1.7;margin-top:8px;">Groupe <strong>horizontal</strong> (sous le ligament inguinal) et <strong>vertical</strong> (en dessous et en dedans)<br>Drainage : <strong>membres inférieurs, organes génitaux externes, fesses</strong><br>De petits ganglions inguinaux mobiles et indolores sont fréquents et banals</div>
+            </div>
+          </div>
+          <div class="key-fact green" style="margin-top:12px;">🎯 <strong>Rétention urinaire — le raccourci.</strong> Un globe vésical se confirme au chevet par <strong>échographie vésicale (bladder scan)</strong> plutôt que par la percussion seule. &nbsp;➜ <em>Rétention urinaire</em>, <em>Cystite</em></div>
+        </div>
+
+        <!-- ── gu1 : OGE féminins ── -->
+        <div id="gu1" style="display:none;margin-top:12px;">
+          <div class="key-fact purple">🪑 <strong>Position.</strong> Position gynécologique : pieds dans les étriers, <strong>fesses ramenées vers l&#39;extrémité de la table</strong> — si le spéculum entre mal, faire descendre la patiente jusqu&#39;à ce que la moitié des fesses dépasse. <strong>Incliner la table à 30°</strong> pour garder le contact visuel.</div>
+
+          <div class="criteria-list" style="margin-top:12px;">
+            <div class="criteria-item"><div class="criteria-num blue">1</div><span><strong>Inspection</strong> — grandes lèvres, petites lèvres, clitoris, méat urinaire, orifice vaginal, hymen, périnée et <strong>région anale</strong>. Écarter les lèvres avec les 2<sup>e</sup> et 3<sup>e</sup> doigts <em>après avoir averti la patiente</em>. Chercher lésions, rougeurs, sécrétions, odeurs anormales, ulcérations, <strong>condylomes</strong>, prolapsus.</span></div>
+            <div class="criteria-item"><div class="criteria-num blue">2</div><span><strong>Spéculum</strong> — insérer <strong>lames fermées, à 45°</strong>, en poussant <strong>vers le bas et en postérieur</strong> pour épargner les structures antérieures, plus sensibles. Ouvrir une fois en postérieur et fixer quand le col est visualisé.</span></div>
+            <div class="criteria-item"><div class="criteria-num blue">3</div><span><strong>Col</strong> — noter position, rougeur, saignement, exsudat, lésion.</span></div>
+            <div class="criteria-item"><div class="criteria-num blue">4</div><span><strong>Prélèvements</strong> selon l&#39;histoire et l&#39;examen (voir tableau ci-dessous).</span></div>
+            <div class="criteria-item"><div class="criteria-num blue">5</div><span><strong>Vagin</strong> — en retirant le spéculum, le <strong>tourner</strong> pour visualiser les parois. Le fermer puis revenir <strong>en diagonale</strong> près de la vulve pour ne pas blesser.</span></div>
+            <div class="criteria-item"><div class="criteria-num blue">6</div><span><strong>Toucher vaginal</strong> — deux doigts gantés et lubrifiés, <strong>toujours en pression postérieure</strong>.</span></div>
+          </div>
+
+          <div style="overflow-x:auto;margin-top:14px;">
+          <table style="font-size:12px;">
+            <thead><tr><th style="width:26%;">Prélèvement</th><th style="width:30%;">Instrument</th><th>Site &amp; technique</th></tr></thead>
+            <tbody>
+              <tr style="background:#f8f9fa;"><td><strong>Test Pap</strong></td><td>Spatule <em>puis</em> cytobrosse</td><td>Spatule : <strong>exocol, 360°</strong> — cytobrosse : <strong>endocol, 90°</strong><br>⚠️ <strong>Ne pas lubrifier</strong> le spéculum si un Pap test est prévu</td></tr>
+              <tr><td><strong>Chlamydia &amp; gonorrhée</strong></td><td>Coton-tige</td><td><strong>Endocol, 360°</strong> &nbsp;➜ <em>ITSS</em></td></tr>
+              <tr style="background:#f8f9fa;"><td><strong>Culture vaginale</strong></td><td>Culturette</td><td>Paroi vaginale</td></tr>
+              <tr><td><strong>État frais / <em>whiff test</em></strong></td><td>Coton-tige</td><td>Paroi vaginale &nbsp;➜ <em>Vaginites</em></td></tr>
+            </tbody>
+          </table>
+          </div>
+
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:12px;">
+            <div style="background:#ede9fe;border-radius:10px;padding:14px;">
+              <strong style="color:#6d28d9;">Col au toucher</strong>
+              <div style="font-size:13px;line-height:1.7;margin-top:8px;">Position · forme · consistance · <strong>mobilité</strong> · sensibilité<br><strong>Douleur à la mobilisation du col</strong> = signe cardinal de l&#39;<em>atteinte inflammatoire pelvienne</em></div>
+            </div>
+            <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+              <strong style="color:#1d4ed8;">Utérus — palpation bimanuelle</strong>
+              <div style="font-size:13px;line-height:1.7;margin-top:8px;">La main vaginale <strong>élève</strong> le col et l&#39;utérus pendant que la main abdominale appuie vers l&#39;intérieur et le bas<br>Évaluer taille, forme, symétrie, mobilité, position, consistance · noter douleur et <strong>masses</strong></div>
+            </div>
+            <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+              <strong style="color:#15803d;">Annexes</strong>
+              <div style="font-size:13px;line-height:1.7;margin-top:8px;">Ovaires et trompes utérines<br>Un ovaire <strong>palpable après la ménopause</strong> est anormal jusqu&#39;à preuve du contraire</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── gu2 : OGE masculins ── -->
+        <div id="gu2" style="display:none;margin-top:12px;">
+          <div style="overflow-x:auto;">
+          <table style="font-size:12px;">
+            <thead><tr><th style="width:18%;">Région</th><th style="width:42%;">Ce qu&#39;on fait</th><th>Ce qu&#39;on cherche</th></tr></thead>
+            <tbody>
+              <tr style="background:#f8f9fa;"><td><strong>Inspection générale</strong></td><td>Région inguinale — <strong>surtout debout</strong> · scrotum · pénis</td><td>Voussure, masse ou cicatrice (hernie présente ou ancienne) · œdème, hématome, rougeur, <strong>coloration bleutée</strong> · lésions dermatologiques (<strong>chancre</strong>, ulcère, condylome)</td></tr>
+              <tr><td><strong>Gland &amp; prépuce</strong></td><td>Inspecter le méat · chez le non-circoncis, <strong>rétracter le prépuce</strong> et examiner ses bords externe et interne</td><td><strong>Phimosis</strong> (prépuce non rétractable) · <strong>paraphimosis</strong> (peau rétractée de façon fixe derrière la corona — <em>urgence</em>) · écoulement urétral (<em>urétrite</em>) · sténose · <strong>épispadias / hypospadias</strong></td></tr>
+              <tr style="background:#f8f9fa;"><td><strong>Corps du pénis</strong></td><td>Palper corps et base</td><td>Voussure · <strong>courbure inhabituelle</strong> (maladie de La Peyronie) · déformation · lésions à la base</td></tr>
+              <tr><td><strong>Testicules</strong></td><td>Palper chacun <strong>entre le pouce et les deux premiers doigts</strong></td><td>Présence et <strong>comparaison des tailles</strong> · consistance (normalement <strong>caoutchouteuse</strong>) · sensibilité, masse ou nodule — <strong>et sa localisation</strong> (voir ci-dessous)</td></tr>
+              <tr style="background:#f8f9fa;"><td><strong>Épididyme &amp; cordon</strong></td><td>Palper l&#39;épididyme au <strong>sommet postérieur</strong> du testicule, puis suivre le cordon spermatique</td><td>Sensibilité · œdème · induration · texture de <strong>« sac de vers » → varicocèle</strong> (à gauche surtout ; une varicocèle <strong>droite</strong> d&#39;apparition récente fait chercher une masse rétropéritonéale)</td></tr>
+              <tr><td><strong>Hernie inguinale</strong></td><td>Faire <strong>tousser</strong> · placer l&#39;index à l&#39;orifice externe du canal en remontant le long du cordon (peau du scrotum inversée), l&#39;autre main le long du canal vers l&#39;ÉIAS</td><td>Voussure ou déformation à la sortie du canal · <strong>masse palpable à la toux</strong></td></tr>
+            </tbody>
+          </table>
+          </div>
+
+          <div class="key-fact blue" style="margin-top:12px;">🔦 <strong>Transillumination</strong> — devant toute voussure ou masse scrotale, diriger un faisceau lumineux à travers la peau du scrotum, <strong>dans une pièce sombre</strong>. Lumière <strong>diffusée</strong> = liquide clair (<em>hydrocèle, spermatocèle, kyste</em>) · lumière <strong>non diffusée</strong> = contenu opaque (<em>hématome, lésion solide — cancer testiculaire</em>).</div>
+
+          <div class="key-fact yellow" style="margin-top:10px;">📍 <strong>La localisation du nodule oriente le diagnostic.</strong> Sur le testicule lui-même → <strong>cancer</strong> · postéro-supérieur → <strong>épididymite</strong> · supéro-externe → <strong>torsion de l&#39;appendice testiculaire</strong>.</div>
+        </div>
+
+        <!-- ── gu3 : toucher rectal & prostate ── -->
+        <div id="gu3" style="display:none;margin-top:12px;">
+          <div class="criteria-list">
+            <div class="criteria-item"><div class="criteria-num blue">1</div><span><strong>Inspecter la région anale</strong> — fissures, hémorroïdes externes, fistule, condylomes, excoriations.</span></div>
+            <div class="criteria-item"><div class="criteria-num blue">2</div><span>Introduire un <strong>doigt ganté et lubrifié</strong> dans l&#39;anus, doucement, en demandant de pousser comme pour aller à la selle (relâche le sphincter).</span></div>
+            <div class="criteria-item"><div class="criteria-num blue">3</div><span>Évaluer le <strong>tonus anal</strong> — un tonus effondré oriente vers une atteinte de la queue de cheval ou une neuropathie.</span></div>
+            <div class="criteria-item"><div class="criteria-num blue">4</div><span>Évaluer la <strong>paroi du rectum</strong> — douleur, lésion, <strong>fécalome</strong>.</span></div>
+            <div class="criteria-item"><div class="criteria-num blue">5</div><span>Évaluer la <strong>prostate</strong> — normalement <strong>deux lobes palpables</strong>, indolores, de consistance plutôt <strong>élastique</strong>.</span></div>
+            <div class="criteria-item"><div class="criteria-num blue">6</div><span><strong>Regarder son doigt à la sortie</strong> — sang, méléna, mucus, selles.</span></div>
+          </div>
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
+            <div style="background:#f0fdf4;border-left:4px solid #15803d;border-radius:8px;padding:14px;">
+              <strong style="color:#15803d;">Prostate normale / HBP</strong>
+              <div style="font-size:13px;line-height:1.7;margin-top:8px;">Deux lobes symétriques, <strong>sillon médian conservé</strong>, surface lisse, consistance élastique, <strong>indolore</strong><br>HBP : augmentation <strong>régulière et symétrique</strong>, consistance conservée</div>
+            </div>
+            <div style="background:#fef2f2;border-left:4px solid #c0392b;border-radius:8px;padding:14px;">
+              <strong style="color:#c0392b;">Ce qui fait suspecter un cancer</strong>
+              <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Nodule</strong> · <strong>induration</strong> · irrégularité · <strong>asymétrie</strong> de la glande<br>Prostate <strong>chaude, exquisément douloureuse</strong> → prostatite aiguë (ne pas masser)</div>
+            </div>
+          </div>
+
+          <div class="key-fact red" style="margin-top:12px;">🎯 <strong>Pourquoi le toucher rectal reste incontournable.</strong> Quérin &amp; Valiquette rappellent que <strong>15 à 20 % des patients porteurs d&#39;un cancer de la prostate curable ont un APS normal</strong> : chez eux, le diagnostic ne peut venir que du toucher rectal. Sa sensibilité dépend directement de l&#39;attention et de l&#39;expérience de l&#39;examinateur. <span style="font-size:11px;color:#64748b;">📚 <em>Quérin &amp; Valiquette, Néphrologie et urologie, 3<sup>e</sup> éd., ch. 17</em></span></div>
+
+          <div class="key-fact ink" style="margin-top:10px;">📋 <strong>Bilan minimal du prostatisme</strong> (Quérin, tableau 17.3) : anamnèse et examen physique <strong>incluant le toucher rectal</strong> · <strong>cotation des symptômes prostatiques</strong> (IPSS) · <strong>analyse d&#39;urine</strong>. Puis, au besoin : créatininémie (si rétention ou hydronéphrose suspectée), APS (si un traitement est envisagé), résidu post-mictionnel, échographie prostatique (si TR douteux ou APS élevé), cystoscopie (si analyse d&#39;urine anormale). &nbsp;➜ <em>HBP</em>, <em>Cancer de la prostate</em></div>
+        </div>
+
+        <!-- ── gu4 : scrotum aigu ── -->
+        <div id="gu4" style="display:none;margin-top:12px;">
+          <div class="key-fact red">⏱️ <strong>La torsion testiculaire est une urgence chirurgicale à fenêtre courte.</strong> Devant une douleur scrotale aiguë, l&#39;objectif de l&#39;examen n&#39;est pas de trancher — c&#39;est de décider si on appelle l&#39;urologue <strong>maintenant</strong>. Aucune manœuvre ci-dessous n&#39;est assez fiable pour écarter une torsion : au moindre doute, imagerie <strong>et</strong> avis urgents.</div>
+
+          <div style="overflow-x:auto;margin-top:12px;">
+          <table style="font-size:12px;">
+            <thead><tr><th style="width:24%;">Manœuvre</th><th style="width:30%;">Comment</th><th style="width:23%;">Torsion testiculaire</th><th>Épididymite</th></tr></thead>
+            <tbody>
+              <tr style="background:#f8f9fa;"><td><strong>Signe de Prehn</strong></td><td>Élever le testicule douloureux</td><td>Douleur <strong>non soulagée</strong><br><span style="color:#c0392b;">Prehn <strong>négatif</strong></span></td><td>Douleur <strong>soulagée</strong><br><span style="color:#15803d;">Prehn <strong>positif</strong></span></td></tr>
+              <tr><td><strong>Réflexe crémastérien</strong></td><td>Stimuler la face <strong>antéro-médiale de la cuisse</strong></td><td>Réflexe <strong>absent</strong> du côté atteint</td><td>Réflexe <strong>présent</strong></td></tr>
+              <tr style="background:#f8f9fa;"><td><strong>Localisation de la douleur</strong></td><td>Palpation ciblée</td><td>Testicule entier, souvent <strong>ascensionné et horizontalisé</strong></td><td><strong>Postéro-supérieure</strong> (épididyme)</td></tr>
+              <tr><td><strong>Installation</strong></td><td>Anamnèse</td><td><strong>Brutale</strong>, souvent nocturne, avec nausées / vomissements</td><td><strong>Progressive</strong>, sur des heures à des jours · fièvre, symptômes urinaires</td></tr>
+            </tbody>
+          </table>
+          </div>
+
+          <div class="flag-list" style="margin-top:12px;">
+            <div class="flag-item">Douleur scrotale <strong>brutale</strong> chez un adolescent ou jeune adulte → torsion jusqu&#39;à preuve du contraire</div>
+            <div class="flag-item"><strong>Réflexe crémastérien absent</strong> du côté douloureux</div>
+            <div class="flag-item">Testicule <strong>ascensionné, horizontalisé</strong> ou en position anormale</div>
+            <div class="flag-item">Masse testiculaire <strong>indolore</strong> chez un homme de 15-40 ans → cancer testiculaire jusqu&#39;à preuve du contraire</div>
+            <div class="flag-item"><strong>Paraphimosis</strong> — prépuce rétracté fixe derrière la corona : urgence de réduction</div>
+          </div>
+        </div>
+      </div>
+
+<div class="block clin" style="margin-top:14px;border-left-color:#4338ca;">
         <div class="block-title" id="exp-7"><span class="tag">🧠 Examen neurologique</span></div>
 
         <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>L'examen neurologique complet est long — il se fait donc CIBLÉ selon l'hypothèse.</strong> La question qui guide tout : <strong>l'atteinte est-elle centrale ou périphérique, et à quel niveau ?</strong></div>
@@ -2236,22 +2472,7 @@ m
         </div>
       </div>
 
-      <div class="block clin" style="margin-top:14px;border-left-color:#c2410c;">
-        <div class="block-title" id="exp-8"><span class="tag">🦴 Locomoteur, ORL, peau &amp; autres</span></div>
-
-        <div style="overflow-x:auto;margin-top:12px;">
-        <table style="font-size:12px;">
-          <thead><tr><th style="width:18%;">Système</th><th style="width:40%;">Séquence</th><th>Signes clés</th></tr></thead>
-          <tbody>
-            <tr style="background:#fff7ed;"><td><strong>Locomoteur</strong></td><td>🎯 <strong>Regarder — Bouger — Palper</strong>, puis manœuvres spécifiques<br>Amplitudes <strong>actives puis passives</strong> · toujours comparer au côté sain</td><td>Épanchement · chaleur · rougeur · déformation · <strong>limitation active vs passive</strong><br>🚨 <strong>Articulation chaude, rouge, avec fièvre</strong> → arthrite septique<br>➜ <em>Approche de la douleur articulaire</em></td></tr>
-            <tr><td><strong>ORL / cou</strong></td><td>Otoscopie · examen de la bouche et du pharynx · palpation du <strong>cou et de la thyroïde</strong> (par derrière, faire déglutir) · aires ganglionnaires</td><td>Tympan · adénopathies (taille, mobilité, sensibilité) · <strong>nodule ou goitre</strong><br>➜ <em>Nodule thyroïdien</em></td></tr>
-            <tr style="background:#fdf2f8;"><td><strong>Peau</strong></td><td>Décrire : <strong>type de lésion élémentaire</strong>, couleur, bordure, <strong>disposition</strong> et <strong>distribution</strong> · examiner <strong>toute</strong> la peau, ongles et cuir chevelu inclus</td><td>Un vocabulaire précis vaut mieux qu'une impression : macule, papule, plaque, vésicule, pustule, nodule<br>➜ <em>Dermatologie</em></td></tr>
-            <tr><td><strong>Sein</strong></td><td>Inspection bras levés et abaissés · palpation systématique <strong>des quatre quadrants et du prolongement axillaire</strong> · aires ganglionnaires <span style="font-size:11px;color:#64748b;">📚 <em>Démarche clinique, ch. 10</em></span></td><td>Masse (taille, mobilité, consistance) · rétraction cutanée ou mamelonnaire · écoulement<br>➜ <em>Cancer du sein</em></td></tr>
-            <tr style="background:#f0fdfa;"><td><strong>Génito-urinaire</strong></td><td>Toujours <strong>expliquer</strong>, obtenir le consentement, prévoir un <strong>accompagnement</strong> · exposer le minimum</td><td>Globe vésical · douleur au flanc · examen prostatique ou pelvien selon l'indication<br>➜ <em>Cystite</em>, <em>ITSS</em></td></tr>
-          </tbody>
-        </table>
-        </div>
-      </div>
+      
 
             <div class="block clin" style="margin-top:14px;border-left-color:#c2410c;">
         <div class="block-title" id="exp-msk"><span class="tag">🦴 Appareil locomoteur — par articulation</span></div>
@@ -41680,7 +41901,7 @@ Difficulté à maintenir l'hydratation<br>
 
               <!-- PANCRÉAS -->
               <ellipse cx="245" cy="275" rx="105" ry="22" fill="#fce7f3" stroke="#9d174d" stroke-width="1.5" style="cursor:pointer" onclick="showBile('pancreas')"/>
-              <text x="245" y="279" text-anchor="middle" font-size="13" fill="#9d174d" font-weight="700" pointer-events="none">PANCRÉAS</text>
+              <text x="195" y="279" text-anchor="middle" font-size="13" fill="#9d174d" font-weight="700" pointer-events="none">PANCRÉAS</text>
 
               <!-- Canal pancréatique principal (Wirsung) -->
               <line x1="140" y1="275" x2="245" y2="263" stroke="#9d174d" stroke-width="2" stroke-dasharray="4,2" style="cursor:pointer" onclick="showBile('wirsung')"/>
@@ -55627,7 +55848,7 @@ const SEARCH_INDEX = [
   { id:'home',                title:'Accueil',                        specialty:'',               keywords:['accueil'] },
     { id:'entrevue',            title:'L\'Entrevue Médicale',            specialty:'Méthode clinique',  keywords:['entrevue','entrevue médicale','communication','accueil','contrat initial','question ouverte','question fermée','écoute active','silence','empathie','reformulation','résumé','clarification','mccp','méthode clinique centrée sur le patient','motif de consultation','histoire de la maladie actuelle','hma','caractériser un symptôme','mode d apparition','revue des systèmes','habitudes de vie','antécédents','mauvaise nouvelle','annonce','colère','interprète','filet de sécurité','reconsulter','gphc','démarche clinique'] },
     { id:'questionnaire',       title:'Le Questionnaire',               specialty:'Méthode clinique',  keywords:['questionnaire','pqrst','pqrstu','provoqué','pallié','qualité','quantité','région','irradiation','symptômes associés','temps','ample','allergies','dernier repas','last meal','événements','revue des systèmes','tête aux pieds','antécédents','gtpal','cage','paquets-année','habitudes de vie','anamnèse','questionnaire ciblé','être concis','question ouverte','drapeau rouge','4 p','gphc','démarche clinique'] },
-  { id:'examen-physique',     title:'L\'Examen Physique',              specialty:'Méthode clinique',  keywords:['examen physique','megacv','inspection','palpation','percussion','auscultation','signes vitaux','fram','pouls','brassard','tension artérielle','pseudohypertension','osler','trou auscultatoire','hypotension orthostatique','choc apexien','foyer aortique','foyer pulmonaire','tricuspidien','turgescence jugulaire','murmure vésiculaire','vibrations vocales','matité','tympanisme','crépitants','défense','ressaut','péristaltisme','échographie ciblée','ecc','réflexe ostéotendineux','dermatome','romberg','démarche','gphc','démarche clinique','aseptic','examen mental','apparence','affect','humeur','hallucination','délire','insight','aldo','ottawa','critères d ottawa','lachman','tiroir antérieur','mcmurray','tinel','phalen','finkelstein','schöber','lasègue','trendelenburg','faber','fadir','arc douloureux','note de piano','snellen','dpar','papillœdème','virchow','adénopathie sus-claviculaire','kussmaul','cheyne-stokes','tvc','reflux hépato-jugulaire','hippocratisme','ortolani','barlow','périmètre crânien','hauteur utérine','examens régionaux'] },
+  { id:'examen-physique',     title:'L\'Examen Physique',              specialty:'Méthode clinique',  keywords:['examen physique','megacv','inspection','palpation','percussion','auscultation','signes vitaux','fram','pouls','brassard','tension artérielle','pseudohypertension','osler','trou auscultatoire','hypotension orthostatique','choc apexien','foyer aortique','foyer pulmonaire','tricuspidien','turgescence jugulaire','murmure vésiculaire','vibrations vocales','matité','tympanisme','crépitants','défense','ressaut','péristaltisme','échographie ciblée','ecc','réflexe ostéotendineux','dermatome','romberg','démarche','gphc','démarche clinique','aseptic','examen mental','apparence','affect','humeur','hallucination','délire','insight','aldo','ottawa','critères d ottawa','lachman','tiroir antérieur','mcmurray','tinel','phalen','finkelstein','schöber','lasègue','trendelenburg','faber','fadir','arc douloureux','note de piano','snellen','dpar','papillœdème','virchow','adénopathie sus-claviculaire','kussmaul','cheyne-stokes','tvc','reflux hépato-jugulaire','hippocratisme','ortolani','barlow','périmètre crânien','hauteur utérine','examens régionaux','génito-urinaire','organes génitaux','oge','spéculum','pap test','test pap','cytobrosse','toucher vaginal','toucher rectal','prostate','hbp','ipss','punch rénal','globe vésical','testicule','scrotum','épididyme','varicocèle','transillumination','prehn','crémastérien','torsion testiculaire','épididymite','phimosis','paraphimosis','hernie inguinale','chancre','sein','seins et aisselles','lobe de spence','peau d orange','signe du plateau','écoulement mamelonnaire','rétraction mamelonnaire','nodularité physiologique','vasculaire périphérique','pouls pédieux','tibial postérieur','itb','index tibio-brachial','claudication','ulcère artériel','ulcère veineux','dermatite de stase','blue toe','pied de homard','homans','chaperon','consentement'] },
 { id:'raisonnement',        title:'Le Raisonnement Clinique',       specialty:'Méthode clinique',  keywords:['raisonnement clinique','hypothèse','hypothèse diagnostique','générer des hypothèses','schéma de classification','liste apprise par coeur','pensée dispersée','présentation typique','prototype','mode de présentation','localisation anatomique','identifier la victime','transformation sémantique','donnée discriminante','drapeau rouge','diagnostic dangereux','biais cognitif','ancrage','fermeture prématurée','biais de confirmation','représentativité','disponibilité','heuristique','métacognition','script clinique','surcharge cognitive','démarche clinique'] },
 { id:'calculateurs',        title:'Calculateurs & Outils',          specialty:'',               keywords:['calculateur','score','framingham','cha2ds2','has-bled','wells','grace','timi','nihss','curb','meld'] },
     { id:'ecg',                 title:'ECG — Lecture systématique',     specialty:'Cardiologie',     keywords:['ecg','électrocardiogramme','tracé','grille','calibration','25 mm/s','petit carreau','rythme sinusal','fréquence cardiaque','1500','300 150 100','intervalle pr','qrs','qt','qtc','bazett','torsade de pointes','axe qrs','déviation axiale','di','avf','progression onde r','transition','territoire','antéroseptal','antéro-apical','antérolatéral','inférieur','postérieur','iva','interventriculaire antérieure','lad','circonflexe','coronaire droite','sus-décalage','sous-décalage','stemi','image en miroir','onde q','onde t hyperaiguë','bav','wenckebach','mobitz','bloc auriculoventriculaire','bloc de branche','bbg','bbd','oreilles de lapin','hypertrophie','lilly'] },
@@ -56903,7 +57124,7 @@ function showPanel(prefix,activeId,count){
   document.querySelectorAll('[data-panel]').forEach(function(b){
     if(b.getAttribute('data-panel').startsWith(prefix)){
       var on=b.getAttribute('data-panel')===activeId;
-      var colorMap={'tx':'#0a7a4e','atx':'#065f46','vp':'#1e7a6b','mii-tx':'#0a7a4e','mii-cr':'#0a7a4e','pk-tx':'#7c3aed','hta-tx':'#0a7a4e','ugdd':'#0369a1','lax':'#0a7a4e'};var col=colorMap[prefix]||'#c0392b';
+      var colorMap={'tx':'#0a7a4e','atx':'#065f46','vp':'#1e7a6b','mii-tx':'#0a7a4e','mii-cr':'#0a7a4e','pk-tx':'#7c3aed','hta-tx':'#0a7a4e','ugdd':'#0369a1','gu':'#0f766e','lax':'#0a7a4e'};var col=colorMap[prefix]||'#c0392b';
       b.style.background=on?col:'#e0e0e0';
       b.style.color=on?'#fff':'#333';
     }
