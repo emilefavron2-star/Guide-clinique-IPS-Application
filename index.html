@@ -1982,14 +1982,17 @@ m
         <button onclick="goToBlock('exp-1')" style="background:#374151;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🔢 Les 4 temps</button>
         <button onclick="goToBlock('exp-2')" style="background:#6d28d9;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">👁️ MEGACV</button>
         <button onclick="goToBlock('exp-3')" style="background:#b91c1c;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">📊 Signes vitaux</button>
+        <button onclick="goToBlock('exp-mental')" style="background:#7c3aed;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧩 Examen mental</button>
+        <button onclick="goToBlock('exp-tetecou')" style="background:#0891b2;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">👁️ Tête, cou &amp; peau</button>
         <button onclick="goToBlock('exp-4')" style="background:#be123c;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🫀 Cardiovasculaire</button>
-        <button onclick="goToBlock('exp-5')" style="background:#0891b2;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🫁 Respiratoire</button>
+        <button onclick="goToBlock('exp-5')" style="background:#0284c7;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🫁 Respiratoire</button>
         <button onclick="goToBlock('exp-6')" style="background:#b45309;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🫄 Abdomen</button>
         <button onclick="goToBlock('exp-7')" style="background:#4338ca;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧠 Neurologique</button>
-        <button onclick="goToBlock('exp-8')" style="background:#c2410c;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🦴 Locomoteur &amp; autres</button>
+        <button onclick="goToBlock('exp-8')" style="background:#0f766e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🦴 Autres régions</button>
+        <button onclick="goToBlock('exp-msk')" style="background:#c2410c;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🦴 Locomoteur détaillé</button>
+        <button onclick="goToBlock('exp-pop')" style="background:#9d174d;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">👶 Populations</button>
         <button onclick="goToBlock('exp-9')" style="background:#15803d;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🎯 Cibler l'examen</button>
       </div>
-
       <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:20px;">
         <div style="flex:1;min-width:95px;background:#F3E8FF;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#6d28d9;">MEGACV</div><div style="font-size:11px;color:#555;margin-top:4px;">Avant de toucher</div></div>
         <div style="flex:1;min-width:95px;background:#FEE2E2;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#b91c1c;">FRAM</div><div style="font-size:11px;color:#555;margin-top:4px;">Caractériser le pouls</div></div>
@@ -2088,7 +2091,61 @@ m
         <div class="key-fact orange" style="margin-top:12px;">🫁 <strong>Fréquence respiratoire — le signe vital le plus négligé et le plus prédictif.</strong> La compter <strong>discrètement</strong>, sur une minute complète : une personne qui se sait observée modifie sa respiration. 💡 Chez la personne âgée, une <strong>respiration de Cheyne-Stokes</strong> peut être physiologique. <span style="font-size:11px;color:#64748b;">📚 <em>GPHC, ch. Gériatrie</em></span></div>
       </div>
 
-      <div class="block clin" style="margin-top:14px;border-left-color:#be123c;">
+            <div class="block clin" style="margin-top:14px;border-left-color:#7c3aed;">
+        <div class="block-title" id="exp-mental"><span class="tag">🧩 L'examen mental — ASEPTIC</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>ASEPTIC</strong> est l'acronyme structurant de l'examen mental dans vos manuels : <strong>A</strong>ppearance &amp; behaviour, <strong>S</strong>peech (langage), <strong>E</strong>motion, <strong>P</strong>erception, <strong>T</strong>hought (pensée), <strong>I</strong>nsight (introspection), <strong>C</strong>ognition. <span style="font-size:11px;color:#64748b;">📚 <em>GPHC — Habiletés cliniques (2018), ch. 3, p. 78</em></span></div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:12px;">
+          <div style="background:#ede9fe;border-radius:10px;padding:14px;">
+            <strong style="color:#6d28d9;">A — Apparence &amp; comportement</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Apparence physique</strong> — maigreur, obésité, paraît plus vieux ou plus jeune · malformation, dysmorphisme, cicatrices, tatouages, <strong>marques d'automutilation</strong> (TPL), cernes, <strong>diaphorèse</strong> (sevrage alcoolique)<br><strong>Habillement</strong> — soigné, négligé (psychose, dépression sévère, TNC), inapproprié (short en hiver), <strong>extravagant</strong> (histrionique, manie)<br><strong>Hygiène</strong>, maquillage, cheveux · odeur (haleine éthylique)<br><strong>Posture</strong> — droite, courbée, recroquevillée, tendue<br><strong>Contact visuel</strong> — bon, fuyant (anxiété), absent, fixe<br><strong>Attitude</strong> — coopérative, indifférente, familière, fermée</div>
+          </div>
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+            <strong style="color:#1d4ed8;">S — Langage (Speech)</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Débit</strong> — accéléré (manie), ralenti (dépression)<br><strong>Volume</strong>, ton, prosodie<br><strong>Spontanéité</strong> · latence de réponse<br><strong>Logorrhée</strong> ou mutisme</div>
+          </div>
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;">
+            <strong style="color:#d35400;">E — Émotion</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Humeur</strong> — ce que la personne rapporte, dans ses mots<br><strong>Affect</strong> — ce que vous observez : congruent ou non, labile, émoussé, plat<br>💡 Humeur et affect peuvent diverger — c'est en soi une information</div>
+          </div>
+          <div style="background:#fce4ec;border-radius:10px;padding:14px;">
+            <strong style="color:#c0392b;">P — Perception</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Hallucinations</strong> — auditives, visuelles, tactiles, olfactives<br>Illusions · déréalisation, dépersonnalisation<br>🚨 Les hallucinations <strong>visuelles</strong> orientent davantage vers une cause organique</div>
+          </div>
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+            <strong style="color:#15803d;">T — Pensée (Thought)</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Forme</strong> — cohérence, fuite des idées, relâchement des associations, tangentialité<br><strong>Contenu</strong> — <strong>délires</strong>, obsessions, phobies<br>🚨 <strong>Idées suicidaires ou homicidaires — les demander directement</strong><br>➜ Voir <em>Santé mentale</em></div>
+          </div>
+          <div style="background:#f1f5f9;border-radius:10px;padding:14px;">
+            <strong style="color:#334155;">I / C — Introspection &amp; cognition</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Insight</strong> — la personne reconnaît-elle le problème ? Jugement<br><strong>Cognition</strong> — orientation, attention, mémoire, fonctions exécutives<br>➜ Outils et seuils dans <em>TNC</em> et <em>Délirium</em></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;border-left-color:#0891b2;">
+        <div class="block-title" id="exp-tetecou"><span class="tag">👁️ Tête, cou &amp; téguments</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">🎯 Vos manuels détaillent ces régions une à une : <strong>peau et annexes, yeux, oreilles, nez et sinus, bouche, aires ganglionnaires, glande thyroïde</strong>. Voici les éléments à ne pas manquer pour chacune. <span style="font-size:11px;color:#64748b;">📚 <em>GPHC — Habiletés cliniques, ch. 3, p. 80-91</em></span></div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:17%;">Région</th><th style="width:40%;">Ce qu'on examine</th><th>Signes recherchés</th></tr></thead>
+          <tbody>
+            <tr style="background:#fdf2f8;"><td><strong>Peau &amp; annexes</strong></td><td>Toute la surface cutanée · <strong>ongles et cuir chevelu inclus</strong> · décrire type de lésion élémentaire, couleur, bordure, <strong>disposition</strong> et <strong>distribution</strong></td><td>Macule, papule, plaque, vésicule, pustule, nodule · <strong>hippocratisme digital</strong> · pâleur, ictère, cyanose<br>➜ <em>Dermatologie</em></td></tr>
+            <tr><td><strong>Yeux</strong></td><td><strong>Acuité visuelle</strong> (Snellen à 6 m ou carte portative à 35 cm, <strong>avec correction</strong> ou trou sténopéique) · champs visuels par confrontation · pupilles · oculomotricité · <strong>fond d'œil</strong></td><td><strong>Myosis</strong> (Horner), <strong>mydriase</strong> (paralysie du III, anévrisme, engagement) · anisocorie · <strong>DPAR</strong> au test d'alternance (lésion rétinienne ou du nerf optique) · <strong>papillœdème</strong> (HTIC), atrophie optique</td></tr>
+            <tr style="background:#f0fdfa;"><td><strong>Oreilles</strong></td><td>Pavillon · conduit · <strong>otoscopie</strong> (tympan) · acuité auditive · Weber et Rinne si atteinte</td><td>Otite, bouchon, perforation · surdité de <strong>transmission</strong> vs <strong>neurosensorielle</strong></td></tr>
+            <tr><td><strong>Nez &amp; sinus</strong></td><td>Perméabilité des narines · muqueuse · palpation et percussion des sinus frontaux et maxillaires</td><td>Congestion, polypes, déviation septale · douleur sinusienne</td></tr>
+            <tr style="background:#fff3cd;"><td><strong>Bouche &amp; gorge</strong></td><td>Dents, gencives, langue, muqueuses · <strong>amygdales</strong> et pharynx · palais et luette</td><td>Ulcérations, candidose, <strong>déshydratation</strong> (muqueuses sèches) · exsudat amygdalien · asymétrie de la luette</td></tr>
+            <tr><td><strong>Aires ganglionnaires</strong></td><td>Palper systématiquement : <strong>cervicales, sus-claviculaires, axillaires, épitrochléennes, inguinales</strong></td><td>Décrire <strong>taille, consistance, mobilité, sensibilité</strong><br>🚨 <strong>Adénopathie sus-claviculaire</strong> — surtout gauche (ganglion de Virchow) : suspicion néoplasique</td></tr>
+            <tr style="background:#f0fdf4;"><td><strong>Glande thyroïde</strong></td><td>Inspection au repos et à la <strong>déglutition</strong> · palpation <strong>par derrière</strong>, en faisant déglutir · auscultation si goitre</td><td><strong>Goitre</strong> diffus ou nodulaire · nodule (taille, consistance, mobilité) · <strong>souffle</strong> (hyperthyroïdie)<br>➜ <em>Nodule thyroïdien</em>, <em>Hyperthyroïdie</em></td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+
+<div class="block clin" style="margin-top:14px;border-left-color:#be123c;">
         <div class="block-title" id="exp-4"><span class="tag">🫀 Examen cardiovasculaire</span></div>
 
         <div style="overflow-x:auto;margin-top:12px;">
@@ -2196,7 +2253,180 @@ m
         </div>
       </div>
 
-      <div class="block rx" style="margin-top:14px;border-left-color:#15803d;">
+            <div class="block clin" style="margin-top:14px;border-left-color:#c2410c;">
+        <div class="block-title" id="exp-msk"><span class="tag">🦴 Appareil locomoteur — par articulation</span></div>
+
+        <div class="key-fact orange" style="margin-top:10px;">🎯 <strong>Une séquence unique pour toutes les articulations : REGARDER → BOUGER → PALPER</strong>, puis les manœuvres spécifiques. L'inspection suit l'acronyme <strong>ALDO</strong> — <strong>A</strong>trophie, <strong>L</strong>ésions cutanées, <strong>D</strong>éformation et posture, <strong>Œ</strong>dème. <span style="font-size:11px;color:#64748b;">📚 <em>GPHC — Habiletés cliniques, ch. 3, p. 106-119</em></span><br><br>⚠️ Toujours <strong>comparer au côté sain</strong>, tester les amplitudes <strong>actives avant les passives</strong>, et terminer par un <strong>examen neurovasculaire</strong> distal.</div>
+
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;margin-bottom:14px;">
+          <button id="msk0tab" data-panel="msk0" onclick="showPanel('msk','msk0',8)" style="background:#c2410c;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;transition:.15s;">Épaule</button>
+          <button id="msk1tab" data-panel="msk1" onclick="showPanel('msk','msk1',8)" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;transition:.15s;">Rachis cervical</button>
+          <button id="msk2tab" data-panel="msk2" onclick="showPanel('msk','msk2',8)" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;transition:.15s;">Coude</button>
+          <button id="msk3tab" data-panel="msk3" onclick="showPanel('msk','msk3',8)" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;transition:.15s;">Poignet &amp; main</button>
+          <button id="msk4tab" data-panel="msk4" onclick="showPanel('msk','msk4',8)" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;transition:.15s;">Rachis dorso-lombaire</button>
+          <button id="msk5tab" data-panel="msk5" onclick="showPanel('msk','msk5',8)" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;transition:.15s;">Hanche</button>
+          <button id="msk6tab" data-panel="msk6" onclick="showPanel('msk','msk6',8)" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;transition:.15s;">Genou</button>
+          <button id="msk7tab" data-panel="msk7" onclick="showPanel('msk','msk7',8)" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;transition:.15s;">Cheville &amp; pied</button>
+        </div>
+
+        <div>
+          <div id="msk0" style="display:block;">
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;">
+              <div style="background:#fff7ed;border-radius:10px;padding:14px;">
+                <strong style="color:#c2410c;">👁️ Inspection &amp; palpation</strong>
+                <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>ALDO</strong> — <strong>A</strong>trophie musculaire (déchirure, atteinte neurologique) · <strong>L</strong>ésions cutanées · <strong>D</strong>éformation et posture · <strong>Œ</strong>dème (rare, l'articulation étant profonde)<br><br>🎯 Déformations parlantes : <strong>note de piano</strong> (luxation acromio-claviculaire) · <strong>perte de la rondeur du deltoïde</strong> (luxation gléno-humérale) · <strong>biceps proéminent et migré vers le bas</strong> (rupture de la longue portion)<br>Position antalgique classique : <strong>adduction et rotation interne</strong></div>
+              </div>
+              <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+                <strong style="color:#1d4ed8;">🔄 Amplitudes</strong>
+                <div style="font-size:13px;line-height:1.7;margin-top:8px;">Actives puis passives, comparées au côté sain<br><br>🎯 Rechercher un <strong>arc douloureux entre 60 et 120°</strong> → bursite sous-acromiale ou tendinopathie de la coiffe des rotateurs<br><br>Noter perte d'amplitude, douleur, sensation de blocage</div>
+              </div>
+              <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+                <strong style="color:#15803d;">🔧 Manœuvres &amp; particularités</strong>
+                <div style="font-size:13px;line-height:1.7;margin-top:8px;">Tests de la coiffe des rotateurs · tests d'accrochage (<em>impingement</em>) · stabilité gléno-humérale<br><br>💡 La <strong>protraction cervicale</strong> augmente le phénomène d'accrochage<br>Un <strong>décollement de l'omoplate</strong> évoque une parésie du dentelé antérieur</div>
+              </div>
+            </div>
+          </div>
+          <div id="msk1" style="display:none;">
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;">
+              <div style="background:#fff7ed;border-radius:10px;padding:14px;">
+                <strong style="color:#c2410c;">👁️ Inspection &amp; palpation</strong>
+                <div style="font-size:13px;line-height:1.7;margin-top:8px;">Posture de la tête · alignement · contractures paravertébrales · palpation des épineuses et des masses musculaires</div>
+              </div>
+              <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+                <strong style="color:#1d4ed8;">🔄 Amplitudes</strong>
+                <div style="font-size:13px;line-height:1.7;margin-top:8px;">Flexion, extension, rotations et inclinaisons latérales — comparer les deux côtés</div>
+              </div>
+              <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+                <strong style="color:#15803d;">🔧 Manœuvres &amp; particularités</strong>
+                <div style="font-size:13px;line-height:1.7;margin-top:8px;">🚨 <strong>En contexte traumatique, immobiliser avant de mobiliser</strong> · examen neurologique des membres supérieurs (force, réflexes, sensibilité par dermatome)<br>Signes de myélopathie</div>
+              </div>
+            </div>
+          </div>
+          <div id="msk2" style="display:none;">
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;">
+              <div style="background:#fff7ed;border-radius:10px;padding:14px;">
+                <strong style="color:#c2410c;">👁️ Inspection &amp; palpation</strong>
+                <div style="font-size:13px;line-height:1.7;margin-top:8px;">ALDO · repères osseux (épicondyles, olécrâne) · épanchement · nodules</div>
+              </div>
+              <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+                <strong style="color:#1d4ed8;">🔄 Amplitudes</strong>
+                <div style="font-size:13px;line-height:1.7;margin-top:8px;">Flexion-extension · pronation-supination</div>
+              </div>
+              <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+                <strong style="color:#15803d;">🔧 Manœuvres &amp; particularités</strong>
+                <div style="font-size:13px;line-height:1.7;margin-top:8px;">Épicondylite latérale et médiale · palpation du nerf ulnaire dans sa gouttière</div>
+              </div>
+            </div>
+          </div>
+          <div id="msk3" style="display:none;">
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;">
+              <div style="background:#fff7ed;border-radius:10px;padding:14px;">
+                <strong style="color:#c2410c;">👁️ Inspection &amp; palpation</strong>
+                <div style="font-size:13px;line-height:1.7;margin-top:8px;">ALDO · déformations articulaires · <strong>amyotrophie thénarienne</strong> · nodules (Heberden en IPD, Bouchard en IPP)</div>
+              </div>
+              <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+                <strong style="color:#1d4ed8;">🔄 Amplitudes</strong>
+                <div style="font-size:13px;line-height:1.7;margin-top:8px;">Flexion-extension, déviations, opposition du pouce · préhension</div>
+              </div>
+              <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+                <strong style="color:#15803d;">🔧 Manœuvres &amp; particularités</strong>
+                <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Tinel</strong> et <strong>Phalen</strong> (canal carpien) · test de Finkelstein (De Quervain)<br>🎯 <strong>Le patron d'atteinte oriente</strong> : MCP et IPP symétriques → PAR · IPD → arthrose ou rhumatisme psoriasique<br>➜ <em>Polyarthrite rhumatoïde</em></div>
+              </div>
+            </div>
+          </div>
+          <div id="msk4" style="display:none;">
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;">
+              <div style="background:#fff7ed;border-radius:10px;padding:14px;">
+                <strong style="color:#c2410c;">👁️ Inspection &amp; palpation</strong>
+                <div style="font-size:13px;line-height:1.7;margin-top:8px;">Posture · courbures (cyphose, <strong>scoliose</strong>) · contracture paravertébrale · palpation des épineuses</div>
+              </div>
+              <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+                <strong style="color:#1d4ed8;">🔄 Amplitudes</strong>
+                <div style="font-size:13px;line-height:1.7;margin-top:8px;">Flexion, extension, inclinaisons, rotations<br>Test de <strong>Schöber</strong> si suspicion de spondylarthrite</div>
+              </div>
+              <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+                <strong style="color:#15803d;">🔧 Manœuvres &amp; particularités</strong>
+                <div style="font-size:13px;line-height:1.7;margin-top:8px;">🚨 <strong>Chercher les drapeaux rouges de la lombalgie</strong> : déficit neurologique, <strong>syndrome de la queue de cheval</strong> (anesthésie en selle, rétention urinaire), fièvre, perte de poids, cancer connu<br><strong>Lasègue</strong> · examen neurologique des membres inférieurs<br>➜ <em>Spondylarthrites</em></div>
+              </div>
+            </div>
+          </div>
+          <div id="msk5" style="display:none;">
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;">
+              <div style="background:#fff7ed;border-radius:10px;padding:14px;">
+                <strong style="color:#c2410c;">👁️ Inspection &amp; palpation</strong>
+                <div style="font-size:13px;line-height:1.7;margin-top:8px;">ALDO · démarche · <strong>Trendelenburg</strong> · inégalité de longueur des membres</div>
+              </div>
+              <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+                <strong style="color:#1d4ed8;">🔄 Amplitudes</strong>
+                <div style="font-size:13px;line-height:1.7;margin-top:8px;">Flexion, extension, abduction, adduction, rotations interne et externe<br>💡 La <strong>rotation interne</strong> est souvent limitée en premier dans la coxarthrose</div>
+              </div>
+              <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+                <strong style="color:#15803d;">🔧 Manœuvres &amp; particularités</strong>
+                <div style="font-size:13px;line-height:1.7;margin-top:8px;">FABER (sacro-iliaque) · FADIR (conflit fémoro-acétabulaire)<br>🚨 <strong>Douleur à l'aine</strong> = hanche · douleur latérale = souvent bursite trochantérienne<br>⚠️ Une douleur au genou peut être <strong>référée de la hanche</strong></div>
+              </div>
+            </div>
+          </div>
+          <div id="msk6" style="display:none;">
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;">
+              <div style="background:#fff7ed;border-radius:10px;padding:14px;">
+                <strong style="color:#c2410c;">👁️ Inspection &amp; palpation</strong>
+                <div style="font-size:13px;line-height:1.7;margin-top:8px;">ALDO · épanchement (choc rotulien, signe du flot) · axe (varus, valgus) · amyotrophie du quadriceps<br><strong>Démarche</strong> : boiterie, capacité de mise en charge</div>
+              </div>
+              <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+                <strong style="color:#1d4ed8;">🔄 Amplitudes</strong>
+                <div style="font-size:13px;line-height:1.7;margin-top:8px;">Flexion-extension · rechercher un flexum<br>Stabilité en varus et valgus</div>
+              </div>
+              <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+                <strong style="color:#15803d;">🔧 Manœuvres &amp; particularités</strong>
+                <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Tiroir antérieur</strong> et <strong>Lachman</strong> (LCA) · McMurray (ménisques)<br><br>🚨 <strong>Critères d'Ottawa du genou</strong> — radiographie si <strong>au moins un</strong> : âge ≥ 55 ans · douleur à la palpation de la <strong>tête de la fibula</strong> · douleur <strong>isolée à la rotule</strong> · incapacité de fléchir à <strong>90°</strong> · incapacité de faire <strong>4 pas</strong><br><br>⚠️ Signes de gravité faisant suspecter une fracture : gonalgie sévère, incapacité de bouger le membre, <strong>gonflement rapide</strong>, sensation d'instabilité, appréhension excessive à l'examen</div>
+              </div>
+            </div>
+          </div>
+          <div id="msk7" style="display:none;">
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;">
+              <div style="background:#fff7ed;border-radius:10px;padding:14px;">
+                <strong style="color:#c2410c;">👁️ Inspection &amp; palpation</strong>
+                <div style="font-size:13px;line-height:1.7;margin-top:8px;">ALDO · œdème · voûte plantaire · déformations (hallux valgus) · état de la peau et des ongles (<strong>pied diabétique</strong>)</div>
+              </div>
+              <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+                <strong style="color:#1d4ed8;">🔄 Amplitudes</strong>
+                <div style="font-size:13px;line-height:1.7;margin-top:8px;">Flexion dorsale et plantaire · inversion, éversion · articulations métatarsophalangiennes</div>
+              </div>
+              <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+                <strong style="color:#15803d;">🔧 Manœuvres &amp; particularités</strong>
+                <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Critères d'Ottawa de la cheville</strong> avant radiographie<br>Test de Thompson (tendon d'Achille)<br>🚨 <strong>Chez la personne diabétique</strong> : monofilament, pouls pédieux, inspection des espaces interdigitaux<br>➜ <em>Diabète</em></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block flag" style="margin-top:14px;">
+        <div class="block-title" id="exp-pop"><span class="tag">👶 Populations particulières</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">🎯 Vos manuels consacrent une section distincte à quatre populations, parce que <strong>les normes et les pièges y changent</strong> — pas seulement les valeurs. <span style="font-size:11px;color:#64748b;">📚 <em>GPHC — Habiletés cliniques, ch. 3, p. 120-127</em></span></div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;margin-top:12px;">
+          <div style="background:#fef2f2;border-radius:10px;padding:14px;">
+            <strong style="color:#c0392b;">👴 Personne âgée</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🚨 <strong>Les pièges tensionnels</strong> — effet du sarrau blanc, <strong>pseudohypertension</strong> (manœuvre d'Osler), <strong>différence fréquente entre les deux bras</strong>, <strong>trou auscultatoire</strong>, <strong>hypotension orthostatique très fréquente</strong><br><strong>Fréquence cardiaque</strong> — s'accélère <strong>moins à l'effort</strong><br><strong>Respiration de Cheyne-Stokes</strong> possible et physiologique<br><strong>Apparence</strong> — niveau d'hygiène, autonomie, incontinence<br>🎯 Ajouter <strong>mobilité, cognition, sensoriel, peau</strong><br>➜ <em>Évaluation gériatrique</em>, <em>Chutes</em></div>
+          </div>
+          <div style="background:#eff6ff;border-radius:10px;padding:14px;">
+            <strong style="color:#1d4ed8;">🧒 Pédiatrique</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Observer avant de toucher</strong> — activité spontanée, réactivité à l'environnement, confort, tonus<br><strong>Paramètres de croissance</strong> — taille, poids et <strong>périmètre crânien</strong> (mesuré habituellement jusqu'à 18 mois), reportés sur les courbes<br>Adapter l'ordre : garder les manœuvres désagréables (gorge, oreilles) <strong>pour la fin</strong><br>Examiner dans les bras du parent quand c'est possible</div>
+          </div>
+          <div style="background:#f5f3ff;border-radius:10px;padding:14px;">
+            <strong style="color:#6d28d9;">👶 Nouveau-né</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Activité motrice spontanée</strong> — mouvements de flexion et d'extension des quatre membres · <strong>symétrie</strong> de la position<br><strong>Décrire les pleurs</strong> — fréquence, absence, moment de survenue<br><strong>Mesures</strong> — poids, taille, périmètre crânien<br>Fontanelles · réflexes archaïques · <strong>manœuvres de hanche</strong> (Ortolani, Barlow)</div>
+          </div>
+          <div style="background:#fdf2f8;border-radius:10px;padding:14px;">
+            <strong style="color:#9d174d;">🤰 Femme enceinte</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Hauteur utérine</strong> · <strong>cœur fœtal</strong> · présentation<br>Œdèmes · tension artérielle (<strong>prééclampsie</strong>) · réflexes<br>⚠️ <strong>Décubitus latéral gauche</strong> après le 2<sup>e</sup> trimestre — le décubitus dorsal comprime la veine cave<br>➜ <em>Grossesse</em></div>
+          </div>
+        </div>
+      </div>
+
+<div class="block rx" style="margin-top:14px;border-left-color:#15803d;">
         <div class="block-title" id="exp-9"><span class="tag">🎯 Cibler l'examen — et le documenter</span></div>
 
         <div class="key-fact green" style="margin-top:10px;">🎯 <strong>L'examen physique n'est pas un rituel exhaustif : c'est un TEST de vos hypothèses.</strong> On examine ce qui peut faire changer d'avis. Un examen « complet » fait sans question précise est long, fatigant et pauvre en information.</div>
@@ -55397,7 +55627,7 @@ const SEARCH_INDEX = [
   { id:'home',                title:'Accueil',                        specialty:'',               keywords:['accueil'] },
     { id:'entrevue',            title:'L\'Entrevue Médicale',            specialty:'Méthode clinique',  keywords:['entrevue','entrevue médicale','communication','accueil','contrat initial','question ouverte','question fermée','écoute active','silence','empathie','reformulation','résumé','clarification','mccp','méthode clinique centrée sur le patient','motif de consultation','histoire de la maladie actuelle','hma','caractériser un symptôme','mode d apparition','revue des systèmes','habitudes de vie','antécédents','mauvaise nouvelle','annonce','colère','interprète','filet de sécurité','reconsulter','gphc','démarche clinique'] },
     { id:'questionnaire',       title:'Le Questionnaire',               specialty:'Méthode clinique',  keywords:['questionnaire','pqrst','pqrstu','provoqué','pallié','qualité','quantité','région','irradiation','symptômes associés','temps','ample','allergies','dernier repas','last meal','événements','revue des systèmes','tête aux pieds','antécédents','gtpal','cage','paquets-année','habitudes de vie','anamnèse','questionnaire ciblé','être concis','question ouverte','drapeau rouge','4 p','gphc','démarche clinique'] },
-  { id:'examen-physique',     title:'L\'Examen Physique',              specialty:'Méthode clinique',  keywords:['examen physique','megacv','inspection','palpation','percussion','auscultation','signes vitaux','fram','pouls','brassard','tension artérielle','pseudohypertension','osler','trou auscultatoire','hypotension orthostatique','choc apexien','foyer aortique','foyer pulmonaire','tricuspidien','turgescence jugulaire','murmure vésiculaire','vibrations vocales','matité','tympanisme','crépitants','défense','ressaut','péristaltisme','échographie ciblée','ecc','réflexe ostéotendineux','dermatome','romberg','démarche','gphc','démarche clinique'] },
+  { id:'examen-physique',     title:'L\'Examen Physique',              specialty:'Méthode clinique',  keywords:['examen physique','megacv','inspection','palpation','percussion','auscultation','signes vitaux','fram','pouls','brassard','tension artérielle','pseudohypertension','osler','trou auscultatoire','hypotension orthostatique','choc apexien','foyer aortique','foyer pulmonaire','tricuspidien','turgescence jugulaire','murmure vésiculaire','vibrations vocales','matité','tympanisme','crépitants','défense','ressaut','péristaltisme','échographie ciblée','ecc','réflexe ostéotendineux','dermatome','romberg','démarche','gphc','démarche clinique','aseptic','examen mental','apparence','affect','humeur','hallucination','délire','insight','aldo','ottawa','critères d ottawa','lachman','tiroir antérieur','mcmurray','tinel','phalen','finkelstein','schöber','lasègue','trendelenburg','faber','fadir','arc douloureux','note de piano','snellen','dpar','papillœdème','virchow','adénopathie sus-claviculaire','kussmaul','cheyne-stokes','tvc','reflux hépato-jugulaire','hippocratisme','ortolani','barlow','périmètre crânien','hauteur utérine','examens régionaux'] },
 { id:'raisonnement',        title:'Le Raisonnement Clinique',       specialty:'Méthode clinique',  keywords:['raisonnement clinique','hypothèse','hypothèse diagnostique','générer des hypothèses','schéma de classification','liste apprise par coeur','pensée dispersée','présentation typique','prototype','mode de présentation','localisation anatomique','identifier la victime','transformation sémantique','donnée discriminante','drapeau rouge','diagnostic dangereux','biais cognitif','ancrage','fermeture prématurée','biais de confirmation','représentativité','disponibilité','heuristique','métacognition','script clinique','surcharge cognitive','démarche clinique'] },
 { id:'calculateurs',        title:'Calculateurs & Outils',          specialty:'',               keywords:['calculateur','score','framingham','cha2ds2','has-bled','wells','grace','timi','nihss','curb','meld'] },
     { id:'ecg',                 title:'ECG — Lecture systématique',     specialty:'Cardiologie',     keywords:['ecg','électrocardiogramme','tracé','grille','calibration','25 mm/s','petit carreau','rythme sinusal','fréquence cardiaque','1500','300 150 100','intervalle pr','qrs','qt','qtc','bazett','torsade de pointes','axe qrs','déviation axiale','di','avf','progression onde r','transition','territoire','antéroseptal','antéro-apical','antérolatéral','inférieur','postérieur','iva','interventriculaire antérieure','lad','circonflexe','coronaire droite','sus-décalage','sous-décalage','stemi','image en miroir','onde q','onde t hyperaiguë','bav','wenckebach','mobitz','bloc auriculoventriculaire','bloc de branche','bbg','bbd','oreilles de lapin','hypertrophie','lilly'] },
