@@ -36843,6 +36843,7 @@ function switchEpiTx(n) {
       <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;">
         <button onclick="goToBlock('som-1')" style="background:#4c1d95;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🌗 Sommeil normal &amp; vieillissement</button>
         <button onclick="goToBlock('som-2')" style="background:#0369a1;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">📋 Définir l'insomnie chronique</button>
+        <button onclick="goToBlock('som-2b')" style="background:#0e7490;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧩 SAHOS · TCSP · SJSR</button>
         <button onclick="goToBlock('som-3')" style="background:#b45309;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🔎 Évaluer &amp; différencier</button>
         <button onclick="goToBlock('som-4')" style="background:#0a7a4e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🪜 L'approche en 4 étapes</button>
         <button onclick="goToBlock('som-5')" style="background:#15803d;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧠 La TCC-I</button>
@@ -36864,6 +36865,107 @@ function switchEpiTx(n) {
         <p style="font-size:13px;color:#475569;">Le sommeil physiologique de l&#39;adulte comporte <strong>quatre stades</strong> : trois de sommeil lent — <strong>N1</strong> (léger), <strong>N2</strong> (intermédiaire), <strong>N3</strong> (profond, à ondes lentes) — et le <strong>sommeil paradoxal</strong> (REM), défini par une activité neuronale rapide et désynchronisée. <span style="font-size:11px;color:#64748b;">📚 <em>Précis de gériatrie — Troubles du sommeil</em></span></p>
 
         <div class="key-fact ink" style="margin-top:10px;">📊 <strong>Répartition chez l&#39;adulte d&#39;âge moyen.</strong> Le <strong>stade N2 occupe près de 50 %</strong> du sommeil total, tandis que le <strong>N3 et le paradoxal en représentent chacun environ 20 %</strong>. C&#39;est surtout le N3 qui va souffrir avec l&#39;âge.</div>
+        <!-- ── figure : hypnogramme comparatif ── -->
+        <div style="background:#faf5ff;border:1px solid #ddd6fe;border-radius:12px;padding:14px;margin-top:14px;">
+          <div style="font-size:12px;font-weight:800;color:#6d28d9;letter-spacing:.4px;margin-bottom:8px;">HYPNOGRAMME COMPARATIF — UNE MÊME NUIT, DEUX ARCHITECTURES</div>
+          <svg viewBox="0 0 800 458" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;background:#fdfdfd;border-radius:10px;" role="img" aria-label="Hypnogramme comparant le sommeil du jeune adulte et de la personne âgée">
+          <title>Sommeil normal et effet du vieillissement</title>
+          <rect x="100" y="34" width="11" height="11" rx="3" fill="#1d4ed8"/>
+          <text x="118" y="44" font-size="14" font-weight="700" fill="#1d4ed8">Jeune adulte — couché 22 h 30, levé 7 h</text>
+          <rect x="100" y="224" width="11" height="11" rx="3" fill="#b45309"/>
+          <text x="118" y="234" font-size="14" font-weight="700" fill="#b45309">Personne âgée — couché 21 h 30, levé 5 h 30</text>
+          <line x1="100.0" y1="78.0" x2="740.0" y2="78.0" stroke="#e2e8f0" stroke-width="1"/>
+          <text x="92" y="81.5" font-size="10" fill="#64748b" text-anchor="end">Éveil</text>
+          <line x1="100.0" y1="104.0" x2="740.0" y2="104.0" stroke="#e2e8f0" stroke-width="1"/>
+          <text x="92" y="107.5" font-size="10" fill="#64748b" text-anchor="end">REM</text>
+          <line x1="100.0" y1="130.0" x2="740.0" y2="130.0" stroke="#e2e8f0" stroke-width="1"/>
+          <text x="92" y="133.5" font-size="10" fill="#64748b" text-anchor="end">N1</text>
+          <line x1="100.0" y1="156.0" x2="740.0" y2="156.0" stroke="#e2e8f0" stroke-width="1"/>
+          <text x="92" y="159.5" font-size="10" fill="#64748b" text-anchor="end">N2</text>
+          <line x1="100.0" y1="182.0" x2="740.0" y2="182.0" stroke="#e2e8f0" stroke-width="1"/>
+          <text x="92" y="185.5" font-size="10" fill="#64748b" text-anchor="end">N3</text>
+          <rect x="211.7" y="177.5" width="43.6" height="9" fill="#93c5fd" opacity="0.55" rx="2"/><rect x="299.0" y="177.5" width="38.4" height="9" fill="#93c5fd" opacity="0.55" rx="2"/><rect x="400.8" y="177.5" width="19.2" height="9" fill="#93c5fd" opacity="0.55" rx="2"/>
+          <polyline points="187.3,130.0 197.2,130.0 197.2,130.0 197.2,156.0 211.7,156.0 211.7,156.0 211.7,182.0 255.3,182.0 255.3,182.0 255.3,156.0 269.9,156.0 269.9,156.0 269.9,104.0 284.4,104.0 284.4,104.0 284.4,156.0 299.0,156.0 299.0,156.0 299.0,182.0 337.4,182.0 337.4,182.0 337.4,156.0 351.9,156.0 351.9,156.0 351.9,104.0 376.4,104.0 376.4,104.0 376.4,156.0 400.8,156.0 400.8,156.0 400.8,182.0 420.0,182.0 420.0,182.0 420.0,156.0 439.2,156.0 439.2,156.0 439.2,104.0 473.5,104.0 473.5,104.0 473.5,156.0 497.4,156.0 497.4,156.0 497.4,130.0 507.3,130.0 507.3,130.0 507.3,156.0 536.4,156.0 536.4,156.0 536.4,104.0 580.0,104.0 580.0,104.0 580.0,156.0 604.4,156.0 604.4,156.0 604.4,104.0 642.8,104.0 642.8,104.0 642.8,156.0 662.6,156.0 662.6,156.0 662.6,78.0 681.8,78.0" fill="none" stroke="#1d4ed8" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+          <rect x="221.0" y="264.0" width="14.5" height="112.0" fill="#fecaca" opacity="0.5" rx="2"/><rect x="328.1" y="264.0" width="19.2" height="112.0" fill="#fecaca" opacity="0.5" rx="2"/><rect x="400.8" y="264.0" width="14.5" height="112.0" fill="#fecaca" opacity="0.5" rx="2"/><rect x="468.3" y="264.0" width="19.8" height="112.0" fill="#fecaca" opacity="0.5" rx="2"/>
+          <line x1="100.0" y1="268.0" x2="740.0" y2="268.0" stroke="#e2e8f0" stroke-width="1"/>
+          <text x="92" y="271.5" font-size="10" fill="#64748b" text-anchor="end">Éveil</text>
+          <line x1="100.0" y1="294.0" x2="740.0" y2="294.0" stroke="#e2e8f0" stroke-width="1"/>
+          <text x="92" y="297.5" font-size="10" fill="#64748b" text-anchor="end">REM</text>
+          <line x1="100.0" y1="320.0" x2="740.0" y2="320.0" stroke="#e2e8f0" stroke-width="1"/>
+          <text x="92" y="323.5" font-size="10" fill="#64748b" text-anchor="end">N1</text>
+          <line x1="100.0" y1="346.0" x2="740.0" y2="346.0" stroke="#e2e8f0" stroke-width="1"/>
+          <text x="92" y="349.5" font-size="10" fill="#64748b" text-anchor="end">N2</text>
+          <line x1="100.0" y1="372.0" x2="740.0" y2="372.0" stroke="#e2e8f0" stroke-width="1"/>
+          <text x="92" y="375.5" font-size="10" fill="#64748b" text-anchor="end">N3</text>
+          <rect x="162.8" y="367.5" width="19.8" height="9" fill="#fcd34d" opacity="0.55" rx="2"/><rect x="264.7" y="367.5" width="14.5" height="9" fill="#fcd34d" opacity="0.55" rx="2"/>
+          <polyline points="129.1,320.0 143.6,320.0 143.6,320.0 143.6,346.0 162.8,346.0 162.8,346.0 162.8,372.0 182.6,372.0 182.6,372.0 182.6,346.0 206.5,346.0 206.5,346.0 206.5,294.0 221.0,294.0 221.0,294.0 221.0,268.0 235.6,268.0 235.6,268.0 235.6,346.0 264.7,346.0 264.7,346.0 264.7,372.0 279.2,372.0 279.2,372.0 279.2,346.0 308.3,346.0 308.3,346.0 308.3,294.0 328.1,294.0 328.1,294.0 328.1,268.0 347.3,268.0 347.3,268.0 347.3,346.0 381.0,346.0 381.0,346.0 381.0,294.0 400.8,294.0 400.8,294.0 400.8,268.0 415.3,268.0 415.3,268.0 415.3,346.0 449.1,346.0 449.1,346.0 449.1,294.0 468.3,294.0 468.3,294.0 468.3,268.0 488.1,268.0 488.1,268.0 488.1,346.0 521.8,346.0 521.8,346.0 521.8,294.0 546.3,294.0 546.3,294.0 546.3,320.0 565.5,320.0 565.5,320.0 565.5,268.0 594.5,268.0" fill="none" stroke="#b45309" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+          <line x1="100.0" y1="398.0" x2="740.0" y2="398.0" stroke="#94a3b8" stroke-width="1.2"/>
+          <line x1="100.0" y1="394.0" x2="100.0" y2="402.0" stroke="#94a3b8" stroke-width="1"/>
+          <text x="100.0" y="415.0" font-size="10" fill="#64748b" text-anchor="middle">21 h</text>
+          <line x1="100.0" y1="70.0" x2="100.0" y2="190.0" stroke="#eef2f7" stroke-width="1"/>
+          <line x1="100.0" y1="260.0" x2="100.0" y2="380.0" stroke="#eef2f7" stroke-width="1"/>
+          <line x1="158.2" y1="394.0" x2="158.2" y2="402.0" stroke="#94a3b8" stroke-width="1"/>
+          <text x="158.2" y="415.0" font-size="10" fill="#64748b" text-anchor="middle">22 h</text>
+          <line x1="158.2" y1="70.0" x2="158.2" y2="190.0" stroke="#eef2f7" stroke-width="1"/>
+          <line x1="158.2" y1="260.0" x2="158.2" y2="380.0" stroke="#eef2f7" stroke-width="1"/>
+          <line x1="216.4" y1="394.0" x2="216.4" y2="402.0" stroke="#94a3b8" stroke-width="1"/>
+          <text x="216.4" y="415.0" font-size="10" fill="#64748b" text-anchor="middle">23 h</text>
+          <line x1="216.4" y1="70.0" x2="216.4" y2="190.0" stroke="#eef2f7" stroke-width="1"/>
+          <line x1="216.4" y1="260.0" x2="216.4" y2="380.0" stroke="#eef2f7" stroke-width="1"/>
+          <line x1="274.5" y1="394.0" x2="274.5" y2="402.0" stroke="#94a3b8" stroke-width="1"/>
+          <text x="274.5" y="415.0" font-size="10" fill="#64748b" text-anchor="middle">0 h</text>
+          <line x1="274.5" y1="70.0" x2="274.5" y2="190.0" stroke="#eef2f7" stroke-width="1"/>
+          <line x1="274.5" y1="260.0" x2="274.5" y2="380.0" stroke="#eef2f7" stroke-width="1"/>
+          <line x1="332.7" y1="394.0" x2="332.7" y2="402.0" stroke="#94a3b8" stroke-width="1"/>
+          <text x="332.7" y="415.0" font-size="10" fill="#64748b" text-anchor="middle">1 h</text>
+          <line x1="332.7" y1="70.0" x2="332.7" y2="190.0" stroke="#eef2f7" stroke-width="1"/>
+          <line x1="332.7" y1="260.0" x2="332.7" y2="380.0" stroke="#eef2f7" stroke-width="1"/>
+          <line x1="390.9" y1="394.0" x2="390.9" y2="402.0" stroke="#94a3b8" stroke-width="1"/>
+          <text x="390.9" y="415.0" font-size="10" fill="#64748b" text-anchor="middle">2 h</text>
+          <line x1="390.9" y1="70.0" x2="390.9" y2="190.0" stroke="#eef2f7" stroke-width="1"/>
+          <line x1="390.9" y1="260.0" x2="390.9" y2="380.0" stroke="#eef2f7" stroke-width="1"/>
+          <line x1="449.1" y1="394.0" x2="449.1" y2="402.0" stroke="#94a3b8" stroke-width="1"/>
+          <text x="449.1" y="415.0" font-size="10" fill="#64748b" text-anchor="middle">3 h</text>
+          <line x1="449.1" y1="70.0" x2="449.1" y2="190.0" stroke="#eef2f7" stroke-width="1"/>
+          <line x1="449.1" y1="260.0" x2="449.1" y2="380.0" stroke="#eef2f7" stroke-width="1"/>
+          <line x1="507.3" y1="394.0" x2="507.3" y2="402.0" stroke="#94a3b8" stroke-width="1"/>
+          <text x="507.3" y="415.0" font-size="10" fill="#64748b" text-anchor="middle">4 h</text>
+          <line x1="507.3" y1="70.0" x2="507.3" y2="190.0" stroke="#eef2f7" stroke-width="1"/>
+          <line x1="507.3" y1="260.0" x2="507.3" y2="380.0" stroke="#eef2f7" stroke-width="1"/>
+          <line x1="565.5" y1="394.0" x2="565.5" y2="402.0" stroke="#94a3b8" stroke-width="1"/>
+          <text x="565.5" y="415.0" font-size="10" fill="#64748b" text-anchor="middle">5 h</text>
+          <line x1="565.5" y1="70.0" x2="565.5" y2="190.0" stroke="#eef2f7" stroke-width="1"/>
+          <line x1="565.5" y1="260.0" x2="565.5" y2="380.0" stroke="#eef2f7" stroke-width="1"/>
+          <line x1="623.6" y1="394.0" x2="623.6" y2="402.0" stroke="#94a3b8" stroke-width="1"/>
+          <text x="623.6" y="415.0" font-size="10" fill="#64748b" text-anchor="middle">6 h</text>
+          <line x1="623.6" y1="70.0" x2="623.6" y2="190.0" stroke="#eef2f7" stroke-width="1"/>
+          <line x1="623.6" y1="260.0" x2="623.6" y2="380.0" stroke="#eef2f7" stroke-width="1"/>
+          <line x1="681.8" y1="394.0" x2="681.8" y2="402.0" stroke="#94a3b8" stroke-width="1"/>
+          <text x="681.8" y="415.0" font-size="10" fill="#64748b" text-anchor="middle">7 h</text>
+          <line x1="681.8" y1="70.0" x2="681.8" y2="190.0" stroke="#eef2f7" stroke-width="1"/>
+          <line x1="681.8" y1="260.0" x2="681.8" y2="380.0" stroke="#eef2f7" stroke-width="1"/>
+          <line x1="740.0" y1="394.0" x2="740.0" y2="402.0" stroke="#94a3b8" stroke-width="1"/>
+          <text x="740.0" y="415.0" font-size="10" fill="#64748b" text-anchor="middle">8 h</text>
+          <line x1="740.0" y1="70.0" x2="740.0" y2="190.0" stroke="#eef2f7" stroke-width="1"/>
+          <line x1="740.0" y1="260.0" x2="740.0" y2="380.0" stroke="#eef2f7" stroke-width="1"/>
+          <defs><marker id="hyp-fl" markerWidth="7" markerHeight="7" refX="5.5" refY="2.6" orient="auto"><path d="M0,0 L6,2.6 L0,5.2 z" fill="#b45309"/></marker></defs>
+          <line x1="187.3" y1="204" x2="134.9" y2="204" stroke="#b45309" stroke-width="1.8" marker-end="url(#hyp-fl)" stroke-dasharray="4 3"/>
+          <text x="201.8" y="200" font-size="11" font-weight="700" fill="#b45309">avance de phase — tout le sommeil glisse vers l&#39;avant</text>
+          <text x="100" y="442" font-size="10" fill="#64748b">Zones rouges = éveils nocturnes · barres colorées = sommeil lent profond (N3)</text>
+          </svg>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px;margin-top:12px;">
+            <div style="background:#e8f4fd;border-left:4px solid #1d4ed8;border-radius:8px;padding:12px;">
+              <strong style="color:#1d4ed8;font-size:13px;">Ce que fait le jeune adulte</strong>
+              <div style="font-size:12.5px;line-height:1.7;margin-top:6px;"><strong>4 à 5 cycles</strong> d&#39;environ <strong>90 minutes</strong><br><strong>N3 massé dans la première moitié</strong> de la nuit — 3 plages larges avant 2 h 30<br>Le <strong>sommeil paradoxal s&#39;allonge</strong> à mesure que la nuit avance<br><strong>Aucun éveil</strong> soutenu avant le réveil du matin</div>
+            </div>
+            <div style="background:#fff7ed;border-left:4px solid #b45309;border-radius:8px;padding:12px;">
+              <strong style="color:#b45309;font-size:13px;">Ce que le vieillissement en fait</strong>
+              <div style="font-size:12.5px;line-height:1.7;margin-top:6px;"><strong>N3 raccourci et aplati</strong> — deux plages étroites, disparues après minuit<br><strong>Éveils nocturnes répétés</strong> (bandes rouges) qui hachent chaque cycle<br><strong>Tout le tracé est décalé vers la gauche</strong> : coucher et lever précoces<br>Le <strong>paradoxal reste présent</strong> — c&#39;est le lent profond qui paie le prix</div>
+            </div>
+          </div>
+          <div class="key-fact yellow" style="margin-top:12px;">⏱️ <strong>Le piège de lecture, et ce qu&#39;il change au chevet.</strong> Les deux nuits totalisent un <strong>temps de sommeil comparable</strong> — le besoin passe seulement de <strong>7-9 h à 7-8 h</strong>. Ce qui a changé, ce n&#39;est pas la <em>quantité</em> mais la <strong>continuité et la profondeur</strong>. ➜ Une personne âgée qui dit « je dors mal » décrit le plus souvent cette <strong>fragmentation physiologique</strong>, pas une insomnie — d&#39;où l&#39;importance de distinguer les deux avant de prescrire quoi que ce soit.</div>
+        </div>
+
 
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;margin-top:12px;">
           <div style="background:#ede9fe;border-radius:10px;padding:14px;">
@@ -36894,15 +36996,152 @@ function switchEpiTx(n) {
         <div class="block-title" id="som-2"><span class="tag">📋 Définir l&#39;insomnie chronique</span><span class="obj-badge">Obj. 22</span></div>
         <p style="font-size:13px;color:#475569;">Quatre troubles dominent chez l&#39;aîné : <strong>l&#39;insomnie chronique</strong>, le <strong>syndrome d&#39;apnées-hypopnées</strong>, le <strong>trouble du comportement en sommeil paradoxal</strong> et le <strong>syndrome des jambes sans repos</strong>. Narcolepsie, hypersomnie idiopathique et parasomnies du sommeil lent <strong>ne débutent que très rarement</strong> au cours du vieillissement — même si elles peuvent y persister. <span style="font-size:11px;color:#64748b;">📚 <em>Précis de gériatrie — Troubles du sommeil</em></span></p>
 
+        <div class="key-fact blue" style="margin-top:12px;">📐 <strong>La règle de décision, d&#39;abord.</strong> L&#39;<strong>ICSD-3</strong> (<em>Classification internationale des troubles du sommeil</em>, AASM 2014) pose <strong>six critères</strong> pour l&#39;insomnie chronique — et ils doivent être <strong>tous les six présents</strong>. Ce ne sont pas des indices à pondérer : il en manque un, il n&#39;y a pas de diagnostic. <span style="font-size:11px;color:#64748b;">📚 <em>Précis de gériatrie, tabl. 28.1</em></span></div>
+
         <div class="criteria-list" style="margin-top:12px;">
-          <div class="criteria-item"><div class="criteria-num blue">1</div><span><strong>Une plainte</strong> — difficulté d&#39;endormissement, éveils nocturnes prolongés ou réveil trop précoce.</span></div>
-          <div class="criteria-item"><div class="criteria-num blue">2</div><span><strong>Malgré des conditions adéquates</strong> pour dormir — l&#39;occasion et l&#39;environnement sont là.</span></div>
-          <div class="criteria-item"><div class="criteria-num blue">3</div><span><strong>Un retentissement diurne</strong> — fatigue, humeur, attention, fonctionnement. <em>Sans lui, il n&#39;y a pas de trouble.</em></span></div>
-          <div class="criteria-item"><div class="criteria-num blue">4</div><span><strong>Une fréquence et une durée</strong> — le seuil de chronicité est de <strong>plus de 3 mois</strong>.</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">1</div><span><strong>Au moins une plainte nocturne</strong> parmi les trois — chacune avec son seuil :<br>&nbsp;&nbsp;• <strong>difficulté d&#39;endormissement</strong> — latence <strong>&gt; 30 minutes</strong><br>&nbsp;&nbsp;• <strong>difficulté de maintien du sommeil</strong> — éveils nocturnes totalisant <strong>&gt; 30 minutes</strong><br>&nbsp;&nbsp;• <strong>réveil matinal précoce</strong> — <strong>&gt; 30 minutes</strong> avant l&#39;heure désirée</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">2</div><span><strong>Au moins une plainte diurne</strong> parmi neuf, <strong>en relation avec la difficulté de sommeil</strong> : fatigue ou malaise · trouble d&#39;attention, de concentration ou de mémoire · impact négatif sur le fonctionnement social, familial, professionnel ou scolaire · trouble de l&#39;humeur ou irritabilité · somnolence diurne · troubles comportementaux (hyperactivité, impulsivité, agressivité) · baisse de motivation et d&#39;énergie · propension à faire des erreurs ou des accidents · inquiétude ou manque de satisfaction par rapport au sommeil</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">3</div><span>Ces plaintes <strong>ne s&#39;expliquent pas entièrement</strong> par un <strong>manque d&#39;opportunité de sommeil</strong> ni par un <strong>environnement inadéquat</strong>.</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">4</div><span>Difficultés et plaintes diurnes surviennent <strong>au moins 3 fois par semaine</strong>.</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">5</div><span>Elles sont présentes <strong>depuis au moins 3 mois</strong>.</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">6</div><span>Elles ne sont <strong>pas davantage expliquées par un autre trouble du sommeil</strong> — d&#39;où l&#39;encadré suivant, qui donne les critères des trois autres.</span></div>
         </div>
 
-        <div class="key-fact yellow" style="margin-top:12px;">⚖️ <strong>Le critère qui départage le plus souvent.</strong> Beaucoup d&#39;aînés dorment moins qu&#39;avant sans en souffrir le jour : ce n&#39;est pas de l&#39;insomnie. La plainte nocturne <strong>sans retentissement diurne</strong> relève de l&#39;information et de la réassurance, pas de l&#39;ordonnance. Inversement, une somnolence diurne marquée fait chercher <strong>autre chose qu&#39;une insomnie</strong> — apnée du sommeil en tête.</div>
+        <div class="key-fact yellow" style="margin-top:12px;">⚖️ <strong>Le critère qui départage le plus souvent — le n<sup>o</sup> 2.</strong> Beaucoup d&#39;aînés dorment moins qu&#39;avant sans en souffrir le jour : ils satisfont le critère 1 mais <strong>pas le 2</strong>, et n&#39;ont donc <strong>pas d&#39;insomnie chronique</strong> — seulement des <strong>symptômes d&#39;insomnie isolés</strong>. La distinction est capitale chez la personne âgée, où le vieillissement normal du sommeil produit très souvent des symptômes <strong>sans l&#39;impact diurne requis</strong>. ➜ Plainte nocturne sans retentissement diurne = information et réassurance, <strong>pas d&#39;ordonnance</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Précis de gériatrie, tabl. 28.1</em></span></div>
+
+        <div class="key-fact ink" style="margin-top:10px;">📊 <strong>Deux repères de fréquence pour situer votre patient.</strong> Environ <strong>30 % de la population générale</strong> rapporte des symptômes d&#39;insomnie, mais la prévalence de l&#39;<strong>insomnie chronique ainsi définie est d&#39;environ 10 %</strong>. Chez les <strong>plus de 65 ans, près de la moitié</strong> présentent des <em>symptômes</em> d&#39;insomnie — d&#39;où l&#39;écart considérable entre « se plaindre de son sommeil » et « avoir une insomnie chronique ». L&#39;insomnie est <strong>deux fois plus fréquente chez la femme</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Précis de gériatrie, tabl. 28.1</em></span></div>
       </div>
+
+      <!-- ═══ som-2b ═══ -->
+      <div class="block clin" style="margin-top:14px;border-left-color:#0e7490;">
+        <div class="block-title" id="som-2b"><span class="tag">🧩 Les trois autres troubles — critères &amp; seuils</span><span class="obj-badge">Obj. 22</span></div>
+        <p style="font-size:13px;color:#475569;">Le critère 6 de l&#39;insomnie chronique oblige à écarter les autres troubles du sommeil. Voici donc, pour chacun des trois qui comptent chez l&#39;aîné, <strong>ce qu&#39;il faut trouver, combien d&#39;éléments sont exigés, et à quel seuil</strong>.</p>
+
+        <div class="key-fact orange" style="margin-top:12px;">⚠️ <strong>Provenance — à lire avant de vous en servir.</strong> Le chapitre 28 du <strong>Précis</strong> que vous avez traite <strong>l&#39;insomnie</strong> ; il nomme les trois autres troubles sans en donner les critères. Ceux ci-dessous viennent donc : pour le <strong>SAHOS</strong>, de <strong>vos propres notes de cours</strong> ; pour le <strong>TCSP</strong> et le <strong>SJSR</strong>, de <strong>Goldman-Cecil ch. 377</strong>. Les éléments qui ne figurent dans <em>aucune</em> de vos sources — seuils de sévérité de l&#39;IAH, seuils des questionnaires de dépistage, bilan martial du SJSR — sont <strong>signalés un à un</strong> dans le texte. Confirmer auprès du polysomnographiste de votre milieu avant de conclure.</div>
+
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;">
+          <button data-panel="somdx0" onclick="showPanel('somdx','somdx0',3)" style="background:#0e7490;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;transition:.15s;">😮‍💨 SAHOS</button>
+          <button data-panel="somdx1" onclick="showPanel('somdx','somdx1',3)" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;transition:.15s;">🥊 TCSP</button>
+          <button data-panel="somdx2" onclick="showPanel('somdx','somdx2',3)" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;transition:.15s;">🦵 Jambes sans repos</button>
+        </div>
+
+        <!-- ── SAHOS ── -->
+        <div id="somdx0" style="margin-top:14px;">
+          <div class="key-fact blue">📐 <strong>La règle de décision.</strong> Le diagnostic exige <strong>un critère clinique (A) ET un critère polysomnographique (B)</strong> — <strong>sauf</strong> si l&#39;IAH atteint 15, auquel cas le critère B suffit à lui seul. Formellement : <strong>A + B avec IAH ≥ 5/h</strong>, <strong>ou</strong> <strong>B seul avec IAH ≥ 15/h</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Vos notes — Apnée du sommeil</em></span></div>
+
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;margin-top:12px;">
+            <div style="background:#e8f4fd;border-left:4px solid #1d4ed8;border-radius:10px;padding:14px;">
+              <strong style="color:#1d4ed8;">A — au moins UN élément clinique</strong>
+              <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Plainte</strong> de somnolence diurne excessive, de sommeil non réparateur, de fatigue ou d&#39;insomnie<br><strong>Réveils nocturnes fréquents</strong>, parfois avec sensation d&#39;étouffement ou de suffocation<br><strong>Ronflements intenses</strong> ou respiration irrégulière observée par un tiers<br><strong>Comorbidité associée</strong> — HTA, trouble de l&#39;humeur, déficit cognitif, maladie coronarienne, AVC, insuffisance cardiaque, fibrillation auriculaire, diabète de type 2</div>
+            </div>
+            <div style="background:#f0fdf4;border-left:4px solid #15803d;border-radius:10px;padding:14px;">
+              <strong style="color:#15803d;">B — la mise en évidence objective</strong>
+              <div style="font-size:13px;line-height:1.7;margin-top:8px;">Par <strong>polysomnographie (PSG)</strong> ou <strong>polygraphie cardiorespiratoire simplifiée (PCRS)</strong> :<br><strong>IAH ≥ 15 événements/heure</strong> — suffit <strong>même sans aucun symptôme</strong><br><strong>ou IAH ≥ 5 événements/heure</strong> — mais alors <strong>il faut un élément de A</strong><br><br>⚠️ La <strong>PCRS</strong> se fait à domicile et est <strong>moins fiable</strong> : sans EEG, elle rapporte les événements sur le <strong>temps total d&#39;enregistrement</strong> et non sur le <strong>temps réel de sommeil</strong> — elle <strong>sous-estime</strong> donc l&#39;IAH.</div>
+            </div>
+          </div>
+
+          <div style="font-size:12px;font-weight:800;color:#0e7490;margin-top:16px;letter-spacing:.4px;">CE QU&#39;ON COMPTE — DÉFINIR L&#39;ÉVÉNEMENT AVANT DE COMPTER LES ÉVÉNEMENTS</div>
+          <div style="overflow-x:auto;margin-top:10px;">
+          <table style="font-size:12px;">
+            <thead><tr><th style="width:18%;">Événement</th><th style="width:44%;">Définition chiffrée</th><th>Ce qui le valide</th></tr></thead>
+            <tbody>
+              <tr style="background:#e0f2fe;"><td><strong>Apnée</strong></td><td><strong>Arrêt respiratoire d&#39;au moins 10 secondes</strong></td><td rowspan="2">Accompagné d&#39;une <strong>désaturation de 3 à 4 %</strong> en O₂ — c&#39;est la désaturation qui fait qu&#39;un événement est comptabilisé</td></tr>
+              <tr style="background:#f8f9fa;"><td><strong>Hypopnée</strong></td><td>Respiration superficielle — <strong>réduction du débit aérien de 30 à 90 %</strong>, également <strong>≥ 10 secondes</strong></td></tr>
+              <tr><td><strong>IAH</strong></td><td>Somme des apnées + hypopnées <strong>divisée par le nombre d&#39;heures</strong></td><td>C&#39;est le chiffre du critère B</td></tr>
+            </tbody>
+          </table>
+          </div>
+
+          <div class="key-fact orange" style="margin-top:12px;">🔢 <strong>Les seuils de sévérité — hors de vos documents.</strong> Vos notes précisent que la sévérité dépend de <strong>deux choses : la somnolence et l&#39;IAH</strong>, sans donner les bornes de l&#39;IAH. Les bornes conventionnelles de l&#39;<strong>AASM</strong> sont ci-dessous — <strong>elles ne figurent dans aucune de vos sources</strong>, à confirmer. ⚠️ La sévérité <strong>clinique</strong> ne se lit jamais sur l&#39;IAH seul : un IAH de 12 avec somnolence au volant est plus préoccupant qu&#39;un IAH de 35 asymptomatique.</div>
+
+          <div class="stat-row" style="margin-top:10px;">
+            <div class="stat-card green"><div style="font-size:15px;font-weight:800;">IAH 5 – 15</div><div style="font-size:11px;margin-top:4px;">Léger</div></div>
+            <div class="stat-card yellow"><div style="font-size:15px;font-weight:800;">IAH 15 – 30</div><div style="font-size:11px;margin-top:4px;">Modéré</div></div>
+            <div class="stat-card red"><div style="font-size:15px;font-weight:800;">IAH &gt; 30</div><div style="font-size:11px;margin-top:4px;">Sévère</div></div>
+          </div>
+
+          <div style="font-size:12px;font-weight:800;color:#0e7490;margin-top:16px;letter-spacing:.4px;">LES DEUX OUTILS DE DÉPISTAGE — ET CE QU&#39;ILS NE FONT PAS</div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;margin-top:10px;">
+            <div style="background:#fff3cd;border-radius:10px;padding:14px;">
+              <strong style="color:#d35400;">🛑 STOP-BANG — le risque d&#39;en avoir un</strong>
+              <div style="font-size:13px;line-height:1.75;margin-top:8px;"><strong>S</strong>norting — <strong>ronflements</strong> intenses<br><strong>T</strong>ired — <strong>fatigue</strong> ou somnolence diurne<br><strong>O</strong>bserved — <strong>apnées observées</strong> par un tiers<br><strong>P</strong>ressure — <strong>HTA</strong> traitée ou non<br><strong>B</strong>MI — <strong>IMC &gt; 28 kg/m²</strong> <em>(seuil de vos notes ; la version publiée utilise &gt; 35)</em><br><strong>A</strong>ge — <strong>&gt; 50 ans</strong><br><strong>N</strong>eck — tour de cou <strong>&gt; 43 cm chez l&#39;homme, &gt; 41 cm chez la femme</strong><br><strong>G</strong>ender — <strong>sexe masculin</strong><br><br>🔢 <strong>Seuils — hors de vos documents</strong> : <strong>0-2 = risque faible · 3-4 = risque intermédiaire · 5-8 = risque élevé</strong>. <em>Vos notes indiquent « oui à 2 items = risque » — écart à valider.</em> <span style="font-size:11px;color:#64748b;">📚 <em>Vos notes — Apnée du sommeil</em></span></div>
+            </div>
+            <div style="background:#ede9fe;border-radius:10px;padding:14px;">
+              <strong style="color:#6d28d9;">😴 Échelle d&#39;Epworth — la somnolence, pas l&#39;apnée</strong>
+              <div style="font-size:13px;line-height:1.75;margin-top:8px;"><strong>8 situations</strong> de la vie courante, cotées de <strong>0 (aucune chance de s&#39;assoupir) à 3 (forte chance)</strong> → score de <strong>0 à 24</strong>.<br><strong>Seuil usuel : &gt; 10 = somnolence diurne excessive</strong> <em>(seuil hors de vos documents)</em><br><br>⚠️ <strong>Ce qu&#39;elle ne fait pas.</strong> Epworth mesure la <strong>somnolence</strong>, quelle qu&#39;en soit la cause — elle ne dépiste <em>pas</em> l&#39;apnée. Un score normal <strong>n&#39;écarte pas</strong> un SAHOS, fréquemment peu somnolent chez l&#39;aîné. <span style="font-size:11px;color:#64748b;">📚 <em>Vos notes — Apnée du sommeil</em></span></div>
+            </div>
+          </div>
+
+          <div class="key-fact red" style="margin-top:12px;">🚗 <strong>Le seul chiffre qui engage votre responsabilité.</strong> Le <strong>risque d&#39;accident de la route est augmenté dans les formes modérées et sévères</strong>. Devant une somnolence au volant, la question de la conduite se pose <strong>avant</strong> même que la polysomnographie soit faite. <span style="font-size:11px;color:#64748b;">📚 <em>Vos notes — Apnée du sommeil</em></span></div>
+        </div>
+
+        <!-- ── TCSP ── -->
+        <div id="somdx1" style="display:none;margin-top:14px;">
+          <div class="key-fact blue">📐 <strong>La règle de décision.</strong> Le diagnostic repose sur <strong>deux piliers obligatoires, tous deux requis</strong> : <strong>① une histoire de mise en acte des rêves</strong> et <strong>② la démonstration polysomnographique d&#39;une activité électromyographique excessive pendant le sommeil paradoxal</strong> — c&#39;est-à-dire la <strong>perte de l&#39;atonie musculaire</strong> normalement obligatoire en REM. L&#39;histoire seule ne suffit pas : elle rend le diagnostic <em>probable</em>, la PSG le confirme. <span style="font-size:11px;color:#64748b;">📚 <em>Goldman-Cecil, 26<sup>e</sup> éd., ch. 377</em></span></div>
+
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:12px;">
+            <div style="background:#fce4ec;border-radius:10px;padding:14px;">
+              <strong style="color:#c0392b;">🥊 Le tableau clinique</strong>
+              <div style="font-size:13px;line-height:1.7;margin-top:8px;">La personne <strong>perd l&#39;atonie du sommeil paradoxal</strong> et <strong>met ses rêves en acte</strong> — parfois en <strong>se blessant ou en blessant son conjoint</strong><br>Activité motrice <strong>non stéréotypée</strong><br><strong>Rappel vif du rêve</strong>, qui correspond au comportement observé<br>Épisodes <strong>multiples</strong>, typiquement dans la <strong>seconde moitié de la nuit</strong></div>
+            </div>
+            <div style="background:#fff3cd;border-radius:10px;padding:14px;">
+              <strong style="color:#d35400;">💊 Ce qui peut le provoquer</strong>
+              <div style="font-size:13px;line-height:1.7;margin-top:8px;">Avant de conclure à une forme idiopathique, chercher un déclencheur médicamenteux :<br><strong>Antidépresseurs tricycliques</strong><br><strong>IMAO</strong><br><strong>ISRS</strong><br><br>➜ Voir aussi le <strong>répertoire</strong> : doxépine et trazodone peuvent <strong>exacerber</strong> un TCSP.</div>
+            </div>
+            <div style="background:#ede9fe;border-radius:10px;padding:14px;">
+              <strong style="color:#6d28d9;">⏳ Pourquoi le chercher</strong>
+              <div style="font-size:13px;line-height:1.7;margin-top:8px;">Le TCSP chronique est lié aux <strong>synucléinopathies</strong> — maladie de Parkinson, démence à corps de Lewy, atrophie multisystématisée<br><strong>Jusqu&#39;à 80 %</strong> des personnes atteintes développeront l&#39;une des trois<br>Il peut les <strong>précéder de plus de 30 ans</strong><br>➜ <em>Troubles neurocognitifs</em></div>
+            </div>
+          </div>
+
+          <div style="font-size:12px;font-weight:800;color:#0e7490;margin-top:16px;letter-spacing:.4px;">LES DEUX ERREURS À ÉCARTER — CE SONT ELLES QUI FONT LE DIAGNOSTIC DIFFÉRENTIEL</div>
+          <div style="overflow-x:auto;margin-top:10px;">
+          <table style="font-size:12px;">
+            <thead><tr><th style="width:22%;">Élément</th><th style="width:26%;">TCSP</th><th style="width:26%;">Parasomnie du sommeil lent<br><em>(somnambulisme, terreurs)</em></th><th>Crise épileptique</th></tr></thead>
+            <tbody>
+              <tr style="background:#f8f9fa;"><td><strong>Âge de début</strong></td><td><strong>Âge adulte avancé</strong></td><td>Enfance le plus souvent</td><td>Tout âge</td></tr>
+              <tr><td><strong>Moment de la nuit</strong></td><td><strong>Seconde moitié</strong> — le REM y prédomine</td><td><strong>Premier tiers</strong> — le N3 y prédomine</td><td>Variable</td></tr>
+              <tr style="background:#f8f9fa;"><td><strong>Souvenir de l&#39;épisode</strong></td><td><strong>Rappel vif du rêve</strong>, concordant avec les gestes</td><td><strong>Aucun ou très pauvre</strong></td><td>Absent en général</td></tr>
+              <tr><td><strong>Type de mouvement</strong></td><td><strong>Non stéréotypé</strong></td><td>Non stéréotypé</td><td><strong>Stéréotypé</strong> — identique d&#39;un épisode à l&#39;autre</td></tr>
+              <tr style="background:#f8f9fa;"><td><strong>Antécédents familiaux</strong></td><td>Peu contributifs</td><td><strong>Souvent positifs</strong></td><td>Variables</td></tr>
+              <tr><td><strong>État en éveil</strong></td><td>Normal</td><td><strong>Neurologiquement et psychiatriquement normal</strong></td><td>Selon l&#39;épilepsie</td></tr>
+            </tbody>
+          </table>
+          </div>
+          <div style="font-size:11px;color:#64748b;margin-top:6px;"><span style="font-size:11px;color:#64748b;">📚 <em>Goldman-Cecil, 26<sup>e</sup> éd., ch. 377</em></span> — d&#39;après le tableau 377-8 et le texte du chapitre.</div>
+
+          <div class="key-fact green" style="margin-top:12px;">🎯 <strong>Le geste qui compte le plus, et qui ne demande aucun outil.</strong> Avant même la polysomnographie : <strong>sécuriser la chambre</strong>. Descendre le matelas au sol, bloquer les fenêtres, déménager la chambre au rez-de-chaussée, écarter les objets contondants. Réduire aussi ce qui provoque les éveils — <strong>privation de sommeil, alcool, hypnotiques à courte durée d&#39;action</strong>. Le traitement pharmacologique existe (<strong>clonazépam 0,5 à 2 mg</strong>), mais la sécurité passe avant. <span style="font-size:11px;color:#64748b;">📚 <em>Goldman-Cecil, 26<sup>e</sup> éd., ch. 377</em></span></div>
+        </div>
+
+        <!-- ── SJSR ── -->
+        <div id="somdx2" style="display:none;margin-top:14px;">
+          <div class="key-fact orange">⚠️ <strong>Un écart entre vos sources, à connaître.</strong> <strong>Goldman-Cecil décrit quatre caractéristiques essentielles.</strong> La <strong>révision 2014 du groupe international (IRLSSG), reprise par l&#39;ICSD-3, en compte cinq</strong> — le cinquième étant précisément l&#39;exclusion des imitateurs, celui qui évite le plus d&#39;erreurs chez la personne âgée. Les cinq sont donnés ci-dessous, le cinquième <strong>signalé comme extérieur à vos manuels</strong>. Dans les deux versions, la règle est la même : <strong>ils doivent tous être présents</strong>.</div>
+
+          <div class="criteria-list" style="margin-top:12px;">
+            <div class="criteria-item"><div class="criteria-num blue">1</div><span><strong>Un besoin impérieux de bouger les jambes</strong>, habituellement accompagné ou causé par une <strong>sensation désagréable</strong> dans les jambes. <span style="font-size:11px;color:#64748b;">📚 <em>Goldman-Cecil, 26<sup>e</sup> éd., ch. 377</em></span></span></div>
+            <div class="criteria-item"><div class="criteria-num blue">2</div><span><strong>Déclenché ou aggravé par le repos</strong> — position couchée ou assise, immobilité.</span></div>
+            <div class="criteria-item"><div class="criteria-num blue">3</div><span><strong>Soulagé par le mouvement</strong> — marcher, étirer, bouger — <strong>au moins tant que dure le mouvement</strong>.</span></div>
+            <div class="criteria-item"><div class="criteria-num blue">4</div><span><strong>Aggravation vespérale ou nocturne</strong>, ou survenue exclusivement le soir et la nuit.</span></div>
+            <div class="criteria-item"><div class="criteria-num red">5</div><span><strong>Non expliqué uniquement par une autre condition.</strong> <em>Critère issu de la révision IRLSSG 2014 / ICSD-3 — absent de Goldman.</em> Les imitateurs à écarter chez l&#39;aîné : <strong>crampes nocturnes</strong> (douleur localisée, contracture palpable) · <strong>inconfort positionnel</strong> (soulagé par le simple changement de position, sans besoin impérieux) · <strong>neuropathie périphérique</strong> (brûlure, engourdissement, non soulagés par le mouvement) · <strong>insuffisance veineuse</strong> · <strong>akathisie médicamenteuse</strong> (généralisée, non circadienne, sous neuroleptique ou antiémétique).</span></div>
+          </div>
+
+          <div class="key-fact yellow" style="margin-top:12px;">🕰️ <strong>Fréquence et durée — pour distinguer une forme qui se traite.</strong> L&#39;ICSD-3 qualifie de <strong>chronique-persistante</strong> une forme survenant, sans traitement, <strong>au moins 2 fois par semaine depuis au moins 1 an</strong> ; en deçà, on parle de forme <strong>intermittente</strong>. C&#39;est ce seuil qui oriente vers un traitement de fond plutôt qu&#39;au besoin. <em>Seuil issu de l&#39;ICSD-3, extérieur à vos manuels.</em></div>
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
+            <div style="background:#e8f4fd;border-left:4px solid #1d4ed8;border-radius:10px;padding:14px;">
+              <strong style="color:#1d4ed8;">🩸 Le bilan à faire systématiquement</strong>
+              <div style="font-size:13px;line-height:1.7;margin-top:8px;">🎯 <strong>Le SJSR impose de chercher une carence martiale</strong> — c&#39;est la cause réversible la plus fréquente, et la seule dont la correction guérit parfois le syndrome. Le <strong>Précis</strong> le souligne dans ses points-clés.<br><br><strong>Ferritine</strong> et <strong>saturation de la transferrine</strong><br>🔢 Seuils habituellement retenus : <strong>ferritine &lt; 75 µg/L</strong> ou <strong>saturation &lt; 20 %</strong> → supplémentation à envisager. <em>Chiffres extérieurs à vos manuels — à confirmer.</em><br><br>⚠️ Une ferritine « normale » selon le laboratoire (souvent &gt; 15-30) <strong>n&#39;écarte pas</strong> une carence pertinente pour le SJSR : le seuil y est nettement plus élevé.</div>
+            </div>
+            <div style="background:#fff7ed;border-left:4px solid #b45309;border-radius:10px;padding:14px;">
+              <strong style="color:#b45309;">🔀 Ne pas confondre avec les MPMS</strong>
+              <div style="font-size:13px;line-height:1.7;margin-top:8px;">Les <strong>mouvements périodiques des membres au cours du sommeil</strong> sont une trouvaille <strong>polysomnographique</strong>, pas un symptôme.<br><strong>85 à 90 %</strong> des personnes avec un SJSR en présentent<br>Mais seule une <strong>minorité</strong> des personnes ayant des MPMS remplit les critères cliniques du SJSR<br><br>➜ <strong>Le SJSR se diagnostique à l&#39;interrogatoire, pas au laboratoire du sommeil.</strong> Un rapport de PSG mentionnant des MPMS ne pose aucun diagnostic à lui seul. <span style="font-size:11px;color:#64748b;">📚 <em>Goldman-Cecil, 26<sup>e</sup> éd., ch. 377</em></span></div>
+            </div>
+          </div>
+
+          <div class="key-fact purple" style="margin-top:12px;">💊 <strong>Le réflexe de révision d&#39;ordonnance.</strong> Plusieurs médicaments <strong>déclenchent ou aggravent</strong> un SJSR — au premier rang les <strong>antidépresseurs</strong> (dont la <strong>doxépine</strong> et les ISRS), les <strong>antihistaminiques sédatifs</strong>, les <strong>antinauséeux antidopaminergiques</strong> (métoclopramide, prochlorpérazine) et les <strong>neuroleptiques</strong>. Chez un aîné polymédiqué qui développe un SJSR, <strong>la liste de médicaments est le premier endroit à regarder</strong>. ➜ <em>Polypharmacie et déprescription</em></div>
+        </div>
+      </div>
+
 
       <!-- ═══ som-3 ═══ -->
       <div class="block para" style="margin-top:14px;border-left-color:#b45309;">
@@ -58910,7 +59149,7 @@ function showPanel(prefix,activeId,count){
   document.querySelectorAll('[data-panel]').forEach(function(b){
     if(b.getAttribute('data-panel').startsWith(prefix)){
       var on=b.getAttribute('data-panel')===activeId;
-      var colorMap={'tx':'#0a7a4e','atx':'#065f46','vp':'#1e7a6b','mii-tx':'#0a7a4e','mii-cr':'#0a7a4e','pk-tx':'#7c3aed','hta-tx':'#0a7a4e','ugdd':'#0369a1','frg':'#b45309','spx':'#7c3aed','rds':'#0369a1','gu':'#0f766e','lax':'#0a7a4e'};var col=colorMap[prefix]||'#c0392b';
+      var colorMap={'tx':'#0a7a4e','atx':'#065f46','vp':'#1e7a6b','mii-tx':'#0a7a4e','mii-cr':'#0a7a4e','pk-tx':'#7c3aed','hta-tx':'#0a7a4e','ugdd':'#0369a1','frg':'#b45309','spx':'#7c3aed','rds':'#0369a1','gu':'#0f766e','lax':'#0a7a4e','somdx':'#0e7490'};var col=colorMap[prefix]||'#c0392b';
       b.style.background=on?col:'#e0e0e0';
       b.style.color=on?'#fff':'#333';
     }
