@@ -35371,9 +35371,9 @@ function switchEpiTx(n) {
       <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;">
         <button onclick="goToBlock('npp-1')" style="background:#374151;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">📊 Définir &amp; situer</button>
         <button onclick="goToBlock('npp-2')" style="background:#6d28d9;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧬 Types de fibres</button>
+        <button onclick="goToBlock('npp-mecan')" style="background:#0891b2;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">⚡ Axonal vs démyélinisant</button>
         <button onclick="goToBlock('npp-3')" style="background:#0369a1;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧦 La PSD</button>
         <button onclick="goToBlock('npp-4')" style="background:#b45309;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🗂️ Sous-types &amp; étiologies</button>
-        <button onclick="goToBlock('npp-mecan')" style="background:#0891b2;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">⚡ Axonal vs démyélinisant</button>
         <button onclick="goToBlock('npp-etio')" style="background:#15803d;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🎯 Étiologies principales</button>
         <button onclick="goToBlock('npp-5')" style="background:#c0392b;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">💊 Médicaments en cause</button>
         <button onclick="goToBlock('npp-6')" style="background:#0f766e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🔬 Investigations</button>
@@ -35426,6 +35426,38 @@ function switchEpiTx(n) {
       </div>
 
       <!-- ═══ pnp-3 ═══ -->
+      <div class="block clin" style="margin-top:14px;border-left-color:#0891b2;">
+        <div class="block-title" id="npp-mecan"><span class="tag">⚡ Axonale ou démyélinisante — l&#39;axe qui commande tout</span><span class="obj-badge multi">Obj. 9 · 10</span></div>
+        <p style="font-size:13px;color:#475569;">Les axes précédents décrivent <em>ce que</em> la personne ressent et <em>où</em>. Celui-ci décrit <strong>ce qui est lésé dans le nerf</strong> — l&#39;axone ou sa gaine de myéline. C&#39;est l&#39;axe le plus utile, parce qu&#39;il sépare les neuropathies <strong>traitables</strong> des autres. <span style="font-size:11px;color:#64748b;">📚 <em>Azhary et coll., Am Fam Physician 2010</em></span></p>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
+          <div style="background:#fff3cd;border-left:4px solid #d35400;border-radius:10px;padding:14px;">
+            <strong style="color:#d35400;">🔶 Atteinte AXONALE</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">L&#39;axone dégénère, à partir de son extrémité la plus distale<br><br><strong>Signature clinique</strong><br>• <strong>Dépendante de la longueur</strong> — pieds d&#39;abord, « gants et chaussettes »<br>• Prédominance <strong>sensitive</strong>, progression <strong>lente</strong><br>• Réflexes <strong>achilléens abolis en premier</strong>, le reste conservé longtemps<br>• Faiblesse <strong>tardive</strong> et distale<br><br><strong>Qui la cause</strong> — les <strong>causes métaboliques et toxiques</strong> : diabète, alcool, insuffisance rénale, carences, médicaments, hypothyroïdie, VIH, amyloïdose<br><em>C&#39;est le mécanisme de la grande majorité des PSD</em></div>
+          </div>
+          <div style="background:#e8f4fd;border-left:4px solid #1d4ed8;border-radius:10px;padding:14px;">
+            <strong style="color:#1d4ed8;">🔷 Atteinte DÉMYÉLINISANTE</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">La gaine de myéline est détruite — la conduction ralentit ou se bloque<br><br><strong>Signature clinique</strong><br>• <strong>Non dépendante de la longueur</strong> — atteinte <strong>proximale <em>et</em> distale</strong><br>• Prédominance <strong>motrice</strong> : la <strong>faiblesse précède</strong> la perte sensitive<br>• <strong>Aréflexie diffuse et précoce</strong>, pas seulement achilléenne<br>• Installation <strong>aiguë ou subaiguë</strong><br><br><strong>Qui la cause</strong> — surtout des causes <strong>inflammatoires et dysimmunitaires</strong> : <strong>Guillain-Barré</strong>, <strong>PDIC</strong>, GMSI à IgM, Charcot-Marie-Tooth type 1, diphtérie<br>🎯 <strong>C&#39;est là que se trouvent les neuropathies traitables</strong></div>
+          </div>
+        </div>
+
+        <div class="key-fact black" style="margin-top:12px;">🎯 <strong>Pourquoi cet axe prime sur les autres.</strong> Une neuropathie <strong>axonale</strong> se traite en corrigeant sa cause — glycémie, alcool, B<sub>12</sub>, médicament — et l&#39;atteinte déjà installée récupère mal. Une neuropathie <strong>démyélinisante inflammatoire</strong> se traite par <strong>immunothérapie</strong>, et la récupération peut être considérable. Reconnaître la seconde change le pronostic ; la manquer le compromet. C&#39;est exactement ce que l&#39;<strong>outil DDS</strong> cherche à repérer au chevet. <span style="font-size:11px;color:#64748b;">📚 <em>Mirian et coll., CMAJ 2023</em></span> &nbsp;➜ voir <em>Red flags — l&#39;outil DDS</em></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">🔬 <strong>Ce que l&#39;électrophysiologie ajoute — et la nuance à connaître.</strong> Les études de conduction nerveuse tranchent entre axonal, démyélinisant et <strong>mixte</strong>. Et parmi les démyélinisantes, elles distinguent un ralentissement <strong>uniforme</strong> — qui oriente vers une cause <strong>héréditaire</strong> — d&#39;un ralentissement <strong>non uniforme</strong>, qui oriente vers une cause <strong>acquise</strong> : Guillain-Barré si l&#39;installation est aiguë, PDIC si elle est subaiguë ou chronique. <span style="font-size:11px;color:#64748b;">📚 <em>Azhary et coll., Am Fam Physician 2010</em></span> &nbsp;➜ voir <em>Investigations</em></div>
+
+        <div style="overflow-x:auto;margin-top:14px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:12%;">Mécanisme</th><th style="width:44%;">Causes classées par ce mécanisme</th><th>Remarque</th></tr></thead>
+          <tbody>
+            <tr style="background:#fff7ed;"><td><strong>Axonale (A)</strong></td><td><strong>Insuffisance rénale terminale</strong> · <strong>hypothyroïdie</strong> · VIH · syndrome paranéoplasique · maladie de Lyme · syphilis · lèpre · porphyrie · amyloïdose · <strong>carence en B<sub>6</sub></strong> et en <strong>B<sub>12</sub></strong> · neuropathie de la maladie grave<br><strong>Médicaments</strong> — digoxine, <strong>isoniazide</strong>, lithium, <strong>métronidazole</strong>, <strong>nitrofurantoïne</strong>, phénytoïne, statines, vincristine, hydralazine, <strong>excès de B<sub>6</sub></strong><br><strong>Toxiques</strong> — <strong>alcool</strong>, métaux lourds, organophosphorés<br><strong>Génétique</strong> — Charcot-Marie-Tooth <strong>type 2</strong> (HMSN-II)</td><td>Le groupe le plus vaste · <strong>PNP idiopathique</strong> = axonale, diagnostic d&#39;exclusion, habituellement chronique</td></tr>
+            <tr style="background:#eff6ff;"><td><strong>Démyélinisante (D)</strong></td><td><strong>Plasmocytome</strong> (myélome ostéosclérotique) · <strong>GMSI à IgM</strong> — la plus fréquente des gammapathies · toxine <strong>diphtérique</strong><br><strong>Médicaments</strong> — chloroquine, procaïnamide<br><strong>Génétique</strong> — Charcot-Marie-Tooth <strong>type 1</strong> (HMSN-I), leucodystrophie métachromatique, maladie de Refsum, neuropathie avec hypersensibilité à la pression</td><td>Groupe restreint — mais c&#39;est celui qu&#39;il ne faut pas manquer</td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>Mixte (M)</strong></td><td><strong>Diabète</strong> — <em>l&#39;axonal prédomine</em> · <strong>hépatopathie chronique</strong> — <em>surtout démyélinisant en hépatite virale</em> · lymphome — <em>surtout axonal</em> · myélome multiple · GMSI à IgG ou IgA — <em>traits démyélinisants prédominants</em><br><strong>Médicament</strong> — <strong>amiodarone</strong>, surtout axonale et sensitivomotrice</td><td>⚠️ Le <strong>diabète</strong>, cause la plus fréquente, est classé <strong>mixte</strong> — d&#39;où l&#39;intérêt de l&#39;EMG même chez un diabétique</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <div style="font-size:11px;color:#64748b;margin-top:6px;">Classification A / D / M du tableau 1 de l&#39;AFP. <span style="font-size:11px;color:#64748b;">📚 <em>Azhary et coll., Am Fam Physician 2010</em></span></div>
+      </div>
+
       <div class="block clin" style="margin-top:14px;border-left-color:#0369a1;">
         <div class="block-title" id="npp-3"><span class="tag">🧦 La polyneuropathie symétrique distale (PSD)</span><span class="obj-badge">Obj. 9</span></div>
         <p style="font-size:13px;color:#475569;">Le sous-type le plus courant, et le seul qui soit <strong>dépendant de la longueur des fibres</strong> : les plus longues souffrent d&#39;abord. Toute la sémiologie en découle. <span style="font-size:11px;color:#64748b;">📚 <em>Mirian et coll., CMAJ 2023</em></span></p>
@@ -35464,38 +35496,6 @@ function switchEpiTx(n) {
       </div>
 
       <!-- ═══ pnp-5 ═══ -->
-      <div class="block clin" style="margin-top:14px;border-left-color:#0891b2;">
-        <div class="block-title" id="npp-mecan"><span class="tag">⚡ Axonale ou démyélinisante — l&#39;axe qui commande tout</span><span class="obj-badge multi">Obj. 9 · 10</span></div>
-        <p style="font-size:13px;color:#475569;">Les axes précédents décrivent <em>ce que</em> la personne ressent et <em>où</em>. Celui-ci décrit <strong>ce qui est lésé dans le nerf</strong> — l&#39;axone ou sa gaine de myéline. C&#39;est l&#39;axe le plus utile, parce qu&#39;il sépare les neuropathies <strong>traitables</strong> des autres. <span style="font-size:11px;color:#64748b;">📚 <em>Azhary et coll., Am Fam Physician 2010</em></span></p>
-
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
-          <div style="background:#fff3cd;border-left:4px solid #d35400;border-radius:10px;padding:14px;">
-            <strong style="color:#d35400;">🔶 Atteinte AXONALE</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;">L&#39;axone dégénère, à partir de son extrémité la plus distale<br><br><strong>Signature clinique</strong><br>• <strong>Dépendante de la longueur</strong> — pieds d&#39;abord, « gants et chaussettes »<br>• Prédominance <strong>sensitive</strong>, progression <strong>lente</strong><br>• Réflexes <strong>achilléens abolis en premier</strong>, le reste conservé longtemps<br>• Faiblesse <strong>tardive</strong> et distale<br><br><strong>Qui la cause</strong> — les <strong>causes métaboliques et toxiques</strong> : diabète, alcool, insuffisance rénale, carences, médicaments, hypothyroïdie, VIH, amyloïdose<br><em>C&#39;est le mécanisme de la grande majorité des PSD</em></div>
-          </div>
-          <div style="background:#e8f4fd;border-left:4px solid #1d4ed8;border-radius:10px;padding:14px;">
-            <strong style="color:#1d4ed8;">🔷 Atteinte DÉMYÉLINISANTE</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;">La gaine de myéline est détruite — la conduction ralentit ou se bloque<br><br><strong>Signature clinique</strong><br>• <strong>Non dépendante de la longueur</strong> — atteinte <strong>proximale <em>et</em> distale</strong><br>• Prédominance <strong>motrice</strong> : la <strong>faiblesse précède</strong> la perte sensitive<br>• <strong>Aréflexie diffuse et précoce</strong>, pas seulement achilléenne<br>• Installation <strong>aiguë ou subaiguë</strong><br><br><strong>Qui la cause</strong> — surtout des causes <strong>inflammatoires et dysimmunitaires</strong> : <strong>Guillain-Barré</strong>, <strong>PDIC</strong>, GMSI à IgM, Charcot-Marie-Tooth type 1, diphtérie<br>🎯 <strong>C&#39;est là que se trouvent les neuropathies traitables</strong></div>
-          </div>
-        </div>
-
-        <div class="key-fact black" style="margin-top:12px;">🎯 <strong>Pourquoi cet axe prime sur les autres.</strong> Une neuropathie <strong>axonale</strong> se traite en corrigeant sa cause — glycémie, alcool, B<sub>12</sub>, médicament — et l&#39;atteinte déjà installée récupère mal. Une neuropathie <strong>démyélinisante inflammatoire</strong> se traite par <strong>immunothérapie</strong>, et la récupération peut être considérable. Reconnaître la seconde change le pronostic ; la manquer le compromet. C&#39;est exactement ce que l&#39;<strong>outil DDS</strong> cherche à repérer au chevet. <span style="font-size:11px;color:#64748b;">📚 <em>Mirian et coll., CMAJ 2023</em></span> &nbsp;➜ voir <em>Red flags — l&#39;outil DDS</em></div>
-
-        <div class="key-fact blue" style="margin-top:10px;">🔬 <strong>Ce que l&#39;électrophysiologie ajoute — et la nuance à connaître.</strong> Les études de conduction nerveuse tranchent entre axonal, démyélinisant et <strong>mixte</strong>. Et parmi les démyélinisantes, elles distinguent un ralentissement <strong>uniforme</strong> — qui oriente vers une cause <strong>héréditaire</strong> — d&#39;un ralentissement <strong>non uniforme</strong>, qui oriente vers une cause <strong>acquise</strong> : Guillain-Barré si l&#39;installation est aiguë, PDIC si elle est subaiguë ou chronique. <span style="font-size:11px;color:#64748b;">📚 <em>Azhary et coll., Am Fam Physician 2010</em></span> &nbsp;➜ voir <em>Investigations</em></div>
-
-        <div style="overflow-x:auto;margin-top:14px;">
-        <table style="font-size:12px;">
-          <thead><tr><th style="width:12%;">Mécanisme</th><th style="width:44%;">Causes classées par ce mécanisme</th><th>Remarque</th></tr></thead>
-          <tbody>
-            <tr style="background:#fff7ed;"><td><strong>Axonale (A)</strong></td><td><strong>Insuffisance rénale terminale</strong> · <strong>hypothyroïdie</strong> · VIH · syndrome paranéoplasique · maladie de Lyme · syphilis · lèpre · porphyrie · amyloïdose · <strong>carence en B<sub>6</sub></strong> et en <strong>B<sub>12</sub></strong> · neuropathie de la maladie grave<br><strong>Médicaments</strong> — digoxine, <strong>isoniazide</strong>, lithium, <strong>métronidazole</strong>, <strong>nitrofurantoïne</strong>, phénytoïne, statines, vincristine, hydralazine, <strong>excès de B<sub>6</sub></strong><br><strong>Toxiques</strong> — <strong>alcool</strong>, métaux lourds, organophosphorés<br><strong>Génétique</strong> — Charcot-Marie-Tooth <strong>type 2</strong> (HMSN-II)</td><td>Le groupe le plus vaste · <strong>PNP idiopathique</strong> = axonale, diagnostic d&#39;exclusion, habituellement chronique</td></tr>
-            <tr style="background:#eff6ff;"><td><strong>Démyélinisante (D)</strong></td><td><strong>Plasmocytome</strong> (myélome ostéosclérotique) · <strong>GMSI à IgM</strong> — la plus fréquente des gammapathies · toxine <strong>diphtérique</strong><br><strong>Médicaments</strong> — chloroquine, procaïnamide<br><strong>Génétique</strong> — Charcot-Marie-Tooth <strong>type 1</strong> (HMSN-I), leucodystrophie métachromatique, maladie de Refsum, neuropathie avec hypersensibilité à la pression</td><td>Groupe restreint — mais c&#39;est celui qu&#39;il ne faut pas manquer</td></tr>
-            <tr style="background:#f8f9fa;"><td><strong>Mixte (M)</strong></td><td><strong>Diabète</strong> — <em>l&#39;axonal prédomine</em> · <strong>hépatopathie chronique</strong> — <em>surtout démyélinisant en hépatite virale</em> · lymphome — <em>surtout axonal</em> · myélome multiple · GMSI à IgG ou IgA — <em>traits démyélinisants prédominants</em><br><strong>Médicament</strong> — <strong>amiodarone</strong>, surtout axonale et sensitivomotrice</td><td>⚠️ Le <strong>diabète</strong>, cause la plus fréquente, est classé <strong>mixte</strong> — d&#39;où l&#39;intérêt de l&#39;EMG même chez un diabétique</td></tr>
-          </tbody>
-        </table>
-        </div>
-        <div style="font-size:11px;color:#64748b;margin-top:6px;">Classification A / D / M du tableau 1 de l&#39;AFP. <span style="font-size:11px;color:#64748b;">📚 <em>Azhary et coll., Am Fam Physician 2010</em></span></div>
-      </div>
-
       <div class="block para" style="margin-top:14px;border-left-color:#15803d;">
         <div class="block-title" id="npp-etio"><span class="tag">🎯 Les étiologies, par ordre de fréquence</span><span class="obj-badge">Obj. 10</span></div>
         <p style="font-size:13px;color:#475569;">Les listes exhaustives servent quand le tableau est atypique. Mais devant une polyneuropathie symétrique distale ordinaire, <strong>quatre causes couvrent l&#39;essentiel</strong> — et il faut les avoir écartées avant de chercher plus loin. <span style="font-size:11px;color:#64748b;">📚 <em>Mirian et coll., CMAJ 2023</em></span></p>
