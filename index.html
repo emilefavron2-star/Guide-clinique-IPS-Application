@@ -1216,11 +1216,12 @@ m
       <div class="specialty-items">
         <div class="nav-item" onclick="showSection('vieillissement')">Le Vieillissement</div>
         <div class="nav-item" onclick="showSection('geriatrie-eval')">Évaluation &amp; Fragilité</div>
-        <div class="nav-item" onclick="showSection('delirium')">Délirium</div>
-        <div class="nav-item" onclick="showSection('tnc')">Troubles Neurocognitifs</div>
         <div class="nav-item" onclick="showSection('chutes')">Chutes &amp; Mobilité</div>
         <div class="nav-item" onclick="showSection('hto')">Hypotension Orthostatique</div>
+        <div class="nav-item" onclick="showSection('syncope')">Syncope <span style="font-size:10px;color:#94a3b8;">↗ Neurologie</span></div>
         <div class="nav-item" onclick="showSection('pnp')">Polyneuropathie</div>
+        <div class="nav-item" onclick="showSection('delirium')">Délirium</div>
+        <div class="nav-item" onclick="showSection('tnc')">Troubles Neurocognitifs</div>
         <div class="nav-item" onclick="showSection('depression-pa')">Deuil &amp; Dépression</div>
         <div class="nav-item" onclick="showSection('sommeil-pa')">Sommeil</div>
         <div class="nav-item" onclick="showSection('polypharmacie')">Polypharmacie &amp; Déprescription</div>
@@ -1506,7 +1507,7 @@ m
           <div class="home-card-icon" style="background:#f5f3ff;color:#6d28d9">🧓</div>
           <div class="home-card-body">
             <div class="home-card-name">Gériatrie</div>
-            <div class="home-card-count">10 sections</div>
+            <div class="home-card-count">11 sections</div>
           </div>
         </div>
         <div class="home-card" onclick="showSection('avc'); openGroup('grp-neuro')">
@@ -34813,679 +34814,6 @@ function switchEpiTx(n) {
       </div>
     </div>
 
-<div class="section" id="sec-delirium">
-      <div class="section-header">
-        <div class="section-accent" style="background:#b91c1c">🌀</div>
-        <div class="section-title"><h1>Délirium</h1><div class="breadcrumb">Gériatrie <span class="breadcrumb-sep">·</span> État confusionnel aigu <span class="breadcrumb-sep">·</span> AAPA — MSSS <span class="breadcrumb-sep">·</span> CAM</div></div>
-      </div>
-      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;">
-        <button onclick="goToBlock('del-1')" style="background:#374151;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">📖 Définition &amp; formes</button>
-        <button onclick="goToBlock('del-2')" style="background:#dc2626;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">📊 Fréquence &amp; gravité</button>
-        <button onclick="goToBlock('del-3')" style="background:#b45309;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">⚠️ Facteurs de risque</button>
-        <button onclick="goToBlock('del-4')" style="background:#0369a1;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🔍 Repérage &amp; CAM</button>
-        <button onclick="goToBlock('del-5')" style="background:#6d28d9;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🔀 DDx — les 3 D</button>
-        <button onclick="goToBlock('del-6')" style="background:#0f766e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧪 Chercher la cause</button>
-        <button onclick="goToBlock('del-7')" style="background:#0a7a4e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🛡️ Prévention &amp; interventions</button>
-        <button onclick="goToBlock('del-8')" style="background:#7c3aed;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">💊 Pharmaco — dernier recours</button>
-        <button onclick="goToBlock('del-9')" style="background:#991b1b;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🚨 Red flags</button>
-      </div>
-
-      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:20px;">
-        <div style="flex:1;min-width:95px;background:#FEE2E2;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#b91c1c;">&gt; 30 %</div><div style="font-size:11px;color:#555;margin-top:4px;">des aînés hospitalisés</div></div>
-        <div style="flex:1;min-width:95px;background:#FEF9C3;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#854d0e;">≥ 75 %</div><div style="font-size:11px;color:#555;margin-top:4px;">postopératoire &amp; soins intensifs</div></div>
-        <div style="flex:1;min-width:95px;background:#F3E8FF;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#6d28d9;">~ 30 %</div><div style="font-size:11px;color:#555;margin-top:4px;">taux de mortalité associé</div></div>
-        <div style="flex:1;min-width:95px;background:#DCFCE7;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#15803d;">Réversible</div><div style="font-size:11px;color:#555;margin-top:4px;">si la cause est corrigée tôt</div></div>
-      </div>
-
-      <div class="block def" style="margin-top:14px;">
-        <div class="block-title" id="del-1"><span class="tag">📖 Définition &amp; formes cliniques</span></div>
-
-        <div class="key-fact blue" style="margin-top:10px;">📗 <strong>Définition (AAPA — MSSS) :</strong> le délirium, ou <strong>état confusionnel aigu</strong>, est un <strong>syndrome organique d'installation aiguë ou subaiguë</strong>, habituellement <strong>transitoire et réversible</strong>. C'est un <strong>mode de présentation</strong> d'une maladie aiguë, d'un problème postopératoire, d'une intoxication, d'un effet indésirable médicamenteux — ou d'un ensemble d'événements combinés assez intenses pour perturber l'état mental.</div>
-
-        <div class="key-fact red" style="margin-top:10px;">🎯 <strong>Le délirium n'est jamais un diagnostic final — c'est un symptôme.</strong> Poser le diagnostic de délirium, c'est s'engager à en <strong>chercher la cause</strong>. Dire « le patient est en délirium » et s'arrêter là, c'est comme dire « le patient a de la fièvre » et ne pas chercher l'infection.</div>
-
-        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">🔑 Les deux symptômes cardinaux</div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
-          <div style="background:#fce4ec;border-radius:10px;padding:14px;border-left:4px solid #c0392b;">
-            <strong style="color:#c0392b;">① Perturbation de l'état de conscience</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Soit <strong>hypersensibilité aux stimuli environnants</strong>, soit à l'inverse un état <strong>léthargique, stuporeux</strong>, pouvant aller jusqu'au coma.</div>
-          </div>
-          <div style="background:#fce4ec;border-radius:10px;padding:14px;border-left:4px solid #c0392b;">
-            <strong style="color:#c0392b;">② Atteinte de l'attention</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Facilement distrait</strong>, lenteur à répondre, incapacité à soutenir une conversation ou à suivre une consigne.<br>🎯 <strong>C'est le signe le plus discriminant</strong> — l'attention est atteinte d'emblée dans le délirium, tardivement dans la démence.</div>
-          </div>
-        </div>
-
-        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">➕ Manifestations associées</div>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;">
-          <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
-            <strong style="color:#1d4ed8;">🧭 Cognition</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Désorientation</strong> spatiale, temporelle ou à la personne<br><strong>Trouble mnésique</strong> à court et à long terme<br><strong>Difficultés visuo-spatiales</strong><br><strong>Désorganisation de la pensée</strong> : conversation décousue, propos incohérents, coq-à-l'âne</div>
-          </div>
-          <div style="background:#ede9fe;border-radius:10px;padding:14px;">
-            <strong style="color:#6d28d9;">👁️ Perception</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Hallucinations</strong> visuelles ou auditives<br><strong>Illusions</strong> — mauvaise interprétation d'un objet réel (fréquentes la nuit, favorisées par un mauvais éclairage)<br><strong>Idées délirantes</strong></div>
-          </div>
-          <div style="background:#fff3cd;border-radius:10px;padding:14px;">
-            <strong style="color:#d35400;">🎭 Comportement &amp; sommeil</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Agitation psychomotrice</strong> ou au contraire <strong>ralentissement</strong><br><strong>Labilité émotionnelle</strong><br><strong>Perturbation du cycle éveil-sommeil</strong> : insomnie et agitation la nuit, somnolence diurne excessive</div>
-          </div>
-        </div>
-
-        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">🎭 Les trois formes — et pourquoi la plus dangereuse passe inaperçue</div>
-        <div style="overflow-x:auto;">
-        <table style="font-size:12px;">
-          <thead><tr><th style="width:18%;">Forme</th><th style="width:34%;">Présentation</th><th>Enjeu clinique</th></tr></thead>
-          <tbody>
-            <tr style="background:#fce4ec;"><td><strong>Hyperactif</strong></td><td><strong>Agitation</strong>, augmentation de l'activité psychomotrice, hallucinations, opposition aux soins</td><td>Facilement repéré — mais souvent traité comme un « problème de comportement » plutôt que comme une urgence médicale</td></tr>
-            <tr style="background:#fff8e1;"><td><strong>Hypoactif</strong> ⚠️</td><td><strong>Léthargie</strong>, ralentissement psychomoteur important, apathie, somnolence</td><td>🚨 <strong>Le plus fréquent chez la personne âgée et le plus souvent manqué.</strong> Confondu avec de la fatigue, une dépression ou « une personne tranquille ». <strong>Pronostic plus sombre</strong>, parce que le diagnostic est retardé.</td></tr>
-            <tr><td><strong>Mixte</strong></td><td>Oscillation entre les deux formes, souvent d'une heure à l'autre</td><td>La <strong>fluctuation</strong> est typique — d'où l'importance d'évaluer à plusieurs moments et de croiser les observations d'équipe</td></tr>
-          </tbody>
-        </table>
-        </div>
-
-        <div class="key-fact orange" style="margin-top:12px;">💡 <strong>Le réflexe qui change tout :</strong> devant une personne âgée <strong>anormalement calme, somnolente ou « qui ne dérange pas »</strong>, penser au délirium hypoactif. Un patient tranquille n'est pas nécessairement un patient qui va bien.</div>
-      </div>
-
-      <div class="block clin" style="margin-top:14px;border-left-color:#dc2626;">
-        <div class="block-title" id="del-2"><span class="tag">📊 Fréquence &amp; conséquences</span></div>
-        <div class="key-fact red" style="margin-top:10px;">🎯 <strong>La phrase qui situe le problème :</strong> le délirium est la <strong>complication la plus fréquente de l'hospitalisation chez la personne âgée</strong> — et il demeure <strong>souvent non reconnu</strong>, malgré l'existence d'outils de détection sensibles.<br>🧠 <strong>Mécanisme :</strong> des facteurs biologiques en interaction provoquent une <strong>perturbation des grands réseaux neuronaux</strong>, d'où l'atteinte cognitive aiguë. Les mécanismes proposés incluent une <strong>perturbation des systèmes de neurotransmetteurs</strong>, l'<strong>inflammation</strong> et d'autres stress physiologiques. <span style="font-size:11px;color:#64748b;">📚 <em>Goldman-Cecil Medicine, 26<sup>e</sup> éd.</em></span></div>
-
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-top:12px;">
-          <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
-            <strong style="color:#1d4ed8;">📈 Fréquence</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>&gt; 30 %</strong> des personnes âgées hospitalisées<br><strong>10 %</strong> à l'urgence<br><strong>≥ 75 %</strong> en période postopératoire ou aux soins intensifs</div>
-          </div>
-          <div style="background:#fce4ec;border-radius:10px;padding:14px;">
-            <strong style="color:#c0392b;">💀 Gravité</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Taux de mortalité d'environ <strong>30 %</strong><br>🎯 Ce chiffre surprend — le délirium est <strong>aussi grave qu'un infarctus</strong>, mais il est rarement traité avec la même urgence.</div>
-          </div>
-          <div style="background:#fff3cd;border-radius:10px;padding:14px;">
-            <strong style="color:#d35400;">📉 Morbidité</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Allongement de la durée de séjour</strong><br><strong>Risque accru de déclin fonctionnel et cognitif</strong><br><strong>Probabilité plus grande d'institutionnalisation</strong><br>La récupération peut être <strong>incomplète</strong> et le délirium <strong>persister des semaines</strong>.</div>
-          </div>
-          <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
-            <strong style="color:#15803d;">✅ Ce qui le distingue de la démence</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🎯 <strong>La guérison est possible si la cause sous-jacente est déterminée et corrigée précocement.</strong><br>C'est toute la différence — et toute la raison d'insister sur le repérage.</div>
-          </div>
-        </div>
-
-        <div class="key-fact red" style="margin-top:12px;">⛔ <strong>Point capital sur la contention :</strong> il faut <strong>éviter la contention physique</strong> chez une personne en délirium agité sous prétexte de prévenir des blessures. Cela peut avoir <strong>l'effet contraire</strong> : exacerber les symptômes neurocomportementaux et <strong>induire un syndrome d'immobilisation</strong>. La contention est un <strong>dernier recours</strong>, jamais une mesure de confort organisationnel.</div>
-      </div>
-
-      <div class="block clin" style="margin-top:14px;border-left-color:#b45309;">
-        <div class="block-title" id="del-3"><span class="tag">⚠️ Facteurs prédisposants &amp; précipitants</span></div>
-
-        <div class="key-fact blue" style="margin-top:10px;">🧮 <strong>L'équation du délirium :</strong> le risque résulte de la <strong>combinaison</strong> de facteurs <strong>prédisposants</strong> (la vulnérabilité de base) et de facteurs <strong>précipitants</strong> (le déclencheur). Plus la vulnérabilité est grande, plus le déclencheur peut être banal.<br>➜ Chez une personne très vulnérable — démente, dénutrie, déficits sensoriels — <strong>un fécalome ou une nuit blanche suffit</strong>. Chez une personne robuste, il faut une agression majeure.</div>
-
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
-          <div style="background:#e8f4fd;border-radius:10px;padding:14px;border-left:4px solid #1d4ed8;">
-            <strong style="color:#1d4ed8;">🧬 Facteurs prédisposants</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><em>Liés aux caractéristiques individuelles</em><br><strong>Âge avancé</strong> · <strong>sexe masculin</strong><br><strong>Atteinte sensorielle</strong> — déficit visuel et auditif<br><strong>Déshydratation, dénutrition</strong><br><strong>Antécédents de délirium</strong><br>🎯 <strong>Démence</strong> — le facteur prédisposant le plus fort<br><strong>Dépression</strong><br><strong>Antécédent d'AVC</strong><br><strong>Maladies concomitantes</strong> : cardiovasculaires, respiratoires, rénales, diabète, Parkinson<br><strong>Abus d'alcool</strong><br><strong>Incapacité fonctionnelle</strong></div>
-          </div>
-          <div style="background:#fce4ec;border-radius:10px;padding:14px;border-left:4px solid #c0392b;">
-            <strong style="color:#c0392b;">⚡ Facteurs précipitants</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><em>Liés aux événements cliniques ou environnementaux</em><br><strong>Infection</strong> : urinaire, pulmonaire, septicémie, plaie infectée<br><strong>Perturbation électrolytique</strong> : calcium, sodium, potassium<br><strong>Métabolique et endocrinien</strong> : hypo/hyperglycémie, hypo/hyperthyroïdie<br><strong>AVC, hémorragie intracérébrale</strong><br><strong>Cardiopulmonaire</strong> : insuffisance cardiaque, arythmie, infarctus, embolie pulmonaire, <strong>hypoxémie</strong><br>🎯 <strong>Ajout de trois médicaments et plus</strong><br><strong>Immobilisation</strong> : alitement, cathéters, sonde urinaire, contention, ventilation<br><strong>Intoxication et sevrage</strong> : alcool, benzodiazépines, anticholinergiques, narcotiques, corticostéroïdes<br><strong>Douleur</strong><br><strong>Occlusion intestinale, fécalome</strong><br><strong>Chirurgie</strong></div>
-          </div>
-        </div>
-
-        <div class="key-fact orange" style="margin-top:12px;">🌍 <strong>Et les facteurs environnementaux :</strong> <strong>surcharge ou privation sensorielle</strong> (bruit, éclairage inadéquat) et <strong>absence de points de repère</strong>. Ce sont les plus faciles à corriger — et les plus souvent négligés.</div>
-      </div>
-
-      <div class="block para" style="margin-top:14px;border-left-color:#0369a1;">
-        <div class="block-title" id="del-4"><span class="tag">🔍 Repérage systématique &amp; méthode CAM</span></div>
-
-        <div class="key-fact green" style="margin-top:10px;">📗 <strong>Fréquence de dépistage recommandée (AAPA) :</strong><br>🏥 <strong>À l'urgence : aux 8 heures</strong><br>🛏️ <strong>À l'admission en soins généraux ou spécialisés : aux 24 heures</strong><br>🔪 <strong>En suivi postopératoire et aux soins intensifs : aux 8 heures</strong><br>➜ Le dépistage est <strong>systématique</strong> chez la clientèle âgée ciblée, pas seulement quand quelque chose cloche.</div>
-
-        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">📋 La méthode CAM (Confusion Assessment Method)</div>
-        <div class="key-fact blue">Le diagnostic requiert la présence des <strong>critères 1 ET 2</strong>, <strong>plus</strong> le critère <strong>3 OU 4</strong>.</div>
-        <div class="criteria-list" style="margin-top:10px;">
-          <div class="criteria-item"><div class="criteria-num red">1</div><span><strong>Début soudain et évolution fluctuante</strong> — y a-t-il un changement <strong>aigu</strong> de l'état mental par rapport à l'état de base? Le comportement <strong>fluctue-t-il</strong> au cours de la journée? <em>(Information obtenue d'un proche ou de l'équipe soignante)</em> — <strong>OBLIGATOIRE</strong></span></div>
-          <div class="criteria-item"><div class="criteria-num red">2</div><span><strong>Inattention</strong> — la personne a-t-elle de la difficulté à <strong>focaliser son attention</strong>? Est-elle facilement distraite? A-t-elle du mal à suivre ce qui se dit? — <strong>OBLIGATOIRE</strong></span></div>
-          <div class="criteria-item"><div class="criteria-num blue">3</div><span><strong>Désorganisation de la pensée</strong> — propos décousus, illogiques, incohérents, passage du coq-à-l'âne</span></div>
-          <div class="criteria-item"><div class="criteria-num blue">4</div><span><strong>Altération de l'état de conscience</strong> — vigilant, léthargique, stuporeux, comateux — <strong>tout ce qui n'est pas « alerte et normal »</strong></span></div>
-        </div>
-
-        <div class="key-fact orange" style="margin-top:12px;">🎯 <strong>La question la plus importante de tout le dépistage :</strong> « <strong>Est-ce que c'était comme ça il y a une semaine?</strong> » posée à un proche ou au personnel du milieu de vie. Sans repère de l'état antérieur, il est impossible de distinguer un délirium d'une démence — et c'est l'erreur la plus fréquente.</div>
-
-        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">🚩 Signes précurseurs à connaître</div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
-          <div style="background:#fff3cd;border-radius:10px;padding:14px;border-left:4px solid #d35400;">
-            <strong style="color:#d35400;">Ce qui annonce un délirium</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Apparition rapide et soudaine</strong> des troubles cognitifs — de quelques heures à quelques jours<br><strong>Détérioration rapide chez une personne déjà atteinte de démence</strong><br><strong>Fluctuation</strong> des troubles cognitifs<br>Propos incohérents, incompréhensibles<br>Agitation psychomotrice <em>ou</em> ralentissement, voire hypersomnolence</div>
-          </div>
-          <div style="background:#f1f5f9;border-radius:10px;padding:14px;border-left:4px solid #334155;">
-            <strong style="color:#334155;">Ce qu'on cherche en parallèle</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Perte d'autonomie récente et soudaine</strong> — écart de mobilité ou d'AVQ entre avant et maintenant<br>Signes de <strong>déshydratation</strong> : muqueuses sèches, pli cutané persistant au sternum ou au front<br>Signes de <strong>dénutrition</strong> : &lt; 75 % du plat principal, perte de poids ≥ 2 % en 1 semaine<br>Signes de <strong>constipation ou fécalome</strong> : pas de selle &gt; 3 jours</div>
-          </div>
-        </div>
-      
-        <div style="overflow-x:auto;margin-top:14px;">
-        <table style="font-size:12px;">
-          <thead><tr><th style="width:18%;">Outil</th><th style="width:16%;">Durée</th><th style="width:22%;">Performance</th><th>Particularités</th></tr></thead>
-          <tbody>
-            <tr style="background:#dbeafe;"><td><strong>CAM</strong><br><em>Confusion Assessment Method</em></td><td><strong>5 à 15 min</strong></td><td>Sensibilité <strong>82 %</strong><br>Spécificité <strong>99 %</strong></td><td>Le plus <strong>populaire</strong> · traduit en plus de 20 langues, validé dans divers milieux<br>10 critères opérationnels dont <strong>4 diagnostiques</strong> : ① début aigu et évolution fluctuante ② inattention ③ pensée désorganisée ④ altération de l&#39;état de conscience<br>⚠️ Exige une <strong>formation</strong> et une <strong>évaluation cognitive formelle brève</strong> — ce qui limite son usage quotidien répété</td></tr>
-            <tr style="background:#dcfce7;"><td><strong>4AT</strong><br><em>4 &#39;A&#39;s Test</em></td><td><strong>2 min</strong></td><td>Sensibilité <strong>88 %</strong><br>Spécificité <strong>88 %</strong></td><td>Simple et rapide · <strong>ne nécessite aucune formation spécifique</strong> · usage en croissance</td></tr>
-            <tr style="background:#fef3c7;"><td><strong>RADAR</strong> 🇨🇦<br><em>Repérage Actif du Délirium Adapté à la Routine</em></td><td>Intégré aux soins</td><td>Validé (Voyer et coll., 2015)</td><td><strong>Approche séquentielle</strong> : on intègre l&#39;identification de <strong>trois signes</strong> de délirium <strong>dans la routine des soins, au moment de l&#39;administration des médicaments</strong> — et on procède à un dépistage formel <strong>si l&#39;un d&#39;eux est présent</strong><br>🎯 <strong>Facile à implanter, exige peu de temps</strong> : conçu pour la réalité infirmière</td></tr>
-            <tr><td><strong>3D-CAM</strong></td><td>3 min</td><td>—</td><td>Version abrégée du CAM, usage en croissance</td></tr>
-            <tr style="background:#f8f9fa;"><td><strong>Autres validés</strong></td><td>Variable</td><td>—</td><td><strong>DOSS</strong> (<em>Delirium Observation Screening Scale</em>) · <strong>DRS-R-98</strong> · <strong>MDAS</strong> · <strong>NEECHAM</strong> — fréquents en soins non intensifs</td></tr>
-          </tbody>
-        </table>
-        </div>
-
-        <div class="key-fact green" style="margin-top:12px;">🎯 <strong>Choisir selon la contrainte, pas selon la performance seule.</strong> Le CAM est le plus validé mais coûte 5 à 15 minutes et une formation — d&#39;où sa désertion en pratique quotidienne. Le <strong>4AT</strong> tient en 2 minutes sans formation. Le <strong>RADAR</strong>, développé au Québec, résout le problème autrement : il ne <em>s&#39;ajoute pas</em> à la routine, il <strong>s&#39;y greffe</strong> — trois signes observés pendant la tournée de médicaments, et un dépistage seulement si l&#39;un apparaît. Pour une équipe qui n&#39;a jamais réussi à implanter un dépistage systématique, c&#39;est souvent le bon choix. <span style="font-size:11px;color:#64748b;">📚 <em>Précis de gériatrie, ch. 13</em></span></div>
-      </div>
-
-      <div class="block para" style="margin-top:14px;border-left-color:#6d28d9;">
-        <div class="block-title" id="del-5"><span class="tag">🔀 Diagnostic différentiel — les 3 D</span></div>
-
-        <div class="key-fact red" style="margin-top:10px;">🎯 <strong>Distinguer délirium, démence et dépression est l'exercice le plus important de la section</strong> — et le plus souvent raté. Les trois coexistent fréquemment : un <strong>délirium surajouté à une démence</strong> est une situation classique et particulièrement mal reconnue.</div>
-
-        <div style="overflow-x:auto;margin-top:12px;">
-        <table style="font-size:12px;">
-          <thead><tr><th style="width:18%;"></th><th style="width:28%;">Délirium</th><th style="width:27%;">Démence (TNC majeur)</th><th>Dépression</th></tr></thead>
-          <tbody>
-            <tr style="background:#fce4ec;"><td><strong>Début</strong></td><td>🎯 <strong>Aigu</strong> — heures à jours</td><td><strong>Insidieux</strong> — mois à années</td><td>Variable — semaines à mois</td></tr>
-            <tr><td><strong>Évolution</strong></td><td>🎯 <strong>Fluctuante</strong>, aggravation nocturne</td><td><strong>Progressive</strong>, relativement stable au jour le jour</td><td>Assez stable, souvent pire le matin</td></tr>
-            <tr style="background:#e8f4fd;"><td><strong>Attention</strong></td><td>🎯 <strong>Atteinte d'emblée</strong> — le signe clé</td><td>Préservée longtemps, atteinte au stade avancé</td><td>Difficulté de concentration, mais attention mobilisable</td></tr>
-            <tr><td><strong>Conscience</strong></td><td>🎯 <strong>Altérée</strong> — hypervigilance ou léthargie</td><td><strong>Normale</strong> jusqu'à un stade très avancé</td><td><strong>Normale</strong></td></tr>
-            <tr style="background:#f0fdf4;"><td><strong>Pensée</strong></td><td><strong>Désorganisée</strong>, incohérente</td><td><strong>Appauvrie</strong>, manque du mot</td><td>Ralentie, ruminations, idées de dévalorisation</td></tr>
-            <tr><td><strong>Perceptions</strong></td><td><strong>Hallucinations</strong> (souvent visuelles), illusions fréquentes</td><td>Possibles au stade avancé ou selon le type <em>(corps de Lewy)</em></td><td>Rares, sauf dépression psychotique</td></tr>
-            <tr style="background:#fff8e1;"><td><strong>Sommeil</strong></td><td><strong>Cycle inversé</strong>, agitation nocturne</td><td>Fragmenté, syndrome crépusculaire</td><td>Éveil matinal précoce, hypersomnie</td></tr>
-            <tr><td><strong>Réponse aux questions</strong></td><td>Incohérente, variable d'un moment à l'autre</td><td>Réponses erronées, <strong>confabulation</strong>, minimise ses difficultés</td><td>🎯 <strong>« Je ne sais pas »</strong> — se plaint activement de sa mémoire</td></tr>
-            <tr style="background:#ede9fe;"><td><strong>Réversibilité</strong></td><td>🎯 <strong>Oui</strong>, si la cause est corrigée</td><td>Non — évolution progressive</td><td><strong>Oui</strong>, avec traitement</td></tr>
-          </tbody>
-        </table>
-        </div>
-
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px;">
-          <div style="background:#fef2f2;border-radius:10px;padding:14px;border-left:4px solid #c0392b;">
-            <strong style="color:#c0392b;">🚨 Délirium surajouté à une démence</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Situation <strong>fréquente et sous-reconnue</strong>. La démence est le principal facteur prédisposant au délirium.<br>➜ <strong>Toute détérioration rapide chez une personne démente est un délirium jusqu'à preuve du contraire</strong> — pas « la démence qui progresse ».<br>Une démence ne s'aggrave <strong>pas</strong> en trois jours.</div>
-          </div>
-          <div style="background:#e8f4fd;border-radius:10px;padding:14px;border-left:4px solid #1d4ed8;">
-            <strong style="color:#1d4ed8;">🧠 La « pseudo-démence » dépressive</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Une dépression peut mimer un déclin cognitif chez la personne âgée.<br><strong>Indices en faveur de la dépression :</strong> la personne <strong>se plaint</strong> de sa mémoire (plutôt que de la minimiser), répond « je ne sais pas » plutôt que de confabuler, et le début est <strong>plus daté</strong>.<br>➜ Traiter la dépression et <strong>réévaluer la cognition ensuite</strong>.</div>
-          </div>
-        </div>
-
-        <div class="key-fact orange" style="margin-top:12px;">⏱️ <strong>Règle pratique :</strong> ne jamais poser un diagnostic de démence pendant un délirium. <strong>Attendre la résolution</strong>, puis réévaluer la cognition à distance. Un délirium peut mettre <strong>des semaines</strong> à se résoudre complètement.</div>
-      </div>
-
-      <div class="block para" style="margin-top:14px;border-left-color:#0f766e;">
-        <div class="block-title" id="del-6"><span class="tag">🧪 Chercher la cause — investigation</span></div>
-
-        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>L'approche :</strong> le délirium est presque toujours <strong>multifactoriel</strong>. Ne pas s'arrêter à la première cause trouvée — corriger l'infection urinaire <em>et</em> le fécalome <em>et</em> retirer l'anticholinergique.</div>
-
-        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">🔎 Vérification systématique — les causes les plus rentables</div>
-        <div class="criteria-list">
-          <div class="criteria-item"><div class="criteria-num red">1</div><span><strong>MÉDICAMENTS</strong> — c'est la première chose à regarder. Nouveau médicament? Ajout de trois médicaments et plus? <strong>Anticholinergiques, benzodiazépines, opioïdes, corticostéroïdes, antihistaminiques, sédatifs</strong>? Ou à l'inverse un <strong>sevrage</strong> (alcool, benzodiazépine)?</span></div>
-          <div class="criteria-item"><div class="criteria-num blue">2</div><span><strong>INFECTION</strong> — urinaire, pulmonaire, cutanée, septicémie · ⚠️ <strong>souvent sans fièvre</strong></span></div>
-          <div class="criteria-item"><div class="criteria-num blue">3</div><span><strong>RÉTENTION</strong> — <strong>globe vésical</strong> et <strong>fécalome</strong> : deux causes fréquentes, faciles à corriger, et systématiquement oubliées. <strong>Palper l'abdomen, faire un toucher rectal, mesurer le résidu vésical.</strong></span></div>
-          <div class="criteria-item"><div class="criteria-num blue">4</div><span><strong>MÉTABOLIQUE</strong> — glycémie, natrémie, kaliémie, <strong>calcémie</strong>, urée et créatinine, bilan hépatique, TSH</span></div>
-          <div class="criteria-item"><div class="criteria-num blue">5</div><span><strong>HYPOXIE &amp; PERFUSION</strong> — saturation, insuffisance cardiaque, arythmie, <strong>infarctus</strong>, embolie pulmonaire, anémie</span></div>
-          <div class="criteria-item"><div class="criteria-num blue">6</div><span><strong>DOULEUR</strong> — non soulagée ou non exprimée · utiliser une <strong>échelle comportementale validée</strong> chez la personne incapable de communiquer (visage crispé, résistance aux soins, position antalgique)</span></div>
-          <div class="criteria-item"><div class="criteria-num blue">7</div><span><strong>DÉSHYDRATATION &amp; DÉNUTRITION</strong></span></div>
-          <div class="criteria-item"><div class="criteria-num red">!</div><span><strong>NEUROLOGIQUE</strong> — AVC, hémorragie, convulsion, <strong>traumatisme crânien</strong> (rechercher une chute récente, surtout sous anticoagulant) · imagerie cérébrale <strong>si signes focaux, traumatisme, ou absence d'explication</strong></span></div>
-        </div>
-
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px;">
-          <div style="background:#e8f4fd;border-radius:10px;padding:14px;border-left:4px solid #1d4ed8;">
-            <strong style="color:#1d4ed8;">🧪 Bilan de base habituel</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>FSC</strong> · <strong>ionogramme</strong>, urée, créatinine · <strong>glycémie</strong> · <strong>calcium</strong><br><strong>Analyse et culture d'urine</strong><br><strong>Bilan hépatique</strong> · <strong>TSH</strong><br><strong>Saturation</strong> ± gaz artériel<br><strong>ECG</strong><br><strong>Radiographie pulmonaire</strong> selon la clinique<br>Signes vitaux réguliers — incluant <strong>température et signes neurologiques</strong></div>
-          </div>
-          <div style="background:#fff3cd;border-radius:10px;padding:14px;border-left:4px solid #d35400;">
-            <strong style="color:#d35400;">⚠️ Nuance sur la bactériurie</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Une <strong>bactériurie asymptomatique est fréquente</strong> chez la personne âgée et <strong>ne doit pas être traitée</strong> — c'est un principe de <em>Choisir avec soin</em>.<br>🎯 Attribuer trop vite un délirium à une « infection urinaire » sur la seule foi d'une analyse d'urine fait <strong>manquer la vraie cause</strong> et expose inutilement aux antibiotiques.<br>➜ Chercher des <strong>signes cliniques d'infection</strong>, pas seulement un résultat de laboratoire.</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="block rx" style="margin-top:14px;">
-        <div class="block-title" id="del-7"><span class="tag">🛡️ Prévention &amp; interventions non pharmacologiques</span></div>
-
-        <div class="key-fact blue" style="margin-top:10px;">📊 <strong>Ce n'est pas une opinion — c'est mesuré :</strong> les essais cliniques montrent que des <strong>interventions non pharmacologiques multicomposantes</strong>, ciblant les facteurs de risque, <strong>réduisent l'incidence du délirium de 30 à 40 %</strong>. Les composantes efficaces sont exactement celles des onglets ci-dessous : <strong>orientation</strong>, <strong>activités thérapeutiques</strong>, <strong>mobilisation</strong>, <strong>amélioration du sommeil sans médicament</strong>, <strong>optimisation de la vision et de l'audition</strong>, et <strong>correction de la déshydratation</strong>.<br>💡 En contexte chirurgical, une <strong>consultation gériatrique préopératoire</strong> et une <strong>anesthésie plus légère</strong> réduisent aussi le délirium postopératoire. <span style="font-size:11px;color:#64748b;">📚 <em>Goldman-Cecil Medicine, 26<sup>e</sup> éd.</em></span></div>
-        <div class="key-fact green" style="margin-top:10px;">🎯 <strong>C'est ici que se joue l'essentiel.</strong> Les interventions non pharmacologiques sont <strong>le traitement de première ligne</strong> du délirium — pas un complément aux médicaments. Elles préviennent, raccourcissent et atténuent le délirium, sans effet indésirable.</div>
-
-        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;">
-          <button id="deltab0" onclick="switchDelTx(0)" style="background:#0a7a4e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;transition:.15s;">🫀 Physique</button>
-          <button id="deltab1" onclick="switchDelTx(1)" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;transition:.15s;">💬 Relationnel</button>
-          <button id="deltab2" onclick="switchDelTx(2)" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;transition:.15s;">🏠 Environnement</button>
-        </div>
-
-        <div id="delp0" style="display:block;margin-top:14px;">
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
-            <div style="background:#f0fdf4;border-radius:10px;padding:14px;border-left:4px solid #15803d;">
-              <strong style="color:#15803d;">👓 Besoins de base &amp; sensoriels</strong>
-              <div style="font-size:13px;line-height:1.7;margin-top:8px;">🎯 <strong>S'assurer que la personne porte ses lunettes et son appareil auditif — même alitée.</strong> Geste banal, effet démontré.<br><strong>Hydratation régulière et suffisante</strong><br><strong>Encourager à s'alimenter</strong> — viser au moins ¾ du plat principal, aide partielle au besoin<br><strong>Conduire à la toilette</strong> au lever, aux repas et au coucher<br><strong>Hygiène buccale</strong> après chaque repas<br>Faire <strong>participer</strong> aux soins d'hygiène et à l'habillage</div>
-            </div>
-            <div style="background:#e8f4fd;border-radius:10px;padding:14px;border-left:4px solid #1d4ed8;">
-              <strong style="color:#1d4ed8;">🚶 Prévenir le syndrome d'immobilisation</strong>
-              <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Réduire les cathéters dès que possible</strong> · privilégier le cathétérisme intermittent<br><strong>Exercices au lit 3 fois par jour</strong>, ou lever pour les repas et pour la toilette<br><strong>Mobiliser le plus tôt possible</strong><br><strong>Alterner le positionnement aux 2 heures</strong> si alitement<br>⛔ <strong>Contention physique en dernier recours</strong> — privilégier les mesures de remplacement<br>➜ Traiter <strong>déshydratation, dénutrition, infection urinaire, constipation et fécalome</strong> activement</div>
-            </div>
-          </div>
-        </div>
-
-        <div id="delp1" style="display:none;margin-top:14px;">
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
-            <div style="background:#e8f4fd;border-radius:10px;padding:14px;border-left:4px solid #1d4ed8;">
-              <strong style="color:#1d4ed8;">🤝 Approche de base</strong>
-              <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Établir le contact visuel, se nommer et appeler la personne par son nom</strong> avant toute consigne ou tout soin<br>Visage <strong>souriant et détendu</strong>, ton de voix <strong>doux et rassurant</strong><br><strong>Phrases simples, courtes et concrètes</strong> — une consigne à la fois<br>Gestes et démonstrations pour se faire comprendre<br><strong>Expliquer les soins au fur et à mesure</strong><br><strong>Respecter le rythme</strong> — laisser le temps de réagir<br>⛔ Ne pas hausser le ton · ⛔ <strong>ne pas argumenter ni chercher à raisonner</strong><br>Utiliser la <strong>diversion</strong> pour les soins invasifs ou d'hygiène</div>
-            </div>
-            <div style="background:#ede9fe;border-radius:10px;padding:14px;border-left:4px solid #6d28d9;">
-              <strong style="color:#6d28d9;">🧭 Orientation &amp; stimulation cognitive</strong>
-              <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Orienter dans les 3 sphères à chaque visite</strong> (temps, lieu, personne)<br><strong>Horloge et calendrier bien visibles</strong><br>Intégrer l'orientation dans la conversation — « quel beau lundi matin! »<br><strong>Visites régulières</strong> pour orienter et sécuriser<br>Aider à <strong>interpréter correctement l'environnement</strong> en le décrivant<br>Expliquer aux proches <strong>l'importance de leur présence</strong> au chevet</div>
-            </div>
-          </div>
-          <div style="background:#fff3cd;border-radius:10px;padding:14px;border-left:4px solid #d35400;margin-top:12px;">
-            <strong style="color:#d35400;">👁️ Comment réagir aux hallucinations, illusions et idées délirantes</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;">
-              <strong>Hallucinations :</strong> ne pas confronter · rassurer en disant que vous êtes là et que vous allez régler le problème · ne pas argumenter — <strong>la personne est convaincue de ce qu'elle voit</strong> · détourner l'attention · dire que vous ne voyez pas ce qu'elle perçoit <strong>mais que vous la croyez</strong> · rester avec elle · <em>si l'anxiété devient trop grande, entrer dans son monde pour régler le problème</em><br>
-              <strong>Illusions :</strong> <strong>retirer l'objet</strong> en cause et dire que c'est terminé · <strong>améliorer l'éclairage</strong> · décrire l'environnement · ne pas chercher à raisonner<br>
-              <strong>Idées délirantes :</strong> repérer les <strong>moments et les déclencheurs</strong> · reconnaître que c'est réel <em>pour elle</em> et que ça peut faire peur · rassurer sur sa sécurité · <strong>détourner vers un sujet ancien et significatif</strong> · accorder de l'attention <em>quand elle n'exprime pas</em> d'idées délirantes · ⛔ ne pas chercher à convaincre que c'est faux
-            </div>
-          </div>
-        </div>
-
-        <div id="delp2" style="display:none;margin-top:14px;">
-          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;">
-            <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
-              <strong style="color:#15803d;">🖼️ Points de repère</strong>
-              <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>1 ou 2 objets personnels significatifs</strong> sur la table de chevet — réveille-matin, photo<br><strong>Calendrier et horloge</strong> à la vue<br><strong>Ouvrir les rideaux le matin</strong> — lumière naturelle et orientation<br>Carton plastifié bien visible : <em>« Vous êtes à l'hôpital XXX, nous prenons soin de vous »</em><br>Rapprocher le lit du poste pour une meilleure surveillance</div>
-            </div>
-            <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
-              <strong style="color:#1d4ed8;">🔇 Réduire le bruit</strong>
-              <div style="font-size:13px;line-height:1.7;margin-top:8px;">Parler moins fort dans les corridors · chaussures moins bruyantes<br>Baisser la sonnerie des téléphones · éteindre les appareils inutiles<br><strong>Écouteurs</strong> pour le téléviseur<br>Privilégier les <strong>chambres simples ou doubles</strong><br>⚠️ Attention aux <strong>changements de quart</strong> — pic de surcharge sensorielle</div>
-            </div>
-            <div style="background:#fff3cd;border-radius:10px;padding:14px;">
-              <strong style="color:#d35400;">💡 Éclairage</strong>
-              <div style="font-size:13px;line-height:1.7;margin-top:8px;">Lumière naturelle le jour<br><strong>Veilleuses la nuit</strong> près du lit et dans la salle de toilette — réduit les <strong>illusions</strong><br>Éclairage <strong>tamisé ou localisé</strong> pour les soins de nuit<br>⚠️ Éviter les changements d'éclairage <strong>trop intenses et rapides</strong></div>
-            </div>
-            <div style="background:#fce4ec;border-radius:10px;padding:14px;">
-              <strong style="color:#c0392b;">🛡️ Sécurité de la personne agitée</strong>
-              <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Lit à la position la plus basse</strong><br><strong>Baisser la ridelle du côté où la personne a l'habitude de se lever</strong> — sa mémoire procédurale facilite le transfert et la sécurité<br>Détecteur de mouvement<br><strong>Désencombrer</strong>, plancher sec, bandes adhésives près de la toilette<br><strong>Cloche d'appel accessible en tout temps</strong></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="key-fact orange" style="margin-top:14px;">📈 <strong>Et si ça ne s'améliore pas?</strong> L'AAPA propose une escalade en trois paliers : <strong>systématique</strong> (équipe soignante) → <strong>spécifique</strong> (équipe multiprofessionnelle : ergothérapie, physiothérapie, nutrition) → <strong>spécialisé</strong> (gériatrie, gérontopsychiatrie, spécialistes). Passer au palier suivant est une <strong>alerte à poser explicitement</strong>, pas une décision à repousser.</div>
-      </div>
-
-      <div class="block rx" style="margin-top:14px;border-left-color:#7c3aed;">
-        <div class="block-title" id="del-8"><span class="tag">💊 Traitement pharmacologique — dernier recours</span></div>
-
-        <div class="key-fact red" style="margin-top:10px;">⛔ <strong>Aucun médicament ne traite le délirium.</strong> Les antipsychotiques ne raccourcissent pas sa durée et n'en améliorent pas l'issue — ils ne servent qu'à <strong>contrôler une détresse ou une dangerosité</strong> lorsque les mesures non pharmacologiques ont échoué. <strong>Traiter la cause reste le seul vrai traitement.</strong></div>
-
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
-          <div style="background:#fff3cd;border-radius:10px;padding:14px;border-left:4px solid #d35400;">
-            <strong style="color:#d35400;">⚖️ Quand l'envisager</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Détresse importante</strong> liée aux hallucinations ou aux idées délirantes<br><strong>Danger pour la personne ou pour autrui</strong><br><strong>Agitation compromettant un traitement essentiel</strong><br>➜ <strong>Après</strong> avoir corrigé la cause et appliqué les mesures non pharmacologiques<br>⚠️ Le délirium <strong>hypoactif ne se traite pas</strong> par antipsychotique</div>
-          </div>
-          <div style="background:#fef2f2;border-radius:10px;padding:14px;border-left:4px solid #c0392b;">
-            <strong style="color:#c0392b;">🚫 Précautions</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Dose la plus faible, durée la plus courte</strong>, réévaluation quotidienne<br>⚠️ Antipsychotiques : <strong>allongement du QT</strong>, symptômes extrapyramidaux, sédation, chutes, <strong>surmortalité chez la personne âgée démente</strong><br>🚨 <strong>Contre-indication relative majeure : maladie à corps de Lewy et Parkinson</strong> — hypersensibilité aux neuroleptiques pouvant être sévère<br>⛔ <strong>Éviter les benzodiazépines</strong> — elles <strong>aggravent</strong> le délirium<br>➜ <strong>Exception :</strong> le délirium de <strong>sevrage alcoolique</strong>, où les benzodiazépines <em>sont</em> le traitement</div>
-          </div>
-        </div>
-
-        <div class="key-fact blue" style="margin-top:12px;">🎯 <strong>Le réflexe inverse, plus utile :</strong> avant d'ajouter un médicament, se demander <strong>lequel on peut retirer</strong>. Les anticholinergiques, benzodiazépines, opioïdes et sédatifs déjà au dossier sont plus souvent la cause du délirium que la solution.<br>➜ Voir la section <em>Polypharmacie &amp; déprescription</em></div>
-
-        <div class="key-fact green" style="margin-top:8px;">😴 <strong>Pour le sommeil :</strong> privilégier les mesures non pharmacologiques — regrouper les soins pour permettre des plages de sommeil, éviter les réveils nocturnes pour les soins directs, lumière le jour, activité en journée, breuvage chaud décaféiné le soir. <strong>Ne pas prescrire d'hypnotique</strong>, qui aggravera la confusion et le risque de chute.</div>
-      </div>
-
-      <div class="block flag" style="margin-top:14px;">
-        <div class="block-title" id="del-9"><span class="tag">🚨 Red flags &amp; pièges</span></div>
-
-        <div class="flag-list" style="margin-top:12px;">
-          <div class="flag-item"><strong>Tout changement aigu de l'état mental</strong> chez une personne âgée — c'est une urgence médicale, pas un trait de caractère</div>
-          <div class="flag-item"><strong>Détérioration rapide chez une personne déjà démente</strong> — délirium surajouté jusqu'à preuve du contraire</div>
-          <div class="flag-item"><strong>Personne âgée anormalement somnolente ou apathique</strong> — délirium hypoactif, la forme la plus manquée</div>
-          <div class="flag-item"><strong>Signes neurologiques focaux</strong>, céphalée nouvelle, convulsion — imagerie cérébrale urgente</div>
-          <div class="flag-item"><strong>Chute récente sous anticoagulant</strong> avec confusion — hématome sous-dural</div>
-          <div class="flag-item"><strong>Instabilité hémodynamique, hypoxie, hypoglycémie</strong> — à corriger immédiatement</div>
-          <div class="flag-item"><strong>Signes de sevrage alcoolique</strong> — trémulations, sudation, tachycardie, hallucinations : prise en charge spécifique et urgente</div>
-          <div class="flag-item"><strong>Fièvre ou hypothermie</strong> avec confusion — sepsis possible même sans foyer évident</div>
-        </div>
-
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px;">
-          <div style="background:#fef2f2;border-radius:10px;padding:14px;border-left:4px solid #c0392b;">
-            <strong style="color:#c0392b;">🕳️ Les pièges les plus fréquents</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Attribuer la confusion <strong>au vieillissement</strong> ou à la démence<br><strong>Manquer la forme hypoactive</strong><br>Traiter une <strong>bactériurie asymptomatique</strong> et s'arrêter là<br><strong>Oublier le fécalome et le globe vésical</strong><br>Ajouter un sédatif au lieu d'en retirer un<br><strong>Utiliser la contention</strong> pour gérer l'agitation<br>Poser un diagnostic de démence <strong>pendant</strong> le délirium<br>Ne pas parler à un proche</div>
-          </div>
-          <div style="background:#f0fdf4;border-radius:10px;padding:14px;border-left:4px solid #15803d;">
-            <strong style="color:#15803d;">✅ La démarche en 5 gestes</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>①</strong> <strong>Reconnaître</strong> — CAM, et « c'était comme ça il y a une semaine? »<br><strong>②</strong> <strong>Chercher la cause</strong> — médicaments d'abord, puis infection, rétention, métabolique, hypoxie, douleur<br><strong>③</strong> <strong>Corriger</strong> toutes les causes trouvées, pas seulement la première<br><strong>④</strong> <strong>Appliquer les mesures non pharmacologiques</strong> — lunettes, appareils auditifs, mobilisation, repères, sommeil<br><strong>⑤</strong> <strong>Réévaluer</strong> et escalader si aucune amélioration</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-<div class="section" id="sec-tnc">
-      <div class="section-header">
-        <div class="section-accent" style="background:#4338ca">🧩</div>
-        <div class="section-title"><h1>Troubles neurocognitifs (TNC)</h1><div class="breadcrumb">Gériatrie <span class="breadcrumb-sep">·</span> Alzheimer &amp; autres TNC <span class="breadcrumb-sep">·</span> INESSS <span class="breadcrumb-sep">·</span> SCPD</div></div>
-      </div>
-      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;">
-        <button onclick="goToBlock('tnc-1')" style="background:#374151;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">📖 TNC léger vs majeur</button>
-        <button onclick="goToBlock('tnc-2')" style="background:#0369a1;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🔍 Repérage</button>
-        <button onclick="goToBlock('tnc-3')" style="background:#6d28d9;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧬 Les grands types</button>
-        <button onclick="goToBlock('tnc-4')" style="background:#0f766e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧪 Investigation</button>
-        <button onclick="goToBlock('tnc-5')" style="background:#b45309;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧠 Outils cognitifs</button>
-        <button onclick="goToBlock('tnc-6')" style="background:#0a7a4e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">💊 Traitement</button>
-        <button onclick="goToBlock('tnc-7')" style="background:#c0392b;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">😤 SCPD</button>
-        <button onclick="goToBlock('tnc-8')" style="background:#92400e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">⚖️ Conduite &amp; aptitude</button>
-        <button onclick="goToBlock('tnc-9')" style="background:#0891b2;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">📋 Suivi &amp; proche aidant</button>
-        <button onclick="goToBlock('tnc-10')" style="background:#dc2626;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🚨 Red flags</button>
-      </div>
-
-      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:20px;">
-        <div style="flex:1;min-width:95px;background:#EEF2FF;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#1C3F8F;">Autonomie</div><div style="font-size:11px;color:#555;margin-top:4px;">Ce qui sépare léger de majeur</div></div>
-        <div style="flex:1;min-width:95px;background:#F3E8FF;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#6d28d9;">Alzheimer</div><div style="font-size:11px;color:#555;margin-top:4px;">Le type le plus fréquent</div></div>
-        <div style="flex:1;min-width:95px;background:#FEF9C3;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#854d0e;">AD8 · MoCA</div><div style="font-size:11px;color:#555;margin-top:4px;">Outils de repérage</div></div>
-        <div style="flex:1;min-width:95px;background:#FEE2E2;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#b91c1c;">≠ Délirium</div><div style="font-size:11px;color:#555;margin-top:4px;">À écarter avant tout diagnostic</div></div>
-      </div>
-
-      <div class="block def" style="margin-top:14px;">
-        <div class="block-title" id="tnc-1"><span class="tag">📖 TNC léger vs majeur — la terminologie actuelle</span></div>
-
-        <div class="key-fact blue" style="margin-top:10px;">📗 <strong>Le vocabulaire a changé :</strong> le terme <strong>« démence » a été remplacé par « trouble neurocognitif majeur »</strong> dans la classification actuelle. Le mot démence reste employé en clinique et dans la population, mais les documents officiels — INESSS, MSSS — utilisent <strong>TNC</strong>. Connaître les deux évite la confusion.</div>
-
-        <div style="overflow-x:auto;margin-top:12px;">
-        <table style="font-size:12px;">
-          <thead><tr><th style="width:18%;"></th><th style="width:38%;">TNC léger</th><th>TNC majeur <em>(anciennement démence)</em></th></tr></thead>
-          <tbody>
-            <tr style="background:#e8f4fd;"><td><strong>Déclin cognitif</strong></td><td><strong>Modeste</strong> par rapport au niveau antérieur, dans un ou plusieurs domaines</td><td><strong>Significatif</strong> par rapport au niveau antérieur</td></tr>
-            <tr><td><strong>🎯 Autonomie</strong></td><td><strong>Préservée</strong> — la personne compense (listes, rappels, plus d'efforts), mais elle y arrive</td><td>🎯 <strong>Atteinte</strong> — le déclin <strong>interfère avec l'autonomie</strong> dans les activités quotidiennes</td></tr>
-            <tr style="background:#f0fdf4;"><td><strong>Évolution</strong></td><td>Peut rester stable, s'améliorer, ou progresser vers un TNC majeur</td><td>Progressive selon l'étiologie</td></tr>
-            <tr><td><strong>Conduite</strong></td><td><strong>Suivi</strong> et correction des facteurs réversibles · réévaluation périodique</td><td>Investigation étiologique, plan de traitement, soutien au proche aidant, planification</td></tr>
-          </tbody>
-        </table>
-        </div>
-
-        <div class="key-fact orange" style="margin-top:12px;">🎯 <strong>La ligne de partage est fonctionnelle, pas un score.</strong> Ce n'est pas le résultat au MoCA qui fait la différence entre léger et majeur — c'est la réponse à : <strong>« est-ce que ça l'empêche de faire ce qu'elle faisait avant? »</strong> D'où l'importance de l'histoire collatérale et de l'évaluation des AVD.</div>
-
-        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">🧠 Les domaines cognitifs à explorer</div>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;">
-          <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
-            <strong style="color:#1d4ed8;">Mémoire &amp; apprentissage</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Oublis récents, répétitions, égarement d'objets, rendez-vous manqués</div>
-          </div>
-          <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
-            <strong style="color:#15803d;">Fonctions exécutives</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Planification, jugement, résolution de problèmes, gestion des finances et des médicaments</div>
-          </div>
-          <div style="background:#fff3cd;border-radius:10px;padding:14px;">
-            <strong style="color:#d35400;">Langage</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Manque du mot, discours appauvri, difficulté de compréhension</div>
-          </div>
-          <div style="background:#ede9fe;border-radius:10px;padding:14px;">
-            <strong style="color:#6d28d9;">Attention complexe</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Difficulté à suivre une conversation à plusieurs, distractibilité</div>
-          </div>
-          <div style="background:#fce4ec;border-radius:10px;padding:14px;">
-            <strong style="color:#c0392b;">Visuo-spatial (perceptivo-moteur)</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Se perdre dans des lieux connus, difficulté à conduire, à s'habiller</div>
-          </div>
-          <div style="background:#f1f5f9;border-radius:10px;padding:14px;">
-            <strong style="color:#334155;">Cognition sociale</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Changement de personnalité, désinhibition, perte d'empathie, comportements inappropriés</div>
-          </div>
-        </div>
-      
-        <div class="key-fact black" style="margin-top:14px;">⚠️ <strong>La confusion la plus fréquente — et elle change le diagnostic.</strong> « <strong>TNC léger</strong> » et « <strong>TNC majeur de sévérité légère</strong> » ne sont pas la même chose. Le premier est un <strong>syndrome distinct</strong> — le déclin n&#39;interfère <em>pas</em> avec l&#39;autonomie. Le second est un <strong>TNC majeur</strong> — l&#39;autonomie est déjà atteinte — dont on précise le degré. <span style="font-size:11px;color:#64748b;">📚 <em>DSM-5-TR</em></span></div>
-
-        <div style="overflow-x:auto;margin-top:12px;">
-        <table style="font-size:12px;">
-          <thead><tr><th style="width:20%;">Sévérité du TNC majeur</th><th style="width:36%;">Critère DSM-5-TR</th><th>Traduction concrète</th></tr></thead>
-          <tbody>
-            <tr style="background:#fff7ed;"><td><strong>Léger</strong></td><td>Difficultés dans les <strong>activités instrumentales</strong> de la vie quotidienne</td><td>Travaux ménagers · <strong>gestion de l&#39;argent</strong> · gestion des médicaments · transport · téléphone</td></tr>
-            <tr style="background:#fee2e2;"><td><strong>Moyen</strong></td><td>Difficultés dans les <strong>activités de base</strong> de la vie quotidienne</td><td><strong>Manger · s&#39;habiller</strong> · se laver · hygiène · transferts</td></tr>
-            <tr style="background:#fecaca;"><td><strong>Grave</strong></td><td><strong>Dépendance complète</strong></td><td>Aide requise pour l&#39;ensemble des soins personnels</td></tr>
-          </tbody>
-        </table>
-        </div>
-
-        <div class="key-fact blue" style="margin-top:12px;">📋 <strong>Les quatre critères du TNC majeur, à connaître.</strong><br><strong>A.</strong> Déclin cognitif <strong>significatif</strong> par rapport au niveau antérieur, dans <strong>un ou plusieurs</strong> des six domaines — <em>attention complexe, fonctions exécutives, apprentissage et mémorisation, langage, activités perceptivomotrices, cognition sociale</em> — reposant sur ① une <strong>préoccupation</strong> du sujet, d&#39;un informant fiable ou du clinicien, <strong>et</strong> ② une <strong>altération importante des performances</strong>, idéalement documentée par un bilan neuropsychologique standardisé.<br><strong>B.</strong> Les déficits <strong>interfèrent avec l&#39;autonomie</strong> — au minimum, une aide est nécessaire dans les activités instrumentales complexes (payer ses factures, gérer ses médicaments).<br><strong>C.</strong> Ils <strong>ne surviennent pas exclusivement pendant un délirium</strong>.<br><strong>D.</strong> Ils ne sont <strong>pas mieux expliqués par un autre trouble mental</strong> — trouble dépressif caractérisé, schizophrénie. <span style="font-size:11px;color:#64748b;">📚 <em>DSM-5-TR</em></span> &nbsp;➜ <em>Deuil &amp; dépression de la PA</em></div>
-
-        <div class="key-fact purple" style="margin-top:10px;">🏷️ <strong>Deux spécificateurs à ne pas oublier au diagnostic.</strong> ① <strong>L&#39;étiologie</strong> — Alzheimer, dégénérescence lobaire frontotemporale, corps de Lewy, maladie vasculaire, lésion cérébrale traumatique, substance ou médicament, VIH, prions, Parkinson, Huntington, autre affection médicale, <strong>étiologies multiples</strong>, ou non spécifiée. ② <strong>La présence ou non d&#39;une perturbation du comportement</strong> — symptômes psychotiques, perturbation de l&#39;humeur, agitation. C&#39;est ce second spécificateur qui code les <strong>SCPD</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>DSM-5-TR</em></span></div>
-
-        <div class="key-fact yellow" style="margin-top:10px;">📖 <strong>Démence ou TNC ?</strong> Le DSM-5-TR conserve le terme <strong>démence</strong> pour la continuité, et il reste standard dans certains sous-types dégénératifs touchant les aînés. <strong>Trouble neurocognitif</strong> est préféré chez les personnes plus jeunes — traumatisme crânien, VIH — où « démence » serait à la fois inexact et stigmatisant. <span style="font-size:11px;color:#64748b;">📚 <em>DSM-5-TR</em></span></div>
-      </div>
-
-      <div class="block clin" style="margin-top:14px;border-left-color:#0369a1;">
-        <div class="block-title" id="tnc-2"><span class="tag">🔍 Repérage — qui, quand, comment</span></div>
-
-        <div class="key-fact blue" style="margin-top:10px;">📗 <strong>Cadre québécois :</strong> l'INESSS a publié <em>Repérage et processus menant au diagnostic de la maladie d'Alzheimer et d'autres troubles neurocognitifs</em>, avec un <strong>processus clinique interdisciplinaire en GMF</strong> inspiré du modèle de gestion des maladies chroniques. Le repérage, le diagnostic et le suivi se font en <strong>collaboration médecin–infirmière</strong> — l'IPS y a un rôle central.</div>
-
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
-          <div style="background:#fff3cd;border-radius:10px;padding:14px;border-left:4px solid #d35400;">
-            <strong style="color:#d35400;">🔔 Ce qui doit déclencher un repérage</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Plainte cognitive</strong> de la personne <em>ou</em> — plus révélateur — <strong>d'un proche</strong><br><strong>Difficultés nouvelles dans les AVD</strong> : médicaments, finances, transport, repas<br><strong>Rendez-vous manqués</strong>, appels répétitifs, erreurs de médication<br><strong>Déclin fonctionnel inexpliqué</strong>, chutes répétées<br><strong>Changement de personnalité ou de comportement</strong><br><strong>Errance</strong>, s'être perdu en conduisant</div>
-          </div>
-          <div style="background:#f0fdf4;border-radius:10px;padding:14px;border-left:4px solid #15803d;">
-            <strong style="color:#15803d;">🛠️ Outils de repérage</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>AD8</strong> — questionnaire bref rempli avec un <strong>proche</strong>, pour détecter un déclin cognitif ou fonctionnel. Outil d'aide à la décision retenu par l'INESSS.<br><strong>MoCA</strong> — test cognitif plus sensible que le MMSE pour les atteintes légères et exécutives<br>🎯 <strong>Le repérage n'est pas un diagnostic</strong> : un test anormal ouvre une évaluation, il ne la conclut pas.</div>
-          </div>
-        </div>
-
-        <div class="key-fact red" style="margin-top:12px;">⚠️ <strong>Avant tout dépistage cognitif, poser trois questions :</strong> ① y a-t-il un <strong>délirium</strong> (début aigu, fluctuation, inattention)? ② y a-t-il une <strong>dépression</strong>? ③ y a-t-il un <strong>déficit sensoriel</strong> non corrigé — la personne <strong>voit-elle et entend-elle</strong> les consignes du test? Un MoCA fait sans lunettes ni appareils auditifs mesure surtout le handicap sensoriel.</div>
-
-        <div class="key-fact green" style="margin-top:8px;">💡 <strong>Sur le dépistage systématique :</strong> il n'est <strong>pas recommandé</strong> de dépister la population âgée asymptomatique. Le repérage est <strong>ciblé</strong> — déclenché par une plainte, une inquiétude d'un proche ou un changement fonctionnel observé.</div>
-      </div>
-
-      <div class="block clin" style="margin-top:14px;border-left-color:#6d28d9;">
-        <div class="block-title" id="tnc-3"><span class="tag">🧬 Les grands types de TNC</span></div>
-
-        <div class="key-fact blue" style="margin-top:10px;">📚 <strong>Le cadre de référence :</strong> la littérature de médecine interne structure les TNC autour de <strong>quatre grands syndromes</strong> — <strong>maladie d'Alzheimer</strong>, <strong>maladie cérébrovasculaire</strong>, <strong>maladie à corps de Lewy</strong> et <strong>dégénérescences frontotemporales</strong> — chacun avec ses critères cliniques, son apport d'imagerie et de biomarqueurs, et des options thérapeutiques d'ampleur très variable. <span style="font-size:11px;color:#64748b;">📚 <em>Goldman-Cecil Medicine, 26<sup>e</sup> éd.</em></span></div>
-        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>Pourquoi distinguer les types :</strong> le type détermine <strong>ce qu'on peut traiter</strong>, <strong>ce qu'il faut éviter</strong> — les neuroleptiques dans la maladie à corps de Lewy, par exemple — et <strong>ce à quoi il faut se préparer</strong>. Les formes mixtes sont fréquentes, surtout Alzheimer + vasculaire.</div>
-
-        <div style="overflow-x:auto;margin-top:12px;">
-        <table style="font-size:12px;">
-          <thead><tr><th style="width:19%;">Type</th><th style="width:29%;">Tableau caractéristique</th><th>Ce qui change la conduite</th></tr></thead>
-          <tbody>
-            <tr style="background:#ede9fe;"><td><strong>Maladie d'Alzheimer</strong><br><em>le plus fréquent</em></td><td>Début <strong>insidieux</strong>, évolution <strong>lentement progressive</strong> · atteinte <strong>de la mémoire récente</strong> au premier plan · désorientation temporelle puis spatiale · manque du mot<br>Anosognosie fréquente — la personne minimise</td><td>Inhibiteurs de la cholinestérase envisageables<br>Planification à long terme : mandat de protection, directives, soutien au proche</td></tr>
-            <tr><td><strong>TNC vasculaire</strong></td><td>Évolution <strong>« en marches d'escalier »</strong> ou progressive · atteinte <strong>exécutive</strong> souvent prédominante, plus que mnésique · <strong>signes neurologiques focaux</strong>, troubles de la marche précoces<br>Facteurs de risque vasculaires présents</td><td>🎯 <strong>Le contrôle des facteurs de risque vasculaires est le traitement</strong> : TA, lipides, diabète, tabac, FA<br>➜ Voir <em>AVC</em>, <em>HTA</em>, <em>Dyslipidémie</em></td></tr>
-            <tr style="background:#fce4ec;"><td><strong>Maladie à corps de Lewy</strong></td><td>🎯 <strong>Fluctuations cognitives marquées</strong> · <strong>hallucinations visuelles précoces et détaillées</strong> · <strong>parkinsonisme</strong> · troubles du comportement en sommeil paradoxal · chutes, syncopes</td><td>🚨 <strong>HYPERSENSIBILITÉ AUX NEUROLEPTIQUES</strong> — réaction pouvant être sévère · les <strong>éviter</strong><br>⚠️ Les fluctuations peuvent être confondues avec un délirium</td></tr>
-            <tr><td><strong>TNC frontotemporal</strong></td><td>Début souvent <strong>plus jeune</strong> (avant 65 ans) · <strong>changement de personnalité et de comportement au premier plan</strong> : désinhibition, apathie, perte d'empathie, comportements stéréotypés, hyperoralité · <strong>mémoire relativement préservée au début</strong> · variante langagière possible</td><td>⚠️ Souvent confondu avec un <strong>trouble psychiatrique</strong> — errance diagnostique fréquente<br>Les inhibiteurs de la cholinestérase <strong>n'y sont pas indiqués</strong><br>Fardeau très lourd pour les proches</td></tr>
-            <tr style="background:#f0fdf4;"><td><strong>TNC de la maladie de Parkinson</strong></td><td>Troubles cognitifs survenant dans le contexte d'un <strong>parkinsonisme établi depuis des années</strong> · atteinte exécutive et visuo-spatiale</td><td>Même prudence que pour les corps de Lewy avec les neuroleptiques<br>➜ Voir la section <em>Parkinson</em></td></tr>
-          </tbody>
-        </table>
-        </div>
-
-        <div class="key-fact orange" style="margin-top:12px;">🔀 <strong>Les formes mixtes sont la règle, pas l'exception</strong> — particulièrement Alzheimer associé à une composante vasculaire. En pratique, cela signifie qu'<strong>il vaut toujours la peine de traiter les facteurs de risque vasculaires</strong>, quel que soit le type présumé.</div>
-      </div>
-
-      <div class="block para" style="margin-top:14px;border-left-color:#0f766e;">
-        <div class="block-title" id="tnc-4"><span class="tag">🧪 Investigation — écarter le réversible</span></div>
-
-        <div class="key-fact red" style="margin-top:10px;">🎯 <strong>L'objectif principal du bilan n'est pas de confirmer l'Alzheimer — c'est d'écarter ce qui se traite.</strong> Une proportion des tableaux cognitifs est liée à des causes partiellement ou totalement réversibles, et ce sont exactement celles qu'on ne veut pas manquer.</div>
-
-        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">🔄 Les causes réversibles à chercher systématiquement</div>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;">
-          <div style="background:#fce4ec;border-radius:10px;padding:14px;">
-            <strong style="color:#c0392b;">🌀 Délirium</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🎯 <strong>À écarter en premier, toujours.</strong> Ne jamais diagnostiquer un TNC pendant un délirium.</div>
-          </div>
-          <div style="background:#fff3cd;border-radius:10px;padding:14px;">
-            <strong style="color:#d35400;">💊 Médicaments</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Anticholinergiques</strong>, benzodiazépines, opioïdes, antihistaminiques, certains antiépileptiques.<br>➜ La <strong>déprescription est un test diagnostique</strong> autant qu'un traitement.<br>➜ Voir <em>Polypharmacie</em></div>
-          </div>
-          <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
-            <strong style="color:#1d4ed8;">😔 Dépression</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;">La « pseudo-démence » dépressive est fréquente et traitable.<br>➜ Traiter, puis <strong>réévaluer la cognition</strong>.</div>
-          </div>
-          <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
-            <strong style="color:#15803d;">🧪 Métabolique &amp; carentiel</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Hypothyroïdie</strong> · <strong>carence en B12</strong> · troubles électrolytiques · calcémie · dysfonction hépatique ou rénale</div>
-          </div>
-          <div style="background:#ede9fe;border-radius:10px;padding:14px;">
-            <strong style="color:#6d28d9;">🧠 Structurel</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Hématome sous-dural chronique</strong> (chute, anticoagulant) · <strong>hydrocéphalie à pression normale</strong> — triade : troubles de la marche, incontinence, déclin cognitif · tumeur · AVC</div>
-          </div>
-          <div style="background:#f1f5f9;border-radius:10px;padding:14px;">
-            <strong style="color:#334155;">🍷 Autres</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Alcool</strong> · apnée du sommeil non traitée · <strong>déficits sensoriels non corrigés</strong> · infections chroniques</div>
-          </div>
-        </div>
-
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px;">
-          <div style="background:#e8f4fd;border-radius:10px;padding:14px;border-left:4px solid #1d4ed8;">
-            <strong style="color:#1d4ed8;">🧪 Bilan paraclinique de base</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>FSC</strong> · <strong>ionogramme</strong>, urée, créatinine · <strong>calcium</strong><br><strong>Glycémie</strong> · <strong>TSH</strong> · <strong>vitamine B12</strong><br>Bilan hépatique<br>± sérologies selon les facteurs de risque<br><em>Au Québec, des ordonnances collectives permettent à l'infirmière d'amorcer ce bilan après un repérage positif.</em></div>
-          </div>
-          <div style="background:#fff3cd;border-radius:10px;padding:14px;border-left:4px solid #d35400;">
-            <strong style="color:#d35400;">🖼️ Imagerie cérébrale</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Pas systématique dans tous les cas, mais <strong>indiquée si</strong> :<br>• début <strong>rapide</strong> ou évolution atypique<br>• <strong>âge jeune</strong> (&lt; 65 ans)<br>• <strong>signes neurologiques focaux</strong><br>• <strong>traumatisme crânien</strong> ou anticoagulation<br>• suspicion d'<strong>hydrocéphalie</strong> ou de lésion structurelle<br>• antécédents de cancer</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="block para" style="margin-top:14px;border-left-color:#b45309;">
-        <div class="block-title" id="tnc-5"><span class="tag">🧠 Outils d'évaluation cognitive</span></div>
-
-        <div style="overflow-x:auto;margin-top:12px;">
-        <table style="font-size:12px;">
-          <thead><tr><th style="width:16%;">Outil</th><th style="width:34%;">Utilité</th><th>Limites &amp; précautions</th></tr></thead>
-          <tbody>
-            <tr style="background:#f0fdf4;"><td><strong>AD8</strong></td><td>Questionnaire bref rempli avec un <strong>proche</strong> — détecte un changement cognitif ou fonctionnel<br>🎯 Ne dépend pas de la performance de la personne au moment du test</td><td>Nécessite un informateur fiable qui voit la personne régulièrement</td></tr>
-            <tr><td><strong>MoCA</strong></td><td><strong>Plus sensible que le MMSE</strong> pour les atteintes légères et les <strong>fonctions exécutives</strong> · explore attention, langage, abstraction, rappel différé, visuo-spatial</td><td>⚠️ Influencé par la <strong>scolarité</strong>, la langue et la culture · <strong>formation requise</strong> pour l'administrer et le coter · sensible aux déficits sensoriels</td></tr>
-            <tr style="background:#e8f4fd;"><td><strong>MMSE</strong></td><td>Historiquement le plus utilisé · utile pour <strong>suivre l'évolution</strong> dans le temps</td><td>⚠️ <strong>Peu sensible aux atteintes légères et exécutives</strong> · effet plafond<br>Ne détecte pas bien les TNC frontotemporaux ni vasculaires</td></tr>
-            <tr><td><strong>Test de l'horloge</strong></td><td>Rapide · explore fonctions <strong>exécutives et visuo-spatiales</strong></td><td>À interpréter avec le reste — jamais isolément</td></tr>
-            <tr style="background:#fff8e1;"><td><strong>Évaluation fonctionnelle</strong> (AVQ/AVD)</td><td>🎯 <strong>C'est ce qui détermine léger vs majeur</strong> — indispensable, et souvent la partie la plus négligée</td><td>Nécessite l'histoire collatérale</td></tr>
-          </tbody>
-        </table>
-        </div>
-
-        <div class="key-fact orange" style="margin-top:12px;">⚠️ <strong>Un score n'est pas un diagnostic.</strong> Un MoCA sous le seuil chez une personne peu scolarisée, allophone, malentendante, déprimée ou en délirium ne signifie pas TNC. Inversement, une personne très scolarisée peut réussir le test tout en ayant un déclin réel par rapport à son niveau antérieur. <strong>Le test complète l'histoire — il ne la remplace pas.</strong></div>
-      </div>
-
-      <div class="block rx" style="margin-top:14px;">
-        <div class="block-title" id="tnc-6"><span class="tag">💊 Traitement</span></div>
-
-        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>Mettre les attentes au bon niveau :</strong> aucun traitement ne guérit ni n'arrête un TNC dégénératif. Les interventions <strong>non pharmacologiques et le soutien au proche aidant</strong> ont un impact plus grand sur la qualité de vie que les médicaments — et ce sont elles qui déterminent le maintien à domicile.</div>
-
-        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">🌿 Non pharmacologique — la base</div>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;">
-          <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
-            <strong style="color:#15803d;">🏃 Mode de vie</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Activité physique régulière</strong><br><strong>Stimulation cognitive et sociale</strong><br>Sommeil de qualité · traitement de l'<strong>apnée du sommeil</strong><br>Alimentation équilibrée</div>
-          </div>
-          <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
-            <strong style="color:#1d4ed8;">🩺 Optimiser le terrain</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Facteurs de risque vasculaires</strong> — TA, lipides, diabète, tabac<br><strong>Corriger vision et audition</strong> 🎯<br><strong>Traiter la dépression</strong><br><strong>Déprescrire</strong> les médicaments qui nuisent à la cognition</div>
-          </div>
-          <div style="background:#fff3cd;border-radius:10px;padding:14px;">
-            <strong style="color:#d35400;">🏠 Environnement &amp; sécurité</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Routine stable</strong>, repères visuels, calendrier<br><strong>Piluliers</strong> et supervision de la médication<br>Sécurité : cuisinière, errance, <strong>conduite automobile</strong>, armes à feu<br>Ergothérapie à domicile</div>
-          </div>
-          <div style="background:#ede9fe;border-radius:10px;padding:14px;">
-            <strong style="color:#6d28d9;">👨‍👩‍👧 Soutien</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Société Alzheimer</strong> — soutien, formation, groupes<br><strong>Centres de jour</strong>, répit, hébergement temporaire<br>Services du CLSC<br>🎯 <strong>Le soutien au proche aidant est un traitement</strong>, pas un extra</div>
-          </div>
-        </div>
-
-        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">💊 Pharmacologique</div>
-        <div style="overflow-x:auto;">
-        <table style="font-size:12px;">
-          <thead><tr><th style="width:24%;">Classe</th><th style="width:28%;">Place</th><th>À surveiller</th></tr></thead>
-          <tbody>
-            <tr style="background:#f0fdf4;"><td><strong>Inhibiteurs de la cholinestérase</strong><br><em>donépézil, rivastigmine, galantamine</em></td><td>Maladie d'Alzheimer · TNC de la maladie de Parkinson et à corps de Lewy<br>Bénéfice <strong>symptomatique et modeste</strong> — ne modifie pas l'évolution</td><td><strong>Effets digestifs</strong> : nausées, diarrhée, perte de poids<br><strong>Bradycardie, syncope</strong> — prudence si troubles de conduction<br>Crampes, cauchemars, incontinence<br>⚠️ <strong>Pas indiqués dans le TNC frontotemporal</strong></td></tr>
-            <tr><td><strong>Mémantine</strong></td><td>Stades modéré à sévère de la maladie d'Alzheimer, seule ou en association</td><td>Généralement mieux tolérée · étourdissements, céphalées, confusion</td></tr>
-            <tr style="background:#fff8e1;"><td><strong>Déprescription</strong> de ces agents</td><td>🎯 À envisager quand le bénéfice n'est plus perceptible, aux stades très avancés, ou si les effets indésirables dominent</td><td>Un <strong>algorithme de déprescription des inhibiteurs de la cholinestérase et de la mémantine</strong> existe (deprescribing.org)<br>Réévaluer périodiquement plutôt que reconduire indéfiniment</td></tr>
-          </tbody>
-        </table>
-        </div>
-
-        <div class="key-fact orange" style="margin-top:12px;">📌 <strong>Ce qu'il faut dire à la famille au moment de prescrire :</strong> le bénéfice attendu est <strong>modeste</strong>, il porte sur les symptômes et non sur la maladie, il ne sera pas spectaculaire, et il faut le <strong>réévaluer après quelques mois</strong>. Fixer cette attente dès le départ évite la déception et les demandes d'escalade.</div>
-      </div>
-
-      <div class="block rx" style="margin-top:14px;border-left-color:#c0392b;">
-        <div class="block-title" id="tnc-7"><span class="tag">😤 SCPD — symptômes comportementaux et psychologiques</span></div>
-
-        <div class="key-fact red" style="margin-top:10px;">🎯 <strong>Le principe central :</strong> un SCPD — agitation, agressivité, errance, cris, opposition aux soins — est <strong>un message, pas une maladie</strong>. Il exprime presque toujours un besoin non comblé, un inconfort ou un déclencheur environnemental. <strong>Chercher la cause avant de sédater.</strong></div>
-
-        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">🔎 Ce qu'il faut écarter devant un SCPD nouveau</div>
-        <div class="criteria-list">
-          <div class="criteria-item"><div class="criteria-num red">1</div><span>🚨 <strong>DÉLIRIUM</strong> — un SCPD d'apparition récente chez une personne démente est un délirium jusqu'à preuve du contraire</span></div>
-          <div class="criteria-item"><div class="criteria-num blue">2</div><span><strong>DOULEUR</strong> non exprimée — la cause la plus fréquente et la plus négligée · utiliser une <strong>échelle comportementale</strong></span></div>
-          <div class="criteria-item"><div class="criteria-num blue">3</div><span><strong>BESOINS DE BASE</strong> — faim, soif, envie d'uriner, <strong>fécalome, globe vésical</strong>, chaud, froid, fatigue</span></div>
-          <div class="criteria-item"><div class="criteria-num blue">4</div><span><strong>MÉDICAMENTS</strong> — ajout récent, sevrage, effet paradoxal</span></div>
-          <div class="criteria-item"><div class="criteria-num blue">5</div><span><strong>ENVIRONNEMENT</strong> — bruit, surstimulation, changement de routine ou de personnel, obscurité</span></div>
-          <div class="criteria-item"><div class="criteria-num blue">6</div><span><strong>DÉFICITS SENSORIELS</strong> — la personne n'entend pas ou ne voit pas ce qui se passe et se sent agressée</span></div>
-          <div class="criteria-item"><div class="criteria-num red">!</div><span><strong>APPROCHE DU SOIGNANT</strong> — soins précipités, plusieurs consignes à la fois, absence d'explication. <em>C'est la cause la plus facile à corriger — et celle qu'on regarde en dernier.</em></span></div>
-        </div>
-
-        <div class="key-fact green" style="margin-top:12px;">🕐 <strong>Le syndrome crépusculaire :</strong> aggravation de la confusion et de l'agitation <strong>en fin de journée</strong>. Mesures utiles : <strong>lumière suffisante en fin d'après-midi</strong>, activité et exposition à la lumière naturelle le jour, éviter les siestes tardives, routine du soir prévisible, réduire le bruit et la stimulation en soirée.</div>
-
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
-          <div style="background:#f0fdf4;border-radius:10px;padding:14px;border-left:4px solid #15803d;">
-            <strong style="color:#15803d;">✅ Interventions de première ligne</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Traiter la cause</strong> identifiée<br><strong>Adapter l'approche</strong> : une consigne à la fois, ton calme, ne pas argumenter, <strong>diversion</strong><br><strong>Valider l'émotion</strong> plutôt que corriger le contenu<br>Routine, repères, activités significatives<br>Musique, toucher affectif, présence des proches</div>
-          </div>
-          <div style="background:#fef2f2;border-radius:10px;padding:14px;border-left:4px solid #c0392b;">
-            <strong style="color:#c0392b;">⚠️ Si un médicament devient nécessaire</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Réservé aux situations de <strong>détresse ou de dangerosité</strong> réfractaires<br><strong>Dose minimale, durée la plus courte, réévaluation planifiée</strong><br>🚨 <strong>Antipsychotiques : surmortalité démontrée chez la personne âgée atteinte de TNC</strong> — le consentement doit être éclairé<br>🚨 <strong>À éviter dans la maladie à corps de Lewy et le Parkinson</strong><br>⛔ <strong>Éviter les benzodiazépines</strong> — chutes, confusion, désinhibition paradoxale<br>➜ Un <strong>algorithme de déprescription des antipsychotiques</strong> existe : <strong>l'arrêt doit être planifié dès la prescription</strong></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="block para" style="margin-top:14px;border-left-color:#92400e;">
-        <div class="block-title" id="tnc-8"><span class="tag">⚖️ Conduite automobile, aptitude &amp; aspects légaux</span></div>
-
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
-          <div style="background:#fff3cd;border-radius:10px;padding:14px;border-left:4px solid #d35400;">
-            <strong style="color:#d35400;">🚗 Conduite automobile</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🎯 <strong>Un diagnostic de TNC n'interdit pas automatiquement de conduire</strong> — mais il impose de <strong>poser la question</strong> et de la documenter.<br>Éléments inquiétants : <strong>s'être perdu</strong> sur un trajet connu, accidents ou quasi-accidents, contraventions nouvelles, inquiétude de la famille, <strong>atteinte visuo-spatiale ou exécutive</strong>.<br>➜ Au Québec, les professionnels ont une <strong>obligation de signalement à la SAAQ</strong> lorsque l'état d'une personne compromet la conduite.<br>➜ Une <strong>évaluation sur route</strong> peut trancher les cas ambigus.<br>💬 Conversation difficile : aborder tôt, impliquer la famille, proposer des solutions de rechange concrètes.</div>
-          </div>
-          <div style="background:#e8f4fd;border-radius:10px;padding:14px;border-left:4px solid #1d4ed8;">
-            <strong style="color:#1d4ed8;">📜 Aptitude &amp; protection</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🎯 <strong>L'aptitude n'est pas globale</strong> — elle s'évalue <strong>par décision</strong> : une personne peut être inapte à gérer ses finances tout en étant apte à consentir à un soin.<br><strong>Mandat de protection</strong> — à établir <strong>pendant que la personne est apte</strong> : c'est l'intervention la plus utile au moment du diagnostic<br><strong>Directives médicales anticipées</strong> et <strong>niveaux de soins</strong> — à aborder tôt<br>Évaluation de l'inaptitude : <strong>médicale et psychosociale</strong><br>➜ Voir <em>Niveau de soins &amp; soins palliatifs</em></div>
-          </div>
-        </div>
-
-        <div class="key-fact orange" style="margin-top:12px;">💬 <strong>Annoncer le diagnostic :</strong> la personne a le droit de savoir. Annoncer permet de <strong>planifier pendant qu'elle peut encore décider</strong> — mandat, directives, finances, projets, conduite. Repousser l'annonce prive la personne de ce pouvoir. Annoncer progressivement, vérifier ce qu'elle veut savoir, et donner un plan concret plutôt qu'un pronostic brut.</div>
-      </div>
-
-      <div class="block para" style="margin-top:14px;border-left-color:#0891b2;">
-        <div class="block-title" id="tnc-9"><span class="tag">📋 Suivi &amp; proche aidant</span></div>
-
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:12px;">
-          <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
-            <strong style="color:#1d4ed8;">📅 À chaque visite de suivi</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Évolution fonctionnelle</strong> — AVQ et AVD<br><strong>SCPD</strong> et leur retentissement<br><strong>Poids et alimentation</strong> — la dénutrition s'installe insidieusement<br><strong>Chutes</strong> et mobilité<br><strong>Révision de la médication</strong><br><strong>Sécurité à domicile</strong> et conduite<br>Recherche d'un <strong>délirium</strong> devant tout changement rapide</div>
-          </div>
-          <div style="background:#fce4ec;border-radius:10px;padding:14px;">
-            <strong style="color:#c0392b;">👨‍👩‍👧 Le proche aidant — évaluer son état</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🎯 <strong>C'est lui qui décompense en premier, et son épuisement précipite l'hébergement.</strong><br>Rechercher : fatigue, isolement, dépression, anxiété, problèmes de santé négligés, <strong>colère et culpabilité</strong>, difficultés financières<br>⚠️ L'épuisement est un <strong>facteur de risque de maltraitance</strong><br>💬 Poser la question directement : « <strong>et vous, comment ça va?</strong> »</div>
-          </div>
-          <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
-            <strong style="color:#15803d;">🛠️ Ressources à offrir</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Société Alzheimer</strong> — information, groupes de soutien, formation<br><strong>Centres de jour</strong> et <strong>répit</strong><br>Services du <strong>CLSC</strong> · <strong>ergothérapie</strong> à domicile<br>Travail social — démarches financières et légales<br>Organismes communautaires locaux</div>
-          </div>
-          <div style="background:#f1f5f9;border-radius:10px;padding:14px;">
-            <strong style="color:#334155;">🕊️ Aux stades avancés</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🎯 <strong>Le TNC majeur avancé est une maladie terminale</strong> — le reconnaître change la conduite.<br>Priorité au <strong>confort</strong> : douleur, dysphagie, plaies, infections à répétition<br>Réévaluer l'utilité de chaque médicament et de chaque investigation<br><strong>Discussion sur le niveau de soins</strong> — alimentation, hospitalisation, antibiotiques<br>Soins palliatifs</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="block flag" style="margin-top:14px;">
-        <div class="block-title" id="tnc-10"><span class="tag">🚨 Red flags</span></div>
-
-        <div class="flag-list" style="margin-top:12px;">
-          <div class="flag-item">🚨 <strong>Détérioration cognitive rapide — heures à jours</strong> : délirium, pas une progression du TNC</div>
-          <div class="flag-item"><strong>Début avant 65 ans</strong> — investigation élargie et orientation spécialisée</div>
-          <div class="flag-item"><strong>Signes neurologiques focaux</strong>, troubles de la marche précoces, chutes répétées</div>
-          <div class="flag-item"><strong>Triade marche instable + incontinence + déclin cognitif</strong> — penser à l'<strong>hydrocéphalie à pression normale</strong>, potentiellement traitable</div>
-          <div class="flag-item"><strong>Hallucinations visuelles précoces avec fluctuations et parkinsonisme</strong> — corps de Lewy : <strong>éviter les neuroleptiques</strong></div>
-          <div class="flag-item"><strong>Changement de personnalité au premier plan chez une personne plus jeune</strong> — TNC frontotemporal</div>
-          <div class="flag-item"><strong>Chute avec traumatisme crânien sous anticoagulant</strong> — hématome sous-dural</div>
-          <div class="flag-item"><strong>Perte de poids, dysphagie, pneumonies à répétition</strong> — stade avancé : réorienter vers le confort</div>
-          <div class="flag-item">🚨 <strong>Sécurité compromise</strong> : conduite dangereuse, errance, cuisinière laissée allumée, erreurs de médication, armes à feu au domicile</div>
-          <div class="flag-item">🚨 <strong>Épuisement du proche aidant</strong> ou <strong>signes de maltraitance</strong></div>
-        </div>
-      </div>
-    </div>
-
 <div class="section" id="sec-chutes">
       <div class="section-header">
         <div class="section-accent" style="background:#ea580c">🤕</div>
@@ -36211,7 +35539,680 @@ function switchEpiTx(n) {
       </div>
     </div>
 
-    <div class="section" id="sec-depression-pa">
+    <div class="section" id="sec-delirium">
+      <div class="section-header">
+        <div class="section-accent" style="background:#b91c1c">🌀</div>
+        <div class="section-title"><h1>Délirium</h1><div class="breadcrumb">Gériatrie <span class="breadcrumb-sep">·</span> État confusionnel aigu <span class="breadcrumb-sep">·</span> AAPA — MSSS <span class="breadcrumb-sep">·</span> CAM</div></div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;">
+        <button onclick="goToBlock('del-1')" style="background:#374151;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">📖 Définition &amp; formes</button>
+        <button onclick="goToBlock('del-2')" style="background:#dc2626;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">📊 Fréquence &amp; gravité</button>
+        <button onclick="goToBlock('del-3')" style="background:#b45309;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">⚠️ Facteurs de risque</button>
+        <button onclick="goToBlock('del-4')" style="background:#0369a1;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🔍 Repérage &amp; CAM</button>
+        <button onclick="goToBlock('del-5')" style="background:#6d28d9;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🔀 DDx — les 3 D</button>
+        <button onclick="goToBlock('del-6')" style="background:#0f766e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧪 Chercher la cause</button>
+        <button onclick="goToBlock('del-7')" style="background:#0a7a4e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🛡️ Prévention &amp; interventions</button>
+        <button onclick="goToBlock('del-8')" style="background:#7c3aed;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">💊 Pharmaco — dernier recours</button>
+        <button onclick="goToBlock('del-9')" style="background:#991b1b;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🚨 Red flags</button>
+      </div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:20px;">
+        <div style="flex:1;min-width:95px;background:#FEE2E2;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#b91c1c;">&gt; 30 %</div><div style="font-size:11px;color:#555;margin-top:4px;">des aînés hospitalisés</div></div>
+        <div style="flex:1;min-width:95px;background:#FEF9C3;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#854d0e;">≥ 75 %</div><div style="font-size:11px;color:#555;margin-top:4px;">postopératoire &amp; soins intensifs</div></div>
+        <div style="flex:1;min-width:95px;background:#F3E8FF;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#6d28d9;">~ 30 %</div><div style="font-size:11px;color:#555;margin-top:4px;">taux de mortalité associé</div></div>
+        <div style="flex:1;min-width:95px;background:#DCFCE7;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#15803d;">Réversible</div><div style="font-size:11px;color:#555;margin-top:4px;">si la cause est corrigée tôt</div></div>
+      </div>
+
+      <div class="block def" style="margin-top:14px;">
+        <div class="block-title" id="del-1"><span class="tag">📖 Définition &amp; formes cliniques</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">📗 <strong>Définition (AAPA — MSSS) :</strong> le délirium, ou <strong>état confusionnel aigu</strong>, est un <strong>syndrome organique d'installation aiguë ou subaiguë</strong>, habituellement <strong>transitoire et réversible</strong>. C'est un <strong>mode de présentation</strong> d'une maladie aiguë, d'un problème postopératoire, d'une intoxication, d'un effet indésirable médicamenteux — ou d'un ensemble d'événements combinés assez intenses pour perturber l'état mental.</div>
+
+        <div class="key-fact red" style="margin-top:10px;">🎯 <strong>Le délirium n'est jamais un diagnostic final — c'est un symptôme.</strong> Poser le diagnostic de délirium, c'est s'engager à en <strong>chercher la cause</strong>. Dire « le patient est en délirium » et s'arrêter là, c'est comme dire « le patient a de la fièvre » et ne pas chercher l'infection.</div>
+
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">🔑 Les deux symptômes cardinaux</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+          <div style="background:#fce4ec;border-radius:10px;padding:14px;border-left:4px solid #c0392b;">
+            <strong style="color:#c0392b;">① Perturbation de l'état de conscience</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Soit <strong>hypersensibilité aux stimuli environnants</strong>, soit à l'inverse un état <strong>léthargique, stuporeux</strong>, pouvant aller jusqu'au coma.</div>
+          </div>
+          <div style="background:#fce4ec;border-radius:10px;padding:14px;border-left:4px solid #c0392b;">
+            <strong style="color:#c0392b;">② Atteinte de l'attention</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Facilement distrait</strong>, lenteur à répondre, incapacité à soutenir une conversation ou à suivre une consigne.<br>🎯 <strong>C'est le signe le plus discriminant</strong> — l'attention est atteinte d'emblée dans le délirium, tardivement dans la démence.</div>
+          </div>
+        </div>
+
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">➕ Manifestations associées</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;">
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+            <strong style="color:#1d4ed8;">🧭 Cognition</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Désorientation</strong> spatiale, temporelle ou à la personne<br><strong>Trouble mnésique</strong> à court et à long terme<br><strong>Difficultés visuo-spatiales</strong><br><strong>Désorganisation de la pensée</strong> : conversation décousue, propos incohérents, coq-à-l'âne</div>
+          </div>
+          <div style="background:#ede9fe;border-radius:10px;padding:14px;">
+            <strong style="color:#6d28d9;">👁️ Perception</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Hallucinations</strong> visuelles ou auditives<br><strong>Illusions</strong> — mauvaise interprétation d'un objet réel (fréquentes la nuit, favorisées par un mauvais éclairage)<br><strong>Idées délirantes</strong></div>
+          </div>
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;">
+            <strong style="color:#d35400;">🎭 Comportement &amp; sommeil</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Agitation psychomotrice</strong> ou au contraire <strong>ralentissement</strong><br><strong>Labilité émotionnelle</strong><br><strong>Perturbation du cycle éveil-sommeil</strong> : insomnie et agitation la nuit, somnolence diurne excessive</div>
+          </div>
+        </div>
+
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">🎭 Les trois formes — et pourquoi la plus dangereuse passe inaperçue</div>
+        <div style="overflow-x:auto;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:18%;">Forme</th><th style="width:34%;">Présentation</th><th>Enjeu clinique</th></tr></thead>
+          <tbody>
+            <tr style="background:#fce4ec;"><td><strong>Hyperactif</strong></td><td><strong>Agitation</strong>, augmentation de l'activité psychomotrice, hallucinations, opposition aux soins</td><td>Facilement repéré — mais souvent traité comme un « problème de comportement » plutôt que comme une urgence médicale</td></tr>
+            <tr style="background:#fff8e1;"><td><strong>Hypoactif</strong> ⚠️</td><td><strong>Léthargie</strong>, ralentissement psychomoteur important, apathie, somnolence</td><td>🚨 <strong>Le plus fréquent chez la personne âgée et le plus souvent manqué.</strong> Confondu avec de la fatigue, une dépression ou « une personne tranquille ». <strong>Pronostic plus sombre</strong>, parce que le diagnostic est retardé.</td></tr>
+            <tr><td><strong>Mixte</strong></td><td>Oscillation entre les deux formes, souvent d'une heure à l'autre</td><td>La <strong>fluctuation</strong> est typique — d'où l'importance d'évaluer à plusieurs moments et de croiser les observations d'équipe</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">💡 <strong>Le réflexe qui change tout :</strong> devant une personne âgée <strong>anormalement calme, somnolente ou « qui ne dérange pas »</strong>, penser au délirium hypoactif. Un patient tranquille n'est pas nécessairement un patient qui va bien.</div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;border-left-color:#dc2626;">
+        <div class="block-title" id="del-2"><span class="tag">📊 Fréquence &amp; conséquences</span></div>
+        <div class="key-fact red" style="margin-top:10px;">🎯 <strong>La phrase qui situe le problème :</strong> le délirium est la <strong>complication la plus fréquente de l'hospitalisation chez la personne âgée</strong> — et il demeure <strong>souvent non reconnu</strong>, malgré l'existence d'outils de détection sensibles.<br>🧠 <strong>Mécanisme :</strong> des facteurs biologiques en interaction provoquent une <strong>perturbation des grands réseaux neuronaux</strong>, d'où l'atteinte cognitive aiguë. Les mécanismes proposés incluent une <strong>perturbation des systèmes de neurotransmetteurs</strong>, l'<strong>inflammation</strong> et d'autres stress physiologiques. <span style="font-size:11px;color:#64748b;">📚 <em>Goldman-Cecil Medicine, 26<sup>e</sup> éd.</em></span></div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-top:12px;">
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+            <strong style="color:#1d4ed8;">📈 Fréquence</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>&gt; 30 %</strong> des personnes âgées hospitalisées<br><strong>10 %</strong> à l'urgence<br><strong>≥ 75 %</strong> en période postopératoire ou aux soins intensifs</div>
+          </div>
+          <div style="background:#fce4ec;border-radius:10px;padding:14px;">
+            <strong style="color:#c0392b;">💀 Gravité</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Taux de mortalité d'environ <strong>30 %</strong><br>🎯 Ce chiffre surprend — le délirium est <strong>aussi grave qu'un infarctus</strong>, mais il est rarement traité avec la même urgence.</div>
+          </div>
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;">
+            <strong style="color:#d35400;">📉 Morbidité</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Allongement de la durée de séjour</strong><br><strong>Risque accru de déclin fonctionnel et cognitif</strong><br><strong>Probabilité plus grande d'institutionnalisation</strong><br>La récupération peut être <strong>incomplète</strong> et le délirium <strong>persister des semaines</strong>.</div>
+          </div>
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+            <strong style="color:#15803d;">✅ Ce qui le distingue de la démence</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🎯 <strong>La guérison est possible si la cause sous-jacente est déterminée et corrigée précocement.</strong><br>C'est toute la différence — et toute la raison d'insister sur le repérage.</div>
+          </div>
+        </div>
+
+        <div class="key-fact red" style="margin-top:12px;">⛔ <strong>Point capital sur la contention :</strong> il faut <strong>éviter la contention physique</strong> chez une personne en délirium agité sous prétexte de prévenir des blessures. Cela peut avoir <strong>l'effet contraire</strong> : exacerber les symptômes neurocomportementaux et <strong>induire un syndrome d'immobilisation</strong>. La contention est un <strong>dernier recours</strong>, jamais une mesure de confort organisationnel.</div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;border-left-color:#b45309;">
+        <div class="block-title" id="del-3"><span class="tag">⚠️ Facteurs prédisposants &amp; précipitants</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">🧮 <strong>L'équation du délirium :</strong> le risque résulte de la <strong>combinaison</strong> de facteurs <strong>prédisposants</strong> (la vulnérabilité de base) et de facteurs <strong>précipitants</strong> (le déclencheur). Plus la vulnérabilité est grande, plus le déclencheur peut être banal.<br>➜ Chez une personne très vulnérable — démente, dénutrie, déficits sensoriels — <strong>un fécalome ou une nuit blanche suffit</strong>. Chez une personne robuste, il faut une agression majeure.</div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;border-left:4px solid #1d4ed8;">
+            <strong style="color:#1d4ed8;">🧬 Facteurs prédisposants</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><em>Liés aux caractéristiques individuelles</em><br><strong>Âge avancé</strong> · <strong>sexe masculin</strong><br><strong>Atteinte sensorielle</strong> — déficit visuel et auditif<br><strong>Déshydratation, dénutrition</strong><br><strong>Antécédents de délirium</strong><br>🎯 <strong>Démence</strong> — le facteur prédisposant le plus fort<br><strong>Dépression</strong><br><strong>Antécédent d'AVC</strong><br><strong>Maladies concomitantes</strong> : cardiovasculaires, respiratoires, rénales, diabète, Parkinson<br><strong>Abus d'alcool</strong><br><strong>Incapacité fonctionnelle</strong></div>
+          </div>
+          <div style="background:#fce4ec;border-radius:10px;padding:14px;border-left:4px solid #c0392b;">
+            <strong style="color:#c0392b;">⚡ Facteurs précipitants</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><em>Liés aux événements cliniques ou environnementaux</em><br><strong>Infection</strong> : urinaire, pulmonaire, septicémie, plaie infectée<br><strong>Perturbation électrolytique</strong> : calcium, sodium, potassium<br><strong>Métabolique et endocrinien</strong> : hypo/hyperglycémie, hypo/hyperthyroïdie<br><strong>AVC, hémorragie intracérébrale</strong><br><strong>Cardiopulmonaire</strong> : insuffisance cardiaque, arythmie, infarctus, embolie pulmonaire, <strong>hypoxémie</strong><br>🎯 <strong>Ajout de trois médicaments et plus</strong><br><strong>Immobilisation</strong> : alitement, cathéters, sonde urinaire, contention, ventilation<br><strong>Intoxication et sevrage</strong> : alcool, benzodiazépines, anticholinergiques, narcotiques, corticostéroïdes<br><strong>Douleur</strong><br><strong>Occlusion intestinale, fécalome</strong><br><strong>Chirurgie</strong></div>
+          </div>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">🌍 <strong>Et les facteurs environnementaux :</strong> <strong>surcharge ou privation sensorielle</strong> (bruit, éclairage inadéquat) et <strong>absence de points de repère</strong>. Ce sont les plus faciles à corriger — et les plus souvent négligés.</div>
+      </div>
+
+      <div class="block para" style="margin-top:14px;border-left-color:#0369a1;">
+        <div class="block-title" id="del-4"><span class="tag">🔍 Repérage systématique &amp; méthode CAM</span></div>
+
+        <div class="key-fact green" style="margin-top:10px;">📗 <strong>Fréquence de dépistage recommandée (AAPA) :</strong><br>🏥 <strong>À l'urgence : aux 8 heures</strong><br>🛏️ <strong>À l'admission en soins généraux ou spécialisés : aux 24 heures</strong><br>🔪 <strong>En suivi postopératoire et aux soins intensifs : aux 8 heures</strong><br>➜ Le dépistage est <strong>systématique</strong> chez la clientèle âgée ciblée, pas seulement quand quelque chose cloche.</div>
+
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">📋 La méthode CAM (Confusion Assessment Method)</div>
+        <div class="key-fact blue">Le diagnostic requiert la présence des <strong>critères 1 ET 2</strong>, <strong>plus</strong> le critère <strong>3 OU 4</strong>.</div>
+        <div class="criteria-list" style="margin-top:10px;">
+          <div class="criteria-item"><div class="criteria-num red">1</div><span><strong>Début soudain et évolution fluctuante</strong> — y a-t-il un changement <strong>aigu</strong> de l'état mental par rapport à l'état de base? Le comportement <strong>fluctue-t-il</strong> au cours de la journée? <em>(Information obtenue d'un proche ou de l'équipe soignante)</em> — <strong>OBLIGATOIRE</strong></span></div>
+          <div class="criteria-item"><div class="criteria-num red">2</div><span><strong>Inattention</strong> — la personne a-t-elle de la difficulté à <strong>focaliser son attention</strong>? Est-elle facilement distraite? A-t-elle du mal à suivre ce qui se dit? — <strong>OBLIGATOIRE</strong></span></div>
+          <div class="criteria-item"><div class="criteria-num blue">3</div><span><strong>Désorganisation de la pensée</strong> — propos décousus, illogiques, incohérents, passage du coq-à-l'âne</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">4</div><span><strong>Altération de l'état de conscience</strong> — vigilant, léthargique, stuporeux, comateux — <strong>tout ce qui n'est pas « alerte et normal »</strong></span></div>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">🎯 <strong>La question la plus importante de tout le dépistage :</strong> « <strong>Est-ce que c'était comme ça il y a une semaine?</strong> » posée à un proche ou au personnel du milieu de vie. Sans repère de l'état antérieur, il est impossible de distinguer un délirium d'une démence — et c'est l'erreur la plus fréquente.</div>
+
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">🚩 Signes précurseurs à connaître</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;border-left:4px solid #d35400;">
+            <strong style="color:#d35400;">Ce qui annonce un délirium</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Apparition rapide et soudaine</strong> des troubles cognitifs — de quelques heures à quelques jours<br><strong>Détérioration rapide chez une personne déjà atteinte de démence</strong><br><strong>Fluctuation</strong> des troubles cognitifs<br>Propos incohérents, incompréhensibles<br>Agitation psychomotrice <em>ou</em> ralentissement, voire hypersomnolence</div>
+          </div>
+          <div style="background:#f1f5f9;border-radius:10px;padding:14px;border-left:4px solid #334155;">
+            <strong style="color:#334155;">Ce qu'on cherche en parallèle</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Perte d'autonomie récente et soudaine</strong> — écart de mobilité ou d'AVQ entre avant et maintenant<br>Signes de <strong>déshydratation</strong> : muqueuses sèches, pli cutané persistant au sternum ou au front<br>Signes de <strong>dénutrition</strong> : &lt; 75 % du plat principal, perte de poids ≥ 2 % en 1 semaine<br>Signes de <strong>constipation ou fécalome</strong> : pas de selle &gt; 3 jours</div>
+          </div>
+        </div>
+      
+        <div style="overflow-x:auto;margin-top:14px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:18%;">Outil</th><th style="width:16%;">Durée</th><th style="width:22%;">Performance</th><th>Particularités</th></tr></thead>
+          <tbody>
+            <tr style="background:#dbeafe;"><td><strong>CAM</strong><br><em>Confusion Assessment Method</em></td><td><strong>5 à 15 min</strong></td><td>Sensibilité <strong>82 %</strong><br>Spécificité <strong>99 %</strong></td><td>Le plus <strong>populaire</strong> · traduit en plus de 20 langues, validé dans divers milieux<br>10 critères opérationnels dont <strong>4 diagnostiques</strong> : ① début aigu et évolution fluctuante ② inattention ③ pensée désorganisée ④ altération de l&#39;état de conscience<br>⚠️ Exige une <strong>formation</strong> et une <strong>évaluation cognitive formelle brève</strong> — ce qui limite son usage quotidien répété</td></tr>
+            <tr style="background:#dcfce7;"><td><strong>4AT</strong><br><em>4 &#39;A&#39;s Test</em></td><td><strong>2 min</strong></td><td>Sensibilité <strong>88 %</strong><br>Spécificité <strong>88 %</strong></td><td>Simple et rapide · <strong>ne nécessite aucune formation spécifique</strong> · usage en croissance</td></tr>
+            <tr style="background:#fef3c7;"><td><strong>RADAR</strong> 🇨🇦<br><em>Repérage Actif du Délirium Adapté à la Routine</em></td><td>Intégré aux soins</td><td>Validé (Voyer et coll., 2015)</td><td><strong>Approche séquentielle</strong> : on intègre l&#39;identification de <strong>trois signes</strong> de délirium <strong>dans la routine des soins, au moment de l&#39;administration des médicaments</strong> — et on procède à un dépistage formel <strong>si l&#39;un d&#39;eux est présent</strong><br>🎯 <strong>Facile à implanter, exige peu de temps</strong> : conçu pour la réalité infirmière</td></tr>
+            <tr><td><strong>3D-CAM</strong></td><td>3 min</td><td>—</td><td>Version abrégée du CAM, usage en croissance</td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>Autres validés</strong></td><td>Variable</td><td>—</td><td><strong>DOSS</strong> (<em>Delirium Observation Screening Scale</em>) · <strong>DRS-R-98</strong> · <strong>MDAS</strong> · <strong>NEECHAM</strong> — fréquents en soins non intensifs</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="key-fact green" style="margin-top:12px;">🎯 <strong>Choisir selon la contrainte, pas selon la performance seule.</strong> Le CAM est le plus validé mais coûte 5 à 15 minutes et une formation — d&#39;où sa désertion en pratique quotidienne. Le <strong>4AT</strong> tient en 2 minutes sans formation. Le <strong>RADAR</strong>, développé au Québec, résout le problème autrement : il ne <em>s&#39;ajoute pas</em> à la routine, il <strong>s&#39;y greffe</strong> — trois signes observés pendant la tournée de médicaments, et un dépistage seulement si l&#39;un apparaît. Pour une équipe qui n&#39;a jamais réussi à implanter un dépistage systématique, c&#39;est souvent le bon choix. <span style="font-size:11px;color:#64748b;">📚 <em>Précis de gériatrie, ch. 13</em></span></div>
+      </div>
+
+      <div class="block para" style="margin-top:14px;border-left-color:#6d28d9;">
+        <div class="block-title" id="del-5"><span class="tag">🔀 Diagnostic différentiel — les 3 D</span></div>
+
+        <div class="key-fact red" style="margin-top:10px;">🎯 <strong>Distinguer délirium, démence et dépression est l'exercice le plus important de la section</strong> — et le plus souvent raté. Les trois coexistent fréquemment : un <strong>délirium surajouté à une démence</strong> est une situation classique et particulièrement mal reconnue.</div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:18%;"></th><th style="width:28%;">Délirium</th><th style="width:27%;">Démence (TNC majeur)</th><th>Dépression</th></tr></thead>
+          <tbody>
+            <tr style="background:#fce4ec;"><td><strong>Début</strong></td><td>🎯 <strong>Aigu</strong> — heures à jours</td><td><strong>Insidieux</strong> — mois à années</td><td>Variable — semaines à mois</td></tr>
+            <tr><td><strong>Évolution</strong></td><td>🎯 <strong>Fluctuante</strong>, aggravation nocturne</td><td><strong>Progressive</strong>, relativement stable au jour le jour</td><td>Assez stable, souvent pire le matin</td></tr>
+            <tr style="background:#e8f4fd;"><td><strong>Attention</strong></td><td>🎯 <strong>Atteinte d'emblée</strong> — le signe clé</td><td>Préservée longtemps, atteinte au stade avancé</td><td>Difficulté de concentration, mais attention mobilisable</td></tr>
+            <tr><td><strong>Conscience</strong></td><td>🎯 <strong>Altérée</strong> — hypervigilance ou léthargie</td><td><strong>Normale</strong> jusqu'à un stade très avancé</td><td><strong>Normale</strong></td></tr>
+            <tr style="background:#f0fdf4;"><td><strong>Pensée</strong></td><td><strong>Désorganisée</strong>, incohérente</td><td><strong>Appauvrie</strong>, manque du mot</td><td>Ralentie, ruminations, idées de dévalorisation</td></tr>
+            <tr><td><strong>Perceptions</strong></td><td><strong>Hallucinations</strong> (souvent visuelles), illusions fréquentes</td><td>Possibles au stade avancé ou selon le type <em>(corps de Lewy)</em></td><td>Rares, sauf dépression psychotique</td></tr>
+            <tr style="background:#fff8e1;"><td><strong>Sommeil</strong></td><td><strong>Cycle inversé</strong>, agitation nocturne</td><td>Fragmenté, syndrome crépusculaire</td><td>Éveil matinal précoce, hypersomnie</td></tr>
+            <tr><td><strong>Réponse aux questions</strong></td><td>Incohérente, variable d'un moment à l'autre</td><td>Réponses erronées, <strong>confabulation</strong>, minimise ses difficultés</td><td>🎯 <strong>« Je ne sais pas »</strong> — se plaint activement de sa mémoire</td></tr>
+            <tr style="background:#ede9fe;"><td><strong>Réversibilité</strong></td><td>🎯 <strong>Oui</strong>, si la cause est corrigée</td><td>Non — évolution progressive</td><td><strong>Oui</strong>, avec traitement</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px;">
+          <div style="background:#fef2f2;border-radius:10px;padding:14px;border-left:4px solid #c0392b;">
+            <strong style="color:#c0392b;">🚨 Délirium surajouté à une démence</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Situation <strong>fréquente et sous-reconnue</strong>. La démence est le principal facteur prédisposant au délirium.<br>➜ <strong>Toute détérioration rapide chez une personne démente est un délirium jusqu'à preuve du contraire</strong> — pas « la démence qui progresse ».<br>Une démence ne s'aggrave <strong>pas</strong> en trois jours.</div>
+          </div>
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;border-left:4px solid #1d4ed8;">
+            <strong style="color:#1d4ed8;">🧠 La « pseudo-démence » dépressive</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Une dépression peut mimer un déclin cognitif chez la personne âgée.<br><strong>Indices en faveur de la dépression :</strong> la personne <strong>se plaint</strong> de sa mémoire (plutôt que de la minimiser), répond « je ne sais pas » plutôt que de confabuler, et le début est <strong>plus daté</strong>.<br>➜ Traiter la dépression et <strong>réévaluer la cognition ensuite</strong>.</div>
+          </div>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">⏱️ <strong>Règle pratique :</strong> ne jamais poser un diagnostic de démence pendant un délirium. <strong>Attendre la résolution</strong>, puis réévaluer la cognition à distance. Un délirium peut mettre <strong>des semaines</strong> à se résoudre complètement.</div>
+      </div>
+
+      <div class="block para" style="margin-top:14px;border-left-color:#0f766e;">
+        <div class="block-title" id="del-6"><span class="tag">🧪 Chercher la cause — investigation</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>L'approche :</strong> le délirium est presque toujours <strong>multifactoriel</strong>. Ne pas s'arrêter à la première cause trouvée — corriger l'infection urinaire <em>et</em> le fécalome <em>et</em> retirer l'anticholinergique.</div>
+
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">🔎 Vérification systématique — les causes les plus rentables</div>
+        <div class="criteria-list">
+          <div class="criteria-item"><div class="criteria-num red">1</div><span><strong>MÉDICAMENTS</strong> — c'est la première chose à regarder. Nouveau médicament? Ajout de trois médicaments et plus? <strong>Anticholinergiques, benzodiazépines, opioïdes, corticostéroïdes, antihistaminiques, sédatifs</strong>? Ou à l'inverse un <strong>sevrage</strong> (alcool, benzodiazépine)?</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">2</div><span><strong>INFECTION</strong> — urinaire, pulmonaire, cutanée, septicémie · ⚠️ <strong>souvent sans fièvre</strong></span></div>
+          <div class="criteria-item"><div class="criteria-num blue">3</div><span><strong>RÉTENTION</strong> — <strong>globe vésical</strong> et <strong>fécalome</strong> : deux causes fréquentes, faciles à corriger, et systématiquement oubliées. <strong>Palper l'abdomen, faire un toucher rectal, mesurer le résidu vésical.</strong></span></div>
+          <div class="criteria-item"><div class="criteria-num blue">4</div><span><strong>MÉTABOLIQUE</strong> — glycémie, natrémie, kaliémie, <strong>calcémie</strong>, urée et créatinine, bilan hépatique, TSH</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">5</div><span><strong>HYPOXIE &amp; PERFUSION</strong> — saturation, insuffisance cardiaque, arythmie, <strong>infarctus</strong>, embolie pulmonaire, anémie</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">6</div><span><strong>DOULEUR</strong> — non soulagée ou non exprimée · utiliser une <strong>échelle comportementale validée</strong> chez la personne incapable de communiquer (visage crispé, résistance aux soins, position antalgique)</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">7</div><span><strong>DÉSHYDRATATION &amp; DÉNUTRITION</strong></span></div>
+          <div class="criteria-item"><div class="criteria-num red">!</div><span><strong>NEUROLOGIQUE</strong> — AVC, hémorragie, convulsion, <strong>traumatisme crânien</strong> (rechercher une chute récente, surtout sous anticoagulant) · imagerie cérébrale <strong>si signes focaux, traumatisme, ou absence d'explication</strong></span></div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px;">
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;border-left:4px solid #1d4ed8;">
+            <strong style="color:#1d4ed8;">🧪 Bilan de base habituel</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>FSC</strong> · <strong>ionogramme</strong>, urée, créatinine · <strong>glycémie</strong> · <strong>calcium</strong><br><strong>Analyse et culture d'urine</strong><br><strong>Bilan hépatique</strong> · <strong>TSH</strong><br><strong>Saturation</strong> ± gaz artériel<br><strong>ECG</strong><br><strong>Radiographie pulmonaire</strong> selon la clinique<br>Signes vitaux réguliers — incluant <strong>température et signes neurologiques</strong></div>
+          </div>
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;border-left:4px solid #d35400;">
+            <strong style="color:#d35400;">⚠️ Nuance sur la bactériurie</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Une <strong>bactériurie asymptomatique est fréquente</strong> chez la personne âgée et <strong>ne doit pas être traitée</strong> — c'est un principe de <em>Choisir avec soin</em>.<br>🎯 Attribuer trop vite un délirium à une « infection urinaire » sur la seule foi d'une analyse d'urine fait <strong>manquer la vraie cause</strong> et expose inutilement aux antibiotiques.<br>➜ Chercher des <strong>signes cliniques d'infection</strong>, pas seulement un résultat de laboratoire.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block rx" style="margin-top:14px;">
+        <div class="block-title" id="del-7"><span class="tag">🛡️ Prévention &amp; interventions non pharmacologiques</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">📊 <strong>Ce n'est pas une opinion — c'est mesuré :</strong> les essais cliniques montrent que des <strong>interventions non pharmacologiques multicomposantes</strong>, ciblant les facteurs de risque, <strong>réduisent l'incidence du délirium de 30 à 40 %</strong>. Les composantes efficaces sont exactement celles des onglets ci-dessous : <strong>orientation</strong>, <strong>activités thérapeutiques</strong>, <strong>mobilisation</strong>, <strong>amélioration du sommeil sans médicament</strong>, <strong>optimisation de la vision et de l'audition</strong>, et <strong>correction de la déshydratation</strong>.<br>💡 En contexte chirurgical, une <strong>consultation gériatrique préopératoire</strong> et une <strong>anesthésie plus légère</strong> réduisent aussi le délirium postopératoire. <span style="font-size:11px;color:#64748b;">📚 <em>Goldman-Cecil Medicine, 26<sup>e</sup> éd.</em></span></div>
+        <div class="key-fact green" style="margin-top:10px;">🎯 <strong>C'est ici que se joue l'essentiel.</strong> Les interventions non pharmacologiques sont <strong>le traitement de première ligne</strong> du délirium — pas un complément aux médicaments. Elles préviennent, raccourcissent et atténuent le délirium, sans effet indésirable.</div>
+
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;">
+          <button id="deltab0" onclick="switchDelTx(0)" style="background:#0a7a4e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;transition:.15s;">🫀 Physique</button>
+          <button id="deltab1" onclick="switchDelTx(1)" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;transition:.15s;">💬 Relationnel</button>
+          <button id="deltab2" onclick="switchDelTx(2)" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;transition:.15s;">🏠 Environnement</button>
+        </div>
+
+        <div id="delp0" style="display:block;margin-top:14px;">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+            <div style="background:#f0fdf4;border-radius:10px;padding:14px;border-left:4px solid #15803d;">
+              <strong style="color:#15803d;">👓 Besoins de base &amp; sensoriels</strong>
+              <div style="font-size:13px;line-height:1.7;margin-top:8px;">🎯 <strong>S'assurer que la personne porte ses lunettes et son appareil auditif — même alitée.</strong> Geste banal, effet démontré.<br><strong>Hydratation régulière et suffisante</strong><br><strong>Encourager à s'alimenter</strong> — viser au moins ¾ du plat principal, aide partielle au besoin<br><strong>Conduire à la toilette</strong> au lever, aux repas et au coucher<br><strong>Hygiène buccale</strong> après chaque repas<br>Faire <strong>participer</strong> aux soins d'hygiène et à l'habillage</div>
+            </div>
+            <div style="background:#e8f4fd;border-radius:10px;padding:14px;border-left:4px solid #1d4ed8;">
+              <strong style="color:#1d4ed8;">🚶 Prévenir le syndrome d'immobilisation</strong>
+              <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Réduire les cathéters dès que possible</strong> · privilégier le cathétérisme intermittent<br><strong>Exercices au lit 3 fois par jour</strong>, ou lever pour les repas et pour la toilette<br><strong>Mobiliser le plus tôt possible</strong><br><strong>Alterner le positionnement aux 2 heures</strong> si alitement<br>⛔ <strong>Contention physique en dernier recours</strong> — privilégier les mesures de remplacement<br>➜ Traiter <strong>déshydratation, dénutrition, infection urinaire, constipation et fécalome</strong> activement</div>
+            </div>
+          </div>
+        </div>
+
+        <div id="delp1" style="display:none;margin-top:14px;">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+            <div style="background:#e8f4fd;border-radius:10px;padding:14px;border-left:4px solid #1d4ed8;">
+              <strong style="color:#1d4ed8;">🤝 Approche de base</strong>
+              <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Établir le contact visuel, se nommer et appeler la personne par son nom</strong> avant toute consigne ou tout soin<br>Visage <strong>souriant et détendu</strong>, ton de voix <strong>doux et rassurant</strong><br><strong>Phrases simples, courtes et concrètes</strong> — une consigne à la fois<br>Gestes et démonstrations pour se faire comprendre<br><strong>Expliquer les soins au fur et à mesure</strong><br><strong>Respecter le rythme</strong> — laisser le temps de réagir<br>⛔ Ne pas hausser le ton · ⛔ <strong>ne pas argumenter ni chercher à raisonner</strong><br>Utiliser la <strong>diversion</strong> pour les soins invasifs ou d'hygiène</div>
+            </div>
+            <div style="background:#ede9fe;border-radius:10px;padding:14px;border-left:4px solid #6d28d9;">
+              <strong style="color:#6d28d9;">🧭 Orientation &amp; stimulation cognitive</strong>
+              <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Orienter dans les 3 sphères à chaque visite</strong> (temps, lieu, personne)<br><strong>Horloge et calendrier bien visibles</strong><br>Intégrer l'orientation dans la conversation — « quel beau lundi matin! »<br><strong>Visites régulières</strong> pour orienter et sécuriser<br>Aider à <strong>interpréter correctement l'environnement</strong> en le décrivant<br>Expliquer aux proches <strong>l'importance de leur présence</strong> au chevet</div>
+            </div>
+          </div>
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;border-left:4px solid #d35400;margin-top:12px;">
+            <strong style="color:#d35400;">👁️ Comment réagir aux hallucinations, illusions et idées délirantes</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">
+              <strong>Hallucinations :</strong> ne pas confronter · rassurer en disant que vous êtes là et que vous allez régler le problème · ne pas argumenter — <strong>la personne est convaincue de ce qu'elle voit</strong> · détourner l'attention · dire que vous ne voyez pas ce qu'elle perçoit <strong>mais que vous la croyez</strong> · rester avec elle · <em>si l'anxiété devient trop grande, entrer dans son monde pour régler le problème</em><br>
+              <strong>Illusions :</strong> <strong>retirer l'objet</strong> en cause et dire que c'est terminé · <strong>améliorer l'éclairage</strong> · décrire l'environnement · ne pas chercher à raisonner<br>
+              <strong>Idées délirantes :</strong> repérer les <strong>moments et les déclencheurs</strong> · reconnaître que c'est réel <em>pour elle</em> et que ça peut faire peur · rassurer sur sa sécurité · <strong>détourner vers un sujet ancien et significatif</strong> · accorder de l'attention <em>quand elle n'exprime pas</em> d'idées délirantes · ⛔ ne pas chercher à convaincre que c'est faux
+            </div>
+          </div>
+        </div>
+
+        <div id="delp2" style="display:none;margin-top:14px;">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;">
+            <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+              <strong style="color:#15803d;">🖼️ Points de repère</strong>
+              <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>1 ou 2 objets personnels significatifs</strong> sur la table de chevet — réveille-matin, photo<br><strong>Calendrier et horloge</strong> à la vue<br><strong>Ouvrir les rideaux le matin</strong> — lumière naturelle et orientation<br>Carton plastifié bien visible : <em>« Vous êtes à l'hôpital XXX, nous prenons soin de vous »</em><br>Rapprocher le lit du poste pour une meilleure surveillance</div>
+            </div>
+            <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+              <strong style="color:#1d4ed8;">🔇 Réduire le bruit</strong>
+              <div style="font-size:13px;line-height:1.7;margin-top:8px;">Parler moins fort dans les corridors · chaussures moins bruyantes<br>Baisser la sonnerie des téléphones · éteindre les appareils inutiles<br><strong>Écouteurs</strong> pour le téléviseur<br>Privilégier les <strong>chambres simples ou doubles</strong><br>⚠️ Attention aux <strong>changements de quart</strong> — pic de surcharge sensorielle</div>
+            </div>
+            <div style="background:#fff3cd;border-radius:10px;padding:14px;">
+              <strong style="color:#d35400;">💡 Éclairage</strong>
+              <div style="font-size:13px;line-height:1.7;margin-top:8px;">Lumière naturelle le jour<br><strong>Veilleuses la nuit</strong> près du lit et dans la salle de toilette — réduit les <strong>illusions</strong><br>Éclairage <strong>tamisé ou localisé</strong> pour les soins de nuit<br>⚠️ Éviter les changements d'éclairage <strong>trop intenses et rapides</strong></div>
+            </div>
+            <div style="background:#fce4ec;border-radius:10px;padding:14px;">
+              <strong style="color:#c0392b;">🛡️ Sécurité de la personne agitée</strong>
+              <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Lit à la position la plus basse</strong><br><strong>Baisser la ridelle du côté où la personne a l'habitude de se lever</strong> — sa mémoire procédurale facilite le transfert et la sécurité<br>Détecteur de mouvement<br><strong>Désencombrer</strong>, plancher sec, bandes adhésives près de la toilette<br><strong>Cloche d'appel accessible en tout temps</strong></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:14px;">📈 <strong>Et si ça ne s'améliore pas?</strong> L'AAPA propose une escalade en trois paliers : <strong>systématique</strong> (équipe soignante) → <strong>spécifique</strong> (équipe multiprofessionnelle : ergothérapie, physiothérapie, nutrition) → <strong>spécialisé</strong> (gériatrie, gérontopsychiatrie, spécialistes). Passer au palier suivant est une <strong>alerte à poser explicitement</strong>, pas une décision à repousser.</div>
+      </div>
+
+      <div class="block rx" style="margin-top:14px;border-left-color:#7c3aed;">
+        <div class="block-title" id="del-8"><span class="tag">💊 Traitement pharmacologique — dernier recours</span></div>
+
+        <div class="key-fact red" style="margin-top:10px;">⛔ <strong>Aucun médicament ne traite le délirium.</strong> Les antipsychotiques ne raccourcissent pas sa durée et n'en améliorent pas l'issue — ils ne servent qu'à <strong>contrôler une détresse ou une dangerosité</strong> lorsque les mesures non pharmacologiques ont échoué. <strong>Traiter la cause reste le seul vrai traitement.</strong></div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;border-left:4px solid #d35400;">
+            <strong style="color:#d35400;">⚖️ Quand l'envisager</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Détresse importante</strong> liée aux hallucinations ou aux idées délirantes<br><strong>Danger pour la personne ou pour autrui</strong><br><strong>Agitation compromettant un traitement essentiel</strong><br>➜ <strong>Après</strong> avoir corrigé la cause et appliqué les mesures non pharmacologiques<br>⚠️ Le délirium <strong>hypoactif ne se traite pas</strong> par antipsychotique</div>
+          </div>
+          <div style="background:#fef2f2;border-radius:10px;padding:14px;border-left:4px solid #c0392b;">
+            <strong style="color:#c0392b;">🚫 Précautions</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Dose la plus faible, durée la plus courte</strong>, réévaluation quotidienne<br>⚠️ Antipsychotiques : <strong>allongement du QT</strong>, symptômes extrapyramidaux, sédation, chutes, <strong>surmortalité chez la personne âgée démente</strong><br>🚨 <strong>Contre-indication relative majeure : maladie à corps de Lewy et Parkinson</strong> — hypersensibilité aux neuroleptiques pouvant être sévère<br>⛔ <strong>Éviter les benzodiazépines</strong> — elles <strong>aggravent</strong> le délirium<br>➜ <strong>Exception :</strong> le délirium de <strong>sevrage alcoolique</strong>, où les benzodiazépines <em>sont</em> le traitement</div>
+          </div>
+        </div>
+
+        <div class="key-fact blue" style="margin-top:12px;">🎯 <strong>Le réflexe inverse, plus utile :</strong> avant d'ajouter un médicament, se demander <strong>lequel on peut retirer</strong>. Les anticholinergiques, benzodiazépines, opioïdes et sédatifs déjà au dossier sont plus souvent la cause du délirium que la solution.<br>➜ Voir la section <em>Polypharmacie &amp; déprescription</em></div>
+
+        <div class="key-fact green" style="margin-top:8px;">😴 <strong>Pour le sommeil :</strong> privilégier les mesures non pharmacologiques — regrouper les soins pour permettre des plages de sommeil, éviter les réveils nocturnes pour les soins directs, lumière le jour, activité en journée, breuvage chaud décaféiné le soir. <strong>Ne pas prescrire d'hypnotique</strong>, qui aggravera la confusion et le risque de chute.</div>
+      </div>
+
+      <div class="block flag" style="margin-top:14px;">
+        <div class="block-title" id="del-9"><span class="tag">🚨 Red flags &amp; pièges</span></div>
+
+        <div class="flag-list" style="margin-top:12px;">
+          <div class="flag-item"><strong>Tout changement aigu de l'état mental</strong> chez une personne âgée — c'est une urgence médicale, pas un trait de caractère</div>
+          <div class="flag-item"><strong>Détérioration rapide chez une personne déjà démente</strong> — délirium surajouté jusqu'à preuve du contraire</div>
+          <div class="flag-item"><strong>Personne âgée anormalement somnolente ou apathique</strong> — délirium hypoactif, la forme la plus manquée</div>
+          <div class="flag-item"><strong>Signes neurologiques focaux</strong>, céphalée nouvelle, convulsion — imagerie cérébrale urgente</div>
+          <div class="flag-item"><strong>Chute récente sous anticoagulant</strong> avec confusion — hématome sous-dural</div>
+          <div class="flag-item"><strong>Instabilité hémodynamique, hypoxie, hypoglycémie</strong> — à corriger immédiatement</div>
+          <div class="flag-item"><strong>Signes de sevrage alcoolique</strong> — trémulations, sudation, tachycardie, hallucinations : prise en charge spécifique et urgente</div>
+          <div class="flag-item"><strong>Fièvre ou hypothermie</strong> avec confusion — sepsis possible même sans foyer évident</div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px;">
+          <div style="background:#fef2f2;border-radius:10px;padding:14px;border-left:4px solid #c0392b;">
+            <strong style="color:#c0392b;">🕳️ Les pièges les plus fréquents</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Attribuer la confusion <strong>au vieillissement</strong> ou à la démence<br><strong>Manquer la forme hypoactive</strong><br>Traiter une <strong>bactériurie asymptomatique</strong> et s'arrêter là<br><strong>Oublier le fécalome et le globe vésical</strong><br>Ajouter un sédatif au lieu d'en retirer un<br><strong>Utiliser la contention</strong> pour gérer l'agitation<br>Poser un diagnostic de démence <strong>pendant</strong> le délirium<br>Ne pas parler à un proche</div>
+          </div>
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;border-left:4px solid #15803d;">
+            <strong style="color:#15803d;">✅ La démarche en 5 gestes</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>①</strong> <strong>Reconnaître</strong> — CAM, et « c'était comme ça il y a une semaine? »<br><strong>②</strong> <strong>Chercher la cause</strong> — médicaments d'abord, puis infection, rétention, métabolique, hypoxie, douleur<br><strong>③</strong> <strong>Corriger</strong> toutes les causes trouvées, pas seulement la première<br><strong>④</strong> <strong>Appliquer les mesures non pharmacologiques</strong> — lunettes, appareils auditifs, mobilisation, repères, sommeil<br><strong>⑤</strong> <strong>Réévaluer</strong> et escalader si aucune amélioration</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<div class="section" id="sec-tnc">
+      <div class="section-header">
+        <div class="section-accent" style="background:#4338ca">🧩</div>
+        <div class="section-title"><h1>Troubles neurocognitifs (TNC)</h1><div class="breadcrumb">Gériatrie <span class="breadcrumb-sep">·</span> Alzheimer &amp; autres TNC <span class="breadcrumb-sep">·</span> INESSS <span class="breadcrumb-sep">·</span> SCPD</div></div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;">
+        <button onclick="goToBlock('tnc-1')" style="background:#374151;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">📖 TNC léger vs majeur</button>
+        <button onclick="goToBlock('tnc-2')" style="background:#0369a1;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🔍 Repérage</button>
+        <button onclick="goToBlock('tnc-3')" style="background:#6d28d9;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧬 Les grands types</button>
+        <button onclick="goToBlock('tnc-4')" style="background:#0f766e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧪 Investigation</button>
+        <button onclick="goToBlock('tnc-5')" style="background:#b45309;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧠 Outils cognitifs</button>
+        <button onclick="goToBlock('tnc-6')" style="background:#0a7a4e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">💊 Traitement</button>
+        <button onclick="goToBlock('tnc-7')" style="background:#c0392b;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">😤 SCPD</button>
+        <button onclick="goToBlock('tnc-8')" style="background:#92400e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">⚖️ Conduite &amp; aptitude</button>
+        <button onclick="goToBlock('tnc-9')" style="background:#0891b2;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">📋 Suivi &amp; proche aidant</button>
+        <button onclick="goToBlock('tnc-10')" style="background:#dc2626;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🚨 Red flags</button>
+      </div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:20px;">
+        <div style="flex:1;min-width:95px;background:#EEF2FF;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#1C3F8F;">Autonomie</div><div style="font-size:11px;color:#555;margin-top:4px;">Ce qui sépare léger de majeur</div></div>
+        <div style="flex:1;min-width:95px;background:#F3E8FF;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#6d28d9;">Alzheimer</div><div style="font-size:11px;color:#555;margin-top:4px;">Le type le plus fréquent</div></div>
+        <div style="flex:1;min-width:95px;background:#FEF9C3;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#854d0e;">AD8 · MoCA</div><div style="font-size:11px;color:#555;margin-top:4px;">Outils de repérage</div></div>
+        <div style="flex:1;min-width:95px;background:#FEE2E2;border-radius:10px;padding:12px;text-align:center;"><div style="font-size:13px;font-weight:800;color:#b91c1c;">≠ Délirium</div><div style="font-size:11px;color:#555;margin-top:4px;">À écarter avant tout diagnostic</div></div>
+      </div>
+
+      <div class="block def" style="margin-top:14px;">
+        <div class="block-title" id="tnc-1"><span class="tag">📖 TNC léger vs majeur — la terminologie actuelle</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">📗 <strong>Le vocabulaire a changé :</strong> le terme <strong>« démence » a été remplacé par « trouble neurocognitif majeur »</strong> dans la classification actuelle. Le mot démence reste employé en clinique et dans la population, mais les documents officiels — INESSS, MSSS — utilisent <strong>TNC</strong>. Connaître les deux évite la confusion.</div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:18%;"></th><th style="width:38%;">TNC léger</th><th>TNC majeur <em>(anciennement démence)</em></th></tr></thead>
+          <tbody>
+            <tr style="background:#e8f4fd;"><td><strong>Déclin cognitif</strong></td><td><strong>Modeste</strong> par rapport au niveau antérieur, dans un ou plusieurs domaines</td><td><strong>Significatif</strong> par rapport au niveau antérieur</td></tr>
+            <tr><td><strong>🎯 Autonomie</strong></td><td><strong>Préservée</strong> — la personne compense (listes, rappels, plus d'efforts), mais elle y arrive</td><td>🎯 <strong>Atteinte</strong> — le déclin <strong>interfère avec l'autonomie</strong> dans les activités quotidiennes</td></tr>
+            <tr style="background:#f0fdf4;"><td><strong>Évolution</strong></td><td>Peut rester stable, s'améliorer, ou progresser vers un TNC majeur</td><td>Progressive selon l'étiologie</td></tr>
+            <tr><td><strong>Conduite</strong></td><td><strong>Suivi</strong> et correction des facteurs réversibles · réévaluation périodique</td><td>Investigation étiologique, plan de traitement, soutien au proche aidant, planification</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">🎯 <strong>La ligne de partage est fonctionnelle, pas un score.</strong> Ce n'est pas le résultat au MoCA qui fait la différence entre léger et majeur — c'est la réponse à : <strong>« est-ce que ça l'empêche de faire ce qu'elle faisait avant? »</strong> D'où l'importance de l'histoire collatérale et de l'évaluation des AVD.</div>
+
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">🧠 Les domaines cognitifs à explorer</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;">
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+            <strong style="color:#1d4ed8;">Mémoire &amp; apprentissage</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Oublis récents, répétitions, égarement d'objets, rendez-vous manqués</div>
+          </div>
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+            <strong style="color:#15803d;">Fonctions exécutives</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Planification, jugement, résolution de problèmes, gestion des finances et des médicaments</div>
+          </div>
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;">
+            <strong style="color:#d35400;">Langage</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Manque du mot, discours appauvri, difficulté de compréhension</div>
+          </div>
+          <div style="background:#ede9fe;border-radius:10px;padding:14px;">
+            <strong style="color:#6d28d9;">Attention complexe</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Difficulté à suivre une conversation à plusieurs, distractibilité</div>
+          </div>
+          <div style="background:#fce4ec;border-radius:10px;padding:14px;">
+            <strong style="color:#c0392b;">Visuo-spatial (perceptivo-moteur)</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Se perdre dans des lieux connus, difficulté à conduire, à s'habiller</div>
+          </div>
+          <div style="background:#f1f5f9;border-radius:10px;padding:14px;">
+            <strong style="color:#334155;">Cognition sociale</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Changement de personnalité, désinhibition, perte d'empathie, comportements inappropriés</div>
+          </div>
+        </div>
+      
+        <div class="key-fact black" style="margin-top:14px;">⚠️ <strong>La confusion la plus fréquente — et elle change le diagnostic.</strong> « <strong>TNC léger</strong> » et « <strong>TNC majeur de sévérité légère</strong> » ne sont pas la même chose. Le premier est un <strong>syndrome distinct</strong> — le déclin n&#39;interfère <em>pas</em> avec l&#39;autonomie. Le second est un <strong>TNC majeur</strong> — l&#39;autonomie est déjà atteinte — dont on précise le degré. <span style="font-size:11px;color:#64748b;">📚 <em>DSM-5-TR</em></span></div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:20%;">Sévérité du TNC majeur</th><th style="width:36%;">Critère DSM-5-TR</th><th>Traduction concrète</th></tr></thead>
+          <tbody>
+            <tr style="background:#fff7ed;"><td><strong>Léger</strong></td><td>Difficultés dans les <strong>activités instrumentales</strong> de la vie quotidienne</td><td>Travaux ménagers · <strong>gestion de l&#39;argent</strong> · gestion des médicaments · transport · téléphone</td></tr>
+            <tr style="background:#fee2e2;"><td><strong>Moyen</strong></td><td>Difficultés dans les <strong>activités de base</strong> de la vie quotidienne</td><td><strong>Manger · s&#39;habiller</strong> · se laver · hygiène · transferts</td></tr>
+            <tr style="background:#fecaca;"><td><strong>Grave</strong></td><td><strong>Dépendance complète</strong></td><td>Aide requise pour l&#39;ensemble des soins personnels</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="key-fact blue" style="margin-top:12px;">📋 <strong>Les quatre critères du TNC majeur, à connaître.</strong><br><strong>A.</strong> Déclin cognitif <strong>significatif</strong> par rapport au niveau antérieur, dans <strong>un ou plusieurs</strong> des six domaines — <em>attention complexe, fonctions exécutives, apprentissage et mémorisation, langage, activités perceptivomotrices, cognition sociale</em> — reposant sur ① une <strong>préoccupation</strong> du sujet, d&#39;un informant fiable ou du clinicien, <strong>et</strong> ② une <strong>altération importante des performances</strong>, idéalement documentée par un bilan neuropsychologique standardisé.<br><strong>B.</strong> Les déficits <strong>interfèrent avec l&#39;autonomie</strong> — au minimum, une aide est nécessaire dans les activités instrumentales complexes (payer ses factures, gérer ses médicaments).<br><strong>C.</strong> Ils <strong>ne surviennent pas exclusivement pendant un délirium</strong>.<br><strong>D.</strong> Ils ne sont <strong>pas mieux expliqués par un autre trouble mental</strong> — trouble dépressif caractérisé, schizophrénie. <span style="font-size:11px;color:#64748b;">📚 <em>DSM-5-TR</em></span> &nbsp;➜ <em>Deuil &amp; dépression de la PA</em></div>
+
+        <div class="key-fact purple" style="margin-top:10px;">🏷️ <strong>Deux spécificateurs à ne pas oublier au diagnostic.</strong> ① <strong>L&#39;étiologie</strong> — Alzheimer, dégénérescence lobaire frontotemporale, corps de Lewy, maladie vasculaire, lésion cérébrale traumatique, substance ou médicament, VIH, prions, Parkinson, Huntington, autre affection médicale, <strong>étiologies multiples</strong>, ou non spécifiée. ② <strong>La présence ou non d&#39;une perturbation du comportement</strong> — symptômes psychotiques, perturbation de l&#39;humeur, agitation. C&#39;est ce second spécificateur qui code les <strong>SCPD</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>DSM-5-TR</em></span></div>
+
+        <div class="key-fact yellow" style="margin-top:10px;">📖 <strong>Démence ou TNC ?</strong> Le DSM-5-TR conserve le terme <strong>démence</strong> pour la continuité, et il reste standard dans certains sous-types dégénératifs touchant les aînés. <strong>Trouble neurocognitif</strong> est préféré chez les personnes plus jeunes — traumatisme crânien, VIH — où « démence » serait à la fois inexact et stigmatisant. <span style="font-size:11px;color:#64748b;">📚 <em>DSM-5-TR</em></span></div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;border-left-color:#0369a1;">
+        <div class="block-title" id="tnc-2"><span class="tag">🔍 Repérage — qui, quand, comment</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">📗 <strong>Cadre québécois :</strong> l'INESSS a publié <em>Repérage et processus menant au diagnostic de la maladie d'Alzheimer et d'autres troubles neurocognitifs</em>, avec un <strong>processus clinique interdisciplinaire en GMF</strong> inspiré du modèle de gestion des maladies chroniques. Le repérage, le diagnostic et le suivi se font en <strong>collaboration médecin–infirmière</strong> — l'IPS y a un rôle central.</div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;border-left:4px solid #d35400;">
+            <strong style="color:#d35400;">🔔 Ce qui doit déclencher un repérage</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Plainte cognitive</strong> de la personne <em>ou</em> — plus révélateur — <strong>d'un proche</strong><br><strong>Difficultés nouvelles dans les AVD</strong> : médicaments, finances, transport, repas<br><strong>Rendez-vous manqués</strong>, appels répétitifs, erreurs de médication<br><strong>Déclin fonctionnel inexpliqué</strong>, chutes répétées<br><strong>Changement de personnalité ou de comportement</strong><br><strong>Errance</strong>, s'être perdu en conduisant</div>
+          </div>
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;border-left:4px solid #15803d;">
+            <strong style="color:#15803d;">🛠️ Outils de repérage</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>AD8</strong> — questionnaire bref rempli avec un <strong>proche</strong>, pour détecter un déclin cognitif ou fonctionnel. Outil d'aide à la décision retenu par l'INESSS.<br><strong>MoCA</strong> — test cognitif plus sensible que le MMSE pour les atteintes légères et exécutives<br>🎯 <strong>Le repérage n'est pas un diagnostic</strong> : un test anormal ouvre une évaluation, il ne la conclut pas.</div>
+          </div>
+        </div>
+
+        <div class="key-fact red" style="margin-top:12px;">⚠️ <strong>Avant tout dépistage cognitif, poser trois questions :</strong> ① y a-t-il un <strong>délirium</strong> (début aigu, fluctuation, inattention)? ② y a-t-il une <strong>dépression</strong>? ③ y a-t-il un <strong>déficit sensoriel</strong> non corrigé — la personne <strong>voit-elle et entend-elle</strong> les consignes du test? Un MoCA fait sans lunettes ni appareils auditifs mesure surtout le handicap sensoriel.</div>
+
+        <div class="key-fact green" style="margin-top:8px;">💡 <strong>Sur le dépistage systématique :</strong> il n'est <strong>pas recommandé</strong> de dépister la population âgée asymptomatique. Le repérage est <strong>ciblé</strong> — déclenché par une plainte, une inquiétude d'un proche ou un changement fonctionnel observé.</div>
+      </div>
+
+      <div class="block clin" style="margin-top:14px;border-left-color:#6d28d9;">
+        <div class="block-title" id="tnc-3"><span class="tag">🧬 Les grands types de TNC</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">📚 <strong>Le cadre de référence :</strong> la littérature de médecine interne structure les TNC autour de <strong>quatre grands syndromes</strong> — <strong>maladie d'Alzheimer</strong>, <strong>maladie cérébrovasculaire</strong>, <strong>maladie à corps de Lewy</strong> et <strong>dégénérescences frontotemporales</strong> — chacun avec ses critères cliniques, son apport d'imagerie et de biomarqueurs, et des options thérapeutiques d'ampleur très variable. <span style="font-size:11px;color:#64748b;">📚 <em>Goldman-Cecil Medicine, 26<sup>e</sup> éd.</em></span></div>
+        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>Pourquoi distinguer les types :</strong> le type détermine <strong>ce qu'on peut traiter</strong>, <strong>ce qu'il faut éviter</strong> — les neuroleptiques dans la maladie à corps de Lewy, par exemple — et <strong>ce à quoi il faut se préparer</strong>. Les formes mixtes sont fréquentes, surtout Alzheimer + vasculaire.</div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:19%;">Type</th><th style="width:29%;">Tableau caractéristique</th><th>Ce qui change la conduite</th></tr></thead>
+          <tbody>
+            <tr style="background:#ede9fe;"><td><strong>Maladie d'Alzheimer</strong><br><em>le plus fréquent</em></td><td>Début <strong>insidieux</strong>, évolution <strong>lentement progressive</strong> · atteinte <strong>de la mémoire récente</strong> au premier plan · désorientation temporelle puis spatiale · manque du mot<br>Anosognosie fréquente — la personne minimise</td><td>Inhibiteurs de la cholinestérase envisageables<br>Planification à long terme : mandat de protection, directives, soutien au proche</td></tr>
+            <tr><td><strong>TNC vasculaire</strong></td><td>Évolution <strong>« en marches d'escalier »</strong> ou progressive · atteinte <strong>exécutive</strong> souvent prédominante, plus que mnésique · <strong>signes neurologiques focaux</strong>, troubles de la marche précoces<br>Facteurs de risque vasculaires présents</td><td>🎯 <strong>Le contrôle des facteurs de risque vasculaires est le traitement</strong> : TA, lipides, diabète, tabac, FA<br>➜ Voir <em>AVC</em>, <em>HTA</em>, <em>Dyslipidémie</em></td></tr>
+            <tr style="background:#fce4ec;"><td><strong>Maladie à corps de Lewy</strong></td><td>🎯 <strong>Fluctuations cognitives marquées</strong> · <strong>hallucinations visuelles précoces et détaillées</strong> · <strong>parkinsonisme</strong> · troubles du comportement en sommeil paradoxal · chutes, syncopes</td><td>🚨 <strong>HYPERSENSIBILITÉ AUX NEUROLEPTIQUES</strong> — réaction pouvant être sévère · les <strong>éviter</strong><br>⚠️ Les fluctuations peuvent être confondues avec un délirium</td></tr>
+            <tr><td><strong>TNC frontotemporal</strong></td><td>Début souvent <strong>plus jeune</strong> (avant 65 ans) · <strong>changement de personnalité et de comportement au premier plan</strong> : désinhibition, apathie, perte d'empathie, comportements stéréotypés, hyperoralité · <strong>mémoire relativement préservée au début</strong> · variante langagière possible</td><td>⚠️ Souvent confondu avec un <strong>trouble psychiatrique</strong> — errance diagnostique fréquente<br>Les inhibiteurs de la cholinestérase <strong>n'y sont pas indiqués</strong><br>Fardeau très lourd pour les proches</td></tr>
+            <tr style="background:#f0fdf4;"><td><strong>TNC de la maladie de Parkinson</strong></td><td>Troubles cognitifs survenant dans le contexte d'un <strong>parkinsonisme établi depuis des années</strong> · atteinte exécutive et visuo-spatiale</td><td>Même prudence que pour les corps de Lewy avec les neuroleptiques<br>➜ Voir la section <em>Parkinson</em></td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">🔀 <strong>Les formes mixtes sont la règle, pas l'exception</strong> — particulièrement Alzheimer associé à une composante vasculaire. En pratique, cela signifie qu'<strong>il vaut toujours la peine de traiter les facteurs de risque vasculaires</strong>, quel que soit le type présumé.</div>
+      </div>
+
+      <div class="block para" style="margin-top:14px;border-left-color:#0f766e;">
+        <div class="block-title" id="tnc-4"><span class="tag">🧪 Investigation — écarter le réversible</span></div>
+
+        <div class="key-fact red" style="margin-top:10px;">🎯 <strong>L'objectif principal du bilan n'est pas de confirmer l'Alzheimer — c'est d'écarter ce qui se traite.</strong> Une proportion des tableaux cognitifs est liée à des causes partiellement ou totalement réversibles, et ce sont exactement celles qu'on ne veut pas manquer.</div>
+
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">🔄 Les causes réversibles à chercher systématiquement</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;">
+          <div style="background:#fce4ec;border-radius:10px;padding:14px;">
+            <strong style="color:#c0392b;">🌀 Délirium</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🎯 <strong>À écarter en premier, toujours.</strong> Ne jamais diagnostiquer un TNC pendant un délirium.</div>
+          </div>
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;">
+            <strong style="color:#d35400;">💊 Médicaments</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Anticholinergiques</strong>, benzodiazépines, opioïdes, antihistaminiques, certains antiépileptiques.<br>➜ La <strong>déprescription est un test diagnostique</strong> autant qu'un traitement.<br>➜ Voir <em>Polypharmacie</em></div>
+          </div>
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+            <strong style="color:#1d4ed8;">😔 Dépression</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">La « pseudo-démence » dépressive est fréquente et traitable.<br>➜ Traiter, puis <strong>réévaluer la cognition</strong>.</div>
+          </div>
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+            <strong style="color:#15803d;">🧪 Métabolique &amp; carentiel</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Hypothyroïdie</strong> · <strong>carence en B12</strong> · troubles électrolytiques · calcémie · dysfonction hépatique ou rénale</div>
+          </div>
+          <div style="background:#ede9fe;border-radius:10px;padding:14px;">
+            <strong style="color:#6d28d9;">🧠 Structurel</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Hématome sous-dural chronique</strong> (chute, anticoagulant) · <strong>hydrocéphalie à pression normale</strong> — triade : troubles de la marche, incontinence, déclin cognitif · tumeur · AVC</div>
+          </div>
+          <div style="background:#f1f5f9;border-radius:10px;padding:14px;">
+            <strong style="color:#334155;">🍷 Autres</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Alcool</strong> · apnée du sommeil non traitée · <strong>déficits sensoriels non corrigés</strong> · infections chroniques</div>
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px;">
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;border-left:4px solid #1d4ed8;">
+            <strong style="color:#1d4ed8;">🧪 Bilan paraclinique de base</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>FSC</strong> · <strong>ionogramme</strong>, urée, créatinine · <strong>calcium</strong><br><strong>Glycémie</strong> · <strong>TSH</strong> · <strong>vitamine B12</strong><br>Bilan hépatique<br>± sérologies selon les facteurs de risque<br><em>Au Québec, des ordonnances collectives permettent à l'infirmière d'amorcer ce bilan après un repérage positif.</em></div>
+          </div>
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;border-left:4px solid #d35400;">
+            <strong style="color:#d35400;">🖼️ Imagerie cérébrale</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Pas systématique dans tous les cas, mais <strong>indiquée si</strong> :<br>• début <strong>rapide</strong> ou évolution atypique<br>• <strong>âge jeune</strong> (&lt; 65 ans)<br>• <strong>signes neurologiques focaux</strong><br>• <strong>traumatisme crânien</strong> ou anticoagulation<br>• suspicion d'<strong>hydrocéphalie</strong> ou de lésion structurelle<br>• antécédents de cancer</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block para" style="margin-top:14px;border-left-color:#b45309;">
+        <div class="block-title" id="tnc-5"><span class="tag">🧠 Outils d'évaluation cognitive</span></div>
+
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:16%;">Outil</th><th style="width:34%;">Utilité</th><th>Limites &amp; précautions</th></tr></thead>
+          <tbody>
+            <tr style="background:#f0fdf4;"><td><strong>AD8</strong></td><td>Questionnaire bref rempli avec un <strong>proche</strong> — détecte un changement cognitif ou fonctionnel<br>🎯 Ne dépend pas de la performance de la personne au moment du test</td><td>Nécessite un informateur fiable qui voit la personne régulièrement</td></tr>
+            <tr><td><strong>MoCA</strong></td><td><strong>Plus sensible que le MMSE</strong> pour les atteintes légères et les <strong>fonctions exécutives</strong> · explore attention, langage, abstraction, rappel différé, visuo-spatial</td><td>⚠️ Influencé par la <strong>scolarité</strong>, la langue et la culture · <strong>formation requise</strong> pour l'administrer et le coter · sensible aux déficits sensoriels</td></tr>
+            <tr style="background:#e8f4fd;"><td><strong>MMSE</strong></td><td>Historiquement le plus utilisé · utile pour <strong>suivre l'évolution</strong> dans le temps</td><td>⚠️ <strong>Peu sensible aux atteintes légères et exécutives</strong> · effet plafond<br>Ne détecte pas bien les TNC frontotemporaux ni vasculaires</td></tr>
+            <tr><td><strong>Test de l'horloge</strong></td><td>Rapide · explore fonctions <strong>exécutives et visuo-spatiales</strong></td><td>À interpréter avec le reste — jamais isolément</td></tr>
+            <tr style="background:#fff8e1;"><td><strong>Évaluation fonctionnelle</strong> (AVQ/AVD)</td><td>🎯 <strong>C'est ce qui détermine léger vs majeur</strong> — indispensable, et souvent la partie la plus négligée</td><td>Nécessite l'histoire collatérale</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">⚠️ <strong>Un score n'est pas un diagnostic.</strong> Un MoCA sous le seuil chez une personne peu scolarisée, allophone, malentendante, déprimée ou en délirium ne signifie pas TNC. Inversement, une personne très scolarisée peut réussir le test tout en ayant un déclin réel par rapport à son niveau antérieur. <strong>Le test complète l'histoire — il ne la remplace pas.</strong></div>
+      </div>
+
+      <div class="block rx" style="margin-top:14px;">
+        <div class="block-title" id="tnc-6"><span class="tag">💊 Traitement</span></div>
+
+        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>Mettre les attentes au bon niveau :</strong> aucun traitement ne guérit ni n'arrête un TNC dégénératif. Les interventions <strong>non pharmacologiques et le soutien au proche aidant</strong> ont un impact plus grand sur la qualité de vie que les médicaments — et ce sont elles qui déterminent le maintien à domicile.</div>
+
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">🌿 Non pharmacologique — la base</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;">
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+            <strong style="color:#15803d;">🏃 Mode de vie</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Activité physique régulière</strong><br><strong>Stimulation cognitive et sociale</strong><br>Sommeil de qualité · traitement de l'<strong>apnée du sommeil</strong><br>Alimentation équilibrée</div>
+          </div>
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+            <strong style="color:#1d4ed8;">🩺 Optimiser le terrain</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Facteurs de risque vasculaires</strong> — TA, lipides, diabète, tabac<br><strong>Corriger vision et audition</strong> 🎯<br><strong>Traiter la dépression</strong><br><strong>Déprescrire</strong> les médicaments qui nuisent à la cognition</div>
+          </div>
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;">
+            <strong style="color:#d35400;">🏠 Environnement &amp; sécurité</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Routine stable</strong>, repères visuels, calendrier<br><strong>Piluliers</strong> et supervision de la médication<br>Sécurité : cuisinière, errance, <strong>conduite automobile</strong>, armes à feu<br>Ergothérapie à domicile</div>
+          </div>
+          <div style="background:#ede9fe;border-radius:10px;padding:14px;">
+            <strong style="color:#6d28d9;">👨‍👩‍👧 Soutien</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Société Alzheimer</strong> — soutien, formation, groupes<br><strong>Centres de jour</strong>, répit, hébergement temporaire<br>Services du CLSC<br>🎯 <strong>Le soutien au proche aidant est un traitement</strong>, pas un extra</div>
+          </div>
+        </div>
+
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">💊 Pharmacologique</div>
+        <div style="overflow-x:auto;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:24%;">Classe</th><th style="width:28%;">Place</th><th>À surveiller</th></tr></thead>
+          <tbody>
+            <tr style="background:#f0fdf4;"><td><strong>Inhibiteurs de la cholinestérase</strong><br><em>donépézil, rivastigmine, galantamine</em></td><td>Maladie d'Alzheimer · TNC de la maladie de Parkinson et à corps de Lewy<br>Bénéfice <strong>symptomatique et modeste</strong> — ne modifie pas l'évolution</td><td><strong>Effets digestifs</strong> : nausées, diarrhée, perte de poids<br><strong>Bradycardie, syncope</strong> — prudence si troubles de conduction<br>Crampes, cauchemars, incontinence<br>⚠️ <strong>Pas indiqués dans le TNC frontotemporal</strong></td></tr>
+            <tr><td><strong>Mémantine</strong></td><td>Stades modéré à sévère de la maladie d'Alzheimer, seule ou en association</td><td>Généralement mieux tolérée · étourdissements, céphalées, confusion</td></tr>
+            <tr style="background:#fff8e1;"><td><strong>Déprescription</strong> de ces agents</td><td>🎯 À envisager quand le bénéfice n'est plus perceptible, aux stades très avancés, ou si les effets indésirables dominent</td><td>Un <strong>algorithme de déprescription des inhibiteurs de la cholinestérase et de la mémantine</strong> existe (deprescribing.org)<br>Réévaluer périodiquement plutôt que reconduire indéfiniment</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">📌 <strong>Ce qu'il faut dire à la famille au moment de prescrire :</strong> le bénéfice attendu est <strong>modeste</strong>, il porte sur les symptômes et non sur la maladie, il ne sera pas spectaculaire, et il faut le <strong>réévaluer après quelques mois</strong>. Fixer cette attente dès le départ évite la déception et les demandes d'escalade.</div>
+      </div>
+
+      <div class="block rx" style="margin-top:14px;border-left-color:#c0392b;">
+        <div class="block-title" id="tnc-7"><span class="tag">😤 SCPD — symptômes comportementaux et psychologiques</span></div>
+
+        <div class="key-fact red" style="margin-top:10px;">🎯 <strong>Le principe central :</strong> un SCPD — agitation, agressivité, errance, cris, opposition aux soins — est <strong>un message, pas une maladie</strong>. Il exprime presque toujours un besoin non comblé, un inconfort ou un déclencheur environnemental. <strong>Chercher la cause avant de sédater.</strong></div>
+
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">🔎 Ce qu'il faut écarter devant un SCPD nouveau</div>
+        <div class="criteria-list">
+          <div class="criteria-item"><div class="criteria-num red">1</div><span>🚨 <strong>DÉLIRIUM</strong> — un SCPD d'apparition récente chez une personne démente est un délirium jusqu'à preuve du contraire</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">2</div><span><strong>DOULEUR</strong> non exprimée — la cause la plus fréquente et la plus négligée · utiliser une <strong>échelle comportementale</strong></span></div>
+          <div class="criteria-item"><div class="criteria-num blue">3</div><span><strong>BESOINS DE BASE</strong> — faim, soif, envie d'uriner, <strong>fécalome, globe vésical</strong>, chaud, froid, fatigue</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">4</div><span><strong>MÉDICAMENTS</strong> — ajout récent, sevrage, effet paradoxal</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">5</div><span><strong>ENVIRONNEMENT</strong> — bruit, surstimulation, changement de routine ou de personnel, obscurité</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">6</div><span><strong>DÉFICITS SENSORIELS</strong> — la personne n'entend pas ou ne voit pas ce qui se passe et se sent agressée</span></div>
+          <div class="criteria-item"><div class="criteria-num red">!</div><span><strong>APPROCHE DU SOIGNANT</strong> — soins précipités, plusieurs consignes à la fois, absence d'explication. <em>C'est la cause la plus facile à corriger — et celle qu'on regarde en dernier.</em></span></div>
+        </div>
+
+        <div class="key-fact green" style="margin-top:12px;">🕐 <strong>Le syndrome crépusculaire :</strong> aggravation de la confusion et de l'agitation <strong>en fin de journée</strong>. Mesures utiles : <strong>lumière suffisante en fin d'après-midi</strong>, activité et exposition à la lumière naturelle le jour, éviter les siestes tardives, routine du soir prévisible, réduire le bruit et la stimulation en soirée.</div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;border-left:4px solid #15803d;">
+            <strong style="color:#15803d;">✅ Interventions de première ligne</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Traiter la cause</strong> identifiée<br><strong>Adapter l'approche</strong> : une consigne à la fois, ton calme, ne pas argumenter, <strong>diversion</strong><br><strong>Valider l'émotion</strong> plutôt que corriger le contenu<br>Routine, repères, activités significatives<br>Musique, toucher affectif, présence des proches</div>
+          </div>
+          <div style="background:#fef2f2;border-radius:10px;padding:14px;border-left:4px solid #c0392b;">
+            <strong style="color:#c0392b;">⚠️ Si un médicament devient nécessaire</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Réservé aux situations de <strong>détresse ou de dangerosité</strong> réfractaires<br><strong>Dose minimale, durée la plus courte, réévaluation planifiée</strong><br>🚨 <strong>Antipsychotiques : surmortalité démontrée chez la personne âgée atteinte de TNC</strong> — le consentement doit être éclairé<br>🚨 <strong>À éviter dans la maladie à corps de Lewy et le Parkinson</strong><br>⛔ <strong>Éviter les benzodiazépines</strong> — chutes, confusion, désinhibition paradoxale<br>➜ Un <strong>algorithme de déprescription des antipsychotiques</strong> existe : <strong>l'arrêt doit être planifié dès la prescription</strong></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block para" style="margin-top:14px;border-left-color:#92400e;">
+        <div class="block-title" id="tnc-8"><span class="tag">⚖️ Conduite automobile, aptitude &amp; aspects légaux</span></div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
+          <div style="background:#fff3cd;border-radius:10px;padding:14px;border-left:4px solid #d35400;">
+            <strong style="color:#d35400;">🚗 Conduite automobile</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🎯 <strong>Un diagnostic de TNC n'interdit pas automatiquement de conduire</strong> — mais il impose de <strong>poser la question</strong> et de la documenter.<br>Éléments inquiétants : <strong>s'être perdu</strong> sur un trajet connu, accidents ou quasi-accidents, contraventions nouvelles, inquiétude de la famille, <strong>atteinte visuo-spatiale ou exécutive</strong>.<br>➜ Au Québec, les professionnels ont une <strong>obligation de signalement à la SAAQ</strong> lorsque l'état d'une personne compromet la conduite.<br>➜ Une <strong>évaluation sur route</strong> peut trancher les cas ambigus.<br>💬 Conversation difficile : aborder tôt, impliquer la famille, proposer des solutions de rechange concrètes.</div>
+          </div>
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;border-left:4px solid #1d4ed8;">
+            <strong style="color:#1d4ed8;">📜 Aptitude &amp; protection</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🎯 <strong>L'aptitude n'est pas globale</strong> — elle s'évalue <strong>par décision</strong> : une personne peut être inapte à gérer ses finances tout en étant apte à consentir à un soin.<br><strong>Mandat de protection</strong> — à établir <strong>pendant que la personne est apte</strong> : c'est l'intervention la plus utile au moment du diagnostic<br><strong>Directives médicales anticipées</strong> et <strong>niveaux de soins</strong> — à aborder tôt<br>Évaluation de l'inaptitude : <strong>médicale et psychosociale</strong><br>➜ Voir <em>Niveau de soins &amp; soins palliatifs</em></div>
+          </div>
+        </div>
+
+        <div class="key-fact orange" style="margin-top:12px;">💬 <strong>Annoncer le diagnostic :</strong> la personne a le droit de savoir. Annoncer permet de <strong>planifier pendant qu'elle peut encore décider</strong> — mandat, directives, finances, projets, conduite. Repousser l'annonce prive la personne de ce pouvoir. Annoncer progressivement, vérifier ce qu'elle veut savoir, et donner un plan concret plutôt qu'un pronostic brut.</div>
+      </div>
+
+      <div class="block para" style="margin-top:14px;border-left-color:#0891b2;">
+        <div class="block-title" id="tnc-9"><span class="tag">📋 Suivi &amp; proche aidant</span></div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:12px;">
+          <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+            <strong style="color:#1d4ed8;">📅 À chaque visite de suivi</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Évolution fonctionnelle</strong> — AVQ et AVD<br><strong>SCPD</strong> et leur retentissement<br><strong>Poids et alimentation</strong> — la dénutrition s'installe insidieusement<br><strong>Chutes</strong> et mobilité<br><strong>Révision de la médication</strong><br><strong>Sécurité à domicile</strong> et conduite<br>Recherche d'un <strong>délirium</strong> devant tout changement rapide</div>
+          </div>
+          <div style="background:#fce4ec;border-radius:10px;padding:14px;">
+            <strong style="color:#c0392b;">👨‍👩‍👧 Le proche aidant — évaluer son état</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🎯 <strong>C'est lui qui décompense en premier, et son épuisement précipite l'hébergement.</strong><br>Rechercher : fatigue, isolement, dépression, anxiété, problèmes de santé négligés, <strong>colère et culpabilité</strong>, difficultés financières<br>⚠️ L'épuisement est un <strong>facteur de risque de maltraitance</strong><br>💬 Poser la question directement : « <strong>et vous, comment ça va?</strong> »</div>
+          </div>
+          <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+            <strong style="color:#15803d;">🛠️ Ressources à offrir</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Société Alzheimer</strong> — information, groupes de soutien, formation<br><strong>Centres de jour</strong> et <strong>répit</strong><br>Services du <strong>CLSC</strong> · <strong>ergothérapie</strong> à domicile<br>Travail social — démarches financières et légales<br>Organismes communautaires locaux</div>
+          </div>
+          <div style="background:#f1f5f9;border-radius:10px;padding:14px;">
+            <strong style="color:#334155;">🕊️ Aux stades avancés</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">🎯 <strong>Le TNC majeur avancé est une maladie terminale</strong> — le reconnaître change la conduite.<br>Priorité au <strong>confort</strong> : douleur, dysphagie, plaies, infections à répétition<br>Réévaluer l'utilité de chaque médicament et de chaque investigation<br><strong>Discussion sur le niveau de soins</strong> — alimentation, hospitalisation, antibiotiques<br>Soins palliatifs</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block flag" style="margin-top:14px;">
+        <div class="block-title" id="tnc-10"><span class="tag">🚨 Red flags</span></div>
+
+        <div class="flag-list" style="margin-top:12px;">
+          <div class="flag-item">🚨 <strong>Détérioration cognitive rapide — heures à jours</strong> : délirium, pas une progression du TNC</div>
+          <div class="flag-item"><strong>Début avant 65 ans</strong> — investigation élargie et orientation spécialisée</div>
+          <div class="flag-item"><strong>Signes neurologiques focaux</strong>, troubles de la marche précoces, chutes répétées</div>
+          <div class="flag-item"><strong>Triade marche instable + incontinence + déclin cognitif</strong> — penser à l'<strong>hydrocéphalie à pression normale</strong>, potentiellement traitable</div>
+          <div class="flag-item"><strong>Hallucinations visuelles précoces avec fluctuations et parkinsonisme</strong> — corps de Lewy : <strong>éviter les neuroleptiques</strong></div>
+          <div class="flag-item"><strong>Changement de personnalité au premier plan chez une personne plus jeune</strong> — TNC frontotemporal</div>
+          <div class="flag-item"><strong>Chute avec traumatisme crânien sous anticoagulant</strong> — hématome sous-dural</div>
+          <div class="flag-item"><strong>Perte de poids, dysphagie, pneumonies à répétition</strong> — stade avancé : réorienter vers le confort</div>
+          <div class="flag-item">🚨 <strong>Sécurité compromise</strong> : conduite dangereuse, errance, cuisinière laissée allumée, erreurs de médication, armes à feu au domicile</div>
+          <div class="flag-item">🚨 <strong>Épuisement du proche aidant</strong> ou <strong>signes de maltraitance</strong></div>
+        </div>
+      </div>
+    </div>
+
+<div class="section" id="sec-depression-pa">
       <div class="section-header">
         <div class="section-accent" style="background:#4338ca">🕯️</div>
         <div class="section-title"><h1>Deuil &amp; dépression de la personne âgée</h1><div class="breadcrumb">Gériatrie <span class="breadcrumb-sep">·</span> Précis Arcand-Hébert <span class="breadcrumb-sep">·</span> NEJM 2014 <span class="breadcrumb-sep">·</span> GDS &amp; Cornell</div></div>
@@ -57664,7 +57665,7 @@ const SECTION_ORDER = [
   // Neurologie
   'avc','sep','migraine','parkinson','epilepsie','vertige','syncope','douleur',
   // Gériatrie
-  'vieillissement','geriatrie-eval','delirium','tnc','chutes','hto','pnp','depression-pa','sommeil-pa','polypharmacie',
+  'vieillissement','geriatrie-eval','chutes','hto','pnp','delirium','tnc','depression-pa','sommeil-pa','polypharmacie',
   // Urologie
   'uro-physio','uro-sbau','uro-hbp','uro-cancer-prostate','uro-vha','uro-incontinence','uro-iu-recidivante','uro-pna','uro-sgu','uro-orchi','uro-prostatite','uro-de','uro-cystite','uro-lithiase',
   // Gastro-entérologie
