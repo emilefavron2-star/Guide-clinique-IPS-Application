@@ -35377,7 +35377,6 @@ function switchEpiTx(n) {
         <button onclick="goToBlock('npp-etio')" style="background:#15803d;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🎯 Étiologies principales</button>
         <button onclick="goToBlock('npp-5')" style="background:#c0392b;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">💊 Médicaments en cause</button>
         <button onclick="goToBlock('npp-6')" style="background:#0f766e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🔬 Investigations</button>
-        <button onclick="goToBlock('npp-assoc')" style="background:#4338ca;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🔗 Examen selon l'hypothèse</button>
         <button onclick="goToBlock('npp-7')" style="background:#0a7a4e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">💉 Douleur neuropathique</button>
         <button onclick="goToBlock('npp-8')" style="background:#dc2626;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🚨 Red flags — outil DDS</button>
       </div>
@@ -35551,73 +35550,56 @@ function switchEpiTx(n) {
 
       <!-- ═══ pnp-6 ═══ -->
       <div class="block para" style="margin-top:14px;border-left-color:#0f766e;">
-        <div class="block-title" id="npp-6"><span class="tag">🔬 Investigations</span><span class="obj-badge">Obj. 11</span></div>
+        <div class="block-title" id="npp-6"><span class="tag">🔬 Investigations — du bilan de base au test ciblé</span><span class="obj-badge">Obj. 11</span></div>
+        <p style="font-size:13px;color:#475569;">Trois temps, dans cet ordre : le <strong>bilan que tout le monde reçoit</strong>, puis le <strong>test qui confirme l&#39;hypothèse</strong> si une hypothèse se dégage, puis l&#39;<strong>électrophysiologie</strong> — qui n&#39;arrive qu&#39;après l&#39;anamnèse et l&#39;examen, jamais à leur place. <span style="font-size:11px;color:#64748b;">📚 <em>Azhary et coll., Am Fam Physician 2010</em></span></p>
 
-        <div class="key-fact ink" style="margin-top:10px;">📈 <strong>Le rendement, en chiffres.</strong> L&#39;<strong>anamnèse et l&#39;examen physique</strong> établissent la cause dans <strong>60 %</strong> des PSD. Les analyses de dépistage en ajoutent <strong>10 %</strong>. Il reste <strong>environ 30 % d&#39;idiopathiques</strong> — chez un patient ambulatoire de plus de 60 ans avec une progression lente, on parle de <strong>neuropathie axonale idiopathique chronique</strong>. Autrement dit : l&#39;essentiel se joue au chevet, pas au laboratoire. <span style="font-size:11px;color:#64748b;">📚 <em>Mirian et coll., CMAJ 2023</em></span></div>
+        <div class="key-fact ink" style="margin-top:10px;">📈 <strong>Le rendement, en chiffres — et pourquoi cet ordre.</strong> L&#39;<strong>anamnèse et l&#39;examen physique</strong> établissent la cause dans <strong>60 %</strong> des PSD. Les analyses de dépistage en ajoutent <strong>10 %</strong>. Il reste <strong>environ 30 % d&#39;idiopathiques</strong>. Autrement dit : <strong>l&#39;essentiel se joue au chevet</strong>, et multiplier les examens en amont ne récupère pas ce qu&#39;une anamnèse bâclée a manqué. <span style="font-size:11px;color:#64748b;">📚 <em>Mirian et coll., CMAJ 2023</em></span></div>
 
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;margin-top:12px;">
+        <!-- ── temps 1 : le bilan de base ── -->
+        <div style="font-size:12px;font-weight:800;color:#0f766e;margin-top:16px;letter-spacing:.4px;">TEMPS 1 — LE BILAN QUE TOUT LE MONDE REÇOIT</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;margin-top:10px;">
           <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
-            <strong style="color:#1d4ed8;">🧪 Bilan de dépistage à haut rendement (AAN)</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;">• Formule sanguine complète<br>• Na, K, Cl, bicarbonate sériques<br>• Urée et créatinine<br>• Épreuves de fonction hépatique<br>• <strong>Glycémie et HbA<sub>1c</sub></strong><br>• <strong>Électrophorèse des protéines sériques</strong><br>• <strong>Vitamine B<sub>12</sub></strong> ± acide méthylmalonique</div>
+            <strong style="color:#1d4ed8;">🧪 Dépistage à haut rendement (AAN)</strong>
+            <div style="font-size:13px;line-height:1.7;margin-top:8px;">• Formule sanguine complète<br>• Na, K, Cl, bicarbonate sériques<br>• Urée et créatinine<br>• Épreuves de fonction hépatique<br>• <strong>Glycémie et HbA<sub>1c</sub></strong><br>• <strong>Électrophorèse des protéines sériques</strong><br>• <strong>Vitamine B<sub>12</sub></strong> ± acide méthylmalonique <span style="font-size:11px;color:#64748b;">📚 <em>Mirian et coll., CMAJ 2023</em></span></div>
           </div>
           <div style="background:#fff3cd;border-radius:10px;padding:14px;">
-            <strong style="color:#d35400;">🎯 Les deux seuils qui déclenchent un test de deuxième ligne</strong>
+            <strong style="color:#d35400;">🎯 Les deux seuils qui déclenchent un test de 2<sup>e</sup> ligne</strong>
             <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>HbA<sub>1c</sub> entre 6,0 et 6,4 %</strong> → hyperglycémie provoquée orale<br><strong>B<sub>12</sub> entre 150 et 300 pmol/L</strong> (N : 145-569) → doser l&#39;<strong>acide méthylmalonique</strong> (N : 0,1-0,4 µmol/L)<br><em>Une B<sub>12</sub> « limite basse » n&#39;est pas rassurante — c&#39;est le MMA qui tranche.</em></div>
           </div>
-          <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
-            <strong style="color:#15803d;">➕ Selon la suspicion clinique</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;">TSH · VS · VIH · sérologie de Lyme · RPR/VDRL<br>ANA, facteur rhumatoïde, <strong>P-ANCA et C-ANCA</strong> (vascularite)<br>Enzyme de conversion (sarcoïdose)<br>EPS et EPU avec immunofixation<br>Métaux lourds urinaires · porphyrie<br>Panel paranéoplasique <span style="font-size:11px;color:#64748b;">📚 <em>Azhary et coll., Am Fam Physician 2010</em></span></div>
-          </div>
         </div>
 
-        <div style="overflow-x:auto;margin-top:14px;">
+        <!-- ── temps 2 : selon l'hypothèse ── -->
+        <div style="font-size:12px;font-weight:800;color:#4338ca;margin-top:18px;letter-spacing:.4px;">TEMPS 2 — SI UNE HYPOTHÈSE SE DÉGAGE, LE TEST QUI LA CONFIRME</div>
+        <div style="overflow-x:auto;margin-top:10px;">
         <table style="font-size:12px;">
-          <thead><tr><th style="width:26%;">Examen</th><th style="width:37%;">Ce qu&#39;il apporte</th><th>Quand</th></tr></thead>
+          <thead><tr><th style="width:32%;">Hypothèse clinique</th><th style="width:36%;">Examen à demander</th><th>Indice qui l&#39;évoque</th></tr></thead>
           <tbody>
-            <tr style="background:#f8f9fa;"><td><strong>Conduction nerveuse + EMG</strong></td><td>Catégorise : <strong>axonale ou démyélinisante</strong> · motrice, sensorielle ou mixte · acquise ou héréditaire<br>Renseigne aussi sur la <strong>chronicité</strong> et le pronostic</td><td>Recommandé dans la plupart des polyneuropathies, <strong>surtout si l&#39;étiologie n&#39;est pas établie</strong></td></tr>
-            <tr><td><strong>Biopsie cutanée</strong><br><em>densité des fibres intraépidermiques</em></td><td>Examen <strong>standard</strong> de la neuropathie à petites fibres selon l&#39;AAN — sensibilité 45-90 %, <strong>spécificité 95-97 %</strong></td><td>Quand l&#39;EMG est normal mais la clinique évoque une atteinte des petites fibres<br>⚠️ Accès et remboursement <strong>très variables au Canada</strong></td></tr>
-            <tr style="background:#f8f9fa;"><td><strong>Épreuves autonomes</strong><br><em>sudomotrices, cardiovagales, vasomotrices</em></td><td>Objectivent l&#39;atteinte autonome</td><td>Suspicion de neuropathie autonome ou à petites fibres</td></tr>
-            <tr><td><strong>Biopsie nerveuse</strong></td><td>Diagnostic histologique</td><td><strong>Vascularite</strong>, sarcoïdose, maladies infiltrantes (cancer, amyloïdose)</td></tr>
-            <tr style="background:#f8f9fa;"><td><strong>Ponction lombaire</strong></td><td><strong>Protéinorachie élevée</strong></td><td>Guillain-Barré et PDIC <span style="font-size:11px;color:#64748b;">📚 <em>Azhary et coll., Am Fam Physician 2010</em></span></td></tr>
-          </tbody>
-        </table>
-        </div>
-
-        <div class="key-fact yellow" style="margin-top:12px;">🚫 <strong>Le piège de l&#39;EMG normal.</strong> Une neuropathie <strong>purement à petites fibres</strong> donne un EMG et des conductions <strong>normaux</strong> — ces tests n&#39;évaluent que les grandes fibres motrices et sensorielles. Un EMG normal chez un patient qui décrit des brûlures distales n&#39;écarte donc rien du tout. <span style="font-size:11px;color:#64748b;">📚 <em>Mirian et coll., CMAJ 2023</em></span></div>
-      </div>
-
-      <div class="block para" style="margin-top:14px;border-left-color:#4338ca;">
-        <div class="block-title" id="npp-assoc"><span class="tag">🔗 Associer l&#39;examen à l&#39;hypothèse</span><span class="obj-badge">Obj. 11</span></div>
-        <p style="font-size:13px;color:#475569;">Le bloc précédent donne le bilan que <strong>tout le monde reçoit</strong>. Celui-ci répond à l&#39;autre question : <strong>quel examen demander quand on soupçonne telle cause</strong> — et quoi faire selon ce que montre l&#39;électrophysiologie. <span style="font-size:11px;color:#64748b;">📚 <em>Azhary et coll., Am Fam Physician 2010, tableaux 1 et 3</em></span></p>
-
-        <div class="key-fact ink" style="margin-top:10px;">🧭 <strong>Deux portes d&#39;entrée, selon ce dont on dispose.</strong> Si une <strong>hypothèse clinique</strong> se dégage de l&#39;anamnèse, aller directement au test qui la confirme <em>(premier tableau)</em>. Si le tableau reste flou et que l&#39;<strong>EMG a été fait</strong>, c&#39;est son résultat qui oriente la suite <em>(second tableau)</em>.</div>
-
-        <div style="overflow-x:auto;margin-top:14px;">
-        <table style="font-size:12px;">
-          <thead><tr><th style="width:34%;">Hypothèse clinique</th><th style="width:38%;">Examen à demander</th><th>Indice qui l&#39;évoque</th></tr></thead>
-          <tbody>
-            <tr style="background:#fee2e2;"><td><strong>Diabète</strong> ou prédiabète</td><td><strong>Hyperglycémie provoquée orale</strong> · HbA<sub>1c</sub></td><td>Le bilan de base montre une <strong>HbA<sub>1c</sub> entre 6,0 et 6,4 %</strong> <span style="font-size:11px;color:#64748b;">📚 <em>Mirian et coll., CMAJ 2023</em></span></td></tr>
-            <tr><td><strong>Carence en B<sub>12</sub></strong></td><td><strong>Acide méthylmalonique</strong> ± homocystéine</td><td><strong>B<sub>12</sub> entre 150 et 300 pmol/L</strong> — « limite basse » n&#39;est pas rassurant <span style="font-size:11px;color:#64748b;">📚 <em>Mirian et coll., CMAJ 2023</em></span></td></tr>
+            <tr style="background:#fee2e2;"><td><strong>Diabète</strong> ou prédiabète</td><td><strong>Hyperglycémie provoquée orale</strong> · HbA<sub>1c</sub></td><td>HbA<sub>1c</sub> entre 6,0 et 6,4 % au bilan de base</td></tr>
+            <tr><td><strong>Carence en B<sub>12</sub></strong></td><td><strong>Acide méthylmalonique</strong> ± homocystéine</td><td>B<sub>12</sub> entre 150 et 300 pmol/L</td></tr>
             <tr style="background:#f8f9fa;"><td><strong>Vascularite</strong></td><td><strong>ANA</strong> · facteur rhumatoïde · <strong>P-ANCA et C-ANCA</strong><br>➜ <strong>biopsie nerveuse</strong> si le traitement doit être confirmé</td><td>Mononévrite multiplex · progression rapide et douloureuse · signes systémiques</td></tr>
             <tr><td><strong>Gammapathie monoclonale</strong>, myélome</td><td><strong>EPS et EPU avec immunofixation</strong></td><td>Neuropathie <strong>démyélinisante</strong> · douleurs osseuses · anémie</td></tr>
-            <tr style="background:#f8f9fa;"><td><strong>Hypothyroïdie</strong></td><td><strong>TSH</strong></td><td>Fait partie du bilan de base</td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>Hypothyroïdie</strong></td><td><strong>TSH</strong></td><td>Fait partie du bilan élargi courant</td></tr>
             <tr><td><strong>VIH</strong></td><td>Sérologie VIH</td><td>Facteurs de risque · neuropathie surtout sensitive</td></tr>
             <tr style="background:#f8f9fa;"><td><strong>Maladie de Lyme</strong></td><td>Sérologie de Lyme</td><td>Exposition · érythème migrant · région endémique</td></tr>
             <tr><td><strong>Syphilis</strong></td><td><strong>RPR / VDRL</strong> ± analyse du LCR</td><td>Facteurs de risque · autres manifestations</td></tr>
             <tr style="background:#f8f9fa;"><td><strong>Hépatopathie</strong></td><td>Bilan hépatique</td><td>Stigmates de cirrhose · hépatite virale</td></tr>
-            <tr><td><strong>Métaux lourds · porphyrie · myélome</strong></td><td><strong>Analyse d&#39;urine, dont collecte de 24 h</strong></td><td>Exposition professionnelle · douleurs abdominales et crises (porphyrie)</td></tr>
+            <tr><td><strong>Métaux lourds · porphyrie · myélome</strong></td><td><strong>Analyse d&#39;urine, dont collecte de 24 h</strong></td><td>Exposition professionnelle · douleurs abdominales par crises (porphyrie)</td></tr>
             <tr style="background:#f8f9fa;"><td><strong>Sarcoïdose</strong></td><td><strong>Enzyme de conversion de l&#39;angiotensine</strong></td><td>Atteinte pulmonaire · uvéite · adénopathies</td></tr>
             <tr><td><strong>Guillain-Barré</strong> ou <strong>PDIC</strong></td><td><strong>Ponction lombaire</strong> — protéinorachie élevée</td><td>Faiblesse ≥ perte sensitive · aréflexie diffuse · installation aiguë ou subaiguë</td></tr>
             <tr style="background:#f8f9fa;"><td><strong>Néoplasie occulte</strong></td><td><strong>Panel paranéoplasique</strong></td><td>Perte de poids · neuropathie sensitive à progression rapide</td></tr>
             <tr><td><strong>Syndrome de Sjögren</strong></td><td>Débit salivaire · <strong>test de Schirmer</strong> · rose bengale · biopsie des glandes labiales</td><td>Sécheresse oculaire et buccale · neuropathie à petites fibres</td></tr>
             <tr style="background:#f8f9fa;"><td><strong>Cryoglobulinémie</strong></td><td>Dosage des <strong>cryoglobulines</strong></td><td>Hépatite C · purpura · atteinte rénale</td></tr>
             <tr><td><strong>Neuropathie héréditaire</strong></td><td><strong>Test génétique</strong></td><td><strong>Pied creux, orteils en marteau</strong>, aréflexie diffuse, antécédents familiaux</td></tr>
-            <tr style="background:#f8f9fa;"><td><strong>Neuropathie sensitivomotrice</strong> auto-immune</td><td>Anticorps <strong>anti-MAG</strong> et <strong>antigangliosides</strong> · <strong>antisulfatides</strong></td><td>Après échec du bilan courant</td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>Neuropathie auto-immune</strong></td><td>Anticorps <strong>anti-MAG</strong>, <strong>antigangliosides</strong>, <strong>antisulfatides</strong></td><td>Après échec du bilan courant</td></tr>
           </tbody>
         </table>
         </div>
+        <div style="font-size:11px;color:#64748b;margin-top:6px;">Tests indiqués selon la suspicion clinique. <span style="font-size:11px;color:#64748b;">📚 <em>Azhary et coll., Am Fam Physician 2010</em></span></div>
 
-        <div class="key-fact blue" style="margin-top:14px;">📊 <strong>Ce que l&#39;EMG mesure vraiment.</strong> L&#39;étude de conduction évalue forme, amplitude, latence et vitesse. <strong>La perte axonale abaisse les amplitudes</strong> ; <strong>la démyélinisation allonge la latence et ralentit la vitesse</strong>. L&#39;EMG à l&#39;aiguille détecte en plus la <strong>dénervation active</strong> — activité spontanée au repos. Des conductions et un EMG <strong>normaux réduisent fortement</strong> la probabilité de neuropathie ; des conductions anormales la <strong>confirment</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Azhary et coll., Am Fam Physician 2010, tableaux 1 et 3</em></span></div>
+        <!-- ── temps 3 : l'électrophysiologie ── -->
+        <div style="font-size:12px;font-weight:800;color:#6d28d9;margin-top:18px;letter-spacing:.4px;">TEMPS 3 — L&#39;ÉLECTROPHYSIOLOGIE, ET CE QU&#39;ELLE COMMANDE</div>
+
+        <div class="key-fact blue" style="margin-top:10px;">📊 <strong>Ce que l&#39;EMG mesure vraiment.</strong> L&#39;étude de conduction évalue forme, amplitude, latence et vitesse. <strong>La perte axonale abaisse les amplitudes</strong> ; <strong>la démyélinisation allonge la latence et ralentit la vitesse</strong>. L&#39;EMG à l&#39;aiguille détecte en plus la <strong>dénervation active</strong> — activité spontanée au repos. Des conductions et un EMG <strong>normaux réduisent fortement</strong> la probabilité de neuropathie ; des conductions anormales la <strong>confirment</strong>.<br>➜ Il catégorise : <strong>axonale ou démyélinisante</strong> · motrice, sensorielle ou mixte · <strong>acquise ou héréditaire</strong> — et renseigne sur la chronicité, le pronostic et parfois la réponse au traitement. <strong>Recommandé dans la plupart des polyneuropathies, surtout si l&#39;étiologie n&#39;est pas établie.</strong> <span style="font-size:11px;color:#64748b;">📚 <em>Azhary et coll., Am Fam Physician 2010</em></span> <span style="font-size:11px;color:#64748b;">📚 <em>Mirian et coll., CMAJ 2023</em></span></div>
 
         <div style="overflow-x:auto;margin-top:12px;">
         <table style="font-size:12px;">
@@ -35627,14 +35609,28 @@ function switchEpiTx(n) {
             <tr style="background:#eff6ff;"><td><strong>Démyélinisante — ralentissement <em>uniforme</em></strong></td><td>Oriente vers une <strong>neuropathie héréditaire</strong> → test génétique</td><td>—</td></tr>
             <tr style="background:#eff6ff;"><td><strong>Démyélinisante — ralentissement <em>non uniforme</em></strong></td><td>Cause <strong>acquise</strong> :<br>• installation <strong>aiguë</strong> → <strong>Guillain-Barré</strong><br>• <strong>subaiguë ou chronique</strong> → <strong>PDIC</strong><br>➜ ponction lombaire, EPS/EPU</td><td>—</td></tr>
             <tr style="background:#f8f9fa;"><td><strong>Mixte</strong></td><td>Évaluer d&#39;abord pour une <strong>maladie démyélinisante</strong></td><td>Si négatif, évaluer pour une <strong>cause axonale</strong></td></tr>
-            <tr><td><strong>Normale</strong></td><td><strong>Observation et test de contrôle</strong> · envisager le bilan des causes axonales courantes<br>⚠️ Penser à une <strong>neuropathie à petites fibres</strong> : l&#39;EMG ne les explore pas</td><td>➜ <strong>Biopsie cutanée</strong> (densité des fibres intraépidermiques) · <strong>épreuves autonomes</strong></td></tr>
+            <tr><td><strong>Normale</strong></td><td><strong>Observation et test de contrôle</strong> · envisager le bilan des causes axonales courantes</td><td>⚠️ Penser à une <strong>neuropathie à petites fibres</strong> ➜ biopsie cutanée, épreuves autonomes</td></tr>
           </tbody>
         </table>
         </div>
 
-        <div class="key-fact red" style="margin-top:14px;">🔪 <strong>Quand envisager la biopsie nerveuse.</strong> Deux situations : le diagnostic <strong>reste incertain</strong> après le bilan et l&#39;électrophysiologie, ou il faut le <strong>confirmer avant d&#39;amorcer un traitement agressif</strong> — typiquement une <strong>vascularite</strong> avant corticostéroïdes ou chimiothérapie. Les nerfs <strong>sural</strong> et <strong>péronier superficiel</strong> sont les sites préférés. <span style="font-size:11px;color:#64748b;">📚 <em>Azhary et coll., Am Fam Physician 2010, tableaux 1 et 3</em></span></div>
+        <div class="key-fact yellow" style="margin-top:12px;">🚫 <strong>Le piège de l&#39;EMG normal.</strong> Une neuropathie <strong>purement à petites fibres</strong> donne un EMG et des conductions <strong>normaux</strong> — ces tests n&#39;évaluent que les <strong>grandes fibres myélinisées</strong>, motrices et sensorielles. Un EMG normal chez quelqu&#39;un qui décrit des brûlures distales <strong>n&#39;écarte donc rien du tout</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Mirian et coll., CMAJ 2023</em></span></div>
 
-        <div class="key-fact green" style="margin-top:10px;">🏁 <strong>Le point d&#39;arrivée quand tout est négatif.</strong> Lorsque toutes les investigations échouent à trouver une cause <strong>et</strong> que l&#39;électrophysiologie montre une <strong>neuropathie symétrique de type axonal</strong>, le diagnostic présomptif est celui de <strong>neuropathie périphérique idiopathique</strong>. C&#39;est un diagnostic <em>posé</em>, pas un abandon. <span style="font-size:11px;color:#64748b;">📚 <em>Azhary et coll., Am Fam Physician 2010, tableaux 1 et 3</em></span> &nbsp;➜ voir <em>Les étiologies, par ordre de fréquence</em></div>
+        <!-- ── les examens de deuxième intention ── -->
+        <div style="font-size:12px;font-weight:800;color:#c0392b;margin-top:18px;letter-spacing:.4px;">LES EXAMENS DE DEUXIÈME INTENTION</div>
+        <div style="overflow-x:auto;margin-top:10px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:24%;">Examen</th><th style="width:38%;">Ce qu&#39;il apporte</th><th>Quand</th></tr></thead>
+          <tbody>
+            <tr style="background:#f8f9fa;"><td><strong>Biopsie cutanée</strong><br><em>densité des fibres intraépidermiques</em></td><td>Examen <strong>standard</strong> de la neuropathie à petites fibres selon l&#39;AAN — sensibilité 45-90 %, <strong>spécificité 95-97 %</strong></td><td>EMG normal mais clinique évocatrice des petites fibres<br>⚠️ Accès et remboursement <strong>très variables au Canada</strong></td></tr>
+            <tr><td><strong>Épreuves autonomes</strong><br><em>sudomotrices, cardiovagales, vasomotrices</em></td><td>Objectivent l&#39;atteinte autonome</td><td>Suspicion de neuropathie autonome ou à petites fibres</td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>Ponction lombaire</strong></td><td><strong>Protéinorachie élevée</strong></td><td>Guillain-Barré et PDIC</td></tr>
+            <tr><td><strong>Biopsie nerveuse</strong><br><em>nerfs sural et péronier superficiel</em></td><td>Diagnostic histologique</td><td>Diagnostic <strong>encore incertain</strong> après bilan et EMG, <strong>ou</strong> confirmation exigée avant un traitement agressif — typiquement une <strong>vascularite</strong> avant corticostéroïdes ou chimiothérapie<br>Aussi : sarcoïdose, maladies infiltrantes (cancer, amyloïdose)</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="key-fact green" style="margin-top:14px;">🏁 <strong>Le point d&#39;arrivée quand tout est négatif.</strong> Lorsque toutes les investigations échouent à trouver une cause <strong>et</strong> que l&#39;électrophysiologie montre une <strong>neuropathie symétrique de type axonal</strong>, le diagnostic présomptif est celui de <strong>neuropathie périphérique idiopathique</strong>. C&#39;est un diagnostic <em>posé</em>, pas un abandon. <span style="font-size:11px;color:#64748b;">📚 <em>Azhary et coll., Am Fam Physician 2010</em></span> &nbsp;➜ voir <em>Les étiologies, par ordre de fréquence</em></div>
       </div><!-- ═══ pnp-7 ═══ -->
       <div class="block rx" style="margin-top:14px;border-left-color:#0a7a4e;">
         <div class="block-title" id="npp-7"><span class="tag">💉 Traiter la douleur neuropathique</span></div>
