@@ -65,4 +65,4 @@ Il liste les sources réellement citées dans `index.html`, la version utilisée
 | Date | Vérifié par | Changements détectés | Sections mises à jour |
 |---|---|---|---|
 | 2026-08-13 | Création du registre | — | — |
-| 2026-09-06 | Vérification BDPP de 38 molécules citées sans fiche | **4 molécules non commercialisées au Canada** : droxidopa (jamais homologuée), déméclocycline (annulée 2002), lixisénatide (annulée 2023, lots expirés 03-2024), désipramine (DIN annulés 2009-2018) | à corriger : `hto`, `neo-poumon`, `preop`, `depression-pa` |
+| 2026-09-06 | Vérification BDPP de 38 molécules citées sans fiche | **4 molécules non commercialisées au Canada** : droxidopa (jamais homologuée), déméclocycline (annulée 2002), lixisénatide (annulée 2023, lots expirés 03-2024), désipramine (DIN annulés 2009-2018). Confirmées commercialisées : pyridostigmine, clomipramine, doxépine 3-6 mg, lemborexant, daridorexant, eszopiclone, flurazépam | ✅ corrigé : `hto`, `neo-poumon`, `preop`, `antidepresseurs` — mention « non commercialisé au Canada » ajoutée à chaque endroit |
