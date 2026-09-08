@@ -20468,12 +20468,16 @@ function switchNatrTx(n) {
             respiratoire: [
               {v:'pac', l:'Pneumonie acquise en communauté (PAC)'},
               {v:'bronchite', l:'Bronchite aiguë (non-PAC)'},
-              {v:'eampoc', l:'Exacerbation aiguë de MPOC (EAMPOC)'}
+              {v:'eampoc', l:'Exacerbation aiguë de MPOC (EAMPOC)'},
+              {v:'aspiration', l:'Pneumonie d\'aspiration'},
+              {v:'empyeme', l:'Empyème pleural'},
+              {v:'pac-vih', l:'PAC chez la personne vivant avec le VIH'}
             ],
             orl: [
               {v:'sinusite', l:'Sinusite bactérienne aiguë'},
               {v:'pharyngite', l:'Pharyngite à Streptococcus pyogenes (Strep A)'},
-              {v:'oma', l:'Otite moyenne aiguë (OMA)'}
+              {v:'oma', l:'Otite moyenne aiguë (OMA)'},
+              {v:'parotidite', l:'Parotidite bactérienne aiguë'}
             ],
             urinaire: [
               {v:'cystite', l:'Cystite non compliquée'},
@@ -20488,7 +20492,10 @@ function switchNatrTx(n) {
             digestif: [
               {v:'cdiff', l:'Clostridioides difficile (C. diff)'},
               {v:'diverticulite', l:'Diverticulite aiguë non compliquée'},
-              {v:'hpylori', l:'Helicobacter pylori (H. pylori)'}
+              {v:'hpylori', l:'Helicobacter pylori (H. pylori)'},
+              {v:'appendicite', l:'Appendicite aiguë'},
+              {v:'cholecystite', l:'Cholécystite &amp; cholangite aiguës'},
+              {v:'peritonite', l:'Péritonite secondaire'}
             ],
             osteo: [
               {v:'arthrite-septique', l:'Arthrite septique'},
@@ -20500,6 +20507,17 @@ function switchNatrTx(n) {
             ],
             snc: [
               {v:'meningite', l:'Méningite bactérienne (adulte)'}
+            ],
+            cardio: [
+              {v:'endocardite', l:'Endocardite infectieuse'}
+            ],
+            systemique: [
+              {v:'bacteriemie', l:'Bactériémie'},
+              {v:'neutropenie', l:'Neutropénie fébrile'},
+              {v:'fievre-voyage', l:'Fièvre au retour de voyage'}
+            ],
+            itss: [
+              {v:'itss', l:'ITSS — approche syndromique'}
             ]
           };
 
@@ -20531,7 +20549,10 @@ function switchNatrTx(n) {
             digestif: '&#129440; Digestif',
             osteo: '&#129460; Ost&eacute;o-articulaire',
             gyneco: '&#9792; Gyn&eacute;cologique',
-            snc: '&#129504; SNC'
+            snc: '&#129504; SNC',
+            cardio: '&#128147; Cardiaque',
+            systemique: '&#127777; Syst&eacute;mique / F&eacute;brile',
+            itss: '&#129655; ITSS'
           };
           function abxGetAllPatho() {
             var results = [];
@@ -20805,6 +20826,150 @@ function switchNatrTx(n) {
                 h += "<div class='abx-result-section'><div class='abx-result-title'>&#128138; 1er choix empirique</div><strong>Ceftriaxone IV</strong> 2g q12h + <strong>déxaméthasone IV</strong> 0.15 mg/kg q6h &times; 4 jours (donner avant ou simultanément au 1er ATB, &darr; mortalité). Si &gt; 50 ans ou immunosuppr. : ajouter <strong>ampicilline IV</strong> (Listeria).</div>";
                 h += "<div class='abx-result-section'>&#9200; ATB ajusté selon résultat PL + Gram + culture. Isolé en chambre à pression négative si méningocoque suspecté. Prophylaxie contacts proches si N. meningitidis.</div>";
                 break;
+              case 'aspiration':
+              h += "<div class='abx-result-section'><div class='abx-result-title'>&#129440; Pathog&egrave;nes</div>Flore <strong>oropharyng&eacute;e</strong> mixte &mdash; streptocoques an&eacute;robies, <em>Prevotella</em>, <em>Fusobacterium</em>, <em>Peptostreptococcus</em>. En milieu de soins, ajouter les <strong>BGN</strong> et <em>S. aureus</em>.</div>";
+              h += "<div class='abx-result-section'><div class='abx-result-title'>&#128202; D&eacute;cision clinique</div>&#127919; <strong>Distinguer deux entit&eacute;s.</strong> La <strong>pneumonite chimique</strong> (Mendelson) survient dans les heures, se r&eacute;sout souvent seule et <strong>ne requiert pas d&apos;antibiotique</strong>. La <strong>pneumonie</strong> d&apos;aspiration s&apos;installe sur plusieurs jours, avec fi&egrave;vre et infiltrat persistant.<br>&#128681; Territoires d&eacute;clives selon la position lors de l&apos;aspiration : <strong>segments post&eacute;rieurs des lobes sup&eacute;rieurs</strong> et <strong>segments sup&eacute;rieurs des lobes inf&eacute;rieurs</strong> si couch&eacute;.<br>Chercher le facteur de risque : <strong>dysphagie, trouble de la conscience, TNC, alcool, sonde naso-gastrique</strong>.</div>";
+              if (abxIsAnaph) {
+                h += "<div class='abx-result-section'><div class='abx-result-title'>&#128138; Ajust&eacute; &mdash; anaphylaxie</div><strong>Moxifloxacine</strong>, ou <strong>clindamycine</strong> si couverture an&eacute;robie seule recherch&eacute;e.</div>";
+              } else {
+                h += "<div class='abx-result-section'><div class='abx-result-title'>&#128138; 1er choix</div><strong>Amoxicilline-clavulanate</strong> PO/IV &mdash; couvre la flore orale et les an&eacute;robies.</div>";
+              }
+              h += "<div class='abx-result-section'><div class='abx-result-title'>&#128161; &Agrave; ne pas manquer</div>&#128137; <strong>La prise en charge la plus utile n&apos;est pas l&apos;antibiotique</strong> : &eacute;valuation de la d&eacute;glutition, positionnement, r&eacute;vision des s&eacute;datifs et anticholinergiques. &#10145;&#65039; voir <em>Polypharmacie</em> et <em>D&eacute;lirium</em>.</div>";
+              h += "<div class='abx-result-section'>&#9200; Dur&eacute;e : habituellement 5 &agrave; 7 jours si &eacute;volution favorable &mdash; prolonger si abc&egrave;s ou empy&egrave;me.</div>";
+              h += "<div class='abx-result-section' style='background:#fff7ed;border-left:3px solid #c2410c;padding:8px 10px;'>&#9888;&#65039; <strong>Source.</strong> Aucun guide d&apos;usage optimal de l&apos;INESSS ne couvre le <strong>traitement</strong> de cette infection (index consult&eacute; le 8 sept. 2026), et vos notes de cours ne la traitent pas. Pathog&egrave;nes et &eacute;l&eacute;ments de d&eacute;cision : <em>Goldman-Cecil, 26<sup>e</sup> &eacute;d.</em> &mdash; ouvrage <strong>am&eacute;ricain</strong>. &#10145;&#65039; <strong>Le sch&eacute;ma empirique ci-dessous est un rep&egrave;re : confirmer au protocole de votre milieu et &agrave; l&apos;antibiogramme local avant de prescrire.</strong></div>";
+              break;
+              case 'empyeme':
+              h += "<div class='abx-result-section'><div class='abx-result-title'>&#129440; Pathog&egrave;nes</div><em>S. pneumoniae</em>, <em>S. aureus</em>, streptocoques du groupe <em>milleri</em>, <strong>an&eacute;robies</strong>; BGN si acquis en milieu de soins.</div>";
+              h += "<div class='abx-result-section'><div class='abx-result-title'>&#128202; D&eacute;cision clinique</div>&#128680; <strong>Un &eacute;panchement para-pneumonique qui ne se draine pas ne gu&eacute;rit pas.</strong> L&apos;antibiotique seul ne suffit jamais dans un empy&egrave;me constitu&eacute;.<br>&#128202; <strong>Crit&egrave;res de drainage</strong> &mdash; ponction pleurale : <strong>pH &lt; 7,20</strong> &middot; <strong>glucose &lt; 3,3 mmol/L</strong> &middot; <strong>LDH &gt; 1000 U/L</strong> &middot; pr&eacute;sence de pus, de germes &agrave; la coloration de Gram ou de cloisonnements &agrave; l&apos;&eacute;chographie.<br>&#10145;&#65039; Toute suspicion impose une <strong>imagerie</strong> et un avis pour drainage.</div>";
+              if (abxIsAnaph) {
+                h += "<div class='abx-result-section'><div class='abx-result-title'>&#128138; Ajust&eacute; &mdash; anaphylaxie</div><strong>L&eacute;vofloxacine + m&eacute;tronidazole</strong>.</div>";
+              } else {
+                h += "<div class='abx-result-section'><div class='abx-result-title'>&#128138; 1er choix</div><strong>Ceftriaxone + m&eacute;tronidazole</strong>, ou <strong>pip&eacute;racilline-tazobactam</strong> selon la gravit&eacute; et le milieu d&apos;acquisition.</div>";
+              }
+              h += "<div class='abx-result-section'><div class='abx-result-title'>&#128161; &Agrave; ne pas manquer</div>&#129514; <strong>Ponctionner avant d&apos;antibioth&eacute;rapier</strong> quand l&apos;&eacute;tat le permet : les cultures se n&eacute;gativent vite.</div>";
+              h += "<div class='abx-result-section'>&#9200; Dur&eacute;e : prolong&eacute;e &mdash; typiquement 2 &agrave; 4 semaines, guid&eacute;e par le drainage et la r&eacute;ponse clinique.</div>";
+              h += "<div class='abx-result-section' style='background:#fff7ed;border-left:3px solid #c2410c;padding:8px 10px;'>&#9888;&#65039; <strong>Source.</strong> Aucun guide d&apos;usage optimal de l&apos;INESSS ne couvre le <strong>traitement</strong> de cette infection (index consult&eacute; le 8 sept. 2026), et vos notes de cours ne la traitent pas. Pathog&egrave;nes et &eacute;l&eacute;ments de d&eacute;cision : <em>Goldman-Cecil, 26<sup>e</sup> &eacute;d.</em> &mdash; ouvrage <strong>am&eacute;ricain</strong>. &#10145;&#65039; <strong>Le sch&eacute;ma empirique ci-dessous est un rep&egrave;re : confirmer au protocole de votre milieu et &agrave; l&apos;antibiogramme local avant de prescrire.</strong></div>";
+              break;
+              case 'pac-vih':
+              h += "<div class='abx-result-section'><div class='abx-result-title'>&#129440; Pathog&egrave;nes</div>Les m&ecirc;mes que la PAC &mdash; <em>S. pneumoniae</em> en t&ecirc;te, qui reste le pathog&egrave;ne le plus fr&eacute;quent quel que soit le CD4 &mdash; <strong>plus</strong>, selon le degr&eacute; d&apos;immunosuppression : <em>Pneumocystis jirovecii</em>, mycobact&eacute;ries, <em>Cryptococcus</em>, <em>Histoplasma</em>.</div>";
+              h += "<div class='abx-result-section'><div class='abx-result-title'>&#128202; D&eacute;cision clinique</div>&#127919; <strong>Le CD4 commande le diff&eacute;rentiel.</strong><br><strong>CD4 &gt; 200</strong> &mdash; raisonner comme une PAC ordinaire.<br><strong>CD4 &lt; 200</strong> &mdash; ajouter la <strong>PPC</strong> au diff&eacute;rentiel : d&eacute;but insidieux, <strong>toux s&egrave;che</strong>, <strong>d&eacute;saturation &agrave; l&apos;effort</strong>, infiltrat interstitiel bilat&eacute;ral, <strong>LDH &eacute;lev&eacute;es</strong>.<br><strong>CD4 &lt; 50</strong> &mdash; penser aussi aux mycobact&eacute;ries atypiques et aux mycoses end&eacute;miques.<br>&#128681; La <strong>tuberculose</strong> se pr&eacute;sente &agrave; tous les niveaux de CD4 et de fa&ccedil;on atypique quand ils sont bas.</div>";
+              if (abxIsAnaph) {
+                h += "<div class='abx-result-section'><div class='abx-result-title'>&#128138; Ajust&eacute; &mdash; anaphylaxie</div><strong>L&eacute;vofloxacine</strong> ou <strong>moxifloxacine</strong> &mdash; &#9888;&#65039; attention : les quinolones ont une activit&eacute; antituberculeuse partielle et peuvent <strong>masquer une TB</strong>.</div>";
+              } else {
+                h += "<div class='abx-result-section'><div class='abx-result-title'>&#128138; 1er choix</div><strong>Traiter d&apos;abord la PAC bact&eacute;rienne</strong> (ceftriaxone + azithromycine) &mdash; et <strong>ajouter</strong> la couverture de la PPC si le tableau et le CD4 l&apos;&eacute;voquent.</div>";
+              }
+              h += "<div class='abx-result-section'><div class='abx-result-title'>&#128161; &Agrave; ne pas manquer</div>&#129516; <strong>Le r&eacute;flexe &agrave; avoir : demander le CD4 et la charge virale.</strong> Sans eux, on ne peut pas fermer le diff&eacute;rentiel. &#10145;&#65039; voir <em>VIH</em> et <em>Pneumonie acquise en communaut&eacute;</em>.</div>";
+              h += "<div class='abx-result-section'>&#9200; Dur&eacute;e : selon l&apos;&eacute;tiologie retenue &mdash; ne pas transposer la dur&eacute;e courte de la PAC si une PPC est trait&eacute;e.</div>";
+              h += "<div class='abx-result-section' style='background:#fff7ed;border-left:3px solid #c2410c;padding:8px 10px;'>&#9888;&#65039; <strong>Source.</strong> Aucun guide d&apos;usage optimal de l&apos;INESSS ne couvre le <strong>traitement</strong> de cette infection (index consult&eacute; le 8 sept. 2026), et vos notes de cours ne la traitent pas. Pathog&egrave;nes et &eacute;l&eacute;ments de d&eacute;cision : <em>Goldman-Cecil, 26<sup>e</sup> &eacute;d.</em> &mdash; ouvrage <strong>am&eacute;ricain</strong>. &#10145;&#65039; <strong>Le sch&eacute;ma empirique ci-dessous est un rep&egrave;re : confirmer au protocole de votre milieu et &agrave; l&apos;antibiogramme local avant de prescrire.</strong></div>";
+              break;
+              case 'parotidite':
+              h += "<div class='abx-result-section'><div class='abx-result-title'>&#129440; Pathog&egrave;nes</div><em>S. aureus</em> en premier lieu &mdash; suivi des streptocoques et des <strong>an&eacute;robies</strong> oraux. &#9888;&#65039; La cause <strong>virale</strong> (oreillons) reste &agrave; consid&eacute;rer, surtout si atteinte bilat&eacute;rale.</div>";
+              h += "<div class='abx-result-section'><div class='abx-result-title'>&#128202; D&eacute;cision clinique</div>&#127919; <strong>Ce qui distingue la forme bact&eacute;rienne :</strong> tum&eacute;faction <strong>unilat&eacute;rale</strong>, douloureuse, avec <strong>&eacute;rythem&egrave;me</strong> et, surtout, <strong>issue de pus au canal de St&eacute;non</strong> &agrave; la pression de la glande.<br>&#128681; <strong>Le terrain fait le diagnostic</strong> : personne &acirc;g&eacute;e, <strong>d&eacute;shydrat&eacute;e</strong>, en post-op&eacute;ratoire, sous <strong>anticholinergiques</strong> &mdash; la stase salivaire est le m&eacute;canisme.<br>Bilat&eacute;rale sans pus &#8594; penser aux oreillons, au Sj&ouml;gren, &agrave; une lithiase.</div>";
+              if (abxIsAnaph) {
+                h += "<div class='abx-result-section'><div class='abx-result-title'>&#128138; Ajust&eacute; &mdash; anaphylaxie</div><strong>Clindamycine</strong>.</div>";
+              } else {
+                h += "<div class='abx-result-section'><div class='abx-result-title'>&#128138; 1er choix</div><strong>Amoxicilline-clavulanate</strong> ou <strong>cloxacilline</strong> &mdash; couvrir <em>S. aureus</em>.</div>";
+              }
+              h += "<div class='abx-result-section'><div class='abx-result-title'>&#128161; &Agrave; ne pas manquer</div>&#128167; <strong>Hydratation, sialagogues et massage de la glande</strong> font partie du traitement &mdash; et la r&eacute;vision des <strong>anticholinergiques</strong> pr&eacute;vient la r&eacute;cidive. &#10145;&#65039; voir <em>Polypharmacie</em>.</div>";
+              h += "<div class='abx-result-section'>&#9200; Dur&eacute;e : 7 &agrave; 10 jours, selon la r&eacute;ponse.</div>";
+              h += "<div class='abx-result-section' style='background:#fff7ed;border-left:3px solid #c2410c;padding:8px 10px;'>&#9888;&#65039; <strong>Source.</strong> Aucun guide d&apos;usage optimal de l&apos;INESSS ne couvre le <strong>traitement</strong> de cette infection (index consult&eacute; le 8 sept. 2026), et vos notes de cours ne la traitent pas. Pathog&egrave;nes et &eacute;l&eacute;ments de d&eacute;cision : <em>Goldman-Cecil, 26<sup>e</sup> &eacute;d.</em> &mdash; ouvrage <strong>am&eacute;ricain</strong>. &#10145;&#65039; <strong>Le sch&eacute;ma empirique ci-dessous est un rep&egrave;re : confirmer au protocole de votre milieu et &agrave; l&apos;antibiogramme local avant de prescrire.</strong></div>";
+              break;
+              case 'appendicite':
+              h += "<div class='abx-result-section'><div class='abx-result-title'>&#129440; Pathog&egrave;nes</div>Flore <strong>colique</strong> mixte &mdash; <em>E. coli</em>, <em>Bacteroides fragilis</em>, streptocoques, ent&eacute;rocoques.</div>";
+              h += "<div class='abx-result-section'><div class='abx-result-title'>&#128202; D&eacute;cision clinique</div>&#127919; <strong>L&apos;antibiotique ne remplace pas la d&eacute;cision chirurgicale.</strong> Le r&ocirc;le de l&apos;IPS est de reconna&icirc;tre, de ne pas retarder, et de couvrir en attendant.<br>&#128202; <strong>Score d&apos;Alvarado</strong> pour structurer la probabilit&eacute;.<br>&#128681; <strong>Chez la personne &acirc;g&eacute;e</strong>, la pr&eacute;sentation est trompeuse : moins de fi&egrave;vre, moins de d&eacute;fense, d&eacute;lai diagnostique plus long et <strong>taux de perforation plus &eacute;lev&eacute;</strong>.<br>&#10145;&#65039; voir <em>Appendicite</em>.</div>";
+              if (abxIsAnaph) {
+                h += "<div class='abx-result-section'><div class='abx-result-title'>&#128138; Ajust&eacute; &mdash; anaphylaxie</div><strong>Ciprofloxacine + m&eacute;tronidazole</strong>.</div>";
+              } else {
+                h += "<div class='abx-result-section'><div class='abx-result-title'>&#128138; 1er choix</div><strong>C&eacute;fazoline + m&eacute;tronidazole</strong>, ou <strong>ceftriaxone + m&eacute;tronidazole</strong> selon la gravit&eacute;.</div>";
+              }
+              h += "<div class='abx-result-section'><div class='abx-result-title'>&#128161; &Agrave; ne pas manquer</div>&#127973; <strong>Le traitement non chirurgical existe</strong> pour des formes non compliqu&eacute;es s&eacute;lectionn&eacute;es, mais reste une d&eacute;cision chirurgicale &mdash; pas un choix de premi&egrave;re ligne.</div>";
+              h += "<div class='abx-result-section'>&#9200; Dur&eacute;e : dose unique p&eacute;riop&eacute;ratoire si appendicectomie non compliqu&eacute;e; prolong&eacute;e si perforation ou abc&egrave;s.</div>";
+              h += "<div class='abx-result-section' style='background:#fff7ed;border-left:3px solid #c2410c;padding:8px 10px;'>&#9888;&#65039; <strong>Source.</strong> Aucun guide d&apos;usage optimal de l&apos;INESSS ne couvre le <strong>traitement</strong> de cette infection (index consult&eacute; le 8 sept. 2026), et vos notes de cours ne la traitent pas. Pathog&egrave;nes et &eacute;l&eacute;ments de d&eacute;cision : <em>Goldman-Cecil, 26<sup>e</sup> &eacute;d.</em> &mdash; ouvrage <strong>am&eacute;ricain</strong>. &#10145;&#65039; <strong>Le sch&eacute;ma empirique ci-dessous est un rep&egrave;re : confirmer au protocole de votre milieu et &agrave; l&apos;antibiogramme local avant de prescrire.</strong></div>";
+              break;
+              case 'cholecystite':
+              h += "<div class='abx-result-section'><div class='abx-result-title'>&#129440; Pathog&egrave;nes</div><em>E. coli</em>, <em>Klebsiella</em>, <em>Enterococcus</em>, <em>Enterobacter</em>; an&eacute;robies surtout si anastomose bilio-digestive ou forme grave.</div>";
+              h += "<div class='abx-result-section'><div class='abx-result-title'>&#128202; D&eacute;cision clinique</div>&#127919; <strong>Deux tableaux &agrave; ne pas confondre.</strong><br><strong>Chol&eacute;cystite</strong> &mdash; douleur hypochondre droit prolong&eacute;e, fi&egrave;vre, <strong>Murphy positif</strong>, &eacute;chographie montrant paroi &eacute;paissie et lithiase.<br><strong>Cholangite</strong> &mdash; <strong>triade de Charcot</strong> : douleur + fi&egrave;vre + <strong>ict&egrave;re</strong>. Ajouter confusion et hypotension &#8594; <strong>pentade de Reynolds</strong> = forme grave.<br>&#128680; <strong>La cholangite est une urgence de drainage</strong> (CPRE), pas seulement d&apos;antibiotique.<br>&#128202; Classification de gravit&eacute; des <strong>Tokyo Guidelines (TG18)</strong>. &#10145;&#65039; voir <em>Chol&eacute;cystite</em> et <em>Cholangite</em>.</div>";
+              if (abxIsAnaph) {
+                h += "<div class='abx-result-section'><div class='abx-result-title'>&#128138; Ajust&eacute; &mdash; anaphylaxie</div><strong>Ciprofloxacine + m&eacute;tronidazole</strong>.</div>";
+              } else {
+                h += "<div class='abx-result-section'><div class='abx-result-title'>&#128138; 1er choix</div><strong>Ceftriaxone + m&eacute;tronidazole</strong>, ou <strong>pip&eacute;racilline-tazobactam</strong> si forme grave.</div>";
+              }
+              h += "<div class='abx-result-section'><div class='abx-result-title'>&#128161; &Agrave; ne pas manquer</div>&#129516; <strong>H&eacute;mocultures avant l&apos;antibiotique</strong> dans la cholangite &mdash; la bact&eacute;ri&eacute;mie y est fr&eacute;quente.</div>";
+              h += "<div class='abx-result-section'>&#9200; Dur&eacute;e : 4 &agrave; 7 jours apr&egrave;s contr&ocirc;le de la source; plus courte si chol&eacute;cystectomie pr&eacute;coce non compliqu&eacute;e.</div>";
+              h += "<div class='abx-result-section' style='background:#fff7ed;border-left:3px solid #c2410c;padding:8px 10px;'>&#9888;&#65039; <strong>Source.</strong> Aucun guide d&apos;usage optimal de l&apos;INESSS ne couvre le <strong>traitement</strong> de cette infection (index consult&eacute; le 8 sept. 2026), et vos notes de cours ne la traitent pas. Pathog&egrave;nes et &eacute;l&eacute;ments de d&eacute;cision : <em>Goldman-Cecil, 26<sup>e</sup> &eacute;d.</em> &mdash; ouvrage <strong>am&eacute;ricain</strong>. &#10145;&#65039; <strong>Le sch&eacute;ma empirique ci-dessous est un rep&egrave;re : confirmer au protocole de votre milieu et &agrave; l&apos;antibiogramme local avant de prescrire.</strong></div>";
+              break;
+              case 'peritonite':
+              h += "<div class='abx-result-section'><div class='abx-result-title'>&#129440; Pathog&egrave;nes</div><strong>Secondaire</strong> (perforation) &mdash; flore mixte : <em>E. coli</em>, <em>Bacteroides fragilis</em>, ent&eacute;rocoques, streptocoques.<br><strong>Primaire</strong> (p&eacute;ritonite bact&eacute;rienne spontan&eacute;e, sur cirrhose) &mdash; <strong>monomicrobienne</strong> : <em>E. coli</em>, <em>K. pneumoniae</em>, <em>S. pneumoniae</em>.</div>";
+              h += "<div class='abx-result-section'><div class='abx-result-title'>&#128202; D&eacute;cision clinique</div>&#127919; <strong>Primaire ou secondaire : la distinction change tout.</strong> La <strong>PBS</strong> se traite m&eacute;dicalement; la p&eacute;ritonite <strong>secondaire</strong> exige un <strong>contr&ocirc;le chirurgical de la source</strong>.<br>&#128202; <strong>PBS</strong> &mdash; diagnostic sur la ponction d&apos;ascite : <strong>PMN &ge; 250/mm&sup3;</strong>.<br>&#128681; Une culture <strong>polymicrobienne</strong> dans une ascite doit faire suspecter une perforation, pas une PBS.<br>&#10145;&#65039; voir <em>Cirrhose</em> et <em>Hypertension portale</em>.</div>";
+              if (abxIsAnaph) {
+                h += "<div class='abx-result-section'><div class='abx-result-title'>&#128138; Ajust&eacute; &mdash; anaphylaxie</div><strong>Ciprofloxacine + m&eacute;tronidazole</strong>.</div>";
+              } else {
+                h += "<div class='abx-result-section'><div class='abx-result-title'>&#128138; 1er choix</div><strong>Secondaire</strong> : pip&eacute;racilline-tazobactam, ou ceftriaxone + m&eacute;tronidazole.<br><strong>PBS</strong> : <strong>ceftriaxone</strong> &mdash; plus albumine dans les formes &agrave; risque d&apos;insuffisance r&eacute;nale.</div>";
+              }
+              h += "<div class='abx-result-section'><div class='abx-result-title'>&#128161; &Agrave; ne pas manquer</div>&#128137; <strong>Apr&egrave;s une PBS, la prophylaxie secondaire est indiqu&eacute;e</strong> &mdash; le risque de r&eacute;cidive est &eacute;lev&eacute;.</div>";
+              h += "<div class='abx-result-section'>&#9200; Dur&eacute;e : PBS 5 &agrave; 7 jours; secondaire selon le contr&ocirc;le de la source.</div>";
+              h += "<div class='abx-result-section' style='background:#fff7ed;border-left:3px solid #c2410c;padding:8px 10px;'>&#9888;&#65039; <strong>Source.</strong> Aucun guide d&apos;usage optimal de l&apos;INESSS ne couvre le <strong>traitement</strong> de cette infection (index consult&eacute; le 8 sept. 2026), et vos notes de cours ne la traitent pas. Pathog&egrave;nes et &eacute;l&eacute;ments de d&eacute;cision : <em>Goldman-Cecil, 26<sup>e</sup> &eacute;d.</em> &mdash; ouvrage <strong>am&eacute;ricain</strong>. &#10145;&#65039; <strong>Le sch&eacute;ma empirique ci-dessous est un rep&egrave;re : confirmer au protocole de votre milieu et &agrave; l&apos;antibiogramme local avant de prescrire.</strong></div>";
+              break;
+              case 'endocardite':
+              h += "<div class='abx-result-section'><div class='abx-result-title'>&#129440; Pathog&egrave;nes</div><strong>Valve native</strong> &mdash; <em>S. aureus</em> et <strong>streptocoques du groupe viridans</strong> dominent; ent&eacute;rocoques, <em>S. bovis</em> (&#8594; chercher un cancer colique).<br><strong>Valve proth&eacute;tique pr&eacute;coce</strong> &mdash; staphylocoques &agrave; coagulase n&eacute;gative.<br><strong>Usage de drogues IV</strong> &mdash; <em>S. aureus</em>, atteinte du c&oelig;ur droit.</div>";
+              h += "<div class='abx-result-section'><div class='abx-result-title'>&#128202; D&eacute;cision clinique</div>&#128202; <strong>Crit&egrave;res de Duke modifi&eacute;s</strong> &mdash; l&apos;ossature du diagnostic : h&eacute;mocultures et imagerie (&eacute;chocardiographie) sont les deux crit&egrave;res majeurs.<br>&#129516; <strong>Trois s&eacute;ries d&apos;h&eacute;mocultures, sur des sites diff&eacute;rents, AVANT toute antibioth&eacute;rapie</strong> &mdash; sauf sepsis instable. C&apos;est le geste qui d&eacute;cide de tout le reste.<br>&#128681; Y penser devant : <strong>fi&egrave;vre + souffle nouveau</strong>, embolies p&eacute;riph&eacute;riques, AVC du sujet jeune, fi&egrave;vre prolong&eacute;e inexpliqu&eacute;e, bact&eacute;ri&eacute;mie &agrave; <em>S. aureus</em>.</div>";
+              if (abxIsAnaph) {
+                h += "<div class='abx-result-section'><div class='abx-result-title'>&#128138; Ajust&eacute; &mdash; anaphylaxie</div>M&ecirc;me conduite &mdash; l&apos;allergie modifie le choix, pas le principe : avis sp&eacute;cialis&eacute; et traitement guid&eacute;.</div>";
+              } else {
+                h += "<div class='abx-result-section'><div class='abx-result-title'>&#128138; 1er choix</div><strong>Ne pas d&eacute;buter en premi&egrave;re ligne sans avis sp&eacute;cialis&eacute;.</strong> Le traitement est <strong>IV, prolong&eacute;, guid&eacute; par les h&eacute;mocultures</strong> &mdash; et se d&eacute;cide en milieu hospitalier avec la microbiologie et la cardiologie.</div>";
+              }
+              h += "<div class='abx-result-section'><div class='abx-result-title'>&#128161; &Agrave; ne pas manquer</div>&#128221; <strong>L&apos;INESSS a un guide d&apos;usage optimal sur l&apos;ANTIBIOPROPHYLAXIE de l&apos;endocardite</strong> (octobre 2025) &mdash; pour les gestes &agrave; risque chez les patients pr&eacute;dispos&eacute;s. Il ne traite pas de l&apos;endocardite d&eacute;clar&eacute;e.</div>";
+              h += "<div class='abx-result-section'>&#9200; Dur&eacute;e : 4 &agrave; 6 semaines IV selon le germe et le mat&eacute;riel &mdash; jamais empirique au long cours.</div>";
+              h += "<div class='abx-result-section' style='background:#fff7ed;border-left:3px solid #c2410c;padding:8px 10px;'>&#9888;&#65039; <strong>Source.</strong> Aucun guide d&apos;usage optimal de l&apos;INESSS ne couvre le <strong>traitement</strong> de cette infection (index consult&eacute; le 8 sept. 2026), et vos notes de cours ne la traitent pas. Pathog&egrave;nes et &eacute;l&eacute;ments de d&eacute;cision : <em>Goldman-Cecil, 26<sup>e</sup> &eacute;d.</em> &mdash; ouvrage <strong>am&eacute;ricain</strong>. &#10145;&#65039; <strong>Le sch&eacute;ma empirique ci-dessous est un rep&egrave;re : confirmer au protocole de votre milieu et &agrave; l&apos;antibiogramme local avant de prescrire.</strong></div>";
+              break;
+              case 'bacteriemie':
+              h += "<div class='abx-result-section'><div class='abx-result-title'>&#129440; Pathog&egrave;nes</div>Selon la porte d&apos;entr&eacute;e &mdash; urinaire (BGN), cutan&eacute;e et cath&eacute;ter (<em>S. aureus</em>, staphylocoques &agrave; coagulase n&eacute;gative), digestive (flore mixte), pulmonaire (<em>S. pneumoniae</em>).</div>";
+              h += "<div class='abx-result-section'><div class='abx-result-title'>&#128202; D&eacute;cision clinique</div>&#127919; <strong>Une bact&eacute;ri&eacute;mie n&apos;est pas un diagnostic : c&apos;est un signe.</strong> La question centrale est <strong>&laquo; d&apos;o&ugrave; vient-elle ? &raquo;</strong> &mdash; sans contr&ocirc;le de la source, l&apos;antibiotique &eacute;choue.<br>&#129516; <strong>Deux s&eacute;ries d&apos;h&eacute;mocultures avant l&apos;antibiotique</strong>, sur deux sites.<br>&#128680; <strong>Bact&eacute;ri&eacute;mie &agrave; <em>S. aureus</em> = situation &agrave; part</strong> : chercher syst&eacute;matiquement une <strong>endocardite</strong> et des foyers secondaires, retirer tout cath&eacute;ter, r&eacute;p&eacute;ter les h&eacute;mocultures, et traiter longtemps.<br>&#9888;&#65039; Un staphylocoque &agrave; coagulase n&eacute;gative sur une seule bouteille est le plus souvent une <strong>contamination</strong> &mdash; mais pas si le patient porte du mat&eacute;riel.</div>";
+              if (abxIsAnaph) {
+                h += "<div class='abx-result-section'><div class='abx-result-title'>&#128138; Ajust&eacute; &mdash; anaphylaxie</div>M&ecirc;me principe &mdash; le choix s&apos;adapte, la strat&eacute;gie ne change pas : h&eacute;mocultures, source, d&eacute;sescalade.</div>";
+              } else {
+                h += "<div class='abx-result-section'><div class='abx-result-title'>&#128138; 1er choix</div>Couverture large ajust&eacute;e &agrave; la porte d&apos;entr&eacute;e pr&eacute;sum&eacute;e et au milieu d&apos;acquisition, <strong>puis d&eacute;sescalade sur l&apos;antibiogramme</strong>.</div>";
+              }
+              h += "<div class='abx-result-section'><div class='abx-result-title'>&#128161; &Agrave; ne pas manquer</div>&#128337; <strong>Le d&eacute;lai d&apos;administration compte</strong> en pr&eacute;sence de sepsis &mdash; mais les h&eacute;mocultures se pr&eacute;l&egrave;vent d&apos;abord quand l&apos;&eacute;tat le permet. &#10145;&#65039; voir <em>Sepsis</em>.</div>";
+              h += "<div class='abx-result-section'>&#9200; Dur&eacute;e : selon le germe et la source &mdash; typiquement 7 &agrave; 14 jours; <strong>plus long</strong> pour <em>S. aureus</em> et si mat&eacute;riel.</div>";
+              h += "<div class='abx-result-section' style='background:#fff7ed;border-left:3px solid #c2410c;padding:8px 10px;'>&#9888;&#65039; <strong>Source.</strong> Aucun guide d&apos;usage optimal de l&apos;INESSS ne couvre le <strong>traitement</strong> de cette infection (index consult&eacute; le 8 sept. 2026), et vos notes de cours ne la traitent pas. Pathog&egrave;nes et &eacute;l&eacute;ments de d&eacute;cision : <em>Goldman-Cecil, 26<sup>e</sup> &eacute;d.</em> &mdash; ouvrage <strong>am&eacute;ricain</strong>. &#10145;&#65039; <strong>Le sch&eacute;ma empirique ci-dessous est un rep&egrave;re : confirmer au protocole de votre milieu et &agrave; l&apos;antibiogramme local avant de prescrire.</strong></div>";
+              break;
+              case 'neutropenie':
+              h += "<div class='abx-result-section'><div class='abx-result-title'>&#129440; Pathog&egrave;nes</div>BGN dont <em>Pseudomonas aeruginosa</em> &mdash; c&apos;est lui qui commande le choix empirique &mdash; cocci &agrave; Gram positif, et champignons si fi&egrave;vre persistante.</div>";
+              h += "<div class='abx-result-section'><div class='abx-result-title'>&#128202; D&eacute;cision clinique</div>&#128680; <strong>Urgence absolue.</strong> D&eacute;finition : <strong>PNN &lt; 0,5 &times; 10&#8313;/L</strong> (ou &lt; 1,0 avec baisse attendue) et <strong>temp&eacute;rature &ge; 38,3 &deg;C une fois</strong>, ou <strong>&ge; 38,0 &deg;C pendant plus d&apos;une heure</strong>.<br>&#9200; <strong>Antibiotique dans l&apos;heure</strong> &mdash; apr&egrave;s h&eacute;mocultures, sans attendre l&apos;imagerie ni le foyer.<br>&#128202; <strong>Score MASCC</strong> pour identifier les patients &agrave; faible risque, seuls candidats &agrave; une prise en charge ambulatoire.<br>&#9888;&#65039; <strong>La fi&egrave;vre peut &ecirc;tre le seul signe</strong> : sans neutrophiles, il n&apos;y a ni pus, ni infiltrat, ni signes locaux.</div>";
+              if (abxIsAnaph) {
+                h += "<div class='abx-result-section'><div class='abx-result-title'>&#128138; Ajust&eacute; &mdash; anaphylaxie</div><strong>Avis sp&eacute;cialis&eacute; imm&eacute;diat</strong> &mdash; l&apos;allergie ne justifie jamais de retarder la premi&egrave;re dose.</div>";
+              } else {
+                h += "<div class='abx-result-section'><div class='abx-result-title'>&#128138; 1er choix</div><strong>Monoth&eacute;rapie anti-pseudomonale</strong> : pip&eacute;racilline-tazobactam, c&eacute;f&eacute;pime ou m&eacute;rop&eacute;n&egrave;me. Ajouter la <strong>vancomycine</strong> seulement sur indication pr&eacute;cise (cath&eacute;ter, instabilit&eacute;, SARM connu, infection cutan&eacute;e).</div>";
+              }
+              h += "<div class='abx-result-section'><div class='abx-result-title'>&#128161; &Agrave; ne pas manquer</div>&#127765; <strong>Fi&egrave;vre persistante apr&egrave;s 4 &agrave; 7 jours</strong> malgr&eacute; une couverture ad&eacute;quate &#8594; envisager une <strong>infection fongique invasive</strong>. &#10145;&#65039; voir <em>Urgences oncologiques</em>.</div>";
+              h += "<div class='abx-result-section'>&#9200; Dur&eacute;e : jusqu&apos;&agrave; r&eacute;solution de la fi&egrave;vre <strong>et</strong> remont&eacute;e des neutrophiles; r&eacute;&eacute;valuer &agrave; 96 h.</div>";
+              h += "<div class='abx-result-section' style='background:#fff7ed;border-left:3px solid #c2410c;padding:8px 10px;'>&#9888;&#65039; <strong>Source.</strong> Aucun guide d&apos;usage optimal de l&apos;INESSS ne couvre le <strong>traitement</strong> de cette infection (index consult&eacute; le 8 sept. 2026), et vos notes de cours ne la traitent pas. Pathog&egrave;nes et &eacute;l&eacute;ments de d&eacute;cision : <em>Goldman-Cecil, 26<sup>e</sup> &eacute;d.</em> &mdash; ouvrage <strong>am&eacute;ricain</strong>. &#10145;&#65039; <strong>Le sch&eacute;ma empirique ci-dessous est un rep&egrave;re : confirmer au protocole de votre milieu et &agrave; l&apos;antibiogramme local avant de prescrire.</strong></div>";
+              break;
+              case 'fievre-voyage':
+              h += "<div class='abx-result-section'><div class='abx-result-title'>&#129440; Pathog&egrave;nes</div>D&eacute;pend enti&egrave;rement de la destination et de l&apos;incubation &mdash; <strong>paludisme</strong>, fi&egrave;vre <strong>typho&iuml;de</strong>, <strong>dengue</strong>, rickettsioses, leptospirose, h&eacute;patites virales, et les causes non li&eacute;es au voyage.</div>";
+              h += "<div class='abx-result-section'><div class='abx-result-title'>&#128202; D&eacute;cision clinique</div>&#128680; <strong>Le paludisme est &agrave; &eacute;liminer en premier &mdash; c&apos;est la seule cause qui tue en quelques heures.</strong> Toute fi&egrave;vre au retour d&apos;une zone end&eacute;mique impose un <strong>frottis mince et goutte &eacute;paisse</strong>, r&eacute;p&eacute;t&eacute;s &agrave; 12-24 h si le premier est n&eacute;gatif.<br>&#128337; <strong>L&apos;incubation oriente</strong> : <strong>&lt; 21 jours</strong> &#8594; dengue, rickettsiose, paludisme, typho&iuml;de. <strong>&gt; 21 jours</strong> &#8594; paludisme, typho&iuml;de, h&eacute;patites, tuberculose, leishmaniose.<br>&#128205; <strong>Trois questions structurent l&apos;anamn&egrave;se</strong> : <strong>o&ugrave;</strong> exactement, <strong>quand</strong> (dates pr&eacute;cises), et <strong>quelles expositions</strong> &mdash; eau douce, animaux, piq&ucirc;res, alimentation, rapports sexuels, soins re&ccedil;us sur place.<br>&#9888;&#65039; Chercher aussi la <strong>cause banale</strong> : une pneumonie ou une infection urinaire ne dispara&icirc;t pas parce qu&apos;on a voyag&eacute;.</div>";
+              if (abxIsAnaph) {
+                h += "<div class='abx-result-section'><div class='abx-result-title'>&#128138; Ajust&eacute; &mdash; anaphylaxie</div>M&ecirc;me d&eacute;marche &mdash; le profil allergique ne change pas la priorit&eacute; diagnostique.</div>";
+              } else {
+                h += "<div class='abx-result-section'><div class='abx-result-title'>&#128138; 1er choix</div><strong>Pas d&apos;antibioth&eacute;rapie empirique &laquo; &agrave; l&apos;aveugle &raquo;.</strong> La d&eacute;marche est <strong>diagnostique</strong> : frottis pour paludisme, h&eacute;mocultures, FSC, bilan h&eacute;patique, s&eacute;rologies orient&eacute;es.</div>";
+              }
+              h += "<div class='abx-result-section'><div class='abx-result-title'>&#128161; &Agrave; ne pas manquer</div>&#128222; <strong>Fi&egrave;vre h&eacute;morragique, d&eacute;tresse ou confusion au retour de zone tropicale</strong> &#8594; isolement et avis en <strong>infectiologie / m&eacute;decine tropicale</strong> sans d&eacute;lai.</div>";
+              h += "<div class='abx-result-section'>&#9200; Dur&eacute;e : sans objet tant que l&apos;&eacute;tiologie n&apos;est pas &eacute;tablie.</div>";
+              h += "<div class='abx-result-section' style='background:#fff7ed;border-left:3px solid #c2410c;padding:8px 10px;'>&#9888;&#65039; <strong>Source.</strong> Aucun guide d&apos;usage optimal de l&apos;INESSS ne couvre le <strong>traitement</strong> de cette infection (index consult&eacute; le 8 sept. 2026), et vos notes de cours ne la traitent pas. Pathog&egrave;nes et &eacute;l&eacute;ments de d&eacute;cision : <em>Goldman-Cecil, 26<sup>e</sup> &eacute;d.</em> &mdash; ouvrage <strong>am&eacute;ricain</strong>. &#10145;&#65039; <strong>Le sch&eacute;ma empirique ci-dessous est un rep&egrave;re : confirmer au protocole de votre milieu et &agrave; l&apos;antibiogramme local avant de prescrire.</strong></div>";
+              break;
+              case 'itss':
+              h += "<div class='abx-result-section'><div class='abx-result-title'>&#129440; Pathog&egrave;nes</div>Selon le syndrome &mdash; <em>Chlamydia trachomatis</em>, <em>Neisseria gonorrhoeae</em>, <em>Trichomonas</em>, <em>Mycoplasma genitalium</em>, <em>Treponema pallidum</em>, VHS.</div>";
+              h += "<div class='abx-result-section'><div class='abx-result-title'>&#128202; D&eacute;cision clinique</div>&#127919; <strong>Ici, contrairement au reste de cet outil, une source qu&eacute;b&eacute;coise fait autorit&eacute;.</strong> L&apos;INESSS publie un <strong>guide d&apos;usage optimal &laquo; ITSS &mdash; approche syndromique &raquo;</strong>, ainsi que des guides par infection (chlamydia et gonorrh&eacute;e, syphilis).<br>&#10145;&#65039; <strong>S&apos;y r&eacute;f&eacute;rer directement</strong> plut&ocirc;t qu&apos;&agrave; un sch&eacute;ma g&eacute;n&eacute;rique : les recommandations &eacute;voluent avec la r&eacute;sistance du gonocoque.<br>&#128681; Penser au <strong>d&eacute;pistage &eacute;largi</strong> (VIH, syphilis, h&eacute;patites), au <strong>traitement des partenaires</strong> et &agrave; la <strong>d&eacute;claration obligatoire</strong>.</div>";
+              if (abxIsAnaph) {
+                h += "<div class='abx-result-section'><div class='abx-result-title'>&#128138; Ajust&eacute; &mdash; anaphylaxie</div>Le GUO pr&eacute;voit les alternatives en cas d&apos;allergie &mdash; s&apos;y reporter.</div>";
+              } else {
+                h += "<div class='abx-result-section'><div class='abx-result-title'>&#128138; 1er choix</div><strong>Voir le GUO de l&apos;INESSS correspondant au syndrome</strong> &mdash; &eacute;coulement ur&eacute;tral ou vaginal, ulc&eacute;ration g&eacute;nitale, atteinte inflammatoire pelvienne.</div>";
+              }
+              h += "<div class='abx-result-section'><div class='abx-result-title'>&#128161; &Agrave; ne pas manquer</div>&#128218; &#10145;&#65039; La section <em>ITSS</em> du guide reprend les sch&eacute;mas de l&apos;INESSS en d&eacute;tail.</div>";
+              h += "<div class='abx-result-section'>&#9200; Dur&eacute;e : selon l&apos;infection et le sch&eacute;ma retenu.</div>";
+              h += "<div class='abx-result-section' style='background:#fff7ed;border-left:3px solid #c2410c;padding:8px 10px;'>&#9888;&#65039; <strong>Source.</strong> Aucun guide d&apos;usage optimal de l&apos;INESSS ne couvre le <strong>traitement</strong> de cette infection (index consult&eacute; le 8 sept. 2026), et vos notes de cours ne la traitent pas. Pathog&egrave;nes et &eacute;l&eacute;ments de d&eacute;cision : <em>Goldman-Cecil, 26<sup>e</sup> &eacute;d.</em> &mdash; ouvrage <strong>am&eacute;ricain</strong>. &#10145;&#65039; <strong>Le sch&eacute;ma empirique ci-dessous est un rep&egrave;re : confirmer au protocole de votre milieu et &agrave; l&apos;antibiogramme local avant de prescrire.</strong></div>";
+              break;
               default:
                 h += "<div class='abx-result-section'>Pathologie non reconnue.</div>";
             }
