@@ -31415,8 +31415,34 @@ function switchAodInd(n) {
         <div class="block-title" id="tsf-2"><span class="tag">🅰️ Groupes sanguins, sérologie et compatibilité ABO-Rh</span></div>
 
         <div class="key-fact ink" style="margin-top:10px;">🧭 <strong>Pourquoi ce bloc existe.</strong> La compatibilité ABO et Rh D — la partie visible, plus bas dans cet encadré — repose sur une sérologie. Elle repose sur une sérologie qu&#39;il faut comprendre pour lire un rapport de banque de sang : <strong>plus de 36 systèmes de groupes sanguins reconnus</strong> et <strong>plus de 300 antigènes érythrocytaires connus</strong>, résultat de millions d&#39;années d&#39;évolution depuis le transport de l&#39;oxygène. 🎯 <strong>La majorité ne servent plus à rien</strong> — ils ne causent de problèmes que pour la compatibilité et les transfusions. <span style="font-size:11px;color:#64748b;">📚 <em>Rioux-Massé, cours IPSSA #1 — Médecine transfusionnelle, Banque de sang du CHUM, 2026</em></span></div>
-        
+
         <div class="key-fact red" style="margin-top:10px;">🚨 <strong>C'est ici que se jouent les accidents mortels.</strong> Une réaction hémolytique aiguë par incompatibilité ABO survient dans environ <strong>1 transfusion sur 100 000</strong>. Environ <strong>50 % des transfusions ABO-incompatibles n'ont aucun effet</strong> — mais <strong>5 % sont fatales</strong>. Et la cause dominante n'est ni biologique ni technique : c'est l'<strong>erreur humaine d'identification</strong> — 🎯 <strong>deux tiers des réactions hémolytiques viennent d&#39;une erreur d&#39;identification du patient</strong>, le <strong>tiers restant d&#39;une erreur de test de laboratoire</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Rioux-Massé, cours IPSSA #1 — Médecine transfusionnelle, Banque de sang du CHUM, 2026</em></span> <span style="font-size:11px;color:#64748b;">📚 <em>Goldman-Cecil, 26<sup>e</sup> éd., ch. 167</em></span></div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;">
+          <button data-panel="tsfg0" onclick="showPanel('tsfg','tsfg0',5)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#374151;color:#fff;">⚖️ Comparer</button>
+          <button data-panel="tsfg1" onclick="showPanel('tsfg','tsfg1',5)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">🧬 Les systèmes et les anticorps</button>
+          <button data-panel="tsfg2" onclick="showPanel('tsfg','tsfg2',5)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">🅰️ ABO et compatibilité</button>
+          <button data-panel="tsfg3" onclick="showPanel('tsfg','tsfg3',5)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">🅾️ Le Rh D</button>
+          <button data-panel="tsfg4" onclick="showPanel('tsfg','tsfg4',5)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">🔬 Les tests et leurs délais</button>
+        </div>
+
+        <div id="tsfg0" style="display:block;margin-top:14px;">
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;min-width:640px;">
+          <thead><tr><th style="width:22%;">Axe</th><th style="width:37%;">🅰️ Le système <strong>ABO</strong></th><th style="width:41%;">🅾️ <strong>Rh</strong> et les autres systèmes</th></tr></thead>
+          <tbody>
+            <tr><td><strong>🧪 Nature de l&#39;antigène</strong></td><td><strong>Hydrate de carbone</strong></td><td><strong>Protéines</strong> (Rh) · <strong>glycoprotéines</strong> (Kell, Kidd, Duffy)</td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>🩸 Les anticorps</strong></td><td>🎯 <strong>Naturels</strong> — présents <strong>sans exposition préalable</strong></td><td><strong>Irréguliers</strong> — une <strong>exposition est requise</strong> : grossesse, transfusion, transplantation</td></tr>
+            <tr><td><strong>🔬 Classe</strong></td><td><strong>IgM</strong> plus que IgG</td><td><strong>IgG</strong></td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>💥 Conséquence d&#39;une incompatibilité</strong></td><td>🚨 <strong>Hémolyse aiguë</strong>, activation du complément, <strong>intravasculaire</strong> — c&#39;est celle qui tue</td><td><strong>Hémolyse extravasculaire</strong>, souvent <strong>retardée</strong> · et la <strong>maladie hémolytique du fœtus et du nouveau-né</strong></td></tr>
+            <tr><td><strong>🧪 Ce qui les détecte, et en combien de temps</strong></td><td><strong>Groupage globulaire et sérique</strong> — ≈ <strong>10 minutes</strong></td><td><strong>Recherche d&#39;anticorps irréguliers</strong> + <strong>test à l&#39;antiglobuline</strong> — <strong>45 minutes à plusieurs heures</strong></td></tr>
+          </tbody>
+        </table>
+        </div>
+        <div class="key-fact ink" style="margin-top:12px;">🧭 <strong>Toute la sérologie transfusionnelle tient dans cette opposition.</strong> D&#39;un côté l&#39;<strong>ABO</strong>, dont les anticorps existent <strong>avant toute transfusion</strong> — d&#39;où un accident <strong>immédiat et potentiellement fatal</strong>, et un test rapide. De l&#39;autre <strong>tous les autres systèmes</strong>, dont les anticorps n&#39;existent qu&#39;<strong>après une exposition</strong> — d&#39;où des réactions <strong>retardées</strong>, un dépistage plus long, et l&#39;importance de l&#39;<strong>historique au dossier</strong>.</div>
+        </div>
+
+        <div id="tsfg1" style="display:none;margin-top:14px;">
+          <div style="background:#f1f5f9;border-left:5px solid #334155;border-radius:10px;padding:12px 14px;"><strong style="color:#334155;">🧬 Les systèmes et les anticorps</strong><span style="font-size:12px;color:#64748b;"> — plus de 36 systèmes, plus de 300 antigènes</span><div style="font-size:13px;line-height:1.7;margin-top:6px;">La <strong>majorité ne sert plus à rien</strong> — sauf à compliquer la compatibilité. 🎯 <strong>Cinq systèmes</strong> concentrent <strong>plus de 99 %</strong> des anticorps irréguliers qui comptent.</div></div>
 <div style="font-size:12px;font-weight:800;color:#374151;margin-top:18px;letter-spacing:.4px;">🧬 LES SYSTÈMES DE GROUPES SANGUINS — ET LEUR NATURE</div>
         <div style="overflow-x:auto;margin-top:12px;">
         <table style="font-size:12px;">
@@ -31441,7 +31467,11 @@ function switchAodInd(n) {
           <div style="background:#e8f4fd;border-left:4px solid #1d4ed8;border-radius:10px;padding:14px;"><strong style="color:#1d4ed8;">❄️ Cliniquement NON significatif</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">La plupart <strong>réagissent à froid</strong> (<em>cold reactive</em>) : <strong>optimum en dessous de 37 °C</strong>.<br>Ce sont surtout des <strong>IgM</strong>.<br>💡 Ils encombrent les épreuves de compatibilité sans menacer le receveur — savoir les reconnaître évite de retarder une transfusion pour rien.</div></div>
         </div>
         <div class="key-fact blue" style="margin-top:12px;">🔎 <strong>Les quatre questions posées devant tout antigène érythrocytaire.</strong> ① sa <strong>prévalence</strong> — antigène de haute ou de basse fréquence ; ② son <strong>immunogénicité</strong> — sa capacité à faire fabriquer un anticorps après exposition par <strong>grossesse, transfusion, transplantation ou piqûre d&#39;aiguille</strong> ; ③ sa <strong>signification clinique</strong> — classe d&#39;immunoglobuline, activation du complément, hémolyse ; ④ s&#39;il appartient au <strong>groupe ABO</strong> — anticorps <strong>naturels</strong> — ou à <strong>tous les autres groupes</strong> — anticorps <strong>irréguliers</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Rioux-Massé, cours IPSSA #1 — Médecine transfusionnelle, Banque de sang du CHUM, 2026</em></span></div>
-        <div style="font-size:12px;font-weight:800;color:#374151;margin-top:18px;letter-spacing:.4px;">🅰️ LE SYSTÈME ABH — GÉNÉTIQUE ET CHRONOLOGIE</div>
+                </div>
+
+        <div id="tsfg2" style="display:none;margin-top:14px;">
+          <div style="background:#fce4ec;border-left:5px solid #c0392b;border-radius:10px;padding:12px 14px;"><strong style="color:#c0392b;">🅰️ ABO et compatibilité</strong><span style="font-size:12px;color:#64748b;"> — le groupage, et le sens qui s&#39;inverse</span><div style="font-size:13px;line-height:1.7;margin-top:6px;">Anticorps <strong>naturels</strong>, apparaissant <strong>vers 4 mois</strong>. 🎯 Et le piège qui se retient par le raisonnement : pour les <strong>culots</strong> c&#39;est l&#39;<strong>antigène</strong> qui compte (<strong>O</strong> passe partout), pour le <strong>plasma</strong> c&#39;est l&#39;<strong>anticorps</strong> (<strong>AB</strong> passe partout).</div></div>
+<div style="font-size:12px;font-weight:800;color:#374151;margin-top:18px;letter-spacing:.4px;">🅰️ LE SYSTÈME ABH — GÉNÉTIQUE ET CHRONOLOGIE</div>
         <div class="criteria-list" style="margin-top:10px;">
           <div class="criteria-item"><div class="criteria-num blue">1</div><span><strong>Trois gènes sur le chromosome 9</strong> : <strong>A, B et H</strong> — les antigènes résultent de leur combinaison.</span></div>
           <div class="criteria-item"><div class="criteria-num blue">2</div><span>🎯 Les anticorps anti-A et anti-B sont <strong>cliniquement significatifs</strong> et <strong>naturels</strong> (<em>naturally occurring</em>) : ils <strong>se développent sans exposition préalable</strong> et sont des <strong>IgM plus que des IgG</strong>.</span></div>
@@ -31522,7 +31552,11 @@ function switchAodInd(n) {
           </tbody>
         </table>
         </div>
-        <div style="font-size:12px;font-weight:800;color:#374151;margin-top:18px;letter-spacing:.4px;">🅾️ LE RH D — LE PLUS IMMUNOGÈNE DE TOUS</div>
+                </div>
+
+        <div id="tsfg3" style="display:none;margin-top:14px;">
+          <div style="background:#ede9fe;border-left:5px solid #6d28d9;border-radius:10px;padding:12px 14px;"><strong style="color:#6d28d9;">🅾️ Le Rh D</strong><span style="font-size:12px;color:#64748b;"> — le plus immunogène de tous</span><div style="font-size:13px;line-height:1.7;margin-top:6px;"><strong>Jusqu&#39;à 80 %</strong> des personnes D-négatives s&#39;immunisent après <strong>une seule unité</strong> D-positive. C&#39;est le <strong>prototype de la maladie hémolytique du fœtus et du nouveau-né</strong> — d&#39;où la règle du <strong>O D-négatif chez la femme en âge de procréer</strong>.</div></div>
+<div style="font-size:12px;font-weight:800;color:#374151;margin-top:18px;letter-spacing:.4px;">🅾️ LE RH D — LE PLUS IMMUNOGÈNE DE TOUS</div>
         <div class="criteria-list" style="margin-top:10px;">
           <div class="criteria-item"><div class="criteria-num red">1</div><span><strong>Une exposition est requise</strong> pour développer un anticorps anti-Rh : <strong>grossesse, transfusion, transplantation</strong>. Ce sont des <strong>IgG</strong>.</span></div>
           <div class="criteria-item"><div class="criteria-num red">2</div><span>🚨 <strong>Jusqu&#39;à 80 % des personnes D-négatives développent un anti-D</strong> après la transfusion d&#39;<strong>une seule unité</strong> de globules rouges D-positifs.</span></div>
@@ -31533,6 +31567,10 @@ function switchAodInd(n) {
             <strong style="color:#6d28d9;">🅾️ Le facteur Rh (D)</strong>
             <div style="font-size:13px;line-height:1.7;margin-top:8px;">Une personne <strong>D-négative ne fabrique pas d'anti-D spontanément</strong> — seulement après exposition (transfusion, grossesse). <span style="font-size:11px;color:#64748b;">📚 <em>Goldman, ch. 167</em></span><br><br>🚨 <strong>Enjeu majeur chez la femme en âge de procréer</strong> : une allo-immunisation anti-D expose les grossesses futures à la maladie hémolytique du fœtus et du nouveau-né.<br>➜ Voir <em>Grossesse</em></div>
           </div>
+        </div>
+
+        <div id="tsfg4" style="display:none;margin-top:14px;">
+          <div style="background:#e8f4fd;border-left:5px solid #1d4ed8;border-radius:10px;padding:12px 14px;"><strong style="color:#1d4ed8;">🔬 Les tests et leurs délais</strong><span style="font-size:12px;color:#64748b;"> — antiglobuline, dépistage, urgence vitale</span><div style="font-size:13px;line-height:1.7;margin-top:6px;"><strong>Direct</strong> : y a-t-il des anticorps <strong>sur ses globules</strong> ? <strong>Indirect</strong> : y en a-t-il <strong>dans son plasma</strong> ? 🎯 Et les trois vitesses de délivrance, de <strong>quelques minutes</strong> à <strong>plusieurs jours</strong>.</div></div>
 <div style="font-size:12px;font-weight:800;color:#374151;margin-top:18px;letter-spacing:.4px;">🔬 LE TEST À L&#39;ANTIGLOBULINE — DIRECT OU INDIRECT</div>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px;margin-top:10px;">
           <div style="background:#fce4ec;border-left:4px solid #c0392b;border-radius:10px;padding:14px;"><strong style="color:#c0392b;">🩸 Test <strong>DIRECT</strong> (DAT) — <em>Coombs direct</em></strong><div style="font-size:13px;line-height:1.75;margin-top:8px;"><strong>Technique :</strong> on prend les <strong>globules rouges du patient</strong>, on les <strong>lave</strong>, puis on les mélange à un <strong>antisérum anti-IgG</strong>.<br>➜ Il répond à la question : « <strong>y a-t-il déjà des anticorps collés sur SES globules ?</strong> »<br><br><strong>Indications — les anémies hémolytiques immunes :</strong><br>• <strong>Auto-immune</strong> (AHAI)<br>• <strong>Allo-immune</strong> — transfusion incompatible<br>• <strong>Maladie hémolytique du fœtus et du nouveau-né</strong></div></div>
@@ -31551,12 +31589,42 @@ function switchAodInd(n) {
             <strong style="color:#15803d;">🚑 En situation d'urgence vitale</strong>
             <div style="font-size:13px;line-height:1.7;margin-top:8px;">Quand on ne peut attendre le groupage :<br><strong>Culots O</strong> — et de préférence <strong>O D-négatif chez la femme en âge de procréer</strong><br><strong>Plasma AB</strong><br><br>🕐 <strong>Les trois vitesses de délivrance :</strong><br>• <strong>Extrême urgence, patient non typé, sans épreuve de compatibilité</strong> — <strong>quelques minutes</strong> : <strong>O Rh D négatif</strong> pour les <strong>enfants et les femmes en âge de procréer</strong> · <strong>O Rh D négatif ou positif</strong> pour les <strong>hommes et les femmes au-delà de l&#39;âge de procréer (plus de 45 ans)</strong><br>• <strong>Produit compatible, dépistage d&#39;anticorps terminé</strong> — <strong>environ 1 heure</strong> si aucun anticorps irrégulier n&#39;est détecté<br>• <strong>Plusieurs heures à plusieurs jours</strong> si des anticorps sont détectés — il faut alors trouver des unités antigène-négatives<br><br>⚠️ La réserve de O D-négatif est limitée : elle se justifie par l'urgence, pas par la commodité. <span style="font-size:11px;color:#64748b;">📚 <em>Rioux-Massé, cours IPSSA #1 — Médecine transfusionnelle, Banque de sang du CHUM, 2026</em></span><br>➜ Voir <em>Les Chocs</em></div>
           </div>
-        </div>      </div>
+        </div>              </div>
+
+      </div>
+
 
       <div class="block para" style="margin-top:14px;border-left-color:#b91c1c;">
         <div class="block-title" id="tsf-produits"><span class="tag">🩸 Les produits sanguins en détail — culots, plaquettes, seuils et rendement</span></div>
+
         <div class="key-fact ink" style="margin-top:10px;">🧭 <strong>Ce que ce bloc ajoute.</strong> Les <strong>caractéristiques physiques et les seuils</strong> des produits eux-mêmes : volumes, contenu, conservation, rendement attendu, et les chiffres de la thrombopénie. Ce sont eux qui expliquent la plupart des conduites — pourquoi une dose de plaquettes ne se conserve que cinq jours, pourquoi un culot ne sert pas à remplir un vaisseau, pourquoi un saignement spontané n&#39;arrive pas à 40 × 10<sup>9</sup>/L. <span style="font-size:11px;color:#64748b;">📚 <em>Rioux-Massé, cours IPSSA #1 — Médecine transfusionnelle, Banque de sang du CHUM, 2026</em></span></div>
-        <div style="font-size:12px;font-weight:800;color:#b91c1c;margin-top:18px;letter-spacing:.4px;">🩸 LE CULOT GLOBULAIRE — CE QU&#39;IL Y A DANS LE SAC</div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;">
+          <button data-panel="tsfp0" onclick="showPanel('tsfp','tsfp0',4)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#b91c1c;color:#fff;">⚖️ Comparer</button>
+          <button data-panel="tsfp1" onclick="showPanel('tsfp','tsfp1',4)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">🩸 Culots globulaires</button>
+          <button data-panel="tsfp2" onclick="showPanel('tsfp','tsfp2',4)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">🟡 Plaquettes</button>
+          <button data-panel="tsfp3" onclick="showPanel('tsfp','tsfp3',4)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">💉 Immunoglobulines IV</button>
+        </div>
+
+        <div id="tsfp0" style="display:block;margin-top:14px;">
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;min-width:700px;">
+          <thead><tr><th style="width:20%;">Axe</th><th style="width:25%;">🩸 Culot globulaire</th><th style="width:27%;">🟡 Plaquettes</th><th style="width:28%;">💉 Immunoglobulines IV</th></tr></thead>
+          <tbody>
+            <tr><td><strong>📦 Volume</strong></td><td><strong>280 à 320 mL</strong> l&#39;unité</td><td><strong>250 à 400 mL</strong> la dose</td><td>Selon la dose calculée</td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>🌡️ Conservation</strong></td><td><strong>2 à 6 °C</strong> · <strong>42 jours</strong></td><td><strong>20 à 24 °C</strong> sous agitation · <strong>5 jours</strong></td><td>Produit stable, fractionné</td></tr>
+            <tr><td><strong>💉 Une dose adulte</strong></td><td><strong>1 unité</strong>, puis réévaluer</td><td><strong>Pool de 5 unités</strong> ou <strong>1 aphérèse</strong></td><td><strong>1 à 2 g/kg</strong> (poids idéal ajusté)</td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>📈 Rendement attendu</strong></td><td>Hb <strong>+ 10 g/L</strong> · Ht <strong>+ 3 %</strong></td><td><strong>+ 5-10</strong> à <strong>+ 25 × 10<sup>9</sup>/L</strong></td><td>—</td></tr>
+            <tr><td><strong>🚨 Ce qu&#39;il faut surveiller</strong></td><td><strong>Surcharge</strong> — voir TACO</td><td><strong>Contamination bactérienne</strong> · volume <strong>colloïdal</strong></td><td><strong>Thrombose</strong> · <strong>hémolyse si groupe non O</strong> · <strong>insuffisance rénale</strong></td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>💰 Coût d&#39;acquisition</strong></td><td><strong>528 $</strong></td><td><strong>801 $</strong> la dose</td><td><strong>93,80 $</strong> le gramme</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <div class="key-fact ink" style="margin-top:12px;">🧭 <strong>Ce que ce tableau fait comprendre d&#39;un coup.</strong> Les trois produits n&#39;ont <strong>pas les mêmes contraintes</strong> : le culot est un problème de <strong>volume</strong>, les plaquettes un problème de <strong>temps et d&#39;asepsie</strong> — cinq jours à température ambiante — et les IgIV un problème de <strong>dose et de coût</strong>. 🎯 C&#39;est la ligne <strong>🌡️ Conservation</strong> qui explique le plus de conduites : elle dit pourquoi la contamination bactérienne concerne surtout les plaquettes.</div>
+        </div>
+
+        <div id="tsfp1" style="display:none;margin-top:14px;">
+          <div style="background:#fce4ec;border-left:5px solid #c0392b;border-radius:10px;padding:12px 14px;"><strong style="color:#c0392b;">🩸 Culots globulaires</strong><span style="font-size:12px;color:#64748b;"> — concentré de globules rouges</span><div style="font-size:13px;line-height:1.7;margin-top:6px;">Un sac d&#39;environ <strong>300 mL</strong> à <strong>80 % d&#39;hématocrite</strong> : on transfuse une <strong>capacité de transport d&#39;oxygène</strong>, pas du volume. ⛔ D&#39;où l&#39;interdit de l&#39;utiliser pour remplir.</div></div>
+<div style="font-size:12px;font-weight:800;color:#b91c1c;margin-top:18px;letter-spacing:.4px;">🩸 LE CULOT GLOBULAIRE — CE QU&#39;IL Y A DANS LE SAC</div>
         <div style="overflow-x:auto;margin-top:12px;">
         <table style="font-size:12px;">
           <thead><tr><th style="width:28%;">Caractéristique</th><th style="width:72%;">Culot globulaire</th></tr></thead>
@@ -31578,7 +31646,11 @@ function switchAodInd(n) {
           <div class="criteria-item"><div class="criteria-num red">3</div><span><strong>L&#39;anémie aiguë et l&#39;anémie chronique doivent être abordées différemment</strong> — un même chiffre n&#39;a pas le même sens dans les deux cas.</span></div>
           <div class="criteria-item"><div class="criteria-num red">!</div><span>⛔ <strong>Ne jamais utiliser un culot pour l&#39;expansion volémique</strong> — <strong>sauf dans le choc hémorragique</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Rioux-Massé, cours IPSSA #1 — Médecine transfusionnelle, Banque de sang du CHUM, 2026</em></span></span></div>
         </div>
-        <div style="font-size:12px;font-weight:800;color:#b91c1c;margin-top:18px;letter-spacing:.4px;">🟡 LES PLAQUETTES — DEUX FILIÈRES, UNE SEULE DOSE ADULTE</div>
+                </div>
+
+        <div id="tsfp2" style="display:none;margin-top:14px;">
+          <div style="background:#fff3cd;border-left:5px solid #d35400;border-radius:10px;padding:12px 14px;"><strong style="color:#d35400;">🟡 Plaquettes</strong><span style="font-size:12px;color:#64748b;"> — deux filières, une seule dose adulte</span><div style="font-size:13px;line-height:1.7;margin-top:6px;"><strong>Cinq donneurs</strong> pour une dose issue de sang total, ou <strong>un seul</strong> par aphérèse. Conservées à température ambiante, elles ne tiennent que <strong>cinq jours</strong> — toute leur sécurité découle de là.</div></div>
+<div style="font-size:12px;font-weight:800;color:#b91c1c;margin-top:18px;letter-spacing:.4px;">🟡 LES PLAQUETTES — DEUX FILIÈRES, UNE SEULE DOSE ADULTE</div>
         <div style="overflow-x:auto;margin-top:12px;">
         <table style="font-size:12px;">
           <thead><tr><th style="width:24%;"></th><th style="width:38%;">Plaquettes de <strong>sang total</strong></th><th style="width:38%;">Plaquettes d&#39;<strong>aphérèse</strong></th></tr></thead>
@@ -31605,20 +31677,27 @@ function switchAodInd(n) {
         <div style="font-size:12px;font-weight:800;color:#b91c1c;margin-top:18px;letter-spacing:.4px;">📈 CE QU&#39;UNE DOSE DE PLAQUETTES DEVRAIT DONNER</div>
         <div class="key-fact orange" style="margin-top:10px;">⚖️ <strong>Deux chiffres circulent, et il faut les connaître tous les deux.</strong> Selon ce cours, une dose devrait élever la numération d&#39;<strong>au moins 5 à 10 × 10<sup>9</sup>/L</strong>, et <strong>jusqu&#39;à 20, 30 ou 50 × 10<sup>9</sup>/L</strong> selon le niveau pré-transfusionnel, la présence d&#39;un saignement actif et les facteurs de consommation. <span style="font-size:11px;color:#64748b;">📚 <em>Rioux-Massé, cours IPSSA #1 — Médecine transfusionnelle, Banque de sang du CHUM, 2026</em></span><br>Le bloc <em>Administration sécuritaire</em> retient <strong>+ 15 à 25 × 10<sup>9</sup>/L</strong> d&#39;après le Guide clinique de la Société canadienne du sang. 🎯 <strong>Les deux sont compatibles</strong> : 5-10 est le <strong>minimum acceptable</strong> en deçà duquel on parle d&#39;état réfractaire, 15-25 le <strong>rendement moyen attendu</strong> chez une personne sans facteur de consommation.</div>
         <div class="key-fact red" style="margin-top:10px;">🔥 <strong>Les facteurs de consommation à chercher devant un mauvais rendement</strong> — <strong>fièvre, sepsis</strong> · <strong>antibiotiques et antifongiques</strong> · <strong>microangiopathie, purpura thrombotique thrombocytopénique, CIVD</strong> · <strong>thrombopénie immune</strong> · <strong>splénomégalie</strong>. ➜ Devant une numération qui ne monte pas, chercher la cause avant d&#39;ajouter une dose. <span style="font-size:11px;color:#64748b;">📚 <em>Rioux-Massé, cours IPSSA #1 — Médecine transfusionnelle, Banque de sang du CHUM, 2026</em></span></div>
-        <div style="font-size:12px;font-weight:800;color:#b91c1c;margin-top:18px;letter-spacing:.4px;">⚖️ THÉRAPEUTIQUE OU PROPHYLACTIQUE — LA VRAIE QUESTION</div>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin-top:10px;">
-          <div style="background:#f0fdf4;border-left:4px solid #15803d;border-radius:10px;padding:14px;"><strong style="color:#15803d;">✅ Transfusion <strong>thérapeutique</strong></strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">Elle <strong>traite des symptômes</strong> : le bénéfice est <strong>escompté</strong> et vérifiable.</div></div>
-          <div style="background:#fff3cd;border-left:4px solid #d35400;border-radius:10px;padding:14px;"><strong style="color:#d35400;">❓ Transfusion <strong>prophylactique</strong></strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">Le bénéfice n&#39;est que <strong>théorique</strong>. Il exige donc un <strong>suivi rigoureux des guides de pratique</strong>, dont les <strong>seuils sont de plus en plus restrictifs</strong>.<br>🎯 Avec des risques réels, <strong>la seule façon d&#39;évaluer l&#39;usage prophylactique est l&#39;essai prospectif randomisé multicentrique</strong> — c&#39;est pourquoi les recommandations changent quand ces essais paraissent. <span style="font-size:11px;color:#64748b;">📚 <em>Rioux-Massé, cours IPSSA #1 — Médecine transfusionnelle, Banque de sang du CHUM, 2026</em></span></div></div>
-          <div style="background:#fce4ec;border-left:4px solid #c0392b;border-radius:10px;padding:14px;"><strong style="color:#c0392b;">🚨 Les risques</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">Ils sont <strong>toujours réels</strong>, et dépendent du <strong>produit</strong>, de la <strong>quantité</strong>, de la <strong>vitesse d&#39;administration</strong> et de la <strong>condition médicale du patient</strong>.<br>➜ Les campagnes <strong>Choosing Wisely</strong> de l&#39;<strong>AABB</strong> et de l&#39;<strong>ASH</strong> visent précisément l&#39;usage prophylactique excessif. <span style="font-size:11px;color:#64748b;">📚 <em>Rioux-Massé, cours IPSSA #1 — Médecine transfusionnelle, Banque de sang du CHUM, 2026</em></span></div></div>
-        </div>
-              <div style="font-size:12px;font-weight:800;color:#b91c1c;margin-top:18px;letter-spacing:.4px;">💉 LES IMMUNOGLOBULINES INTRAVEINEUSES — LEURS RÉACTIONS PROPRES</div>
+                </div>
+
+        <div id="tsfp3" style="display:none;margin-top:14px;">
+          <div style="background:#e8f4fd;border-left:5px solid #1d4ed8;border-radius:10px;padding:12px 14px;"><strong style="color:#1d4ed8;">💉 Immunoglobulines IV</strong><span style="font-size:12px;color:#64748b;"> — un produit stable, avec ses réactions propres</span><div style="font-size:13px;line-height:1.7;margin-top:6px;">Ni un culot ni des plaquettes : un <strong>produit fractionné</strong>, dont les complications sont la <strong>thrombose</strong>, l&#39;<strong>hémolyse chez les groupes non O</strong> et l&#39;<strong>insuffisance rénale</strong>.</div></div>
+<div style="font-size:12px;font-weight:800;color:#b91c1c;margin-top:18px;letter-spacing:.4px;">💉 LES IMMUNOGLOBULINES INTRAVEINEUSES — LEURS RÉACTIONS PROPRES</div>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin-top:10px;">
           <div style="background:#fff3cd;border-left:4px solid #d35400;border-radius:10px;padding:14px;"><strong style="color:#d35400;">🌡️ Réactions infusionnelles</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;"><strong>Céphalées, frissons, fièvre</strong><br>➜ Conduite : <strong>ralentir la perfusion</strong>, <strong>fractionner la dose</strong>, <strong>acétaminophène 650 mg PO</strong>.</div></div>
           <div style="background:#fce4ec;border-left:4px solid #c0392b;border-radius:10px;padding:14px;"><strong style="color:#c0392b;">🚨 Les trois complications à connaître</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;"><strong>Thrombose</strong><br><strong>Hémolyse chez les patients de groupe non O</strong> — les IgIV contiennent des anti-A et anti-B<br><strong>Insuffisance rénale</strong></div></div>
           <div style="background:#e8f4fd;border-left:4px solid #1d4ed8;border-radius:10px;padding:14px;"><strong style="color:#1d4ed8;">📋 Comment les prescrire correctement</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">Suivre les <strong>guides d&#39;usage optimal</strong> · utiliser les <strong>doses minimales recommandées</strong> · passer par les <strong>formulaires ministériels (Printo)</strong> · utiliser le <strong>calculateur de dose</strong> (<em>ivig.transfusionontario.org</em>) — la dose se calcule sur le <strong>poids idéal ajusté</strong>.</div></div>
         </div>
         <div class="key-fact orange" style="margin-top:12px;">💰 <strong>Le rappel qui justifie cette rigueur.</strong> À <strong>93,80 $ le gramme</strong> et une dose de <strong>1 à 2 g/kg</strong>, une seule dose pour 70 kg coûte <strong>6 566 $ à 13 132 $</strong> — et les IgIV ne sont pas un produit anodin. ➜ voir les coûts complets dans <em>Le système du sang au Québec</em>. <span style="font-size:11px;color:#64748b;">📚 <em>Lemay, cours IPSSA — Réactions transfusionnelles et consentement, Banque de sang du CHUM, 2026</em></span></div>
-      </div>
+              </div>
+
+<div style="font-size:12px;font-weight:800;color:#b91c1c;margin-top:18px;letter-spacing:.4px;">⚖️ THÉRAPEUTIQUE OU PROPHYLACTIQUE — LA VRAIE QUESTION</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin-top:10px;">
+          <div style="background:#f0fdf4;border-left:4px solid #15803d;border-radius:10px;padding:14px;"><strong style="color:#15803d;">✅ Transfusion <strong>thérapeutique</strong></strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">Elle <strong>traite des symptômes</strong> : le bénéfice est <strong>escompté</strong> et vérifiable.</div></div>
+          <div style="background:#fff3cd;border-left:4px solid #d35400;border-radius:10px;padding:14px;"><strong style="color:#d35400;">❓ Transfusion <strong>prophylactique</strong></strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">Le bénéfice n&#39;est que <strong>théorique</strong>. Il exige donc un <strong>suivi rigoureux des guides de pratique</strong>, dont les <strong>seuils sont de plus en plus restrictifs</strong>.<br>🎯 Avec des risques réels, <strong>la seule façon d&#39;évaluer l&#39;usage prophylactique est l&#39;essai prospectif randomisé multicentrique</strong> — c&#39;est pourquoi les recommandations changent quand ces essais paraissent. <span style="font-size:11px;color:#64748b;">📚 <em>Rioux-Massé, cours IPSSA #1 — Médecine transfusionnelle, Banque de sang du CHUM, 2026</em></span></div></div>
+          <div style="background:#fce4ec;border-left:4px solid #c0392b;border-radius:10px;padding:14px;"><strong style="color:#c0392b;">🚨 Les risques</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">Ils sont <strong>toujours réels</strong>, et dépendent du <strong>produit</strong>, de la <strong>quantité</strong>, de la <strong>vitesse d&#39;administration</strong> et de la <strong>condition médicale du patient</strong>.<br>➜ Les campagnes <strong>Choosing Wisely</strong> de l&#39;<strong>AABB</strong> et de l&#39;<strong>ASH</strong> visent précisément l&#39;usage prophylactique excessif. <span style="font-size:11px;color:#64748b;">📚 <em>Rioux-Massé, cours IPSSA #1 — Médecine transfusionnelle, Banque de sang du CHUM, 2026</em></span></div></div>
+        </div>
+                    </div>
+
 
 
       <div class="block rx" style="margin-top:14px;border-left-color:#0369a1;">
@@ -31705,7 +31784,15 @@ function switchAodInd(n) {
 
         <div class="key-fact red" style="margin-top:10px;">🚨 <strong>Le réflexe, quelle que soit la réaction suspectée :</strong> <strong>ARRÊTER la transfusion</strong>, <strong>garder la voie veineuse perméable</strong> avec du salin, <strong>évaluer</strong>, <strong>aviser la banque de sang</strong>. On ne cherche pas à identifier la réaction avant d'arrêter — l'inverse serait dangereux, puisque les réactions bénignes et mortelles débutent de la même façon.</div>
 
-        <div style="font-size:12px;font-weight:800;color:#c2410c;margin-top:18px;letter-spacing:.4px;">🚑 LES SEPT ÉTAPES, DANS L&#39;ORDRE — QUELLE QUE SOIT LA RÉACTION SUSPECTÉE</div>
+        <div class="key-fact ink" style="margin-top:10px;">🧭 <strong>Trois temps, trois onglets.</strong> <strong>🚑 La conduite</strong> est la même quelle que soit la réaction — c&#39;est elle qu&#39;on applique avant de savoir. <strong>🌡️ La fièvre</strong> est le déclencheur le plus fréquent et mérite son propre raisonnement. <strong>📋 Déclarer</strong> ferme la boucle, et le vocabulaire y est précis.</div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;">
+          <button data-panel="tsfc0" onclick="showPanel('tsfc','tsfc0',3)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#c2410c;color:#fff;">🚑 La conduite en 7 étapes</button>
+          <button data-panel="tsfc1" onclick="showPanel('tsfc','tsfc1',3)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">🌡️ La fièvre</button>
+          <button data-panel="tsfc2" onclick="showPanel('tsfc','tsfc2',3)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">📋 Déclarer</button>
+        </div>
+
+        <div id="tsfc0" style="display:block;margin-top:14px;">
+<div style="font-size:12px;font-weight:800;color:#c2410c;margin-top:18px;letter-spacing:.4px;">🚑 LES SEPT ÉTAPES, DANS L&#39;ORDRE — QUELLE QUE SOIT LA RÉACTION SUSPECTÉE</div>
 <div class="criteria-list" style="margin-top:12px;">
           <div class="criteria-item"><div class="criteria-num red">1</div><span>🚨 <strong>ARRÊTER la transfusion</strong> — immédiatement, sans attendre d&#39;avoir un diagnostic · <strong>DEMANDER de l&#39;aide si le receveur est instable</strong>, et <strong>demeurer au chevet</strong></span></div>
           <div class="criteria-item"><div class="criteria-num blue">2</div><span><strong>Maintenir la voie veineuse</strong> avec du <strong>NaCl 0,9 %</strong> par une nouvelle tubulure — ne pas rincer avec le produit restant</span></div>
@@ -31718,7 +31805,11 @@ function switchAodInd(n) {
         </div>
         <div class="key-fact orange" style="margin-top:12px;">⚠️ <strong>Deux précisions sur la portée de cette ordonnance.</strong> Elle s&#39;applique aux <strong>receveurs adultes seulement</strong>, et elle prévoit de <strong>contacter l&#39;équipe d&#39;intervention rapide</strong> lorsque l&#39;état clinique en remplit les critères — notamment devant une <strong>réaction allergique majeure, un choc anaphylactique ou une hypotension</strong>. 🎯 Repère chiffré de l&#39;<strong>hypotension post-transfusionnelle</strong> : <strong>baisse ≥ 30 mmHg de la systolique ou de la diastolique</strong>, <strong>ou systolique ≤ 80 mmHg</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>CHUM, ordonnance collective OC-INF-0024</em></span></div>
 
-        <div style="font-size:12px;font-weight:800;color:#c2410c;margin-top:18px;letter-spacing:.4px;">🌡️ LA FIÈVRE — LE DÉCLENCHEUR LE PLUS FRÉQUENT, ET LE PLUS TROMPEUR</div>
+                </div>
+
+        <div id="tsfc1" style="display:none;margin-top:14px;">
+          <div style="background:#fff3cd;border-left:5px solid #d35400;border-radius:10px;padding:12px 14px;"><strong style="color:#d35400;">🌡️ La fièvre</strong><span style="font-size:12px;color:#64748b;"> — le déclencheur le plus fréquent, et le plus trompeur</span><div style="font-size:13px;line-height:1.7;margin-top:6px;">On <strong>ne peut pas distinguer cliniquement</strong> une réaction fébrile bénigne d&#39;une hémolyse aiguë au moment où la fièvre apparaît. 🎯 D&#39;où la règle : <strong>arrêter d&#39;abord, trancher ensuite</strong>.</div></div>
+<div style="font-size:12px;font-weight:800;color:#c2410c;margin-top:18px;letter-spacing:.4px;">🌡️ LA FIÈVRE — LE DÉCLENCHEUR LE PLUS FRÉQUENT, ET LE PLUS TROMPEUR</div>
 
         <div class="key-fact orange" style="margin-top:10px;">🌡️ <strong>Définition :</strong> une <strong>hausse de plus de 1 °C</strong> et/ou une <strong>température supérieure à 38 °C</strong>, pendant la transfusion ou jusqu'à <strong>4 heures après</strong> la fin. <span style="font-size:11px;color:#64748b;">📚 <em>Guide clinique SCS, ch. 10</em></span><br>🍁 <strong>L&#39;ordonnance collective du CHUM est plus exigeante</strong> — et c&#39;est elle qui s&#39;applique au chevet : <strong>température buccale ≥ 38,5 °C ET augmentation ≥ 1 °C</strong> par rapport à la valeur pré-transfusionnelle. 🎯 <strong>Retenir la définition la plus large pour surveiller</strong> (elle attrape plus de réactions), <strong>et la définition locale chiffrée pour agir</strong> — c&#39;est elle qui déclenche les ordonnances ci-dessous. <span style="font-size:11px;color:#64748b;">📚 <em>CHUM, ordonnance collective OC-INF-0024</em></span></div>
 
@@ -31751,10 +31842,17 @@ function switchAodInd(n) {
           <div class="criteria-item"><div class="criteria-num red">!</div><span>🚨 <strong>Le tableau clinique reste non spécifique et survient en moins de 24 h</strong> : <strong>développement rapide d&#39;une fièvre sévère</strong>, <strong>frissons solennels</strong>, tachycardie, hypotension, dyspnée, <strong>douleurs abdominales</strong>, nausées et vomissements, jusqu&#39;au <strong>choc septique</strong>. Les <strong>plaquettes sont plus en cause que les culots et le plasma</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Lemay, cours IPSSA — Réactions transfusionnelles et consentement, Banque de sang du CHUM, 2026</em></span></span></div>
         </div>
       
-        <div style="font-size:12px;font-weight:800;color:#c2410c;margin-top:18px;letter-spacing:.4px;">📋 DÉCLARER — INCIDENT OU ACCIDENT, LES DEUX COMPTENT</div>
+                </div>
+
+        <div id="tsfc2" style="display:none;margin-top:14px;">
+          <div style="background:#f0fdf4;border-left:5px solid #15803d;border-radius:10px;padding:12px 14px;"><strong style="color:#15803d;">📋 Déclarer</strong><span style="font-size:12px;color:#64748b;"> — incident ou accident — les deux comptent</span><div style="font-size:13px;line-height:1.7;margin-top:6px;">Le système d&#39;hémovigilance québécois distingue l&#39;erreur <strong>rattrapée avant</strong> la transfusion de celle <strong>découverte après</strong>. Déclarer la première est aussi utile que déclarer la seconde.</div></div>
+<div style="font-size:12px;font-weight:800;color:#c2410c;margin-top:18px;letter-spacing:.4px;">📋 DÉCLARER — INCIDENT OU ACCIDENT, LES DEUX COMPTENT</div>
 
         <div class="key-fact blue" style="margin-top:12px;">🍁 <strong>Hémovigilance au Québec — le vocabulaire officiel, et il est précis :</strong><br><br>• Un <strong>INCIDENT</strong> est une erreur ou un problème <strong>détecté AVANT</strong> que le produit ne soit transfusé.<br>• Un <strong>ACCIDENT</strong> est toute erreur reconnue ou toute réaction indésirable <strong>détectée APRÈS le début</strong> de l'administration.<br><br>La coordination du système québécois est assurée par l'<strong>INSPQ</strong>, sur mandat du <strong>MSSS</strong>. Dans chaque établissement, un <strong>agent de sécurité transfusionnelle</strong> coordonne l'enquête et la déclaration. 🎯 <strong>Déclarer un incident — donc une erreur rattrapée à temps — fait partie du système au même titre que déclarer un accident</strong> : c'est ce qui permet de corriger les processus avant qu'un patient ne soit atteint.</div>
+              </div>
+
       </div>
+
 
 
       <div class="block para" style="margin-top:14px;border-left-color:#7c3aed;">
@@ -31878,50 +31976,142 @@ function switchAodInd(n) {
       <div class="block clin" style="margin-top:14px;border-left-color:#0f766e;">
         <div class="block-title" id="tsf-6"><span class="tag">🤧 Réactions allergiques &amp; hypotension</span></div>
 
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
-          <div style="background:#f0fdf4;border-radius:10px;padding:14px;border-left:4px solid #15803d;">
-            <strong style="color:#15803d;">🟢 Réaction allergique MINEURE</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Urticaire</strong>, prurit, bouffées vasomotrices, symptômes respiratoires hauts légers, symptômes digestifs<br>Plus fréquente avec les <strong>plaquettes et le plasma</strong> — les produits les plus riches en plasma<br><br>🎯 <strong>C'est la seule réaction où l'on peut reprendre la transfusion</strong> : arrêt temporaire, antihistaminique, puis <strong>reprise à débit ralenti</strong> s'il n'y a aucun signe de gravité<br><br>🔢 C&#39;est la plus fréquente des réactions allergiques : <strong>environ 1 transfusion sur 100</strong><br>🍁 Le seuil qui tranche dans l&#39;ordonnance collective : une éruption sur <strong>2/3 du corps ou moins</strong> = <strong>mineure</strong>, on peut reprendre ; <strong>plus de 2/3 du corps</strong>, ou un <strong>œdème du visage, des paupières, des lèvres, de la langue ou de la luette</strong>, ou une <strong>toux, une gorge serrée, une voix rauque</strong>, ou des <strong>symptômes gastro-intestinaux</strong> = on ne recommence pas <span style="font-size:11px;color:#64748b;">📚 <em>CHUM, ordonnance collective OC-INF-0024</em></span><br>💊 <strong>Diphenhydramine 50 mg IV</strong>, puis reprise à la résolution des symptômes, en <strong>demeurant au chevet 15 minutes</strong><br>Réactions répétées → envisager des produits <strong>lavés</strong> ou déplasmatisés</div>
-          </div>
-          <div style="background:#fef2f2;border-radius:10px;padding:14px;border-left:4px solid #c0392b;">
-            <strong style="color:#c0392b;">🚨 ANAPHYLAXIE</strong>
-            <div style="font-size:13px;line-height:1.7;margin-top:8px;">Rare — environ <strong>1 / 50 000</strong> transfusions de culots ; <strong>1 / 40 000</strong> selon la Banque de sang du CHUM <strong>(l&#39;ordre de grandeur est le même)</strong><br>🫁 Ordonnance collective : <strong>oxygène 4 L/min</strong>, <strong>diphenhydramine 50 mg IV</strong>, ⛔ <strong>ne pas recommencer</strong>, aviser le médecin, <strong>signes vitaux aux 15 minutes</strong>, 🧪 <strong>radiographie pulmonaire et ECG</strong>, et <strong>contacter l&#39;équipe d&#39;intervention rapide</strong> si les critères sont remplis <span style="font-size:11px;color:#64748b;">📚 <em>CHUM, ordonnance collective OC-INF-0024</em></span><br><strong>Enrouement, stridor, sibilances, dyspnée, hypotension, symptômes digestifs, choc</strong><br><br>🚨 <strong>ARRÊT DÉFINITIF</strong> · <strong>ABC</strong> · <strong>ADRÉNALINE</strong> · antihistaminiques, corticostéroïdes, bêta-2 agonistes inhalés<br><br>⚠️ Devant une hypotension, garder le différentiel ouvert : <strong>sepsis, réaction bradykinique, hémolyse aiguë</strong> peuvent se ressembler<br>➜ Voir <em>Les Chocs</em></div>
-          </div>
+        <div class="key-fact ink" style="margin-top:10px;">🧭 <strong>Trois tableaux qui se chevauchent, une seule décision.</strong> L&#39;éruption, l&#39;anaphylaxie et l&#39;hypotension isolée partagent des signes — et la conduite diffère du tout au tout. <strong>Cliquez sur ⚖️ Comparer</strong> pour trancher, puis sur l&#39;onglet correspondant pour le détail.</div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;">
+          <button data-panel="tsfa0" onclick="showPanel('tsfa','tsfa0',4)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#0f766e;color:#fff;">⚖️ Comparer</button>
+          <button data-panel="tsfa1" onclick="showPanel('tsfa','tsfa1',4)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">🟢 Allergique mineure</button>
+          <button data-panel="tsfa2" onclick="showPanel('tsfa','tsfa2',4)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">🚨 Anaphylaxie</button>
+          <button data-panel="tsfa3" onclick="showPanel('tsfa','tsfa3',4)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">💧 Hypotension transfusionnelle</button>
         </div>
 
-        <div class="key-fact orange" style="margin-top:12px;">🔄 <strong>Une notion qui a changé — attention aux notes de cours anciennes :</strong> on a longtemps enseigné que l'anaphylaxie transfusionnelle était liée au <strong>déficit en IgA avec anti-IgA</strong>. Les données récentes montrent que cette association <strong>n'est pas solide</strong>. Des anticorps <strong>anti-haptoglobine</strong>, un transfert passif d'IgE ou le transfert d'allergènes alimentaires ont aussi été rapportés. <span style="font-size:11px;color:#64748b;">📚 <em>Guide clinique SCS, ch. 10 (2022)</em></span> — Goldman, plus ancien sur ce point, recommande encore de doser les IgA après une réaction sévère. 🎯 Et les deux constats de <strong>Sandler (Transfusion, 2015)</strong>, à connaître : ① <strong>la majorité des réactions allergiques ne sont pas associées à une déficience en IgA</strong>, avec ou sans anti-IgA ; ② <strong>la présence d&#39;anti-IgA chez un patient déficient ne conduit pas nécessairement à une réaction</strong>. Le tableau qui compte vraiment : une <strong>déficience sévère en IgA</strong> — sous le seuil de détection — <strong>avec des anti-IgA</strong>, le plus souvent de type IgG. C&#39;est <strong>très rare</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Lemay, cours IPSSA — Réactions transfusionnelles et consentement, Banque de sang du CHUM, 2026</em></span></div>
+        <div id="tsfa0" style="display:block;margin-top:14px;">
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;min-width:680px;">
+          <thead><tr><th style="width:18%;">Axe</th><th style="width:27%;">🟢 Allergique <strong>mineure</strong></th><th style="width:28%;">🚨 <strong>Anaphylaxie</strong></th><th style="width:27%;">💧 <strong>Hypotension</strong> transfusionnelle</th></tr></thead>
+          <tbody>
+            <tr><td><strong>🔢 Fréquence</strong></td><td>≈ <strong>1 / 100</strong></td><td><strong>1 / 40 000</strong> à <strong>1 / 50 000</strong></td><td>Rare</td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>🩺 Ce qu&#39;on voit</strong></td><td><strong>Urticaire</strong>, prurit, bouffées vasomotrices<br>éruption sur <strong>≤ 2/3 du corps</strong></td><td><strong>Stridor</strong>, sibilances, <strong>œdème</strong>, dyspnée, <strong>choc</strong><br>ou éruption <strong>&gt; 2/3 du corps</strong></td><td><strong>Chute ≥ 30 mmHg</strong> de la systolique<br>ou <strong>systolique ≤ 80 mmHg</strong></td></tr>
+            <tr><td><strong>🔁 Peut-on reprendre ?</strong></td><td>✅ <strong>Oui</strong> — la seule où c&#39;est permis</td><td>⛔ <strong>Arrêt définitif</strong></td><td>⛔ <strong>Ne pas recommencer</strong></td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>💊 Conduite</strong></td><td><strong>Diphenhydramine 50 mg IV</strong>, reprise à débit ralenti</td><td><strong>ADRÉNALINE</strong> · <strong>O₂ 4 L/min</strong> · ABC</td><td>Arrêter · <strong>remplir</strong> si nécessaire</td></tr>
+            <tr><td><strong>🎯 Le point qui surprend</strong></td><td>Plus fréquente avec les <strong>plaquettes et le plasma</strong></td><td>Le <strong>déficit en IgA</strong> n&#39;explique pas la majorité des cas</td><td>Mécanisme <strong>bradykinique</strong> — lien avec les <strong>IECA</strong></td></tr>
+          </tbody>
+        </table>
+        </div>
+        <div class="key-fact ink" style="margin-top:12px;">🧭 <strong>La seule question qui compte au chevet.</strong> Ce n&#39;est pas « quelle réaction est-ce », c&#39;est « <strong>est-ce que je peux reprendre la transfusion ?</strong> ». La ligne <strong>🔁</strong> y répond : <strong>oui uniquement pour l&#39;allergique mineure</strong>, et à la condition qu&#39;il n&#39;y ait <strong>aucun signe de gravité</strong>. ⚠️ Et devant une hypotension, garder les trois autres pistes ouvertes : <strong>sepsis, hémolyse aiguë, TRALI</strong>.</div>
+        </div>
 
+        <div id="tsfa1" style="display:none;margin-top:14px;">
+          <div style="background:#f0fdf4;border-left:5px solid #15803d;border-radius:10px;padding:12px 14px;"><strong style="color:#15803d;">🟢 Allergique mineure</strong><span style="font-size:12px;color:#64748b;"> — la plus fréquente — environ 1 transfusion sur 100</span><div style="font-size:13px;line-height:1.7;margin-top:6px;">Réaction <strong>IgE-médiée</strong> aux protéines plasmatiques du donneur, limitée à la peau et aux muqueuses. 🎯 <strong>La seule réaction où la transfusion peut être reprise.</strong></div></div>
+        <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Urticaire</strong>, prurit, bouffées vasomotrices, symptômes respiratoires hauts légers, symptômes digestifs<br>Plus fréquente avec les <strong>plaquettes et le plasma</strong> — les produits les plus riches en plasma<br><br>🎯 <strong>C'est la seule réaction où l'on peut reprendre la transfusion</strong> : arrêt temporaire, antihistaminique, puis <strong>reprise à débit ralenti</strong> s'il n'y a aucun signe de gravité<br><br>🔢 C&#39;est la plus fréquente des réactions allergiques : <strong>environ 1 transfusion sur 100</strong><br>🍁 Le seuil qui tranche dans l&#39;ordonnance collective : une éruption sur <strong>2/3 du corps ou moins</strong> = <strong>mineure</strong>, on peut reprendre ; <strong>plus de 2/3 du corps</strong>, ou un <strong>œdème du visage, des paupières, des lèvres, de la langue ou de la luette</strong>, ou une <strong>toux, une gorge serrée, une voix rauque</strong>, ou des <strong>symptômes gastro-intestinaux</strong> = on ne recommence pas <span style="font-size:11px;color:#64748b;">📚 <em>CHUM, ordonnance collective OC-INF-0024</em></span><br>💊 <strong>Diphenhydramine 50 mg IV</strong>, puis reprise à la résolution des symptômes, en <strong>demeurant au chevet 15 minutes</strong><br>Réactions répétées → envisager des produits <strong>lavés</strong> ou déplasmatisés</div>
+        </div>
+
+        <div id="tsfa2" style="display:none;margin-top:14px;">
+          <div style="background:#fef2f2;border-left:5px solid #c0392b;border-radius:10px;padding:12px 14px;"><strong style="color:#c0392b;">🚨 Anaphylaxie</strong><span style="font-size:12px;color:#64748b;"> — rare, mais immédiatement menaçante</span><div style="font-size:13px;line-height:1.7;margin-top:6px;"><strong>Obstruction des voies respiratoires ou hypotension</strong> : on quitte le registre cutané. 🚨 <strong>Arrêt définitif, adrénaline</strong>, et jamais de reprise.</div></div>
+        <div style="font-size:13px;line-height:1.7;margin-top:8px;">Rare — environ <strong>1 / 50 000</strong> transfusions de culots ; <strong>1 / 40 000</strong> selon la Banque de sang du CHUM <strong>(l&#39;ordre de grandeur est le même)</strong><br>🫁 Ordonnance collective : <strong>oxygène 4 L/min</strong>, <strong>diphenhydramine 50 mg IV</strong>, ⛔ <strong>ne pas recommencer</strong>, aviser le médecin, <strong>signes vitaux aux 15 minutes</strong>, 🧪 <strong>radiographie pulmonaire et ECG</strong>, et <strong>contacter l&#39;équipe d&#39;intervention rapide</strong> si les critères sont remplis <span style="font-size:11px;color:#64748b;">📚 <em>CHUM, ordonnance collective OC-INF-0024</em></span><br><strong>Enrouement, stridor, sibilances, dyspnée, hypotension, symptômes digestifs, choc</strong><br><br>🚨 <strong>ARRÊT DÉFINITIF</strong> · <strong>ABC</strong> · <strong>ADRÉNALINE</strong> · antihistaminiques, corticostéroïdes, bêta-2 agonistes inhalés<br><br>⚠️ Devant une hypotension, garder le différentiel ouvert : <strong>sepsis, réaction bradykinique, hémolyse aiguë</strong> peuvent se ressembler<br>➜ Voir <em>Les Chocs</em></div>
+        </div>
+
+        <div id="tsfa3" style="display:none;margin-top:14px;">
+          <div style="background:#e8f4fd;border-left:5px solid #1d4ed8;border-radius:10px;padding:12px 14px;"><strong style="color:#1d4ed8;">💧 Hypotension transfusionnelle</strong><span style="font-size:12px;color:#64748b;"> — mécanisme bradykinique</span><div style="font-size:13px;line-height:1.7;margin-top:6px;">Le <strong>facteur XII</strong> au contact des surfaces du circuit génère de la <strong>bradykinine</strong>, que l&#39;<strong>enzyme de conversion</strong> ne peut plus inactiver <strong>sous IECA</strong>. Ce n&#39;est ni allergique ni septique.</div></div>
         <div class="key-fact blue" style="margin-top:8px;">💧 <strong>Hypotension bradykinique — le lien avec les IECA :</strong> le contact du facteur XII avec des <strong>surfaces chargées négativement</strong> (filtres, tubulures, membranes de dialyse) génère de la <strong>bradykinine</strong>. Or l'enzyme de conversion l'inactive — donc sous <strong>IECA</strong>, la bradykinine s'accumule et l'hypotension survient. Le système d'hémovigilance retient une <strong>chute de la tension systolique ≥ 30 mmHg avec une systolique &lt; 80 mmHg</strong>. Conduite : arrêter, remplir si nécessaire. En aphérèse, <strong>l'IECA doit être suspendu avant la procédure</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Guide clinique SCS, ch. 10</em></span></div>
-              <div style="font-size:12px;font-weight:800;color:#0f766e;margin-top:18px;letter-spacing:.4px;">💊 LES DOSES EN AIGU, ET LA GESTION DES TRANSFUSIONS SUIVANTES</div>
+        </div>
+
+        <div style="font-size:12px;font-weight:800;color:#0f766e;margin-top:18px;letter-spacing:.4px;">💊 LES DOSES EN AIGU, ET LA GESTION DES TRANSFUSIONS SUIVANTES</div>
+
         <div class="key-fact red" style="margin-top:10px;">🚑 <strong>En aigu :</strong> <strong>diphenhydramine 50 mg IV</strong> · <strong>hydrocortisone 100 mg IV</strong> · <strong>± épinéphrine</strong>, selon la prise en charge habituelle de l&#39;anaphylaxie. ➜ voir <em>Anaphylaxie</em> et <em>Les Chocs</em>. <span style="font-size:11px;color:#64748b;">📚 <em>Lemay, cours IPSSA — Réactions transfusionnelles et consentement, Banque de sang du CHUM, 2026</em></span></div>
-        <div class="criteria-list" style="margin-top:10px;">
+<div class="criteria-list" style="margin-top:10px;">
           <div class="criteria-item"><div class="criteria-num blue">1</div><span><strong>Un seul épisode</strong> — <strong>réexposition sans prémédication</strong>, sous <strong>supervision</strong>, avec l&#39;<strong>épinéphrine au chevet</strong>. On ne prémédique pas « au cas où ».</span></div>
           <div class="criteria-item"><div class="criteria-num blue">2</div><span><strong>Réactions récurrentes légères</strong> — <strong>prémédication</strong> par <strong>diphenhydramine et hydrocortisone</strong>.</span></div>
           <div class="criteria-item"><div class="criteria-num blue">3</div><span><strong>Réactions récurrentes sévères</strong> — <strong>culots lavés</strong>, <strong>plaquettes lavées ou réduites en plasma</strong>, <strong>plasma traité par solvant-détergent</strong> — à <strong>discuter avec le directeur de la banque de sang</strong>.</span></div>
           <div class="criteria-item"><div class="criteria-num red">!</div><span><strong>Déficience en IgA avec anti-IgA confirmés</strong> — <strong>produits déficients en IgA ou lavés</strong>. C&#39;est la seule situation où le déficit en IgA commande vraiment la conduite. <span style="font-size:11px;color:#64748b;">📚 <em>Lemay, cours IPSSA — Réactions transfusionnelles et consentement, Banque de sang du CHUM, 2026</em></span></span></div>
         </div>
+        <div class="key-fact orange" style="margin-top:12px;">🔄 <strong>Une notion qui a changé — attention aux notes de cours anciennes :</strong> on a longtemps enseigné que l'anaphylaxie transfusionnelle était liée au <strong>déficit en IgA avec anti-IgA</strong>. Les données récentes montrent que cette association <strong>n'est pas solide</strong>. Des anticorps <strong>anti-haptoglobine</strong>, un transfert passif d'IgE ou le transfert d'allergènes alimentaires ont aussi été rapportés. <span style="font-size:11px;color:#64748b;">📚 <em>Guide clinique SCS, ch. 10 (2022)</em></span> — Goldman, plus ancien sur ce point, recommande encore de doser les IgA après une réaction sévère. 🎯 Et les deux constats de <strong>Sandler (Transfusion, 2015)</strong>, à connaître : ① <strong>la majorité des réactions allergiques ne sont pas associées à une déficience en IgA</strong>, avec ou sans anti-IgA ; ② <strong>la présence d&#39;anti-IgA chez un patient déficient ne conduit pas nécessairement à une réaction</strong>. Le tableau qui compte vraiment : une <strong>déficience sévère en IgA</strong> — sous le seuil de détection — <strong>avec des anti-IgA</strong>, le plus souvent de type IgG. C&#39;est <strong>très rare</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Lemay, cours IPSSA — Réactions transfusionnelles et consentement, Banque de sang du CHUM, 2026</em></span></div>
       </div>
+
 
       <div class="block para" style="margin-top:14px;border-left-color:#4338ca;">
         <div class="block-title" id="tsf-7"><span class="tag">⏳ Réactions retardées</span></div>
 
         <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>Le fil conducteur :</strong> ces réactions surviennent des <strong>jours à des semaines</strong> plus tard, souvent après le congé — donc <strong>hors du contexte où l'on pense encore à la transfusion</strong>. Devant une cytopénie, un ictère ou une éruption inexpliqués, <strong>demander si la personne a été transfusée récemment</strong> fait partie de l'anamnèse.</div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;">
+          <button data-panel="tsfr0" onclick="showPanel('tsfr','tsfr0',5)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#4338ca;color:#fff;">⚖️ Comparer</button>
+          <button data-panel="tsfr1" onclick="showPanel('tsfr','tsfr1',5)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">🩸 Réaction hémolytique retardée</button>
+          <button data-panel="tsfr2" onclick="showPanel('tsfr','tsfr2',5)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">🦠 TA-GvHD</button>
+          <button data-panel="tsfr3" onclick="showPanel('tsfr','tsfr3',5)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">🟡 Purpura post-transfusionnel</button>
+          <button data-panel="tsfr4" onclick="showPanel('tsfr','tsfr4',5)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">🧬 Allo-immunisation</button>
+        </div>
 
+        <div id="tsfr0" style="display:block;margin-top:14px;">
         <div style="overflow-x:auto;margin-top:12px;">
-        <table style="font-size:12px;">
-          <thead><tr><th style="width:22%;">Réaction</th><th style="width:14%;">Délai</th><th style="width:32%;">Tableau</th><th>Conduite &amp; prévention</th></tr></thead>
+        <table style="font-size:12px;min-width:700px;">
+          <thead><tr><th style="width:18%;">Axe</th><th style="width:20%;">🩸 RHR</th><th style="width:21%;">🦠 TA-GvHD</th><th style="width:20%;">🟡 PPT</th><th style="width:21%;">🧬 Allo-immunisation</th></tr></thead>
           <tbody>
-            <tr style="background:#e8f4fd;"><td><strong>Réaction hémolytique RETARDÉE</strong> (RHR)</td><td>&gt; 24 h · médiane <strong>1 à 2 semaines</strong></td><td>🎯 <strong>Hémoglobine qui n'augmente pas, ou qui baisse</strong> après transfusion<br>Ictère, fébricule, malaise, dorsalgie · rarement insuffisance rénale<br>Beaucoup <strong>moins sévère</strong> qu'une hémolyse aiguë<br>Allo-anticorps en cause : anti-E, Jk<sup>a</sup>, c, Fy<sup>a</sup>, K</td><td>Labo : LDH ↑, haptoglobine ↓, <strong>Coombs direct positif</strong><br><strong>Prévention :</strong> transfuser seulement si nécessaire · <strong>conserver l'historique d'anticorps au dossier</strong> · partage d'information entre banques de sang · culots antigène-négatifs pour l'avenir</td></tr>
-            <tr style="background:#fce4ec;"><td>🚨 <strong>Réaction du greffon contre l'hôte transfusionnelle</strong> (TA-GvHD)</td><td>Jours à semaines</td><td>🚨 <strong>Pancytopénie profonde</strong>, éruption érythémateuse ou érythrodermie, atteinte hépatique, symptômes digestifs<br>Greffe des lymphocytes du donneur chez une personne immunosupprimée<br>⚠️ <strong>Mortalité proche de 100 %</strong></td><td>🎯 <strong>Prévention par IRRADIATION</strong> des produits cellulaires — c'est la seule stratégie efficace<br><strong>À risque :</strong> déficits immunitaires congénitaux, lymphome de Hodgkin, leucémie aiguë, greffe de cellules souches, produits d'un <strong>proche parent</strong>, produits HLA-compatibles, transfusion intra-utérine</td></tr>
-            <tr><td><strong>Purpura post-transfusionnel</strong> (PPT)</td><td><strong>1 à 3 semaines</strong></td><td><strong>Thrombopénie profonde</strong> (&lt; 10 × 10⁹/L), purpura, ecchymoses, saignement muqueux<br>Allo-anticorps antiplaquettaires, le plus souvent <strong>anti-HPA-1a</strong><br>⚠️ Mortalité de 10 à 20 % par hémorragie</td><td>🎯 <strong>Immunoglobulines intraveineuses</strong> — traitement de première intention</td></tr>
-            <tr style="background:#f1f5f9;"><td><strong>Allo-immunisation</strong></td><td>Semaines</td><td>Apparition d'anticorps sans hémolyse immédiate — <strong>complique les transfusions futures</strong> et, chez la femme, les <strong>grossesses futures</strong></td><td>Documenter au dossier · phénotypage étendu préventif dans certaines populations (drépanocytose)</td></tr>
+            <tr><td><strong>⏱️ Délai</strong></td><td>&gt; 24 h<br>médiane <strong>1 à 2 sem</strong></td><td>Jours à semaines</td><td><strong>1 à 3 semaines</strong></td><td>Semaines</td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>🔬 Mécanisme</strong></td><td>Allo-anticorps <strong>réactivé</strong></td><td>Greffe des <strong>lymphocytes du donneur</strong></td><td>Allo-anticorps <strong>antiplaquettaires</strong></td><td>Apparition d&#39;anticorps</td></tr>
+            <tr><td><strong>🚩 Le signe qui alerte</strong></td><td><strong>Hb qui ne monte pas</strong> + ictère</td><td><strong>Pancytopénie</strong> + éruption + foie</td><td><strong>Thrombopénie</strong> + purpura</td><td><strong>Aucun</strong> — découverte au bilan</td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>⚰️ Gravité</strong></td><td>Modérée</td><td>🚨 <strong>Mortalité ≈ 100 %</strong></td><td><strong>Mortalité 10 à 20 %</strong></td><td>Pas de morbidité immédiate</td></tr>
+            <tr><td><strong>💊 Ce qui la règle</strong></td><td>Culots <strong>antigène-négatifs</strong></td><td>🎯 <strong>Irradiation</strong></td><td>🎯 <strong>IgIV</strong></td><td><strong>Documenter</strong> au dossier</td></tr>
           </tbody>
         </table>
         </div>
+        <div class="key-fact ink" style="margin-top:12px;">🧭 <strong>Comment lire ce tableau.</strong> Les quatre se ressemblent par le <strong>délai</strong> — c&#39;est justement le piège — mais elles se séparent nettement sur <strong>ce qui chute</strong> : l&#39;hémoglobine pour la RHR, <strong>toutes les lignées</strong> pour la TA-GvHD, <strong>les plaquettes seules</strong> pour le PPT, et <strong>rien</strong> pour l&#39;allo-immunisation. 🎯 La question à se poser devant une cytopénie tardive n&#39;est donc pas « est-ce transfusionnel ? » mais « <strong>quelle lignée est touchée ?</strong> »</div>
+        </div>
 
-        <div class="key-fact orange" style="margin-top:12px;">⚙️ <strong>Ne pas oublier l'hémolyse non immunologique :</strong> elle n'a rien à voir avec les anticorps. Un produit <strong>réchauffé au-delà de 45 °C</strong>, transfusé par une <strong>aiguille de trop petit calibre</strong>, à travers un <strong>filtre obstrué</strong>, ou <strong>périmé ou mal conservé</strong>, hémolyse mécaniquement. C'est une cause évitable, entièrement liée à la technique. <span style="font-size:11px;color:#64748b;">📚 <em>Guide clinique SCS, ch. 10</em></span></div>
-              <div style="font-size:12px;font-weight:800;color:#4338ca;margin-top:18px;letter-spacing:.4px;">📊 L&#39;ALLO-IMMUNISATION EN CHIFFRES — ELLE DÉPEND ENTIÈREMENT DE LA POPULATION</div>
+        <div id="tsfr1" style="display:none;margin-top:14px;">
+          <div style="background:#e8f4fd;border-left:5px solid #1d4ed8;border-radius:10px;padding:12px 14px;"><strong style="color:#1d4ed8;">🩸 Réaction hémolytique retardée</strong><span style="font-size:12px;color:#64748b;"> — RHR · &gt; 24 h</span><div style="font-size:13px;line-height:1.7;margin-top:6px;">Un <strong>allo-anticorps déjà formé</strong> se réactive et détruit lentement les globules transfusés → l&#39;<strong>hémoglobine ne monte pas</strong>. Beaucoup moins sévère qu&#39;une hémolyse aiguë.</div></div>
         <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:24%;">Axe</th><th style="width:76%;">Ce qu&#39;on observe</th></tr></thead>
+          <tbody>
+            <tr><td><strong>⏱️ Délai</strong></td><td>&gt; 24 h · médiane <strong>1 à 2 semaines</strong></td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>🩺 Tableau clinique</strong></td><td>🎯 <strong>Hémoglobine qui n'augmente pas, ou qui baisse</strong> après transfusion<br>Ictère, fébricule, malaise, dorsalgie · rarement insuffisance rénale<br>Beaucoup <strong>moins sévère</strong> qu'une hémolyse aiguë<br>Allo-anticorps en cause : anti-E, Jk<sup>a</sup>, c, Fy<sup>a</sup>, K</td></tr>
+            <tr><td><strong>💊 Conduite et prévention</strong></td><td>Labo : LDH ↑, haptoglobine ↓, <strong>Coombs direct positif</strong><br><strong>Prévention :</strong> transfuser seulement si nécessaire · <strong>conserver l'historique d'anticorps au dossier</strong> · partage d'information entre banques de sang · culots antigène-négatifs pour l'avenir</td></tr>
+          </tbody>
+        </table>
+        </div>
+        </div>
+
+        <div id="tsfr2" style="display:none;margin-top:14px;">
+          <div style="background:#fce4ec;border-left:5px solid #c0392b;border-radius:10px;padding:12px 14px;"><strong style="color:#c0392b;">🦠 TA-GvHD</strong><span style="font-size:12px;color:#64748b;"> — réaction du greffon contre l&#39;hôte transfusionnelle</span><div style="font-size:13px;line-height:1.7;margin-top:6px;">Les <strong>lymphocytes du donneur</strong> se greffent chez une personne immunosupprimée → <strong>pancytopénie, éruption, atteinte hépatique</strong>. 🚨 <strong>Mortalité proche de 100 %</strong> — d&#39;où une prévention obligatoire, l&#39;<strong>irradiation</strong>.</div></div>
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:24%;">Axe</th><th style="width:76%;">Ce qu&#39;on observe</th></tr></thead>
+          <tbody>
+            <tr><td><strong>⏱️ Délai</strong></td><td>Jours à semaines</td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>🩺 Tableau clinique</strong></td><td>🚨 <strong>Pancytopénie profonde</strong>, éruption érythémateuse ou érythrodermie, atteinte hépatique, symptômes digestifs<br>Greffe des lymphocytes du donneur chez une personne immunosupprimée<br>⚠️ <strong>Mortalité proche de 100 %</strong></td></tr>
+            <tr><td><strong>💊 Conduite et prévention</strong></td><td>🎯 <strong>Prévention par IRRADIATION</strong> des produits cellulaires — c'est la seule stratégie efficace<br><strong>À risque :</strong> déficits immunitaires congénitaux, lymphome de Hodgkin, leucémie aiguë, greffe de cellules souches, produits d'un <strong>proche parent</strong>, produits HLA-compatibles, transfusion intra-utérine</td></tr>
+          </tbody>
+        </table>
+        </div>
+        </div>
+
+        <div id="tsfr3" style="display:none;margin-top:14px;">
+          <div style="background:#fff3cd;border-left:5px solid #d35400;border-radius:10px;padding:12px 14px;"><strong style="color:#d35400;">🟡 Purpura post-transfusionnel</strong><span style="font-size:12px;color:#64748b;"> — PPT · 1 à 3 semaines</span><div style="font-size:13px;line-height:1.7;margin-top:6px;">Des <strong>allo-anticorps antiplaquettaires</strong> — le plus souvent <strong>anti-HPA-1a</strong> — provoquent une <strong>thrombopénie profonde</strong>. Traitement : <strong>IgIV</strong>.</div></div>
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:24%;">Axe</th><th style="width:76%;">Ce qu&#39;on observe</th></tr></thead>
+          <tbody>
+            <tr><td><strong>⏱️ Délai</strong></td><td><strong>1 à 3 semaines</strong></td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>🩺 Tableau clinique</strong></td><td><strong>Thrombopénie profonde</strong> (&lt; 10 × 10⁹/L), purpura, ecchymoses, saignement muqueux<br>Allo-anticorps antiplaquettaires, le plus souvent <strong>anti-HPA-1a</strong><br>⚠️ Mortalité de 10 à 20 % par hémorragie</td></tr>
+            <tr><td><strong>💊 Conduite et prévention</strong></td><td>🎯 <strong>Immunoglobulines intraveineuses</strong> — traitement de première intention</td></tr>
+          </tbody>
+        </table>
+        </div>
+        </div>
+
+        <div id="tsfr4" style="display:none;margin-top:14px;">
+          <div style="background:#f1f5f9;border-left:5px solid #334155;border-radius:10px;padding:12px 14px;"><strong style="color:#334155;">🧬 Allo-immunisation</strong><span style="font-size:12px;color:#64748b;"> — la réaction silencieuse</span><div style="font-size:13px;line-height:1.7;margin-top:6px;">Des anticorps apparaissent <strong>sans hémolyse immédiate</strong> : rien ne se voit sur le moment, mais les <strong>transfusions futures</strong> et, chez la femme, les <strong>grossesses futures</strong> en deviennent plus difficiles.</div></div>
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:24%;">Axe</th><th style="width:76%;">Ce qu&#39;on observe</th></tr></thead>
+          <tbody>
+            <tr><td><strong>⏱️ Délai</strong></td><td>Semaines</td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>🩺 Tableau clinique</strong></td><td>Apparition d'anticorps sans hémolyse immédiate — <strong>complique les transfusions futures</strong> et, chez la femme, les <strong>grossesses futures</strong></td></tr>
+            <tr><td><strong>💊 Conduite et prévention</strong></td><td>Documenter au dossier · phénotypage étendu préventif dans certaines populations (drépanocytose)</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <div style="font-size:12px;font-weight:800;color:#4338ca;margin-top:18px;letter-spacing:.4px;">📊 L&#39;INCIDENCE EN CHIFFRES — ELLE DÉPEND ENTIÈREMENT DE LA POPULATION</div>
+<div style="overflow-x:auto;margin-top:12px;">
         <table style="font-size:12px;">
           <thead><tr><th style="width:30%;">Population</th><th style="width:70%;">Incidence d&#39;allo-immunisation</th></tr></thead>
           <tbody>
@@ -31933,7 +32123,12 @@ function switchAodInd(n) {
         </table>
         </div>
         <div class="key-fact ink" style="margin-top:12px;">⏱️ <strong>La chronologie, et pourquoi elle explique les deux réactions.</strong> L&#39;<strong>allo-immunisation primaire</strong> prend <strong>3 semaines à 3 mois</strong> et reste <strong>asymptomatique</strong> — c&#39;est la première exposition, celle qui ne se voit pas. La <strong>réaction hémolytique retardée</strong>, elle, est une <strong>réactivation ou réapparition d&#39;un anticorps déjà formé</strong> : elle survient en <strong>3 à 14 jours</strong>, avec ou sans <strong>hémolyse extravasculaire</strong> (IgG). 🎯 D&#39;où la conclusion pratique : <strong>c&#39;est l&#39;historique d&#39;anticorps au dossier qui protège</strong>, pas la recherche d&#39;anticorps du jour. <span style="font-size:11px;color:#64748b;">📚 <em>Lemay, cours IPSSA — Réactions transfusionnelles et consentement, Banque de sang du CHUM, 2026</em></span></div>
+        </div>
+
+
+        <div class="key-fact orange" style="margin-top:12px;">⚙️ <strong>Ne pas oublier l'hémolyse non immunologique :</strong> elle n'a rien à voir avec les anticorps. Un produit <strong>réchauffé au-delà de 45 °C</strong>, transfusé par une <strong>aiguille de trop petit calibre</strong>, à travers un <strong>filtre obstrué</strong>, ou <strong>périmé ou mal conservé</strong>, hémolyse mécaniquement. C'est une cause évitable, entièrement liée à la technique. <span style="font-size:11px;color:#64748b;">📚 <em>Guide clinique SCS, ch. 10</em></span></div>
       </div>
+
 
 
 
@@ -61245,7 +61440,7 @@ function showPanel(prefix,activeId,count){
   document.querySelectorAll('[data-panel]').forEach(function(b){
     if(b.getAttribute('data-panel').startsWith(prefix)){
       var on=b.getAttribute('data-panel')===activeId;
-      var colorMap={'tx':'#0a7a4e','atx':'#065f46','vp':'#1e7a6b','mii-tx':'#0a7a4e','mii-cr':'#0a7a4e','pk-tx':'#7c3aed','hta-tx':'#0a7a4e','ugdd':'#0369a1','frg':'#b45309','spx':'#7c3aed','rds':'#0369a1','gu':'#0f766e','lax':'#0a7a4e','somdx':'#0e7490','mpg':'#1e40af','cde':'#b91c1c','chp':'#0f766e','grl':'#374151','tnctyp':'#6d28d9','evcog':'#b45309','dlrx':'#c0392b','htorx':'#0f766e','miidx':'#0e7490','tvt':'#7c3aed'};var col=colorMap[prefix]||'#c0392b';
+      var colorMap={'tx':'#0a7a4e','atx':'#065f46','vp':'#1e7a6b','mii-tx':'#0a7a4e','mii-cr':'#0a7a4e','pk-tx':'#7c3aed','hta-tx':'#0a7a4e','ugdd':'#0369a1','frg':'#b45309','spx':'#7c3aed','rds':'#0369a1','gu':'#0f766e','lax':'#0a7a4e','somdx':'#0e7490','mpg':'#1e40af','cde':'#b91c1c','chp':'#0f766e','grl':'#374151','tnctyp':'#6d28d9','evcog':'#b45309','dlrx':'#c0392b','htorx':'#0f766e','miidx':'#0e7490','tvt':'#7c3aed','tsfr':'#4338ca','tsfa':'#0f766e','tsfc':'#c2410c','tsfp':'#b91c1c','tsfg':'#374151'};var col=colorMap[prefix]||'#c0392b';
       b.style.background=on?col:'#e0e0e0';
       b.style.color=on?'#fff':'#333';
     }

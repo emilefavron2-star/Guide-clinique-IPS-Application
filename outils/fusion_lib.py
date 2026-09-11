@@ -93,8 +93,10 @@ def kf(couleur, contenu, mt=12):
 
 
 def titre_bloc(bid, tag, obj):
-    return ('        <div class="block-title" id="%s"><span class="tag">%s</span>'
-            '<span class="obj-badge">%s</span></div>\n' % (bid, tag, obj))
+    """obj=None → pas de pastille d'objectif (sections hors APP)."""
+    badge = '<span class="obj-badge">%s</span>' % obj if obj else ''
+    return ('        <div class="block-title" id="%s"><span class="tag">%s</span>%s</div>\n'
+            % (bid, tag, badge))
 
 
 def fusionner(c, garde, absorbe, ouverture, tag, obj, corps):
@@ -138,6 +140,49 @@ def nav_relibeller(c, section, bid, libelle):
     assert m, 'bouton %s introuvable' % bid
     seg = seg[:m.start(2)] + libelle + seg[m.end(2):]
     return c[:a] + seg + c[b:]
+
+
+def pills(prefixe, couleur, onglets):
+    """Système d'onglets conforme aux règles #7, #17 et #23.
+
+    onglets = [(libellé, corps, bandeau_ou_None)] — le premier est affiché
+    par défaut. `bandeau` = (pastel, encre, sous-titre, résumé) ou None.
+    """
+    n = len(onglets)
+    h = ['        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;">\n']
+    for k, (lib, _, _) in enumerate(onglets):
+        fond = ('background:%s;color:#fff;' % couleur) if k == 0 else 'background:#e0e0e0;color:#333;'
+        h.append('          <button data-panel="%s%d" onclick="showPanel(\'%s\',\'%s%d\',%d)" '
+                 'style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;'
+                 'font-weight:600;transition:.15s;%s">%s</button>\n' % (prefixe, k, prefixe, prefixe, k, n, fond, lib))
+    h.append('        </div>\n\n')
+    for k, (lib, corps, bandeau) in enumerate(onglets):
+        h.append('        <div id="%s%d" style="display:%s;margin-top:14px;">\n'
+                 % (prefixe, k, 'block' if k == 0 else 'none'))
+        if bandeau:
+            pastel, encre, sous, resume = bandeau
+            h.append('          <div style="background:%s;border-left:5px solid %s;border-radius:10px;padding:12px 14px;">'
+                     '<strong style="color:%s;">%s</strong>'
+                     '<span style="font-size:12px;color:#64748b;"> — %s</span>'
+                     '<div style="font-size:13px;line-height:1.7;margin-top:6px;">%s</div></div>\n'
+                     % (pastel, encre, encre, lib, sous, resume))
+        h.append(corps)
+        h.append('        </div>\n\n')
+    return ''.join(h)
+
+
+def colormap(c, prefixe, couleur):
+    """Ajoute le préfixe et sa couleur au colorMap de showPanel()."""
+    m = re.search(r"(colorMap\s*=\s*\{.*?)\}", c, re.S)
+    assert m, 'colorMap introuvable'
+    assert "'%s':" % prefixe not in m.group(1), 'préfixe déjà au colorMap'
+    return c[:m.end(1)] + ",'%s':'%s'" % (prefixe, couleur) + c[m.end(1):]
+
+
+def prefixe_libre(c, prefixe):
+    """Vrai si aucun préfixe existant ne collisionne (showPanel filtre par startsWith)."""
+    autres = set(re.findall(r"showPanel\('([a-zA-Z0-9\-]+)'", c))
+    return not [p for p in autres if p != prefixe and (p.startswith(prefixe) or prefixe.startswith(p))]
 
 
 MOTS = re.compile(r"[0-9A-Za-zÀ-ÿ']{4,}")
