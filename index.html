@@ -31762,8 +31762,15 @@ function switchAodInd(n) {
 
         <div class="key-fact red" style="margin-top:10px;">🚨 <strong>Pourquoi cette distinction est capitale :</strong> les deux donnent une <strong>dyspnée avec œdème pulmonaire bilatéral</strong> pendant ou après une transfusion. Mais le <strong>TACO se traite par diurétiques</strong>, alors que <strong>dans le TRALI la diurèse n'est pas indiquée</strong> — elle peut aggraver une personne déjà hypotendue. Se tromper de diagnostic, c'est se tromper de traitement. <span style="font-size:11px;color:#64748b;">📚 <em>Guide clinique SCS, ch. 10</em></span></div>
 
-        
-        <div style="font-size:12px;font-weight:800;color:#7c3aed;margin-top:18px;letter-spacing:.4px;">⚖️ TACO OU TRALI — LA COMPARAISON QUI TRANCHE</div>
+        <div class="key-fact ink" style="margin-top:10px;">🧭 <strong>Comment se servir de cet encadré.</strong> L&#39;onglet <strong>⚖️ Comparer</strong> sert au moment du diagnostic — c&#39;est là que se trouvent le schéma, le tableau qui tranche et le modèle « two-hit ». Les onglets <strong>💧 TACO</strong> et <strong>🫁 TRALI</strong> servent ensuite : critères, chiffres, conduite et prévention de chacun.</div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;">
+          <button data-panel="tvt0" onclick="showPanel('tvt','tvt0',3)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#7c3aed;color:#fff;">⚖️ Comparer</button>
+          <button data-panel="tvt1" onclick="showPanel('tvt','tvt1',3)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">💧 TACO</button>
+          <button data-panel="tvt2" onclick="showPanel('tvt','tvt2',3)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">🫁 TRALI</button>
+        </div>
+
+        <div id="tvt0" style="display:block;margin-top:4px;">
+<div style="font-size:12px;font-weight:800;color:#7c3aed;margin-top:18px;letter-spacing:.4px;">⚖️ TACO OU TRALI — LA COMPARAISON QUI TRANCHE</div>
         <div style="background:#0f172a;border-radius:10px;padding:14px;margin-top:12px;">
           <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#94a3b8;margin-bottom:8px;">Schéma &mdash; deux œdèmes pulmonaires, deux mécanismes opposés</div>
           <svg viewBox="0 0 620 250" style="width:100%;height:auto;" role="img" aria-label="TACO surcharge volemique contre TRALI lesion pulmonaire">
@@ -31829,7 +31836,11 @@ function switchAodInd(n) {
         </table>
         </div>
         <div class="key-fact ink" style="margin-top:12px;">🧭 <strong>Ce que ce modèle change en pratique.</strong> Les deux réactions exigent <strong>un terrain</strong> ET <strong>une transfusion</strong>. Le corollaire est inconfortable mais utile : dans le TACO, le deuxième coup est <strong>évitable</strong> — c&#39;est une prévention qui n&#39;a pas été faite. <span style="font-size:11px;color:#64748b;">📚 <em>Semple, Blood 2019 · Vlaar, Lancet 2013</em></span> <span style="font-size:11px;color:#64748b;">📚 <em>Lemay, cours IPSSA — Réactions transfusionnelles et consentement, Banque de sang du CHUM, 2026</em></span></div>
-        <div style="font-size:12px;font-weight:800;color:#7c3aed;margin-top:18px;letter-spacing:.4px;">📋 LA DÉFINITION DU TACO — ISBT 2018, EN VIGUEUR DEPUIS JANVIER 2020</div>
+                </div>
+
+        <div id="tvt1" style="display:none;margin-top:14px;">
+          <div style="background:#e8f4fd;border-left:5px solid #1d4ed8;border-radius:10px;padding:12px 14px;"><strong style="color:#1d4ed8;">💧 TACO</strong><span style="font-size:12px;color:#64748b;"> — surcharge circulatoire post-transfusionnelle</span><div style="font-size:13px;line-height:1.7;margin-top:6px;"><strong>Trop de volume</strong> dans un circuit qui ne peut l&#39;absorber → ↑ <strong>pression hydrostatique</strong> → œdème <strong>cardiogénique</strong> → 🎯 <strong>diurétiques</strong>, et surtout <strong>prévention</strong>.</div></div>
+<div style="font-size:12px;font-weight:800;color:#7c3aed;margin-top:18px;letter-spacing:.4px;">📋 LA DÉFINITION DU TACO — ISBT 2018, EN VIGUEUR DEPUIS JANVIER 2020</div>
         <div class="criteria-list" style="margin-top:10px;">
           <div class="criteria-item"><div class="criteria-num blue">1</div><span><strong>Nouvelle détresse respiratoire ou aggravation d&#39;une détresse existante</strong> — <strong>dyspnée, tachypnée, cyanose, baisse de la saturation</strong>, éventuellement bronchospasme ou <em>wheezing</em>.</span></div>
           <div class="criteria-item"><div class="criteria-num blue">2</div><span><strong>Évidence d&#39;œdème pulmonaire aigu ou aggravé</strong>, <strong>clinique</strong> (râles, crépitants, <strong>orthopnée</strong>, <strong>B3</strong>, toux, <strong>expectorations mousseuses et rosées</strong>) <strong>et/ou radiologique</strong> (imagerie pulmonaire ou examen cardiaque non invasif comme l&#39;échographie).</span></div>
@@ -31848,14 +31859,21 @@ function switchAodInd(n) {
         </div>
         <div class="key-fact green" style="margin-top:12px;">🛡️ <strong>La prévention du TACO, en six gestes</strong> — et c&#39;est la réaction grave la plus fréquente <strong>qu&#39;on peut prévenir</strong> : ① <strong>éviter les ordres verbaux</strong>, sauf en contexte d&#39;urgence · ② <strong>attitude restrictive</strong> — chercher une <strong>alternative à la transfusion</strong> · ③ <strong>transfuser de jour</strong> · ④ <strong>un culot à la fois</strong> en l&#39;absence de saignement · ⑤ envisager un <strong>débit lent, sur 3 à 3 h 30</strong> · ⑥ <strong>diurétiques AVANT la transfusion</strong> · ⑦ et la règle qui les résume toutes : <strong>ne transfuser que ce qui est nécessaire</strong>, puis <strong>réévaluer</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Lemay, cours IPSSA — Réactions transfusionnelles et consentement, Banque de sang du CHUM, 2026</em></span></div>
         <div class="key-fact red" style="margin-top:10px;">💧 <strong>Le détail qui change tout sur les diurétiques prophylactiques :</strong> ils se donnent <strong>AVANT</strong> la transfusion chez les patients à facteurs de risque — ⛔ <strong>pas après</strong>, ⛔ <strong>pas à mi-culot</strong>, ⛔ <strong>pas entre les culots</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Alam, Transfus Med Rev 2013 · Lin, Vox Sang 2018</em></span></div>
-        <div style="font-size:12px;font-weight:800;color:#7c3aed;margin-top:18px;letter-spacing:.4px;">🫁 TRALI — LE MÉCANISME, ET CE QUE ÇA COÛTE</div>
+                </div>
+
+        <div id="tvt2" style="display:none;margin-top:14px;">
+          <div style="background:#fef2f2;border-left:5px solid #c0392b;border-radius:10px;padding:12px 14px;"><strong style="color:#c0392b;">🫁 TRALI</strong><span style="font-size:12px;color:#64748b;"> — lésion pulmonaire aiguë liée à la transfusion</span><div style="font-size:13px;line-height:1.7;margin-top:6px;"><strong>Terrain inflammatoire</strong> + <strong>anticorps du plasma du donneur</strong> → <strong>fuite capillaire</strong> → œdème <strong>non cardiogénique</strong> → 🎯 <strong>soutien respiratoire</strong>, ⛔ <strong>pas de diurèse</strong>.</div></div>
+<div style="font-size:12px;font-weight:800;color:#7c3aed;margin-top:18px;letter-spacing:.4px;">🫁 TRALI — LE MÉCANISME, ET CE QUE ÇA COÛTE</div>
         <div class="key-fact purple" style="margin-top:12px;">🔬 <strong>La cascade.</strong> <strong>Inflammation</strong> → <strong>agrégation, séquestration et activation des neutrophiles dans la microvascularisation pulmonaire</strong> → <strong>dommages endothéliaux</strong> → <strong>augmentation de la perméabilité et fuite capillaire</strong>. 🎯 <strong>Plus de 80 % des cas</strong> sont causés par le <strong>transfert d&#39;anticorps présents dans le plasma du donneur</strong> vers le receveur : <strong>anti-HLA de classe II plus que de classe I</strong>, et <strong>anti-HNA</strong> (antigènes des neutrophiles humains).<br>🚑 <strong>Prise en charge :</strong> <strong>cesser la transfusion</strong> · <strong>oxygène</strong> · <strong>diurétiques dans le doute</strong>, puisqu&#39;on traite alors comme un TACO · 🚨 la <strong>ventilation mécanique est nécessaire dans 70 à 90 % des cas</strong>. 📄 <strong>Formulaire AH-520</strong> et <strong>aviser Héma-Québec</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Lemay, cours IPSSA — Réactions transfusionnelles et consentement, Banque de sang du CHUM, 2026</em></span></div>
         <div style="background:#f0fdf4;border-radius:10px;padding:14px;border-left:4px solid #15803d;margin-top:12px;">
             <strong style="color:#15803d;">📉 Le TRALI recule</strong>
             <div style="font-size:13px;line-height:1.7;margin-top:8px;">Son incidence a <strong>nettement diminué</strong> depuis que le plasma et les plaquettes proviennent de <strong>donneurs masculins, de femmes nullipares ou de donneuses sans anticorps anti-HLA</strong> — puisque la grossesse est la principale source d'immunisation anti-HLA. 🍁 <strong>Au Québec depuis 2008</strong> : utilisation <strong>exclusive de donneurs masculins et de femmes sans antécédent de grossesse</strong> pour préparer les <strong>plaquettes et le plasma frais congelé</strong> — le Royaume-Uni l&#39;avait fait en 2003, les États-Unis en 2007. 🎯 Résultat mesuré : <strong>réduction du risque de TRALI, rapport de cotes 0,27</strong> (IC 95 % 0,20-0,38) <span style="font-size:11px;color:#64748b;">📚 <em>Schmickl, Crit Care Med 2015</em></span><br>🔢 Et le résultat local : <strong>2 cas de TRALI de type I et 12 cas de type II</strong> déclarés au système d&#39;hémovigilance du Québec <strong>de 2013 à 2022</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Lemay, cours IPSSA — Réactions transfusionnelles et consentement, Banque de sang du CHUM, 2026</em></span> <span style="font-size:11px;color:#64748b;">📚 <em>Goldman, ch. 167</em></span><br><br>💡 Un bel exemple de mesure de sécurité fondée sur le mécanisme.</div>
           </div>
 
+              </div>
+
       </div>
+
 
       <div class="block clin" style="margin-top:14px;border-left-color:#0f766e;">
         <div class="block-title" id="tsf-6"><span class="tag">🤧 Réactions allergiques &amp; hypotension</span></div>
@@ -61227,7 +61245,7 @@ function showPanel(prefix,activeId,count){
   document.querySelectorAll('[data-panel]').forEach(function(b){
     if(b.getAttribute('data-panel').startsWith(prefix)){
       var on=b.getAttribute('data-panel')===activeId;
-      var colorMap={'tx':'#0a7a4e','atx':'#065f46','vp':'#1e7a6b','mii-tx':'#0a7a4e','mii-cr':'#0a7a4e','pk-tx':'#7c3aed','hta-tx':'#0a7a4e','ugdd':'#0369a1','frg':'#b45309','spx':'#7c3aed','rds':'#0369a1','gu':'#0f766e','lax':'#0a7a4e','somdx':'#0e7490','mpg':'#1e40af','cde':'#b91c1c','chp':'#0f766e','grl':'#374151','tnctyp':'#6d28d9','evcog':'#b45309','dlrx':'#c0392b','htorx':'#0f766e','miidx':'#0e7490'};var col=colorMap[prefix]||'#c0392b';
+      var colorMap={'tx':'#0a7a4e','atx':'#065f46','vp':'#1e7a6b','mii-tx':'#0a7a4e','mii-cr':'#0a7a4e','pk-tx':'#7c3aed','hta-tx':'#0a7a4e','ugdd':'#0369a1','frg':'#b45309','spx':'#7c3aed','rds':'#0369a1','gu':'#0f766e','lax':'#0a7a4e','somdx':'#0e7490','mpg':'#1e40af','cde':'#b91c1c','chp':'#0f766e','grl':'#374151','tnctyp':'#6d28d9','evcog':'#b45309','dlrx':'#c0392b','htorx':'#0f766e','miidx':'#0e7490','tvt':'#7c3aed'};var col=colorMap[prefix]||'#c0392b';
       b.style.background=on?col:'#e0e0e0';
       b.style.color=on?'#fff':'#333';
     }
