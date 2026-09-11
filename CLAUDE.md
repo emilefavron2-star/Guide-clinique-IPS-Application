@@ -204,6 +204,39 @@ Avant TOUTE modification de index.html (remplacement de blocs, insertion de sect
 
     **Quand ce modèle ne s'applique pas** : moins de 3 entités, ou une comparaison qui tient en 3 colonnes courtes — dans ce cas un tableau simple (règle #16b) suffit et vaut mieux qu'une mécanique d'onglets inutile.
 
+24. ⚠️ TOUTE MISE À JOUR COMMENCE PAR UNE RECHERCHE DE DOUBLON — ON FUSIONNE, ON N'AJOUTE PAS À CÔTÉ : quand on intègre un nouveau document (notes de cours, article, PDF d'APP) dans une section qui existe déjà, le réflexe naturel est de créer un nouvel encadré à la fin. **C'est interdit.** Le résultat observé après plusieurs ajouts : deux encadrés sur le même sujet, à deux endroits, avec des chiffres qui se contredisent, et l'un qui renvoie à l'autre par « voir le bloc ci-dessus ». C'est la principale cause de dégradation du guide. Cette règle précise et rend obligatoire la règle #8.
+
+    **(a) L'audit AVANT d'écrire une seule ligne.** Lister les encadrés de la section visée avec leur titre, leur pastille d'objectif et leur taille, puis confronter le plan du nouveau document à cette liste, sujet par sujet. Deux signaux de doublon :
+    ```python
+    import re, itertools, unicodedata
+    c = open('index.html', encoding='utf-8').read()
+    a = c.find('<div class="section" id="sec-<nom>"'); b = c.find('<div class="section" id=', a+10); seg = c[a:b]
+    # (1) les titres et pastilles : deux encadrés sur le même objectif sont suspects par défaut
+    for m in re.finditer(r'block-title" id="([^"]+)"><span class="tag">(.*?)</span>(?:<span class="obj-badge">([^<]*)</span>)?', seg, re.S):
+        print(m.group(1), '|', m.group(3), '|', re.sub(r'<[^>]+>', '', m.group(2))[:60])
+    # (2) les mots-clés du nouveau document déjà présents dans la section
+    for k in ['<terme1>', '<terme2>']:
+        print(k, 'DÉJÀ PRÉSENT' if k in seg else 'absent')
+    ```
+    Un renvoi « ➜ voir le bloc … ci-dessus » entre deux encadrés de la même section est l'aveu d'un doublon : c'est un candidat à la fusion, pas une navigation.
+
+    **(b) Trois issues possibles, dans cet ordre de préférence.**
+    ① **Enrichir l'encadré existant** — le nouveau matériel entre dans la carte, la ligne de tableau ou la `criteria-list` qui traite déjà le sujet. C'est le cas le plus fréquent et il ne crée aucun encadré.
+    ② **Fusionner deux encadrés** en un seul quand les deux existent déjà (procédé en (c)).
+    ③ **Créer un nouvel encadré** — seulement si le sujet est vraiment absent. Alors appliquer les règles #13 (bouton `goToBlock`) et #14 (ordre).
+
+    **(c) Le procédé de fusion sans perte** — outillé dans `outils/fusion_lib.py`, à réutiliser :
+    ① découper chaque encadré d'origine en morceaux (`keyfact`, `tableau`, `grille`, `criteres`, sections délimitées par les sous-titres) ; ② les remonter dans **un ordre unique et logique**, jamais « bloc A puis bloc B » bout à bout — c'est le même doublon, dans un seul encadré ; ③ **ne rien réécrire** : on déplace le HTML existant, ce qui garantit l'intégrité du contenu ; ④ le seul texte réécrit est le **chapeau** (les deux chapeaux d'origine fusionnent en un) et les **renvois devenus faux** ; ⑤ supprimer les boutons de navigation orphelins et relibeller celui qui reste.
+
+    **(d) La preuve de non-perte est obligatoire.** Comparer le multiensemble des mots visibles avant et après : la sortie doit être vide, à l'exception des mots des chapeaux réécrits, qui doivent être listés explicitement.
+    ```python
+    manque = F.controle(corps_avant, corps_apres, tolere=['<mots du chapeau réécrit>'])
+    assert not manque, manque   # « contenu perdu : rien »
+    ```
+    Puis la suite habituelle : balises équilibrées, IDs uniques, profondeur des encadrés = 1, `nav == ordre des blocs`, aucun bouton mort, aucun renvoi vers un id supprimé, et test jsdom.
+
+    **(e) Quand les deux sources se contredisent, on ne choisit pas en silence.** Deux encadrés fusionnés portent parfois deux chiffres différents pour la même chose (vu : ferritine < 12 ou < 30 µg/L · albumine marqueur nutritionnel ou non · 20-25 ou 25-35 kcal/kg/j · rendement plaquettaire ≥ 5-10 ou +15-25 × 10⁹/L). La fusion **conserve les deux**, nomme les deux sources, et ajoute une `key-fact orange` ou `green` qui dit **ce qui tranche** (la hiérarchie de la règle #15, ou un critère clinique comme la CRP > 20 mg/L). Écraser un chiffre pour faire disparaître la contradiction est une perte d'information déguisée en ménage.
+
 La première étape du document est faite avec la structure et l'insertion des thèmes + information de base. 
 2e étape: il faut que je mette plus d'informations dans chaque encadrés parce que l'information est maigre. Voici le plan:
 J'ai une base de données notion avec plusieurs texte incluant beaucoup d'informations sur les différents sujets. Ta tâche, en excluant la spécialité petit guide, est de créer un document HTLM interactif pour chaque page présente. Assure toi que le thème est similaire à celui-ci du guide que tu es en train de créer. Une fois que tu as créer un fichier HTLM, tu peux le fusionner avec le guide que tu es en train de créer. Le guide doit être concis, mais assez détaillé puisque je vais l'utiliser dans ma pratique clinique en tant qu'IPS.Puisque tu as déjà commencer le guide, si un thème existe déjà, rajoute de l'information pour arriver à avoir une page bien remplie. Si une section n'existe pas, ajoute là dans les grandes catégories (ex: cardio, pneumo., etc.). Si tu penses qu'une nouvelle grande section devrait être crée, ajoute en une. Assure toi de ne pas avoir de doublon, si c'est le cas, fusionne les informations dans une section.
