@@ -43437,7 +43437,17 @@ function switchEpiTx(n) {
 
         <div class="key-fact ink" style="margin-top:10px;">🎯 <strong>La définition — et l&#39;honnêteté sur ce qu&#39;elle vaut.</strong> <strong>Il n&#39;existe pas de définition universelle de la dénutrition protéino-énergétique.</strong> La plupart des auteurs emploient l&#39;expression <strong>malnutrition protéino-énergétique (MPE)</strong> pour la dénutrition observée <em>au cours de l&#39;hospitalisation</em>, et les études utilisent rarement les mêmes paramètres. Ce qu&#39;on peut dire : la MPE correspond à un <strong>apport inadéquat d&#39;énergie et de protéines pour les besoins corporels</strong>. Elle <strong>peut être renversée par un soutien nutritionnel</strong> — mais on ne peut pas espérer contrecarrer un état grave en <strong>4 ou 5 jours</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Lizotte et Fleury, Le Médecin du Québec 2004</em></span></div>
 
-        <div style="font-size:12px;font-weight:800;color:#b45309;margin-top:18px;letter-spacing:.4px;">📊 LES CHIFFRES QUI DEVRAIENT CHANGER LA PRATIQUE — ET POURQUOI ELLE PASSE INAPERÇUE</div>
+        <div class="key-fact ink" style="margin-top:10px;">🧭 <strong>Cinq entrées, selon ce qui vous amène.</strong> <strong>📊 Les chiffres</strong> pour savoir à quel point c&#39;est fréquent et pourquoi ça passe inaperçu · <strong>⚖️ Reconnaître</strong> pour les seuils et l&#39;examen · <strong>🔤 D.I.E.T.</strong> pour dépister en quatre questions · <strong>🚩 Le terrain</strong> pour savoir chez qui y penser dès l&#39;urgence · <strong>🔬 Les mécanismes</strong> pour comprendre pourquoi la maladie dénutrit.</div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;">
+          <button data-panel="ndnt0" onclick="showPanel('ndnt','ndnt0',5)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#b45309;color:#fff;">📊 Les chiffres</button>
+          <button data-panel="ndnt1" onclick="showPanel('ndnt','ndnt1',5)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">⚖️ Reconnaître</button>
+          <button data-panel="ndnt2" onclick="showPanel('ndnt','ndnt2',5)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">🔤 Le D.I.E.T.</button>
+          <button data-panel="ndnt3" onclick="showPanel('ndnt','ndnt3',5)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">🚩 Le terrain</button>
+          <button data-panel="ndnt4" onclick="showPanel('ndnt','ndnt4',5)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">🔬 Les mécanismes</button>
+        </div>
+
+        <div id="ndnt0" style="display:block;margin-top:14px;">
+<div style="font-size:12px;font-weight:800;color:#b45309;margin-top:18px;letter-spacing:.4px;">📊 LES CHIFFRES QUI DEVRAIENT CHANGER LA PRATIQUE — ET POURQUOI ELLE PASSE INAPERÇUE</div>
 
         <div class="key-fact red" style="margin-top:10px;">🎯 <strong>Le chiffre qui devrait changer la pratique :</strong> jusqu'à <strong>40 % des personnes hospitalisées</strong> présentent une <strong>dénutrition protéino-énergétique</strong> — perte de masse musculaire squelettique et de masse grasse, liée à une maladie aiguë ou chronique. C'est un diagnostic <strong>fréquent et pourtant régulièrement omis</strong>, parce qu'on ne le cherche pas. <span style="font-size:11px;color:#64748b;">📚 <em>Goldman-Cecil, 26<sup>e</sup> éd., ch. 204</em></span></div>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin-top:10px;">
@@ -43447,7 +43457,11 @@ function switchEpiTx(n) {
         </div>
         <div class="key-fact red" style="margin-top:12px;">🧠 <strong>La spirale à comprendre.</strong> La MPE est un processus qui, <strong>jumelé à la maladie du patient, accélère la perte d&#39;autonomie</strong>. Et cette perte d&#39;autonomie grandissante <strong>augmente à son tour la MPE</strong>. D&#39;où l&#39;impératif : <strong>dépister chez TOUS les patients hospitalisés</strong> pour agir tôt, et <strong>prioriser l&#39;évaluation par une diététiste-nutritionniste dans un délai de 48 à 72 heures</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Lizotte et Fleury, Le Médecin du Québec 2004</em></span></div>
 
-        <div style="font-size:12px;font-weight:800;color:#b45309;margin-top:18px;letter-spacing:.4px;">⚖️ QUAND LA SUSPECTER — LES TROIS SEUILS</div>
+                </div>
+
+        <div id="ndnt1" style="display:none;margin-top:14px;">
+          <div style="background:#fce4ec;border-left:5px solid #c0392b;border-radius:10px;padding:12px 14px;"><strong style="color:#c0392b;">⚖️ Reconnaître</strong><span style="font-size:12px;color:#64748b;"> — les seuils, la perte de poids, l&#39;examen</span><div style="font-size:13px;line-height:1.7;margin-top:6px;">Trois seuils, un tableau de quantification de la perte de poids, et ce qu&#39;on cherche à l&#39;examen. ⚠️ Et les <strong>deux pièges du poids</strong> : l&#39;œdème masque la fonte musculaire, et un <strong>IMC normal ne permet pas d&#39;écarter</strong> la dénutrition.</div></div>
+<div style="font-size:12px;font-weight:800;color:#b45309;margin-top:18px;letter-spacing:.4px;">⚖️ QUAND LA SUSPECTER — LES TROIS SEUILS</div>
 <div class="criteria-list">
           <div class="criteria-item"><div class="criteria-num red">1</div><span>🎯 <strong>Perte de poids involontaire de 5 à 10 % ou plus</strong> du poids habituel, sur quelques semaines à quelques mois</span></div>
           <div class="criteria-item"><div class="criteria-num blue">2</div><span><strong>Poids inférieur à 90 % du poids idéal</strong></span></div>
@@ -43468,7 +43482,15 @@ function switchEpiTx(n) {
         </div>
         <div class="key-fact yellow" style="margin-top:12px;">⚠️ <strong>Deux pièges du poids.</strong> Le poids inclut à la fois les masses <strong>adipeuse, musculaire, hydrique et osseuse</strong> — seules les <strong>deux premières</strong> sont en cause dans la MPE. Conséquence : <strong>même en présence d&#39;un gain de poids ou d&#39;un poids stable, on ne peut pas écarter la MPE</strong>, car l&#39;<strong>œdème peut masquer une perte importante de masse musculaire</strong>. Et un <strong>IMC normal ne permet pas à lui seul de statuer</strong> sur l&#39;état nutritionnel : <strong>même une personne obèse peut être dénutrie</strong>. ➜ Le poids doit être pris <strong>dès l&#39;hospitalisation, puis chaque semaine</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Lizotte et Fleury, Le Médecin du Québec 2004</em></span></div>
 
-        <div style="font-size:12px;font-weight:800;color:#b45309;margin-top:18px;letter-spacing:.4px;">🔤 LE D.I.E.T. — QUATRE QUESTIONS POUR DÉPISTER</div>
+        <div style="font-size:12px;font-weight:800;color:#b45309;margin-top:18px;letter-spacing:.4px;">👁️ CE QU&#39;ON CHERCHE À L&#39;EXAMEN</div>
+
+        <div class="key-fact blue" style="margin-top:10px;">🔎 De nombreux signes sont décrits, associés à des carences particulières. <strong>En pratique, on retiendra</strong> : la <strong>pâleur cutanée</strong> · des <strong>cheveux secs, cassants ou absents</strong> · une <strong>mauvaise dentition</strong>, une parodontie, une gingivite, une <strong>perlèche</strong> · une <strong>perte de graisse sous-cutanée brachiale et abdominale</strong> · une <strong>fonte musculaire diffuse</strong> · des <strong>lésions ou marques de friction aux points d&#39;appui</strong> · des <strong>plaies qui tardent à guérir</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Lizotte et Fleury, Le Médecin du Québec 2004</em></span></div>
+
+                </div>
+
+        <div id="ndnt2" style="display:none;margin-top:14px;">
+          <div style="background:#e8f4fd;border-left:5px solid #1d4ed8;border-radius:10px;padding:12px 14px;"><strong style="color:#1d4ed8;">🔤 Le D.I.E.T.</strong><span style="font-size:12px;color:#64748b;"> — quatre questions pour dépister</span><div style="font-size:13px;line-height:1.7;margin-top:6px;"><strong>D</strong>iminution de poids · <strong>I</strong>ncapacité à s&#39;alimenter seul · <strong>E</strong>nvironnement défavorisé · <strong>T</strong>ractus digestif altéré. ⚠️ Aucun outil unique et universel n&#39;existe : le diagnostic repose sur un <strong>quadripode</strong>.</div></div>
+<div style="font-size:12px;font-weight:800;color:#b45309;margin-top:18px;letter-spacing:.4px;">🔤 LE D.I.E.T. — QUATRE QUESTIONS POUR DÉPISTER</div>
 <div class="criteria-list" style="margin-top:10px;">
           <div class="criteria-item"><div class="criteria-num blue">1</div><span><strong>D — Diminution non volontaire récente du poids ?</strong> 🎯 C&#39;est <strong>l&#39;élément primordial</strong> pour déceler la MPE.</span></div>
           <div class="criteria-item"><div class="criteria-num blue">2</div><span><strong>I — Incapacité à s&#39;alimenter seul ?</strong></span></div>
@@ -43476,14 +43498,22 @@ function switchEpiTx(n) {
           <div class="criteria-item"><div class="criteria-num blue">4</div><span><strong>T — Tractus digestif altéré ?</strong></span></div>
           <div class="criteria-item"><div class="criteria-num red">!</div><span><strong>Le diagnostic repose sur un quadripode</strong> : l&#39;<strong>anamnèse</strong>, l&#39;<strong>examen clinique</strong>, les <strong>paramètres physiques</strong> et certaines <strong>épreuves de laboratoire</strong>. ⚠️ Malgré de nombreuses études, <strong>il n&#39;existe aucun outil simple, unique et universel</strong> ayant une sensibilité et une spécificité suffisantes. <span style="font-size:11px;color:#64748b;">📚 <em>Lizotte et Fleury, Le Médecin du Québec 2004</em></span></span></div>
         </div>
-        <div style="font-size:12px;font-weight:800;color:#b45309;margin-top:18px;letter-spacing:.4px;">🚩 LES CONDITIONS QUI DOIVENT FAIRE PENSER À LA MPE DÈS L&#39;URGENCE</div>
+                </div>
+
+        <div id="ndnt3" style="display:none;margin-top:14px;">
+          <div style="background:#f1f5f9;border-left:5px solid #334155;border-radius:10px;padding:12px 14px;"><strong style="color:#334155;">🚩 Le terrain</strong><span style="font-size:12px;color:#64748b;"> — chez qui y penser dès l&#39;urgence</span><div style="font-size:13px;line-height:1.7;margin-top:6px;">Quatre familles de facteurs — <strong>socio-économiques, physiques, maladies actives, psychologiques</strong> — qui se cumulent souvent chez la même personne.</div></div>
+<div style="font-size:12px;font-weight:800;color:#b45309;margin-top:18px;letter-spacing:.4px;">🚩 LES CONDITIONS QUI DOIVENT FAIRE PENSER À LA MPE DÈS L&#39;URGENCE</div>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin-top:10px;">
           <div style="background:#f1f5f9;border-left:4px solid #334155;border-radius:10px;padding:14px;"><strong style="color:#334155;">🏠 Socio-économiques et environnementales</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">Personne <strong>vivant seule</strong> ou isolée<br>Environnement difficile à maîtriser (<strong>itinérance</strong>)<br><strong>Ressources financières limitées</strong><br>Provenance d&#39;un <strong>autre hôpital, d&#39;un CHSLD ou d&#39;un foyer privé</strong></div></div>
           <div style="background:#fff3cd;border-left:4px solid #d35400;border-radius:10px;padding:14px;"><strong style="color:#d35400;">🧍 Physiques</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;"><strong>Âge avancé</strong> · <strong>autonomie précaire</strong><br><strong>Polypharmacie</strong>, et en particulier : antibiotiques, <strong>psychotropes</strong>, AINS, <strong>anticholinergiques</strong>, IECA, <strong>glucocorticoïdes</strong> en emploi prolongé</div></div>
           <div style="background:#fce4ec;border-left:4px solid #c0392b;border-radius:10px;padding:14px;"><strong style="color:#c0392b;">🦠 Maladies chroniques et actives</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">Chroniques : <strong>gastro-intestinales</strong>, infectieuses, respiratoires<br>Actives à l&#39;admission : <strong>dysphagie</strong>, <strong>dysgueusie</strong>, brûlures étendues, traumatismes multiples, <strong>septicémie</strong>, insuffisance respiratoire, sida</div></div>
           <div style="background:#ede9fe;border-left:4px solid #6d28d9;border-radius:10px;padding:14px;"><strong style="color:#6d28d9;">🧠 Psychologiques</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">Personne âgée souffrant d&#39;<strong>anxiété ou de dépression</strong><br><strong>Démence</strong> — le stade influe sur le risque<br>Troubles psychotiques : <strong>anorexie</strong>, état paranoïde</div></div>
         </div>
-        <div style="font-size:12px;font-weight:800;color:#b45309;margin-top:18px;letter-spacing:.4px;">🔬 POURQUOI LA MALADIE DÉNUTRIT — LES TROIS MÉCANISMES QUI S&#39;ADDITIONNENT</div>
+                </div>
+
+        <div id="ndnt4" style="display:none;margin-top:14px;">
+          <div style="background:#ede9fe;border-left:5px solid #6d28d9;border-radius:10px;padding:12px 14px;"><strong style="color:#6d28d9;">🔬 Les mécanismes</strong><span style="font-size:12px;color:#64748b;"> — pourquoi la maladie dénutrit</span><div style="font-size:13px;line-height:1.7;margin-top:6px;"><strong>Apports diminués</strong> + <strong>pertes augmentées</strong> + <strong>besoins augmentés</strong> + <strong>immobilité</strong> : quatre mécanismes qui s&#39;additionnent. 🎯 D&#39;où la règle : <strong>on ne peut pas nourrir contre une inflammation active</strong>.</div></div>
+<div style="font-size:12px;font-weight:800;color:#b45309;margin-top:18px;letter-spacing:.4px;">🔬 POURQUOI LA MALADIE DÉNUTRIT — LES TROIS MÉCANISMES QUI S&#39;ADDITIONNENT</div>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;">
           <div style="background:#fce4ec;border-radius:10px;padding:14px;">
             <strong style="color:#c0392b;">📉 Apports diminués</strong>
@@ -43502,14 +43532,14 @@ function switchEpiTx(n) {
             <div style="font-size:13px;line-height:1.7;margin-top:8px;">Alitement, mobilité réduite, curarisation sous ventilation → <strong>fonte musculaire par synthèse protéique altérée</strong><br>➜ La nutrition seule ne suffit pas : <strong>la mobilisation fait partie du traitement</strong><br>➜ Voir <em>Le Vieillissement</em>, <em>Évaluation gériatrique</em></div>
           </div>
         </div>
-        <div style="font-size:12px;font-weight:800;color:#b45309;margin-top:18px;letter-spacing:.4px;">👁️ CE QU&#39;ON CHERCHE À L&#39;EXAMEN</div>
+                </div>
 
-        <div class="key-fact blue" style="margin-top:10px;">🔎 De nombreux signes sont décrits, associés à des carences particulières. <strong>En pratique, on retiendra</strong> : la <strong>pâleur cutanée</strong> · des <strong>cheveux secs, cassants ou absents</strong> · une <strong>mauvaise dentition</strong>, une parodontie, une gingivite, une <strong>perlèche</strong> · une <strong>perte de graisse sous-cutanée brachiale et abdominale</strong> · une <strong>fonte musculaire diffuse</strong> · des <strong>lésions ou marques de friction aux points d&#39;appui</strong> · des <strong>plaies qui tardent à guérir</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Lizotte et Fleury, Le Médecin du Québec 2004</em></span></div>
 
         <div class="key-fact orange" style="margin-top:12px;">⚠️ <strong>Les conséquences ne sont pas cosmétiques :</strong> l'érosion de la masse maigre s'accompagne de <strong>faiblesse et fatigue</strong>, d'un <strong>taux d'infections plus élevé</strong>, d'une <strong>cicatrisation altérée</strong> et d'une <strong>convalescence retardée</strong>. Chez une personne hospitalisée, la dénutrition allonge le séjour et aggrave le pronostic de la maladie qui l'a amenée. <span style="font-size:11px;color:#64748b;">📚 <em>Goldman, ch. 204</em></span></div>
 
         <div class="key-fact green" style="margin-top:12px;">🥩 <strong>Les besoins, selon cette source.</strong> Énergie : <strong>25 à 35 kcal/kg/jour</strong> — la dépense d&#39;un patient hospitalisé est souvent <strong>accrue</strong> par la maladie active. Protéines : <strong>1,2 à 1,5 g/kg/jour</strong>, pouvant atteindre <strong>jusqu&#39;à 2 g/kg/jour</strong> selon l&#39;état. <span style="font-size:11px;color:#64748b;">📚 <em>Lizotte et Fleury, Le Médecin du Québec 2004</em></span><br>⚠️ <strong>Écart avec le bloc « Estimer les besoins »</strong> ci-dessus, qui retient 20 à 25 kcal/kg/j d&#39;après Goldman. Les deux fourchettes coexistent : la source québécoise est plus généreuse en énergie. À trancher selon le contexte clinique — et sans jamais suralimenter.</div>
       </div>
+
 
 
       <div class="block rx" style="margin-top:14px;border-left-color:#b45309;">
@@ -43541,12 +43571,23 @@ function switchEpiTx(n) {
         <div class="block-title" id="nut-3"><span class="tag">🧪 Albumine, préalbumine, transferrine — le piège, et ce qu&#39;elles disent vraiment</span><span class="obj-badge">Obj. 3</span></div>
 
         <div class="key-fact red" style="margin-top:10px;">🚨 <strong>À corriger si vous l'avez appris autrement : l'albumine n'est PAS un marqueur de l'état nutritionnel.</strong> Chez la personne hospitalisée, et particulièrement aux soins intensifs, l'albumine, la préalbumine et la transferrine sont <strong>basses de façon quasi systématique</strong> et <strong>manquent totalement de spécificité</strong>. Leurs concentrations dépendent de facteurs non nutritionnels : <strong>inflammation, infection, statut volémique, fuite capillaire, fonction hépatique, clairance protéique anormale</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Goldman-Cecil, 26<sup>e</sup> éd., ch. 204</em></span></div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;">
+          <button data-panel="nalb0" onclick="showPanel('nalb','nalb0',4)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#b91c1c;color:#fff;">⚖️ Les deux positions, et ce qui tranche</button>
+          <button data-panel="nalb1" onclick="showPanel('nalb','nalb1',4)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">❌ Ce qu&#39;elle ne peut pas faire</button>
+          <button data-panel="nalb2" onclick="showPanel('nalb','nalb2',4)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">📋 Les quatre marqueurs</button>
+          <button data-panel="nalb3" onclick="showPanel('nalb','nalb3',4)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">📐 L&#39;échelle de gravité</button>
+        </div>
+
+        <div id="nalb0" style="display:block;margin-top:14px;">
 
         <div class="key-fact orange" style="margin-top:10px;">⚠️ <strong>Deux positions à connaître, et elles divergent.</strong> L&#39;encadré rouge ci-dessus, d&#39;après <strong>Goldman-Cecil</strong>, affirme que l&#39;albumine <strong>n&#39;est pas</strong> un marqueur nutritionnel. La source québécoise fournie pour cette APP nuance : <strong>« le dosage de l&#39;albumine et de la préalbumine sont de bons marqueurs de la MPE chez les patients stables, sans état inflammatoire aigu »</strong> — et elle les intègre à une échelle de gravité. <strong>Les deux affirmations sont compatibles</strong> : c&#39;est l&#39;inflammation qui tranche. D&#39;où la règle pratique ci-dessous. <span style="font-size:11px;color:#64748b;">📚 <em>Lizotte et Fleury, Le Médecin du Québec 2004</em></span></div>
 
         <div class="key-fact green" style="margin-top:12px;">🎯 <strong>La règle qui réconcilie les deux.</strong> On dose d&#39;abord la <strong>protéine C réactive</strong> : elle renseigne sur la présence d&#39;un <strong>état inflammatoire aigu</strong>, avec un <strong>seuil pathologique &gt; 20 mg/L</strong>. ➜ <strong>En présence d&#39;une fonction rénale normale ET d&#39;une CRP normale</strong>, le dosage de la <strong>préalbumine</strong> — grâce à sa courte demi-vie — <strong>donne une réponse rapide et fiable sur le résultat de nos interventions</strong>. En contexte inflammatoire, ces protéines ne mesurent plus la nutrition. <span style="font-size:11px;color:#64748b;">📚 <em>Lizotte et Fleury, Le Médecin du Québec 2004</em></span></div>
+        </div>
 
-        <div style="font-size:12px;font-weight:800;color:#b91c1c;margin-top:18px;letter-spacing:.4px;">⚖️ CE QUE L&#39;ALBUMINE NE PEUT PAS FAIRE — ET CE QUI EST UTILE À LA PLACE</div>
+        <div id="nalb1" style="display:none;margin-top:14px;">
+          <div style="background:#fef2f2;border-left:5px solid #c0392b;border-radius:10px;padding:12px 14px;"><strong style="color:#c0392b;">❌ Ce qu&#39;elle ne peut pas faire</strong><span style="font-size:12px;color:#64748b;"> — et ce qui est utile à la place</span><div style="font-size:13px;line-height:1.7;margin-top:6px;">Demi-vie de <strong>18 à 21 jours</strong> : l&#39;albumine reste basse malgré une alimentation adéquate. 🎯 Ce qui sert vraiment : l&#39;<strong>histoire du poids</strong>, les <strong>apports réels</strong>, l&#39;<strong>examen physique</strong>.</div></div>
+<div style="font-size:12px;font-weight:800;color:#b91c1c;margin-top:18px;letter-spacing:.4px;">⚖️ CE QUE L&#39;ALBUMINE NE PEUT PAS FAIRE — ET CE QUI EST UTILE À LA PLACE</div>
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
           <div style="background:#fef2f2;border-radius:10px;padding:14px;border-left:4px solid #c0392b;">
             <strong style="color:#c0392b;">❌ Ce que l'albumine ne peut pas faire</strong>
@@ -43557,7 +43598,11 @@ function switchEpiTx(n) {
             <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>L'histoire du poids</strong> — ampleur et rapidité de la perte 🎯<br><strong>Le patron d'alimentation</strong> et les apports réels<br><strong>L'examen physique</strong> — fonte musculaire (temporale, deltoïde, interosseux), perte de tissu adipeux, œdème<br><strong>Micronutriments ciblés</strong> — cuivre, thiamine, 25-OH-vitamine D, B6, folate, B12<br><strong>Électrolytes</strong> — magnésium, potassium, <strong>phosphore</strong><br><br>💡 La <strong>préalbumine</strong>, dont la demi-vie n'est que de quelques jours, peut servir d'indicateur <em>grossier</em> — <strong>uniquement en ambulatoire, chez une personne cliniquement stable</strong>.</div>
           </div>
         </div>
-        <div style="font-size:12px;font-weight:800;color:#b91c1c;margin-top:18px;letter-spacing:.4px;">📋 LES QUATRE MARQUEURS, LEURS DEMI-VIES ET LEURS LIMITES</div>
+                </div>
+
+        <div id="nalb2" style="display:none;margin-top:14px;">
+          <div style="background:#e8f4fd;border-left:5px solid #1d4ed8;border-radius:10px;padding:12px 14px;"><strong style="color:#1d4ed8;">📋 Les quatre marqueurs</strong><span style="font-size:12px;color:#64748b;"> — demi-vies, coûts et faux abaissements</span><div style="font-size:13px;line-height:1.7;margin-top:6px;">Albumine, préalbumine, transferrine, lymphocytes — et la <strong>CRP</strong> qui leur sert de garde-fou. Chacun a ce <strong>qui le fait baisser à tort</strong>.</div></div>
+<div style="font-size:12px;font-weight:800;color:#b91c1c;margin-top:18px;letter-spacing:.4px;">📋 LES QUATRE MARQUEURS, LEURS DEMI-VIES ET LEURS LIMITES</div>
 <div style="overflow-x:auto;margin-top:12px;">
         <table style="font-size:11.5px;min-width:920px;">
           <thead><tr><th style="width:15%;">Marqueur</th><th style="width:18%;">Demi-vie et coût</th><th style="width:34%;">Ce qu&#39;il apporte</th><th style="width:33%;">Ce qui le fait baisser à tort</th></tr></thead>
@@ -43570,7 +43615,11 @@ function switchEpiTx(n) {
           </tbody>
         </table>
         </div>
-        <div style="font-size:12px;font-weight:800;color:#b91c1c;margin-top:18px;letter-spacing:.4px;">📐 L&#39;ÉCHELLE DE GRAVITÉ DE LA MPE</div>
+                </div>
+
+        <div id="nalb3" style="display:none;margin-top:14px;">
+          <div style="background:#fff3cd;border-left:5px solid #d35400;border-radius:10px;padding:12px 14px;"><strong style="color:#d35400;">📐 L&#39;échelle de gravité</strong><span style="font-size:12px;color:#64748b;"> — absente, légère, modérée, grave</span><div style="font-size:13px;line-height:1.7;margin-top:6px;">Les cinq paramètres chiffrés de la MPE. 👵 Avec une nuance sur l&#39;IMC de l&#39;aîné : <strong>24 à 27</strong> est associé à un meilleur état de santé, pas 20.</div></div>
+<div style="font-size:12px;font-weight:800;color:#b91c1c;margin-top:18px;letter-spacing:.4px;">📐 L&#39;ÉCHELLE DE GRAVITÉ DE LA MPE</div>
 <div style="overflow-x:auto;margin-top:12px;">
         <table style="font-size:12px;">
           <thead><tr><th style="width:26%;">Paramètre</th><th style="width:18%;">Absente</th><th style="width:18%;">Légère</th><th style="width:18%;">Modérée</th><th style="width:20%;">Grave</th></tr></thead>
@@ -43585,12 +43634,16 @@ function switchEpiTx(n) {
         </div>
         <div class="key-fact blue" style="margin-top:12px;">👵 <strong>Une nuance sur l&#39;IMC chez l&#39;aîné.</strong> On considère comme normal un IMC entre <strong>20 et 25</strong> — mais <strong>chez la personne de 65 ans et plus, une valeur entre 24 et 27 est associée à un meilleur état de santé et à une plus grande longévité</strong>. Viser 20 chez un aîné n&#39;est donc pas un objectif souhaitable. <span style="font-size:11px;color:#64748b;">📚 <em>Lizotte et Fleury, Le Médecin du Québec 2004</em></span></div>
 
+                </div>
+
+
         <div class="key-fact orange" style="margin-top:12px;">⚖️ <strong>Quel poids utiliser?</strong> Aux soins intensifs, le poids mesuré reflète surtout les <strong>liquides administrés</strong> et dépasse largement le poids réel. Le meilleur paramètre est le <strong>poids « sec » le plus récent</strong>, ou le <strong>poids préopératoire</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Goldman, ch. 204</em></span></div>
 
         <div class="key-fact blue" style="margin-top:8px;">🧩 <strong>Pourquoi il n'existe pas de test unique :</strong> Goldman-Cecil est explicite — <strong>aucun test simple et pratique ne mesure l'état nutritionnel protéino-énergétique global</strong>. L'évaluation reste une <strong>intégration</strong> : antécédents, sévérité de la maladie, pertes liquidiennes, examen physique, histoire pondérale, apports, fonction des organes, et dosages ciblés. C'est un raisonnement clinique, pas un chiffre.</div>
 
         <div class="key-fact ink" style="margin-top:12px;">🧪 <strong>L&#39;intérêt réel du laboratoire ici.</strong> L&#39;évaluation biochimique permet de <strong>détecter des changements avant que les perturbations biologiques ou cliniques ne soient visibles</strong>, et d&#39;<strong>évaluer l&#39;intensité du processus évolutif</strong>. C&#39;est là sa valeur — pas de poser le diagnostic à elle seule. <span style="font-size:11px;color:#64748b;">📚 <em>Lizotte et Fleury, Le Médecin du Québec 2004</em></span></div>
       </div>
+
 
 
 
@@ -43624,7 +43677,17 @@ function switchEpiTx(n) {
         <div class="block-title" id="nut-5"><span class="tag">🪜 Le support nutritionnel — l&#39;escalier, les voies, les contre-indications et les complications</span><span class="obj-badge">Obj. 5 · 6 · 8</span></div>
 
         <div class="key-fact green" style="margin-top:10px;">🎯 <strong>Le principe qui gouverne toute la décision :</strong> <strong>« si le tube digestif fonctionne, on l'utilise »</strong>. On ne monte d'un échelon que lorsque le précédent ne suffit pas ou n'est pas possible — et l'on <strong>redescend dès que la fonction digestive le permet</strong>.</div>
-        <div style="background:#0f172a;border-radius:10px;padding:14px;margin-top:12px;">
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;">
+          <button data-panel="nsup0" onclick="showPanel('nsup','nsup0',6)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#0a7a4e;color:#fff;">🪜 L&#39;escalier</button>
+          <button data-panel="nsup1" onclick="showPanel('nsup','nsup1',6)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">📋 Les voies et le seuil de 30 jours</button>
+          <button data-panel="nsup2" onclick="showPanel('nsup','nsup2',6)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">⛔ Contre-indications et complications</button>
+          <button data-panel="nsup3" onclick="showPanel('nsup','nsup3',6)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">🥤 Les suppléments oraux</button>
+          <button data-panel="nsup4" onclick="showPanel('nsup','nsup4',6)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">🧬 Les conséquences</button>
+          <button data-panel="nsup5" onclick="showPanel('nsup','nsup5',6)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">🛡️ Prévenir</button>
+        </div>
+
+        <div id="nsup0" style="display:block;margin-top:14px;">
+<div style="background:#0f172a;border-radius:10px;padding:14px;margin-top:12px;">
           <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#94a3b8;margin-bottom:8px;">Schéma &mdash; l&rsquo;escalier du support nutritionnel</div>
           <svg viewBox="0 0 620 250" style="width:100%;height:auto;" role="img" aria-label="Escalier du support nutritionnel de la voie orale a la nutrition parenterale">
             <!-- marches -->
@@ -43668,7 +43731,11 @@ function switchEpiTx(n) {
             <tr style="background:#fff3cd;"><td><strong>Nutrition parentérale</strong></td><td>Réservée aux personnes <strong>dénutries ou à haut risque</strong> chez qui l'alimentation entérale est <strong>impossible</strong> ou ne peut couvrir les besoins — occlusion, fistule à haut débit, grêle court, ischémie mésentérique</td><td>🚨 <strong>À cesser dès que la fonction digestive permet la voie entérale</strong> <span style="font-size:11px;color:#64748b;">📚 <em>Goldman, ch. 204</em></span></td></tr>
           </tbody>
         </table>
-        </div><div style="font-size:12px;font-weight:800;color:#0a7a4e;margin-top:18px;letter-spacing:.4px;">📋 DÉFINITIONS ET VOIES D&#39;ACCÈS</div>
+        </div>        </div>
+
+        <div id="nsup1" style="display:none;margin-top:14px;">
+          <div style="background:#f0fdf4;border-left:5px solid #15803d;border-radius:10px;padding:12px 14px;"><strong style="color:#15803d;">📋 Les voies et le seuil de 30 jours</strong><span style="font-size:12px;color:#64748b;"> — entérale, parentérale, et par où</span><div style="font-size:13px;line-height:1.7;margin-top:6px;">Sonde <strong>nasogastrique</strong> ou <strong>nasoduodénale</strong>, <strong>gastrostomie</strong> ou <strong>jéjunostomie</strong> — et la règle qui décide : <strong>moins de 30 jours</strong> ou plus.</div></div>
+<div style="font-size:12px;font-weight:800;color:#0a7a4e;margin-top:18px;letter-spacing:.4px;">📋 DÉFINITIONS ET VOIES D&#39;ACCÈS</div>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px;margin-top:10px;">
           <div style="background:#f0fdf4;border-left:4px solid #15803d;border-radius:10px;padding:14px;"><strong style="color:#15803d;">🦠 Nutrition entérale</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">Nourrir l&#39;organisme <strong>par une sonde</strong> : <strong>nasogastrique</strong> (nez à estomac), <strong>nasoduodénale</strong> (nez au duodénum), ou par <strong>stomie digestive</strong> — <strong>gastrostomie</strong> (abouchement de l&#39;estomac à la paroi abdominale) ou <strong>jéjunostomie</strong> (abouchement du jéjunum).<br>🎯 Indiquée quand l&#39;alimentation orale est <strong>impossible</strong> — lésions de la partie supérieure du tube digestif — ou l&#39;apport <strong>insuffisant</strong>.<br>✅ Avantage : <strong>elle préserve le tube digestif et les organes associés</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Boudebza, Perspective infirmière 2016</em></span></div></div>
           <div style="background:#e8f4fd;border-left:4px solid #1d4ed8;border-radius:10px;padding:14px;"><strong style="color:#1d4ed8;">💉 Nutrition parentérale</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">Quand l&#39;alimentation <strong>entérale est impossible</strong> : nutriments <strong>par voie intraveineuse</strong>, par un accès <strong>périphérique ou central</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Boudebza, Perspective infirmière 2016</em></span><br>🎯 À choisir <strong>en collaboration étroite avec les personnes-ressources du milieu</strong>.<br>⚠️ <strong>La durée doit toujours être la plus courte possible</strong>, l&#39;<strong>asepsie stricte</strong> et la <strong>surveillance clinique étroite</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Lizotte et Fleury, Le Médecin du Québec 2004</em></span></div></div>
@@ -43683,7 +43750,11 @@ function switchEpiTx(n) {
           </tbody>
         </table>
         </div>
-        <div style="font-size:12px;font-weight:800;color:#0a7a4e;margin-top:18px;letter-spacing:.4px;">⛔ LES CONTRE-INDICATIONS ET INDICATIONS À CONNAÎTRE</div>
+                </div>
+
+        <div id="nsup2" style="display:none;margin-top:14px;">
+          <div style="background:#fce4ec;border-left:5px solid #c0392b;border-radius:10px;padding:12px 14px;"><strong style="color:#c0392b;">⛔ Contre-indications et complications</strong><span style="font-size:12px;color:#64748b;"> — ce qui interdit, et ce qui survient</span><div style="font-size:13px;line-height:1.7;margin-top:6px;">Les contre-indications de chaque voie, puis les complications — 🚨 la <strong>voie centrale</strong> n&#39;est pas anodine, et l&#39;<strong>hyperglycémie</strong> sous nutrition parentérale augmente les infections nosocomiales.</div></div>
+<div style="font-size:12px;font-weight:800;color:#0a7a4e;margin-top:18px;letter-spacing:.4px;">⛔ LES CONTRE-INDICATIONS ET INDICATIONS À CONNAÎTRE</div>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin-top:10px;">
           <div style="background:#fee2e2;border-left:4px solid #b91c1c;border-radius:10px;padding:14px;"><strong style="color:#b91c1c;">⛔ Contre-indications de la voie entérale</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;"><strong>Obstruction mécanique</strong><br><strong>Intestin ischémique</strong><br><strong>Fistule à haut débit</strong><br><strong>Hémorragie gastro-intestinale</strong><br><strong>État de malabsorption grave</strong> <span style="font-size:11px;color:#64748b;">📚 <em>Lizotte et Fleury, Le Médecin du Québec 2004</em></span></div></div>
           <div style="background:#e8f4fd;border-left:4px solid #1d4ed8;border-radius:10px;padding:14px;"><strong style="color:#1d4ed8;">✅ Indications principales de la parentérale</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;"><strong>Incompétence du tube digestif</strong><br><strong>Péritonite</strong><br><strong>Vomissements incoercibles</strong><br><strong>Pancréatite aiguë</strong><br><strong>Iléus</strong><br><strong>Syndrome de malabsorption</strong><br><strong>Intestin court</strong> <span style="font-size:11px;color:#64748b;">📚 <em>Lizotte et Fleury, Le Médecin du Québec 2004</em></span></div></div>
@@ -43695,6 +43766,10 @@ function switchEpiTx(n) {
         <div class="key-fact red" style="margin-top:12px;">🚨 <strong>La voie centrale n'est pas anodine</strong> — elle comporte un <strong>taux nettement plus élevé de complications mécaniques, métaboliques et infectieuses</strong> que la voie périphérique. Mécaniques : <strong>pneumothorax, hémothorax, malposition, thrombose</strong>. Infectieuses : <strong>bactériémie sur cathéter</strong>, infections fongiques, parfois par translocation bactérienne intestinale. 💡 Le risque augmente avec les accès <strong>non sous-claviers</strong> (jugulaire, fémoral) et avec les <strong>cathéters multi-usages</strong> dont la voie de nutrition sert aussi aux prélèvements ou aux médicaments — <strong>d'où la règle d'une lumière dédiée</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Goldman, ch. 204</em></span></div>
 
         <div class="key-fact orange" style="margin-top:8px;">🍬 <strong>L'hyperglycémie sous nutrition parentérale</strong> est fréquente et associée à <strong>plus d'infections nosocomiales</strong>. Elle est favorisée par : un contrôle glycémique déjà mauvais au départ, un <strong>dextrose trop concentré (&gt; 10 %) ou augmenté trop vite</strong>, une insulinothérapie insuffisante, une surveillance glycémique trop espacée, et l'usage de <strong>corticostéroïdes ou de vasopresseurs</strong> comme la noradrénaline — qui stimulent la néoglucogenèse et induisent une insulinorésistance. ➜ Voir <em>Les Chocs</em>, <em>Diabète</em>.</div>
+        </div>
+
+        <div id="nsup3" style="display:none;margin-top:14px;">
+          <div style="background:#fff3cd;border-left:5px solid #d35400;border-radius:10px;padding:12px 14px;"><strong style="color:#d35400;">🥤 Les suppléments oraux</strong><span style="font-size:12px;color:#64748b;"> — ce qu&#39;il faut dire au patient</span><div style="font-size:13px;line-height:1.7;margin-top:6px;">Ils <strong>s&#39;ajoutent</strong>, ils ne remplacent pas — <strong>entre</strong> les repas. ≈ <strong>1 kcal/mL</strong>, <strong>235 mL</strong> la canette. 🎯 Et le délai qui compte : <strong>48 heures</strong> chez la personne déjà dénutrie.</div></div>
 <div style="font-size:12px;font-weight:800;color:#0a7a4e;margin-top:18px;letter-spacing:.4px;">🥤 LES SUPPLÉMENTS ORAUX — CE QU&#39;IL FAUT DIRE AU PATIENT</div>
         <div class="criteria-list" style="margin-top:10px;">
           <div class="criteria-item"><div class="criteria-num blue">1</div><span><strong>Ils s&#39;ajoutent, ils ne remplacent pas.</strong> Prescrire un supplément <strong>à prendre entre les repas</strong> : <strong>il ne doit pas remplacer les repas</strong>, afin de <strong>garder le goût des aliments</strong>.</span></div>
@@ -43703,7 +43778,11 @@ function switchEpiTx(n) {
           <div class="criteria-item"><div class="criteria-num blue">4</div><span><strong>Le cadrage à donner.</strong> Le patient doit comprendre qu&#39;il s&#39;agit d&#39;une <strong>première étape</strong> : selon la réaction observée, on pourra continuer ainsi <strong>plutôt que d&#39;aller vers d&#39;autres techniques comme le gavage</strong>.</span></div>
           <div class="criteria-item"><div class="criteria-num red">!</div><span>🎯 <strong>Le délai qui compte.</strong> Un patient hospitalisé <strong>ne souffrant pas de malnutrition</strong> peut tolérer <strong>plus de 7 jours</strong> sans apport calorique suffisant. Mais chez celui qui <strong>présente déjà un degré de malnutrition, une action s&#39;impose dès l&#39;admission</strong> : sur une revue de <strong>15 études et 753 patients hospitalisés</strong>, un <strong>délai d&#39;installation de 48 heures pour le gavage</strong> avait des <strong>répercussions importantes sur la durée du séjour et sur les complications infectieuses</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Lizotte et Fleury, Le Médecin du Québec 2004</em></span></span></div>
         </div>
-        <div style="font-size:12px;font-weight:800;color:#0a7a4e;margin-top:18px;letter-spacing:.4px;">🧬 LES CONSÉQUENCES DE LA DÉNUTRITION — CE QUE LES SOURCES DE L&#39;APP ÉTABLISSENT</div>
+                </div>
+
+        <div id="nsup4" style="display:none;margin-top:14px;">
+          <div style="background:#f1f5f9;border-left:5px solid #334155;border-radius:10px;padding:12px 14px;"><strong style="color:#334155;">🧬 Les conséquences</strong><span style="font-size:12px;color:#64748b;"> — système par système</span><div style="font-size:13px;line-height:1.7;margin-top:6px;">De la <strong>perte d&#39;autonomie</strong> à l&#39;<strong>atrophie du cœur et des poumons</strong> — et l&#39;effet mesuré sur la <strong>durée de séjour</strong>.</div></div>
+<div style="font-size:12px;font-weight:800;color:#0a7a4e;margin-top:18px;letter-spacing:.4px;">🧬 LES CONSÉQUENCES DE LA DÉNUTRITION — CE QUE LES SOURCES DE L&#39;APP ÉTABLISSENT</div>
         <div style="overflow-x:auto;margin-top:12px;">
         <table style="font-size:12px;">
           <thead><tr><th style="width:22%;">Système</th><th style="width:None;">Conséquence documentée</th></tr></thead>
@@ -43720,13 +43799,20 @@ function switchEpiTx(n) {
         </table>
         </div>
         <div class="key-fact orange" style="margin-top:12px;">⚠️ <strong>Ce que les documents de l&#39;APP ne couvrent pas.</strong> Les conséquences <strong>endocriniennes, hématologiques et digestives détaillées</strong> de la dénutrition chronique, ainsi que la <strong>physiopathologie de l&#39;hypoalbuminémie</strong> (pression oncotique, œdèmes, transport des médicaments), ne figurent pas dans les quatre documents fournis pour cette APP. Elles sont traitées dans les blocs voisins à partir de <strong>Goldman-Cecil ch. 204</strong>. Si vous avez une lecture assignée là-dessus, me la transmettre.</div>
-        <div style="font-size:12px;font-weight:800;color:#0a7a4e;margin-top:18px;letter-spacing:.4px;">🛡️ PRÉVENIR — LES MOYENS SIMPLES, ET LA SÉQUENCE DÈS L&#39;ADMISSION</div>
+                </div>
+
+        <div id="nsup5" style="display:none;margin-top:14px;">
+          <div style="background:#e8f4fd;border-left:5px solid #1d4ed8;border-radius:10px;padding:12px 14px;"><strong style="color:#1d4ed8;">🛡️ Prévenir</strong><span style="font-size:12px;color:#64748b;"> — les moyens simples, dès l&#39;admission</span><div style="font-size:13px;line-height:1.7;margin-top:6px;">Aliments adaptés, éléments stimulants, et la séquence à lancer <strong>dès l&#39;hospitalisation</strong> — peser, prescrire, faire noter ce qui est consommé, demander la diététiste.</div></div>
+<div style="font-size:12px;font-weight:800;color:#0a7a4e;margin-top:18px;letter-spacing:.4px;">🛡️ PRÉVENIR — LES MOYENS SIMPLES, ET LA SÉQUENCE DÈS L&#39;ADMISSION</div>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin-top:10px;">
           <div style="background:#f0fdf4;border-left:4px solid #15803d;border-radius:10px;padding:14px;"><strong style="color:#15803d;">🍽️ Aliments adaptés</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">S&#39;assurer que la <strong>consistance</strong> est adaptée à l&#39;autonomie, à la capacité de <strong>mastiquer et d&#39;avaler</strong><br>S&#39;assurer que le patient a <strong>toute l&#39;aide nécessaire</strong> : offrir de l&#39;assistance, <strong>allonger le temps</strong> et même <strong>le nombre de repas</strong><br>Respecter un <strong>délai raisonnable entre les repas</strong><br><strong>Ajuster l&#39;horaire des examens</strong> pour éviter les jeûnes prolongés<br>⚠️ <strong>S&#39;assurer que la prescription d&#39;une diète est essentielle</strong> — on limite souvent ainsi le goût et la variété <span style="font-size:11px;color:#64748b;">📚 <em>Lizotte et Fleury, Le Médecin du Québec 2004</em></span></div></div>
           <div style="background:#fff3cd;border-left:4px solid #d35400;border-radius:10px;padding:14px;"><strong style="color:#d35400;">✨ Éléments stimulants</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">Offrir des aliments à <strong>saveur relevée</strong>, suffisamment assaisonnés<br>Favoriser une <strong>alimentation variée</strong> pour stimuler l&#39;appétit<br><strong>Encourager la visite des proches aux repas</strong> — et profiter de leur présence pour revoir les <strong>préférences alimentaires</strong><br><strong>Sensibiliser le patient</strong> pendant les visites médicales à l&#39;importance de s&#39;alimenter, et s&#39;informer du suivi auprès du personnel<br>🎯 <strong>Moins on s&#39;alimente, moins on a le goût de manger.</strong> <span style="font-size:11px;color:#64748b;">📚 <em>Lizotte et Fleury, Le Médecin du Québec 2004</em></span></div></div>
           <div style="background:#e8f4fd;border-left:4px solid #1d4ed8;border-radius:10px;padding:14px;"><strong style="color:#1d4ed8;">📋 Dès l&#39;hospitalisation</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;"><strong>Demander les examens de laboratoire pertinents et peser le patient dès que possible</strong><br><strong>Prescrire une alimentation adaptée</strong> à son état<br>🎯 <strong>Demander au personnel de noter ce que le patient a consommé</strong>, en fraction ou en pourcentage de l&#39;assiette principale et du supplément<br><strong>Demander tôt une évaluation par la diététiste-nutritionniste</strong> — un délai de <strong>2 à 3 jours</strong> est usuel<br><strong>Prescrire un supplément entre les repas</strong> <span style="font-size:11px;color:#64748b;">📚 <em>Lizotte et Fleury, Le Médecin du Québec 2004</em></span></div></div>
         </div>
-            </div>
+                    </div>
+
+      </div>
+
 
 
 
@@ -43737,7 +43823,15 @@ function switchEpiTx(n) {
         <div class="key-fact red" style="margin-top:10px;">🚨 <strong>C'est le piège majeur de toute cette section — et il est iatrogène.</strong> On veut bien faire, on nourrit une personne dénutrie, et c'est <strong>l'acte de nourrir</strong> qui la met en danger. La cause est un apport <strong>excessif de dextrose</strong> — au-delà d'environ <strong>150 à 250 g</strong>, soit le contenu d'un litre de solution parentérale à 15–25 %. <span style="font-size:11px;color:#64748b;">📚 <em>Goldman-Cecil, ch. 204</em></span></div>
 
         <div class="key-fact black" style="margin-top:10px;">🎯 <strong>Le paradoxe, énoncé simplement.</strong> « <em>De prime abord, il va de soi qu&#39;une personne dénutrie a avant tout besoin d&#39;être nourrie. Mais si certaines précautions ne sont pas prises, cette renutrition pourrait être fatale au lieu de salvatrice.</em> » Les manifestations apparaissent <strong>généralement durant les deux premières semaines</strong> de réalimentation, <strong>particulièrement si elle est réintroduite de façon agressive</strong> chez des patients significativement dénutris. ⚠️ La prise en charge de la dénutrition <strong>en établissement hospitalier augmente le risque</strong> de SRI en cas de <strong>supplémentation inadéquate ou insuffisamment surveillée</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Boudebza, Perspective infirmière 2016</em></span></div>
-        <div style="font-size:12px;font-weight:800;color:#c0392b;margin-top:18px;letter-spacing:.4px;">🔬 LA PHYSIOPATHOLOGIE, EN DEUX TEMPS</div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;">
+          <button data-panel="nsri0" onclick="showPanel('nsri','nsri0',4)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#b45309;color:#fff;">🔬 La physiopathologie</button>
+          <button data-panel="nsri1" onclick="showPanel('nsri','nsri1',4)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">🔢 Les critères NICE 2006</button>
+          <button data-panel="nsri2" onclick="showPanel('nsri','nsri2',4)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">🫀 Les manifestations</button>
+          <button data-panel="nsri3" onclick="showPanel('nsri','nsri3',4)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">🛡️ Le protocole</button>
+        </div>
+
+        <div id="nsri0" style="display:block;margin-top:14px;">
+<div style="font-size:12px;font-weight:800;color:#c0392b;margin-top:18px;letter-spacing:.4px;">🔬 LA PHYSIOPATHOLOGIE, EN DEUX TEMPS</div>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px;margin-top:10px;">
           <div style="background:#f1f5f9;border-left:4px solid #334155;border-radius:10px;padding:14px;"><strong style="color:#334155;">1️⃣ Pendant le jeûne — l&#39;organisme bascule</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">Après un jeûne de <strong>cinq à dix jours</strong>, l&#39;organisme est dépourvu de son <strong>carburant principal, le glucose</strong>.<br>➜ <strong>Chute de l&#39;insuline</strong> → <strong>catabolisme des lipides et des protéines</strong> (lipolyse et protéolyse).<br>➜ Éventuellement, <strong>atrophie des organes vitaux</strong> comme le <strong>cœur et les poumons</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Boudebza, Perspective infirmière 2016</em></span></div></div>
           <div style="background:#fee2e2;border-left:4px solid #b91c1c;border-radius:10px;padding:14px;"><strong style="color:#b91c1c;">2️⃣ À la réalimentation — le transfert intracellulaire</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">L&#39;apport glucosé <strong>augmente la sécrétion d&#39;insuline</strong> et <strong>inhibe le glucagon</strong> : <strong>transition métabolique brutale</strong> du catabolisme lipidique vers le métabolisme glucidique.<br>➜ La hausse brutale de l&#39;insulinémie déclenche la synthèse de glycogène, de graisses et de protéines, provoquant le <strong>transfert intracellulaire du potassium, du phosphore et du magnésium</strong>, dont les <strong>concentrations plasmatiques s&#39;effondrent</strong>.<br>🎯 <strong>Les symptômes du SRI sont la conséquence des troubles hydroélectrolytiques.</strong> <span style="font-size:11px;color:#64748b;">📚 <em>Boudebza, Perspective infirmière 2016</em></span></div></div>
@@ -43785,6 +43879,10 @@ function switchEpiTx(n) {
             🫀 <strong>Pourquoi le cœur lâche :</strong> la rétention hydrosodée, la chute brutale des électrolytes et l'hypermétabolisme s'additionnent — <strong>et le muscle cardiaque est déjà atrophié</strong> par la dénutrition prolongée. Le risque est maximal en cas de <strong>cardiopathie préexistante</strong>.
           </div>
         </div>
+        </div>
+
+        <div id="nsri1" style="display:none;margin-top:14px;">
+          <div style="background:#fff3cd;border-left:5px solid #d35400;border-radius:10px;padding:12px 14px;"><strong style="color:#d35400;">🔢 Les critères NICE 2006</strong><span style="font-size:12px;color:#64748b;"> — qui est à risque, et comment le prévenir</span><div style="font-size:13px;line-height:1.7;margin-top:6px;">Les critères <strong>chiffrés</strong> du NICE, et la grille <strong>qui est à risque / comment le prévenir</strong>. 🚨 Le piège le plus courant : l&#39;<strong>hydratation IV prolongée au dextrose 5 %</strong> sans support nutritionnel.</div></div>
 <div style="font-size:12px;font-weight:800;color:#c0392b;margin-top:18px;letter-spacing:.4px;">🔢 LES CRITÈRES DE RISQUE — NICE 2006</div>
         <div style="overflow-x:auto;margin-top:12px;">
         <table style="font-size:12px;">
@@ -43808,6 +43906,10 @@ function switchEpiTx(n) {
             <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>①</strong> <strong>Identifier</strong> les personnes à risque <em>avant</em> de commencer<br><strong>②</strong> Débuter le <strong>dextrose à faible concentration</strong> et progresser sur plusieurs jours<br><strong>③</strong> <strong>Supplémenter d'emblée</strong> potassium, magnésium et <strong>phosphore</strong>, selon les taux sanguins et la fonction rénale<br><strong>④</strong> 🎯 <strong>THIAMINE 100 mg/jour pendant 3 à 5 jours</strong><br><strong>⑤</strong> Surveiller <strong>glycémie, électrolytes, bilan liquidien</strong> de près<br><br>⚠️ <strong>Ne pas précipiter le congé</strong> d'une personne qui vient de débuter une nutrition parentérale : 2 à 3 jours de surveillance sont nécessaires. <span style="font-size:11px;color:#64748b;">📚 <em>Goldman, ch. 204</em></span></div>
           </div>
         </div>
+        </div>
+
+        <div id="nsri2" style="display:none;margin-top:14px;">
+          <div style="background:#fce4ec;border-left:5px solid #c0392b;border-radius:10px;padding:12px 14px;"><strong style="color:#c0392b;">🫀 Les manifestations</strong><span style="font-size:12px;color:#64748b;"> — organe par organe</span><div style="font-size:13px;line-height:1.7;margin-top:6px;">La chute du <strong>phosphore, du potassium et du magnésium</strong> se traduit dans chaque système — et le <strong>cœur déjà atrophié</strong> est celui qui lâche.</div></div>
 <div style="font-size:12px;font-weight:800;color:#c0392b;margin-top:18px;letter-spacing:.4px;">🫀 LES MANIFESTATIONS, ORGANE PAR ORGANE</div>
         <div style="overflow-x:auto;margin-top:12px;">
         <table style="font-size:12px;">
@@ -43824,7 +43926,11 @@ function switchEpiTx(n) {
         </table>
         </div>
         <div class="key-fact red" style="margin-top:12px;">🚨 <strong>Les complications que l&#39;effondrement du phosphore explique.</strong> <strong>Arythmie et arrêt cardiaque</strong> · <strong>surcharge liquidienne et œdème pulmonaire</strong> — le cœur, <em>peut-être déjà atrophié</em>, souffre en plus d&#39;un surplus liquidien causé par la rétention sodique et hydrique · <strong>convulsions</strong> · insuffisance rénale, hépatique et respiratoire · <strong>dysfonction des globules blancs et rouges</strong> · <strong>dysglycémie</strong> dans les deux sens · <strong>encéphalopathie de Gayet-Wernicke et syndrome de Korsakoff</strong> par carence en <strong>thiamine</strong> · <strong>pancytopénie</strong> par déficit aigu en <strong>acide folique</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Boudebza, Perspective infirmière 2016</em></span></div>
-        <div style="font-size:12px;font-weight:800;color:#c0392b;margin-top:18px;letter-spacing:.4px;">🛡️ PRÉVENIR — LE PROTOCOLE DES DEUX PREMIÈRES SEMAINES</div>
+                </div>
+
+        <div id="nsri3" style="display:none;margin-top:14px;">
+          <div style="background:#f0fdf4;border-left:5px solid #15803d;border-radius:10px;padding:12px 14px;"><strong style="color:#15803d;">🛡️ Le protocole</strong><span style="font-size:12px;color:#64748b;"> — les deux premières semaines</span><div style="font-size:13px;line-height:1.7;margin-top:6px;">Identifier avant de commencer, <strong>démarrer lentement</strong>, supplémenter <strong>d&#39;emblée</strong>, et 🎯 <strong>thiamine 100 mg/jour pendant 3 à 5 jours</strong>.</div></div>
+<div style="font-size:12px;font-weight:800;color:#c0392b;margin-top:18px;letter-spacing:.4px;">🛡️ PRÉVENIR — LE PROTOCOLE DES DEUX PREMIÈRES SEMAINES</div>
         <div class="criteria-list" style="margin-top:10px;">
           <div class="criteria-item"><div class="criteria-num blue">1</div><span><strong>Corriger les carences électrolytiques AVANT de commencer la renutrition.</strong></span></div>
           <div class="criteria-item"><div class="criteria-num blue">2</div><span><strong>Supplémenter la thiamine avant même d&#39;amorcer la réalimentation</strong> : <strong>thiamine 200 à 300 mg PO par jour</strong> + <strong>multivitamines 1 co PO 2 fois par jour</strong>.</span></div>
@@ -43840,8 +43946,12 @@ function switchEpiTx(n) {
           <div class="criteria-item"><div class="criteria-num red">!</div><span><strong>SI LE SRI SE DÉCLARE</strong> — dès l&#39;apparition des signes ou symptômes : <strong>réduire ou même cesser d&#39;alimenter</strong> le patient · <strong>corriger les carences électrolytiques</strong>, par voie <strong>intraveineuse</strong> si elles sont graves · et <strong>surveiller étroitement les fonctions vitales, particulièrement cardiopulmonaires</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Boudebza, Perspective infirmière 2016</em></span></span></div>
         </div>
       
+                </div>
+
+
         <div class="key-fact orange" style="margin-top:12px;">💊 <strong>La thiamine avant le glucose — une règle qui vaut au-delà de la nutrition.</strong> Puisque le métabolisme des glucides <strong>consomme</strong> la thiamine, administrer du glucose à une personne carencée peut <strong>précipiter une encéphalopathie de Wernicke</strong>. C'est pourquoi, chez une personne alcoolique ou dénutrie, <strong>la thiamine se donne avant ou avec le glucose</strong>, jamais après. ➜ Voir <em>Troubles liés à l'alcool</em>.</div>
       </div>
+
 
 
 
@@ -61496,7 +61606,7 @@ function showPanel(prefix,activeId,count){
   document.querySelectorAll('[data-panel]').forEach(function(b){
     if(b.getAttribute('data-panel').startsWith(prefix)){
       var on=b.getAttribute('data-panel')===activeId;
-      var colorMap={'tx':'#0a7a4e','atx':'#065f46','vp':'#1e7a6b','mii-tx':'#0a7a4e','mii-cr':'#0a7a4e','pk-tx':'#7c3aed','hta-tx':'#0a7a4e','ugdd':'#0369a1','frg':'#b45309','spx':'#7c3aed','rds':'#0369a1','gu':'#0f766e','lax':'#0a7a4e','somdx':'#0e7490','mpg':'#1e40af','cde':'#b91c1c','chp':'#0f766e','grl':'#374151','tnctyp':'#6d28d9','evcog':'#b45309','dlrx':'#c0392b','htorx':'#0f766e','miidx':'#0e7490','tvt':'#7c3aed','tsfr':'#4338ca','tsfa':'#0f766e','tsfc':'#c2410c','tsfp':'#b91c1c','tsfg':'#374151','nutc':'#6d28d9','nutd':'#0e7490'};var col=colorMap[prefix]||'#c0392b';
+      var colorMap={'tx':'#0a7a4e','atx':'#065f46','vp':'#1e7a6b','mii-tx':'#0a7a4e','mii-cr':'#0a7a4e','pk-tx':'#7c3aed','hta-tx':'#0a7a4e','ugdd':'#0369a1','frg':'#b45309','spx':'#7c3aed','rds':'#0369a1','gu':'#0f766e','lax':'#0a7a4e','somdx':'#0e7490','mpg':'#1e40af','cde':'#b91c1c','chp':'#0f766e','grl':'#374151','tnctyp':'#6d28d9','evcog':'#b45309','dlrx':'#c0392b','htorx':'#0f766e','miidx':'#0e7490','tvt':'#7c3aed','tsfr':'#4338ca','tsfa':'#0f766e','tsfc':'#c2410c','tsfp':'#b91c1c','tsfg':'#374151','nutc':'#6d28d9','nutd':'#0e7490','ndnt':'#b45309','nalb':'#b91c1c','nsup':'#0a7a4e','nsri':'#b45309'};var col=colorMap[prefix]||'#c0392b';
       b.style.background=on?col:'#e0e0e0';
       b.style.color=on?'#fff':'#333';
     }
