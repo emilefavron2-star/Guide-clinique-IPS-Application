@@ -43264,7 +43264,16 @@ function switchEpiTx(n) {
 
         <div class="key-fact ink" style="margin-top:10px;">🧭 <strong>Deux questions, un seul encadré.</strong> <strong>D&#39;où vient la carence</strong> : chaque nutriment est absorbé à un endroit précis du tube digestif, donc <strong>savoir quel segment est atteint ou réséqué prédit la carence</strong> — particulièrement vrai en maladie de Crohn, où l&#39;atteinte iléale est fréquente. <strong>Ce qu&#39;elle donne</strong> : chaque carence a un <strong>organe-cible qui parle le premier</strong> — la bouche pour le fer, la B12, les folates et la vitamine C ; le cerveau pour la thiamine ; l&#39;os pour la vitamine D et le calcium. La <strong>cavité buccale est le miroir le plus accessible</strong>, et le plus rarement regardé. <span style="font-size:11px;color:#64748b;">📚 <em>Nadeau, Le Médecin du Québec 2013</em></span></div>
 
-        <div style="font-size:12px;font-weight:800;color:#6d28d9;margin-top:18px;letter-spacing:.4px;">📍 OÙ CHAQUE NUTRIMENT EST ABSORBÉ — LA CARENCE SUIT L&#39;ANATOMIE</div>
+        <div class="key-fact ink" style="margin-top:10px;">🧭 <strong>Deux façons d&#39;entrer dans cet encadré.</strong> <strong>⚖️ Comparer</strong> répond à « <strong>ce segment est atteint, quoi va manquer ?</strong> » — c&#39;est le tableau de l&#39;anatomie de l&#39;absorption. Les autres onglets répondent à l&#39;inverse : <strong>🔬 ce que chaque carence donne, une par une</strong>, quand c&#39;est le signe clinique qui arrive en premier.</div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;">
+          <button data-panel="nutc0" onclick="showPanel('nutc','nutc0',4)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#6d28d9;color:#fff;">⚖️ Comparer — où ça s&#39;absorbe</button>
+          <button data-panel="nutc1" onclick="showPanel('nutc','nutc1',4)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">🅱️ B1 — thiamine</button>
+          <button data-panel="nutc2" onclick="showPanel('nutc','nutc2',4)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">🅱️ B12 et B9</button>
+          <button data-panel="nutc3" onclick="showPanel('nutc','nutc3',4)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">🍊 C, calcium et les autres</button>
+        </div>
+
+        <div id="nutc0" style="display:block;margin-top:14px;">
+<div style="font-size:12px;font-weight:800;color:#6d28d9;margin-top:18px;letter-spacing:.4px;">📍 OÙ CHAQUE NUTRIMENT EST ABSORBÉ — LA CARENCE SUIT L&#39;ANATOMIE</div>
 <div style="overflow-x:auto;margin-top:12px;">
         <table style="font-size:12px;">
           <thead><tr><th style="width:20%;">Nutriment</th><th style="width:24%;">Site d'absorption</th><th style="width:28%;">Contextes à risque</th><th>Manifestations</th></tr></thead>
@@ -43282,14 +43291,21 @@ function switchEpiTx(n) {
         </div>
         <div class="key-fact red" style="margin-top:12px;">🚨 <strong>Le piège du magnésium :</strong> une <strong>hypokaliémie ou une hypocalcémie qui ne se corrige pas malgré la supplémentation</strong> doit faire doser le magnésium. Tant que le magnésium n'est pas corrigé, les deux autres ne le seront pas. ➜ Voir <em>Troubles électrolytiques</em>.</div>
 
-        <div style="font-size:12px;font-weight:800;color:#6d28d9;margin-top:18px;letter-spacing:.4px;">🔬 CE QUE CHAQUE CARENCE DONNE — UNE PAR UNE</div>
+                </div>
+
+        <div id="nutc1" style="display:none;margin-top:14px;">
+          <div style="background:#fee2e2;border-left:5px solid #b91c1c;border-radius:10px;padding:12px 14px;"><strong style="color:#b91c1c;">🅱️ B1 — thiamine</strong><span style="font-size:12px;color:#64748b;"> — l&#39;urgence des carences vitaminiques</span><div style="font-size:13px;line-height:1.7;margin-top:6px;">Le <strong>cerveau parle le premier</strong> : <strong>Gayet-Wernicke</strong> et <strong>Korsakoff</strong>. 🚨 Et la carence est <strong>exacerbée par la réalimentation</strong> — le glucose consomme la thiamine, d&#39;où la règle de <strong>supplémenter avant</strong>.</div></div>
 <div style="font-size:12px;font-weight:800;color:#6d28d9;margin-top:18px;letter-spacing:.4px;">🅱️ B1 — THIAMINE</div>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin-top:10px;">
           <div style="background:#fee2e2;border-left:4px solid #b91c1c;border-radius:10px;padding:14px;"><strong style="color:#b91c1c;">🧠 Ce qu&#39;elle donne quand elle manque</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;"><strong>Encéphalopathie de Gayet-Wernicke</strong> et <strong>syndrome de Korsakoff</strong>, causés par une <strong>importante carence en thiamine</strong>.<br>🚨 Et cette carence est <strong>exacerbée par la réintroduction soudaine et massive de la réalimentation</strong> : le glucose <em>consomme</em> la thiamine. <span style="font-size:11px;color:#64748b;">📚 <em>Boudebza, Perspective infirmière 2016</em></span></div></div>
           <div style="background:#f0fdf4;border-left:4px solid #15803d;border-radius:10px;padding:14px;"><strong style="color:#15803d;">💊 La conduite</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">🎯 <strong>Supplémenter AVANT même d&#39;amorcer la réalimentation</strong> :<br><strong>thiamine 200 à 300 mg par voie orale par jour</strong><br><strong>+ multivitamines, 1 co PO 2 fois par jour</strong><br>⛔ Ne jamais donner de glucose avant la thiamine chez une personne à risque. <span style="font-size:11px;color:#64748b;">📚 <em>Boudebza, Perspective infirmière 2016</em></span></div></div>
           <div style="background:#fff3cd;border-left:4px solid #d35400;border-radius:10px;padding:14px;"><strong style="color:#d35400;">🎯 Chez qui y penser</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">Personnes <strong>itinérantes</strong> ou <strong>alcooliques</strong> — elles s&#39;alimentent parfois très peu et peuvent <strong>jeûner plusieurs jours</strong><br>Anorexie mentale · oncologie · postopératoire · personne âgée sans appétit. <span style="font-size:11px;color:#64748b;">📚 <em>Boudebza, Perspective infirmière 2016</em></span></div></div>
         </div>
-        <div style="font-size:12px;font-weight:800;color:#6d28d9;margin-top:18px;letter-spacing:.4px;">🅱️ B12 — COBALAMINE  ·  🅱️ B9 — ACIDE FOLIQUE</div>
+                </div>
+
+        <div id="nutc2" style="display:none;margin-top:14px;">
+          <div style="background:#e8f4fd;border-left:5px solid #1d4ed8;border-radius:10px;padding:12px 14px;"><strong style="color:#1d4ed8;">🅱️ B12 et B9</strong><span style="font-size:12px;color:#64748b;"> — cobalamine et acide folique</span><div style="font-size:13px;line-height:1.7;margin-top:6px;">Les deux donnent une anémie <strong>mégaloblastique</strong> et parlent par la <strong>bouche</strong> — mais seule la <strong>B12 atteint le système nerveux</strong>. ⛔ Ne jamais corriger les folates sans avoir dosé la B12.</div></div>
+<div style="font-size:12px;font-weight:800;color:#6d28d9;margin-top:18px;letter-spacing:.4px;">🅱️ B12 — COBALAMINE  ·  🅱️ B9 — ACIDE FOLIQUE</div>
         <div style="overflow-x:auto;margin-top:12px;">
         <table style="font-size:12px;">
           <thead><tr><th style="width:18%;"></th><th style="width:41%;">Vitamine B12</th><th style="width:41%;">Acide folique (B9)</th></tr></thead>
@@ -43300,24 +43316,44 @@ function switchEpiTx(n) {
           </tbody>
         </table>
         </div>
-        <div style="font-size:12px;font-weight:800;color:#6d28d9;margin-top:18px;letter-spacing:.4px;">🍊 VITAMINE C  ·  🥛 CALCIUM  ·  ➕ LES AUTRES</div>
+                </div>
+
+        <div id="nutc3" style="display:none;margin-top:14px;">
+          <div style="background:#fff3cd;border-left:5px solid #d35400;border-radius:10px;padding:12px 14px;"><strong style="color:#d35400;">🍊 C, calcium et les autres</strong><span style="font-size:12px;color:#64748b;"> — vitamine C, calcium, vitamine A, riboflavine</span><div style="font-size:13px;line-height:1.7;margin-top:6px;">Quatre carences qui se lisent presque toutes <strong>dans la bouche</strong> : <strong>pétéchies</strong> et hémorragies périfolliculaires pour la C, <strong>hypoplasie de l&#39;émail</strong> pour le calcium, <strong>chéilites</strong> pour la A, <strong>brûlures diffuses</strong> pour la B2.</div></div>
+<div style="font-size:12px;font-weight:800;color:#6d28d9;margin-top:18px;letter-spacing:.4px;">🍊 VITAMINE C  ·  🥛 CALCIUM  ·  ➕ LES AUTRES</div>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin-top:10px;">
           <div style="background:#fff3cd;border-left:4px solid #d35400;border-radius:10px;padding:14px;"><strong style="color:#d35400;">🍊 Vitamine C — le scorbut</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">Associé à des <strong>hémorragies périfolliculaires</strong> et à des <strong>pétéchies dans la bouche</strong>, attribuables à une <strong>atteinte de l&#39;intégrité vasculaire</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Nadeau, Le Médecin du Québec 2013</em></span><br>➜ Lien avec le fer : la vitamine C <strong>améliore l&#39;absorption du fer</strong> — sa carence aggrave donc une anémie ferriprive.</div></div>
           <div style="background:#e8f4fd;border-left:4px solid #1d4ed8;border-radius:10px;padding:14px;"><strong style="color:#1d4ed8;">🥛 Calcium — par la vitamine D</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">La <strong>carence en vitamine D provoque une malabsorption du calcium</strong>, entraînant une <strong>ostéopénie mandibulaire</strong> et une <strong>hypoplasie de l&#39;émail dentaire</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Nadeau, Le Médecin du Québec 2013</em></span><br>La vitamine D, <strong>de concert avec la parathormone</strong>, joue un rôle essentiel dans le <strong>maintien et la régulation des taux de calcium et de phosphore</strong> sanguins, et <strong>stimule leur absorption intestinale</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Lévesque, Le Médecin du Québec 2009</em></span></div></div>
           <div style="background:#f1f5f9;border-left:4px solid #334155;border-radius:10px;padding:14px;"><strong style="color:#334155;">➕ Deux autres à connaître</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;"><strong>Vitamine A</strong> — changements <strong>dyskératosiques</strong> des muqueuses, <strong>chéilites angulaires</strong>, défauts de la <strong>dentine et de l&#39;émail</strong><br><strong>Riboflavine (B2)</strong> — souvent associée à des <strong>sensations de brûlure diffuses</strong> dans la bouche <span style="font-size:11px;color:#64748b;">📚 <em>Nadeau, Le Médecin du Québec 2013</em></span></div></div>
         </div>
+                </div>
+
+
         <div class="key-fact blue" style="margin-top:12px;">👄 <strong>Le geste qui rapporte le plus.</strong> L&#39;inspection minutieuse de toute la muqueuse buccale, <strong>à l&#39;aide d&#39;une lumière</strong>, puis la vérification de l&#39;<strong>état des dents et des espaces parodontaux</strong>. Les examens complémentaires dépendent ensuite du <strong>degré de présomption diagnostique</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Nadeau, Le Médecin du Québec 2013</em></span></div>
-      
+
         <div class="key-fact orange" style="margin-top:8px;">🔗 <strong>Les carences propres aux MII</strong> — B12 en cas d'atteinte ou de résection iléale, fer par saignement chronique, vitamine D et calcium sous corticothérapie — sont détaillées dans la section <em>Maladies inflammatoires de l'intestin</em>, avec le suivi correspondant.</div>
       </div>
 
 
 
 
+
       <div class="block para" style="margin-top:14px;border-left-color:#0e7490;">
         <div class="block-title" id="nut-vitd"><span class="tag">☀️ Vitamine D — seuils sanguins, doses canadiennes et populations à risque</span><span class="obj-badge">Obj. 1d</span></div>
+
         <div class="key-fact yellow" style="margin-top:10px;">🌍 <strong>Le contexte canadien, qui explique tout le reste.</strong> La carence en vitamine D est <strong>reconnue comme une pandémie</strong>. Dans les pays situés <strong>au nord du 40<sup>e</sup> parallèle</strong> — comme le Canada — <strong>les rayons solaires ne permettent pas la formation de vitamine D pendant les longs mois d&#39;hiver, d&#39;octobre à mars</strong>. Et les aliments qui en contiennent naturellement ou qui en sont enrichis <strong>ne suffisent pas</strong> à combler les besoins. <span style="font-size:11px;color:#64748b;">📚 <em>Lévesque, Le Médecin du Québec 2009</em></span></div>
-        <div style="font-size:12px;font-weight:800;color:#0e7490;margin-top:18px;letter-spacing:.4px;">🔢 LES SEUILS SANGUINS — LA 25(OH)D</div>
+
+        <div class="key-fact ink" style="margin-top:10px;">🧭 <strong>Cinq questions, cinq onglets.</strong> <strong>🔢 Quel chiffre</strong> définit la carence · <strong>💊 quelle dose</strong> donner, et pourquoi les sources divergent · <strong>👵 pourquoi l&#39;aîné</strong> est le plus exposé · <strong>🦴 ce que la carence provoque</strong>, avec le vocabulaire à ne pas confondre · <strong>🍽️ d&#39;où elle vient</strong>, sous quelle forme, et à partir de quand elle devient toxique.</div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;">
+          <button data-panel="nutd0" onclick="showPanel('nutd','nutd0',5)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#0e7490;color:#fff;">🔢 Les seuils sanguins</button>
+          <button data-panel="nutd1" onclick="showPanel('nutd','nutd1',5)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">💊 Les doses au Canada</button>
+          <button data-panel="nutd2" onclick="showPanel('nutd','nutd2',5)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">👵 L&#39;aîné</button>
+          <button data-panel="nutd3" onclick="showPanel('nutd','nutd3',5)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">🦴 Ce que la carence provoque</button>
+          <button data-panel="nutd4" onclick="showPanel('nutd','nutd4',5)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">🍽️ Sources, formes et toxicité</button>
+        </div>
+
+        <div id="nutd0" style="display:block;margin-top:14px;">
+<div style="font-size:12px;font-weight:800;color:#0e7490;margin-top:18px;letter-spacing:.4px;">🔢 LES SEUILS SANGUINS — LA 25(OH)D</div>
         <div class="key-fact green" style="margin-top:10px;">🧪 <strong>Le bon test.</strong> La <strong>25(OH)D</strong> est le <strong>meilleur indicateur clinique</strong> du statut en vitamine D, parce qu&#39;elle <strong>reflète à la fois la synthèse cutanée et l&#39;apport alimentaire</strong>. Une carence est donc <strong>facilement décelable</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Lévesque, Le Médecin du Québec 2009</em></span></div>
         <div style="overflow-x:auto;margin-top:12px;">
         <table style="font-size:12px;">
@@ -43333,7 +43369,11 @@ function switchEpiTx(n) {
         </table>
         </div>
         <div class="key-fact blue" style="margin-top:12px;">🎯 <strong>Le chiffre à retenir :</strong> un taux de <strong>80 à 110 nmol/L</strong> de 25(OH)D est reconnu comme <strong>optimal pour réduire le risque de fractures</strong>. En dessous de <strong>50 nmol/L</strong>, c&#39;est une carence. <span style="font-size:11px;color:#64748b;">📚 <em>Lévesque, Le Médecin du Québec 2009</em></span></div>
-        <div style="font-size:12px;font-weight:800;color:#0e7490;margin-top:18px;letter-spacing:.4px;">💊 LES DOSES RECOMMANDÉES AU CANADA — ET POURQUOI ELLES DIVERGENT</div>
+                </div>
+
+        <div id="nutd1" style="display:none;margin-top:14px;">
+          <div style="background:#f0fdf4;border-left:5px solid #15803d;border-radius:10px;padding:12px 14px;"><strong style="color:#15803d;">💊 Les doses au Canada</strong><span style="font-size:12px;color:#64748b;"> — et pourquoi les recommandations divergent</span><div style="font-size:13px;line-height:1.7;margin-top:6px;">Les sources ne s&#39;accordent pas sur la dose — connaître <strong>les deux fourchettes</strong> et ce qui les sépare vaut mieux que retenir un seul chiffre.</div></div>
+<div style="font-size:12px;font-weight:800;color:#0e7490;margin-top:18px;letter-spacing:.4px;">💊 LES DOSES RECOMMANDÉES AU CANADA — ET POURQUOI ELLES DIVERGENT</div>
         <div style="overflow-x:auto;margin-top:12px;">
         <table style="font-size:12px;">
           <thead><tr><th style="width:28%;">Organisme</th><th style="width:30%;">Adulte</th><th style="width:None;">Autres populations</th></tr></thead>
@@ -43347,20 +43387,32 @@ function switchEpiTx(n) {
         </table>
         </div>
         <div class="key-fact orange" style="margin-top:12px;">⚠️ <strong>Pourquoi l&#39;écart.</strong> Les ANREF de Santé Canada datent de <strong>1997</strong>. Depuis, la recherche s&#39;est multipliée et le dépistage a révélé l&#39;ampleur de la carence dans la population canadienne : <strong>plusieurs organismes recommandent donc des doses plus élevées</strong> que Santé Canada. <strong>Ces recommandations de doses quotidiennes plus élevées font consensus parmi plusieurs organismes de santé au Canada.</strong> ➜ Il s&#39;agit toutefois de <strong>recommandations de 2007-2009</strong> : vérifier les versions à jour d&#39;Ostéoporose Canada avant application. <span style="font-size:11px;color:#64748b;">📚 <em>Lévesque, Le Médecin du Québec 2009</em></span></div>
-        <div style="font-size:12px;font-weight:800;color:#0e7490;margin-top:18px;letter-spacing:.4px;">👵 POURQUOI L&#39;AÎNÉ EST LE PLUS EXPOSÉ</div>
+                </div>
+
+        <div id="nutd2" style="display:none;margin-top:14px;">
+          <div style="background:#ede9fe;border-left:5px solid #6d28d9;border-radius:10px;padding:12px 14px;"><strong style="color:#6d28d9;">👵 L&#39;aîné</strong><span style="font-size:12px;color:#64748b;"> — la population la plus exposée</span><div style="font-size:13px;line-height:1.7;margin-top:6px;">Peau moins efficace, exposition solaire moindre, apports plus faibles, absorption réduite : les facteurs <strong>s&#39;additionnent</strong> chez la même personne.</div></div>
+<div style="font-size:12px;font-weight:800;color:#0e7490;margin-top:18px;letter-spacing:.4px;">👵 POURQUOI L&#39;AÎNÉ EST LE PLUS EXPOSÉ</div>
         <div class="criteria-list" style="margin-top:10px;">
           <div class="criteria-item"><div class="criteria-num blue">1</div><span><strong>Moins de précurseur.</strong> Une personne âgée possède environ <strong>25 % moins de déhydrocholestérol</strong> — le précurseur de la vitamine D3 — qu&#39;une personne plus jeune.</span></div>
           <div class="criteria-item"><div class="criteria-num blue">2</div><span>🎯 <strong>Une synthèse effondrée.</strong> À <strong>quantité égale de rayons solaires</strong>, une personne de <strong>70 ans produit environ 75 % moins de vitamine D3</strong> qu&#39;une personne de <strong>20 ans</strong>.</span></div>
           <div class="criteria-item"><div class="criteria-num blue">3</div><span><strong>Des médicaments qui nuisent à l&#39;absorption</strong> : antiacides, laxatifs, <strong>anti-H2</strong>, <strong>glucocorticoïdes</strong>, relaxants musculaires, <strong>bisphosphonates</strong>, anticoagulants.<br>➜ Grands consommateurs de pilules, <strong>les aînés sont donc plus sujets à une carence</strong> — la prise d&#39;un supplément s&#39;avère judicieuse.</span></div>
           <div class="criteria-item"><div class="criteria-num red">!</div><span><strong>Les populations les plus susceptibles de manquer de vitamine D</strong> : les gens vivant en <strong>pays nordique</strong> · les <strong>personnes âgées</strong> · les personnes à <strong>peau foncée</strong> · celles qui <strong>sortent peu</strong> · celles qui portent des <strong>vêtements couvrant la majeure partie du corps</strong> · et selon les Diététistes du Canada : <strong>bébés allaités</strong>, <strong>femmes enceintes</strong>, <strong>personnes obèses</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Lévesque, Le Médecin du Québec 2009</em></span></span></div>
         </div>
-        <div style="font-size:12px;font-weight:800;color:#0e7490;margin-top:18px;letter-spacing:.4px;">🦴 CE QUE LA CARENCE PROVOQUE — ET LE VOCABULAIRE À NE PAS CONFONDRE</div>
+                </div>
+
+        <div id="nutd3" style="display:none;margin-top:14px;">
+          <div style="background:#fce4ec;border-left:5px solid #c0392b;border-radius:10px;padding:12px 14px;"><strong style="color:#c0392b;">🦴 Ce que la carence provoque</strong><span style="font-size:12px;color:#64748b;"> — et le vocabulaire à ne pas confondre</span><div style="font-size:13px;line-height:1.7;margin-top:6px;"><strong>Ostéomalacie</strong>, <strong>ostéoporose</strong>, <strong>rachitisme</strong> : trois mots qui ne désignent pas la même lésion — les confondre fait manquer le diagnostic.</div></div>
+<div style="font-size:12px;font-weight:800;color:#0e7490;margin-top:18px;letter-spacing:.4px;">🦴 CE QUE LA CARENCE PROVOQUE — ET LE VOCABULAIRE À NE PAS CONFONDRE</div>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin-top:10px;">
           <div style="background:#fee2e2;border-left:4px solid #b91c1c;border-radius:10px;padding:14px;"><strong style="color:#b91c1c;">🦴 Ostéomalacie</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;"><strong>Disparition progressive des sels de calcium</strong> qui donnent aux os leur solidité. La <strong>trame protéique</strong> des lamelles osseuses <strong>reste inchangée</strong> et ne s&#39;amenuise pas.<br>🎯 Les <strong>douleurs osseuses</strong> — profondes et généralement vives — en sont la <strong>manifestation constante et principale</strong>.<br>✅ <strong>Guérit</strong> grâce à la vitamine D, associée au calcium et à un régime riche en produits laitiers. <span style="font-size:11px;color:#64748b;">📚 <em>Lévesque, Le Médecin du Québec 2009</em></span></div></div>
           <div style="background:#fff3cd;border-left:4px solid #d35400;border-radius:10px;padding:14px;"><strong style="color:#d35400;">🦴 Ostéopénie et ostéoporose</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;"><strong>Ostéopénie</strong> : raréfaction osseuse.<br><strong>Ostéoporose</strong> : fragilité osseuse par <strong>amenuisement des lamelles</strong>, donnant au tissu un caractère <strong>poreux</strong>.<br>➜ Chez l&#39;adulte, la carence se manifeste par des <strong>douleurs musculaires</strong> et une <strong>déminéralisation</strong> : l&#39;ostéomalacie <strong>précipite et exacerbe</strong> l&#39;ostéopénie et l&#39;ostéoporose, et <strong>accroît le risque de fractures</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Lévesque, Le Médecin du Québec 2009</em></span></div></div>
           <div style="background:#f0fdf4;border-left:4px solid #15803d;border-radius:10px;padding:14px;"><strong style="color:#15803d;">🚶 Chutes et force musculaire</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">Le <strong>tissu musculaire comporte des récepteurs spécifiques</strong> pour capter la vitamine D : il devient <strong>plus fort et soutient mieux les os</strong>.<br>➜ Les aînés avec un taux élevé <strong>réussissent mieux les tests de force musculaire et d&#39;équilibre</strong>, se déplacent mieux et <strong>tombent moins</strong>.<br>🔢 Résidents ayant reçu <strong>800 UI/j + calcium pendant 5 mois</strong> : <strong>risque de fractures réduit de 72 %</strong> contre placebo. <span style="font-size:11px;color:#64748b;">📚 <em>Lévesque, Le Médecin du Québec 2009</em></span> ➜ voir <em>Chutes et mobilité</em></div></div>
         </div>
-        <div style="font-size:12px;font-weight:800;color:#0e7490;margin-top:18px;letter-spacing:.4px;">🍽️ SOURCES, FORMES ET TOXICITÉ</div>
+                </div>
+
+        <div id="nutd4" style="display:none;margin-top:14px;">
+          <div style="background:#e8f4fd;border-left:5px solid #1d4ed8;border-radius:10px;padding:12px 14px;"><strong style="color:#1d4ed8;">🍽️ Sources, formes et toxicité</strong><span style="font-size:12px;color:#64748b;"> — D₂ ou D₃, et la limite haute</span><div style="font-size:13px;line-height:1.7;margin-top:6px;">Ce qu&#39;on trouve dans l&#39;assiette, ce que vaut chaque forme, et le seuil au-delà duquel la supplémentation devient <strong>dangereuse</strong>.</div></div>
+<div style="font-size:12px;font-weight:800;color:#0e7490;margin-top:18px;letter-spacing:.4px;">🍽️ SOURCES, FORMES ET TOXICITÉ</div>
         <div style="overflow-x:auto;margin-top:12px;">
         <table style="font-size:12px;">
           <thead><tr><th style="width:22%;"></th><th style="width:None;">Détail</th></tr></thead>
@@ -43374,8 +43426,12 @@ function switchEpiTx(n) {
           </tbody>
         </table>
         </div>
+                </div>
+
+
         <div class="key-fact red" style="margin-top:12px;">☀️ <strong>La mise en garde sur le soleil.</strong> L&#39;exposition solaire demeure un <strong>complément</strong> aux suppléments, mais la Société canadienne du cancer <strong>met en garde contre l&#39;abus</strong> : le <strong>cancer de la peau est le plus fréquent au Canada</strong>, le risque est <strong>beaucoup plus élevé qu&#39;il y a vingt ans</strong> et ne cesse de croître, la couche d&#39;ozone s&#39;amincissant. Chez certaines personnes, <strong>quelques minutes par jour sans écran solaire pourraient suffire</strong> à augmenter le risque. ➜ Des recherches supplémentaires sont nécessaires pour déterminer la durée d&#39;exposition optimale. <span style="font-size:11px;color:#64748b;">📚 <em>Lévesque, Le Médecin du Québec 2009</em></span></div>
       </div>
+
       <div class="block def" style="margin-top:14px;">
         <div class="block-title" id="nut-1"><span class="tag">📌 Reconnaître la dénutrition — définition, chiffres, seuils et D.I.E.T.</span><span class="obj-badge">Obj. 2 · 4</span></div>
 
@@ -61440,7 +61496,7 @@ function showPanel(prefix,activeId,count){
   document.querySelectorAll('[data-panel]').forEach(function(b){
     if(b.getAttribute('data-panel').startsWith(prefix)){
       var on=b.getAttribute('data-panel')===activeId;
-      var colorMap={'tx':'#0a7a4e','atx':'#065f46','vp':'#1e7a6b','mii-tx':'#0a7a4e','mii-cr':'#0a7a4e','pk-tx':'#7c3aed','hta-tx':'#0a7a4e','ugdd':'#0369a1','frg':'#b45309','spx':'#7c3aed','rds':'#0369a1','gu':'#0f766e','lax':'#0a7a4e','somdx':'#0e7490','mpg':'#1e40af','cde':'#b91c1c','chp':'#0f766e','grl':'#374151','tnctyp':'#6d28d9','evcog':'#b45309','dlrx':'#c0392b','htorx':'#0f766e','miidx':'#0e7490','tvt':'#7c3aed','tsfr':'#4338ca','tsfa':'#0f766e','tsfc':'#c2410c','tsfp':'#b91c1c','tsfg':'#374151'};var col=colorMap[prefix]||'#c0392b';
+      var colorMap={'tx':'#0a7a4e','atx':'#065f46','vp':'#1e7a6b','mii-tx':'#0a7a4e','mii-cr':'#0a7a4e','pk-tx':'#7c3aed','hta-tx':'#0a7a4e','ugdd':'#0369a1','frg':'#b45309','spx':'#7c3aed','rds':'#0369a1','gu':'#0f766e','lax':'#0a7a4e','somdx':'#0e7490','mpg':'#1e40af','cde':'#b91c1c','chp':'#0f766e','grl':'#374151','tnctyp':'#6d28d9','evcog':'#b45309','dlrx':'#c0392b','htorx':'#0f766e','miidx':'#0e7490','tvt':'#7c3aed','tsfr':'#4338ca','tsfa':'#0f766e','tsfc':'#c2410c','tsfp':'#b91c1c','tsfg':'#374151','nutc':'#6d28d9','nutd':'#0e7490'};var col=colorMap[prefix]||'#c0392b';
       b.style.background=on?col:'#e0e0e0';
       b.style.color=on?'#fff':'#333';
     }
