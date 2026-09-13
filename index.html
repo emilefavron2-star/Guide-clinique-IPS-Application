@@ -41199,30 +41199,183 @@ function switchEpiTx(n) {
 
 
       <div class="block clin" style="margin-top:14px;border-left-color:#7c3aed;">
-        <div class="block-title" id="mii-mei"><span class="tag">🌐 Manifestations extra-intestinales — fréquences, système par système, et Crohn ou CU</span><span class="obj-badge">Obj. 11</span></div>
+        <div class="block-title" id="mii-mei"><span class="tag">🌐 Manifestations extra-intestinales — un onglet par système</span><span class="obj-badge">Obj. 11</span></div>
 
         <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>Une MII n'est pas une maladie de l'intestin seulement.</strong> Les manifestations extra-intestinales sont fréquentes, parfois <strong>révélatrices — elles peuvent précéder les symptômes digestifs de plusieurs années</strong> — et certaines évoluent <strong>indépendamment</strong> de l'activité intestinale. C'est souvent en première ligne qu'on les voit en premier.</div>
+
         <div class="key-fact purple" style="margin-top:10px;">🎯 <strong>Jusqu&#39;à 50 % des patients atteints de MICI développeront au moins une manifestation extra-intestinale.</strong> Elles sont parfois <strong>révélatrices</strong> — elles peuvent précéder les symptômes digestifs de plusieurs années — et certaines évoluent <strong>indépendamment</strong> de l&#39;activité intestinale. <span style="font-size:11px;color:#64748b;">📚 <em>Gordon et coll., ECCO Guidelines on Extraintestinal Manifestations in IBD, J Crohns Colitis 2024</em></span></div>
-        <div style="font-size:12px;font-weight:800;color:#7c3aed;margin-top:18px;letter-spacing:.4px;">🌐 LE TABLEAU UNIQUE — FRÉQUENCE, PRÉFÉRENCE CROHN OU CU, ET LIEN AVEC L&#39;ACTIVITÉ</div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;">
+          <button data-panel="mimei0" onclick="showPanel('mimei','mimei0',10)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#7c3aed;color:#fff;">⚖️ Comparer</button>
+          <button data-panel="mimei1" onclick="showPanel('mimei','mimei1',10)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">🦴 Articulaire</button>
+          <button data-panel="mimei2" onclick="showPanel('mimei','mimei2',10)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">🩹 Cutané</button>
+          <button data-panel="mimei3" onclick="showPanel('mimei','mimei3',10)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">👁️ Oculaire</button>
+          <button data-panel="mimei4" onclick="showPanel('mimei','mimei4',10)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">🫧 Hépatobiliaire</button>
+          <button data-panel="mimei5" onclick="showPanel('mimei','mimei5',10)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">🩸 Hématologique</button>
+          <button data-panel="mimei6" onclick="showPanel('mimei','mimei6',10)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">🦴 Osseux</button>
+          <button data-panel="mimei7" onclick="showPanel('mimei','mimei7',10)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">🩸 Vasculaire</button>
+          <button data-panel="mimei8" onclick="showPanel('mimei','mimei8',10)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">🪨 Rénal</button>
+          <button data-panel="mimei9" onclick="showPanel('mimei','mimei9',10)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">🔥 Général</button>
+        </div>
+
+        <div id="mimei0" style="display:block;margin-top:14px;">
         <div style="overflow-x:auto;margin-top:12px;">
-        <table style="font-size:11.5px;min-width:1000px;">
-          <thead><tr><th style="width:12%;">Système</th><th style="width:17%;">Fréquence</th><th style="width:18%;">🎯 Plutôt Crohn ou CU ?</th><th style="width:26%;">Ce qu&#39;on voit</th><th style="width:27%;">Lien avec l&#39;activité digestive</th></tr></thead>
+        <table style="font-size:12px;min-width:560px;">
+          <thead><tr><th style="width:22%;">Système</th><th style="width:38%;">Fréquence</th><th style="width:40%;">🎯 Plutôt Crohn ou CU ?</th></tr></thead>
           <tbody>
-            <tr><td>🦴 <strong>Articulaire</strong><br><em>le plus fréquent</em></td><td><strong>10 à 20 %</strong><br>Arthrite périphérique <strong>13 %</strong> (IC 12-15)<br>Sacro-iliite <strong>10 %</strong> (IC 8-12)<br>Spondylarthrite, toutes formes : <strong>21 %</strong> (IC 17-26) <span style="font-size:11px;color:#64748b;">📚 <em>Gordon et coll., ECCO Guidelines on Extraintestinal Manifestations in IBD, J Crohns Colitis 2024</em></span></td><td><strong>Les deux</strong>, sans préférence nette</td><td><strong>Arthrite périphérique</strong> — souvent asymétrique, grosses articulations<br><strong>Spondylarthrite axiale</strong> · sacro-iliite<br><strong>Enthésite</strong>, dactylite</td><td>Périphérique : <strong>suit</strong> souvent l&#39;activité intestinale<br>🎯 <strong>Axiale : évolue INDÉPENDAMMENT</strong> — traiter la MII ne règle pas le dos<br>➜ voir <em>Spondylarthrites</em></td></tr>
-            <tr style="background:#f8f9fa;"><td>🩹 <strong>Cutané</strong></td><td>Jusqu&#39;à <strong>15 %</strong> au total<br><strong>Érythème noueux 10 à 15 %</strong><br><strong>Pyoderma gangrenosum 1 à 2 %</strong></td><td>🎯 <strong>Érythème noueux : plutôt CROHN</strong> — <strong>4 à 15 % en Crohn</strong> contre <strong>2,8 à 10 % en CU</strong> <span style="font-size:11px;color:#64748b;">📚 <em>Gordon et coll., ECCO Guidelines on Extraintestinal Manifestations in IBD, J Crohns Colitis 2024</em></span></td><td><strong>Érythème noueux</strong> — nodules douloureux des jambes ; c&#39;est la manifestation cutanée la <strong>plus fréquente</strong><br><strong>Pyoderma gangrenosum</strong> — ulcère à bords violacés, souvent après un traumatisme minime ; <strong>70 à 80 % sur les jambes</strong>, la plus <strong>invalidante</strong></td><td>Érythème noueux : <strong>parallèle</strong> à l&#39;activité<br>Pyoderma : <strong>indépendant</strong> · ⚠️ ne pas débrider — cela aggrave<br>🎯 <strong>15 % des pyoderma PRÉCÈDENT</strong> le diagnostic de MICI, et <strong>30 à 50 %</strong> de tous les pyoderma sont associés à une MICI <span style="font-size:11px;color:#64748b;">📚 <em>Gordon et coll., ECCO Guidelines on Extraintestinal Manifestations in IBD, J Crohns Colitis 2024</em></span></td></tr>
-            <tr><td>👁️ <strong>Oculaire</strong></td><td><strong>5 à 15 %</strong><br>Uvéite : <strong>11,1 %</strong> en Crohn · <strong>5,6 %</strong> en CU <span style="font-size:11px;color:#64748b;">📚 <em>Gordon et coll., ECCO Guidelines on Extraintestinal Manifestations in IBD, J Crohns Colitis 2024</em></span></td><td>🎯 <strong>Plutôt CROHN</strong> — environ <strong>deux fois plus</strong></td><td>🚨 <strong>Uvéite</strong> — œil rouge douloureux, photophobie<br><strong>Épisclérite</strong></td><td>Uvéite : <strong>indépendante</strong> · <strong>urgence ophtalmologique</strong><br>Épisclérite : parallèle à l&#39;activité</td></tr>
-            <tr style="background:#f8f9fa;"><td>🫧 <strong>Hépatobiliaire</strong></td><td><strong>2 à 7,5 %</strong><br>Méta-analyse : <strong>2,16 %</strong> <span style="font-size:11px;color:#64748b;">📚 <em>Gordon et coll., ECCO Guidelines on Extraintestinal Manifestations in IBD, J Crohns Colitis 2024</em></span></td><td>🎯 <strong>Nettement CU</strong> — <strong>4 % en CU</strong> contre <strong>0,6 % en Crohn</strong> <span style="font-size:11px;color:#64748b;">📚 <em>Gordon et coll., ECCO Guidelines on Extraintestinal Manifestations in IBD, J Crohns Colitis 2024</em></span></td><td>🚨 <strong>Cholangite sclérosante primitive</strong><br>Et la relation inverse est encore plus forte : <strong>70 à 80 % des patients atteints de CSP ont une MICI</strong></td><td>🎯 <strong>Indépendante</strong> de l&#39;activité intestinale<br>🚨 ↑ risque de <strong>cholangiocarcinome</strong> et de <strong>cancer colorectal — jusqu&#39;à 400 fois</strong> · <strong>50 % finissent par une greffe hépatique</strong> <span style="font-size:11px;color:#64748b;">📚 <em>Gordon et coll., ECCO Guidelines on Extraintestinal Manifestations in IBD, J Crohns Colitis 2024</em></span><br>➜ voir <em>Cholangite</em></td></tr>
-            <tr><td>🩸 <strong>Hématologique</strong></td><td><strong>27 %</strong> en Crohn · <strong>21 %</strong> en CU (méta-analyse, intervalle des études 6 à 74 %)<br>🚨 Jusqu&#39;à <strong>90 % chez l&#39;enfant au diagnostic</strong> <span style="font-size:11px;color:#64748b;">📚 <em>Gordon et coll., ECCO Guidelines on Extraintestinal Manifestations in IBD, J Crohns Colitis 2024</em></span></td><td>🎯 <strong>Un peu plus en Crohn</strong></td><td><strong>Anémie</strong> — c&#39;est <strong>l&#39;une des MEI les plus fréquentes</strong>. Deux étiologies dominantes : <strong>carence martiale</strong> et <strong>anémie inflammatoire</strong> · aussi <strong>B12</strong> (atteinte ou résection iléale), <strong>folates</strong>, et les <strong>médicaments</strong> (sulfasalazine, 5-ASA, thiopurines, inhibiteurs de JAK)</td><td>Très fréquente et <strong>sous-traitée</strong><br>🔢 Une <strong>saturation de la transferrine &lt; 16 %</strong> appuie la carence martiale quand les premiers tests ne tranchent pas <span style="font-size:11px;color:#64748b;">📚 <em>Gordon et coll., ECCO Guidelines on Extraintestinal Manifestations in IBD, J Crohns Colitis 2024</em></span><br>➜ voir <em>FSC &amp; Anémie</em></td></tr>
-            <tr style="background:#f8f9fa;"><td>🦴 <strong>Osseux</strong></td><td><strong>≈ 15 %</strong> (Goldman) · <strong>10 à 15 %</strong> (Plamondon)</td><td><strong>Les deux</strong> — c&#39;est la <strong>corticothérapie</strong> qui décide, plus que le type de MICI</td><td><strong>Ostéopénie et ostéoporose</strong></td><td>Multifactoriel : <strong>inflammation, corticostéroïdes, malabsorption, carence en vitamine D</strong><br>➜ voir <em>Chutes &amp; mobilité</em></td></tr>
-            <tr><td>🩸 <strong>Vasculaire</strong></td><td>🚨 Risque <strong>plus de 2 fois</strong> celui de la population générale <span style="font-size:11px;color:#64748b;">📚 <em>Gordon et coll., ECCO Guidelines on Extraintestinal Manifestations in IBD, J Crohns Colitis 2024</em></span></td><td><strong>Prévalence similaire</strong> en CU et en Crohn <span style="font-size:11px;color:#64748b;">📚 <em>Gordon et coll., ECCO Guidelines on Extraintestinal Manifestations in IBD, J Crohns Colitis 2024</em></span></td><td>🚨 <strong>Thromboembolie veineuse</strong>, surtout <strong>en poussée</strong></td><td>Y penser devant une dyspnée ou un œdème de membre<br>➜ voir <em>TVP</em>, <em>Embolie pulmonaire</em></td></tr>
-            <tr style="background:#f8f9fa;"><td>🪨 <strong>Rénal</strong></td><td>Jusqu&#39;à <strong>10 %</strong></td><td>🎯 <strong>Plutôt CROHN du grêle</strong> — par malabsorption des graisses</td><td><strong>Lithiases</strong> — surtout <strong>oxalate de calcium</strong> ; les calculs d&#39;<strong>acide urique</strong> apparaissent en cas de <strong>déplétion volémique sévère</strong></td><td>Conséquence de la malabsorption : l&#39;hyperoxalurie entérique suit l&#39;atteinte du grêle</td></tr>
-            <tr><td>🔥 <strong>Général</strong></td><td><strong>40 %</strong> des patients <strong>même en rémission</strong> <span style="font-size:11px;color:#64748b;">📚 <em>Gordon et coll., ECCO Guidelines on Extraintestinal Manifestations in IBD, J Crohns Colitis 2024</em></span></td><td><strong>Les deux</strong></td><td><strong>Fatigue</strong> — souvent attribuée à tort à l&#39;anémie seule</td><td>Persiste <strong>malgré la rémission</strong> : ne pas la considérer comme un simple marqueur d&#39;activité</td></tr>
+            <tr><td>🦴 Articulaire</td><td><strong>10 à 20 %</strong><br>Arthrite périphérique <strong>13 %</strong> (IC 12-15)<br>Sacro-iliite <strong>10 %</strong> (IC 8-12)<br>Spondylarthrite, toutes formes : <strong>21 %</strong> (IC 17-26)</td><td><strong>Les deux</strong>, sans préférence nette</td></tr>
+            <tr style="background:#f8f9fa;"><td>🩹 Cutané</td><td>Jusqu&#39;à <strong>15 %</strong> au total<br><strong>Érythème noueux 10 à 15 %</strong><br><strong>Pyoderma gangrenosum 1 à 2 %</strong></td><td>🎯 <strong>Érythème noueux : plutôt CROHN</strong> — <strong>4 à 15 % en Crohn</strong> contre <strong>2,8 à 10 % en CU</strong></td></tr>
+            <tr><td>👁️ Oculaire</td><td><strong>5 à 15 %</strong><br>Uvéite : <strong>11,1 %</strong> en Crohn · <strong>5,6 %</strong> en CU</td><td>🎯 <strong>Plutôt CROHN</strong> — environ <strong>deux fois plus</strong></td></tr>
+            <tr style="background:#f8f9fa;"><td>🫧 Hépatobiliaire</td><td><strong>2 à 7,5 %</strong><br>Méta-analyse : <strong>2,16 %</strong></td><td>🎯 <strong>Nettement CU</strong> — <strong>4 % en CU</strong> contre <strong>0,6 % en Crohn</strong></td></tr>
+            <tr><td>🩸 Hématologique</td><td><strong>27 %</strong> en Crohn · <strong>21 %</strong> en CU (méta-analyse, intervalle des études 6 à 74 %)<br>🚨 Jusqu&#39;à <strong>90 % chez l&#39;enfant au diagnostic</strong></td><td>🎯 <strong>Un peu plus en Crohn</strong></td></tr>
+            <tr style="background:#f8f9fa;"><td>🦴 Osseux</td><td><strong>≈ 15 %</strong> (Goldman) · <strong>10 à 15 %</strong> (Plamondon)</td><td><strong>Les deux</strong> — c&#39;est la <strong>corticothérapie</strong> qui décide, plus que le type de MICI</td></tr>
+            <tr><td>🩸 Vasculaire</td><td>🚨 Risque <strong>plus de 2 fois</strong> celui de la population générale</td><td><strong>Prévalence similaire</strong> en CU et en Crohn</td></tr>
+            <tr style="background:#f8f9fa;"><td>🪨 Rénal</td><td>Jusqu&#39;à <strong>10 %</strong></td><td>🎯 <strong>Plutôt CROHN du grêle</strong> — par malabsorption des graisses</td></tr>
+            <tr><td>🔥 Général</td><td><strong>40 %</strong> des patients <strong>même en rémission</strong></td><td><strong>Les deux</strong></td></tr>
           </tbody>
         </table>
         </div>
+        <div class="key-fact ink" style="margin-top:12px;">🧭 <strong>La colonne qui décide de la conduite n&#39;est pas la fréquence.</strong> C&#39;est le <strong>lien avec l&#39;activité digestive</strong>, visible dans chaque onglet : une manifestation qui <strong>suit</strong> l&#39;intestin se règle en traitant la MII, une manifestation <strong>indépendante</strong> exige son propre traitement et sa propre surveillance. 🎯 Les trois indépendantes à connaître par cœur : <strong>spondylarthrite axiale</strong>, <strong>uvéite</strong>, <strong>cholangite sclérosante primitive</strong>.</div>
+        </div>
+
+        <div id="mimei1" style="display:none;margin-top:14px;">
+          <div style="background:#ede9fe;border-left:5px solid #6d28d9;border-radius:10px;padding:12px 14px;"><strong style="color:#6d28d9;">🦴 Articulaire</strong><span style="font-size:12px;color:#64748b;"> — la plus fréquente des manifestations extra-intestinales</span><div style="font-size:13px;line-height:1.7;margin-top:6px;">Deux formes qui ne se comportent pas pareil : la <strong>périphérique suit l&#39;intestin</strong>, l&#39;<strong>axiale vit sa propre vie</strong>.</div></div>
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:26%;">Axe</th><th style="width:74%;">Ce qu&#39;on observe</th></tr></thead>
+          <tbody>
+            <tr><td><strong>🔢 Fréquence</strong></td><td><strong>10 à 20 %</strong><br>Arthrite périphérique <strong>13 %</strong> (IC 12-15)<br>Sacro-iliite <strong>10 %</strong> (IC 8-12)<br>Spondylarthrite, toutes formes : <strong>21 %</strong> (IC 17-26) <span style="font-size:11px;color:#64748b;">📚 <em>Gordon et coll., ECCO Guidelines on Extraintestinal Manifestations in IBD, J Crohns Colitis 2024</em></span></td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>🎯 Plutôt Crohn ou CU ?</strong></td><td><strong>Les deux</strong>, sans préférence nette</td></tr>
+            <tr><td><strong>🩺 Ce qu&#39;on voit</strong></td><td><strong>Arthrite périphérique</strong> — souvent asymétrique, grosses articulations<br><strong>Spondylarthrite axiale</strong> · sacro-iliite<br><strong>Enthésite</strong>, dactylite</td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>🔗 Lien avec l&#39;activité digestive</strong></td><td>Périphérique : <strong>suit</strong> souvent l&#39;activité intestinale<br>🎯 <strong>Axiale : évolue INDÉPENDAMMENT</strong> — traiter la MII ne règle pas le dos<br>➜ voir <em>Spondylarthrites</em></td></tr>
+          </tbody>
+        </table>
+        </div>
+        </div>
+
+        <div id="mimei2" style="display:none;margin-top:14px;">
+          <div style="background:#fce4ec;border-left:5px solid #c0392b;border-radius:10px;padding:12px 14px;"><strong style="color:#c0392b;">🩹 Cutané</strong><span style="font-size:12px;color:#64748b;"> — érythème noueux et pyoderma gangrenosum</span><div style="font-size:13px;line-height:1.7;margin-top:6px;">L&#39;<strong>érythème noueux</strong> accompagne les poussées ; le <strong>pyoderma</strong> non — et il peut même <strong>précéder</strong> le diagnostic de MICI.</div></div>
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:26%;">Axe</th><th style="width:74%;">Ce qu&#39;on observe</th></tr></thead>
+          <tbody>
+            <tr><td><strong>🔢 Fréquence</strong></td><td>Jusqu&#39;à <strong>15 %</strong> au total<br><strong>Érythème noueux 10 à 15 %</strong><br><strong>Pyoderma gangrenosum 1 à 2 %</strong></td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>🎯 Plutôt Crohn ou CU ?</strong></td><td>🎯 <strong>Érythème noueux : plutôt CROHN</strong> — <strong>4 à 15 % en Crohn</strong> contre <strong>2,8 à 10 % en CU</strong> <span style="font-size:11px;color:#64748b;">📚 <em>Gordon et coll., ECCO Guidelines on Extraintestinal Manifestations in IBD, J Crohns Colitis 2024</em></span></td></tr>
+            <tr><td><strong>🩺 Ce qu&#39;on voit</strong></td><td><strong>Érythème noueux</strong> — nodules douloureux des jambes ; c&#39;est la manifestation cutanée la <strong>plus fréquente</strong><br><strong>Pyoderma gangrenosum</strong> — ulcère à bords violacés, souvent après un traumatisme minime ; <strong>70 à 80 % sur les jambes</strong>, la plus <strong>invalidante</strong></td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>🔗 Lien avec l&#39;activité digestive</strong></td><td>Érythème noueux : <strong>parallèle</strong> à l&#39;activité<br>Pyoderma : <strong>indépendant</strong> · ⚠️ ne pas débrider — cela aggrave<br>🎯 <strong>15 % des pyoderma PRÉCÈDENT</strong> le diagnostic de MICI, et <strong>30 à 50 %</strong> de tous les pyoderma sont associés à une MICI <span style="font-size:11px;color:#64748b;">📚 <em>Gordon et coll., ECCO Guidelines on Extraintestinal Manifestations in IBD, J Crohns Colitis 2024</em></span></td></tr>
+          </tbody>
+        </table>
+        </div>
+        </div>
+
+        <div id="mimei3" style="display:none;margin-top:14px;">
+          <div style="background:#e8f4fd;border-left:5px solid #1d4ed8;border-radius:10px;padding:12px 14px;"><strong style="color:#1d4ed8;">👁️ Oculaire</strong><span style="font-size:12px;color:#64748b;"> — uvéite et épisclérite</span><div style="font-size:13px;line-height:1.7;margin-top:6px;">🚨 L&#39;<strong>uvéite est une urgence ophtalmologique</strong> et elle est <strong>indépendante</strong> de l&#39;activité digestive.</div></div>
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:26%;">Axe</th><th style="width:74%;">Ce qu&#39;on observe</th></tr></thead>
+          <tbody>
+            <tr><td><strong>🔢 Fréquence</strong></td><td><strong>5 à 15 %</strong><br>Uvéite : <strong>11,1 %</strong> en Crohn · <strong>5,6 %</strong> en CU <span style="font-size:11px;color:#64748b;">📚 <em>Gordon et coll., ECCO Guidelines on Extraintestinal Manifestations in IBD, J Crohns Colitis 2024</em></span></td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>🎯 Plutôt Crohn ou CU ?</strong></td><td>🎯 <strong>Plutôt CROHN</strong> — environ <strong>deux fois plus</strong></td></tr>
+            <tr><td><strong>🩺 Ce qu&#39;on voit</strong></td><td>🚨 <strong>Uvéite</strong> — œil rouge douloureux, photophobie<br><strong>Épisclérite</strong></td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>🔗 Lien avec l&#39;activité digestive</strong></td><td>Uvéite : <strong>indépendante</strong> · <strong>urgence ophtalmologique</strong><br>Épisclérite : parallèle à l&#39;activité</td></tr>
+          </tbody>
+        </table>
+        </div>
+        </div>
+
+        <div id="mimei4" style="display:none;margin-top:14px;">
+          <div style="background:#fff3cd;border-left:5px solid #d35400;border-radius:10px;padding:12px 14px;"><strong style="color:#d35400;">🫧 Hépatobiliaire</strong><span style="font-size:12px;color:#64748b;"> — cholangite sclérosante primitive</span><div style="font-size:13px;line-height:1.7;margin-top:6px;">Celle qui change la <strong>surveillance du cancer</strong> : risque de <strong>cholangiocarcinome</strong> et de <strong>cancer colorectal</strong> très majoré.</div></div>
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:26%;">Axe</th><th style="width:74%;">Ce qu&#39;on observe</th></tr></thead>
+          <tbody>
+            <tr><td><strong>🔢 Fréquence</strong></td><td><strong>2 à 7,5 %</strong><br>Méta-analyse : <strong>2,16 %</strong> <span style="font-size:11px;color:#64748b;">📚 <em>Gordon et coll., ECCO Guidelines on Extraintestinal Manifestations in IBD, J Crohns Colitis 2024</em></span></td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>🎯 Plutôt Crohn ou CU ?</strong></td><td>🎯 <strong>Nettement CU</strong> — <strong>4 % en CU</strong> contre <strong>0,6 % en Crohn</strong> <span style="font-size:11px;color:#64748b;">📚 <em>Gordon et coll., ECCO Guidelines on Extraintestinal Manifestations in IBD, J Crohns Colitis 2024</em></span></td></tr>
+            <tr><td><strong>🩺 Ce qu&#39;on voit</strong></td><td>🚨 <strong>Cholangite sclérosante primitive</strong><br>Et la relation inverse est encore plus forte : <strong>70 à 80 % des patients atteints de CSP ont une MICI</strong></td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>🔗 Lien avec l&#39;activité digestive</strong></td><td>🎯 <strong>Indépendante</strong> de l&#39;activité intestinale<br>🚨 ↑ risque de <strong>cholangiocarcinome</strong> et de <strong>cancer colorectal — jusqu&#39;à 400 fois</strong> · <strong>50 % finissent par une greffe hépatique</strong> <span style="font-size:11px;color:#64748b;">📚 <em>Gordon et coll., ECCO Guidelines on Extraintestinal Manifestations in IBD, J Crohns Colitis 2024</em></span><br>➜ voir <em>Cholangite</em></td></tr>
+          </tbody>
+        </table>
+        </div>
+        </div>
+
+        <div id="mimei5" style="display:none;margin-top:14px;">
+          <div style="background:#fef2f2;border-left:5px solid #b91c1c;border-radius:10px;padding:12px 14px;"><strong style="color:#b91c1c;">🩸 Hématologique</strong><span style="font-size:12px;color:#64748b;"> — anémie — la plus fréquente et la plus négligée</span><div style="font-size:13px;line-height:1.7;margin-top:6px;">Deux causes se superposent : la <strong>carence martiale</strong> et l&#39;<strong>anémie inflammatoire</strong> — et la ferritine seule ne les sépare pas.</div></div>
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:26%;">Axe</th><th style="width:74%;">Ce qu&#39;on observe</th></tr></thead>
+          <tbody>
+            <tr><td><strong>🔢 Fréquence</strong></td><td><strong>27 %</strong> en Crohn · <strong>21 %</strong> en CU (méta-analyse, intervalle des études 6 à 74 %)<br>🚨 Jusqu&#39;à <strong>90 % chez l&#39;enfant au diagnostic</strong> <span style="font-size:11px;color:#64748b;">📚 <em>Gordon et coll., ECCO Guidelines on Extraintestinal Manifestations in IBD, J Crohns Colitis 2024</em></span></td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>🎯 Plutôt Crohn ou CU ?</strong></td><td>🎯 <strong>Un peu plus en Crohn</strong></td></tr>
+            <tr><td><strong>🩺 Ce qu&#39;on voit</strong></td><td><strong>Anémie</strong> — c&#39;est <strong>l&#39;une des MEI les plus fréquentes</strong>. Deux étiologies dominantes : <strong>carence martiale</strong> et <strong>anémie inflammatoire</strong> · aussi <strong>B12</strong> (atteinte ou résection iléale), <strong>folates</strong>, et les <strong>médicaments</strong> (sulfasalazine, 5-ASA, thiopurines, inhibiteurs de JAK)</td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>🔗 Lien avec l&#39;activité digestive</strong></td><td>Très fréquente et <strong>sous-traitée</strong><br>🔢 Une <strong>saturation de la transferrine &lt; 16 %</strong> appuie la carence martiale quand les premiers tests ne tranchent pas <span style="font-size:11px;color:#64748b;">📚 <em>Gordon et coll., ECCO Guidelines on Extraintestinal Manifestations in IBD, J Crohns Colitis 2024</em></span><br>➜ voir <em>FSC &amp; Anémie</em></td></tr>
+          </tbody>
+        </table>
+        </div>
+        </div>
+
+        <div id="mimei6" style="display:none;margin-top:14px;">
+          <div style="background:#f1f5f9;border-left:5px solid #334155;border-radius:10px;padding:12px 14px;"><strong style="color:#334155;">🦴 Osseux</strong><span style="font-size:12px;color:#64748b;"> — ostéopénie et ostéoporose</span><div style="font-size:13px;line-height:1.7;margin-top:6px;">Ce n&#39;est pas le type de MICI qui décide, c&#39;est la <strong>corticothérapie</strong>, la malabsorption et l&#39;inflammation chronique.</div></div>
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:26%;">Axe</th><th style="width:74%;">Ce qu&#39;on observe</th></tr></thead>
+          <tbody>
+            <tr><td><strong>🔢 Fréquence</strong></td><td><strong>≈ 15 %</strong> (Goldman) · <strong>10 à 15 %</strong> (Plamondon)</td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>🎯 Plutôt Crohn ou CU ?</strong></td><td><strong>Les deux</strong> — c&#39;est la <strong>corticothérapie</strong> qui décide, plus que le type de MICI</td></tr>
+            <tr><td><strong>🩺 Ce qu&#39;on voit</strong></td><td><strong>Ostéopénie et ostéoporose</strong></td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>🔗 Lien avec l&#39;activité digestive</strong></td><td>Multifactoriel : <strong>inflammation, corticostéroïdes, malabsorption, carence en vitamine D</strong><br>➜ voir <em>Chutes &amp; mobilité</em></td></tr>
+          </tbody>
+        </table>
+        </div>
+        </div>
+
+        <div id="mimei7" style="display:none;margin-top:14px;">
+          <div style="background:#fee2e2;border-left:5px solid #991b1b;border-radius:10px;padding:12px 14px;"><strong style="color:#991b1b;">🩸 Vasculaire</strong><span style="font-size:12px;color:#64748b;"> — thromboembolie veineuse</span><div style="font-size:13px;line-height:1.7;margin-top:6px;">🚨 Risque <strong>plus de deux fois</strong> celui de la population générale, et <strong>maximal en poussée</strong>.</div></div>
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:26%;">Axe</th><th style="width:74%;">Ce qu&#39;on observe</th></tr></thead>
+          <tbody>
+            <tr><td><strong>🔢 Fréquence</strong></td><td>🚨 Risque <strong>plus de 2 fois</strong> celui de la population générale <span style="font-size:11px;color:#64748b;">📚 <em>Gordon et coll., ECCO Guidelines on Extraintestinal Manifestations in IBD, J Crohns Colitis 2024</em></span></td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>🎯 Plutôt Crohn ou CU ?</strong></td><td><strong>Prévalence similaire</strong> en CU et en Crohn <span style="font-size:11px;color:#64748b;">📚 <em>Gordon et coll., ECCO Guidelines on Extraintestinal Manifestations in IBD, J Crohns Colitis 2024</em></span></td></tr>
+            <tr><td><strong>🩺 Ce qu&#39;on voit</strong></td><td>🚨 <strong>Thromboembolie veineuse</strong>, surtout <strong>en poussée</strong></td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>🔗 Lien avec l&#39;activité digestive</strong></td><td>Y penser devant une dyspnée ou un œdème de membre<br>➜ voir <em>TVP</em>, <em>Embolie pulmonaire</em></td></tr>
+          </tbody>
+        </table>
+        </div>
+        </div>
+
+        <div id="mimei8" style="display:none;margin-top:14px;">
+          <div style="background:#f0fdf4;border-left:5px solid #15803d;border-radius:10px;padding:12px 14px;"><strong style="color:#15803d;">🪨 Rénal</strong><span style="font-size:12px;color:#64748b;"> — lithiases urinaires</span><div style="font-size:13px;line-height:1.7;margin-top:6px;">Conséquence directe de la <strong>malabsorption des graisses</strong> : hyperoxalurie entérique du <strong>Crohn du grêle</strong>.</div></div>
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:26%;">Axe</th><th style="width:74%;">Ce qu&#39;on observe</th></tr></thead>
+          <tbody>
+            <tr><td><strong>🔢 Fréquence</strong></td><td>Jusqu&#39;à <strong>10 %</strong></td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>🎯 Plutôt Crohn ou CU ?</strong></td><td>🎯 <strong>Plutôt CROHN du grêle</strong> — par malabsorption des graisses</td></tr>
+            <tr><td><strong>🩺 Ce qu&#39;on voit</strong></td><td><strong>Lithiases</strong> — surtout <strong>oxalate de calcium</strong> ; les calculs d&#39;<strong>acide urique</strong> apparaissent en cas de <strong>déplétion volémique sévère</strong></td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>🔗 Lien avec l&#39;activité digestive</strong></td><td>Conséquence de la malabsorption : l&#39;hyperoxalurie entérique suit l&#39;atteinte du grêle</td></tr>
+          </tbody>
+        </table>
+        </div>
+        </div>
+
+        <div id="mimei9" style="display:none;margin-top:14px;">
+          <div style="background:#fef9c3;border-left:5px solid #a16207;border-radius:10px;padding:12px 14px;"><strong style="color:#a16207;">🔥 Général</strong><span style="font-size:12px;color:#64748b;"> — fatigue</span><div style="font-size:13px;line-height:1.7;margin-top:6px;">Elle <strong>persiste en rémission</strong> chez <strong>40 %</strong> des patients : ce n&#39;est pas un simple marqueur d&#39;activité.</div></div>
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:26%;">Axe</th><th style="width:74%;">Ce qu&#39;on observe</th></tr></thead>
+          <tbody>
+            <tr><td><strong>🔢 Fréquence</strong></td><td><strong>40 %</strong> des patients <strong>même en rémission</strong> <span style="font-size:11px;color:#64748b;">📚 <em>Gordon et coll., ECCO Guidelines on Extraintestinal Manifestations in IBD, J Crohns Colitis 2024</em></span></td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>🎯 Plutôt Crohn ou CU ?</strong></td><td><strong>Les deux</strong></td></tr>
+            <tr><td><strong>🩺 Ce qu&#39;on voit</strong></td><td><strong>Fatigue</strong> — souvent attribuée à tort à l&#39;anémie seule</td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>🔗 Lien avec l&#39;activité digestive</strong></td><td>Persiste <strong>malgré la rémission</strong> : ne pas la considérer comme un simple marqueur d&#39;activité</td></tr>
+          </tbody>
+        </table>
+        </div>
+        </div>
+
 
         <div class="key-fact orange" style="margin-top:12px;">🔎 <strong>Le réflexe inverse, tout aussi utile :</strong> devant une <strong>spondylarthrite, une uvéite récidivante ou un pyoderma gangrenosum</strong>, chercher des symptômes digestifs — diarrhée chronique, sang dans les selles, douleur abdominale, perte de poids. <strong>L'atteinte articulaire peut précéder la MII de plusieurs années.</strong></div>
       </div>
+
 
 
 
@@ -58691,7 +58844,7 @@ function showPanel(prefix,activeId,count){
   document.querySelectorAll('[data-panel]').forEach(function(b){
     if(b.getAttribute('data-panel').startsWith(prefix)){
       var on=b.getAttribute('data-panel')===activeId;
-      var colorMap={'tx':'#0a7a4e','atx':'#065f46','vp':'#1e7a6b','mii-tx':'#0a7a4e','mii-cr':'#0a7a4e','pk-tx':'#7c3aed','hta-tx':'#0a7a4e','ugdd':'#0369a1','frg':'#b45309','spx':'#7c3aed','rds':'#0369a1','gu':'#0f766e','lax':'#0a7a4e','somdx':'#0e7490','mpg':'#1e40af','cde':'#b91c1c','chp':'#0f766e','grl':'#374151','tnctyp':'#6d28d9','evcog':'#b45309','dlrx':'#c0392b','htorx':'#0f766e','miidx':'#0e7490','tvt':'#7c3aed','tsfr':'#4338ca','tsfa':'#0f766e','tsfc':'#c2410c','tsfp':'#b91c1c','tsfg':'#374151','nutc':'#6d28d9','ndnt':'#b45309','nalb':'#b91c1c','nsup':'#0a7a4e','nsri':'#b45309','mietio':'#6d28d9','ngac':'#15803d','n3min':'#1d4ed8','miisv':'#0891b2','dalg':'#0369a1','anetx':'#0a7a4e','aneb':'#6d28d9'};var col=colorMap[prefix]||'#c0392b';
+      var colorMap={'tx':'#0a7a4e','atx':'#065f46','vp':'#1e7a6b','mii-tx':'#0a7a4e','mii-cr':'#0a7a4e','pk-tx':'#7c3aed','hta-tx':'#0a7a4e','ugdd':'#0369a1','frg':'#b45309','spx':'#7c3aed','rds':'#0369a1','gu':'#0f766e','lax':'#0a7a4e','somdx':'#0e7490','mpg':'#1e40af','cde':'#b91c1c','chp':'#0f766e','grl':'#374151','tnctyp':'#6d28d9','evcog':'#b45309','dlrx':'#c0392b','htorx':'#0f766e','miidx':'#0e7490','tvt':'#7c3aed','tsfr':'#4338ca','tsfa':'#0f766e','tsfc':'#c2410c','tsfp':'#b91c1c','tsfg':'#374151','nutc':'#6d28d9','ndnt':'#b45309','nalb':'#b91c1c','nsup':'#0a7a4e','nsri':'#b45309','mietio':'#6d28d9','ngac':'#15803d','n3min':'#1d4ed8','miisv':'#0891b2','dalg':'#0369a1','anetx':'#0a7a4e','aneb':'#6d28d9','mimei':'#7c3aed'};var col=colorMap[prefix]||'#c0392b';
       b.style.background=on?col:'#e0e0e0';
       b.style.color=on?'#fff':'#333';
     }
