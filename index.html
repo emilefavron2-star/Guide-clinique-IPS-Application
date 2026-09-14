@@ -37885,10 +37885,16 @@ function switchEpiTx(n) {
 
       <div class="block para" style="margin-top:14px;border-left-color:#6d28d9;">
         <div class="block-title" id="poly-2"><span class="tag">⚗️ Pharmacologie du vieillissement</span></div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;">
+          <button data-panel="pkpd0" onclick="showPanel('pkpd','pkpd0',5)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#6d28d9;color:#fff;">🎯 Vue d&#39;ensemble PK/PD</button>
+          <button data-panel="pkpd1" onclick="showPanel('pkpd','pkpd1',5)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">💊 Exemples par mécanisme</button>
+          <button data-panel="pkpd2" onclick="showPanel('pkpd','pkpd2',5)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">🫘 Fonction rénale & état pathologique</button>
+          <button data-panel="pkpd3" onclick="showPanel('pkpd','pkpd3',5)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">⚗️ Phase I vs phase II</button>
+          <button data-panel="pkpd4" onclick="showPanel('pkpd','pkpd4',5)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">📈 Sensibilité pharmacodynamique</button>
+        </div>
 
-
+        <div id="pkpd0" style="display:block;margin-top:14px;">
         <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>Deux principes suffisent à expliquer l'essentiel :</strong> les médicaments <strong>restent plus longtemps</strong> dans l'organisme, et l'organisme y est <strong>plus sensible</strong>. D'où la règle classique : <strong>commencer bas, augmenter lentement</strong> — sans pour autant sous-traiter.</div>
-
         <div style="overflow-x:auto;margin-top:12px;">
         <table style="font-size:12px;">
           <thead><tr><th style="width:18%;">Paramètre</th><th style="width:34%;">Changement avec l'âge</th><th>Conséquence clinique</th></tr></thead>
@@ -37905,7 +37911,9 @@ function switchEpiTx(n) {
           </tbody>
         </table>
         </div>
+        </div>
 
+        <div id="pkpd1" style="display:none;margin-top:14px;">
         <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">💊 Exemples concrets par mécanisme</div>
         <div style="overflow-x:auto;">
         <table style="font-size:12px;">
@@ -37920,18 +37928,24 @@ function switchEpiTx(n) {
           </tbody>
         </table>
         </div>
+        </div>
+
+        <div id="pkpd2" style="display:none;margin-top:14px;">
         <div class="key-fact blue" style="margin-top:12px;">🧮 <strong>Estimer la fonction rénale — et connaître les limites de l'estimation :</strong> la formule de <strong>Cockcroft-Gault</strong> a servi à l'ajustement posologique dans les études cliniques; la formule <strong>MDRD</strong> sert surtout au dépistage des stades d'insuffisance rénale. ⚠️ <strong>Les deux ont des limites en gériatrie</strong> — ce sont des <strong>estimations</strong>, à interpréter avec les données cliniques du patient.<br>💡 Chez la personne de petit poids dont le poids réel est inférieur au poids idéal, utiliser le <strong>poids réel</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Beaulieu, Précis de pharmacologie</em>, ch. « Pharmacologie en gériatrie »</span></div>
         <div class="key-fact orange" style="margin-top:8px;">🩺 <strong>La pathologie modifie aussi la pharmacocinétique :</strong> la <strong>déshydratation</strong> — apport hydrique insuffisant, fièvre, <strong>diurétiques</strong> — provoque une <strong>insuffisance rénale fonctionnelle</strong> et donc une hausse des concentrations des médicaments à élimination rénale. L'<strong>insuffisance cardiaque</strong> réduit le débit sanguin hépatique et augmente la concentration des médicaments à <strong>forte extraction hépatique</strong>.<br>➜ Une gastroentérite ou une canicule peuvent ainsi rendre toxique un traitement jusque-là bien toléré. <span style="font-size:11px;color:#64748b;">📚 <em>Beaulieu, Précis de pharmacologie</em>, ch. « Pharmacologie en gériatrie »</span></div>
-
         <div class="key-fact orange" style="margin-top:12px;">⚠️ <strong>« Start low, go slow » — mais pas « stay low ».</strong> La prudence initiale ne doit pas mener au <strong>sous-traitement</strong> : la douleur non soulagée, la dépression non traitée et l'ostéoporose non prise en charge sont aussi des problèmes gériatriques majeurs. L'objectif est le <strong>bon médicament à la bonne dose</strong>, pas le minimum de médicaments.</div>
+        </div>
 
+        <div id="pkpd3" style="display:none;margin-top:14px;">
         <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">⚗️ Phase I contre phase II — le corollaire prescriptif</div>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:12px;margin-top:10px;">
           <div style="background:#fef2f2;border-left:4px solid #c0392b;border-radius:10px;padding:14px;"><strong style="color:#c0392b;">🐌 Réactions de phase I — <em>oxydation, CYP450</em></strong><div style="font-size:13px;line-height:1.75;margin-top:8px;"><strong>Métabolisme nettement affecté par l'âge.</strong><br>➜ Conséquence : <strong>accumulation du diazépam</strong> et risque d'effets indésirables — demi-vie qui s'allonge de façon considérable chez l'aîné.</div></div>
           <div style="background:#f0fdf4;border-left:4px solid #15803d;border-radius:10px;padding:14px;"><strong style="color:#15803d;">✅ Réactions de phase II — <em>glucuronidation</em></strong><div style="font-size:13px;line-height:1.75;margin-top:8px;"><strong>Métabolisme peu affecté par l'âge.</strong><br>🎯 ➜ Les médicaments métabolisés par <strong>glucuronidation sont un bon choix en gériatrie</strong> — l'exemple type étant l'<strong>oxazépam</strong>.</div></div>
         </div>
         <div class="key-fact ink" style="margin-top:12px;">🎯 <strong>C'est de là que vient la règle des benzodiazépines « LOT ».</strong> <strong>L</strong>orazépam, <strong>O</strong>xazépam et <strong>T</strong>émazépam sont conjugués par glucuronidation — une voie que l'âge épargne — alors que le diazépam et le clonazépam passent par l'oxydation et s'accumulent. Quand une benzodiazépine est inévitable chez l'aîné, c'est <strong>pharmacocinétiquement</strong> qu'on choisit, pas par habitude. ➜ voir <em>Troubles du sommeil chez la personne âgée</em> et le bloc <em>Algorithmes canadiens de déprescription</em>.</div>
+        </div>
 
+        <div id="pkpd4" style="display:none;margin-top:14px;">
         <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">📉 Les médicaments dont l&#39;âge diminue l&#39;efficacité</div>
         <div class="key-fact yellow" style="margin-top:10px;">⚠️ <strong>Le réflexe inverse, qu'on oublie systématiquement.</strong> On retient que l'aîné est plus sensible à tout — c'est vrai pour la plupart des classes. Mais <strong>certains médicaments ont au contraire une efficacité moindre</strong> avec l'âge : les <strong>bêta-bloquants</strong> et les <strong>diurétiques</strong>. Une réponse tensionnelle décevante sous bêta-bloquant chez une personne de 85 ans n'est donc pas nécessairement une non-observance.</div>
         <div style="font-size:12px;font-weight:800;color:#c0392b;margin-top:18px;letter-spacing:.4px;">📈 ET CE À QUOI LA SENSIBILITÉ EST BEL ET BIEN AUGMENTÉE</div>
@@ -37941,7 +37955,10 @@ function switchEpiTx(n) {
           <div class="criteria-item"><div class="criteria-num red">3</div><span><strong>↑ des saignements avec la warfarine et les anticoagulants oraux.</strong></span></div>
           <div class="criteria-item"><div class="criteria-num red">!</div><span>🧭 <strong>La conclusion pratique</strong> : à dose égale, <strong>↑ des effets thérapeutiques ET indésirables</strong> par rapport au patient plus jeune — sauf pour les deux classes ci-dessus, où c'est l'inverse.</span></div>
         </div>
+        </div>
+
       </div>
+
 
 
       <div class="block clin" style="margin-top:14px;border-left-color:#c0392b;">
@@ -37971,15 +37988,15 @@ function switchEpiTx(n) {
       <div class="block para" style="margin-top:14px;border-left-color:#b45309;">
         <div class="block-title" id="poly-4"><span class="tag">📋 Beers 2023, STOPP/START, STOPP-Frail — les outils de repérage</span><span class="obj-badge">Obj. 23</span></div>
         <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;">
-          <button data-panel="beers0" onclick="showPanel('beers','beers0',6)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#b45309;color:#fff;">📕 Beers 2023 — ce qu&#39;il est</button>
-          <button data-panel="beers1" onclick="showPanel('beers','beers1',6)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">⚠️ Les classes problématiques</button>
-          <button data-panel="beers2" onclick="showPanel('beers','beers2',6)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">🕰️ Origine, limites, point aveugle</button>
-          <button data-panel="beers3" onclick="showPanel('beers','beers3',6)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">📗 STOPP / START v.3</button>
-          <button data-panel="beers4" onclick="showPanel('beers','beers4',6)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">🧓 STOPP-Frail</button>
-          <button data-panel="beers5" onclick="showPanel('beers','beers5',6)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">🔄 Beers Alternatives</button>
+          <button data-panel="beers0" onclick="showPanel('beers','beers0',5)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#b45309;color:#fff;">📕 Beers 2023 — ce qu&#39;il est</button>
+          <button data-panel="beers1" onclick="showPanel('beers','beers1',5)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">⚠️ Les classes problématiques</button>
+          <button data-panel="beers2" onclick="showPanel('beers','beers2',5)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">📗 STOPP / START v.3</button>
+          <button data-panel="beers3" onclick="showPanel('beers','beers3',5)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">🧓 STOPP-Frail</button>
+          <button data-panel="beers4" onclick="showPanel('beers','beers4',5)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">🔄 Beers Alternatives</button>
         </div>
 
         <div id="beers0" style="display:block;margin-top:14px;">
+
         <div style="display:grid;grid-template-columns:1fr;gap:12px;margin-top:12px;">
           <div style="background:#fce4ec;border-radius:10px;padding:14px;border-left:4px solid #c0392b;">
             <strong style="color:#c0392b;">📕 Critères de Beers</strong>
@@ -37991,9 +38008,19 @@ function switchEpiTx(n) {
           <strong>Où</strong> — tous les milieux : <strong>ambulatoire, soins aigus et hébergement</strong>… <strong>sauf les soins palliatifs et la fin de vie</strong>, explicitement exclus. Une benzodiazépine chez une personne mourante ne relève pas de Beers.<br>
           <strong>Comment</strong> — les critères doivent être appliqués « <em>de manière réfléchie et de façon à <strong>soutenir, plutôt que remplacer</strong>, la décision clinique partagée</em> ». <span style="font-size:11px;color:#64748b;">📚 <em>AGS Beers Criteria®, mise à jour 2023</em></span></div>
         <div class="key-fact black" style="margin-top:12px;">⚖️ <strong>Ce que « éviter » veut dire — la phrase la plus mal comprise de Beers.</strong> Depuis la version originale, « <em>avoid</em> » signifie « <strong>éviter, sauf circonstances inhabituelles</strong> » — par exemple lorsqu&#39;une solution de rechange plus sûre n&#39;a pas donné le résultat thérapeutique voulu. Un médicament potentiellement inapproprié « serait choisi <strong>rarement</strong>, au terme d&#39;une pesée attentive du bénéfice et du risque ». <strong>Ce n&#39;est pas une contre-indication absolue.</strong> <span style="font-size:11px;color:#64748b;">📚 <em>AGS Beers Criteria®, 2023</em></span></div>
+        <div style="font-size:12px;font-weight:800;color:#c0392b;margin-top:18px;letter-spacing:.4px;">📋 CE QUE ÇA DONNE EN PRATIQUE — UN EXEMPLE PAR CATÉGORIE</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:12px;margin-top:10px;">
+          <div style="background:#fef2f2;border-left:4px solid #c0392b;border-radius:10px;padding:14px;"><strong style="color:#c0392b;">① Généralement inappropriés</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;"><strong>Antihistaminiques de 1<sup>re</sup> génération</strong> — fortement anticholinergiques; leur clairance diminue avec l'âge et une tolérance s'installe même en usage comme hypnotique; exposition cumulative associée à un risque accru de chutes, de délirium et de démence, <strong>y compris chez le « jeune-vieux »</strong>. ⛔ <strong>Éviter.</strong><br><strong>Rivaroxaban en traitement prolongé de la FA non valvulaire ou de la TEV</strong> — risque plus élevé de saignement majeur et digestif que les autres AOD, <strong>particulièrement l'apixaban</strong>. ⛔ <strong>Éviter en traitement prolongé, au profit d'alternatives plus sécuritaires.</strong></div></div>
+          <div style="background:#fff3cd;border-left:4px solid #d35400;border-radius:10px;padding:14px;"><strong style="color:#d35400;">② Selon la condition — le délirium</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">Chez la personne <strong>avec un délirium ou à risque</strong>, éviter — sauf situations précises — : <strong>anticholinergiques</strong>, <strong>antipsychotiques</strong>, <strong>benzodiazépines</strong>, <strong>corticostéroïdes</strong> (oral et parentéral), <strong>antagonistes H2</strong> (cimétidine, famotidine, nizatidine), <strong>« Z-drugs »</strong> (eszopiclone, zaleplon, zolpidem), <strong>opioïdes</strong>.<br>🎯 Pour les antipsychotiques : éviter pour l'agitation d'une démence ou d'un délirium <strong>sauf si les options non pharmacologiques ont échoué</strong> ou sont impossibles, et que la personne <strong>menace sa sécurité ou celle d'autrui</strong>.</div></div>
+          <div style="background:#e8f4fd;border-left:4px solid #1d4ed8;border-radius:10px;padding:14px;"><strong style="color:#1d4ed8;">③ À utiliser avec prudence</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;"><strong>Dabigatran en traitement prolongé de la FA non valvulaire ou de la TEV</strong> — risque accru de saignement digestif comparé à la warfarine et à l'apixaban. <strong>Prudence dans le choix</strong> face aux autres AOD.<br><strong>Prasugrel et ticagrélor</strong> — ↑ du risque de saignement majeur comparé au clopidogrel, <strong>surtout chez les 75 ans et plus</strong> (bénéfice cardiovasculaire possiblement compensateur selon le patient). <strong>Si le prasugrel est utilisé, envisager une dose réduite de 5 mg</strong> chez les 75 ans et plus.</div></div>
+          <div style="background:#ede9fe;border-left:4px solid #6d28d9;border-radius:10px;padding:14px;"><strong style="color:#6d28d9;">④ Interactions médicamenteuses</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;"><strong>≥ 2 inhibiteurs du SRAA</strong> (IECA, ARA, ARNI, ou aliskiren) <strong>ou un diurétique épargneur de potassium</strong> combinés — ↑ du risque d'<strong>hyperkaliémie</strong>. ⛔ <strong>Éviter la combinaison de façon routinière</strong>, surtout si <strong>IRC de stade 3a ou plus</strong>.<br><strong>Opioïdes + benzodiazépines</strong> — ↑ du risque de surdosage et d'effets indésirables. ⛔ <strong>Éviter.</strong><br><strong>Opioïdes + gabapentine ou prégabaline</strong> — ↑ du risque de sédation sévère, incluant la <strong>dépression respiratoire</strong>. ⛔ <strong>Éviter</strong> — exceptions : transition d'un opioïde vers un gabapentinoïde, ou usage d'un gabapentinoïde pour <strong>réduire la dose d'opioïde</strong>.</div></div>
+          <div style="background:#f0fdf4;border-left:4px solid #15803d;border-radius:10px;padding:14px;"><strong style="color:#15803d;">⑤ Ajustement selon la fonction rénale</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;"><strong>Ciprofloxacine</strong> — <strong>ClCr &lt; 30 mL/min</strong> : réduire la dose habituelle. Non ajustée, elle expose à des <strong>effets du SNC</strong> (convulsions, confusion) et à un risque de <strong>rupture tendineuse</strong>.<br><strong>Nitrofurantoïne</strong> — ⛔ <strong>éviter si ClCr &lt; 30 mL/min</strong> : toxicité pulmonaire, hépatotoxicité et neuropathie périphérique, surtout en usage prolongé.</div></div>
+        </div>
+        <div class="key-fact cream" style="margin-top:12px;">🎯 <strong>Ce que ces dix exemples ont en commun</strong> : aucun n'est une interdiction absolue — chacun porte une <strong>alternative nommée</strong> (apixaban, clopidogrel, un antihistaminique de 2<sup>e</sup> génération) ou une <strong>condition précise</strong> qui rend le médicament acceptable (dose réduite, ClCr au-dessus du seuil, situation clinique qui justifie l'exception). C'est la logique de Beers dans son ensemble : un repère à interpréter, pas une liste à appliquer mécaniquement. <span style="font-size:11px;color:#64748b;">📚 <em>AGS Beers Criteria®, 2023</em></span></div>
         </div>
 
         <div id="beers1" style="display:none;margin-top:14px;">
+
         <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">⚠️ Les classes les plus fréquemment problématiques</div>
         <div style="overflow-x:auto;">
         <table style="font-size:12px;">
@@ -38010,30 +38037,20 @@ function switchEpiTx(n) {
           </tbody>
         </table>
         </div>
-        </div>
+                </div>
 
         <div id="beers2" style="display:none;margin-top:14px;">
-        <div class="key-fact yellow" style="margin-top:10px;">🕰️ <strong>D&#39;où vient la liste — et pourquoi elle change.</strong> Créée en <strong>1991</strong> par <strong>Mark Beers</strong> et ses collègues à l&#39;UCLA, pour repérer les médicaments dont le risque dépassait le bénéfice <strong>chez les résidents de centres d&#39;hébergement</strong>. La mise à jour de <strong>1997</strong> l&#39;étend à <strong>tous les aînés</strong>. Révision interprofessionnelle en <strong>2003</strong>, puis l&#39;<strong>American Geriatrics Society en prend la charge en 2010</strong> et la met à jour par cycles : 2012, 2015, 2019, <strong>2023</strong>. La version 2023 ajoute de nouveaux critères, en modifie d&#39;autres et revoit la mise en forme pour l&#39;utilisabilité. 🎯 <strong>Toujours vérifier quelle édition on cite</strong> — une recommandation retirée reste vraie dans les vieux résumés. <span style="font-size:11px;color:#64748b;">📚 <em>AGS Beers Criteria®, mise à jour 2023</em></span></div>
-        <div class="key-fact red" style="margin-top:10px;">🇺🇸 <strong>Le point aveugle pour une IPS du Québec.</strong> Les auteurs le disent noir sur blanc : bien que les critères puissent être utilisés à l&#39;international, ils sont <strong>conçus spécifiquement pour les États-Unis</strong>, et <strong>certains médicaments appellent des considérations supplémentaires selon le pays</strong>. Concrètement : des molécules de la liste ne sont pas commercialisées ici, d&#39;autres le sont sous une forme différente, et la conduite canadienne peut diverger. <strong>Devant un désaccord entre Beers et une source canadienne récente, c&#39;est la source canadienne qui prime.</strong> <span style="font-size:11px;color:#64748b;">📚 <em>AGS Beers Criteria®, mise à jour 2023</em></span> &nbsp;➜ <em>Algorithmes canadiens de déprescription</em></div>
-        <div class="key-fact red" style="margin-top:10px;">🚫 <strong>Et un usage explicitement proscrit par les auteurs :</strong> « <em>les critères ne doivent pas être utilisés de manière <strong>punitive</strong></em> ». Prescrire pour une personne âgée engage de multiples facteurs — au premier rang, <strong>ses préférences et ses objectifs de soins</strong>. Trouver un médicament de la liste au dossier n&#39;est pas une faute à documenter : c&#39;est une question à poser. <span style="font-size:11px;color:#64748b;">📚 <em>AGS Beers Criteria®, 2023</em></span></div>
-        <div class="key-fact yellow" style="margin-top:10px;">🔍 <strong>Les trois limites que les auteurs reconnaissent eux-mêmes.</strong><br>
-          ① <strong>La preuve est fragile</strong> — peu d&#39;essais cliniques chez les aînés, ou trop peu d&#39;aînés inclus pour une analyse par âge. Le panel s&#39;est souvent appuyé sur des <strong>études observationnelles et des méta-analyses</strong>.<br>
-          ② <strong>Le manque de diversité</strong> des populations étudiées — sous-représentation persistante de groupes entiers, et puissance insuffisante pour analyser les résultats par sous-groupe.<br>
-          ③ <strong>Seuls les médicaments commercialisés aux États-Unis</strong> y figurent. Le tableau 8 le montre bien : plusieurs molécules ont été <em>retirées</em> de la liste en 2023 non pas parce qu&#39;elles sont devenues sûres, mais parce qu&#39;elles sont « <em>peu utilisées</em> » ou « <em>absentes du marché américain</em> » — le <strong>flurazépam</strong> en est un exemple, alors qu&#39;il reste une benzodiazépine à éviter chez nos aînés. <span style="font-size:11px;color:#64748b;">📚 <em>AGS Beers Criteria®, 2023</em></span> &nbsp;➜ <em>Sommeil de la personne âgée</em></div>
-        <div class="key-fact green" style="margin-top:10px;">🎯 <strong>L&#39;intention, dans les mots du panel</strong> — améliorer la pharmacothérapie en repérant et en réduisant la prescription de médicaments potentiellement inappropriés, <strong>par un processus de décision partagée centré sur les objectifs de soins</strong>. Outils gratuits de l&#39;AGS : application et carte de poche (GeriatricsCareOnline.org), documents pour le public (HealthinAging.org). <span style="font-size:11px;color:#64748b;">📚 <em>AGS Beers Criteria®, 2023</em></span></div>
-        <div class="key-fact orange" style="margin-top:12px;">📌 <strong>Limite importante de ces outils :</strong> ce sont des <strong>listes</strong>, pas des décisions. Elles ne connaissent ni les valeurs de la personne, ni son espérance de vie, ni ce qu'elle a déjà essayé. Elles servent à <strong>déclencher la réflexion</strong>, pas à la remplacer.</div>
-        </div>
 
-        <div id="beers3" style="display:none;margin-top:14px;">
         <div style="display:grid;grid-template-columns:1fr;gap:12px;margin-top:12px;">
           <div style="background:#e8f4fd;border-radius:10px;padding:14px;border-left:4px solid #1d4ed8;">
             <strong style="color:#1d4ed8;">📗 STOPP / START</strong>
             <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>STOPP</strong> — <em>Screening Tool of Older Persons' Prescriptions</em> : médicaments à <strong>cesser</strong><br><strong>START</strong> — <em>Screening Tool to Alert to Right Treatment</em> : médicaments <strong>indiqués mais manquants</strong><br>🎯 <strong>L'apport unique de START :</strong> rappeler que le <strong>sous-traitement</strong> est aussi un problème — anticoagulation en FA, traitement de l'ostéoporose après fracture, IECA en insuffisance cardiaque.<br>Organisé <strong>par système</strong>, donc pratique à parcourir en consultation.</div>
           </div>
         </div>
-        </div>
+                </div>
 
-        <div id="beers4" style="display:none;margin-top:14px;">
+        <div id="beers3" style="display:none;margin-top:14px;">
+
         <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">🧓 STOPP-Frail — l&#39;outil pour la personne fragile en fin de parcours</div>
         <div class="key-fact ink" style="margin-top:10px;">🎯 <strong>Ce qu'il est, et pourquoi il existe.</strong> STOPP et START s'adressent à tout aîné. <strong>STOPP-Frail s'applique au patient âgé ET fragile dont l'espérance de vie est limitée</strong> : chez lui, la question n'est plus « ce médicament est-il approprié » mais « <strong>vivra-t-il assez longtemps pour en tirer un bénéfice</strong> ». <span style="font-size:11px;color:#64748b;">📚 <em>Lavan et coll., STOPPFrail — consensus validation, Age Ageing 2017;46:600-7</em></span></div>
         <div style="font-size:12px;font-weight:800;color:#c0392b;margin-top:18px;letter-spacing:.4px;">✅ LES QUATRE CRITÈRES D&#39;INCLUSION — LE PATIENT DOIT Y RÉPONDRE</div>
@@ -38058,9 +38075,10 @@ function switchEpiTx(n) {
         </div>
         <div class="key-fact green" style="margin-top:12px;">🧭 <strong>La question que STOPP-Frail apprend à poser.</strong> Devant chaque ordonnance : <strong>« le bénéfice de ce médicament arrivera-t-il avant le décès? »</strong> Si la réponse est non, le médicament n'apporte plus que ses effets indésirables. C'est le même raisonnement que le <strong>délai d'obtention du bénéfice</strong> du bloc <em>Comment réviser la médication</em> — STOPP-Frail ne fait que le rendre explicite et opposable. <span style="font-size:11px;color:#64748b;">📚 <em>Lavan et coll., STOPPFrail — consensus validation, Age Ageing 2017;46:600-7</em></span></div>
         <div class="key-fact orange" style="margin-top:12px;">🆕 <strong>Attention à la version — le cours cite la v.1.</strong> Les critères ci-dessus proviennent de <strong>STOPPFrail v.1 (2017)</strong>. Une <strong>version 2 a été publiée en 2021</strong> (Lavan et coll., <em>Age Ageing</em>) : elle comporte <strong>25 critères de déprescription</strong>, une <strong>nouvelle méthode pour repérer la personne qui approche la fin de vie</strong>, une insistance explicite sur la <strong>décision partagée</strong>, et de <strong>nouveaux critères</strong> portant sur les <strong>antihypertenseurs</strong>, les <strong>antiangineux</strong> et la <strong>vitamine D</strong>.<br>🎯 <strong>Ce que ça change pour vous</strong> : le raisonnement et les exemples ci-dessus restent justes, mais <strong>avant d'appliquer l'outil à un patient, se référer à la v.2</strong> — c'est elle qui contient les critères sur l'antihypertenseur et l'antiangineux, deux classes omniprésentes en fin de vie. <span style="font-size:11px;color:#64748b;">📚 <em>Lavan et coll., Deprescribing in older people approaching end-of-life: development and validation of STOPPFrail version 2, Age Ageing 2021;50(2):465-71</em></span></div>
-        </div>
+                </div>
 
-        <div id="beers5" style="display:none;margin-top:14px;">
+        <div id="beers4" style="display:none;margin-top:14px;">
+
         <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">🔄 Beers Alternatives — ce qu&#39;on met à la place</div>
         <div class="key-fact ink" style="margin-top:10px;">🎯 <strong>Le chaînon manquant de Beers.</strong> Les critères disent quoi éviter; ils ne disaient pas quoi faire à la place — d'où le reproche classique qu'on leur fait au chevet. L'<strong>AGS Beers Criteria® Alternatives Panel</strong> comble exactement ce vide, avec des <strong>solutions pharmacologiques ET non pharmacologiques</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>AGS Beers Criteria® Alternatives Panel, Alternative treatments to selected medications in the 2023 AGS Beers Criteria®, JAGS 2025</em></span></div>
         <div style="font-size:12px;font-weight:800;color:#b45309;margin-top:18px;letter-spacing:.4px;">🧴 EXEMPLE 1 — ANTIHISTAMINIQUES POUR LE PRURIT</div>
@@ -38082,10 +38100,11 @@ function switchEpiTx(n) {
         </table>
         </div>
         <div class="key-fact orange" style="margin-top:12px;">🇨🇦 <strong>La nuance canadienne à garder en tête.</strong> Ces recommandations sont américaines. Au Canada, l'<strong>édoxaban (Lixiana<sup>MD</sup>)</strong> est commercialisé, l'<strong>apixaban</strong> est largement utilisé, et <strong>Thrombosis Canada</strong> reste la référence pour toute conduite d'anticoagulation. Devant un désaccord, c'est la source canadienne qui prime. ➜ voir <em>Fibrillation auriculaire</em> et <em>TVP</em>. <span style="font-size:11px;color:#64748b;">📚 <em>AGS Beers Criteria® Alternatives Panel, Alternative treatments to selected medications in the 2023 AGS Beers Criteria®, JAGS 2025</em></span></div>
-        </div>
+                </div>
 
         <div class="key-fact yellow" style="margin-top:12px;">📌 <strong>Précision de version, qui compte pour citer juste.</strong> La version courante de l'outil est <strong>STOPP-START v.3 (2023)</strong>; les critères STOPP-Frail existent en deux versions — <strong>v.1 (2017)</strong> et <strong>v.2 (2021)</strong>, la version courante; les Beers Alternatives, de <strong>2025</strong> — donc postérieurs aux critères de Beers 2023 eux-mêmes. <span style="font-size:11px;color:#64748b;">📚 <em>O&#39;Mahony et coll., STOPP-START v.3, CGA Toolkit 2023</em></span></div>
       </div>
+
 
 
 
@@ -59566,7 +59585,7 @@ function showPanel(prefix,activeId,count){
   document.querySelectorAll('[data-panel]').forEach(function(b){
     if(b.getAttribute('data-panel').startsWith(prefix)){
       var on=b.getAttribute('data-panel')===activeId;
-      var colorMap={'tx':'#0a7a4e','atx':'#065f46','vp':'#1e7a6b','mii-tx':'#0a7a4e','mii-cr':'#0a7a4e','pk-tx':'#7c3aed','hta-tx':'#0a7a4e','ugdd':'#0369a1','frg':'#b45309','spx':'#7c3aed','rds':'#0369a1','gu':'#0f766e','lax':'#0a7a4e','somdx':'#0e7490','mpg':'#1e40af','cde':'#b91c1c','chp':'#0f766e','grl':'#374151','tnctyp':'#6d28d9','evcog':'#b45309','dlrx':'#c0392b','htorx':'#0f766e','miidx':'#0e7490','tvt':'#7c3aed','tsfr':'#4338ca','tsfa':'#0f766e','tsfc':'#c2410c','tsfp':'#b91c1c','tsfg':'#374151','nutc':'#6d28d9','ndnt':'#b45309','nalb':'#b91c1c','nsup':'#0a7a4e','nsri':'#b45309','mietio':'#6d28d9','ngac':'#15803d','n3min':'#1d4ed8','miisv':'#0891b2','dalg':'#0369a1','anetx':'#0a7a4e','aneb':'#6d28d9','mimei':'#7c3aed','miiact':'#c0392b','tncrx':'#15803d','scpd':'#c0392b','beers':'#b45309'};var col=colorMap[prefix]||'#c0392b';
+      var colorMap={'tx':'#0a7a4e','atx':'#065f46','vp':'#1e7a6b','mii-tx':'#0a7a4e','mii-cr':'#0a7a4e','pk-tx':'#7c3aed','hta-tx':'#0a7a4e','ugdd':'#0369a1','frg':'#b45309','spx':'#7c3aed','rds':'#0369a1','gu':'#0f766e','lax':'#0a7a4e','somdx':'#0e7490','mpg':'#1e40af','cde':'#b91c1c','chp':'#0f766e','grl':'#374151','tnctyp':'#6d28d9','evcog':'#b45309','dlrx':'#c0392b','htorx':'#0f766e','miidx':'#0e7490','tvt':'#7c3aed','tsfr':'#4338ca','tsfa':'#0f766e','tsfc':'#c2410c','tsfp':'#b91c1c','tsfg':'#374151','nutc':'#6d28d9','ndnt':'#b45309','nalb':'#b91c1c','nsup':'#0a7a4e','nsri':'#b45309','mietio':'#6d28d9','ngac':'#15803d','n3min':'#1d4ed8','miisv':'#0891b2','dalg':'#0369a1','anetx':'#0a7a4e','aneb':'#6d28d9','mimei':'#7c3aed','miiact':'#c0392b','tncrx':'#15803d','scpd':'#c0392b','beers':'#b45309','pkpd':'#6d28d9'};var col=colorMap[prefix]||'#c0392b';
       b.style.background=on?col:'#e0e0e0';
       b.style.color=on?'#fff':'#333';
     }
