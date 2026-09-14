@@ -50664,6 +50664,7 @@ Revoir rapidement si nouvelle Sx ou changement de dose<br>
       <div class="block alert red" style="margin-top:14px;">
         <div class="block-title" id="uo-1"><span class="tag">🦠 Neutropénie fébrile — protocole</span></div>
 
+
         <div class="key-fact red" style="margin-top:10px;">⏱️ <strong>C'est l'urgence oncologique la plus fréquente et la plus meurtrière.</strong> Le patient neutropénique ne peut pas générer d'inflammation : <strong>la fièvre est souvent le seul signe</strong>, il n'y a ni pus, ni infiltrat radiologique, ni signes locaux. Un patient qui a l'air « correct » peut être en sepsis.</div>
 
         <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin:16px 0 6px;">📖 Définition</div>
@@ -50707,11 +50708,14 @@ Revoir rapidement si nouvelle Sx ou changement de dose<br>
           </div>
         </div>
 
-        <div style="display:flex;gap:6px;flex-wrap:wrap;margin:16px 0 12px;">
-          <button onclick="showPanel('ap1012','ap10120',2)" data-panel="ap10120" style="background:#c0392b;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">Antibiothérapie empirique</button>
-          <button onclick="showPanel('ap1012','ap10121',2)" data-panel="ap10121" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">Durée, réévaluation &amp; prévention</button>
+                <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;">
+          <button data-panel="ap10120" onclick="showPanel('ap1012','ap10120',3)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#c0392b;color:#fff;">Antibiothérapie empirique</button>
+          <button data-panel="ap10121" onclick="showPanel('ap1012','ap10121',3)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">Durée, réévaluation &amp; prévention</button>
+          <button data-panel="ap10122" onclick="showPanel('ap1012','ap10122',3)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">💉 G-CSF — prévenir plutôt que rattraper</button>
         </div>
-        <div id="ap10120" style="display:block;">
+
+        <div id="ap10120" style="display:block;margin-top:14px;">
+
           <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;">
             <div style="background:#fce4ec;border-radius:10px;padding:14px;">
               <strong style="color:#c0392b;">🔴 Haut risque — IV</strong>
@@ -50731,8 +50735,10 @@ Revoir rapidement si nouvelle Sx ou changement de dose<br>
             </div>
           </div>
           <div class="key-fact red" style="margin-top:12px;">⚠️ <strong>Valider chaque posologie dans RxVigilance</strong> et selon l'antibiogramme local — les doses ci-dessus sont des ordres de grandeur chez l'adulte à fonction rénale normale.</div>
-        </div>
-        <div id="ap10121" style="display:none;">
+                </div>
+
+        <div id="ap10121" style="display:none;margin-top:14px;">
+
           <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;">
             <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
               <strong style="color:#15803d;">⏳ Durée</strong>
@@ -50751,8 +50757,45 @@ Revoir rapidement si nouvelle Sx ou changement de dose<br>
               <div style="font-size:13px;line-height:1.7;margin-top:8px;">Avoir un <strong>thermomètre</strong> et savoir s'en servir<br><strong>Prendre sa température dès qu'il se sent fiévreux ou mal</strong><br><strong>≥ 38,3 °C → aller à l'urgence immédiatement</strong>, avec sa carte de traitement<br><strong>Ne pas prendre d'acétaminophène « pour voir »</strong> — cela masque le seul signe disponible</div>
             </div>
           </div>
+                </div>
+
+        <div id="ap10122" style="display:none;margin-top:14px;">
+        <div class="key-fact blue" style="margin-top:4px;">🔬 <strong>Ce que c&#39;est.</strong> Une <strong>glycoprotéine</strong> qui stimule la moelle osseuse à <strong>produire et libérer des granulocytes</strong> (neutrophiles) dans la circulation. Elle <strong>diminue la durée et la sévérité</strong> de la neutropénie — elle ne l&#39;empêche pas. <span style="font-size:11px;color:#64748b;">📚 <em>Pharmaco-oncologie, Chevrette · Asselah · Bernard, CUSM/UdeM, septembre 2026</em></span></div>
+        <div style="font-size:12px;font-weight:800;color:#15803d;margin-top:18px;letter-spacing:.4px;">🎯 POURQUOI ON L&#39;UTILISE</div>
+        <div class="criteria-list" style="margin-top:10px;">
+          <div class="criteria-item"><div class="criteria-num green">1</div><span>↓ la <strong>fréquence des neutropénies fébriles</strong></span></div>
+          <div class="criteria-item"><div class="criteria-num green">2</div><span>↓ les <strong>délais et les réductions de dose</strong></span></div>
+          <div class="criteria-item"><div class="criteria-num green">3</div><span>↓ les <strong>hospitalisations</strong> pour neutropénie fébrile</span></div>
+          <div class="criteria-item"><div class="criteria-num green">4</div><span>↓ l&#39;<strong>usage d&#39;antibiotiques IV</strong></span></div>
         </div>
+        <div style="font-size:12px;font-weight:800;color:#0369a1;margin-top:18px;letter-spacing:.4px;">📅 PROPHYLAXIE PRIMAIRE OU SECONDAIRE — DEUX INDICATIONS DISTINCTES</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin-top:10px;">
+          <div style="background:#e8f4fd;border-left:4px solid #1d4ed8;border-radius:10px;padding:14px;"><strong style="color:#1d4ed8;">① Primaire</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">Dès le <strong>premier cycle</strong> si le protocole comporte un <strong>risque de neutropénie fébrile &gt; 20 %</strong>, ou s&#39;il s&#39;agit d&#39;une chimiothérapie intensive <em>dose dense</em>.<br>➜ Se poursuit ensuite à <strong>tous les cycles</strong>.<br>🎯 À <strong>considérer</strong> aussi chez le patient dont le régime est à <strong>risque modéré</strong> à visée <strong>curative</strong> ET qui présente <strong>au moins un facteur de risque</strong> — jugement clinique.</div></div>
+          <div style="background:#f0fdf4;border-left:4px solid #15803d;border-radius:10px;padding:14px;"><strong style="color:#15803d;">② Secondaire</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;"><strong>Après</strong> un épisode de neutropénie fébrile ou une complication — ou chez un patient pour qui une <strong>réduction de dose ou un délai</strong> pourrait <strong>affecter le résultat clinique</strong>.</div></div>
+        </div>
+        <div style="font-size:12px;font-weight:800;color:#6d28d9;margin-top:18px;letter-spacing:.4px;">💉 LES FORMULATIONS DISPONIBLES</div>
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:22%;"></th><th style="width:39%;">Filgrastim</th><th style="width:39%;">Peg-filgrastim</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Noms</strong></td><td><strong>Neupogen</strong><br><em>biosimilaire</em> : Grastofil</td><td><strong>Neulasta</strong><br><em>biosimilaires</em> : Lapelga, Fulphila</td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>Dose</strong></td><td><strong>300 mcg</strong> — ou <strong>480 mcg si &gt; 78 kg</strong><br><strong>SC die</strong> × <em>n</em> jours, à débuter <strong>24-72 h post-chimio</strong></td><td><strong>6 mg SC × 1</strong><br>à débuter <strong>24-72 h post-chimio</strong></td></tr>
+            <tr><td><strong>Intervalle avec la chimio</strong></td><td>⚠️ <strong>Ne pas utiliser dans les 24 h avant ou après</strong> une chimiothérapie</td><td>⚠️ <strong>Au moins 12 jours</strong> entre l&#39;injection et la chimio suivante — donc <strong>pas avec les protocoles &lt; q14 jours</strong></td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>RAMQ</strong></td><td>Couvert (biosimilaire) · code <strong>HE129</strong></td><td>Couvert (biosimilaire) · code <strong>HE359</strong></td></tr>
+          </tbody>
+        </table>
+        </div>
+        <div class="key-fact orange" style="margin-top:10px;">😖 <strong>Les deux effets indésirables qu&#39;il faut annoncer d&#39;avance.</strong><br><strong>Douleurs osseuses</strong> — acétaminophène PRN, prise <strong>au coucher</strong>, et <strong>cétirizine ou loratadine 1 h avant l&#39;injection</strong>.<br><strong>Réaction au site d&#39;injection.</strong><br>🎯 Prévenir la douleur osseuse évite qu&#39;un patient refuse la deuxième injection. <span style="font-size:11px;color:#64748b;">📚 <em>Pharmaco-oncologie, Chevrette · Asselah · Bernard, CUSM/UdeM, septembre 2026</em></span></div>
+        </div>
+
+
+        <div class="key-fact red" style="margin-top:10px;">📊 <strong>Ce qu&#39;on joue, en chiffres.</strong> Le risque de complications — <strong>hypotension, insuffisance rénale aiguë, hypoxie</strong> — touche environ <strong>un quart</strong> des patients, et la <strong>mortalité est d&#39;environ 11 %</strong>. La fièvre peut être le <strong>seul symptôme</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Pharmaco-oncologie, Chevrette · Asselah · Bernard, CUSM/UdeM, septembre 2026</em></span></div>
+        <div class="key-fact blue" style="margin-top:10px;">📱 <strong>Deux indices de risque, pas un seul.</strong> Le <strong>MASCC</strong> ci-dessus, et le <strong>CISNE</strong> — <em>Clinical Index of Stable Febrile Neutropenia</em> — conçu pour les patients <strong>cliniquement stables</strong>, chez qui le MASCC surestime parfois le bas risque. Les deux sont sur <strong>MDCalc</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Pharmaco-oncologie, Chevrette · Asselah · Bernard, CUSM/UdeM, septembre 2026</em></span></div>
+        <div class="key-fact orange" style="margin-top:10px;">⏱️ <strong>La règle d&#39;arrêt de l&#39;antibiothérapie empirique</strong> — souvent, <strong>aucun foyer n&#39;est trouvé</strong> : poursuivre jusqu&#39;à ce que le patient soit <strong>afébrile depuis plus de 72 heures</strong> <strong>OU</strong> que les <strong>neutrophiles dépassent 0,5 × 10⁹/L</strong>. Si une source est identifiée, le choix et la durée suivent cette source.<br>🍄 <strong>Si la fièvre persiste au-delà de 4 jours</strong> sans cause évidente, ou <strong>réapparaît</strong> : envisager un <strong>antifongique</strong> et <strong>consulter l&#39;infectiologie</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Pharmaco-oncologie, Chevrette · Asselah · Bernard, CUSM/UdeM, septembre 2026</em></span></div>
+        <div class="key-fact cream" style="margin-top:10px;">⚖️ <strong>Un écart de protocole à connaître.</strong> Ce guide écrit <strong>pipéracilline-tazobactam 4,5 g IV q8h</strong>; le cours donne le protocole du <strong>CUSM : 4,5 g IV q6h</strong>, à administrer <strong>dans l&#39;heure</strong> suivant la consultation. Les deux intervalles sont en usage selon les établissements — 🎯 <strong>c&#39;est le protocole de votre centre qui tranche</strong>, et c&#39;est lui qu&#39;il faut avoir vérifié <em>avant</em> d&#39;en avoir besoin. <span style="font-size:11px;color:#64748b;">📚 <em>Pharmaco-oncologie, Chevrette · Asselah · Bernard, CUSM/UdeM, septembre 2026</em></span></div>
+        <div class="key-fact green" style="margin-top:10px;">🎓 <strong>À enseigner en plus du thermomètre</strong> — éviter les <strong>aliments à risque de contamination</strong> (viande et poisson crus, lait cru, fromage non pasteurisé) et éviter les <strong>vaccins vivants</strong>; consulter le <strong>GEOQ</strong>, rubrique vaccination, pour le moment approprié. <span style="font-size:11px;color:#64748b;">📚 <em>Pharmaco-oncologie, Chevrette · Asselah · Bernard, CUSM/UdeM, septembre 2026</em></span></div>
       </div>
+
 
       <div class="block clin" style="margin-top:14px;">
         <div class="block-title" id="uo-2"><span class="tag">⚠️ Autres urgences oncologiques</span></div>
@@ -50882,15 +50925,20 @@ Revoir rapidement si nouvelle Sx ou changement de dose<br>
 
       <div class="block rx" style="margin-top:14px;">
         <div class="block-title" id="uo-4"><span class="tag">☠️ Toxicités des traitements oncologiques</span></div>
-        <div style="display:flex;gap:6px;flex-wrap:wrap;margin:8px 0 12px;">
-          <button onclick="showPanel('ap77','ap770',5)" data-panel="ap770" style="background:#6d28d9;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">Nausées &amp; vomissements</button>
-          <button onclick="showPanel('ap77','ap771',5)" data-panel="ap771" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">Neuropathie périphérique</button>
-          <button onclick="showPanel('ap77','ap772',5)" data-panel="ap772" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">Mucite</button>
-          <button onclick="showPanel('ap77','ap773',5)" data-panel="ap773" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">Cardiotoxicité</button>
-          <button onclick="showPanel('ap77','ap774',5)" data-panel="ap774" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;">Immunothérapie — irAE</button>
+
+                <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;">
+          <button data-panel="ap770" onclick="showPanel('ap77','ap770',8)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#6d28d9;color:#fff;">🤢 Nausées &amp; vomissements</button>
+          <button data-panel="ap771" onclick="showPanel('ap77','ap771',8)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">💧 Diarrhée</button>
+          <button data-panel="ap772" onclick="showPanel('ap77','ap772',8)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">👄 Mucite</button>
+          <button data-panel="ap773" onclick="showPanel('ap77','ap773',8)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">🩹 Toxicités cutanées</button>
+          <button data-panel="ap774" onclick="showPanel('ap77','ap774',8)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">🦶 Neuropathie périphérique</button>
+          <button data-panel="ap775" onclick="showPanel('ap77','ap775',8)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">🫀 Cardiotoxicité</button>
+          <button data-panel="ap776" onclick="showPanel('ap77','ap776',8)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">🛡️ Immunothérapie — irAE</button>
+          <button data-panel="ap777" onclick="showPanel('ap77','ap777',8)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">💉 Réaction à la perfusion</button>
         </div>
 
-        <div id="ap770" style="display:block;">
+        <div id="ap770" style="display:block;margin-top:14px;">
+
           <div class="key-fact black" style="margin-top:2px;">Le potentiel émétogène du protocole détermine la prophylaxie — <strong>hautement émétogène (HEC)</strong> : cisplatine, cyclophosphamide haute dose, dacarbazine, AC (anthracycline + cyclophosphamide). La prophylaxie se donne <strong>avant</strong> la chimiothérapie, pas en réaction.</div>
           <div style="overflow-x:auto;margin-top:10px;">
           <table style="font-size:12px;">
@@ -50904,31 +50952,98 @@ Revoir rapidement si nouvelle Sx ou changement de dose<br>
             </tbody>
           </table>
           </div>
-          <div class="key-fact orange" style="margin-top:10px;">⚠️ <strong>Éliminer les autres causes</strong> avant d'attribuer les vomissements à la chimiothérapie : occlusion intestinale, <strong>hypercalcémie</strong>, métastases cérébrales avec hypertension intracrânienne, constipation sous opioïdes, gastroparésie.</div>
+          <div class="key-fact orange" style="margin-top:10px;">⚠️ <strong>Éliminer les autres causes</strong> avant d'attribuer les vomissements à la chimiothérapie : occlusion intestinale, <strong>hypercalcémie</strong>, métastases cérébrales avec hypertension intracrânienne, constipation sous opioïdes, gastroparésie.</div>        <div style="font-size:12px;font-weight:800;color:#d35400;margin-top:18px;letter-spacing:.4px;">📊 LE POTENTIEL ÉMÉTISANT — CE QU&#39;IL FAUT CONNAÎTRE AVANT DE PRESCRIRE</div>
+        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>Définition.</strong> Le potentiel émétisant est la <strong>capacité d&#39;un traitement à provoquer un vomissement chez une personne n&#39;ayant reçu aucun antiémétique ni prophylaxie adéquate</strong>. C&#39;est lui — et non les symptômes du patient — qui détermine la prophylaxie à prescrire. <span style="font-size:11px;color:#64748b;">📚 <em>Pharmaco-oncologie, Chevrette · Asselah · Bernard, CUSM/UdeM, septembre 2026</em></span></div>
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:22%;">Palier</th><th style="width:78%;">Risque de vomissement sans prophylaxie</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Élevé</strong></td><td><strong>&gt; 90 %</strong> — y compris <strong>AC</strong> (anthracycline + cyclophosphamide)</td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>Modéré</strong></td><td><strong>30 à 90 %</strong> — y compris le <strong>carboplatine</strong> à <strong>AUC ≥ 4 mg/mL/min</strong></td></tr>
+            <tr><td><strong>Faible</strong></td><td><strong>10 à 30 %</strong></td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>Très faible</strong></td><td><strong>&lt; 10 %</strong></td></tr>
+          </tbody>
+        </table>
+        </div>
+        <div style="font-size:12px;font-weight:800;color:#6d28d9;margin-top:18px;letter-spacing:.4px;">🕐 LES CINQ TYPES DE NVIC — ILS N&#39;APPELLENT PAS LA MÊME CONDUITE</div>
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:22%;">Type</th><th style="width:78%;">Définition</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Aigu</strong></td><td><strong>≤ 24 heures</strong> après la chimiothérapie</td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>Retardé</strong></td><td><strong>&gt; 24 heures</strong> après la chimiothérapie</td></tr>
+            <tr><td><strong>Anticipatoire</strong></td><td><strong>Avant</strong> la chimiothérapie</td></tr>
+            <tr style="background:#f8f9fa;"><td><strong><em>Breakthrough</em></strong></td><td>Échec de la <strong>prophylaxie</strong> antiémétique</td></tr>
+            <tr><td><strong>Réfractaire</strong></td><td>Échec de la prophylaxie <strong>et</strong> du traitement de secours</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <div style="font-size:12px;font-weight:800;color:#c0392b;margin-top:18px;letter-spacing:.4px;">⚠️ LES FACTEURS DE RISQUE — CHEZ QUI PRÉVOIR PLUS LARGE</div>
+        <div class="key-fact orange" style="margin-top:10px;"><strong>Femme</strong> · <strong>âge &lt; 50 ans</strong> · nausées durant une <strong>grossesse</strong> · antécédent de <strong>mal des transports</strong> · <strong>anxiété</strong> · comorbidités · <strong>histoire de nausées lors de traitements antérieurs</strong>.<br>🎯 Autrement dit : le meilleur prédicteur du prochain cycle est <strong>ce qui s&#39;est passé au cycle précédent</strong> — d&#39;où l&#39;importance de bien contrôler dès le premier. <span style="font-size:11px;color:#64748b;">📚 <em>Pharmaco-oncologie, Chevrette · Asselah · Bernard, CUSM/UdeM, septembre 2026</em></span></div>
+        <div style="font-size:12px;font-weight:800;color:#0369a1;margin-top:18px;letter-spacing:.4px;">🧰 LES SEPT CLASSES D&#39;ANTIÉMÉTIQUES</div>
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:26%;">Molécules</th><th style="width:17%;">Mécanisme</th><th style="width:22%;">Utilité</th><th style="width:35%;">Effets indésirables</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Aprépitant</strong> · fosaprépitant · nétupitant</td><td>Antagoniste <strong>NK-1</strong></td><td>NVIC <strong>aigus et retardés</strong></td><td>Céphalées · <strong>interactions</strong> (inhibiteurs modérés du <strong>CYP3A4</strong>)</td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>Ondansétron</strong> · palonosétron · granisétron</td><td>Antagoniste <strong>5-HT3</strong></td><td>NVIC <strong>aigus</strong></td><td>Constipation · <strong>prolongation du QT</strong> · céphalées</td></tr>
+            <tr><td><strong>Dexaméthasone</strong></td><td>Corticostéroïde</td><td>NVIC <strong>aigus et retardés</strong></td><td>Insomnie · <strong>hyperglycémie</strong> · dyspepsie · anxiété</td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>Olanzapine</strong></td><td>Antagoniste <strong>D2, 5-HT3, H1</strong></td><td>NVIC <strong>aigus et retardés</strong></td><td>Somnolence</td></tr>
+            <tr><td><strong>Métoclopramide</strong> · prochlorpérazine · halopéridol <em>(2<sup>e</sup> ligne)</em></td><td>Antagoniste <strong>D2</strong></td><td><strong>PRN</strong> — prise régulière possible</td><td><strong>Symptômes extrapyramidaux</strong> · somnolence · <strong>prolongation du QT</strong></td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>Lorazépam</strong></td><td>Benzodiazépine</td><td>NVIC <strong>anticipatoires</strong></td><td>Somnolence</td></tr>
+            <tr><td><strong>Nabilone</strong></td><td>Cannabinoïde</td><td>NVIC <strong>réfractaires</strong></td><td>Somnolence</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <div class="key-fact red" style="margin-top:10px;">🫀 <strong>Le piège cumulatif.</strong> Beaucoup de ces molécules <strong>allongent le QTc</strong> — sétrons, métoclopramide, halopéridol. Les empiler sans y penser, chez un patient qui reçoit par ailleurs une chimiothérapie cardiotoxique, est une erreur silencieuse. <span style="font-size:11px;color:#64748b;">📚 <em>Pharmaco-oncologie, Chevrette · Asselah · Bernard, CUSM/UdeM, septembre 2026</em></span></div>
+        <div style="font-size:12px;font-weight:800;color:#15803d;margin-top:18px;letter-spacing:.4px;">💊 LA PROPHYLAXIE, DOSÉE PAR PALIER</div>
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;min-width:880px;">
+          <thead><tr><th style="width:15%;">Palier</th><th style="width:15%;">Médicament</th><th style="width:36%;">NVIC aigus — dose totale quotidienne</th><th style="width:34%;">NVIC retardés</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Élevé</strong><br><em>(&gt; 90 %, y compris AC)</em></td><td><strong>Antagoniste NK-1</strong></td><td>Aprépitant <strong>125 mg PO jour 1</strong><br>Fosaprépitant <strong>150 mg IV jour 1</strong><br>NEPA (nétupitant 300 mg / palonosétron 0,5 mg) <strong>PO jour 1</strong></td><td>Si aprépitant au jour 1 : <strong>aprépitant 80 mg die aux jours 2 et 3</strong></td></tr>
+            <tr style="background:#f8f9fa;"><td></td><td><strong>Antagoniste 5-HT3</strong></td><td>Ondansétron <strong>16-24 mg PO</strong> ou <strong>0,15 mg/kg (max 16 mg) IV</strong><br>Granisétron <strong>2 mg PO</strong> ou <strong>1 mg IV</strong><br>Palonosétron <strong>0,5 mg PO</strong> ou <strong>0,25 mg IV</strong></td><td>—</td></tr>
+            <tr><td></td><td><strong>Dexaméthasone</strong></td><td><strong>12 mg PO/IV</strong></td><td>Si aprépitant : <strong>8 mg PO / 10 mg IV die jours 2 à 4</strong><br>Si fosaprépitant : 8 mg PO/IV die jour 2, puis <strong>8 mg BID jours 3 et 4</strong><br>Si NEPA : 8 mg PO / 10 mg IV die jours 2 à 4</td></tr>
+            <tr style="background:#f8f9fa;"><td></td><td><strong>Olanzapine</strong></td><td><strong>5-10 mg PO</strong></td><td><strong>5-10 mg PO die jours 2 à 4</strong></td></tr>
+            <tr><td><strong>Modéré</strong><br><em>(30-90 %, dont carboplatine AUC ≥ 4)</em></td><td><strong>Antagoniste 5-HT3</strong></td><td>Ondansétron <strong>16 mg PO</strong> ou <strong>0,15 mg/kg (max 16 mg) IV</strong><br>Granisétron <strong>2 mg PO</strong> ou <strong>1 mg IV</strong><br>Palonosétron <strong>0,5 mg PO</strong> ou <strong>0,25 mg IV</strong></td><td>—</td></tr>
+            <tr style="background:#f8f9fa;"><td></td><td><strong>Dexaméthasone</strong></td><td><strong>8 mg PO / 10 mg IV</strong></td><td><strong>8 mg PO / 10 mg IV aux jours 2 et 3</strong> si l&#39;agent est connu pour causer des NVIC retardés — cyclophosphamide, doxorubicine, oxaliplatine, carboplatine</td></tr>
+            <tr><td><strong>Faible</strong><br><em>(10-30 %)</em></td><td><strong>Dexaméthasone</strong></td><td><strong>8 mg PO/IV</strong></td><td>—</td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>Très faible</strong><br><em>(&lt; 10 %)</em></td><td>—</td><td>Aucune prophylaxie systématique</td><td>—</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <div style="font-size:12px;font-weight:800;color:#b45309;margin-top:18px;letter-spacing:.4px;">🔄 QUAND ÇA NE MARCHE PAS — LA DÉMARCHE</div>
+        <div class="criteria-list" style="margin-top:10px;">
+          <div class="criteria-item"><div class="criteria-num orange">1</div><span><strong>La prise était-elle adéquate?</strong> Si non, chercher pourquoi : <strong>intolérance</strong>, mauvaise compréhension, <strong>problème d&#39;assurance</strong>, dysphagie.</span></div>
+          <div class="criteria-item"><div class="criteria-num orange">2</div><span>Si oui : <strong>ajouter ou modifier</strong> un antiémétique — p. ex. passer le <strong>métoclopramide 10 mg PO QID régulier</strong> plutôt qu&#39;au besoin.</span></div>
+          <div class="criteria-item"><div class="criteria-num orange">3</div><span>Ajouter des <strong>mesures non pharmacologiques</strong> : éviter les repas gras, frits, épicés, sucrés, l&#39;alcool et le tabac · <strong>hydratation</strong> · petits repas plus fréquents · <strong>consulter la nutritionniste</strong>.</span></div>
+          <div class="criteria-item"><div class="criteria-num orange">4</div><span>Si <strong>dyspepsie</strong> : envisager un <strong>anti-H2 (famotidine)</strong> ou un <strong>IPP (pantoprazole)</strong>.</span></div>
+          <div class="criteria-item"><div class="criteria-num orange">5</div><span>Vérifier les <strong>interactions</strong> et les <strong>contre-indications</strong>.</span></div>
+          <div class="criteria-item"><div class="criteria-num red">!</div><span><strong>Modifier la prévention AVANT le prochain cycle</strong> — c&#39;est là que se gagne le cycle suivant, pas pendant.</span></div>
+        </div>
+        <div class="key-fact cream" style="margin-top:10px;">💰 <strong>Le détail qui bloque une ordonnance au Québec.</strong> <strong>Aprépitant</strong>, <strong>nétupitant-palonosétron</strong> et <strong>ondansétron PRN</strong> sont des <strong>médicaments d&#39;exception</strong> à la RAMQ : un formulaire en ligne doit être rempli pour le remboursement. Sans cela, le coût revient au patient. <span style="font-size:11px;color:#64748b;">📚 <em>Pharmaco-oncologie, Chevrette · Asselah · Bernard, CUSM/UdeM, septembre 2026</em></span></div>
         </div>
 
-        <div id="ap771" style="display:none;">
-          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;">
-            <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
-              <strong style="color:#1d4ed8;">💊 Agents en cause</strong>
-              <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Platines</strong> (cisplatine, oxaliplatine) · <strong>taxanes</strong> (paclitaxel, docétaxel) · <strong>alcaloïdes de la pervenche</strong> (vincristine) · <strong>bortézomib</strong> · thalidomide</div>
-            </div>
-            <div style="background:#fce4ec;border-radius:10px;padding:14px;">
-              <strong style="color:#c0392b;">🩺 Présentation</strong>
-              <div style="font-size:13px;line-height:1.7;margin-top:8px;">Sensitive &gt; motrice · distribution en <strong>gants et chaussettes</strong>, symétrique<br>Paresthésies, engourdissements, douleur neuropathique, perte de proprioception → <strong>chutes</strong><br><strong>Dose-cumulative</strong> · peut être <strong>irréversible</strong> (surtout cisplatine, oxaliplatine)<br><em>Oxaliplatine</em> : dysesthésies aiguës <strong>déclenchées par le froid</strong>, réversibles</div>
-            </div>
-            <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
-              <strong style="color:#15803d;">💊 Prise en charge</strong>
-              <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Aucune prévention pharmacologique n'a fait ses preuves</strong> — la seule mesure efficace est la <strong>réduction ou l'arrêt de dose</strong>, décidée par l'oncologue<br><strong>Duloxétine 30–60 mg</strong> : seule molécule appuyée par des données pour la <em>douleur</em> (recommandation ASCO)<br>Oxaliplatine : <strong>éviter le froid</strong> (boissons, air, objets) pendant les jours suivant la perfusion</div>
-            </div>
-            <div style="background:#fff3cd;border-radius:10px;padding:14px;">
-              <strong style="color:#d35400;">🛡️ Rôle de l'IPS</strong>
-              <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Dépister activement à chaque visite</strong> — les patients minimisent, et la détection précoce permet d'ajuster la dose <em>avant</em> l'irréversibilité<br><strong>Prévention des chutes</strong> : évaluation de la marche, chaussures, éclairage, physiothérapie<br>Prévenir les <strong>brûlures et blessures non ressenties</strong> (eau chaude, pieds)</div>
-            </div>
-          </div>
+        <div id="ap771" style="display:none;margin-top:14px;">
+        <div class="key-fact ink" style="margin-top:10px;">💧 <strong>Plusieurs thérapies anticancer causent de la diarrhée</strong> — et la conduite n&#39;est pas la même selon la molécule. Deux situations font sortir du réflexe « lopéramide » : l&#39;<strong>irinotécan</strong>, où la dose est plus élevée que dans la monographie, et l&#39;<strong>immunothérapie</strong>, où il peut s&#39;agir d&#39;une colite. <span style="font-size:11px;color:#64748b;">📚 <em>Pharmaco-oncologie, Chevrette · Asselah · Bernard, CUSM/UdeM, septembre 2026</em></span></div>
+        <div style="font-size:12px;font-weight:800;color:#15803d;margin-top:18px;letter-spacing:.4px;">💊 LE TRAITEMENT, PAR SITUATION</div>
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:26%;">Situation</th><th style="width:74%;">Conduite</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Cas général</strong></td><td><strong>1<sup>er</sup> choix : lopéramide PRN</strong>, <strong>maximum 16 mg/jour</strong></td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>Protocole contenant de l&#39;irinotécan</strong><br><em>⚠️ exception</em></td><td>🎯 La dose de lopéramide utilisée est <strong>plus élevée que celle recommandée dans la monographie</strong> :<br><strong>4 mg PO × 1</strong> dès la diarrhée, puis <strong>2 mg PO q2h</strong> — ou <strong>4 mg PO q4h la nuit</strong> — <strong>jusqu&#39;à 12 heures sans diarrhée</strong></td></tr>
+            <tr><td><strong>Lopéramide insuffisant</strong></td><td>Envisager le <strong>Lomotil</strong></td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>Sous immunothérapie</strong></td><td>🚨 <strong>Plus de 4 à 6 selles par jour</strong> → penser à la <strong>colite secondaire à l&#39;immunothérapie</strong>, pas à une simple diarrhée</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <div class="key-fact orange" style="margin-top:10px;">🦠 <strong>Exclure le </strong><em>C. difficile</em><strong> — et les autres pathogènes si la personne est à risque.</strong> Surtout s&#39;il y a de la <strong>fièvre</strong>, une <strong>admission récente</strong> ou une <strong>antibiothérapie récente</strong>.</div>
+        <div class="key-fact red" style="margin-top:10px;">🚨 <strong>Évaluation urgente si</strong> : <strong>sang</strong> · <strong>fièvre</strong> · <strong>hypotension</strong> · douleur abdominale importante · <strong>incapacité à s&#39;hydrater</strong> · ou <strong>grade ≥ 3</strong>.</div>
         </div>
 
-        <div id="ap772" style="display:none;">
+        <div id="ap772" style="display:none;margin-top:14px;">
+
           <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;">
             <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
               <strong style="color:#1d4ed8;">💊 Fréquente sous</strong>
@@ -50946,10 +51061,91 @@ Revoir rapidement si nouvelle Sx ou changement de dose<br>
               <strong style="color:#d35400;">💊 Traitement</strong>
               <div style="font-size:13px;line-height:1.7;margin-top:8px;">Analgésie <strong>en escalade — opioïdes si grade ≥ 3</strong>, rinçages anesthésiants<br>Rechercher une <strong>surinfection</strong> : candidose (antifongique), herpès (antiviral)<br>Adaptation alimentaire (mou, froid, éviter acide/épicé/croquant)<br><strong>Hydratation IV ou nutrition entérale/parentérale</strong> si l'apport oral est impossible</div>
             </div>
-          </div>
+          </div>        <div style="font-size:12px;font-weight:800;color:#0369a1;margin-top:18px;letter-spacing:.4px;">🧪 LES RECETTES CONCRÈTES — CE QU&#39;ON PRESCRIT VRAIMENT</div>
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:22%;">Préparation</th><th style="width:40%;">Composition</th><th style="width:38%;">Pour quoi</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Rince-bouche « magique »</strong></td><td><strong>Nystatine + diphenhydramine + hydrocortisone</strong> (3 ingrédients)</td><td>Mucite douloureuse avec composante inflammatoire</td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>« Pink Lady »</strong></td><td><strong>Lidocaïne + Maalox</strong>, mélange <strong>1:1</strong></td><td>Anesthésie locale avant les repas</td></tr>
+            <tr><td><strong>Rince-bouche maison</strong></td><td><strong>Eau + sel + bicarbonate de soude</strong> · <strong>sans alcool</strong></td><td>Hygiène de base, à faire plusieurs fois par jour</td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>Antifongique</strong></td><td><strong>Nystatine 500 000 unités QID × 14 jours</strong></td><td>Candidose confirmée ou fortement suspectée</td></tr>
+            <tr><td><strong>Analgésie</strong></td><td>Rince-bouche de <strong>morphine</strong> ou de <strong>doxépine</strong> · acétaminophène · <strong>opioïdes</strong></td><td>Douleur non contrôlée par le topique</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <div class="key-fact orange" style="margin-top:10px;">🧊 <strong>Les glaçons pendant la perfusion</strong> — mesure simple, à ne pas oublier avec le <strong>melphalan haute dose</strong> et le <strong>dato-DXd</strong>.<br>🚫 Éviter <strong>tabac, alcool</strong> et aliments irritants — acides, très chauds, épicés.<br>🍽️ <strong>Si mucite sévère</strong> : <strong>tube nasogastrique</strong> ou <strong>alimentation parentérale</strong>.<br>🦠 Traiter une <strong>infection</strong> si elle est présente — p. ex. l&#39;<strong>herpès</strong>.</div>
+        <div class="key-fact cream" style="margin-top:10px;">📋 <strong>Il existe un protocole médical national</strong> de l&#39;INESSS sur la <strong>mucosite oropharyngée</strong>, avec ordonnance associée — c&#39;est la référence à citer au Québec. La mucite contribue aussi à la <strong>dysgueusie</strong>, qui pèse sur l&#39;apport calorique. <span style="font-size:11px;color:#64748b;">📚 <em>Pharmaco-oncologie, Chevrette · Asselah · Bernard, CUSM/UdeM, septembre 2026</em></span></div>
         </div>
 
-        <div id="ap773" style="display:none;">
+        <div id="ap773" style="display:none;margin-top:14px;">
+        <div class="key-fact ink" style="margin-top:10px;">🩹 <strong>Ne pas banaliser ce que l&#39;on voit.</strong> Trois tableaux cutanés distincts, trois molécules en cause, trois conduites — les confondre fait manquer la seule qui demande un traitement spécifique. <span style="font-size:11px;color:#64748b;">📚 <em>Pharmaco-oncologie, Chevrette · Asselah · Bernard, CUSM/UdeM, septembre 2026</em></span></div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;margin-top:10px;">
+          <div style="background:#fce4ec;border-left:4px solid #c0392b;border-radius:10px;padding:14px;"><strong style="color:#c0392b;">✋ Main-pied — érythrodysesthésie palmoplantaire</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;"><strong>Capécitabine</strong> · <strong>5-FU</strong> · <strong>doxorubicine liposomale</strong>; certains <strong>TKI</strong> ont un phénotype distinct.<br>🕐 <strong>Évolution</strong> : débute par un <strong>engourdissement</strong> et des picotements, puis rougeur, <strong>enflure</strong>, douleur importante et <strong>ulcération ou desquamation</strong> — mains et pieds.</div></div>
+          <div style="background:#fff3cd;border-left:4px solid #d35400;border-radius:10px;padding:14px;"><strong style="color:#d35400;">💊 Anti-EGFR — éruption acnéiforme</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">Éruption <strong>papulopustulaire / acnéiforme</strong>, surtout <strong>visage, cou et haut du corps</strong>.<br>🎯 Elle a une <strong>prévention et un traitement spécifiques</strong> — voir plus bas.</div></div>
+          <div style="background:#ede9fe;border-left:4px solid #6d28d9;border-radius:10px;padding:14px;"><strong style="color:#6d28d9;">🛡️ Immunothérapie</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;"><strong>Rash</strong> · <strong>prurit</strong> · formes <strong>lichénoïde</strong>, <strong>eczématiforme</strong>, <strong>psoriasiforme</strong>.<br>⚠️ Toujours <strong>rechercher les formes sévères</strong>.</div></div>
+        </div>
+        <div style="font-size:12px;font-weight:800;color:#15803d;margin-top:18px;letter-spacing:.4px;">🛡️ PRÉVENTION — CE QU&#39;ON ENSEIGNE DÈS LE PREMIER CYCLE</div>
+        <div class="criteria-list" style="margin-top:10px;">
+          <div class="criteria-item"><div class="criteria-num green">1</div><span>Savons et nettoyants <strong>doux</strong></span></div>
+          <div class="criteria-item"><div class="criteria-num green">2</div><span>Eau <strong>tiède</strong> pour la douche et le lavage des mains</span></div>
+          <div class="criteria-item"><div class="criteria-num green">3</div><span><strong>Hydrater régulièrement</strong> avec une lotion <strong>non parfumée</strong></span></div>
+          <div class="criteria-item"><div class="criteria-num green">4</div><span>Garder la peau <strong>à l&#39;air libre</strong> si possible</span></div>
+          <div class="criteria-item"><div class="criteria-num green">5</div><span>Éviter le soleil — <strong>écran solaire FPS 30 ou plus</strong></span></div>
+          <div class="criteria-item"><div class="criteria-num green">6</div><span>Crème <strong>kératolytique</strong> (p. ex. <strong>urée 20 %</strong>) si la peau est calleuse</span></div>
+        </div>
+        <div style="font-size:12px;font-weight:800;color:#d35400;margin-top:18px;letter-spacing:.4px;">💊 TRAITEMENT — IL SUIT LE GRADE</div>
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:24%;">Gravité</th><th style="width:76%;">Conduite</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Léger</strong></td><td>Peut parfois <strong>poursuivre</strong> le traitement anticancer</td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>Modéré ou grave</strong></td><td>Nécessite l&#39;<strong>arrêt ou la suspension</strong> du traitement<br>➜ À la <strong>résolution</strong>, on peut tenter une reprise à <strong>dose réduite</strong>, selon le protocole</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <div class="key-fact blue" style="margin-top:10px;">💊 <strong>Les outils</strong> : <strong>corticostéroïdes topiques</strong> — et PO si sévère · <strong>crème antibiotique (clindamycine 1 %)</strong> ou <strong>antibiotique oral (minocycline, doxycycline)</strong> pour le rash acnéiforme des anti-EGFR · <strong>antihistaminique oral</strong> si prurit · <strong>analgésiques</strong> oraux.<br>🎯 <strong>Particularité de certains anti-EGFR</strong> — p. ex. le <strong>panitumumab</strong> : usage <strong>prophylactique</strong> d&#39;hydrocortisone, de clindamycine et d&#39;un antibiotique oral (minocycline ou doxycycline) pendant les <strong>6 premières semaines</strong>, puis réévaluation.</div>
+        <div style="font-size:12px;font-weight:800;color:#6d28d9;margin-top:18px;letter-spacing:.4px;">📝 UN EXEMPLE DE PRESCRIPTION</div>
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:22%;">Zone</th><th style="width:78%;">Prescription</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Corps</strong></td><td><strong>Betaderm 0,1 % crème BID</strong>, <strong>3 semaines ON / 1 semaine OFF</strong> · <em>#450 g pot, RN × 6</em> (classe 4)<br><em>Autres choix à 450 g</em> : Aristocort R 0,1 % crème (classe 4) · Lyderm 0,05 % crème (classe 3)</td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>Visage et plis</strong></td><td><strong>Désonide 0,05 % crème BID</strong>, <strong>3 semaines ON / 1 semaine OFF</strong> · <em>#60 g pot, RN × 6</em> (classe 6)</td></tr>
+            <tr><td><strong>Prurit</strong></td><td><strong>Rupatadine 10-20 mg PO BID PRN</strong></td></tr>
+          </tbody>
+        </table>
+        </div>
+        <div class="key-fact cream" style="margin-top:10px;">📚 <strong>OnCible</strong> est la ressource à ouvrir pour la prise en charge — pharmacologique et non pharmacologique — <strong>selon la gravité</strong> de l&#39;éruption. <span style="font-size:11px;color:#64748b;">📚 <em>Lefrancois, 2024 — 1<sup>re</sup> journée québécoise de la toxicité des immunothérapies</em></span></div>
+        <div class="key-fact red" style="margin-top:10px;">🚨 <strong>Évaluation urgente si</strong> : <strong>atteinte muqueuse</strong> · <strong>bulles</strong> · douleur importante · <strong>fièvre</strong> · <strong>décollement cutané</strong> · ou <strong>atteinte oculaire</strong>.</div>
+        </div>
+
+        <div id="ap774" style="display:none;margin-top:14px;">
+
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;">
+            <div style="background:#e8f4fd;border-radius:10px;padding:14px;">
+              <strong style="color:#1d4ed8;">💊 Agents en cause</strong>
+              <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Platines</strong> (cisplatine, oxaliplatine) · <strong>taxanes</strong> (paclitaxel, docétaxel) · <strong>alcaloïdes de la pervenche</strong> (vincristine) · <strong>bortézomib</strong> · thalidomide</div>
+            </div>
+            <div style="background:#fce4ec;border-radius:10px;padding:14px;">
+              <strong style="color:#c0392b;">🩺 Présentation</strong>
+              <div style="font-size:13px;line-height:1.7;margin-top:8px;">Sensitive &gt; motrice · distribution en <strong>gants et chaussettes</strong>, symétrique<br>Paresthésies, engourdissements, douleur neuropathique, perte de proprioception → <strong>chutes</strong><br><strong>Dose-cumulative</strong> · peut être <strong>irréversible</strong> (surtout cisplatine, oxaliplatine)<br><em>Oxaliplatine</em> : dysesthésies aiguës <strong>déclenchées par le froid</strong>, réversibles</div>
+            </div>
+            <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+              <strong style="color:#15803d;">💊 Prise en charge</strong>
+              <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Aucune prévention pharmacologique n'a fait ses preuves</strong> — la seule mesure efficace est la <strong>réduction ou l'arrêt de dose</strong>, décidée par l'oncologue<br><strong>Duloxétine 30–60 mg</strong> : seule molécule appuyée par des données pour la <em>douleur</em> (recommandation ASCO)<br>Oxaliplatine : <strong>éviter le froid</strong> (boissons, air, objets) pendant les jours suivant la perfusion</div>
+            </div>
+            <div style="background:#fff3cd;border-radius:10px;padding:14px;">
+              <strong style="color:#d35400;">🛡️ Rôle de l'IPS</strong>
+              <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Dépister activement à chaque visite</strong> — les patients minimisent, et la détection précoce permet d'ajuster la dose <em>avant</em> l'irréversibilité<br><strong>Prévention des chutes</strong> : évaluation de la marche, chaussures, éclairage, physiothérapie<br>Prévenir les <strong>brûlures et blessures non ressenties</strong> (eau chaude, pieds)</div>
+            </div>
+          </div>        <div class="key-fact blue" style="margin-top:10px;">🔀 <strong>Trois types de nerfs, pas seulement les sensitifs.</strong><br><strong>Sensitifs</strong> — engourdissements, picotements, sensation de brûlure, inconfort.<br><strong>Moteurs</strong> — faiblesse musculaire, crampes.<br><strong>Autonomes</strong> — <strong>constipation</strong>, <strong>troubles sexuels</strong>. 🎯 Ceux-là ne sont jamais rapportés spontanément : il faut les demander. <span style="font-size:11px;color:#64748b;">📚 <em>Pharmaco-oncologie, Chevrette · Asselah · Bernard, CUSM/UdeM, septembre 2026</em></span></div>
+        <div class="key-fact ink" style="margin-top:10px;">🗣️ <strong>Les questions qui servent à grader.</strong> « <strong>Pouvez-vous boutonner une chemise? écrire? marcher? tenir une tasse?</strong> » Ce sont les limitations <em>fonctionnelles</em> qui déterminent le grade — et donc la décision de réduire ou d&#39;arrêter. Le chiffre vient après l&#39;évaluation, jamais avant.</div>
+        <div class="key-fact green" style="margin-top:10px;">💊 <strong>Si les symptômes affectent la qualité de vie</strong>, on peut recourir à la <strong>duloxétine</strong> — la mieux appuyée — ou à la <strong>prégabaline</strong> ou la <strong>gabapentine</strong>.<br>⏳ La neuropathie <strong>disparaît habituellement après l&#39;arrêt</strong>, mais peut <strong>persister des mois voire des années</strong>.</div>
+        </div>
+
+        <div id="ap775" style="display:none;margin-top:14px;">
+
           <div style="overflow-x:auto;">
           <table style="font-size:12px;">
             <thead><tr><th>Agent</th><th>Toxicité</th><th>Surveillance &amp; conduite</th></tr></thead>
@@ -50962,10 +51158,18 @@ Revoir rapidement si nouvelle Sx ou changement de dose<br>
             </tbody>
           </table>
           </div>
-          <div class="key-fact blue" style="margin-top:10px;">🫀 <strong>Cardio-oncologie — le principe :</strong> évaluer le risque cardiovasculaire <em>avant</em> le traitement (FEVG de base, TA, lipides, diabète, tabac), optimiser les facteurs modifiables, puis surveiller selon l'agent. Une cardiomyopathie détectée tôt se traite comme une insuffisance cardiaque à FEVG réduite (IECA/ARA + bêtabloquant).</div>
+          <div class="key-fact blue" style="margin-top:10px;">🫀 <strong>Cardio-oncologie — le principe :</strong> évaluer le risque cardiovasculaire <em>avant</em> le traitement (FEVG de base, TA, lipides, diabète, tabac), optimiser les facteurs modifiables, puis surveiller selon l'agent. Une cardiomyopathie détectée tôt se traite comme une insuffisance cardiaque à FEVG réduite (IECA/ARA + bêtabloquant).</div>        <div style="font-size:12px;font-weight:800;color:#c0392b;margin-top:18px;letter-spacing:.4px;">🧭 QUATRE VISAGES, UN MÊME RÉFLEXE</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin-top:10px;">
+          <div style="background:#fce4ec;border-left:4px solid #c0392b;border-radius:10px;padding:14px;"><strong style="color:#c0392b;">💪 Fonction</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">Dysfonction <strong>ventriculaire gauche</strong> · insuffisance cardiaque</div></div>
+          <div style="background:#fff3cd;border-left:4px solid #d35400;border-radius:10px;padding:14px;"><strong style="color:#d35400;">📉 Rythme</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;"><strong>Prolongation du QTc</strong> · arythmie</div></div>
+          <div style="background:#e8f4fd;border-left:4px solid #1d4ed8;border-radius:10px;padding:14px;"><strong style="color:#1d4ed8;">🩸 Vasculaire</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;"><strong>HTA</strong> · ischémie · thrombose</div></div>
+          <div style="background:#ede9fe;border-left:4px solid #6d28d9;border-radius:10px;padding:14px;"><strong style="color:#6d28d9;">🔥 Myocardite</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;"><strong>Rare mais grave</strong></div></div>
+        </div>
+        <div class="key-fact red" style="margin-top:10px;">🚨 <strong>Dyspnée, douleur thoracique, syncope, œdèmes, palpitations ou troponine élevée</strong> → évaluer <strong>rapidement</strong>.<br>🎯 <strong>Le réflexe</strong> : revoir <strong>dans le même temps</strong> le traitement anticancer <em>et</em> les facteurs de risque cardiovasculaires — pas l&#39;un après l&#39;autre. <span style="font-size:11px;color:#64748b;">📚 <em>Pharmaco-oncologie, Chevrette · Asselah · Bernard, CUSM/UdeM, septembre 2026</em></span></div>
         </div>
 
-        <div id="ap774" style="display:none;">
+        <div id="ap776" style="display:none;margin-top:14px;">
+
           <div class="key-fact purple" style="margin-top:2px;">⚙️ <strong>Mécanisme :</strong> les inhibiteurs de point de contrôle (anti-CTLA-4, anti-PD-1, anti-PD-L1) lèvent les freins du système immunitaire. L'effet recherché sur la tumeur s'accompagne d'une <strong>auto-immunité contre les tissus sains</strong> — d'où le nom d'<em>événements indésirables d'origine immunitaire (irAE)</em>. Ils peuvent toucher <strong>n'importe quel organe</strong>, apparaître <strong>plusieurs mois après le début</strong> et même <strong>après l'arrêt</strong> du traitement.</div>
           <div class="key-fact red" style="margin-top:10px;">🎯 <strong>Le réflexe à avoir :</strong> chez tout patient sous immunothérapie — <em>ou l'ayant reçue dans la dernière année</em> — un nouveau symptôme est un irAE jusqu'à preuve du contraire. Toujours demander : <strong>quel agent, depuis quand, dernière dose?</strong></div>
           <div style="overflow-x:auto;margin-top:10px;">
@@ -51000,9 +51204,23 @@ Revoir rapidement si nouvelle Sx ou changement de dose<br>
               <div style="font-size:13px;line-height:1.7;margin-top:8px;"><strong>Arrêt permanent</strong> · corticostéroïdes IV haute dose · soins intensifs<br><em>Exception : les endocrinopathies substituables permettent souvent de poursuivre</em></div>
             </div>
           </div>
-          <div class="key-fact orange" style="margin-top:12px;">⏬ <strong>Sevrage des corticostéroïdes :</strong> décroissance <strong>lente sur ≥ 4–6 semaines</strong> — un sevrage rapide fait rechuter l'irAE. Prévoir la <strong>prophylaxie de la pneumocystose</strong> si prednisone ≥ 20 mg/j pendant ≥ 4 semaines, ainsi que la protection gastrique et osseuse.</div>
+          <div class="key-fact orange" style="margin-top:12px;">⏬ <strong>Sevrage des corticostéroïdes :</strong> décroissance <strong>lente sur ≥ 4–6 semaines</strong> — un sevrage rapide fait rechuter l'irAE. Prévoir la <strong>prophylaxie de la pneumocystose</strong> si prednisone ≥ 20 mg/j pendant ≥ 4 semaines, ainsi que la protection gastrique et osseuse.</div>        <div class="key-fact blue" style="margin-top:10px;">📊 <strong>L&#39;ordre de grandeur, pour calibrer l&#39;inquiétude.</strong> Les effets indésirables <strong>sévères</strong> touchent <strong>moins de 5 %</strong> des patients, mais certains effets <strong>légers</strong> en touchent <strong>30 à 50 %</strong>. Autrement dit : c&#39;est fréquent et généralement bénin, sauf quand ça ne l&#39;est pas — d&#39;où la nécessité de grader plutôt que de rassurer. <span style="font-size:11px;color:#64748b;">📚 <em>NCCN, 2024</em></span></div>
+        <div class="key-fact cream" style="margin-top:10px;">📚 <strong>Où aller chercher la conduite détaillée</strong> : les <strong>lignes directrices de l&#39;ASCO</strong> sur les toxicités immunomédiées, et <strong>OnCible</strong> / <strong>GEOQ</strong> pour les versions québécoises. L&#39;objectif du corticostéroïde est de <strong>ralentir le système immunitaire</strong>, et sa dose <strong>dépend du grade</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Pharmaco-oncologie, Chevrette · Asselah · Bernard, CUSM/UdeM, septembre 2026</em></span></div>
         </div>
+
+        <div id="ap777" style="display:none;margin-top:14px;">
+        <div class="key-fact red" style="margin-top:10px;">🛑 <strong>Arrêter d&#39;abord, comprendre ensuite.</strong> C&#39;est l&#39;ordre des gestes qui compte : on ne diagnostique pas une réaction à la perfusion avant de l&#39;avoir interrompue. <span style="font-size:11px;color:#64748b;">📚 <em>Pharmaco-oncologie, Chevrette · Asselah · Bernard, CUSM/UdeM, septembre 2026</em></span></div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:10px;">
+          <div style="background:#fce4ec;border-left:4px solid #c0392b;border-radius:10px;padding:14px;"><strong style="color:#c0392b;">👀 Ce qu&#39;on peut voir</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;"><strong>Flushing</strong> · prurit · <strong>urticaire</strong> · frissons · <strong>dyspnée</strong> · douleur <strong>thoracique ou dorsale</strong> · <strong>hypotension</strong> · <strong>angiœdème</strong>.</div></div>
+          <div style="background:#e8f4fd;border-left:4px solid #1d4ed8;border-radius:10px;padding:14px;"><strong style="color:#1d4ed8;">🩺 Conduite initiale</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">① <strong>Arrêter la perfusion</strong><br>② <strong>ABC</strong><br>③ <strong>Signes vitaux</strong><br>④ Évaluer la <strong>gravité</strong><br>⑤ Traiter <strong>selon le protocole local</strong></div></div>
+          <div style="background:#fff3cd;border-left:4px solid #d35400;border-radius:10px;padding:14px;"><strong style="color:#d35400;">🕐 Quand ça survient</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">Habituellement dans les <strong>secondes à minutes</strong> suivant le début de la perfusion.<br>⚠️ Mais cela peut aller jusqu&#39;à <strong>quelques heures</strong>.</div></div>
+        </div>
+        <div class="key-fact orange" style="margin-top:10px;">⚖️ <strong>Hypersensibilité ou choc anaphylactique?</strong> La distinction se fait sur la <strong>gravité</strong> et l&#39;atteinte systémique — mais elle ne précède jamais l&#39;arrêt de la perfusion. <span style="font-size:11px;color:#64748b;">📚 <em>Pharmaco-oncologie, Chevrette · Asselah · Bernard, CUSM/UdeM, septembre 2026</em></span></div>
+        <div class="key-fact blue" style="margin-top:10px;">🔁 <strong>Et les doses subséquentes?</strong> Une <strong>réexposition lente</strong> ou une <strong>désensibilisation</strong> ne se décide qu&#39;<strong>après évaluation du risque</strong>, et <strong>selon la molécule</strong>. Ce n&#39;est pas une décision d&#39;infirmière ni d&#39;IPS seule.<br>📋 L&#39;<strong>INESSS</strong> publie un outil dédié à l&#39;<strong>hypersensibilité aux médicaments anticancéreux</strong>, avec la conduite pour les doses subséquentes — c&#39;est la référence québécoise à utiliser.</div>
+        </div>
+
       </div>
+
 
       <div class="block para" style="margin-top:14px;border-left-color:#0a7a4e;">
         <div class="block-title" id="uo-5"><span class="tag">📅 Surveillance systématique — ce qu'on vérifie et quand</span></div>
@@ -60184,7 +60402,7 @@ function showPanel(prefix,activeId,count){
     var el=document.getElementById(prefix+i);
     if(el) el.style.display=(prefix+i===activeId)?'block':'none';
   }
-  var colorMap={'tx':'#0a7a4e','atx':'#065f46','vp':'#1e7a6b','mii-tx':'#0a7a4e','mii-cr':'#0a7a4e','pk-tx':'#7c3aed','hta-tx':'#0a7a4e','ugdd':'#0369a1','frg':'#b45309','spx':'#7c3aed','rds':'#0369a1','gu':'#0f766e','lax':'#0a7a4e','somdx':'#0e7490','mpg':'#1e40af','cde':'#b91c1c','chp':'#0f766e','grl':'#374151','tnctyp':'#6d28d9','evcog':'#b45309','dlrx':'#c0392b','htorx':'#0f766e','miidx':'#0e7490','tvt':'#7c3aed','tsfr':'#4338ca','tsfa':'#0f766e','tsfc':'#c2410c','tsfp':'#b91c1c','tsfg':'#374151','nutc':'#6d28d9','ndnt':'#b45309','nalb':'#b91c1c','nsup':'#0a7a4e','nsri':'#b45309','mietio':'#6d28d9','ngac':'#15803d','n3min':'#1d4ed8','miisv':'#0891b2','dalg':'#0369a1','anetx':'#0a7a4e','aneb':'#6d28d9','mimei':'#7c3aed','miiact':'#c0392b','tncrx':'#15803d','scpd':'#c0392b','beers':'#b45309','pkpd':'#6d28d9','drx':'#0a7a4e','bcat':'#334155','sstp':'#c0392b','sstt':'#15803d','potx':'#be123c','pocas':'#0f766e'};var col=colorMap[prefix]||'#c0392b';
+  var colorMap={'tx':'#0a7a4e','atx':'#065f46','vp':'#1e7a6b','mii-tx':'#0a7a4e','mii-cr':'#0a7a4e','pk-tx':'#7c3aed','hta-tx':'#0a7a4e','ugdd':'#0369a1','frg':'#b45309','spx':'#7c3aed','rds':'#0369a1','gu':'#0f766e','lax':'#0a7a4e','somdx':'#0e7490','mpg':'#1e40af','cde':'#b91c1c','chp':'#0f766e','grl':'#374151','tnctyp':'#6d28d9','evcog':'#b45309','dlrx':'#c0392b','htorx':'#0f766e','miidx':'#0e7490','tvt':'#7c3aed','tsfr':'#4338ca','tsfa':'#0f766e','tsfc':'#c2410c','tsfp':'#b91c1c','tsfg':'#374151','nutc':'#6d28d9','ndnt':'#b45309','nalb':'#b91c1c','nsup':'#0a7a4e','nsri':'#b45309','mietio':'#6d28d9','ngac':'#15803d','n3min':'#1d4ed8','miisv':'#0891b2','dalg':'#0369a1','anetx':'#0a7a4e','aneb':'#6d28d9','mimei':'#7c3aed','miiact':'#c0392b','tncrx':'#15803d','scpd':'#c0392b','beers':'#b45309','pkpd':'#6d28d9','drx':'#0a7a4e','bcat':'#334155','sstp':'#c0392b','sstt':'#15803d','potx':'#be123c','pocas':'#0f766e','ap77':'#6d28d9','ap1012':'#c0392b'};var col=colorMap[prefix]||'#c0392b';
   for(var k=0;k<count;k++){
     var b=document.querySelector('[data-panel="'+prefix+k+'"]');
     if(b){
