@@ -1355,6 +1355,7 @@ m
         <svg class="chevron" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>      </div>
       <div class="specialty-items">
         <div class="nav-item" onclick="showSection('oncogenes')">Oncogènes & Cellule cancéreuse</div>
+        <div class="nav-item" onclick="showSection('pharmaco-onco')">Pharmaco-oncologie</div>
         <div class="nav-item" onclick="showSection('paraneoplasiques')">Syndromes paranéoplasiques</div>
         <div class="nav-item" onclick="showSection('urgences-onco')">Urgences onco. &amp; Toxicités</div>
         <div class="nav-item" onclick="showSection('cancer-sein')">Cancer du Sein</div>
@@ -1546,7 +1547,7 @@ m
           <div class="home-card-icon" style="background:#fff1f2;color:#be123c">🎗️</div>
           <div class="home-card-body">
             <div class="home-card-name">Oncologie</div>
-            <div class="home-card-count">4 sections</div>
+            <div class="home-card-count">5 sections</div>
           </div>
         </div>
         <div class="home-card" onclick="showSection('gyneco-anatomie'); openGroup('grp-gyneco')">
@@ -49924,6 +49925,431 @@ Revoir rapidement si nouvelle Sx ou changement de dose<br>
       </div>
     </div>
 
+<div class="section" id="sec-pharmaco-onco">
+      <div class="section-header">
+        <div class="section-accent" style="background:#be123c">💊</div>
+        <div class="section-title"><h1>Pharmaco-oncologie</h1><div class="breadcrumb">Oncologie <span class="breadcrumb-sep">·</span> Raisonnement <span class="breadcrumb-sep">·</span> Classes de traitement <span class="breadcrumb-sep">·</span> Doses <span class="breadcrumb-sep">·</span> Cas cliniques</div></div>
+      </div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;">
+          <button onclick="goToBlock('po-1')" style="background:#0369a1;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧭 Les 7 questions avant de parler du médicament</button>
+          <button onclick="goToBlock('po-2')" style="background:#0f766e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🔬 Le rapport de pathologie</button>
+          <button onclick="goToBlock('po-3')" style="background:#6d28d9;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧪 Biomarqueurs</button>
+          <button onclick="goToBlock('po-4')" style="background:#1d4ed8;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧑 Le patient compte autant que la tumeur</button>
+          <button onclick="goToBlock('po-5')" style="background:#15803d;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🎯 L&#39;objectif du traitement</button>
+          <button onclick="goToBlock('po-6')" style="background:#0369a1;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🤝 Le consentement, une conversation continue</button>
+          <button onclick="goToBlock('po-7')" style="background:#be123c;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">💊 Les classes de traitement anticancer</button>
+          <button onclick="goToBlock('po-8')" style="background:#b45309;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">📐 Cycle, dose, voie</button>
+          <button onclick="goToBlock('po-9')" style="background:#15803d;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">📈 Savoir si le traitement fonctionne</button>
+          <button onclick="goToBlock('po-10')" style="background:#0f766e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🔬 Études cliniques et accès au Québec</button>
+          <button onclick="goToBlock('po-11')" style="background:#0f766e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🗂️ Trois cas cliniques</button>
+          <button onclick="goToBlock('po-12')" style="background:#be123c;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">📚 Où vérifier</button>
+        </div>
+      <div class="block def" style="margin-top:14px;border-left-color:#0369a1;">
+        <div class="block-title" id="po-1"><span class="tag">🧭 Les 7 questions avant de parler du médicament</span></div>
+        <div class="key-fact ink" style="margin-top:10px;">🧭 <strong>L&#39;ordre des questions est le fond de l&#39;affaire.</strong> Le rôle de l&#39;IPS n&#39;est pas de réciter des molécules : c&#39;est de relier la biologie du cancer à un traitement personnalisé. Ces sept questions, posées <strong>dans cet ordre</strong>, réduisent les erreurs de raisonnement — parce qu&#39;aucune des six premières ne se déduit de la septième. <span style="font-size:11px;color:#64748b;">📚 <em>Pharmaco-oncologie, Chevrette · Asselah · Bernard, CUSM/UdeM, septembre 2026</em></span></div>
+        <div class="criteria-list" style="margin-top:10px;">
+          <div class="criteria-item"><div class="criteria-num blue">1</div><span><strong>Quel cancer?</strong> — histologie, origine, agressivité</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">2</div><span><strong>Quel stade?</strong> — localisé, régional, métastatique</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">3</div><span><strong>Quel biomarqueur?</strong> — récepteurs, MSI/MMR, mutation, fusion</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">4</div><span><strong>Quel objectif?</strong> — guérir, réduire le risque, contrôler</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">5</div><span><strong>Quel patient?</strong> — ECOG, comorbidités, organes, préférences, consentement</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">6</div><span><strong>Quel traitement?</strong> — bénéfice attendu et toxicités</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">7</div><span><strong>Quel suivi?</strong> — réponse, sécurité, symptômes, adhérence</span></div>
+        </div>
+        <div class="key-fact red" style="margin-top:10px;">🎯 <strong>« Le bon médicament pour la mauvaise situation reste un mauvais traitement. »</strong> C&#39;est la raison d&#39;être de la liste : une molécule parfaitement indiquée dans un autre contexte devient une erreur ici.</div>
+      </div>
+      <div class="block para" style="margin-top:14px;border-left-color:#0f766e;">
+        <div class="block-title" id="po-2"><span class="tag">🔬 Le rapport de pathologie — ce qu&#39;il faut en extraire</span></div>
+        <div class="key-fact blue" style="margin-top:10px;">🔬 <strong>Le rapport de pathologie est une histoire, pas une liste.</strong> Il répond à trois questions : <strong>qu&#39;est-ce que c&#39;est?</strong> · <strong>jusqu&#39;où va-t-il?</strong> · <strong>quelles caractéristiques peuvent changer la décision de traitement?</strong> <span style="font-size:11px;color:#64748b;">📚 <em>Pharmaco-oncologie, Chevrette · Asselah · Bernard, CUSM/UdeM, septembre 2026</em></span></div>
+        <div style="font-size:12px;font-weight:800;color:#0369a1;margin-top:18px;letter-spacing:.4px;">📋 CE QU&#39;IL FAUT EN EXTRAIRE — QUATRE GESTES</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin-top:10px;">
+          <div style="background:#e8f4fd;border-left:4px solid #1d4ed8;border-radius:10px;padding:14px;"><strong style="color:#1d4ed8;">🔍 Identifier</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;"><strong>Histologie</strong> et <strong>origine</strong> du tissu.</div></div>
+          <div style="background:#ede9fe;border-left:4px solid #6d28d9;border-radius:10px;padding:14px;"><strong style="color:#6d28d9;">📏 Mesurer</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;"><strong>Grade</strong> · <strong>taille</strong> et profondeur d&#39;<strong>invasion</strong>.</div></div>
+          <div style="background:#fff3cd;border-left:4px solid #d35400;border-radius:10px;padding:14px;"><strong style="color:#d35400;">📊 Stadifier</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;"><strong>Marges</strong> · <strong>ganglions</strong>.</div></div>
+          <div style="background:#f0fdf4;border-left:4px solid #15803d;border-radius:10px;padding:14px;"><strong style="color:#15803d;">🎯 Cibler</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;"><strong>ER/PR/HER2</strong> · <strong>MMR/MSI</strong> · <strong>PD-L1</strong> · tests moléculaires.</div></div>
+        </div>
+        <div style="font-size:12px;font-weight:800;color:#0f766e;margin-top:18px;letter-spacing:.4px;">🔪 BIOPSIE ET PIÈCE CHIRURGICALE NE RÉPONDENT PAS À LA MÊME QUESTION</div>
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:17%;"></th><th style="width:39%;">Biopsie — « qu&#39;est-ce que c&#39;est? »</th><th style="width:44%;">Pièce chirurgicale — « jusqu&#39;où la tumeur s&#39;est-elle étendue localement? »</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Ce qu&#39;elle donne</strong></td><td>Histologie · récepteurs et biomarqueurs · <strong>NGS</strong> selon le contexte</td><td><strong>Taille exacte</strong> · <strong>marges</strong> (incluant habituellement du tissu sain) · <strong>invasion</strong> · <strong>ganglions</strong></td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>Ce qu&#39;elle permet</strong></td><td>Choisir un <strong>traitement systémique</strong> — elle peut suffire</td><td>Le <strong>stade pathologique</strong> — p. ex. <em>pT3N2</em></td></tr>
+            <tr><td><strong>Où</strong></td><td>🎯 <strong>Peut être faite sur une métastase</strong> — et confirmer l&#39;origine tout en révélant un profil moléculaire différent du primitif</td><td>Sur le site opéré</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <div class="key-fact cream" style="margin-top:10px;">🧬 <em>NGS = </em><strong>Next Generation Sequencing</strong><em>, séquençage de nouvelle génération.</em> &nbsp;➜ Pour les lettres du TNM et ses préfixes c/p/yp/r, voir <em>Stadification TNM</em> dans <em>Oncogènes &amp; biologie du cancer</em>.</div>
+      </div>
+      <div class="block para" style="margin-top:14px;border-left-color:#6d28d9;">
+        <div class="block-title" id="po-3"><span class="tag">🧪 Biomarqueurs — trois natures, et trois confusions à éviter</span></div>
+        <div class="key-fact ink" style="margin-top:10px;">🧪 <strong>Trois natures de biomarqueur, trois techniques, trois usages.</strong> La distinction n&#39;est pas académique : elle détermine <em>quel test demander</em> et <em>ce que le résultat autorise à conclure</em>. <span style="font-size:11px;color:#64748b;">📚 <em>Pharmaco-oncologie, Chevrette · Asselah · Bernard, CUSM/UdeM, septembre 2026</em></span></div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:10px;">
+          <div style="background:#e8f4fd;border-left:4px solid #1d4ed8;border-radius:10px;padding:14px;"><strong style="color:#1d4ed8;">🧫 Protéines — immunohistochimie</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">Ex. <strong>ER/PR</strong>, <strong>HER2</strong>, <strong>PD-L1</strong>, protéines <strong>MMR</strong>.<br>➜ Identifient une <strong>cible</strong> ou un <strong>phénotype tumoral</strong>.</div></div>
+          <div style="background:#ede9fe;border-left:4px solid #6d28d9;border-radius:10px;padding:14px;"><strong style="color:#6d28d9;">🧬 ADN / ARN — séquençage ou test ciblé</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">Ex. <strong>EGFR</strong>, <strong>ALK</strong>, <strong>BRAF</strong>, <strong>PIK3CA</strong>, <strong>FGFR2</strong>.<br>➜ Révèlent une <strong>mutation</strong> ou une <strong>fusion actionnable</strong>.</div></div>
+          <div style="background:#f0fdf4;border-left:4px solid #15803d;border-radius:10px;padding:14px;"><strong style="color:#15803d;">📈 Phénotype — caractéristique fonctionnelle</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">Ex. <strong>MSI-H</strong>, charge mutationnelle élevée.<br>➜ Prédisent une <strong>sensibilité</strong> à une stratégie — typiquement l&#39;immunothérapie.</div></div>
+        </div>
+        <div class="key-fact orange" style="margin-top:10px;">🎯 <strong>Le principe qui décide s&#39;il faut tester.</strong> Tester n&#39;a de valeur que si le résultat <strong>peut modifier</strong> le diagnostic, le pronostic ou la décision thérapeutique. Un test qui ne change rien n&#39;est pas neutre : il coûte du temps, du tissu et de l&#39;anxiété.</div>
+        <div style="font-size:12px;font-weight:800;color:#6d28d9;margin-top:18px;letter-spacing:.4px;">🧬 MUTATION TUMORALE N&#39;EST PAS MUTATION HÉRÉDITAIRE</div>
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:22%;"></th><th style="width:39%;">Germinale</th><th style="width:39%;">Somatique</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Où elle est</strong></td><td>Dans <strong>toutes les cellules</strong> de la personne</td><td>Dans la <strong>tumeur</strong> seulement</td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>Ce qu&#39;elle implique</strong></td><td>Peut être <strong>héritée</strong> — donc des implications <strong>familiales</strong></td><td>Peut être une <strong>cible thérapeutique</strong> <em>sans</em> être héréditaire</td></tr>
+            <tr><td><strong>Exemples</strong></td><td><strong>BRCA1/2</strong> · <strong>MSH2</strong> · <strong>MLH1</strong> (syndrome de Lynch)</td><td><strong>EGFR</strong> · <strong>ALK</strong> · <strong>BRAF</strong> · <strong>FGFR2</strong></td></tr>
+          </tbody>
+        </table>
+        </div>
+        <div class="key-fact red" style="margin-top:10px;">🗣️ <strong>« Est-ce que mes enfants sont à risque? »</strong> La question qui change la conversation — et à laquelle on ne peut répondre qu&#39;en sachant si la mutation trouvée est germinale ou somatique. &nbsp;➜ <em>Dépistage génétique — quand référer</em>.</div>
+        <div style="font-size:12px;font-weight:800;color:#c0392b;margin-top:18px;letter-spacing:.4px;">⚠️ MMR/MSI, PD-L1 ET TMB — NE PAS LES CONFONDRE</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:10px;">
+          <div style="background:#f0fdf4;border-left:4px solid #15803d;border-radius:10px;padding:14px;"><strong style="color:#15803d;">🔧 MMR / MSI</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;"><strong>dMMR</strong> = <em>deficient</em> — perte de fonction du système de réparation des mésappariements (par opposition à <strong>pMMR</strong>, <em>proficient</em>, intact).<br><strong>MSI-H</strong> = instabilité microsatellitaire élevée.<br>🎯 <strong>Très prédictif</strong> de réponse aux inhibiteurs de checkpoints dans plusieurs cancers.</div></div>
+          <div style="background:#e8f4fd;border-left:4px solid #1d4ed8;border-radius:10px;padding:14px;"><strong style="color:#1d4ed8;">🛡️ PD-L1</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">Expression d&#39;une <strong>protéine de checkpoint</strong>.<br>⚠️ Sa valeur dépend <strong>fortement</strong> du type de cancer, du test utilisé et de la stratégie envisagée — un même chiffre ne veut pas dire la même chose d&#39;un cancer à l&#39;autre.</div></div>
+          <div style="background:#f1f5f9;border-left:4px solid #334155;border-radius:10px;padding:14px;"><strong style="color:#334155;">🔢 TMB</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;"><strong>Charge mutationnelle tumorale</strong> — nombre de mutations par mégabase.<br>Peut être informatif dans certains contextes, mais <strong>ne remplace pas</strong> les biomarqueurs spécifiques.</div></div>
+        </div>
+        <div class="key-fact orange" style="margin-top:10px;">🔤 <strong>La formulation correcte</strong> — parce qu&#39;une erreur de vocabulaire ici fait écrire une mauvaise ordonnance : on écrit <strong>« MSI-H / dMMR »</strong> ou <strong>« MSS / pMMR »</strong>. Jamais « MSI muté » ou « MSI non muté » : MSI décrit un <em>phénotype</em>, pas un gène muté. <span style="font-size:11px;color:#64748b;">📚 <em>Pharmaco-oncologie, Chevrette · Asselah · Bernard, CUSM/UdeM, septembre 2026</em></span></div>
+      </div>
+      <div class="block clin" style="margin-top:14px;border-left-color:#1d4ed8;">
+        <div class="block-title" id="po-4"><span class="tag">🧑 Le patient compte autant que la tumeur — ECOG</span></div>
+        <div class="key-fact ink" style="margin-top:10px;">🗣️ <strong>« Je veux traiter mon cancer, mais je veux encore pouvoir conduire ma petite-fille à l&#39;école. »</strong> Documenter ce qui compte pour la personne est aussi important que documenter l&#39;ECOG. <span style="font-size:11px;color:#64748b;">📚 <em>Pharmaco-oncologie, Chevrette · Asselah · Bernard, CUSM/UdeM, septembre 2026</em></span></div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-top:10px;">
+          <div style="background:#e8f4fd;border-left:4px solid #1d4ed8;border-radius:10px;padding:14px;"><strong style="color:#1d4ed8;">🏃 État fonctionnel</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;"><strong>ECOG</strong> · autonomie · symptômes · <strong>trajectoire récente</strong> — la pente compte autant que le point.</div></div>
+          <div style="background:#fce4ec;border-left:4px solid #c0392b;border-radius:10px;padding:14px;"><strong style="color:#c0392b;">🫀 Organes</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">Rein · foie · cœur · moelle · poumon.<br>🎯 Ce sont eux qui rendent un traitement <strong>possible, impossible ou à ajuster</strong>.</div></div>
+          <div style="background:#fff3cd;border-left:4px solid #d35400;border-radius:10px;padding:14px;"><strong style="color:#d35400;">💊 Comorbidités et médicaments</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">Interactions · fragilité · risques cumulés · traitements concomitants.</div></div>
+          <div style="background:#ede9fe;border-left:4px solid #6d28d9;border-radius:10px;padding:14px;"><strong style="color:#6d28d9;">🧭 Valeurs et logistique</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">Préférences · tolérance au risque · travail · <strong>transport</strong> · soutien · <strong>coûts</strong> · adhérence.</div></div>
+        </div>
+        <div style="font-size:12px;font-weight:800;color:#0369a1;margin-top:18px;letter-spacing:.4px;">📊 ECOG — L&#39;ÉCHELLE DE STATUT DE PERFORMANCE</div>
+        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>À quoi elle sert.</strong> Évaluer le <strong>niveau de fonctionnement</strong> et la <strong>capacité à prendre soin de soi-même</strong>. Elle joue un rôle clé dans la décision et le choix du traitement, et c&#39;est un <strong>indicateur pronostique indépendant</strong> en cancer avancé. À évaluer et <strong>documenter à chaque visite</strong> — médecin, infirmière, IPS. <span style="font-size:11px;color:#64748b;">📚 <em>Pharmaco-oncologie, Chevrette · Asselah · Bernard, CUSM/UdeM, septembre 2026</em></span></div>
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:8%;">ECOG</th><th style="width:52%;">Ce que la personne peut faire</th><th style="width:40%;">Karnofsky</th></tr></thead>
+          <tbody>
+            <tr><td><strong>0</strong></td><td>Activité <strong>identique</strong> à celle précédant la maladie, <strong>sans aucune restriction</strong>.</td><td>100 — normal, pas de douleur, aucun signe<br>90 — activité normale, signes ou symptômes mineurs</td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>1</strong></td><td>Activité physique <strong>diminuée</strong> mais <strong>ambulatoire</strong> et <strong>capable de mener un travail</strong>.</td><td>80 — activité normale avec efforts<br>70 — incapable de travailler</td></tr>
+            <tr><td><strong>2</strong></td><td>Ambulatoire et capable de <strong>prendre soin de soi-même</strong>, <strong>incapable de travailler</strong>. Alité <strong>moins de 50 %</strong> du temps.</td><td>60 — aide occasionnelle nécessaire</td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>3</strong></td><td>Capable seulement de <strong>quelques soins</strong>. Alité ou en chaise <strong>plus de 50 %</strong> du temps.</td><td>50 — aide importante et assistance médicale<br>40 — soins spéciaux et assistance</td></tr>
+            <tr><td><strong>4</strong></td><td><strong>Incapable de prendre soin de soi-même.</strong> Alité ou en chaise <strong>en permanence</strong>.</td><td>30 — incapacité sévère, hospitalisation<br>20 — grabataire<br>10 — phase terminale</td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>5</strong></td><td><strong>Décès.</strong></td><td>0</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <div class="key-fact green" style="margin-top:10px;">📐 <strong>Comment l&#39;interpréter — ce que le cours en dit.</strong> Les personnes dont le statut fonctionnel est limité — donc <strong>plus élevé sur l&#39;échelle</strong> — ont un <strong>risque plus élevé de toxicités</strong> sous chimiothérapie et <strong>répondent moins bien</strong> aux traitements. L&#39;ECOG n&#39;est donc pas une description : c&#39;est une <strong>variable de décision</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Pharmaco-oncologie, Chevrette · Asselah · Bernard, CUSM/UdeM, septembre 2026</em></span></div>
+        <div class="key-fact orange" style="margin-top:10px;">⚠️ <strong>Le gradient pratique, et d&#39;où il vient.</strong> En pratique oncologique, on retient qu&#39;un <strong>ECOG 0-1</strong> autorise généralement un traitement systémique standard, qu&#39;un <strong>ECOG 2</strong> impose la prudence — souvent monothérapie ou dose réduite — et qu&#39;à <strong>ECOG 3-4</strong> un traitement systémique est rarement approprié, la priorité allant aux soins de support. 🚩 <strong>Ce gradient chiffré n&#39;est pas dans le cours</strong> ni dans les manuels indexés du guide : c&#39;est une convention de pratique, à confirmer contre le protocole de la molécule et l&#39;avis de l&#39;oncologue avant de s&#39;en servir pour décider.</div>
+      </div>
+      <div class="block def" style="margin-top:14px;border-left-color:#15803d;">
+        <div class="block-title" id="po-5"><span class="tag">🎯 L&#39;objectif du traitement — et les lignes</span></div>
+        <div class="key-fact ink" style="margin-top:10px;">🎯 <strong>La question « pourquoi on donne ce traitement? » doit toujours avoir une réponse simple et compréhensible.</strong> Si l&#39;équipe n&#39;arrive pas à la formuler en une phrase, la personne ne pourra pas consentir de façon éclairée. <span style="font-size:11px;color:#64748b;">📚 <em>Pharmaco-oncologie, Chevrette · Asselah · Bernard, CUSM/UdeM, septembre 2026</em></span></div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;margin-top:10px;">
+          <div style="background:#f0fdf4;border-left:4px solid #15803d;border-radius:10px;padding:14px;"><strong style="color:#15803d;">🎯 Curatif</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">Chercher à <strong>guérir</strong>. Peut combiner chirurgie, radiothérapie et traitement systémique.<br>🎯 <strong>La tolérance au risque est différente</strong> parce que le bénéfice espéré est majeur.</div></div>
+          <div style="background:#e8f4fd;border-left:4px solid #1d4ed8;border-radius:10px;padding:14px;"><strong style="color:#1d4ed8;">🛡️ Adjuvant / néoadjuvant</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;"><strong>Réduire le risque de récidive</strong>, ou faciliter un traitement local.<br><strong>Durée souvent définie.</strong><br>⚠️ La personne peut être <strong>asymptomatique</strong> : expliquer le <strong>bénéfice absolu</strong> devient essentiel.<br>Il peut y avoir des traitements <strong>concomitants</strong> — chimiothérapie et radiothérapie en même temps.</div></div>
+          <div style="background:#ede9fe;border-left:4px solid #6d28d9;border-radius:10px;padding:14px;"><strong style="color:#6d28d9;">🌿 Palliatif</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;"><strong>Contrôler la maladie</strong>, prolonger la vie et préserver la <strong>qualité de vie</strong>.<br><strong>Durée indéfinie</strong> — le traitement est poursuivi tant qu&#39;il reste <strong>utile et tolérable</strong>.</div></div>
+        </div>
+        <div class="key-fact cream" style="margin-top:10px;">🔢 <strong>Les « lignes » de traitement — un mot à comprendre avant de le prononcer devant un patient.</strong> En visée palliative, on parle de lignes : une personne à sa <strong>2<sup>e</sup> ligne</strong> a reçu une 1<sup>re</sup> ligne, sa maladie a <strong>progressé</strong>, et elle reçoit maintenant un traitement de 2<sup>e</sup> intention.<br>🎯 <strong>Le cancer devient alors une maladie chronique</strong> — un cancer du sein avec métastases osseuses peut avoir une survie de <strong>plus de 10 ans</strong>. <span style="font-size:11px;color:#64748b;">📚 <em>Pharmaco-oncologie, Chevrette · Asselah · Bernard, CUSM/UdeM, septembre 2026</em></span></div>
+      </div>
+      <div class="block clin" style="margin-top:14px;border-left-color:#0369a1;">
+        <div class="block-title" id="po-6"><span class="tag">🤝 Le consentement, une conversation continue</span></div>
+        <div class="key-fact blue" style="margin-top:10px;">🤝 <strong>Le consentement est une conversation continue</strong>, pas une signature. La question à laquelle l&#39;équipe doit pouvoir répondre : <strong>« Qu&#39;est-ce que ce traitement va changer pour moi, concrètement? »</strong> <span style="font-size:11px;color:#64748b;">📚 <em>Pharmaco-oncologie, Chevrette · Asselah · Bernard, CUSM/UdeM, septembre 2026</em></span></div>
+        <div style="font-size:12px;font-weight:800;color:#15803d;margin-top:18px;letter-spacing:.4px;">✅ CE QU&#39;UN BON CONSENTEMENT COMPREND</div>
+        <div class="criteria-list" style="margin-top:10px;">
+          <div class="criteria-item"><div class="criteria-num green">1</div><span>Le <strong>diagnostic</strong></span></div>
+          <div class="criteria-item"><div class="criteria-num green">2</div><span>Le <strong>stade</strong></span></div>
+          <div class="criteria-item"><div class="criteria-num green">3</div><span>L&#39;<strong>objectif</strong> du traitement</span></div>
+          <div class="criteria-item"><div class="criteria-num green">4</div><span>Le <strong>bénéfice attendu</strong></span></div>
+          <div class="criteria-item"><div class="criteria-num green">5</div><span>Les <strong>risques importants</strong></span></div>
+          <div class="criteria-item"><div class="criteria-num green">6</div><span>Les <strong>alternatives</strong></span></div>
+          <div class="criteria-item"><div class="criteria-num red">!</div><span>La <strong>possibilité de refuser</strong> — elle fait partie du consentement, pas de son échec</span></div>
+        </div>
+        <div style="font-size:12px;font-weight:800;color:#0369a1;margin-top:18px;letter-spacing:.4px;">👥 L&#39;ÉQUIPE — QUI FAIT QUOI</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-top:10px;">
+          <div style="background:#e8f4fd;border-left:4px solid #1d4ed8;border-radius:10px;padding:14px;"><strong style="color:#1d4ed8;">🩺 Oncologue et IPS</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">Stratégie · suivi</div></div>
+          <div style="background:#ede9fe;border-left:4px solid #6d28d9;border-radius:10px;padding:14px;"><strong style="color:#6d28d9;">💊 Pharmacien</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">Doses · interactions · suivi</div></div>
+          <div style="background:#f0fdf4;border-left:4px solid #15803d;border-radius:10px;padding:14px;"><strong style="color:#15803d;">🤲 Infirmière</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;"><em>Unité, salle de traitement, infirmière pivot</em><br>Soutien · coordination</div></div>
+          <div style="background:#f1f5f9;border-left:4px solid #334155;border-radius:10px;padding:14px;"><strong style="color:#334155;">🫂 Équipe élargie</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">Nutritionniste · travailleur social · psychologue · technologue en radiothérapie · intervenant en soins spirituels · bénévoles · <strong>patient partenaire</strong></div></div>
+        </div>
+        <div class="key-fact ink" style="margin-top:10px;">🎯 <strong>Le rôle propre de l&#39;IPS ici</strong> : s&#39;assurer que la personne comprend <strong>son cancer</strong>, l&#39;<strong>objectif</strong> des traitements et les <strong>alternatives</strong> — et que tout cela reste <strong>aligné avec ses valeurs</strong>.</div>
+      </div>
+      <div class="block rx" style="margin-top:14px;border-left-color:#be123c;">
+        <div class="block-title" id="po-7"><span class="tag">💊 Les classes de traitement anticancer</span></div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;">
+          <button data-panel="potx0" onclick="showPanel('potx','potx0',7)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#be123c;color:#fff;">🗺️ Local vs systémique</button>
+          <button data-panel="potx1" onclick="showPanel('potx','potx1',7)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">🚫 Hormonothérapie</button>
+          <button data-panel="potx2" onclick="showPanel('potx','potx2',7)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">💉 Chimiothérapie</button>
+          <button data-panel="potx3" onclick="showPanel('potx','potx3',7)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">🛡️ Immunothérapie</button>
+          <button data-panel="potx4" onclick="showPanel('potx','potx4',7)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">🎯 Ciblées et ADC</button>
+          <button data-panel="potx5" onclick="showPanel('potx','potx5',7)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">🧫 Cellulaires et bispécifiques</button>
+          <button data-panel="potx6" onclick="showPanel('potx','potx6',7)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">💊 Voie orale</button>
+        </div>
+
+        <div id="potx0" style="display:block;margin-top:14px;">
+        <div class="key-fact ink" style="margin-top:4px;">🎯 <strong>Deux grandes façons d&#39;agir</strong> — et elles se combinent le plus souvent. Le « bon » traitement dépend du <strong>stade</strong>, du <strong>biomarqueur</strong> et de l&#39;<strong>objectif</strong>.</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;margin-top:10px;">
+          <div style="background:#e8f4fd;border-left:4px solid #1d4ed8;border-radius:10px;padding:14px;"><strong style="color:#1d4ed8;">📍 Traitements locaux</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">Chirurgie · radiothérapie · radiologie interventionnelle.<br>🎯 <strong>Objectif</strong> : traiter une <strong>zone anatomique précise</strong>.</div></div>
+          <div style="background:#f0fdf4;border-left:4px solid #15803d;border-radius:10px;padding:14px;"><strong style="color:#15803d;">🌐 Traitements systémiques</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">Hormonothérapie · chimiothérapie · immunothérapie · thérapies ciblées et <strong>ADC</strong> · thérapies cellulaires.<br>🎯 <strong>Objectif</strong> : agir <strong>partout</strong> où les cellules tumorales circulent ou se sont implantées.</div></div>
+        </div>
+        <div class="key-fact cream" style="margin-top:10px;"><em>ADC = </em><strong>Antibody-Drug Conjugate</strong><em>, conjugué anticorps-médicament.</em></div>
+        </div>
+
+        <div id="potx1" style="display:none;margin-top:14px;">
+        <div class="key-fact blue" style="margin-top:4px;">🎯 <strong>Le principe</strong> : couper le <strong>signal de croissance</strong> hormonal dont la tumeur dépend.</div>
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:18%;"></th><th style="width:82%;">Ce qu&#39;on utilise</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Sein</strong></td><td><strong>Tamoxifène</strong> · <strong>inhibiteurs de l&#39;aromatase</strong> · <strong>fulvestrant</strong> · suppression ovarienne</td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>Prostate</strong></td><td><strong>Suppression androgénique</strong> et inhibition de la voie des androgènes</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <div style="font-size:12px;font-weight:800;color:#d35400;margin-top:18px;letter-spacing:.4px;">⚠️ CE QUE ÇA COÛTE AU PATIENT</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;margin-top:10px;">
+          <div style="background:#fff3cd;border-left:4px solid #d35400;border-radius:10px;padding:14px;"><strong style="color:#d35400;">😖 Toxicités</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;"><strong>Bouffées de chaleur</strong> · <strong>arthralgies</strong> · diminution de la <strong>libido</strong> · <strong>santé osseuse</strong> · fatigue · profils <strong>thromboemboliques</strong> ou métaboliques selon la molécule.</div></div>
+          <div style="background:#e8f4fd;border-left:4px solid #1d4ed8;border-radius:10px;padding:14px;"><strong style="color:#1d4ed8;">📅 Surveillance</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;"><strong>Adhérence</strong> · symptômes · <strong>santé osseuse</strong> · interactions · risque <strong>thromboembolique</strong> selon le traitement.</div></div>
+        </div>
+        <div class="key-fact red" style="margin-top:10px;">🗣️ <strong>« C&#39;est juste une pilule, donc ce sera facile? »</strong> Non — une thérapie orale peut modifier profondément la qualité de vie. Et <strong>l&#39;adhérence est un paramètre clinique</strong> : demander « <strong>combien de comprimés avez-vous réellement pris cette semaine?</strong> », pas « prenez-vous bien votre médicament? ». <span style="font-size:11px;color:#64748b;">📚 <em>Pharmaco-oncologie, Chevrette · Asselah · Bernard, CUSM/UdeM, septembre 2026</em></span></div>
+        </div>
+
+        <div id="potx2" style="display:none;margin-top:14px;">
+        <div class="key-fact blue" style="margin-top:4px;">🔬 <strong>Mécanisme.</strong> Elle interfère avec la <strong>synthèse d&#39;ADN/ARN</strong>, de <strong>protéines</strong> ou avec le <strong>processus mitotique</strong> nécessaire à la réplication.<br>⚠️ <strong>Le problème</strong> : elle touche aussi les <strong>cellules saines qui se répliquent rapidement</strong> — d&#39;où les toxicités.</div>
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:30%;">Tissu atteint</th><th style="width:70%;">Ce qu&#39;on voit</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Moelle osseuse</strong></td><td>Cytopénies</td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>Muqueuses</strong></td><td>Mucosite · diarrhée</td></tr>
+            <tr><td><strong>Follicules pileux</strong></td><td>Alopécie</td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>Organes</strong></td><td>Toxicités de classe</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <div style="font-size:12px;font-weight:800;color:#0369a1;margin-top:18px;letter-spacing:.4px;">📋 AVANT CHAQUE CYCLE — CE QU&#39;ON VÉRIFIE</div>
+        <div class="criteria-list" style="margin-top:10px;">
+          <div class="criteria-item"><div class="criteria-num blue">1</div><span><strong>Symptômes</strong> depuis le dernier cycle</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">2</div><span><strong>FSC</strong></span></div>
+          <div class="criteria-item"><div class="criteria-num blue">3</div><span><strong>Fonction rénale et hépatique</strong></span></div>
+          <div class="criteria-item"><div class="criteria-num blue">4</div><span><strong>Toxicités cumulatives</strong></span></div>
+          <div class="criteria-item"><div class="criteria-num blue">5</div><span><strong>Statut fonctionnel</strong></span></div>
+          <div class="criteria-item"><div class="criteria-num blue">6</div><span><strong>Poids</strong></span></div>
+          <div class="criteria-item"><div class="criteria-num blue">7</div><span><strong>Interactions</strong> et nouvelles prescriptions</span></div>
+        </div>
+        <div class="key-fact green" style="margin-top:10px;">🎯 <strong>Le réflexe qui change le vécu du patient</strong> : penser aux <strong>médicaments de soutien</strong> et à l&#39;<strong>enseignement</strong> pour <em>prévenir</em> les toxicités — pas pour les rattraper. &nbsp;➜ <em>Urgences oncologiques &amp; toxicités</em>.</div>
+        </div>
+
+        <div id="potx3" style="display:none;margin-top:14px;">
+        <div class="key-fact blue" style="margin-top:4px;">🔬 <strong>Mécanisme.</strong> Les <strong>inhibiteurs de checkpoints</strong> lèvent certains freins immunitaires — <strong>PD-1</strong>, <strong>PD-L1</strong>, <strong>CTLA-4</strong> — ce qui permet l&#39;<strong>activation et la prolifération des lymphocytes T</strong>.</div>
+        <div class="key-fact orange" style="margin-top:10px;">⚠️ <strong>Rien à voir avec la chimiothérapie.</strong> Pas de pancytopénie, pas de nausées typiques. Ce qu&#39;on surveille, c&#39;est l&#39;<strong>inflammation d&#39;un organe</strong> : peau · thyroïde · colon · foie · poumon · rein · hypophyse · cœur · système nerveux. La présentation va du <strong>léger au fatal</strong>, et elle est <strong>moins prévisible</strong> que sous chimiothérapie — les toxicités peuvent survenir <strong>même après l&#39;arrêt</strong> du traitement.</div>
+        <div class="key-fact red" style="margin-top:10px;">🎯 <strong>« Une diarrhée sous immunothérapie n&#39;est pas juste une diarrhée jusqu&#39;à preuve du contraire. »</strong> C&#39;est le réflexe clinique à retenir de toute cette classe. <span style="font-size:11px;color:#64748b;">📚 <em>Pharmaco-oncologie, Chevrette · Asselah · Bernard, CUSM/UdeM, septembre 2026</em></span></div>
+        </div>
+
+        <div id="potx4" style="display:none;margin-top:14px;">
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:20%;">Type</th><th style="width:36%;">Cible</th><th style="width:44%;">Exemples</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Anticorps</strong></td><td>Cible <strong>extracellulaire</strong> ou membranaire</td><td>Rituximab · trastuzumab · bevacizumab · panitumumab</td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>Inhibiteurs</strong></td><td>Souvent <strong>oraux</strong>, cible <strong>intracellulaire</strong></td><td>Osimertinib · alectinib · olaparib · inavolisib</td></tr>
+            <tr><td><strong>ADC</strong></td><td>Anticorps <strong>+ charge cytotoxique</strong></td><td>Trastuzumab déruxtecan · sacituzumab govitecan</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <div class="key-fact orange" style="margin-top:10px;">😖 <strong>Les effets secondaires suivent la cible, pas la classe.</strong> Saignements · thrombose · <strong>hypertension</strong> · <strong>protéinurie</strong> · rash · réaction d&#39;hypersensibilité · <strong>retard de cicatrisation des plaies</strong>. Certaines molécules causent aussi une <strong>myélosuppression</strong>.</div>
+        <div class="key-fact ink" style="margin-top:10px;">🎯 <strong>« Actionnable » n&#39;est pas un feu vert.</strong> Un biomarqueur actionnable n&#39;est utile que si le <strong>niveau d&#39;évidence</strong>, le <strong>type tumoral</strong> et le <strong>contexte clinique</strong> justifient le traitement. &nbsp;➜ Pour les mutations actionnables par type de cancer, voir <em>Mutations ciblables</em> dans <em>Oncogènes &amp; biologie du cancer</em>.</div>
+        </div>
+
+        <div id="potx5" style="display:none;margin-top:14px;">
+        <div class="key-fact blue" style="margin-top:4px;">🔬 <strong>Le principe commun</strong> : amener les <strong>lymphocytes T du patient</strong> à attaquer les cellules cancéreuses.</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;margin-top:10px;">
+          <div style="background:#ede9fe;border-left:4px solid #6d28d9;border-radius:10px;padding:14px;"><strong style="color:#6d28d9;">🧬 CAR-T</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">Lymphocytes T <strong>modifiés</strong> pour exprimer un récepteur <strong>CAR</strong> qui reconnaît un antigène tumoral.<br>🚨 <strong>Risques majeurs</strong> : <strong>CRS</strong> (syndrome de libération des cytokines) et <strong>ICANS</strong> (neurotoxicité).</div></div>
+          <div style="background:#e8f4fd;border-left:4px solid #1d4ed8;border-radius:10px;padding:14px;"><strong style="color:#1d4ed8;">🔗 Anticorps bispécifiques</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">Une molécule <strong>relie</strong> le lymphocyte T et la cellule tumorale.<br>🚨 <strong>Risques</strong> : <strong>CRS</strong> et toxicités propres à la cible et à la molécule.</div></div>
+        </div>
+        <div class="key-fact red" style="margin-top:10px;">🏥 <strong>Ces traitements ne s&#39;improvisent pas.</strong> Ils exigent des équipes entraînées, des <strong>protocoles institutionnels</strong> et une <strong>reconnaissance rapide</strong> des complications. &nbsp;➜ CRS et ICANS sont détaillés dans <em>Urgences oncologiques &amp; toxicités</em>.</div>
+        </div>
+
+        <div id="potx6" style="display:none;margin-top:14px;">
+        <div class="key-fact red" style="margin-top:4px;">🗣️ <strong>« Je le prends à la maison, donc je n&#39;ai pas besoin d&#39;appeler pour ça… »</strong> Une phrase qui retarde la prise en charge. La voie orale change la logistique, <strong>pas la gravité potentielle</strong> des toxicités.</div>
+        <div style="font-size:12px;font-weight:800;color:#b45309;margin-top:18px;letter-spacing:.4px;">🔍 CE QUI DEVIENT CENTRAL DÈS QU&#39;UN TRAITEMENT SE PREND À LA MAISON</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:10px;">
+          <div style="background:#fff3cd;border-left:4px solid #d35400;border-radius:10px;padding:14px;"><strong style="color:#d35400;">💊 Prise réelle</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;"><strong>Pas seulement prescrite.</strong></div></div>
+          <div style="background:#ede9fe;border-left:4px solid #6d28d9;border-radius:10px;padding:14px;"><strong style="color:#6d28d9;">⚗️ Interactions</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">Médicaments et <strong>suppléments</strong>.</div></div>
+          <div style="background:#f0fdf4;border-left:4px solid #15803d;border-radius:10px;padding:14px;"><strong style="color:#15803d;">🍽️ Consignes</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;"><strong>Repas</strong> et horaires.</div></div>
+          <div style="background:#fce4ec;border-left:4px solid #c0392b;border-radius:10px;padding:14px;"><strong style="color:#c0392b;">📞 Appel précoce</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;"><strong>Dès la toxicité</strong>, pas après.</div></div>
+        </div>
+        <div class="key-fact ink" style="margin-top:10px;">🎯 <strong>Le réflexe IPS.</strong> Toujours demander <strong>comment la personne prend réellement le médicament</strong>, et non comment elle <em>devrait</em> le prendre. <span style="font-size:11px;color:#64748b;">📚 <em>Pharmaco-oncologie, Chevrette · Asselah · Bernard, CUSM/UdeM, septembre 2026</em></span></div>
+        </div>
+
+      </div>
+      <div class="block rx" style="margin-top:14px;border-left-color:#b45309;">
+        <div class="block-title" id="po-8"><span class="tag">📐 Cycle, dose, voie — calculer et ajuster</span></div>
+        <div class="key-fact ink" style="margin-top:10px;">🗣️ <strong>Parler le même langage que l&#39;équipe.</strong> Un <em>traitement</em> n&#39;est pas synonyme d&#39;un <em>cycle</em> : un cycle peut contenir <strong>plusieurs doses et plusieurs molécules</strong> — par exemple de l&#39;immunothérapie au jour 1, accompagnée de chimiothérapie aux jours 1 et 8. <span style="font-size:11px;color:#64748b;">📚 <em>Pharmaco-oncologie, Chevrette · Asselah · Bernard, CUSM/UdeM, septembre 2026</em></span></div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;margin-top:10px;">
+          <div style="background:#e8f4fd;border-left:4px solid #1d4ed8;border-radius:10px;padding:14px;"><strong style="color:#1d4ed8;">🔄 Cycle</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">Période planifiée comprenant <strong>une ou plusieurs administrations</strong> puis une <strong>phase de récupération</strong>.<br>Cycle de <strong>14, 21 ou 28 jours</strong> · les IV sont souvent regroupés sur un ou plusieurs jours (ex. <strong>jours 1, 8, 15</strong>).<br>Oral : cycle de 21 jours avec prise <strong>14 jours sur 21</strong>, ou tous les jours (ex. hormonothérapie).</div></div>
+          <div style="background:#ede9fe;border-left:4px solid #6d28d9;border-radius:10px;padding:14px;"><strong style="color:#6d28d9;">⚖️ Dose</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;"><strong>Fixe</strong> · <strong>mg/kg</strong> · <strong>mg/m²</strong> · ou selon une <strong>formule pharmacocinétique</strong>.<br>Le calcul dépend du <strong>protocole</strong>.</div></div>
+          <div style="background:#f0fdf4;border-left:4px solid #15803d;border-radius:10px;padding:14px;"><strong style="color:#15803d;">💉 Voie</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;"><strong>IV</strong> · <strong>SC</strong> · <strong>PO</strong>.<br>⚠️ La voie change la <strong>logistique</strong>, pas la gravité potentielle des toxicités.</div></div>
+        </div>
+        <div style="font-size:12px;font-weight:800;color:#0369a1;margin-top:18px;letter-spacing:.4px;">🧮 COMMENT ON CALCULE LES DOSES — PAR CLASSE</div>
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:26%;">Classe</th><th style="width:74%;">Base du calcul</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Chimiothérapie</strong></td><td><strong>Surface corporelle (mg/m²)</strong> · <strong>poids (mg/kg)</strong> · dose fixe · <strong>pharmacocinétique</strong> (carboplatine)</td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>Immunothérapie</strong></td><td><strong>Poids (mg/kg)</strong> ou <strong>dose fixe</strong></td></tr>
+            <tr><td><strong>Thérapie ciblée</strong></td><td><strong>Poids (mg/kg)</strong>, <strong>surface corporelle</strong> ou <strong>dose fixe</strong></td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>Thérapie endocrine</strong></td><td><strong>Dose fixe</strong></td></tr>
+          </tbody>
+        </table>
+        </div>
+        <div class="key-fact red" style="margin-top:10px;">⚖️ <strong>Poids et taille sont primordiaux en oncologie.</strong> Ce ne sont pas des données administratives : ce sont des <strong>variables de dose</strong>. Une pesée négligée fausse le traitement.</div>
+        <div style="font-size:12px;font-weight:800;color:#d35400;margin-top:18px;letter-spacing:.4px;">🔧 QUAND AJUSTE-T-ON UNE DOSE?</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin-top:10px;">
+          <div style="background:#fce4ec;border-left:4px solid #c0392b;border-radius:10px;padding:14px;"><strong style="color:#c0392b;">😖 Toxicité</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">Clinique ou biologique</div></div>
+          <div style="background:#e8f4fd;border-left:4px solid #1d4ed8;border-radius:10px;padding:14px;"><strong style="color:#1d4ed8;">🫘 Rein / foie</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">Fonction modifiée</div></div>
+          <div style="background:#f0fdf4;border-left:4px solid #15803d;border-radius:10px;padding:14px;"><strong style="color:#15803d;">⚖️ Poids</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">Variation significative</div></div>
+          <div style="background:#ede9fe;border-left:4px solid #6d28d9;border-radius:10px;padding:14px;"><strong style="color:#6d28d9;">⚗️ Interactions</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">Nouvelle médication</div></div>
+          <div style="background:#fff3cd;border-left:4px solid #d35400;border-radius:10px;padding:14px;"><strong style="color:#d35400;">🎯 Objectif</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">Curatif vs palliatif</div></div>
+        </div>
+        <div class="key-fact orange" style="margin-top:10px;">🚩 <strong>Comment on ajuste — et surtout comment on n&#39;ajuste pas.</strong> La décision se prend en combinant <strong>le protocole de la molécule</strong>, <strong>le grade de toxicité</strong> et <strong>le contexte du patient</strong>. <strong>Ne jamais « bricoler » un ajustement</strong> : se référer aux outils en place — p. ex. le <strong>GEOQ</strong> — au protocole documenté, et au <strong>pharmacien</strong> au besoin. <span style="font-size:11px;color:#64748b;">📚 <em>Pharmaco-oncologie, Chevrette · Asselah · Bernard, CUSM/UdeM, septembre 2026</em></span></div>
+      </div>
+      <div class="block para" style="margin-top:14px;border-left-color:#15803d;">
+        <div class="block-title" id="po-9"><span class="tag">📈 Savoir si le traitement fonctionne</span></div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;margin-top:10px;">
+          <div style="background:#e8f4fd;border-left:4px solid #1d4ed8;border-radius:10px;padding:14px;"><strong style="color:#1d4ed8;">🩺 Clinique</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">Douleur · poids · énergie · <strong>performance</strong> · masses <strong>palpables</strong> · nouveaux symptômes.<br><em>Ex. masse au sein palpée en cours de traitement néoadjuvant.</em></div></div>
+          <div style="background:#ede9fe;border-left:4px solid #6d28d9;border-radius:10px;padding:14px;"><strong style="color:#6d28d9;">🧪 Biologie</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">FSC · fonctions d&#39;organes · <strong>marqueurs tumoraux</strong> pertinents · parfois <strong>ADN tumoral circulant</strong>.<br><em>CA 19-9 et CEA</em> — pancréas, voies biliaires, côlon · <em>AFP</em> — testiculaire.</div></div>
+          <div style="background:#f0fdf4;border-left:4px solid #15803d;border-radius:10px;padding:14px;"><strong style="color:#15803d;">📷 Imagerie</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;"><strong>CT</strong> · <strong>IRM</strong> · <strong>TEP</strong> selon le cancer et le contexte.<br>Réponse <strong>complète</strong> · <strong>partielle</strong> (ou mixte) · <strong>stable</strong> · <strong>progression</strong>.</div></div>
+        </div>
+        <div class="key-fact red" style="margin-top:10px;">🎯 <strong>Le critère que l&#39;imagerie ne mesure pas.</strong> La meilleure réponse radiologique ne suffit pas si <strong>la personne ne peut plus vivre avec le traitement</strong>. Une réponse partielle bien tolérée vaut mieux qu&#39;une réponse complète au prix de l&#39;autonomie. <span style="font-size:11px;color:#64748b;">📚 <em>Pharmaco-oncologie, Chevrette · Asselah · Bernard, CUSM/UdeM, septembre 2026</em></span></div>
+      </div>
+      <div class="block def" style="margin-top:14px;border-left-color:#0f766e;">
+        <div class="block-title" id="po-10"><span class="tag">🔬 Études cliniques et accès au Québec</span></div>
+        <div class="key-fact ink" style="margin-top:10px;">🎯 <strong>Une étude clinique n&#39;est pas « le dernier recours ».</strong> Elle peut être une <strong>stratégie thérapeutique dès le début</strong> du parcours — encore faut-il y penser au bon moment, c&#39;est-à-dire avant d&#39;avoir épuisé les lignes. <span style="font-size:11px;color:#64748b;">📚 <em>Pharmaco-oncologie, Chevrette · Asselah · Bernard, CUSM/UdeM, septembre 2026</em></span></div>
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:20%;">Phase</th><th style="width:80%;">Ce qu&#39;elle cherche</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Phase I</strong></td><td><strong>Sécurité</strong> · <strong>dose</strong> · pharmacologie</td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>Phase II</strong></td><td><strong>Activité clinique</strong></td></tr>
+            <tr><td><strong>Phase III</strong></td><td><strong>Comparaison au standard</strong></td></tr>
+          </tbody>
+        </table>
+        </div>
+        <div style="font-size:12px;font-weight:800;color:#15803d;margin-top:18px;letter-spacing:.4px;">🍁 LE PARCOURS RÉGLEMENTAIRE, ET LES PORTES DE CÔTÉ</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-top:10px;">
+          <div style="background:#fce4ec;border-left:4px solid #c0392b;border-radius:10px;padding:14px;"><strong style="color:#c0392b;">🇨🇦 Santé Canada</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">Autorise la <strong>mise en marché</strong>.</div></div>
+          <div style="background:#e8f4fd;border-left:4px solid #1d4ed8;border-radius:10px;padding:14px;"><strong style="color:#1d4ed8;">⚜️ INESSS</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">Au Québec, évalue notamment la <strong>valeur thérapeutique</strong> et la <strong>pertinence du remboursement</strong>.</div></div>
+          <div style="background:#f0fdf4;border-left:4px solid #15803d;border-radius:10px;padding:14px;"><strong style="color:#15803d;">🚪 Autres voies d&#39;accès</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;"><strong>Programme d&#39;accès spécial</strong> · <strong>médicament d&#39;exception</strong> · <strong>patient d&#39;exception</strong> — selon les critères applicables.</div></div>
+        </div>
+        <div class="key-fact cream" style="margin-top:10px;">🎯 <strong>Pourquoi cela concerne directement l&#39;IPS.</strong> Une molécule autorisée par Santé Canada n&#39;est pas pour autant <strong>payée</strong>. L&#39;écart entre les deux — et les formulaires qui le franchissent — est souvent ce qui décide si la personne reçoit réellement le traitement.</div>
+      </div>
+      <div class="block clin" style="margin-top:14px;border-left-color:#0f766e;">
+        <div class="block-title" id="po-11"><span class="tag">🗂️ Trois cas cliniques — ce qui a vraiment décidé</span></div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;">
+          <button data-panel="pocas0" onclick="showPanel('pocas','pocas0',4)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#0f766e;color:#fff;">⚖️ Ce qui a décidé</button>
+          <button data-panel="pocas1" onclick="showPanel('pocas','pocas1',4)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">🎀 Cas 1 — sein</button>
+          <button data-panel="pocas2" onclick="showPanel('pocas','pocas2',4)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">🩸 Cas 2 — côlon</button>
+          <button data-panel="pocas3" onclick="showPanel('pocas','pocas3',4)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">🫁 Cas 3 — poumon</button>
+        </div>
+
+        <div id="pocas0" style="display:block;margin-top:14px;">
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:14%;">Cas</th><th style="width:30%;">Le résultat déterminant</th><th style="width:56%;">Ce qu&#39;il a changé</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Sein</strong></td><td>ER/PR+ · HER2− · <strong>faible risque</strong></td><td>→ hormonothérapie + radiothérapie<br>→ <strong>pas de chimiothérapie</strong></td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>Côlon</strong></td><td><strong>MSI-H / dMMR</strong></td><td>→ <strong>immunothérapie seule</strong> possible en 1<sup>re</sup> ligne métastatique</td></tr>
+            <tr><td><strong>Poumon</strong></td><td><strong>Fusion ALK</strong></td><td>→ <strong>thérapie ciblée seule</strong> en 1<sup>re</sup> ligne<br>→ le <strong>PD-L1 ne change pas la priorité</strong></td></tr>
+          </tbody>
+        </table>
+        </div>
+        <div class="key-fact ink" style="margin-top:10px;">🎯 <strong>Le message des trois cas.</strong> La pathologie ne sert pas seulement à <em>nommer</em> le cancer : elle peut <strong>supprimer la chimiothérapie</strong>, <strong>sélectionner l&#39;immunothérapie</strong> ou <strong>imposer un traitement ciblé</strong>. C&#39;est pourquoi on ne prescrit pas avant d&#39;avoir lu le rapport. <span style="font-size:11px;color:#64748b;">📚 <em>Pharmaco-oncologie, Chevrette · Asselah · Bernard, CUSM/UdeM, septembre 2026</em></span></div>
+        </div>
+
+        <div id="pocas1" style="display:none;margin-top:14px;">
+        <div class="key-fact blue" style="margin-top:4px;">🗣️ <strong>« Le cancer est retiré. Pourquoi faudrait-il encore me traiter? »</strong><br>Femme de <strong>58 ans</strong>, ménopausée, <strong>ECOG 0</strong>. Mammographie → <strong>tumorectomie + ganglion sentinelle</strong>.</div>
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:24%;"></th><th style="width:76%;">Ce que le rapport dit</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Histologie</strong></td><td>Carcinome canalaire infiltrant <strong>1,4 cm</strong>, <strong>grade 1</strong>. Marges saines. <strong>0/2 ganglions</strong>.</td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>Biomarqueurs</strong></td><td><strong>ER 95 %</strong> · <strong>PR 80 %</strong> · <strong>HER2 0</strong> · <strong>Ki-67 8 %</strong> · <strong>Oncotype DX 9</strong> (bas, échelle 0-25).</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <div style="font-size:12px;font-weight:800;color:#15803d;margin-top:18px;letter-spacing:.4px;">✅ LA RÉPONSE — TRAITER LE RISQUE, PAS L&#39;ANXIÉTÉ</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-top:10px;">
+          <div style="background:#e8f4fd;border-left:4px solid #1d4ed8;border-radius:10px;padding:14px;"><strong style="color:#1d4ed8;">☢️ Radiothérapie</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">Radiothérapie <strong>adjuvante du sein</strong> après chirurgie conservatrice, selon le plan de radio-oncologie.</div></div>
+          <div style="background:#ede9fe;border-left:4px solid #6d28d9;border-radius:10px;padding:14px;"><strong style="color:#6d28d9;">💊 Hormonothérapie</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;"><strong>Inhibiteur de l&#39;aromatase</strong> — p. ex. <strong>létrozole 2,5 mg PO die</strong> chez cette patiente ménopausée.</div></div>
+          <div style="background:#f0fdf4;border-left:4px solid #15803d;border-radius:10px;padding:14px;"><strong style="color:#15803d;">⛔ Pas de chimiothérapie</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">Tumeur <strong>N0</strong>, <strong>HR+/HER2−</strong>, faible risque clinique et <strong>score de récidive très bas</strong> : aucun argument pour en ajouter.</div></div>
+        </div>
+        <div class="key-fact cream" style="margin-top:10px;">🛡️ <strong>Ce que l&#39;IPS surveille ensuite</strong> : adhérence · <strong>arthralgies</strong> · symptômes vasomoteurs · <strong>DEXA</strong> et santé osseuse · information sur la radiothérapie.</div>
+        </div>
+
+        <div id="pocas2" style="display:none;margin-top:14px;">
+        <div class="key-fact blue" style="margin-top:4px;">🗣️ <strong>« J&#39;ai des métastases au foie. Vous êtes sûr qu&#39;une seule immunothérapie suffit? »</strong><br>Homme de <strong>64 ans</strong>, <strong>ECOG 1</strong>.</div>
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:24%;"></th><th style="width:76%;">Ce que le rapport dit</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Biopsie</strong></td><td>Adénocarcinome du <strong>côlon ascendant</strong>, modérément différencié.</td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>Stade</strong></td><td><strong>Métastases hépatiques multiples.</strong></td></tr>
+            <tr><td><strong>Biomarqueur</strong></td><td>IHC : <strong>perte MSH2/MSH6</strong> → <strong>MSI-H / dMMR</strong>.</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <div style="font-size:12px;font-weight:800;color:#15803d;margin-top:18px;letter-spacing:.4px;">✅ LA RÉPONSE — ICI, LE BIOMARQUEUR CHANGE TOUTE LA 1<sup>RE</sup> LIGNE</div>
+        <div class="key-fact green" style="margin-top:10px;">💊 <strong>Pembrolizumab en monothérapie</strong> — option validée de <strong>première ligne</strong> pour un cancer colorectal <strong>non résécable ou métastatique MSI-H / dMMR</strong>.<br>Dose usuelle : <strong>200 mg IV q3 semaines</strong> ou <strong>400 mg IV q6 semaines</strong> selon la monographie et le protocole.</div>
+        <div class="key-fact blue" style="margin-top:10px;">🔬 <strong>Pourquoi.</strong> Le phénotype <strong>dMMR/MSI-H</strong> prédit une sensibilité importante aux inhibiteurs de checkpoints — l&#39;immunothérapie peut donc <strong>remplacer la chimiothérapie initiale</strong>, et non s&#39;y ajouter.</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;margin-top:10px;">
+          <div style="background:#fff3cd;border-left:4px solid #d35400;border-radius:10px;padding:14px;"><strong style="color:#d35400;">📅 Surveillance</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">Rash · <strong>diarrhée/colite</strong> · thyroïde · foie · poumon · rein · autres toxicités immunomédiées.</div></div>
+          <div style="background:#ede9fe;border-left:4px solid #6d28d9;border-radius:10px;padding:14px;"><strong style="color:#6d28d9;">🧬 Génétique</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;"><strong>Perte MSH2/MSH6</strong> → penser au <strong>syndrome de Lynch</strong> et référer en génétique.</div></div>
+        </div>
+        <div class="key-fact ink" style="margin-top:10px;">🎯 <strong>La question à se poser devant ce cas</strong> : quel résultat de pathologie a permis d&#39;<strong>éviter</strong> une chimiothérapie initiale?</div>
+        </div>
+
+        <div id="pocas3" style="display:none;margin-top:14px;">
+        <div class="key-fact blue" style="margin-top:4px;">🗣️ <strong>« Mon PD-L1 est à 70 %. Pourquoi vous ne me donnez pas d&#39;immunothérapie? »</strong><br>Femme de <strong>49 ans</strong>, <strong>jamais fumé</strong>, <strong>ECOG 1</strong>.</div>
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:24%;"></th><th style="width:76%;">Ce que le rapport dit</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Biopsie</strong></td><td>Adénocarcinome pulmonaire, <strong>TTF-1 positif</strong>.</td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>Stade</strong></td><td>Métastases <strong>osseuses</strong> et petite lésion <strong>cérébrale asymptomatique</strong>.</td></tr>
+            <tr><td><strong>NGS</strong></td><td><strong>Fusion EML4–ALK positive</strong>. <strong>PD-L1 : 70 %</strong>.</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <div style="font-size:12px;font-weight:800;color:#15803d;margin-top:18px;letter-spacing:.4px;">✅ LA RÉPONSE — LE DRIVER ONCOGÉNIQUE PASSE DEVANT LE PD-L1</div>
+        <div class="key-fact green" style="margin-top:10px;">💊 <strong>ALK-TKI de nouvelle génération en monothérapie</strong>, en première ligne — p. ex. <strong>alectinib 600 mg PO BID avec nourriture</strong>, selon la monographie et le protocole local.</div>
+        <div class="key-fact blue" style="margin-top:10px;">🔬 <strong>Pourquoi pas l&#39;immunothérapie seule?</strong> Malgré un PD-L1 élevé, la présence d&#39;un <strong>driver ALK</strong> oriente d&#39;abord vers la thérapie ciblée : les ALK-TKI ont une activité systémique <strong>et intracrânienne</strong> importante — ce qui compte ici, avec une lésion cérébrale.</div>
+        <div class="key-fact orange" style="margin-top:10px;">📅 <strong>Surveillance propre à l&#39;alectinib</strong> : fonction <strong>hépatique</strong> · <strong>CK</strong> si symptômes musculaires · <strong>bradycardie</strong> · constipation · <strong>triglycérides</strong> avant et périodiquement.<br>🆕 <strong>Santé Canada a publié en 2026 une alerte sur l&#39;hypertriglycéridémie sévère</strong> avec l&#39;alectinib — d&#39;où les triglycérides dans la surveillance.</div>
+        <div class="key-fact red" style="margin-top:10px;">🎯 <strong>La leçon pratique.</strong> <strong>Attendre les résultats moléculaires</strong> avant de lancer une immunothérapie dans un adénocarcinome pulmonaire non épidermoïde <strong>quand un driver est plausible</strong> — ici : femme jeune, jamais fumeuse. <span style="font-size:11px;color:#64748b;">📚 <em>Pharmaco-oncologie, Chevrette · Asselah · Bernard, CUSM/UdeM, septembre 2026</em></span></div>
+        </div>
+
+      </div>
+      <div class="block flag" style="margin-top:14px;border-left-color:#be123c;">
+        <div class="block-title" id="po-12"><span class="tag">📚 Où vérifier — les ressources en cancérologie</span></div>
+        <div class="key-fact ink" style="margin-top:10px;">🎯 <strong>« Les meilleures IPS ne savent pas tout : elles savent où vérifier. »</strong> Mieux vaut savoir <strong>trouver</strong> une information fiable que mémoriser une dose qui changera avec le protocole ou l&#39;indication. <span style="font-size:11px;color:#64748b;">📚 <em>Pharmaco-oncologie, Chevrette · Asselah · Bernard, CUSM/UdeM, septembre 2026</em></span></div>
+        <div style="overflow-x:auto;margin-top:12px;">
+        <table style="font-size:12px;">
+          <thead><tr><th style="width:20%;">Ressource</th><th style="width:44%;">Ce qu&#39;on y trouve</th><th style="width:36%;">Accès</th></tr></thead>
+          <tbody>
+            <tr><td><strong>GEOQ</strong></td><td>Protocoles, conseils, ordonnances et outils <strong>québécois</strong></td><td>Gratuit avec inscription · <em>geoq.info</em></td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>OnCible</strong></td><td>Toxicités des <strong>thérapies ciblées</strong> et des <strong>immunothérapies</strong></td><td>Gratuit avec inscription · <em>ontargetonco.com/fr</em></td></tr>
+            <tr><td><strong>INESSS</strong></td><td>Guides d&#39;usage optimal, protocoles et évaluations québécoises</td><td>Gratuit · <em>inesss.qc.ca</em></td></tr>
+            <tr style="background:#f8f9fa;"><td><strong>BC Cancer</strong> · <strong>CCO</strong></td><td>Protocoles, monographies et conseils de prise en charge</td><td>Gratuit · <em>bccancer.bc.ca</em> · <em>cancercareontario.ca</em></td></tr>
+          </tbody>
+        </table>
+        </div>
+        <div style="font-size:12px;font-weight:800;color:#be123c;margin-top:18px;letter-spacing:.4px;">🧭 SIX IDÉES À GARDER</div>
+        <div class="criteria-list" style="margin-top:10px;">
+          <div class="criteria-item"><div class="criteria-num blue">1</div><span><strong>Pathologie + stade + biomarqueurs</strong> = la base de la décision.</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">2</div><span>Toujours connaître l&#39;<strong>objectif</strong> : guérir, réduire le risque ou contrôler.</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">3</div><span>Le <strong>patient compte autant que la tumeur</strong> : ECOG, organes, valeurs, logistique.</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">4</div><span>Le <strong>type de traitement prédit les toxicités</strong> à rechercher.</span></div>
+          <div class="criteria-item"><div class="criteria-num blue">5</div><span><strong>Grader avant d&#39;agir</strong> : poursuivre, suspendre, réduire, traiter ou hospitaliser.</span></div>
+          <div class="criteria-item"><div class="criteria-num red">!</div><span>En cas de doute : <strong>protocole local + pharmacien + équipe d&#39;oncologie</strong>.</span></div>
+        </div>
+      </div>
+    </div>
+
 <div class="section" id="sec-paraneoplasiques">
       <div class="section-header">
         <div class="section-accent" style="background:#7f1d1d">🔬</div>
@@ -58909,7 +59335,7 @@ const SECTION_ORDER = [
   // Santé mentale
   'antidepresseurs','stabilisateurs','antipsychotiques','hypnotiques','tdah','tdc','anxiete','bipolaire','schizophrenie','toc-tspt',
   // Oncologie
-  'oncogenes','paraneoplasiques','urgences-onco','cancer-sein',
+  'oncogenes','pharmaco-onco','paraneoplasiques','urgences-onco','cancer-sein',
   // Gynécologie
   'gyneco-anatomie','cycles-hormonaux','contraception','sua','cancer-col','cancer-endo','menopause','survivance',
   // Prévention & Dépistage
@@ -59758,7 +60184,7 @@ function showPanel(prefix,activeId,count){
     var el=document.getElementById(prefix+i);
     if(el) el.style.display=(prefix+i===activeId)?'block':'none';
   }
-  var colorMap={'tx':'#0a7a4e','atx':'#065f46','vp':'#1e7a6b','mii-tx':'#0a7a4e','mii-cr':'#0a7a4e','pk-tx':'#7c3aed','hta-tx':'#0a7a4e','ugdd':'#0369a1','frg':'#b45309','spx':'#7c3aed','rds':'#0369a1','gu':'#0f766e','lax':'#0a7a4e','somdx':'#0e7490','mpg':'#1e40af','cde':'#b91c1c','chp':'#0f766e','grl':'#374151','tnctyp':'#6d28d9','evcog':'#b45309','dlrx':'#c0392b','htorx':'#0f766e','miidx':'#0e7490','tvt':'#7c3aed','tsfr':'#4338ca','tsfa':'#0f766e','tsfc':'#c2410c','tsfp':'#b91c1c','tsfg':'#374151','nutc':'#6d28d9','ndnt':'#b45309','nalb':'#b91c1c','nsup':'#0a7a4e','nsri':'#b45309','mietio':'#6d28d9','ngac':'#15803d','n3min':'#1d4ed8','miisv':'#0891b2','dalg':'#0369a1','anetx':'#0a7a4e','aneb':'#6d28d9','mimei':'#7c3aed','miiact':'#c0392b','tncrx':'#15803d','scpd':'#c0392b','beers':'#b45309','pkpd':'#6d28d9','drx':'#0a7a4e','bcat':'#334155','sstp':'#c0392b','sstt':'#15803d'};var col=colorMap[prefix]||'#c0392b';
+  var colorMap={'tx':'#0a7a4e','atx':'#065f46','vp':'#1e7a6b','mii-tx':'#0a7a4e','mii-cr':'#0a7a4e','pk-tx':'#7c3aed','hta-tx':'#0a7a4e','ugdd':'#0369a1','frg':'#b45309','spx':'#7c3aed','rds':'#0369a1','gu':'#0f766e','lax':'#0a7a4e','somdx':'#0e7490','mpg':'#1e40af','cde':'#b91c1c','chp':'#0f766e','grl':'#374151','tnctyp':'#6d28d9','evcog':'#b45309','dlrx':'#c0392b','htorx':'#0f766e','miidx':'#0e7490','tvt':'#7c3aed','tsfr':'#4338ca','tsfa':'#0f766e','tsfc':'#c2410c','tsfp':'#b91c1c','tsfg':'#374151','nutc':'#6d28d9','ndnt':'#b45309','nalb':'#b91c1c','nsup':'#0a7a4e','nsri':'#b45309','mietio':'#6d28d9','ngac':'#15803d','n3min':'#1d4ed8','miisv':'#0891b2','dalg':'#0369a1','anetx':'#0a7a4e','aneb':'#6d28d9','mimei':'#7c3aed','miiact':'#c0392b','tncrx':'#15803d','scpd':'#c0392b','beers':'#b45309','pkpd':'#6d28d9','drx':'#0a7a4e','bcat':'#334155','sstp':'#c0392b','sstt':'#15803d','potx':'#be123c','pocas':'#0f766e'};var col=colorMap[prefix]||'#c0392b';
   for(var k=0;k<count;k++){
     var b=document.querySelector('[data-panel="'+prefix+k+'"]');
     if(b){
