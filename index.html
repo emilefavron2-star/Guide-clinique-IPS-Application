@@ -8352,26 +8352,134 @@ MCAS stable</div>
 
       <!-- PILLS NAV IC -->
       <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;">
-        <button onclick="goToBlock('ic-electro')" style="background:#7C3AED;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">⚡ Électrophysiologie</button>
         <button onclick="goToBlock('ic-1')" style="background:#374151;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">📌 Définition &amp; Épidémio</button>
         <button onclick="goToBlock('ic-1b')" style="background:#0369a1;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">🔎 Classification &amp; Dx</button>
-        <button onclick="goToBlock('ic-2')" style="background:#c0392b;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🔬 Bases physiologiques &amp; Méca…</button>
         <button onclick="goToBlock('ic-3')" style="background:#0f766e;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧬 Physiopathologie</button>
-        <button onclick="goToBlock('ic-3b')" style="background:#6d28d9;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧬 ICFEr (systolique) — Mécanisme…</button>
-        <button onclick="goToBlock('ic-3c')" style="background:#15803d;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🧬 ICFEp (diastolique) — Mécanisme…</button>
+        <button onclick="goToBlock('ic-electro')" style="background:#7C3AED;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">⚡ Électrophysiologie</button>
         <button onclick="goToBlock('ic-3-eti')" style="background:#6d28d9;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">🧬 Étiologies</button>
         <button onclick="goToBlock('ic-4')" style="background:#0284c7;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">🩺 Évaluation initiale — Anamnèse…</button>
         <button onclick="goToBlock('ic-5')" style="background:#b45309;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">🧪 Bilan &amp; NT-proBNP</button>
         <button onclick="goToBlock('ic-6-algo')" style="background:#0a7a4e;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">⚙️ Algo ICFEr vs ICFEp</button>
         <button onclick="goToBlock('ic-6')" style="background:#0a7a4e;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">💊 Quadruple thérapie</button>
-        <button onclick="goToBlock('ic-6b')" style="background:#0a7a4e;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">🟢 4 Principes ICFEp</button>
+        <button onclick="goToBlock('ic-6b')" style="background:#0a7a4e;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">💜 ICFEp</button>
         <button onclick="goToBlock('ic-10')" style="background:#0a7a4e;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">🥗 Non-pharmacologique</button>
         <button onclick="goToBlock('ic-8')" style="background:#7b3fa0;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">⚡ Hyperkaliémie</button>
         <button onclick="goToBlock('ic-devices')" style="background:#0369a1;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;">&#9889; Dispositifs Implantables…</button>
         <button onclick="goToBlock('ic-9')" style="background:#c0392b;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">🚨 SADMANS &amp; Red Flags</button>
-        <button onclick="goToBlock('ic-icfep')" style="background:#DB2777;color:#fff;border:none;border-radius:20px;padding:6px 14px;cursor:pointer;font-size:12px;">💜 ICFEp</button>
       </div>
       <!-- ═══ ÉLECTROPHYSIOLOGIE INTERACTIVE ═══ -->
+
+      <!-- ═══ 1. DÉFINITION & ÉPIDÉMIOLOGIE ═══ -->
+      <div class="block def" id="ic-1" style="margin-top:14px;">
+        <div class="block-title"><span class="tag">📌 Définition &amp; Épidémiologie</span></div>
+        <div class="key-fact blue" style="margin-bottom:12px;"><strong>Définition universelle :</strong> Symptômes et/ou signes d&apos;IC causés par une anomalie cardiaque structurelle et/ou fonctionnelle, corroborée par un taux élevé de peptide natriurétique ou une preuve objective de congestion.</div>
+        <div class="stat-row">
+          <div class="stat-card blue"><div class="stat-num">750 000</div><div class="stat-label">Canadiens vivent avec l&apos;IC</div></div>
+          <div class="stat-card ink"><div class="stat-num">1 / 5</div><div class="stat-label">&gt; 40 ans développera l&apos;IC</div></div>
+          <div class="stat-card red"><div class="stat-num">22 000</div><div class="stat-label">décès/an au Canada</div></div>
+          <div class="stat-card yellow"><div class="stat-num">~50 %</div><div class="stat-label">n&apos;atteignent pas 5 ans post-Dx</div></div>
+        </div>
+        <table style="margin-top:12px;">
+          <thead><tr><th>Donnée</th><th>Valeur</th></tr></thead>
+          <tbody>
+            <tr><td>Hospitalisations (65+)</td><td>Cause <strong>#1</strong> d&apos;hospitalisation</td></tr>
+            <tr><td>Coût annuel projeté (2030)</td><td>≈ 2,8 milliards $/an en soins de santé</td></tr>
+            <tr><td>Québécois atteints</td><td>≈ 160 000</td></tr>
+            <tr><td>Patients prenant les Rx recommandés</td><td><strong>&lt; 70 %</strong></td></tr>
+            <tr><td>Patients atteignant les doses cibles</td><td><strong>&lt; 30 %</strong></td></tr>
+            <tr><td>Réadmission à 30 jours</td><td>20–30 % (inchangé depuis 10 ans)</td></tr>
+            <tr><td>Suivis en clinique spécialisée</td><td>15 % (Canada) · 30 % (Québec)</td></tr>
+          </tbody>
+        </table>
+        <div class="key-fact red" style="margin-top:10px;font-size:13px;">⚠️ <strong>Défi clinique IPS :</strong> 22 000 décès/an = cancers du sein + colorectal + prostate + pancréas <strong>combinés</strong>. Priorité → initier les 4 agents avant d&apos;optimiser les doses.</div>
+      </div>
+
+      <!-- ═══ 1b. CLASSIFICATION & DIAGNOSTIC ═══ -->
+      <div class="block para" id="ic-1b" style="margin-top:14px;">
+        <div class="block-title"><span class="tag">🔎 Classification &amp; Diagnostic</span></div>
+
+        <div class="content-text" style="font-weight:600;margin-bottom:6px;">Classification selon la FEVG</div>
+        <table style="margin-bottom:12px;">
+          <thead><tr><th>Type</th><th>FEVG</th><th>Acronyme</th><th>Caractéristique</th></tr></thead>
+          <tbody>
+            <tr><td><strong>IC à FEVG réduite</strong></td><td>≤ 40 %</td><td>ICFEr / HFrEF</td><td>Dysfonction systolique — quadruple thérapie prouvée</td></tr>
+            <tr><td><strong>IC à FEVG légèrement réduite</strong></td><td>41–49 %</td><td>ICFEmr / HFmrEF</td><td>Zone intermédiaire — traitement similaire à ICFEr</td></tr>
+            <tr><td><strong>IC à FEVG préservée</strong></td><td>≥ 50 %</td><td>ICFEp / HFpEF</td><td>Dysfonction diastolique — traiter les comorbidités</td></tr>
+          </tbody>
+        </table>
+
+        <div class="content-text" style="font-weight:600;margin-bottom:6px;">Classification NYHA — Sévérité fonctionnelle</div>
+        <table style="margin-bottom:12px;">
+          <thead><tr><th>Classe</th><th>Description</th><th>Exemple clinique</th></tr></thead>
+          <tbody>
+            <tr><td><span class="drug-badge line1">I</span></td><td>Aucune limitation</td><td>Activité ordinaire sans symptômes</td></tr>
+            <tr><td><span class="drug-badge line2">II</span></td><td>Légère limitation</td><td>Symptômes à l&apos;effort intense (escaliers, pente)</td></tr>
+            <tr><td><span class="drug-badge warn">III</span></td><td>Limitation marquée</td><td>Dyspnée à l&apos;effort modéré — marche terrain plat</td></tr>
+            <tr><td><span class="drug-badge ci">IV</span></td><td>Symptômes au repos</td><td>Incapacité totale à l&apos;effort — dyspnée au repos</td></tr>
+          </tbody>
+        </table>
+
+        <div class="content-text" style="font-weight:600;margin-bottom:6px;">Approche diagnostique</div>
+        <div class="flag-list">
+          <div class="flag-item"><span class="flag-dot blue"></span><span><strong>Symptômes :</strong> dyspnée d&apos;effort / orthopnée / DPN · œdème des MI · fatigue · distension abdominale · nycturie</span></div>
+          <div class="flag-item"><span class="flag-dot ink"></span><span><strong>Signes physiques :</strong> distension jugulaire · reflux hépato-jugulaire · B3 · crépitants pulm. · œdème · apex déplacé</span></div>
+          <div class="flag-item"><span class="flag-dot red"></span><span><strong>Confirmation biologique :</strong> NT-proBNP &gt; 125 pg/mL (ambulatoire) · seuils aiguë selon l&apos;âge</span></div>
+          <div class="flag-item"><span class="flag-dot blue"></span><span><strong>ÉTT :</strong> gold standard — FEVG, cavités, fonction diastolique, valves, PAP</span></div>
+        </div>
+        <div class="key-fact yellow" style="margin-top:8px;">Facteurs précipitants <strong>(ABCDEFGHIRST)</strong> : Anémie · Bactéries · Compliance · Drogues (AINS/CCB) · EP · Fluides · Grossesse · HTA · Ischémie · Rein · Sel · Thyroïde</div>
+      </div>
+
+      <!-- ═══ IC-2: PHYSIOLOGIE ═══ -->
+
+      <!-- ═══ IC-3: PHYSIOPATH ═══ -->
+      <div class="block clin" id="ic-3" style="margin-top:14px;">
+        <div class="block-title"><span class="tag">🧬 Physiopathologie — des paramètres au cercle vicieux</span></div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;">
+          <button data-panel="icphy0" onclick="showPanel('icphy','icphy0',4)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#1d4ed8;color:#fff;">📖 Définition et formes</button>
+          <button data-panel="icphy1" onclick="showPanel('icphy','icphy1',4)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">⚙️ Les paramètres hémodynamiques</button>
+          <button data-panel="icphy2" onclick="showPanel('icphy','icphy2',4)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">🔁 Le cercle vicieux neuro-hormonal</button>
+          <button data-panel="icphy3" onclick="showPanel('icphy','icphy3',4)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">🧬 ICFEr — le mécanisme</button>
+        </div>
+
+        <div id="icphy0" style="display:block;margin-top:14px;">
+        <div class="content-text">Incapacité du cœur à assurer un <strong>débit cardiaque</strong> suffisant aux besoins métaboliques, ou seulement au prix de <strong>pressions de remplissage élevées</strong>. Activation compensatoire neuro-hormonale → maintien du débit à court terme, mais favorise le <strong>remodelage ventriculaire</strong> et la progression.</div>
+        <div class="key-fact yellow">IC <strong>aiguë</strong> = apparition/aggravation soudaine des Sx (facteur précipitant) · IC <strong>chronique</strong> = anomalie structurelle persistante (NT-proBNP ↑ et/ou congestion objective)</div>
+        <div class="key-fact ink" style="margin-top:10px;">🎯 <strong>Ce que la définition dit, et qu&#39;on lit mal.</strong> Un débit cardiaque normal <em>obtenu au prix de pressions de remplissage élevées</em> est déjà une insuffisance cardiaque. C&#39;est pourquoi une fraction d&#39;éjection normale n&#39;exclut rien.</div>
+        </div>
+
+        <div id="icphy1" style="display:none;margin-top:14px;">
+        <div style="overflow-x:auto;margin-top:4px;">
+        <table>
+          <thead><tr><th>Paramètre</th><th>Définition</th><th>Note</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Fraction d&apos;éjection</strong></td><td>FE = (VTD − VTS) / VTD</td><td>Normale 60–70 %</td></tr>
+            <tr><td><strong>Précharge</strong></td><td>Distension du myocarde en fin de diastole</td><td>↓ déshydratation · ↑ surcharge volémique</td></tr>
+            <tr><td><strong>Post-charge</strong></td><td>Résistance contre laquelle le VG éjecte</td><td>Loi de Laplace : T = (P × r) / 2h</td></tr>
+            <tr><td><strong>Contractilité</strong></td><td>Propriété intrinsèque indépendante de pré/post-charge</td><td>↑ catécholamines · ↓ en IC avancée</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <div class="key-fact black" style="margin-top:8px;">Loi de Frank-Starling : ↑ précharge → ↑ étirement fibres → ↑ volume éjection — relation qui s&apos;épuise en IC avancée</div>
+        </div>
+
+        <div id="icphy2" style="display:none;margin-top:14px;">
+        <div style="font-size:12px;font-weight:800;color:#334155;margin-top:18px;letter-spacing:.4px;">⚙️ Mécanismes compensateurs — cercle vicieux neuro-hormonal</div>
+        <div class="flag-list">
+          <div class="flag-item"><span class="flag-dot ink"></span><span><strong>Système adrénergique :</strong> ↓ DC → ↑ sympathique → ↑ FC/contractilité/vasoconstriction → long terme : down-régulation β → ↓ réponse inotropique</span></div>
+          <div class="flag-item"><span class="flag-dot ink"></span><span><strong>SRAA :</strong> ↓ perfusion rénale → rénine → angiotensine II → vasoconstriction + aldostérone → long terme : ↑ post-charge + remodelage délétère</span></div>
+          <div class="flag-item"><span class="flag-dot blue"></span><span><strong>ADH :</strong> rétention eau → ↑ volume intravasculaire + vasoconstriction</span></div>
+          <div class="flag-item"><span class="flag-dot blue"></span><span><strong>Peptides natriurétiques (ANP/BNP) :</strong> contre-balanciers → natriurèse, vasodilatation, ↓ rénine</span></div>
+          <div class="flag-item"><span class="flag-dot red"></span><span><strong>Remodelage :</strong> concentrique (surcharge pression) vs excentrique (surcharge volume) → dilatation progressive → IC</span></div>
+        </div>
+        <div class="key-fact orange" style="margin-top:10px;">🎯 <strong>Pourquoi « compensateur » est un faux ami.</strong> Chacun de ces systèmes rend service à court terme et nuit à long terme — et c&#39;est précisément chacun d&#39;eux que la quadruple thérapie vient bloquer.</div>
+        </div>
+
+        <div id="icphy3" style="display:none;margin-top:14px;">
+        <div class="content-text"><strong>Dysfonction systolique :</strong> perte de cardiomyocytes (infarctus, toxique, infiltratif) → ↓ contractilité + dilatation (remodelage excentrique). ↓ volume éjection → activation SRAA/sympathique → aggravation remodelage + fibrose → cercle vicieux que cible la <strong>quadruple thérapie</strong>.</div>
+        <div class="key-fact cream" style="margin-top:10px;">➜ Le mécanisme de l&#39;<strong>ICFEp</strong>, très différent, est dans l&#39;encadré <em>💜 ICFEp</em>, plus bas dans cette section.</div>
+        </div>
+
+      </div>
       <div class="block def" id="ic-electro" style="margin-top:14px;">
         <div class="block-title"><span class="tag">⚡ Anatomie Cellulaire, Potentiel d'Action &amp; Couplage E-C</span></div>
         <div style="display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap;">
@@ -8546,109 +8654,12 @@ MCAS stable</div>
         </script>
       </div>
 
-      <!-- ═══ 1. DÉFINITION & ÉPIDÉMIOLOGIE ═══ -->
-      <div class="block def" id="ic-1" style="margin-top:14px;">
-        <div class="block-title"><span class="tag">📌 1. Définition &amp; Épidémiologie</span></div>
-        <div class="key-fact blue" style="margin-bottom:12px;"><strong>Définition universelle :</strong> Symptômes et/ou signes d&apos;IC causés par une anomalie cardiaque structurelle et/ou fonctionnelle, corroborée par un taux élevé de peptide natriurétique ou une preuve objective de congestion.</div>
-        <div class="stat-row">
-          <div class="stat-card blue"><div class="stat-num">750 000</div><div class="stat-label">Canadiens vivent avec l&apos;IC</div></div>
-          <div class="stat-card ink"><div class="stat-num">1 / 5</div><div class="stat-label">&gt; 40 ans développera l&apos;IC</div></div>
-          <div class="stat-card red"><div class="stat-num">22 000</div><div class="stat-label">décès/an au Canada</div></div>
-          <div class="stat-card yellow"><div class="stat-num">~50 %</div><div class="stat-label">n&apos;atteignent pas 5 ans post-Dx</div></div>
-        </div>
-        <table style="margin-top:12px;">
-          <thead><tr><th>Donnée</th><th>Valeur</th></tr></thead>
-          <tbody>
-            <tr><td>Hospitalisations (65+)</td><td>Cause <strong>#1</strong> d&apos;hospitalisation</td></tr>
-            <tr><td>Coût annuel projeté (2030)</td><td>≈ 2,8 milliards $/an en soins de santé</td></tr>
-            <tr><td>Québécois atteints</td><td>≈ 160 000</td></tr>
-            <tr><td>Patients prenant les Rx recommandés</td><td><strong>&lt; 70 %</strong></td></tr>
-            <tr><td>Patients atteignant les doses cibles</td><td><strong>&lt; 30 %</strong></td></tr>
-            <tr><td>Réadmission à 30 jours</td><td>20–30 % (inchangé depuis 10 ans)</td></tr>
-            <tr><td>Suivis en clinique spécialisée</td><td>15 % (Canada) · 30 % (Québec)</td></tr>
-          </tbody>
-        </table>
-        <div class="key-fact red" style="margin-top:10px;font-size:13px;">⚠️ <strong>Défi clinique IPS :</strong> 22 000 décès/an = cancers du sein + colorectal + prostate + pancréas <strong>combinés</strong>. Priorité → initier les 4 agents avant d&apos;optimiser les doses.</div>
-      </div>
-
-      <!-- ═══ 1b. CLASSIFICATION & DIAGNOSTIC ═══ -->
-      <div class="block para" id="ic-1b" style="margin-top:14px;">
-        <div class="block-title"><span class="tag">🔎 2. Classification &amp; Diagnostic</span></div>
-
-        <div class="content-text" style="font-weight:600;margin-bottom:6px;">Classification selon la FEVG</div>
-        <table style="margin-bottom:12px;">
-          <thead><tr><th>Type</th><th>FEVG</th><th>Acronyme</th><th>Caractéristique</th></tr></thead>
-          <tbody>
-            <tr><td><strong>IC à FEVG réduite</strong></td><td>≤ 40 %</td><td>ICFEr / HFrEF</td><td>Dysfonction systolique — quadruple thérapie prouvée</td></tr>
-            <tr><td><strong>IC à FEVG légèrement réduite</strong></td><td>41–49 %</td><td>ICFEmr / HFmrEF</td><td>Zone intermédiaire — traitement similaire à ICFEr</td></tr>
-            <tr><td><strong>IC à FEVG préservée</strong></td><td>≥ 50 %</td><td>ICFEp / HFpEF</td><td>Dysfonction diastolique — traiter les comorbidités</td></tr>
-          </tbody>
-        </table>
-
-        <div class="content-text" style="font-weight:600;margin-bottom:6px;">Classification NYHA — Sévérité fonctionnelle</div>
-        <table style="margin-bottom:12px;">
-          <thead><tr><th>Classe</th><th>Description</th><th>Exemple clinique</th></tr></thead>
-          <tbody>
-            <tr><td><span class="drug-badge line1">I</span></td><td>Aucune limitation</td><td>Activité ordinaire sans symptômes</td></tr>
-            <tr><td><span class="drug-badge line2">II</span></td><td>Légère limitation</td><td>Symptômes à l&apos;effort intense (escaliers, pente)</td></tr>
-            <tr><td><span class="drug-badge warn">III</span></td><td>Limitation marquée</td><td>Dyspnée à l&apos;effort modéré — marche terrain plat</td></tr>
-            <tr><td><span class="drug-badge ci">IV</span></td><td>Symptômes au repos</td><td>Incapacité totale à l&apos;effort — dyspnée au repos</td></tr>
-          </tbody>
-        </table>
-
-        <div class="content-text" style="font-weight:600;margin-bottom:6px;">Approche diagnostique</div>
-        <div class="flag-list">
-          <div class="flag-item"><span class="flag-dot blue"></span><span><strong>Symptômes :</strong> dyspnée d&apos;effort / orthopnée / DPN · œdème des MI · fatigue · distension abdominale · nycturie</span></div>
-          <div class="flag-item"><span class="flag-dot ink"></span><span><strong>Signes physiques :</strong> distension jugulaire · reflux hépato-jugulaire · B3 · crépitants pulm. · œdème · apex déplacé</span></div>
-          <div class="flag-item"><span class="flag-dot red"></span><span><strong>Confirmation biologique :</strong> NT-proBNP &gt; 125 pg/mL (ambulatoire) · seuils aiguë selon l&apos;âge</span></div>
-          <div class="flag-item"><span class="flag-dot blue"></span><span><strong>ÉTT :</strong> gold standard — FEVG, cavités, fonction diastolique, valves, PAP</span></div>
-        </div>
-        <div class="key-fact yellow" style="margin-top:8px;">Facteurs précipitants <strong>(ABCDEFGHIRST)</strong> : Anémie · Bactéries · Compliance · Drogues (AINS/CCB) · EP · Fluides · Grossesse · HTA · Ischémie · Rein · Sel · Thyroïde</div>
-      </div>
-
-      <!-- ═══ IC-2: PHYSIOLOGIE ═══ -->
-      <div class="block para" id="ic-2" style="margin-top:14px;border-left-color:var(--ink);">
-        <div class="block-title"><span class="tag">🔬 Bases physiologiques &amp; Mécanismes compensateurs</span></div>
-        <table>
-          <thead><tr><th>Paramètre</th><th>Définition</th><th>Note</th></tr></thead>
-          <tbody>
-            <tr><td><strong>Fraction d&apos;éjection</strong></td><td>FE = (VTD − VTS) / VTD</td><td>Normale 60–70 %</td></tr>
-            <tr><td><strong>Précharge</strong></td><td>Distension du myocarde en fin de diastole</td><td>↓ déshydratation · ↑ surcharge volémique</td></tr>
-            <tr><td><strong>Post-charge</strong></td><td>Résistance contre laquelle le VG éjecte</td><td>Loi de Laplace : T = (P × r) / 2h</td></tr>
-            <tr><td><strong>Contractilité</strong></td><td>Propriété intrinsèque indépendante de pré/post-charge</td><td>↑ catécholamines · ↓ en IC avancée</td></tr>
-          </tbody>
-        </table>
-        <div class="key-fact black" style="margin-top:8px;">Loi de Frank-Starling : ↑ précharge → ↑ étirement fibres → ↑ volume éjection — relation qui s&apos;épuise en IC avancée</div>
-        <div class="block-title" style="margin-top:14px;"><span class="tag">⚙️ Mécanismes compensateurs — cercle vicieux neuro-hormonal</span></div>
-        <div class="flag-list">
-          <div class="flag-item"><span class="flag-dot ink"></span><span><strong>Système adrénergique :</strong> ↓ DC → ↑ sympathique → ↑ FC/contractilité/vasoconstriction → long terme : down-régulation β → ↓ réponse inotropique</span></div>
-          <div class="flag-item"><span class="flag-dot ink"></span><span><strong>SRAA :</strong> ↓ perfusion rénale → rénine → angiotensine II → vasoconstriction + aldostérone → long terme : ↑ post-charge + remodelage délétère</span></div>
-          <div class="flag-item"><span class="flag-dot blue"></span><span><strong>ADH :</strong> rétention eau → ↑ volume intravasculaire + vasoconstriction</span></div>
-          <div class="flag-item"><span class="flag-dot blue"></span><span><strong>Peptides natriurétiques (ANP/BNP) :</strong> contre-balanciers → natriurèse, vasodilatation, ↓ rénine</span></div>
-          <div class="flag-item"><span class="flag-dot red"></span><span><strong>Remodelage :</strong> concentrique (surcharge pression) vs excentrique (surcharge volume) → dilatation progressive → IC</span></div>
-        </div>
-      </div>
-
-      <!-- ═══ IC-3: PHYSIOPATH ═══ -->
-      <div class="block clin" id="ic-3" style="margin-top:14px;">
-        <div class="block-title"><span class="tag">🧬 Physiopathologie</span></div>
-        <div class="content-text">Incapacité du cœur à assurer un <strong>débit cardiaque</strong> suffisant aux besoins métaboliques, ou seulement au prix de <strong>pressions de remplissage élevées</strong>. Activation compensatoire neuro-hormonale → maintien du débit à court terme, mais favorise le <strong>remodelage ventriculaire</strong> et la progression.</div>
-        <div class="key-fact yellow">IC <strong>aiguë</strong> = apparition/aggravation soudaine des Sx (facteur précipitant) · IC <strong>chronique</strong> = anomalie structurelle persistante (NT-proBNP ↑ et/ou congestion objective)</div>
-      </div>
 
       <!-- ═══ IC-3b / IC-3c: MÉCANISMES SPÉCIFIQUES ═══ -->
-      <div class="block clin" id="ic-3b" style="margin-top:14px;border-left-color:#2563eb;">
-        <div class="block-title"><span class="tag">🧬 ICFEr (systolique) — Mécanisme spécifique</span></div>
-        <div class="content-text"><strong>Dysfonction systolique :</strong> perte de cardiomyocytes (infarctus, toxique, infiltratif) → ↓ contractilité + dilatation (remodelage excentrique). ↓ volume éjection → activation SRAA/sympathique → aggravation remodelage + fibrose → cercle vicieux que cible la <strong>quadruple thérapie</strong>.</div>
-      </div>
-      <div class="block clin" id="ic-3c" style="margin-top:14px;border-left-color:var(--yellow);">
-        <div class="block-title"><span class="tag">🧬 ICFEp (diastolique) — Mécanisme spécifique</span></div>
-        <div class="content-text"><strong>Dysfonction diastolique :</strong> ↓ relaxation + ↓ compliance VG (HTA chronique, obésité, DM, vieillissement) → ↑ pressions remplissage à volume normal → congestion malgré FEVG préservée. État pro-inflammatoire systémique multi-comorbidités.</div>
-      </div>
 
       <!-- ═══ IC-3-ETI: ÉTIOLOGIES ═══ -->
       <div class="block def" id="ic-3-eti" style="margin-top:14px;">
-        <div class="block-title"><span class="tag">🧬 3. Étiologies de l&apos;IC</span></div>
+        <div class="block-title"><span class="tag">🧬 Étiologies de l&apos;IC</span></div>
         <table>
           <thead><tr><th>Catégorie</th><th>Exemples</th><th>Note clinique</th></tr></thead>
           <tbody>
@@ -8676,7 +8687,7 @@ MCAS stable</div>
 
       <!-- ═══ IC-5: BILAN NT-proBNP ═══ -->
       <div class="block para" id="ic-5" style="margin-top:14px;">
-        <div class="block-title"><span class="tag">🧪 3. Bilan initial — NT-proBNP, BNP &amp; paraclinique</span></div>
+        <div class="block-title"><span class="tag">🧪 Bilan initial — NT-proBNP, BNP &amp; paraclinique</span></div>
 
         <div class="content-text" style="font-weight:600;margin-bottom:6px;">NT-proBNP vs BNP — Différences clés</div>
         <table style="margin-bottom:12px;">
@@ -8703,6 +8714,7 @@ MCAS stable</div>
           </tbody>
         </table>
 
+        <div class="key-fact blue" style="margin-top:10px;">🩸 <strong>Et le BNP, lui?</strong> Le tableau ci-dessus donne les seuils de <strong>NT-proBNP</strong>. Pour le <strong>BNP</strong>, retenir <strong>&gt; 400 pg/mL → IC probable</strong>. ⚠️ Rappel du tableau de comparaison : le BNP est <strong>abaissé par l&#39;obésité</strong>, pas le NT-proBNP.</div>
         <div class="content-text" style="font-weight:600;margin-bottom:6px;">Bilan biologique et paraclinique initial complet</div>
         <table style="margin-bottom:10px;">
           <thead><tr><th>Test</th><th>Justification</th></tr></thead>
@@ -8794,7 +8806,7 @@ function icTabSwitch(type) {
 
       <!-- ═══ IC-6: QUADRUPLE THÉRAPIE DÉTAIL ACCORDION ═══ -->
       <div class="block rx" id="ic-6" style="margin-top:14px;">
-        <div class="block-title"><span class="tag">💊 5. Traitement ICFEr — Quadruple thérapie détaillée &amp; Tableau récapitulatif</span></div>
+        <div class="block-title"><span class="tag">💊 Traitement ICFEr — Quadruple thérapie détaillée &amp; Tableau récapitulatif</span></div>
         <div class="key-fact blue" style="margin-bottom:10px;">Majorité des bénéfices observable dès les <strong>faibles doses</strong> — initier les 4 agents avant d&apos;optimiser</div>
                 <div style="display:flex;gap:6px;flex-wrap:wrap;margin:8px 0 12px;">
           <button onclick="showPanel('ap1001','ap10010',5)" data-panel="ap10010" style="background:#1a56a0;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:600;transition:.15s;"><span style="font-family:var(--mono);font-weight:700;color:var(--blue);margin-right:8px;">①</span> ARNI — Sacubitril/Valsartan (Entresto®)</button>
@@ -8882,24 +8894,81 @@ function icTabSwitch(type) {
 
       <!-- ═══ IC-6b: 4 PRINCIPES ICFEp ═══ -->
       <div class="block def" id="ic-6b" style="margin-top:14px;">
-        <div class="block-title"><span class="tag">🟢 6. ICFEp — Les 4 Principes</span></div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px;">
-          <div style="border:2px solid var(--blue);border-radius:10px;padding:12px;">
-            <div style="font-weight:700;color:var(--blue);font-size:14px;margin-bottom:8px;">Principe #1</div>
-            <div style="font-weight:600;margin-bottom:6px;">Rechercher la présentation clinique ICFEp</div>
+        <div class="block-title"><span class="tag">💜 ICFEp — reconnaître, comprendre et traiter</span></div>
+        <div class="key-fact blue" style="margin-top:10px;"><strong>ICFEp = FEVG ≥ 50% + dysfonction diastolique</strong> (altération relaxation et/ou ↑ rigidité). Représente 40–60 % de toutes les IC. Prévalence ↑ avec âge. <strong>Aucun Tx n'a démontré ↓ mortalité</strong> → objectif = réduire hospitalisations + améliorer QV.</div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;">
+          <button data-panel="icfep0" onclick="showPanel('icfep','icfep0',4)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#6d28d9;color:#fff;">🧬 Physiopathologie</button>
+          <button data-panel="icfep1" onclick="showPanel('icfep','icfep1',4)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">🔎 Reconnaître et confirmer</button>
+          <button data-panel="icfep2" onclick="showPanel('icfep','icfep2',4)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">🧩 Comorbidités et diagnostic différentiel</button>
+          <button data-panel="icfep3" onclick="showPanel('icfep','icfep3',4)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">💊 Traitement</button>
+        </div>
+
+        <div id="icfep0" style="display:block;margin-top:14px;">
+        <div class="key-fact blue" style="margin-top:4px;">🔬 <strong>Deux processus distincts, l&#39;un actif et l&#39;autre passif</strong> — c&#39;est ce qui explique qu&#39;on puisse congestionner avec une fraction d&#39;éjection normale.</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin-top:10px;">
+          <div style="background:#e8f4fd;border-left:4px solid #1d4ed8;border-radius:10px;padding:14px;"><strong style="color:#1d4ed8;">⚡ ① Altération de la relaxation diastolique <em>(processus actif)</em></strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">• Recapture Ca²⁺ dépend de SERCA (pompe active RS)<br>
+              • Ischémie / HVG → ↓ SERCA → relaxation lente + incomplète → ↑ pression diastolique</div></div>
+          <div style="background:#fff3cd;border-left:4px solid #d35400;border-radius:10px;padding:14px;"><strong style="color:#d35400;">🧱 ② Augmentation de la rigidité pariétale <em>(processus passif)</em></strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">• HVG concentrique (HTA, SA) → ↑ épaisseur → ↑ rigidité<br>
+              • Fibrose myocardique → ↑ collagène → ↑ rigidité<br>
+              • Résultat : remplissage à pression élevée → congestion pulmonaire</div></div>
+        </div>
+        <div class="key-fact ink" style="margin-top:10px;">🎯 <strong>Le résumé en une chaîne.</strong> <strong>Dysfonction diastolique :</strong> ↓ relaxation + ↓ compliance VG (HTA chronique, obésité, DM, vieillissement) → ↑ pressions remplissage à volume normal → congestion malgré FEVG préservée. État pro-inflammatoire systémique multi-comorbidités.</div>
+        <div style="font-size:12px;font-weight:800;color:#c0392b;margin-top:18px;letter-spacing:.4px;">⚠️ LES FACTEURS DE RISQUE, ET PAR QUEL MÉCANISME</div>
+        <div style="overflow-x:auto;margin-top:10px;">
+        <table style="font-size:12px;">
+              <thead><tr><th>Facteur</th><th>Mécanisme</th></tr></thead>
+              <tbody>
+                <tr><td><strong>HTA</strong> (#1)</td><td>HVG concentrique → rigidité</td></tr>
+                <tr><td>Obésité</td><td>↑ volémie + dysfonction endothéliale</td></tr>
+                <tr><td>Âge avancé</td><td>↓ compliance naturelle</td></tr>
+                <tr><td>Sexe féminin</td><td>↑ HVG réactionnelle</td></tr>
+                <tr><td>DM2</td><td>Cardiomyopathie diabétique → fibrose</td></tr>
+                <tr><td>FA</td><td>↓ kick auriculaire → ↑ pression OG</td></tr>
+                <tr><td>MCAS</td><td>Ischémie → ↓ relaxation + ↑ rigidité</td></tr>
+                <tr><td>IRC</td><td>↑ post-charge + calcifications</td></tr>
+              </tbody>
+            </table>
+        </div>
+        </div>
+
+        <div id="icfep1" style="display:none;margin-top:14px;">
+        <div style="font-size:12px;font-weight:800;color:#1d4ed8;margin-top:18px;letter-spacing:.4px;">🩺 LA PRÉSENTATION TYPIQUE</div>
+        <div class="content-text" style="margin-top:8px;">Rechercher la présentation clinique ICFEp</div>
             <div style="font-size:12px;color:var(--text-muted);">Présentation typique :
               <ol style="margin:6px 0 0 16px;padding:0;">
                 <li>Œdème pulmonaire / congestion systémique</li>
                 <li>Dyspnée (effort ou repos)</li>
                 <li>Utilisation de diurétiques</li>
                 <li>Épanchement pleureux</li>
-              </ol>
-            </div>
-          </div>
-          <div style="border:2px solid var(--yellow);border-radius:10px;padding:12px;">
-            <div style="font-weight:700;color:#b45309;font-size:14px;margin-bottom:8px;">Principe #2</div>
-            <div style="font-weight:600;margin-bottom:6px;">Identifier et traiter les comorbidités</div>
-            <table style="font-size:12px;margin-top:6px;">
+              </ol></div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin-top:10px;">
+          <div style="background:#ede9fe;border-left:4px solid #6d28d9;border-radius:10px;padding:14px;"><strong style="color:#6d28d9;">🔍 Les signes cliniques spécifiques à l&#39;ICFEp</strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">• <strong>B4</strong> (galop auriculaire) : contraction OG contre VG rigide +++<br>
+            • Dyspnée à l'effort (± repos si avancé)<br>
+            • Orthopnée / DPN — Œdèmes périphériques<br>
+            • Pression veineuse jugulaire ↑</div></div>
+          <div style="background:#e8f4fd;border-left:4px solid #1d4ed8;border-radius:10px;padding:14px;"><strong style="color:#1d4ed8;">📷 Échocardiographie — <em>gold standard</em></strong><div style="font-size:13px;line-height:1.75;margin-top:8px;">• FEVG ≥ 50 %<br>
+            • ↑ E/e' (pression OG ↑), ↓ e', ↑ volume OG<br>
+            • HVG concentrique (↑ épaisseur paroi, ↓ cavité)<br><br>
+            </div></div>
+        </div>
+        <div style="font-size:12px;font-weight:800;color:#15803d;margin-top:18px;letter-spacing:.4px;">📊 LE SCORE H2FPEF — QUAND LE DIAGNOSTIC RESTE INCERTAIN</div>
+        <div class="key-fact blue" style="margin-top:10px;">🎯 <strong>À quoi il sert.</strong> Estimer la <strong>probabilité qu&#39;une dyspnée inexpliquée soit une ICFEp</strong>, chez un patient dont l&#39;échocardiographie ne tranche pas. Disponible sur <strong>MDCalc</strong>.</div>
+        <div class="criteria-list" style="margin-top:10px;">
+          <div class="criteria-item"><div class="criteria-num blue">1</div><span><strong>H</strong> — <em>Heavy</em> : <strong>IMC &gt; 30</strong></span></div>
+          <div class="criteria-item"><div class="criteria-num blue">2</div><span><strong>2</strong> — <em>Hypertensif</em> : <strong>≥ 2 anti-HTA</strong></span></div>
+          <div class="criteria-item"><div class="criteria-num blue">3</div><span><strong>F</strong> — <strong>fibrillation auriculaire</strong></span></div>
+          <div class="criteria-item"><div class="criteria-num blue">4</div><span><strong>P</strong> — <em>Pulmonary hypertension</em> : <strong>PAPs &gt; 35 mmHg</strong></span></div>
+          <div class="criteria-item"><div class="criteria-num blue">5</div><span><strong>E</strong> — <em>Elder</em> : <strong>≥ 60 ans</strong></span></div>
+          <div class="criteria-item"><div class="criteria-num blue">6</div><span><strong>F</strong> — <em>Filling pressure</em> : <strong>E/e&#39; &gt; 9</strong></span></div>
+          <div class="criteria-item"><div class="criteria-num red">!</div><span><strong>Score ≥ 6 = ICFEp très probable</strong> — c&#39;est le seuil qui fait basculer la conduite vers le traitement plutôt que vers la poursuite du bilan</span></div>
+        </div>
+        </div>
+
+        <div id="icfep2" style="display:none;margin-top:14px;">
+        <div class="key-fact orange" style="margin-top:4px;">🎯 <strong>Pourquoi les comorbidités sont le traitement.</strong> Dans l&#39;ICFEp, aucune molécule n&#39;a démontré de réduction de mortalité : ce sont les comorbidités qui portent le pronostic, et les traiter <em>est</em> la prise en charge.</div>
+        <div style="font-size:12px;font-weight:800;color:#b45309;margin-top:18px;letter-spacing:.4px;">📊 LES COMORBIDITÉS, ET LEUR FRÉQUENCE DANS L&#39;ICFEp</div>
+        <div style="overflow-x:auto;margin-top:10px;">
+        <table style="font-size:12px;margin-top:6px;">
               <thead><tr><th>Comorbidité</th><th>Prévalence ICFEp</th></tr></thead>
               <tbody>
                 <tr><td>HTA</td><td>Très fréquente</td></tr>
@@ -8912,34 +8981,45 @@ function icTabSwitch(type) {
                 <tr><td>IRC stade 3</td><td>jusqu&apos;à 50 %</td></tr>
               </tbody>
             </table>
-          </div>
-          <div style="border:2px solid #ef4444;border-radius:10px;padding:12px;">
-            <div style="font-weight:700;color:#dc2626;font-size:14px;margin-bottom:8px;">Principe #3</div>
-            <div style="font-weight:600;margin-bottom:6px;">Rechercher l&apos;étiologie causant l&apos;IC</div>
+        </div>
+        <div style="font-size:12px;font-weight:800;color:#c0392b;margin-top:18px;letter-spacing:.4px;">🔍 LE DIAGNOSTIC DIFFÉRENTIEL À ÉLIMINER</div>
+        <div class="content-text" style="margin-top:8px;">Rechercher l&apos;étiologie causant l&apos;IC</div>
             <div style="font-size:12px;color:var(--text-muted);">DDx ICFEp à éliminer :
               <div style="font-size:13px;line-height:1.7;"><strong>Valvulopathie gauche :</strong> SA, RA, SM, RM<br>
 <strong>Péricarde :</strong> tamponnade, péricardite constrictive<br>
 <strong>Insuff. VD :</strong> HTA pulm., valvulopathie pulm./tricusp.<br>
-<strong>CMP :</strong> infiltrative (amyloïdose), inflammatoire (sarcoïdose), hypertrophique, génétique (Fabry, hémochromatose)</div>
-            </div>
-          </div>
-          <div style="border:2px solid #0a7a4e;border-radius:10px;padding:12px;">
-            <div style="font-weight:700;color:#0a7a4e;font-size:14px;margin-bottom:8px;">Principe #4</div>
-            <div style="font-weight:600;margin-bottom:6px;">Score diagnostique H2FPEF (MDCalc)</div>
-            <div style="font-size:12px;color:var(--text-muted);">
-              <strong>H</strong> = Heavy (IMC &gt; 30) · <strong>2</strong> = Hypertensif (≥ 2 anti-HTA) · <strong>F</strong> = FA · <strong>P</strong> = PAPs &gt; 35 mmHg · <strong>E</strong> = Elder (≥ 60 ans) · <strong>F</strong> = Filling pressure (E/e&apos; &gt; 9)<br><br>
-              Score ≥ 6 = ICFEp très probable
-            </div>
-          </div>
+<strong>CMP :</strong> infiltrative (amyloïdose), inflammatoire (sarcoïdose), hypertrophique, génétique (Fabry, hémochromatose)</div></div>
+        </div>
+
+        <div id="icfep3" style="display:none;margin-top:14px;">
+        <div class="key-fact ink" style="margin-top:4px;">🎯 <strong>L&#39;objectif est différent de celui de l&#39;ICFEr.</strong> Aucun traitement n&#39;a démontré de réduction de mortalité : la cible est de <strong>réduire les hospitalisations</strong> et d&#39;<strong>améliorer la qualité de vie</strong>.</div>
+        <div style="overflow-x:auto;margin-top:10px;">
+        <table style="font-size:12px;margin-bottom:10px;">
+          <thead><tr><th>Classe</th><th>Médicament</th><th>Rôle</th><th>Recommandation</th></tr></thead>
+          <tbody>
+            <tr><td><strong>iSGLT2</strong> ⭐</td><td>Dapagliflozin, Empagliflozin</td><td>Natriurèse + remodelage. <strong>Seule classe avec données positives ICFEp récente</strong></td><td>Recommandé si ICFEp ± DM2</td></tr>
+            <tr><td><strong>Diurétiques</strong></td><td>Furosémide, HCTZ</td><td>↓ surcharge volémique → ↓ congestion → ↓ dyspnée</td><td>Si congestion</td></tr>
+            <tr><td><strong>ARM</strong></td><td>Spironolactone</td><td>Bloque aldostérone → ↓ fibrose + ↓ rétention Na⁺/H₂O</td><td>Peut ↓ hospitalisations</td></tr>
+            <tr><td><strong>IECA/ARA</strong></td><td>Périndopril, Candesartan</td><td>↓ post-charge + ↓ fibrose (via ↓ angiotensine II)</td><td>Si HTA associée</td></tr>
+            <tr><td><strong>Bêta-bloquant</strong></td><td>Bisoprolol</td><td>↓ FC → ↑ temps remplissage diastolique. Contrôle FA.</td><td>Si FA + ICFEp</td></tr>
+          </tbody>
+        </table>
         </div>
         <div class="note">Pharmacothérapie ICFEp : <strong>iSGLT-2 (dapagliflozine 10 mg/j)</strong> 1re ligne (Code CV679) · <strong>ARM</strong> (données TOPCAT) · <strong>GLP-1 (sémaglutide)</strong> si obésité (STEP-HFpEF) · ARNI ou candésartan pour contrôle TA</div>
+        <div class="key-fact red" style="margin-top:10px;">🩺 <strong>Le contrôle tensionnel est la priorité absolue</strong> — cible <strong>&lt; 130/80 mmHg</strong>. C&#39;est la seule intervention dont l&#39;effet est constant dans cette population.</div>
+        <div style="font-size:12px;font-weight:800;color:#d35400;margin-top:18px;letter-spacing:.4px;">🔥 LES FACTEURS PRÉCIPITANTS À RECHERCHER DEVANT UNE DÉCOMPENSATION</div>
+        <div class="key-fact orange" style="margin-top:10px;"><strong>Facteurs précipitants à rechercher :</strong><br>• HTA non contrôlée (#1)<br>• Arythmies (FA, tachycardie)<br>• Ischémie myocardique<br>• Infections / sepsis<br>• Anémie<br>• Non-observance médication ou diète</div>
+        <div class="key-fact cream" style="margin-top:10px;">➜ <strong>Le volet non pharmacologique</strong> — restriction sodée chiffrée, pesée quotidienne, réadaptation, vaccination — est détaillé dans <em>Traitements non pharmacologiques</em>, plus bas dans cette section.</div>
+        </div>
+
       </div>
+
 
       <!-- ═══ IC-7: TRAITEMENT ICFEp ACCORDION ═══ -->
 
       <!-- ═══ IC-10: NON-PHARMACOLOGIQUE ═══ -->
       <div class="block clin" id="ic-10" style="margin-top:14px;">
-        <div class="block-title"><span class="tag">🥗 7. Traitements non pharmacologiques</span></div>
+        <div class="block-title"><span class="tag">🥗 Traitements non pharmacologiques</span></div>
         <table>
           <thead><tr><th>Intervention</th><th>Recommandation</th><th>Données probantes</th></tr></thead>
           <tbody>
@@ -8959,7 +9039,7 @@ function icTabSwitch(type) {
 
       <!-- ═══ IC-8: HYPERKALIÉMIE ═══ -->
       <div class="block para" id="ic-8" style="margin-top:14px;border-left-color:var(--yellow);">
-        <div class="block-title"><span class="tag">⚡ 8. Gestion de l&apos;hyperkaliémie sous iSRAA</span></div>
+        <div class="block-title"><span class="tag">⚡ Gestion de l&apos;hyperkaliémie sous iSRAA</span></div>
         <div class="key-fact yellow" style="margin-bottom:10px;"><strong>Stratégie avant d&apos;arrêter les agents néphroprotecteurs :</strong> ↓ diurétiques épargneurs K⁺ · ↓ apport alimentaire K⁺ · optimiser la volémie · ajuster dose ARM. Si K⁺ ≥ 5,5 persistant → chélateur de K⁺ pour maintenir l&apos;ARM/ARNI.</div>
         <table style="margin-bottom:10px;">
           <thead><tr><th>Chélateur</th><th>Dose</th><th>Statut RAMQ</th><th>Avantages</th></tr></thead>
@@ -9019,78 +9099,9 @@ function icTabSwitch(type) {
           <div class="flag-item"><span class="fi-icon">💊</span><span><span class="drug-badge ci">IECA + ARNI simultanément → angioœdème</span> · <span class="drug-badge ci">IECA + ARA → jamais ensemble</span> · <span class="drug-badge ci">Nitrates + iPDE5 → hypotension sévère</span> · <span class="drug-badge ci">BCC non-DHP + FEVG ≤ 40 % → CI (amlodipine OK)</span></span></div>
           <div class="flag-item"><span class="fi-icon">📋</span><span><strong>Action IPS :</strong> Référence urgente clinique spécialisée · Réévaluer quadruple thérapie · Traitements avancés (DAI, TRC, transplantation) · Discussion objectifs de soins</span></div>
         </div>
-        <div class="key-fact green" style="margin-top:8px;font-size:13px;"><strong>Conseil IPS :</strong> Prioriser l&apos;initiation des 4 agents avant la titration maximale · ↑ &gt; 2 kg/48h = alarme → ajuster diurétique · NT-proBNP préférable au BNP pour suivi sous ARNI</div>
+        <div class="key-fact green" style="margin-top:8px;font-size:13px;"><strong>Conseil IPS :</strong> Prioriser l&apos;initiation des 4 agents avant la titration maximale · NT-proBNP préférable au BNP pour suivi sous ARNI</div>
       </div>
       <!-- ═══ ICFEp ═══ -->
-      <div class="block para" id="ic-icfep" style="margin-top:14px;">
-        <div class="block-title"><span class="tag">💜 ICFEp — Insuffisance Cardiaque à Fraction d'Éjection Préservée</span></div>
-        <div class="key-fact blue" style="margin-bottom:12px;"><strong>ICFEp = FEVG ≥ 50% + dysfonction diastolique</strong> (altération relaxation et/ou ↑ rigidité). Représente 40–60 % de toutes les IC. Prévalence ↑ avec âge. <strong>Aucun Tx n'a démontré ↓ mortalité</strong> → objectif = réduire hospitalisations + améliorer QV.</div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;">
-          <div>
-            <div style="font-weight:700;color:#1C3F8F;margin-bottom:6px;font-size:12px;">🧬 Physiopathologie</div>
-            <div style="font-size:12px;line-height:1.6;">
-              <strong>1. Altération relaxation diastolique</strong> (processus actif) :<br>
-              • Recapture Ca²⁺ dépend de SERCA (pompe active RS)<br>
-              • Ischémie / HVG → ↓ SERCA → relaxation lente + incomplète → ↑ pression diastolique<br><br>
-              <strong>2. ↑ Rigidité pariétale</strong> (processus passif) :<br>
-              • HVG concentrique (HTA, SA) → ↑ épaisseur → ↑ rigidité<br>
-              • Fibrose myocardique → ↑ collagène → ↑ rigidité<br>
-              • Résultat : remplissage à pression élevée → congestion pulmonaire
-            </div>
-          </div>
-          <div>
-            <div style="font-weight:700;color:#c0392b;margin-bottom:6px;font-size:12px;">⚠️ Facteurs de risque</div>
-            <table style="font-size:12px;">
-              <thead><tr><th>Facteur</th><th>Mécanisme</th></tr></thead>
-              <tbody>
-                <tr><td><strong>HTA</strong> (#1)</td><td>HVG concentrique → rigidité</td></tr>
-                <tr><td>Obésité</td><td>↑ volémie + dysfonction endothéliale</td></tr>
-                <tr><td>Âge avancé</td><td>↓ compliance naturelle</td></tr>
-                <tr><td>Sexe féminin</td><td>↑ HVG réactionnelle</td></tr>
-                <tr><td>DM2</td><td>Cardiomyopathie diabétique → fibrose</td></tr>
-                <tr><td>FA</td><td>↓ kick auriculaire → ↑ pression OG</td></tr>
-                <tr><td>MCAS</td><td>Ischémie → ↓ relaxation + ↑ rigidité</td></tr>
-                <tr><td>IRC</td><td>↑ post-charge + calcifications</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div style="font-weight:700;color:#1C3F8F;margin-bottom:6px;font-size:12px;">🔍 Diagnostic</div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px;">
-          <div style="background:#F9FAFB;border-radius:8px;padding:10px;font-size:11px;">
-            <strong>Signes cliniques spécifiques à ICFEp :</strong><br>
-            • <strong>B4</strong> (galop auriculaire) : contraction OG contre VG rigide +++<br>
-            • Dyspnée à l'effort (± repos si avancé)<br>
-            • Orthopnée / DPN — Œdèmes périphériques<br>
-            • Pression veineuse jugulaire ↑
-          </div>
-          <div style="background:#F9FAFB;border-radius:8px;padding:10px;font-size:11px;">
-            <strong>Échocardiographie (Gold Standard) :</strong><br>
-            • FEVG ≥ 50 %<br>
-            • ↑ E/e' (pression OG ↑), ↓ e', ↑ volume OG<br>
-            • HVG concentrique (↑ épaisseur paroi, ↓ cavité)<br><br>
-            <strong>Peptides natriurétiques :</strong><br>
-            • BNP &gt; 400 pg/mL → IC probable<br>
-            • NT-proBNP &lt; 300 pg/mL → exclut IC<br>
-            • ⚠️ Peut être normal si obésité ou ICFEp légère
-          </div>
-        </div>
-        <div style="font-weight:700;color:#0a7a4e;margin-bottom:6px;font-size:12px;">💊 Traitement ICFEp</div>
-        <table style="font-size:12px;margin-bottom:10px;">
-          <thead><tr><th>Classe</th><th>Médicament</th><th>Rôle</th><th>Recommandation</th></tr></thead>
-          <tbody>
-            <tr><td><strong>iSGLT2</strong> ⭐</td><td>Dapagliflozin, Empagliflozin</td><td>Natriurèse + remodelage. <strong>Seule classe avec données positives ICFEp récente</strong></td><td>Recommandé si ICFEp ± DM2</td></tr>
-            <tr><td><strong>Diurétiques</strong></td><td>Furosémide, HCTZ</td><td>↓ surcharge volémique → ↓ congestion → ↓ dyspnée</td><td>Si congestion</td></tr>
-            <tr><td><strong>ARM</strong></td><td>Spironolactone</td><td>Bloque aldostérone → ↓ fibrose + ↓ rétention Na⁺/H₂O</td><td>Peut ↓ hospitalisations</td></tr>
-            <tr><td><strong>IECA/ARA</strong></td><td>Périndopril, Candesartan</td><td>↓ post-charge + ↓ fibrose (via ↓ angiotensine II)</td><td>Si HTA associée</td></tr>
-            <tr><td><strong>Bêta-bloquant</strong></td><td>Bisoprolol</td><td>↓ FC → ↑ temps remplissage diastolique. Contrôle FA.</td><td>Si FA + ICFEp</td></tr>
-          </tbody>
-        </table>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
-          <div class="key-fact blue" style="font-size:11px;"><strong>Traitement non pharmacologique :</strong><br>• Restriction Na⁺ &lt; 3 g/jour<br>• Surveillance poids quotidienne (consulter si &gt; 2 kg en 2–3 jours)<br>• Réadaptation cardiaque (NYHA II–III)<br>• Vaccination grippe, pneumocoque, COVID<br>• Contrôle strict TA (&lt; 130/80 mmHg) — priorité absolue</div>
-          <div class="key-fact green" style="font-size:11px;"><strong>Facteurs précipitants à rechercher :</strong><br>• HTA non contrôlée (#1)<br>• Arythmies (FA, tachycardie)<br>• Ischémie myocardique<br>• Infections / sepsis<br>• Anémie<br>• Non-observance médication ou diète</div>
-        </div>
-      </div>
 
     
 
@@ -60538,7 +60549,7 @@ function showPanel(prefix,activeId,count){
     var el=document.getElementById(prefix+i);
     if(el) el.style.display=(prefix+i===activeId)?'block':'none';
   }
-  var colorMap={'tx':'#0a7a4e','atx':'#065f46','vp':'#1e7a6b','mii-tx':'#0a7a4e','mii-cr':'#0a7a4e','pk-tx':'#7c3aed','hta-tx':'#0a7a4e','ugdd':'#0369a1','frg':'#b45309','spx':'#7c3aed','rds':'#0369a1','gu':'#0f766e','lax':'#0a7a4e','somdx':'#0e7490','mpg':'#1e40af','cde':'#b91c1c','chp':'#0f766e','grl':'#374151','tnctyp':'#6d28d9','evcog':'#b45309','dlrx':'#c0392b','htorx':'#0f766e','miidx':'#0e7490','tvt':'#7c3aed','tsfr':'#4338ca','tsfa':'#0f766e','tsfc':'#c2410c','tsfp':'#b91c1c','tsfg':'#374151','nutc':'#6d28d9','ndnt':'#b45309','nalb':'#b91c1c','nsup':'#0a7a4e','nsri':'#b45309','mietio':'#6d28d9','ngac':'#15803d','n3min':'#1d4ed8','miisv':'#0891b2','dalg':'#0369a1','anetx':'#0a7a4e','aneb':'#6d28d9','mimei':'#7c3aed','miiact':'#c0392b','tncrx':'#15803d','scpd':'#c0392b','beers':'#b45309','pkpd':'#6d28d9','drx':'#0a7a4e','bcat':'#334155','sstp':'#c0392b','sstt':'#15803d','potx':'#be123c','pocas':'#0f766e','ap77':'#6d28d9','ap1012':'#c0392b'};var col=colorMap[prefix]||'#c0392b';
+  var colorMap={'tx':'#0a7a4e','atx':'#065f46','vp':'#1e7a6b','mii-tx':'#0a7a4e','mii-cr':'#0a7a4e','pk-tx':'#7c3aed','hta-tx':'#0a7a4e','ugdd':'#0369a1','frg':'#b45309','spx':'#7c3aed','rds':'#0369a1','gu':'#0f766e','lax':'#0a7a4e','somdx':'#0e7490','mpg':'#1e40af','cde':'#b91c1c','chp':'#0f766e','grl':'#374151','tnctyp':'#6d28d9','evcog':'#b45309','dlrx':'#c0392b','htorx':'#0f766e','miidx':'#0e7490','tvt':'#7c3aed','tsfr':'#4338ca','tsfa':'#0f766e','tsfc':'#c2410c','tsfp':'#b91c1c','tsfg':'#374151','nutc':'#6d28d9','ndnt':'#b45309','nalb':'#b91c1c','nsup':'#0a7a4e','nsri':'#b45309','mietio':'#6d28d9','ngac':'#15803d','n3min':'#1d4ed8','miisv':'#0891b2','dalg':'#0369a1','anetx':'#0a7a4e','aneb':'#6d28d9','mimei':'#7c3aed','miiact':'#c0392b','tncrx':'#15803d','scpd':'#c0392b','beers':'#b45309','pkpd':'#6d28d9','drx':'#0a7a4e','bcat':'#334155','sstp':'#c0392b','sstt':'#15803d','potx':'#be123c','pocas':'#0f766e','ap77':'#6d28d9','ap1012':'#c0392b','icfep':'#6d28d9','icphy':'#1d4ed8'};var col=colorMap[prefix]||'#c0392b';
   for(var k=0;k<count;k++){
     var b=document.querySelector('[data-panel="'+prefix+k+'"]');
     if(b){
