@@ -2,11 +2,10 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Guide Clinique IPS</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -1402,6 +1401,22 @@ m
       .diagram-wrap > svg.diagram{min-width:560px;max-width:none !important}
     }
     @media print{.section table.stackable{display:table}}
+
+    /* ── ADAPTATION : tactile, bords d'écran, barre d'ancres qui déborde ── */
+    /* Indice de défilement : un fondu à droite tant qu'il reste des onglets hors champ (classe .more posée par navFade()) */
+    .m-navbar.more,#sec-ecg .m-navbar.more{-webkit-mask-image:linear-gradient(to right,#000 calc(100% - 36px),transparent);mask-image:linear-gradient(to right,#000 calc(100% - 36px),transparent)}
+    /* Cibles tactiles ≥ 44 px (écrans à pointeur grossier : téléphones, tablettes) */
+    @media (pointer:coarse){
+      .m-nav,#sec-ecg .m-nav{min-height:44px;padding-top:12px;padding-bottom:12px}
+      .nav-item,.specialty-header,.sidebar-top-item{min-height:44px;display:flex;align-items:center}
+      .section button[data-panel],.section .pill,.sec-nav-btn,.pin-btn,.chv-btn{min-height:44px}
+      .section summary{min-height:44px;display:flex;align-items:center}
+    }
+    /* Encoche, barre d'accueil et paysage : le contenu ne passe pas sous les bords de l'écran */
+    @media (max-width:768px){
+      main{padding-left:max(20px,env(safe-area-inset-left));padding-right:max(20px,env(safe-area-inset-right));padding-bottom:max(60px,calc(40px + env(safe-area-inset-bottom)))}
+      #back-top{right:max(22px,env(safe-area-inset-right));bottom:max(22px,env(safe-area-inset-bottom))}
+    }
   </style>
   <style id="algo-css">
     /* ALGORITHMES — composant « fil de décision » (diarrhée : aiguë, chronique, SII-D).
@@ -2272,10 +2287,10 @@ m
         </div>
         <div class="home-text">
           <h1>Guide<br/>Clinique <span>IPS</span></h1>
-          <p>Référence rapide — manifestations cliniques, paraclinique, traitement et drapeaux rouges. SOI 6272 · Session 2.</p>
+          <p>Référence rapide — manifestations cliniques, paraclinique, traitement et signaux d'alarme. SOI 6272 · Session 2.</p>
           <div class="home-sources">Sources : Lanthier · SCC/CCS · KDIGO 2024 · HFSA 2022 · CDA 2018/2020 · INESSS 2025 · ESC 2023 · ILAE 2017 · ASH/ISTH</div>
           <div style="margin-top:10px;font-size:12px;color:#6B6A66;display:flex;align-items:center;gap:6px;">
-            <span style="background:#E1F3FE;border:1px solid #EAEAEA;border-radius:6px;padding:3px 10px;">Dernière révision : <strong id="revision-date">Juin 2026</strong></span>
+            <span style="background:#E1F3FE;border:1px solid #EAEAEA;border-radius:6px;padding:3px 10px;">Dernière révision : <strong id="revision-date">Septembre 2026</strong></span>
             <span style="font-size:11px;color:#1F6C9F;">— À valider périodiquement avec les lignes directrices en vigueur</span>
           </div>
         </div>
@@ -21584,6 +21599,12 @@ function dkRenal(view) {
         <button class="m-nav" onclick="goToBlock('pe-1')">Classification</button>
         <button class="m-nav" onclick="goToBlock('pe-2')">Démarche éval.</button>
         <button class="m-nav" onclick="goToBlock('pe-3')">TFR</button>
+        <button class="m-nav" onclick="goToBlock('pe-4')">Spirométrie</button>
+        <button class="m-nav" onclick="goToBlock('pe-5')">Bilan de base</button>
+        <button class="m-nav" onclick="goToBlock('pe-6')">Provocation</button>
+        <button class="m-nav" onclick="goToBlock('pe-7')">Compléments</button>
+        <button class="m-nav" onclick="goToBlock('pe-8')">Cas cliniques</button>
+        <button class="m-nav" onclick="goToBlock('pe-9')">Signaux d'alarme</button>
       </div>
 
       <!-- Stat-cards -->
@@ -21623,6 +21644,36 @@ function dkRenal(view) {
         </table>
         <div class="key-fact"><strong>Obstruction bronchique</strong> = VEMS/CVF &lt; 0,70 (ou &lt; LIN) · Post-bronchodilatateur = obstruction <strong>fixe</strong> · Score Z : Légère −1,645 à −2,5 · Modérée −2,5 à −4 · Sévère &lt; −4</div>
       </div>
+      <div class="block clin u-19b365" id="pe-4-w" style="margin-top:14px;">
+        <div class="block-title" id="pe-4"><span class="tag">Spirométrie — indications, préparation, critères</span></div>
+        <div class="key-fact blue"><strong>Définition :</strong> la spirométrie est le test le plus utile et le plus utilisé : accessible, peu coûteux, rapide. Elle donne une boucle débit-volume et une courbe volume-temps. On la fait en général à l'état stable ; en aigu, elle sert à évaluer l'état respiratoire sans poser de diagnostic. <em>Coudé, HMR (cours MMD)</em></div><h4 style="margin:14px 0 6px">Indications (ATS)</h4><table><thead><tr><th>Contexte</th><th>Détail</th></tr></thead><tbody><tr><td><strong>Diagnostic</strong></td><td>Évaluer des signes ou symptômes · mesurer les effets physiologiques d'une maladie · déterminer des risques · évaluer le risque préopératoire ou le pronostic</td></tr><tr><td><strong>Suivi</strong></td><td>Réponse aux interventions · progression de la maladie · suivi d'une exacerbation · surveillance des effets indésirables de médicaments pneumotoxiques</td></tr></tbody></table><h4 style="margin:14px 0 6px">Contre-indications (ATS) — valables pour tous les tests respiratoires</h4><table><thead><tr><th>Mécanisme</th><th>Situations</th></tr></thead><tbody><tr><td><strong>↑ demande myocardique ou ↑ variation de TA</strong></td><td>Infarctus dans la dernière semaine · hypotension ou HTA sévère · arythmie non stabilisée · insuffisance cardiaque non compensée · HTAP non compensée · embolie pulmonaire instable · ATCD de syncope à la toux (test possible assis, avec précautions)</td></tr><tr><td><strong>↑ pression intracrânienne ou intraoculaire</strong></td><td>Anévrisme cérébral · neurochirurgie dans les 4 dernières semaines · commotion cérébrale récente symptomatique · chirurgie oculaire dans la dernière semaine</td></tr><tr><td><strong>↑ pression sinusale ou auriculaire</strong></td><td>Chirurgie des sinus · otite moyenne interne ou chirurgie de l'oreille dans la dernière semaine</td></tr><tr><td><strong>↑ pression intrathoracique ou abdominale</strong></td><td>Pneumothorax (avec ou sans drain) · chirurgie thoracique ou abdominale dans le dernier mois · grossesse avancée (dernier trimestre, contre-indication relative)</td></tr><tr><td><strong>Contrôle des infections</strong></td><td>Infection respiratoire ou systémique transmissible (dont la tuberculose) · hémoptysies actives ou saignement de lésions buccales</td></tr></tbody></table><h4 style="margin:14px 0 6px">Préparation — arrêt des bronchodilatateurs avant la spirométrie</h4><table><thead><tr><th>Bronchodilatateur</th><th>Délai d'arrêt</th></tr></thead><tbody><tr><td>BACA (salbutamol, terbutaline)</td><td>4–6 heures</td></tr><tr><td>Anticholinergique courte durée (ipratropium)</td><td>12 heures</td></tr><tr><td>BALA (formotérol, salmétérol)</td><td>24 heures</td></tr><tr><td>Combiné BALA/CSI (Advair®, Symbicort®, Zenhale®)</td><td>36 heures</td></tr><tr><td>AMLA (tiotropium, aclidinium)</td><td>36–48 heures</td></tr></tbody></table><div class="key-fact yellow"><strong>Piège :</strong> un patient qui n'a jamais eu de spirométrie diagnostique devrait cesser ses bronchodilatateurs pour établir sa valeur de base. S'il a pris ses inhalateurs, on peut faire le test, mais il faut en tenir compte à l'interprétation. Autres consignes : ne pas fumer ni vapoter ≥ 1 h avant · aucune substance intoxicante 8 h avant · aucun effort modéré à élevé 1 h avant · vêtements qui ne limitent pas l'expansion thoraco-abdominale.</div><h4 style="margin:14px 0 6px">Critères d'acceptabilité (ATS)</h4><div class="criteria-list"><div class="criteria-item"><div class="criteria-num blue">1</div><span>Au moins <strong>3 essais</strong>, dont au moins 2 reproductibles</span></div><div class="criteria-item"><div class="criteria-num blue">2</div><span><strong>Reproductibilité :</strong> différence entre les 2 meilleurs VEMS et CVF ≤ <strong>0,150 L</strong> sur ≥ 2 courbes valides</span></div><div class="criteria-item"><div class="criteria-num blue">3</div><span>Bon départ, sans hésitation ; aucune toux ni fermeture de la glotte dans la 1<sup>re</sup> seconde</span></div><div class="criteria-item"><div class="criteria-num blue">4</div><span>Aucune fermeture de la glotte après la 1<sup>re</sup> seconde (condition d'une CVF valide) ; aucune fuite ni obstruction de l'embout</span></div><div class="criteria-item"><div class="criteria-num red">!</div><span>Courbe non conforme à ces critères = résultat à interpréter avec réserve (lire la note de l'inhalothérapeute)</span></div></div><h4 style="margin:14px 0 6px">Test de réponse aux bronchodilatateurs (BDT)</h4><table><thead><tr><th>Référence</th><th>Seuil de réponse positive</th></tr></thead><tbody><tr><td><strong>ATS/ERS 2005</strong></td><td>↑ VEMS ou CVF &gt; 12 % <strong>ET</strong> &gt; 0,200 L</td></tr><tr><td><strong>ATS 2021</strong></td><td>↑ &gt; 10 % seulement (du prédit) ; peu utilisée en pratique, ne tient pas compte du volume en L</td></tr></tbody></table><div class="key-fact yellow"><strong>Nuance :</strong> une réponse positive peut s'observer dans la MPOC (type 2, inflammation éosinophilique). À l'inverse, un asthme chronique mal contrôlé peut ne pas répondre (obstruction fixe). Un BDT négatif n'exclut donc pas l'asthme. <em>Beasley, AJRCCM 2024</em></div>
+      </div>
+
+      <div class="block para u-19b365" id="pe-5-w" style="margin-top:14px;">
+        <div class="block-title" id="pe-5"><span class="tag">Bilan de base — volumes, DLCO, lecture en 5 étapes</span></div>
+        <div class="key-fact blue"><strong>Définition :</strong> le bilan de base est une épreuve plus complète que la spirométrie (30–45 min). Il précise le profil obstructif, restrictif ou mixte. On le demande en complément de la spirométrie, ou d'emblée en première intention.</div><table><thead><tr><th>Composante</th><th>Mesure</th><th>Méthode</th></tr></thead><tbody><tr><td><strong>CVL</strong></td><td>Capacité vitale lente (1<sup>er</sup> test)</td><td>Inspiration maximale puis expiration lente maximale ; CV = VRI + VT + VRE</td></tr><tr><td><strong>CVF + VEMS</strong></td><td>± test BDT</td><td>Boucle débit-volume</td></tr><tr><td><strong>Volumes</strong></td><td>CPT, VGT, VR, VRE</td><td>Pléthysmographie (gold standard) ou dilution à l'hélium</td></tr><tr><td><strong>DLCO</strong></td><td>Capacité de diffusion du CO</td><td>Manœuvre d'apnée</td></tr></tbody></table><h4 style="margin:14px 0 6px">Indications</h4><p style="font-size:13px;line-height:1.7;margin:4px 0 8px">Dyspnée ± toux chronique · suspicion de maladie avec atteinte pulmonaire · bilan pré-greffe (GMO ou organe solide) · évolution d'une ILD ou d'une fibrose · risque opératoire ou anesthésique · suivi d'asthme ou de MPOC · maladie neuromusculaire dégénérative · ↓ de la CVF inexpliquée à la spirométrie.</p><div class="key-fact"><strong>Remarque :</strong> mêmes contre-indications que la spirométrie. Les tests dépendent fortement de l'effort et exigent des capacités cognitives suffisantes ; ils sont impossibles chez un patient trachéotomisé. CVL et CVF doivent être reproductibles l'une par rapport à l'autre (écart ≤ 0,150 L).</div><h4 style="margin:14px 0 6px">Mesure des volumes : pléthysmographie ou dilution</h4><table><thead><tr><th></th><th>Pléthysmographie (gold standard)</th><th>Dilution à l'hélium</th></tr></thead><tbody><tr><td><strong>Principe</strong></td><td>Loi de Boyle-Mariotte (P₁V₁ = P₂V₂) : la variation de pression dans la boîte hermétique donne le volume gazeux total. Technique du <em>panting</em> : petites respirations rapides contre une valve fermée.</td><td>Le patient respire un mélange connu (O₂, hélium, air) à volume courant jusqu'à l'équilibre des gaz intrapulmonaires.</td></tr><tr><td><strong>Mesure</strong></td><td>CRF, d'où CPT</td><td>CRF, d'où CPT</td></tr><tr><td><strong>Acceptabilité</strong></td><td>≥ 3 manœuvres ; variation entre les 2 meilleures CPT &lt; 5 %</td><td>1 seul essai bien exécuté suffit ; pause ≥ 5 min entre les essais</td></tr><tr><td><strong>Limites</strong></td><td>Difficile en cas de perte cognitive</td><td>Obstruction modérée à sévère : volumes <strong>sous-estimés</strong> (seuls les volumes communicants sont mesurés) ; prudence si tympans perforés ou paralysie faciale</td></tr></tbody></table><h4 style="margin:14px 0 6px">DLCO — diffusion du CO</h4><div class="key-fact blue"><strong>But :</strong> évaluer la perméabilité de la membrane alvéolo-capillaire. Mélange : 0,3 % CO + 21 % O₂ + gaz traceur (hélium).</div><div class="criteria-list"><div class="criteria-item"><div class="criteria-num blue">1</div><span>Expiration maximale jusqu'au VR</span></div><div class="criteria-item"><div class="criteria-num blue">2</div><span>Inspiration maximale du mélange (Vi ≥ 90 % de la meilleure CV ; 85 % encore accepté), atteinte en &lt; 4 s</span></div><div class="criteria-item"><div class="criteria-num blue">3</div><span>Apnée de 8–12 s (10 ± 2 s)</span></div><div class="criteria-item"><div class="criteria-num blue">4</div><span>Expiration dans un sac d'échantillonnage relié à un analyseur, collecte en &lt; 4 s</span></div><div class="criteria-item"><div class="criteria-num blue">5</div><span>Au moins 2 essais reproductibles (différence &lt; 2 ml/mmHg/min), 5 essais au maximum — <em>ATS/ERS 2017</em></span></div></div><table><thead><tr><th>Grade</th><th>Critères</th><th>Signification</th></tr></thead><tbody><tr><td><strong>A</strong></td><td>2 essais reproductibles, Vi ≥ 90 %, apnée 10 ± 2 s</td><td>Haute qualité</td></tr><tr><td><strong>B</strong></td><td>2 essais reproductibles, 1 critère légèrement déviant</td><td>Acceptable</td></tr><tr><td><strong>C</strong></td><td>1 seul essai acceptable</td><td>Qualité modérée</td></tr><tr><td><strong>D</strong></td><td>Aucun essai ne remplit les critères</td><td>Faible (aucune valeur au rapport)</td></tr><tr><td><strong>F</strong></td><td>Test non réalisable ou non interprétable</td><td>Non utilisable (aucune valeur au rapport)</td></tr></tbody></table><div class="key-fact yellow"><strong>Piège :</strong> une anémie abaisse la DLCO sans atteinte de la membrane. Une correction est possible si une Hb récente est disponible (&lt; 48 h à l'HMR).</div><h4 style="margin:14px 0 6px">Démarche en 5 étapes pour lire un bilan de base</h4><div class="criteria-list"><div class="criteria-item"><div class="criteria-num blue">1</div><span><strong>Boucle débit-volume :</strong> aspect, acceptabilité, note de l'inhalothérapeute</span></div><div class="criteria-item"><div class="criteria-num blue">2</div><span><strong>VEMS, CVF, Tiffeneau :</strong> obstruction (Tiffeneau &lt; 70), restriction (↓ proportionnelle du VEMS et de la CVF), réponse au BDT</span></div><div class="criteria-item"><div class="criteria-num blue">3</div><span><strong>Volumes (CPT, CRF, VR, VRE) :</strong> hyperinflation, cloisonnement aérien, restriction</span></div><div class="criteria-item"><div class="criteria-num blue">4</div><span><strong>DLCO :</strong> perméabilité de la membrane alvéolo-capillaire</span></div><div class="criteria-item"><div class="criteria-num blue">5</div><span><strong>Score Z :</strong> sévérité globale (≥ −1,645 normal · −1,645 à −2,5 léger · −2,5 à −4 modéré · &lt; −4 sévère) et conclusion clinique</span></div></div><div class="key-fact green"><strong>En pratique :</strong> on lit toujours la boucle avant les chiffres : un test mal exécuté donne des chiffres trompeurs. Le score Z situe le résultat par rapport à la normalité (5<sup>e</sup>–95<sup>e</sup> percentile) pour âge, sexe, taille et ethnie ; le poids et l'IMC n'influencent pas les valeurs prédites mais entrent dans l'analyse. ➜ voir Anatomie et TFR pour la lecture des courbes.</div>
+      </div>
+
+      <div class="block para u-19b365" id="pe-6-w" style="margin-top:14px;">
+        <div class="block-title" id="pe-6"><span class="tag">Provocation bronchique — méthacholine et mannitol</span></div>
+        <div class="key-fact blue"><strong>But :</strong> mettre en évidence une hyperréactivité bronchique (HRB) et en préciser la sévérité, pour établir ou confirmer un asthme. Indications : histoire suggestive avec spirométrie et BDT normaux · symptômes atypiques · toux chronique · suspicion d'asthme allergique · évaluation pré-emploi ou avant exposition professionnelle (plongeur, militaire).</div><h4 style="margin:14px 0 6px">Précautions et contre-indications (communes aux deux tests)</h4><table><thead><tr><th>Précautions</th><th>Contre-indications</th></tr></thead><tbody><tr><td>Clinicien expérimenté en bronchospasme sévère · médecin présent ou joignable · BACA + anticholinergique courte durée et matériel d'urgence à portée · idéalement une spirométrie avec BDT dans la dernière année</td><td>VEMS &lt; 60 % du prédit ou &lt; 1,0 L · spirométries non acceptables ou non reproductibles · IM ou AVC &lt; 3 mois · HTA non contrôlée · anévrisme aortique connu · chirurgie oculaire ou neurochirurgie récente · grossesse ou allaitement</td></tr></tbody></table><h4 style="margin:14px 0 6px">Méthacholine (provocation directe) vs mannitol (indirecte)</h4><table><thead><tr><th></th><th>Méthacholine</th><th>Mannitol</th></tr></thead><tbody><tr><td><strong>Principe</strong></td><td>Dérivé de l'acétylcholine, bronchoconstricteur direct</td><td>↑ osmolarité des voies aériennes, libération de médiateurs par les mastocytes (prostaglandines, leucotriènes, histamine) ; simule l'effort soutenu</td></tr><tr><td><strong>Performance</strong></td><td>Plus utilisée, plus <strong>sensible</strong></td><td>Moins sensible, plus <strong>spécifique</strong> ; durée &lt; 45 min</td></tr><tr><td><strong>Dose</strong></td><td>Concentrations doublées de 0,015 à 16 mg/ml par nébuliseur (1 min à VC) ; spirométries à 30 s et 90 s ; but : PD20 (dose en mcg qui fait ↓ le VEMS ≥ 20 %)</td><td>Poudre sèche cumulative : 0, 5, 10, 20, 40, 80, 160, 160, 160 mg ; attente de 60 s puis ≥ 2 spirométries reproductibles</td></tr><tr><td><strong>Test positif</strong></td><td>PD20 ≤ 400 mcg (voir tableau ci-dessous)</td><td>PD15 ≤ <strong>635 mg</strong> OU ↓ ≥ 10 % du VEMS entre 2 doses</td></tr><tr><td><strong>Contre-indication propre</strong></td><td>Contrôle au sérum physiologique : ↓ VEMS &gt; 10 % → on arrête</td><td>Allergie ou intolérance à la gélatine</td></tr></tbody></table><h4 style="margin:14px 0 6px">Médicaments à cesser avant le test</h4><table><thead><tr><th>Médicament</th><th>Méthacholine</th><th>Mannitol</th></tr></thead><tbody><tr><td>BACA</td><td>6 h</td><td>—</td></tr><tr><td>Ipratropium</td><td>12 h</td><td>—</td></tr><tr><td>BALA (formotérol, salmétérol)</td><td>36 h</td><td>—</td></tr><tr><td>Combinés (Advair®, Zenhale®, Symbicort®, Wixela®) et bronchodilatateurs d'ultra-longue durée</td><td>48 h</td><td>—</td></tr><tr><td>Anticholinergiques de longue durée (tiotropium, aclidinium)</td><td><strong>7 jours</strong></td><td>48 h</td></tr><tr><td>Anti-leucotriènes (montélukast, zafirlukast)</td><td>24 h</td><td><strong>96 h</strong></td></tr><tr><td>Théophylline</td><td>24 h</td><td>—</td></tr><tr><td>Antihistaminiques</td><td>—</td><td>Longue durée 72 h · courte durée 48 h</td></tr><tr><td>CSI · caféine ou chocolat · tabac</td><td>—</td><td>12 h · 8 h · 6 h</td></tr></tbody></table><div class="key-fact"><strong>Remarque :</strong> autres consignes pour la méthacholine : pas de tabac 1 h avant · repas léger · aucun effort modéré à élevé 12 h avant · aucune substance intoxicante 8 h avant · aucune IVRS depuis ≥ 3 semaines · antibiotiques terminés depuis ≥ 3 semaines. Après le test, si ↓ VEMS &gt; 10 % (ou &lt; 10 % avec symptômes), on donne un BACA et on refait une spirométrie à 10–15 min ; le patient ne part qu'une fois le VEMS revenu à moins de 10 % de la valeur de départ.</div><h4 style="margin:14px 0 6px">Interprétation du PD20 (méthacholine)</h4><table><thead><tr><th>PD20 (mcg)</th><th>Interprétation</th></tr></thead><tbody><tr><td>&gt; 400</td><td><strong>Négatif</strong> : pas d'HRB</td></tr><tr><td>100–400</td><td>Réactivité bronchique <strong>limite</strong></td></tr><tr><td>25–100</td><td>HRB <strong>légère</strong></td></tr><tr><td>6–25</td><td>HRB <strong>modérée</strong></td></tr><tr><td>&lt; 6</td><td>HRB <strong>sévère</strong></td></tr></tbody></table><div class="key-fact yellow"><strong>Attention :</strong> la section Anatomie et TFR cite un seuil exprimé en concentration (PC₂₀ &lt; 4 mg/mL = sévère · 4–16 = modéré · &gt; 16 = négatif) ; ce bloc reprend la dose en mcg du laboratoire de l'HMR. Les deux échelles sont conservées telles que publiées : vérifier l'unité du rapport avant de comparer.</div><div class="key-fact red"><strong>Attention :</strong> une épreuve positive n'est pas automatiquement de l'asthme : c'est un test physiologique, à corréler à la clinique. Une épreuve négative n'exclut pas l'asthme ; si l'histoire est suggestive, chercher une autre cause (ORL, imagerie, cordes vocales, obstruction centrale). <em>Irvin, UpToDate 2023</em></div>
+      </div>
+
+      <div class="block para u-19b365" id="pe-7-w" style="margin-top:14px;">
+        <div class="block-title" id="pe-7"><span class="tag">Épreuves complémentaires — gazométrie, TM6M, neuromusculaire</span></div>
+        <h4 style="margin:0 0 6px">Gazométrie artérielle (ponction radiale)</h4><div class="key-fact blue"><strong>Définition :</strong> acte médical délégué à certaines inhalothérapeutes (≥ 15 ponctions supervisées, autorisation spéciale au permis). Elle se fait à l'air ambiant ou sous O₂. ➜ voir Gazométrie et acide-base pour l'interprétation.</div><table><thead><tr><th>Indications</th><th>Contre-indications</th></tr></thead><tbody><tr><td>Éligibilité à l'O₂ à domicile · efficacité ou nécessité d'une thérapie (ex. BiPAP pour apnée centrale) · équilibre acido-basique (la gazométrie veineuse suffit pour cet aspect seul) · oxygénation en complément du bilan de base</td><td>Cannulation artérielle radiale récente (coronarographie, canule artérielle) · anomalie circulatoire · test d'Allen &gt; 10 s · pouls radial non perceptible · chirurgie récente du poignet</td></tr></tbody></table><div class="key-fact yellow"><strong>Nuance :</strong> les anticoagulants ne contre-indiquent pas la ponction ; on ajoute un pansement compressif.</div><h4 style="margin:14px 0 6px">Test de marche de 6 minutes (TM6M)</h4><div class="key-fact blue"><strong>Définition :</strong> test fait par un clinicien habilité à l'évaluation clinique (inhalothérapeute ou infirmier), utile au suivi des maladies pulmonaires chroniques (MPOC, fibrose, HTAP). Il peut se faire à l'air ambiant, sous O₂, ou les deux successivement après un temps de repos ; un aide à la marche est permis. Le pneumologue interprète les résultats.</div><div class="criteria-list"><div class="criteria-item"><div class="criteria-num blue">1</div><span><strong>Pré-test, au repos :</strong> signes vitaux, dyspnée (Borg), fatigue musculaire</span></div><div class="criteria-item"><div class="criteria-num blue">2</div><span><strong>Marche</strong> sur terrain plat, le plus rapidement possible, pendant <strong>6 minutes</strong></span></div><div class="criteria-item"><div class="criteria-num blue">3</div><span><strong>Monitorage</strong> de la SpO₂ et du pouls à chaque minute</span></div><div class="criteria-item"><div class="criteria-num blue">4</div><span><strong>Post-test :</strong> distance (m), signes vitaux, dyspnée, fatigue, temps de récupération</span></div><div class="criteria-item"><div class="criteria-num red">!</div><span>Contre-indications : HTA non contrôlée · angine instable · infarctus récent</span></div></div><h4 style="margin:14px 0 6px">Bilan neuromusculaire</h4><table><thead><tr><th>Test</th><th>Description</th><th>Utilité clinique</th></tr></thead><tbody><tr><td><strong>PIM (MIP)</strong></td><td>Force inspiratoire maximale à la bouche</td><td>Suivi des maladies neuromusculaires (Guillain-Barré, SLA, SEP, dystrophie musculaire)</td></tr><tr><td><strong>PEM (MEP)</strong></td><td>Force expiratoire maximale à la bouche</td><td>Idem PIM</td></tr><tr><td><strong>CV assis / couché</strong></td><td>Comparaison des deux positions</td><td>Atteinte neuromusculaire : CV ↓ en position couchée, ce qui permet d'objectiver et de quantifier</td></tr></tbody></table>
+      </div>
+
+      <div class="block clin u-19b365" id="pe-8-w" style="margin-top:14px;">
+        <div class="block-title" id="pe-8"><span class="tag">Cas cliniques — interprétation sommaire</span></div>
+        <table><thead><tr><th>Cas</th><th>Contexte</th><th>Données (étapes 1 à 4)</th><th>Conclusion</th></tr></thead><tbody><tr><td><strong>Cas 1 — Bilan normal</strong></td><td>F 36 ans, asthme d'enfance, Symbicort® SMART</td><td>Courbe normale · VEMS, CVF, Tiffeneau normaux · CPT &gt; 80 % · DLCO &gt; 80 %</td><td><strong>Bilan normal</strong></td></tr><tr><td><strong>Cas 2 — Restriction modérée + diffusion sévère</strong></td><td>F 41 ans, lupus, Ofev®</td><td>Courbe étroite et arrondie · ↓ proportionnelle VEMS et CVF, Tiffeneau &gt; 70 · CRF, CPT, VRE ↓ · DLCO 44 % (score Z −5,86)</td><td><strong>Restriction modérée avec atteinte sévère de la diffusion</strong></td></tr><tr><td><strong>Cas 3 — Obstruction sévère + emphysème</strong></td><td>H 67 ans, 199 paquets-années, Trelegy®</td><td>Courbe concave · ↓↓ VEMS (Tiffeneau &lt; 70, score Z −4,88), légère ↓ CVF · volumes ↑ (cloisonnement aérien) · DLCO 16 % (score Z −7,67)</td><td><strong>Obstruction sévère + atteinte sévère de la diffusion : compatible avec un emphysème</strong></td></tr><tr><td><strong>Cas 4 — Hyperinflation</strong></td><td>H 56 ans, nodule pulmonaire</td><td>VEMS 82 %, Tiffeneau 72, CVF 88 % (normaux) · CPT 97 %, CRF 134 %, VRE 171 % · DLCO 68 %</td><td><strong>Hyperinflation avec atteinte légère de la diffusion (score Z −2,25)</strong></td></tr><tr><td><strong>Cas 5 — Restriction légère</strong></td><td>H 60 ans, IMC 39,4, R/O MPOC</td><td>Courbe étroite, plateau &gt; 12 s · VEMS et CVF &lt; LIN, Tiffeneau &gt; 70 · CPT 78 %, CV 74 %, CRF 70 %, VRE 40 % · diffusion normale</td><td><strong>Anomalie restrictive légère (score Z &lt; −1,645)</strong></td></tr><tr><td><strong>Cas 6 — Obstruction légère + cloisonnement</strong></td><td>H 79 ans, Symbicort® + Spiriva®</td><td>Courbe concave, plateau &gt; 12 s · VEMS 81 %, CVF 101 %, Tiffeneau 60, aucune réponse au Ventolin · CPT normale, VRE 148 % · diffusion normale</td><td><strong>Obstruction légère avec cloisonnement aérien, sans réponse au BD</strong></td></tr><tr><td><strong>Cas 7 — HRB légère</strong></td><td>F 72 ans, dyspnée à l'effort</td><td>Spirométrie pré-test normale · méthacholine : PD20 = 60 mcg</td><td><strong>HRB légère, compatible avec une composante asthmatique</strong></td></tr><tr><td><strong>Cas 8 — HRB sévère</strong></td><td>F 59 ans, allergies multiples</td><td>Spirométrie pré-post normale · Symbicort® cessé 72 h, Réactine® cessée 1 semaine · PD20 &lt; 6 mcg</td><td><strong>HRB sévère, très compatible avec un asthme allergique</strong></td></tr><tr><td><strong>Cas 9 — Obstruction modérée réversible</strong></td><td>H 64 ans, Zenhale® BID</td><td>Tiffeneau 55 (score Z −2,69), <strong>réversible</strong> · CPT et VR ↓, CRF limite, VRE ↑ modéré · DLCO normale</td><td><strong>Obstruction modérée réversible sans atteinte de la diffusion : compatible avec un asthme</strong></td></tr><tr><td><strong>Cas 10 — Diffusion sévère sous réserve technique</strong></td><td>F 69 ans, sclérodermie / ILD</td><td>VEMS et CVF proportionnels, Tiffeneau normal · volumes normaux · DLCO 44 % (score Z −5,10)</td><td><strong>Bilan normal sauf atteinte sévère de la diffusion, sous réserve d'une mauvaise technique</strong></td></tr></tbody></table><div class="key-fact"><strong>Remarque :</strong> les 10 cas suivent la démarche en 5 étapes du bloc Bilan de base. Source : cas du cours MMD de M.-M. Coudé (HMR).</div>
+      </div>
+
+      <div class="block flag u-19b365" id="pe-9-w" style="margin-top:14px;">
+        <div class="block-title" id="pe-9"><span class="tag">Signaux d'alarme</span></div>
+        <div class="flag-list"><div class="flag-item"><span class="fi-icon"></span><span>DLCO &lt; 40 % : atteinte sévère de la membrane alvéolo-capillaire</span></div><div class="flag-item"><span class="fi-icon"></span><span>VEMS &lt; 60 % du prédit : contre-indication aux provocations bronchiques</span></div><div class="flag-item"><span class="fi-icon"></span><span>↓ CPT avec DLCO abaissée : maladie interstitielle</span></div><div class="flag-item"><span class="fi-icon"></span><span>Obstruction fixe non réversible : MPOC ou emphysème</span></div><div class="flag-item"><span class="fi-icon"></span><span>↑ VGT/CPT + ↓ DLCO : emphysème (cloisonnement aérien et destruction alvéolaire)</span></div><div class="flag-item"><span class="fi-icon"></span><span>PD20 &lt; 6 mcg : HRB sévère, investigation urgente</span></div><div class="flag-item"><span class="fi-icon"></span><span>Spirométrie normale + symptômes persistants : envisager une provocation bronchique ou une autre investigation (ORL, imagerie)</span></div></div><div class="key-fact" style="font-size:12px;"><strong>Sources :</strong> <em>Coudé M.-M., Fonction pulmonaire (cours MMD, HMR)</em> · <em>Graham, ATS Spirometry 2019</em> · <em>ATS/ERS 2017 (DLCO)</em> · <em>Irvin, UpToDate 2023</em> · <em>Kaminsky, UpToDate 2024</em> · <em>Beasley, AJRCCM 2024</em>.</div>
+      </div>
+
     </div>
 
     <!-- 30c Gazométrie & Anomalies Acide-Base -->
@@ -23948,34 +23999,67 @@ function dkRenal(view) {
         <div id="pntx1" style="display:none;">
           <div style="background:#E1F3FE;border-radius:10px;border-left:2px solid #1F6C9F;padding:12px 16px;margin-bottom:8px;">
             <div class="u-ee659d">Traitement standard hospitalisé (service général)</div>
-            <div class="u-32036f">
-              <span class="drug-badge line1">Combinaison</span> <strong>Ceftriaxone</strong> 1–2 g IV DIE + <strong>Azithromycine</strong> 500 mg IV/PO DIE × 5 j<br>
-              OU <strong>Ampicilline-sulbactam</strong> 3 g IV q6h + Azithromycine (si risque aspiration)<br>
-              <span class="drug-badge line3">Alternative</span> <strong>Lévofloxacine</strong> 750 mg IV/PO DIE × 5 j (si allergie &beta;-lactamine)
-            </div>
+            <table class="u-7d15ea">
+<thead><tr><th>Situation</th><th>Antibiotique</th><th>Posologie</th><th>Durée</th></tr></thead>
+<tbody>
+<tr class="r-gray"><td rowspan="2" style="font-weight:700;text-align:center;vertical-align:middle;font-size:12px;padding:8px;color:#1F6C9F;"><span class="drug-badge line1">Combinaison</span></td><td><strong>Ceftriaxone</strong></td><td>1–2 g IV DIE</td><td></td></tr>
+<tr><td>+ <strong>Azithromycine</strong></td><td>500 mg IV/PO DIE</td><td class="u-56cdbb">× 5 j</td></tr>
+<tr class="r-gray"><td rowspan="2" style="font-weight:700;text-align:center;vertical-align:middle;font-size:12px;padding:8px;color:#6B6A66;">OU</td><td><strong>Ampicilline-sulbactam</strong></td><td>3 g IV q6h</td><td></td></tr>
+<tr><td>+ Azithromycine (si risque aspiration)</td><td></td><td></td></tr>
+<tr class="r-gray"><td rowspan="1" style="font-weight:700;text-align:center;vertical-align:middle;font-size:12px;padding:8px;color:#1F6C9F;"><span class="drug-badge line3">Alternative</span></td><td><strong>Lévofloxacine</strong> (si allergie &beta;-lactamine)</td><td>750 mg IV/PO DIE</td><td class="u-56cdbb">× 5 j</td></tr>
+</tbody>
+</table>
           </div>
           <div style="background:#EDF3EC;border-radius:10px;border-left:2px solid #346538;padding:12px 16px;">
             <div class="u-ee659d">Transition IV → PO et durée</div>
-            <div class="u-32036f">
-              Switch IV → PO dès : Apyrexie &gt;24h · FC &lt;100/min · FR &lt;24/min · SpO₂ stable · Alimentation PO tolérée<br>
-              <strong>Durée totale :</strong> 5–7 j (minimum 5 j, afébrile &gt;48h avant arrêt)
-            </div>
+            <div class="u-32036f">Switch IV → PO dès :</div>
+            <table class="u-7d15ea">
+<thead><tr><th>Critère</th><th>Valeur</th></tr></thead>
+<tbody>
+<tr class="r-gray"><td>Apyrexie</td><td>&gt;24h</td></tr>
+<tr><td>FC</td><td>&lt;100/min</td></tr>
+<tr class="r-gray"><td>FR</td><td>&lt;24/min</td></tr>
+<tr><td>SpO₂</td><td>stable</td></tr>
+<tr class="r-gray"><td>Alimentation PO</td><td>tolérée</td></tr>
+<tr><td><strong>Durée totale :</strong></td><td>5–7 j (minimum 5 j, afébrile &gt;48h avant arrêt)</td></tr>
+</tbody>
+</table>
           </div>
         </div>
         <div id="pntx2" style="display:none;">
           <div style="background:#F7F6F3;border-radius:10px;border-left:2px solid #9F2F2D;padding:12px 16px;margin-bottom:8px;">
             <div style="font-weight:700;color:#9F2F2D;margin-bottom:6px;">PAC sévère / USI — critères ATS/IDSA (≥1 majeur OU ≥3 mineurs)</div>
-            <div class="u-32036f">Majeurs : VM invasive · Choc septique avec vasopresseurs<br>
-            Mineurs : FR ≥30 · PaO₂/FiO₂ &lt;250 · Multilobaire · Confusion · Urée &gt;8 mmol/L · Leucopénie · Thrombopénie · Hypothermie · Hypotension nécessitant remplissage</div>
+            <table class="u-7d15ea">
+<thead><tr><th>Critère</th><th>Valeur</th></tr></thead>
+<tbody>
+<tr class="r-gray"><td><strong>Majeurs :</strong> VM invasive</td><td></td></tr>
+<tr><td>Choc septique</td><td>avec vasopresseurs</td></tr>
+<tr class="r-gray"><td><strong>Mineurs :</strong> FR</td><td>≥30</td></tr>
+<tr><td>PaO₂/FiO₂</td><td>&lt;250</td></tr>
+<tr class="r-gray"><td>Multilobaire</td><td></td></tr>
+<tr><td>Confusion</td><td></td></tr>
+<tr class="r-gray"><td>Urée</td><td>&gt;8 mmol/L</td></tr>
+<tr><td>Leucopénie</td><td></td></tr>
+<tr class="r-gray"><td>Thrombopénie</td><td></td></tr>
+<tr><td>Hypothermie</td><td></td></tr>
+<tr class="r-gray"><td>Hypotension</td><td>nécessitant remplissage</td></tr>
+</tbody>
+</table>
           </div>
           <div style="background:#E1F3FE;border-radius:10px;border-left:2px solid #1F6C9F;padding:12px 16px;">
             <div class="u-ee659d">ATB — PAC sévère (USI)</div>
-            <div class="u-32036f">
-              <span class="drug-badge line1">Standard</span> <strong>Ceftriaxone</strong> 2 g IV DIE + <strong>Azithromycine</strong> 500 mg IV DIE<br>
-              <span class="drug-badge warn">Si Pseudomonas suspecté</span> (MPOC sévère, bronchiectasies, Tx immunosuppresseurs) → <strong>Pipéracilline-tazobactam</strong> 4,5 g IV q6h + Ciprofloxacine 400 mg IV q12h<br>
-              <span class="drug-badge ci">Si SARM suspecté</span> (post-grippe, DU, cavitations) → Ajouter <strong>Vancomycine</strong> 15–20 mg/kg IV q8-12h OU <strong>Linézolide</strong> 600 mg IV/PO BID<br>
-              Durée : 7–10 j si bonne réponse
-            </div>
+            <table class="u-7d15ea">
+<thead><tr><th>Situation</th><th>Antibiotique</th><th>Posologie</th><th>Durée</th></tr></thead>
+<tbody>
+<tr class="r-gray"><td rowspan="2" style="font-weight:700;text-align:center;vertical-align:middle;font-size:12px;padding:8px;color:#1F6C9F;"><span class="drug-badge line1">Standard</span></td><td><strong>Ceftriaxone</strong></td><td>2 g IV DIE</td><td></td></tr>
+<tr><td>+ <strong>Azithromycine</strong></td><td>500 mg IV DIE</td><td></td></tr>
+<tr class="r-gray"><td rowspan="2" style="font-weight:700;text-align:center;vertical-align:middle;font-size:12px;padding:8px;color:#9F2F2D;"><span class="drug-badge warn">Si Pseudomonas suspecté</span> (MPOC sévère, bronchiectasies, Tx immunosuppresseurs) →</td><td><strong>Pipéracilline-tazobactam</strong></td><td>4,5 g IV q6h</td><td></td></tr>
+<tr><td>+ Ciprofloxacine</td><td>400 mg IV q12h</td><td></td></tr>
+<tr class="r-gray"><td rowspan="2" style="font-weight:700;text-align:center;vertical-align:middle;font-size:12px;padding:8px;color:#9F2F2D;"><span class="drug-badge ci">Si SARM suspecté</span> (post-grippe, DU, cavitations) →</td><td>Ajouter <strong>Vancomycine</strong></td><td>15–20 mg/kg IV q8-12h</td><td></td></tr>
+<tr><td>OU <strong>Linézolide</strong></td><td>600 mg IV/PO BID</td><td></td></tr>
+<tr class="r-gray"><td colspan="4"><strong>Durée :</strong> 7–10 j si bonne réponse</td></tr>
+</tbody>
+</table>
           </div>
         </div>
         <div id="pntx3" style="display:none;">
@@ -23983,20 +24067,33 @@ function dkRenal(view) {
             <div class="u-ee659d">Pneumonie d&apos;aspiration</div>
             <div class="u-32036f">
               FdR : dysphagie, RGO, altération conscience, personnes âgées, troubles neuromusculaires, alcool<br>
-              Germes : flore oropharyngée anaérobies (<em>Bacteroides, Fusobacterium, Peptostreptococcus</em>) + gram-négatifs<br>
-              <span class="drug-badge line1">1re ligne</span> <strong>Amoxicilline-clavulanate</strong> 875/125 BID × 7–10 j (ambulatoire)<br>
-              OU <strong>Clindamycine</strong> 450 mg TID × 7–10 j + céphalosporine si gram-négatifs<br>
-              <span class="drug-badge line2">Hospitalisé</span> <strong>Ampicilline-sulbactam</strong> 3 g IV q6h OU Pipéra-tazobactam si risque gram-négatifs élevé
+              Germes : flore oropharyngée anaérobies (<em>Bacteroides, Fusobacterium, Peptostreptococcus</em>) + gram-négatifs
             </div>
+            <table class="u-7d15ea">
+<thead><tr><th>Situation</th><th>Antibiotique</th><th>Posologie</th><th>Durée</th></tr></thead>
+<tbody>
+<tr class="r-gray"><td rowspan="2" style="font-weight:700;text-align:center;vertical-align:middle;font-size:12px;padding:8px;color:#1F6C9F;"><span class="drug-badge line1">1re ligne</span> (ambulatoire)</td><td><strong>Amoxicilline-clavulanate</strong></td><td>875/125 BID</td><td class="u-56cdbb">× 7–10 j</td></tr>
+<tr><td>OU <strong>Clindamycine</strong> + céphalosporine si gram-négatifs</td><td>450 mg TID</td><td class="u-56cdbb">× 7–10 j</td></tr>
+<tr class="r-gray"><td rowspan="2" style="font-weight:700;text-align:center;vertical-align:middle;font-size:12px;padding:8px;color:#1F6C9F;"><span class="drug-badge line2">Hospitalisé</span></td><td><strong>Ampicilline-sulbactam</strong></td><td>3 g IV q6h</td><td></td></tr>
+<tr><td>OU Pipéra-tazobactam si risque gram-négatifs élevé</td><td></td><td></td></tr>
+</tbody>
+</table>
           </div>
           <div style="background:#E1F3FE;border-radius:10px;border-left:2px solid #1F6C9F;padding:12px 16px;">
             <div class="u-ee659d">Pneumonie atypique &amp; cas particuliers</div>
-            <div class="u-32036f">
-              <strong>Legionella :</strong> Lévofloxacine 750 mg DIE × 5–10 j (1re ligne) OU Azithromycine IV si sévère<br>
-              <strong>Pneumonie virale (influenza) :</strong> Oseltamivir 75 mg BID × 5 j (début &lt; 48h) — traiter même si &gt;48h si hospitalisation<br>
-              <strong>Pneumonie COVID-19 sévère :</strong> Dexaméthasone 6 mg DIE × 10 j + Remdesivir IV (si O₂) ± Baricitinib 4 mg DIE<br>
-              <strong>Immunosupprimé :</strong> Couvrir PCP (<em>Pneumocystis jirovecii</em>) → TMP-SMX 15–20 mg/kg/j (si CD4 &lt;200 ou cortico &gt;20 mg × &gt;3 sem) + élargir couverture fongique/virale
-            </div>
+            <table class="u-7d15ea">
+<thead><tr><th>Situation</th><th>Antibiotique</th><th>Posologie</th><th>Durée</th></tr></thead>
+<tbody>
+<tr class="r-gray"><td rowspan="2" style="font-weight:700;text-align:center;vertical-align:middle;font-size:12px;padding:8px;color:#1F6C9F;"><strong>Legionella :</strong></td><td>Lévofloxacine (1re ligne)</td><td>750 mg DIE</td><td class="u-56cdbb">× 5–10 j</td></tr>
+<tr><td>OU Azithromycine IV si sévère</td><td></td><td></td></tr>
+<tr class="r-gray"><td rowspan="1" style="font-weight:700;text-align:center;vertical-align:middle;font-size:12px;padding:8px;color:#1F6C9F;"><strong>Pneumonie virale (influenza) :</strong></td><td>Oseltamivir</td><td>75 mg BID</td><td class="u-56cdbb">× 5 j<br>(début &lt; 48h) — traiter même si &gt;48h si hospitalisation</td></tr>
+<tr><td rowspan="3" style="font-weight:700;text-align:center;vertical-align:middle;font-size:12px;padding:8px;color:#1F6C9F;"><strong>Pneumonie COVID-19 sévère :</strong></td><td>Dexaméthasone</td><td>6 mg DIE</td><td class="u-56cdbb">× 10 j</td></tr>
+<tr class="r-gray"><td>+ Remdesivir IV (si O₂)</td><td></td><td></td></tr>
+<tr><td>± Baricitinib</td><td>4 mg DIE</td><td></td></tr>
+<tr class="r-gray"><td rowspan="2" style="font-weight:700;text-align:center;vertical-align:middle;font-size:12px;padding:8px;color:#1F6C9F;"><strong>Immunosupprimé :</strong></td><td>Couvrir PCP (<em>Pneumocystis jirovecii</em>) → TMP-SMX</td><td>15–20 mg/kg/j (si CD4 &lt;200 ou cortico &gt;20 mg × &gt;3 sem)</td><td></td></tr>
+<tr><td colspan="3">+ élargir couverture fongique/virale</td></tr>
+</tbody>
+</table>
           </div>
         </div>
               <div class="u-efbd9">LES CINQ RÈGLES QUI ENTOURENT L&#39;ORDONNANCE</div>
@@ -60930,7 +61027,7 @@ const SEARCH_INDEX = [
   { id:'antibiotherapie',     title:'Antibiothérapie',                specialty:'Microbiologie',  keywords:['antibiotique','pénicilline','céphalosporine','fluoroquinolone','résistance'] },
   { id:'aso',                 title:'Apnée du Sommeil Obstructive',   specialty:'Pneumologie',    keywords:['apnée sommeil','aso','cpap','iah'] },
   { id:'apnee-centrale',      title:'Apnée Centrale',                 specialty:'Pneumologie',    keywords:['apnée centrale','hypoventilation','bpap'] },
-  { id:'pneumo-eval',           title:'Évaluation Pulmonaire',             specialty:'Pneumologie',    keywords:['évaluation pulmonaire','tfr','spirométrie','dyspnée','symptômes respiratoires'] },
+  { id:'pneumo-eval',           title:'Évaluation Pulmonaire',             specialty:'Pneumologie',    keywords:['évaluation pulmonaire','tfr','spirométrie','spirometrie','dyspnée','dyspnee','symptômes respiratoires','bilan de base','dlco','diffusion du co','pléthysmographie','plethysmographie','score z','méthacholine','methacholine','mannitol','pd20','provocation bronchique','hyperréactivité bronchique','hrb','test de marche 6 minutes','tm6m','pim','pem','bdt','test bronchodilatateur','tiffeneau','vems','cvf','cpt'] },
   { id:'asthme',              title:'Asthme',                         specialty:'Pneumologie',    keywords:['asthme','bronchospasme','vems','gina','ventolin','fluticasone'] },
   { id:'mpoc',                title:'MPOC',                           specialty:'Pneumologie',    keywords:['mpoc','emphysème','bronchite chronique','gold','spirométrie'] },
   { id:'pneumo-aco',            title:'ACO — Chevauchement Asthme-MPOC',  specialty:'Pneumologie',    keywords:['aco','chevauchement','asthme mpoc','overlap','csc/bala/amla'] },
@@ -61443,6 +61540,19 @@ function srchGo(i) {
 }
 // Compatibilité : anciens appels
 function showSectionAndScroll(id) { showSection(id); closeSearch(); }
+
+// Barre d'ancres : fondu à droite tant qu'il reste des onglets hors champ
+function navFade() {
+  document.querySelectorAll('.section.active .m-navbar').forEach(function (b) {
+    b.classList.toggle('more', b.scrollWidth - b.clientWidth - b.scrollLeft > 4);
+  });
+}
+document.addEventListener('scroll', function (e) {
+  if (e.target.classList && e.target.classList.contains('m-navbar')) navFade();
+}, true);
+['resize', 'hashchange', 'load', 'click'].forEach(function (ev) {
+  window.addEventListener(ev, function () { setTimeout(navFade, 60); });
+});
 
 let _srchTimer = null;
 searchInput.addEventListener('input', () => {
