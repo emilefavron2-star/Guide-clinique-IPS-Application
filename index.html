@@ -1703,6 +1703,14 @@ m
     .section .u-a4825c{color:#6B6A66 !important;font-size:13px !important;}
     .section .u-a7471{color:#6B6A66 !important;}
     .section .u-adf69c{color:#2F3437 !important;font-size:13px !important;font-weight:800 !important;letter-spacing:.4px !important;margin-top:18px !important;}
+    .section .ty-head{border:1px solid;border-radius:6px;padding:12px 14px;}
+    .section .ty-name{font-family:'Newsreader',serif;font-size:17px;font-weight:500;line-height:1.25;}
+    .section .ty-sub{font-size:12px;color:#6B6A66;margin-top:2px;}
+    .section .ty-mot{font-size:13px;line-height:1.55;color:#2F3437;margin-top:8px;padding-top:8px;border-top:1px solid #EAEAEA;}
+    .section .ty-cmp{min-width:560px;}
+    .section .ty-link{all:unset;cursor:pointer;font-weight:600;border-bottom:1px solid #EAEAEA;}
+    .section .ty-link:hover,.section .ty-link:focus-visible{border-bottom-color:#2F3437;}
+    .section .ty-link:focus-visible{outline:2px solid #2F3437;outline-offset:2px;}
     .section .u-b29b60{font-size:13px !important;margin-top:8px !important;}
     .section .u-b3f8d7{display:flex !important;flex-wrap:wrap !important;gap:8px !important;margin-top:12px !important;}
     .section .u-bad07b{margin-bottom:4px !important;}
@@ -24924,7 +24932,7 @@ function dkRenal(view) {
         </table>
         </div>
         <div class="u-875128"><span class="u-708a45"><em>Goldman-Cecil, ch. 91 (26<sup>e</sup> éd.)</em></span></div>
-        <div class="u-adf69c">LES SEPT TYPIQUES — TERRAIN, TABLEAU, RADIOGRAPHIE ET LE TEST QUI TRANCHE</div>
+        <div class="u-adf69c">Les sept typiques — terrain, tableau, radiographie et test qui tranche</div>
         <div class="u-b3f8d7">
           <button data-panel="pnty0" onclick="showPanel('pnty','pnty0',8)" style="background:#2F3437;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;transition:.15s;">Comparer</button>
           <button data-panel="pnty1" onclick="showPanel('pnty','pnty1',8)" style="background:#e0e0e0;color:#333;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:12px;font-weight:600;transition:.15s;"><strong><em>Streptococcus pneumoniae</em></strong></button>
@@ -24937,22 +24945,23 @@ function dkRenal(view) {
         </div>
         <div id="pnty0" style="display:block;margin-top:12px;">
 <div class="u-300634">
-        <table class="u-7d15ea" style="font-size:12px;">
-          <thead><tr><th>Germe</th><th>Terrain</th><th>Le test</th><th style="width:15%;">En un mot</th></tr></thead>
+        <table class="u-7d15ea ty-cmp" style="font-size:12px;">
+          <colgroup><col style="width:20%"><col style="width:26%"><col style="width:24%"><col></colgroup>
+          <thead><tr><th>Germe</th><th>Terrain</th><th>Radiographie</th><th>Le test</th></tr></thead>
           <tbody>
-            <tr><td><strong><strong><em>Streptococcus pneumoniae</em></strong></strong></td><td>cause bactérienne la plus fréquente</td><td>Gram d&#39;expectorations · antigène urinaire · hémocultures</td><td><strong>Pneumonie lobaire bactérienne classique</strong> : crachats rouillés, condensation dense, Gram et antigène urinaire.</td></tr>
-            <tr class="r-gray"><td><strong><strong><em>Staphylococcus aureus</em></strong></strong></td><td>post-grippal · SARM communautaire</td><td>culture ; hémocultures si forme hématogène</td><td><strong>Post-grippal ou SARM communautaire</strong> : nécrosante, cavitaire. Forme hématogène : lésions rondes qui cavitent.</td></tr>
-            <tr><td><strong><strong><em>Haemophilus influenzae</em></strong></strong></td><td>MPOC, personnes âgées</td><td>culture sur gélose chocolat, avec CO₂</td><td><strong>MPOC, personnes âgées</strong>. Expectorations purulentes ; le Gram trompe, la culture sur chocolat tranche.</td></tr>
-            <tr class="r-gray"><td><strong><strong><em>Moraxella catarrhalis</em></strong></strong></td><td>exacerbations de MPOC</td><td>petits diplocoques Gram négatifs · culture</td><td><strong>Exacerbations de MPOC</strong>. Petits diplocoques Gram négatifs ; hémocultures rarement positives.</td></tr>
-            <tr><td><strong><strong><em>Klebsiella pneumoniae</em></strong></strong></td><td>nosocomiale ou associée aux soins</td><td>bacilles Gram négatifs · culture</td><td><strong>Condensation dense</strong> comme le pneumocoque ; alcoolisme (en recul), surtout <strong>nosocomiale</strong>.</td></tr>
-            <tr class="r-gray"><td><strong><strong><em>Escherichia coli</em></strong></strong></td><td>nosocomiale ou associée aux soins</td><td>bacilles Gram négatifs · culture</td><td><strong>Surtout nosocomiale</strong> ; aucune image ni présentation distinctive.</td></tr>
-            <tr><td><strong><strong><em>Pseudomonas aeruginosa</em></strong></strong></td><td>patient à risque, maladie pulmonaire structurelle</td><td>culture d&#39;expectorations ; couverture multi-agent</td><td><strong>Terrain structurel</strong> (bronchiectasies, FK, MPOC avancée), antibiotiques récents ; <strong>résistance</strong> : plus d&#39;un agent.</td></tr>
+            <tr><td><button type="button" class="ty-link" onclick="showPanel('pnty','pnty1',8)"><em>Streptococcus pneumoniae</em></button></td><td>cause bactérienne la plus fréquente</td><td>condensation dense, segmentaire ou lobaire</td><td>Gram d&#39;expectorations · antigène urinaire · hémocultures</td></tr>
+            <tr class="r-gray"><td><button type="button" class="ty-link" onclick="showPanel('pnty','pnty2',8)"><em>Staphylococcus aureus</em></button></td><td>post-grippal · SARM communautaire</td><td>aucune image distinctive ; forme hématogène : lésions rondes qui cavitent</td><td>culture ; hémocultures si forme hématogène</td></tr>
+            <tr><td><button type="button" class="ty-link" onclick="showPanel('pnty','pnty3',8)"><em>Haemophilus influenzae</em></button></td><td>MPOC, personnes âgées</td><td>aucune image distinctive</td><td>culture sur gélose chocolat, avec CO₂</td></tr>
+            <tr class="r-gray"><td><button type="button" class="ty-link" onclick="showPanel('pnty','pnty4',8)"><em>Moraxella catarrhalis</em></button></td><td>exacerbations de MPOC</td><td>aucune image distinctive</td><td>petits diplocoques Gram négatifs · culture</td></tr>
+            <tr><td><button type="button" class="ty-link" onclick="showPanel('pnty','pnty5',8)"><em>Klebsiella pneumoniae</em></button></td><td>nosocomiale ou associée aux soins</td><td>condensation dense, segmentaire ou lobaire</td><td>bacilles Gram négatifs · culture</td></tr>
+            <tr class="r-gray"><td><button type="button" class="ty-link" onclick="showPanel('pnty','pnty6',8)"><em>Escherichia coli</em></button></td><td>nosocomiale ou associée aux soins</td><td>aucune image distinctive</td><td>bacilles Gram négatifs · culture</td></tr>
+            <tr><td><button type="button" class="ty-link" onclick="showPanel('pnty','pnty7',8)"><em>Pseudomonas aeruginosa</em></button></td><td>patient à risque, maladie pulmonaire structurelle</td><td>aucune image distinctive</td><td>culture d&#39;expectorations ; couverture multi-agent</td></tr>
           </tbody>
         </table>
         </div>
         </div>
         <div id="pnty1" style="display:none;margin-top:12px;">
-<div style="background:#E1F3FE;border-left:2px solid #1F6C9F;padding:12px 14px;"><strong style="color:#1F6C9F;font-size:14px;"><strong><em>Streptococcus pneumoniae</em></strong></strong><div style="font-size:12px;margin-top:2px;">cause bactérienne la plus fréquente</div></div><div class="u-300634">
+<div class="ty-head" style="background:#E1F3FE;border-color:#1F6C9F33;"><div class="ty-name" style="color:#1F6C9F;"><em>Streptococcus pneumoniae</em></div><div class="ty-sub">cause bactérienne la plus fréquente</div><div class="ty-mot"><strong>Pneumonie lobaire bactérienne classique</strong> : crachats rouillés, condensation dense, Gram et antigène urinaire.</div></div><div class="u-300634">
         <table class="u-7d15ea" style="table-layout:fixed;width:100%;font-size:12px;">
           <colgroup><col style="width:22%"><col></colgroup>
           <tbody>
@@ -24966,13 +24975,13 @@ function dkRenal(view) {
         </div>
         </div>
         <div id="pnty2" style="display:none;margin-top:12px;">
-<div style="background:#FDEBEC;border-left:2px solid #9F2F2D;padding:12px 14px;"><strong style="color:#9F2F2D;font-size:14px;"><strong><em>Staphylococcus aureus</em></strong></strong><div style="font-size:12px;margin-top:2px;">post-grippal · SARM communautaire</div></div><div class="u-300634">
+<div class="ty-head" style="background:#FDEBEC;border-color:#9F2F2D33;"><div class="ty-name" style="color:#9F2F2D;"><em>Staphylococcus aureus</em></div><div class="ty-sub">post-grippal · SARM communautaire</div><div class="ty-mot"><strong>Post-grippal ou SARM communautaire</strong> : nécrosante, cavitaire. Forme hématogène : lésions rondes qui cavitent.</div></div><div class="u-300634">
         <table class="u-7d15ea" style="table-layout:fixed;width:100%;font-size:12px;">
           <colgroup><col style="width:22%"><col></colgroup>
           <tbody>
             <tr><td><strong>Terrain</strong></td><td><strong>Post-grippal</strong>.<br><strong>SARM communautaire</strong> : lésions cutanées à SARM antérieures, <strong>sports de contact</strong>, <strong>drogues injectables</strong>, milieux surpeuplés, hommes ayant des relations sexuelles avec des hommes · antibiotiques IV récents, <strong>immunosuppression</strong>. <span class="u-708a45"><em>UpToDate, PAC chez l&#39;adulte</em></span></td></tr>
             <tr class="r-gray"><td><strong>Le tableau</strong></td><td>Le SARM communautaire peut être grave : <strong>pneumonie nécrosante ou cavitaire</strong>, <strong>empyème</strong>, <strong>hémoptysie</strong>, <strong>choc septique</strong>, insuffisance respiratoire. <span class="u-708a45"><em>UpToDate, PAC chez l&#39;adulte</em></span></td></tr>
-            <tr><td><strong>Les expectorations</strong></td><td>Aucune description distincte dans les sources de la bibliothèque.</td></tr>
+            <tr><td><strong>Non distinctifs</strong></td><td>Les expectorations : <strong>rien de distinct</strong> dans les sources de la bibliothèque.</td></tr>
             <tr class="r-gray"><td><strong>La radiographie</strong></td><td><strong>Microaspiration</strong> : impossible à distinguer des autres pneumonies bactériennes.<br><strong>Forme hématogène</strong> (endocardite, foyer intravasculaire) : <strong>lésions rondes de 1 à 3 cm qui cavitent</strong> — l&#39;une des <strong>rares images distinctives</strong>. <span class="u-708a45"><em>Goldman-Cecil, ch. 91 (26<sup>e</sup> éd.)</em></span></td></tr>
             <tr><td><strong>Le test</strong></td><td><strong>La culture pousse facilement</strong>. Si le Gram n&#39;a rien montré, un <em>S. aureus</em> en culture peut être de la <strong>flore de contamination</strong>.<br>Forme hématogène : <strong>hémocultures presque toujours positives</strong>. <span class="u-708a45"><em>Goldman-Cecil, ch. 91 (26<sup>e</sup> éd.)</em></span></td></tr>
           </tbody>
@@ -24980,12 +24989,12 @@ function dkRenal(view) {
         </div>
         </div>
         <div id="pnty3" style="display:none;margin-top:12px;">
-<div style="background:#EDF3EC;border-left:2px solid #346538;padding:12px 14px;"><strong style="color:#346538;font-size:14px;"><strong><em>Haemophilus influenzae</em></strong></strong><div style="font-size:12px;margin-top:2px;">MPOC, personnes âgées</div></div><div class="u-300634">
+<div class="ty-head" style="background:#EDF3EC;border-color:#34653833;"><div class="ty-name" style="color:#346538;"><em>Haemophilus influenzae</em></div><div class="ty-sub">MPOC, personnes âgées</div><div class="ty-mot"><strong>MPOC, personnes âgées</strong>. Expectorations purulentes ; le Gram trompe, la culture sur chocolat tranche.</div></div><div class="u-300634">
         <table class="u-7d15ea" style="table-layout:fixed;width:100%;font-size:12px;">
           <colgroup><col style="width:22%"><col></colgroup>
           <tbody>
             <tr><td><strong>Terrain</strong></td><td><strong>MPOC</strong>, personnes âgées. Souvent une souche <strong>non typable</strong>.</td></tr>
-            <tr class="r-gray"><td><strong>Le tableau</strong></td><td>Aucune présentation distincte dans les sources de la bibliothèque.</td></tr>
+            <tr class="r-gray"><td><strong>Non distinctifs</strong></td><td>Le tableau : <strong>rien de distinct</strong> dans les sources de la bibliothèque.</td></tr>
             <tr><td><strong>Les expectorations</strong></td><td>Des <strong>bacilles Gram négatifs pléomorphes</strong> dominent dans des expectorations <strong>purulentes</strong> (trachéobronchite). <span class="u-708a45"><em>Goldman-Cecil, ch. 284</em></span></td></tr>
             <tr class="r-gray"><td><strong>La radiographie</strong></td><td>Aucune image distinctive. <span class="u-708a45"><em>Goldman-Cecil, ch. 91 (26<sup>e</sup> éd.)</em></span></td></tr>
             <tr><td><strong>Le test</strong></td><td><strong>Culture</strong> sur <strong>gélose chocolat</strong>, avec CO₂.<br>Le Gram <strong>n&#39;est ni sensible ni spécifique</strong> : la <strong>coloration bipolaire</strong> le fait parfois prendre pour un pneumocoque.<br><strong>Hémocultures</strong> rarement positives. <span class="u-708a45"><em>Goldman-Cecil, ch. 91 (26<sup>e</sup> éd.)</em></span> <span class="u-708a45"><em>Goldman-Cecil, ch. 284</em></span></td></tr>
@@ -24994,57 +25003,57 @@ function dkRenal(view) {
         </div>
         </div>
         <div id="pnty4" style="display:none;margin-top:12px;">
-<div style="background:#FBF3DB;border-left:2px solid #956400;padding:12px 14px;"><strong style="color:#956400;font-size:14px;"><strong><em>Moraxella catarrhalis</em></strong></strong><div style="font-size:12px;margin-top:2px;">exacerbations de MPOC</div></div><div class="u-300634">
+<div class="ty-head" style="background:#FBF3DB;border-color:#95640033;"><div class="ty-name" style="color:#956400;"><em>Moraxella catarrhalis</em></div><div class="ty-sub">exacerbations de MPOC</div><div class="ty-mot"><strong>Exacerbations de MPOC</strong>. Petits diplocoques Gram négatifs ; hémocultures rarement positives.</div></div><div class="u-300634">
         <table class="u-7d15ea" style="table-layout:fixed;width:100%;font-size:12px;">
           <colgroup><col style="width:22%"><col></colgroup>
           <tbody>
             <tr><td><strong>Terrain</strong></td><td><strong>Exacerbations de MPOC</strong> et bronchite chronique de l&#39;adulte ; otite moyenne chez l&#39;enfant. <span class="u-708a45"><em>Goldman-Cecil, ch. 284</em></span></td></tr>
-            <tr class="r-gray"><td><strong>Le tableau</strong></td><td>Aucune présentation distincte dans les sources de la bibliothèque.</td></tr>
-            <tr><td><strong>Les expectorations</strong></td><td>Aucune description distincte dans les sources de la bibliothèque.</td></tr>
-            <tr class="r-gray"><td><strong>La radiographie</strong></td><td>Aucune image distinctive.</td></tr>
+            <tr class="r-gray"><td><strong>Non distinctifs</strong></td><td>Le tableau · les expectorations · la radiographie : <strong>rien de distinct</strong> dans les sources de la bibliothèque.</td></tr>
+            
+            
             <tr><td><strong>Le test</strong></td><td><strong>Petits diplocoques Gram négatifs</strong>, poussent bien sur gélose sang ou chocolat.<br><strong>Hémocultures</strong> positives seulement <strong>rarement</strong>. <span class="u-708a45"><em>Goldman-Cecil, ch. 91 (26<sup>e</sup> éd.)</em></span> <span class="u-708a45"><em>Goldman-Cecil, ch. 284</em></span></td></tr>
           </tbody>
         </table>
         </div>
         </div>
         <div id="pnty5" style="display:none;margin-top:12px;">
-<div style="background:#F7F6F3;border-left:2px solid #2F3437;padding:12px 14px;"><strong style="color:#2F3437;font-size:14px;"><strong><em>Klebsiella pneumoniae</em></strong></strong><div style="font-size:12px;margin-top:2px;">nosocomiale ou associée aux soins</div></div><div class="u-300634">
+<div class="ty-head" style="background:#F7F6F3;border-color:#2F343733;"><div class="ty-name" style="color:#2F3437;"><em>Klebsiella pneumoniae</em></div><div class="ty-sub">nosocomiale ou associée aux soins</div><div class="ty-mot"><strong>Condensation dense</strong> comme le pneumocoque ; alcoolisme (en recul), surtout <strong>nosocomiale</strong>.</div></div><div class="u-300634">
         <table class="u-7d15ea" style="table-layout:fixed;width:100%;font-size:12px;">
           <colgroup><col style="width:22%"><col></colgroup>
           <tbody>
             <tr><td><strong>Terrain</strong></td><td>Longtemps associée à l&#39;<strong>alcoolisme</strong> en communauté, mais <strong>en recul</strong>. Surtout <strong>nosocomiale ou associée aux soins</strong>.<br>Souche <strong>hypervirulente</strong> : abcès hépatique, ostéomyélite, endophtalmie chez des sujets <strong>sains</strong> (surtout l&#39;Asie). <span class="u-708a45"><em>Goldman-Cecil, ch. 289</em></span></td></tr>
-            <tr class="r-gray"><td><strong>Le tableau</strong></td><td>Aucune présentation distincte dans les sources de la bibliothèque.</td></tr>
-            <tr><td><strong>Les expectorations</strong></td><td>Aucune description distincte dans les sources de la bibliothèque.</td></tr>
-            <tr class="r-gray"><td><strong>La radiographie</strong></td><td><strong>Condensation dense</strong> segmentaire ou lobaire, comme le pneumocoque. <span class="u-708a45"><em>Goldman-Cecil, ch. 91 (26<sup>e</sup> éd.)</em></span></td></tr>
-            <tr><td><strong>Le test</strong></td><td><strong>Bacilles Gram négatifs</strong> au Gram et <strong>culture</strong> d&#39;expectorations (ou hémocultures). Attention : une culture seule, sans bacilles vus au Gram, peut refléter de la flore de la bouche. <span class="u-708a45"><em>Goldman-Cecil, ch. 91 (26<sup>e</sup> éd.)</em></span></td></tr>
+            <tr class="r-gray"><td><strong>Non distinctifs</strong></td><td>Le tableau · les expectorations : <strong>rien de distinct</strong> dans les sources de la bibliothèque.</td></tr>
+            
+            <tr><td><strong>La radiographie</strong></td><td><strong>Condensation dense</strong> segmentaire ou lobaire, comme le pneumocoque. <span class="u-708a45"><em>Goldman-Cecil, ch. 91 (26<sup>e</sup> éd.)</em></span></td></tr>
+            <tr class="r-gray"><td><strong>Le test</strong></td><td><strong>Bacilles Gram négatifs</strong> au Gram et <strong>culture</strong> d&#39;expectorations (ou hémocultures). Attention : une culture seule, sans bacilles vus au Gram, peut refléter de la flore de la bouche. <span class="u-708a45"><em>Goldman-Cecil, ch. 91 (26<sup>e</sup> éd.)</em></span></td></tr>
           </tbody>
         </table>
         </div>
         </div>
         <div id="pnty6" style="display:none;margin-top:12px;">
-<div style="background:#E1F3FE;border-left:2px solid #1F6C9F;padding:12px 14px;"><strong style="color:#1F6C9F;font-size:14px;"><strong><em>Escherichia coli</em></strong></strong><div style="font-size:12px;margin-top:2px;">nosocomiale ou associée aux soins</div></div><div class="u-300634">
+<div class="ty-head" style="background:#E1F3FE;border-color:#1F6C9F33;"><div class="ty-name" style="color:#1F6C9F;"><em>Escherichia coli</em></div><div class="ty-sub">nosocomiale ou associée aux soins</div><div class="ty-mot"><strong>Surtout nosocomiale</strong> ; aucune image ni présentation distinctive.</div></div><div class="u-300634">
         <table class="u-7d15ea" style="table-layout:fixed;width:100%;font-size:12px;">
           <colgroup><col style="width:22%"><col></colgroup>
           <tbody>
             <tr><td><strong>Terrain</strong></td><td>Les entérobactéries causent surtout la pneumonie <strong>nosocomiale ou associée aux soins</strong>, rarement la pneumonie communautaire. <span class="u-708a45"><em>Goldman-Cecil, ch. 289</em></span></td></tr>
-            <tr class="r-gray"><td><strong>Le tableau</strong></td><td>Aucune présentation distincte dans les sources de la bibliothèque.</td></tr>
-            <tr><td><strong>Les expectorations</strong></td><td>Aucune description distincte dans les sources de la bibliothèque.</td></tr>
-            <tr class="r-gray"><td><strong>La radiographie</strong></td><td><strong>Microaspiration</strong> de bacilles Gram négatifs : impossible à distinguer des autres pneumonies bactériennes. <span class="u-708a45"><em>Goldman-Cecil, ch. 91 (26<sup>e</sup> éd.)</em></span></td></tr>
-            <tr><td><strong>Le test</strong></td><td><strong>Bacilles Gram négatifs</strong> au Gram et <strong>culture</strong>. <span class="u-708a45"><em>Goldman-Cecil, ch. 91 (26<sup>e</sup> éd.)</em></span></td></tr>
+            <tr class="r-gray"><td><strong>Non distinctifs</strong></td><td>Le tableau · les expectorations : <strong>rien de distinct</strong> dans les sources de la bibliothèque.</td></tr>
+            
+            <tr><td><strong>La radiographie</strong></td><td><strong>Microaspiration</strong> de bacilles Gram négatifs : impossible à distinguer des autres pneumonies bactériennes. <span class="u-708a45"><em>Goldman-Cecil, ch. 91 (26<sup>e</sup> éd.)</em></span></td></tr>
+            <tr class="r-gray"><td><strong>Le test</strong></td><td><strong>Bacilles Gram négatifs</strong> au Gram et <strong>culture</strong>. <span class="u-708a45"><em>Goldman-Cecil, ch. 91 (26<sup>e</sup> éd.)</em></span></td></tr>
           </tbody>
         </table>
         </div>
         </div>
         <div id="pnty7" style="display:none;margin-top:12px;">
-<div style="background:#FDEBEC;border-left:2px solid #9F2F2D;padding:12px 14px;"><strong style="color:#9F2F2D;font-size:14px;"><strong><em>Pseudomonas aeruginosa</em></strong></strong><div style="font-size:12px;margin-top:2px;">patient à risque, maladie pulmonaire structurelle</div></div><div class="u-300634">
+<div class="ty-head" style="background:#FDEBEC;border-color:#9F2F2D33;"><div class="ty-name" style="color:#9F2F2D;"><em>Pseudomonas aeruginosa</em></div><div class="ty-sub">patient à risque, maladie pulmonaire structurelle</div><div class="ty-mot"><strong>Terrain structurel</strong> (bronchiectasies, FK, MPOC avancée), antibiotiques récents ; <strong>résistance</strong> : plus d&#39;un agent.</div></div><div class="u-300634">
         <table class="u-7d15ea" style="table-layout:fixed;width:100%;font-size:12px;">
           <colgroup><col style="width:22%"><col></colgroup>
           <tbody>
             <tr><td><strong>Terrain</strong></td><td><strong>Cause peu fréquente de PAC</strong>. Colonisation ou infection antérieure à <em>Pseudomonas</em> · <strong>hospitalisation ou antibiotiques récents</strong> · <strong>maladie pulmonaire structurelle</strong> (fibrose kystique, bronchiectasies, MPOC avancée) · <strong>corticothérapie</strong> · immunosuppression. <span class="u-708a45"><em>UpToDate, PAC chez l&#39;adulte</em></span> <span class="u-708a45"><em>UpToDate, <em>Pseudomonas</em></em></span></td></tr>
-            <tr class="r-gray"><td><strong>Le tableau</strong></td><td>Aucune présentation distincte dans les sources de la bibliothèque.</td></tr>
+            <tr class="r-gray"><td><strong>Non distinctifs</strong></td><td>Le tableau · la radiographie : <strong>rien de distinct</strong> dans les sources de la bibliothèque.</td></tr>
             <tr><td><strong>Les expectorations</strong></td><td>Toux productive d&#39;expectorations <strong>purulentes</strong> ; sécrétions trachéobronchiques augmentées sous ventilation. Rien ne la distingue des autres bactéries. <span class="u-708a45"><em>UpToDate, <em>Pseudomonas</em></em></span></td></tr>
-            <tr class="r-gray"><td><strong>La radiographie</strong></td><td>Aucune image distinctive.</td></tr>
-            <tr><td><strong>Le test</strong></td><td><strong>Culture d&#39;expectorations</strong>. La <strong>résistance</strong> aux antibiotiques est courante : chez le patient à risque avec PAC modérée à sévère, le traitement empirique <strong>cible <em>Pseudomonas</em> avec plus d&#39;un agent</strong>. <span class="u-708a45"><em>UpToDate, PAC chez l&#39;adulte</em></span></td></tr>
+            
+            <tr class="r-gray"><td><strong>Le test</strong></td><td><strong>Culture d&#39;expectorations</strong>. La <strong>résistance</strong> aux antibiotiques est courante : chez le patient à risque avec PAC modérée à sévère, le traitement empirique <strong>cible <em>Pseudomonas</em> avec plus d&#39;un agent</strong>. <span class="u-708a45"><em>UpToDate, PAC chez l&#39;adulte</em></span></td></tr>
           </tbody>
         </table>
         </div>
