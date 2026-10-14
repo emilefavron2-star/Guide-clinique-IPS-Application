@@ -1707,7 +1707,9 @@ m
     .section .ty-name{font-family:'Newsreader',serif;font-size:17px;font-weight:500;line-height:1.25;}
     .section .ty-sub{font-size:12px;color:#6B6A66;margin-top:2px;}
     .section .ty-mot{font-size:13px;line-height:1.55;color:#2F3437;margin-top:8px;padding-top:8px;border-top:1px solid #EAEAEA;}
-    .section .ty-cmp{min-width:560px;}
+    .section .ty-cmp{min-width:980px;table-layout:fixed;}
+    .section .ty-cmp th[scope=row]{width:96px;text-align:left;font-weight:700;}
+    .section .ty-cmp td,.section .ty-cmp thead th{vertical-align:top;}
     .section .ty-link{all:unset;cursor:pointer;font-weight:600;border-bottom:1px solid #EAEAEA;}
     .section .ty-link:hover,.section .ty-link:focus-visible{border-bottom-color:#2F3437;}
     .section .ty-link:focus-visible{outline:2px solid #2F3437;outline-offset:2px;}
@@ -24946,16 +24948,13 @@ function dkRenal(view) {
         <div id="pnty0" style="display:block;margin-top:12px;">
 <div class="u-300634">
         <table class="u-7d15ea ty-cmp" style="font-size:12px;">
-          <colgroup><col style="width:20%"><col style="width:26%"><col style="width:24%"><col></colgroup>
-          <thead><tr><th>Germe</th><th>Terrain</th><th>Radiographie</th><th>Le test</th></tr></thead>
+          <thead><tr><th></th><th><button type="button" class="ty-link" onclick="showPanel('pnty','pnty1',8)"><em>Streptococcus pneumoniae</em></button></th><th><button type="button" class="ty-link" onclick="showPanel('pnty','pnty2',8)"><em>Staphylococcus aureus</em></button></th><th><button type="button" class="ty-link" onclick="showPanel('pnty','pnty3',8)"><em>Haemophilus influenzae</em></button></th><th><button type="button" class="ty-link" onclick="showPanel('pnty','pnty4',8)"><em>Moraxella catarrhalis</em></button></th><th><button type="button" class="ty-link" onclick="showPanel('pnty','pnty5',8)"><em>Klebsiella pneumoniae</em></button></th><th><button type="button" class="ty-link" onclick="showPanel('pnty','pnty6',8)"><em>Escherichia coli</em></button></th><th><button type="button" class="ty-link" onclick="showPanel('pnty','pnty7',8)"><em>Pseudomonas aeruginosa</em></button></th></tr></thead>
           <tbody>
-            <tr><td><button type="button" class="ty-link" onclick="showPanel('pnty','pnty1',8)"><em>Streptococcus pneumoniae</em></button></td><td>cause bactérienne la plus fréquente</td><td>condensation dense, segmentaire ou lobaire</td><td>Gram d&#39;expectorations · antigène urinaire · hémocultures</td></tr>
-            <tr class="r-gray"><td><button type="button" class="ty-link" onclick="showPanel('pnty','pnty2',8)"><em>Staphylococcus aureus</em></button></td><td>post-grippal · SARM communautaire</td><td>aucune image distinctive ; forme hématogène : lésions rondes qui cavitent</td><td>culture ; hémocultures si forme hématogène</td></tr>
-            <tr><td><button type="button" class="ty-link" onclick="showPanel('pnty','pnty3',8)"><em>Haemophilus influenzae</em></button></td><td>MPOC, personnes âgées</td><td>aucune image distinctive</td><td>culture sur gélose chocolat, avec CO₂</td></tr>
-            <tr class="r-gray"><td><button type="button" class="ty-link" onclick="showPanel('pnty','pnty4',8)"><em>Moraxella catarrhalis</em></button></td><td>exacerbations de MPOC</td><td>aucune image distinctive</td><td>petits diplocoques Gram négatifs · culture</td></tr>
-            <tr><td><button type="button" class="ty-link" onclick="showPanel('pnty','pnty5',8)"><em>Klebsiella pneumoniae</em></button></td><td>nosocomiale ou associée aux soins</td><td>condensation dense, segmentaire ou lobaire</td><td>bacilles Gram négatifs · culture</td></tr>
-            <tr class="r-gray"><td><button type="button" class="ty-link" onclick="showPanel('pnty','pnty6',8)"><em>Escherichia coli</em></button></td><td>nosocomiale ou associée aux soins</td><td>aucune image distinctive</td><td>bacilles Gram négatifs · culture</td></tr>
-            <tr><td><button type="button" class="ty-link" onclick="showPanel('pnty','pnty7',8)"><em>Pseudomonas aeruginosa</em></button></td><td>patient à risque, maladie pulmonaire structurelle</td><td>aucune image distinctive</td><td>culture d&#39;expectorations ; couverture multi-agent</td></tr>
+            <tr><th scope="row">Terrain</th><td>cause bactérienne la plus fréquente</td><td>post-grippal · SARM communautaire</td><td>MPOC, personnes âgées</td><td>exacerbations de MPOC</td><td>nosocomiale ou associée aux soins</td><td>nosocomiale ou associée aux soins</td><td>patient à risque, maladie pulmonaire structurelle</td></tr>
+            <tr class="r-gray"><th scope="row">Le tableau</th><td><strong>tableau typique</strong> : début brutal, forte fièvre, frissons, toux productive, douleur pleurale</td><td>SARM communautaire : <strong>pneumonie nécrosante ou cavitaire</strong>, empyème, hémoptysie, choc septique</td><td>aucune présentation distincte</td><td>aucune présentation distincte</td><td>aucune présentation distincte</td><td>aucune présentation distincte</td><td>aucune présentation distincte</td></tr>
+            <tr><th scope="row">Expectorations</th><td><strong>rouillées</strong> (lobaire)</td><td>aucune description distincte</td><td><strong>purulentes</strong> ; bacilles Gram négatifs pléomorphes</td><td>aucune description distincte</td><td>aucune description distincte</td><td>aucune description distincte</td><td><strong>purulentes</strong></td></tr>
+            <tr class="r-gray"><th scope="row">Radiographie</th><td>condensation dense, segmentaire ou lobaire</td><td>aucune image distinctive ; forme hématogène : lésions rondes qui cavitent</td><td>aucune image distinctive</td><td>aucune image distinctive</td><td>condensation dense, segmentaire ou lobaire</td><td>aucune image distinctive</td><td>aucune image distinctive</td></tr>
+            <tr><th scope="row">Le test</th><td>Gram d&#39;expectorations · antigène urinaire · hémocultures</td><td>culture ; hémocultures si forme hématogène</td><td>culture sur gélose chocolat, avec CO₂</td><td>petits diplocoques Gram négatifs · culture</td><td>bacilles Gram négatifs · culture</td><td>bacilles Gram négatifs · culture</td><td>culture d&#39;expectorations ; couverture multi-agent</td></tr>
           </tbody>
         </table>
         </div>
