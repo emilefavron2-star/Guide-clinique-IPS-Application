@@ -329,6 +329,7 @@ td.pk-label { font-family:var(--mono); font-size:12px; font-weight:500; color:va
 
 <div class="sidebar-section"><div class="sidebar-cat">Nitrates</div>
 <button class="sidebar-btn" onclick="goTo('nitroglycerin')">Nitroglycérine (Nitrostat®)</button>
+<button class="sidebar-btn" onclick="goTo('nitroprussiate')">Nitroprussiate (Nipride®)</button>
 <button class="sidebar-btn" onclick="goTo('isosorbide')">Isosorbide (Imdur®)</button></div>
 
 <div class="sidebar-section"><div class="sidebar-cat">Antiarythmiques</div>
@@ -476,6 +477,7 @@ td.pk-label { font-family:var(--mono); font-size:12px; font-weight:500; color:va
 <button class="sidebar-btn" onclick="goTo('ceftriaxone')">Ceftriaxone (Rocephin®)</button>
 <button class="sidebar-btn" onclick="goTo('ceftazidime')">Ceftazidime (3G anti-Pseudo)</button>
 <button class="sidebar-btn" onclick="goTo('cefixime')">Céfixime (Suprax®)</button>
+<button class="sidebar-btn" onclick="goTo('cefpodoxime')">Céfpodoxime (Vantin®)</button>
 <button class="sidebar-btn" onclick="goTo('cefepime')">Céfépime (4G)</button>
 <button class="sidebar-btn" onclick="goTo('cephalos-autres')">Céfadroxil / Cefprozil / Céfotaxime</button></div>
 
@@ -505,6 +507,7 @@ td.pk-label { font-family:var(--mono); font-size:12px; font-weight:500; color:va
 <button class="sidebar-btn" onclick="goTo('metronidazole')">Métronidazole</button>
 <button class="sidebar-btn" onclick="goTo('nitrofurantoine')">Nitrofurantoïne</button>
 <button class="sidebar-btn" onclick="goTo('tmpsmx')">TMP-SMX (Septra®)</button>
+<button class="sidebar-btn" onclick="goTo('sulfadiazine')">Sulfadiazine</button>
 <button class="sidebar-btn" onclick="goTo('aminoglycosides')">Aminoglycosides</button>
 <button class="sidebar-btn" onclick="goTo('daptomycine')">Daptomycine</button>
 <button class="sidebar-btn" onclick="goTo('linezolide')">Linézolide</button>
@@ -560,6 +563,8 @@ td.pk-label { font-family:var(--mono); font-size:12px; font-weight:500; color:va
 <button class="sidebar-btn" onclick="goTo('tofacitinib')">Tofacitinib (Xeljanz®)</button>
 <button class="sidebar-btn" onclick="goTo('risankizumab')">Risankizumab (Skyrizi®)</button>
 <button class="sidebar-btn" onclick="goTo('ustekinumab_mii')">Ustekinumab (Stelara®)</button>
+<button class="sidebar-btn" onclick="goTo('guselkumab')">Guselkumab (Tremfya®)</button>
+<button class="sidebar-btn" onclick="goTo('mirikizumab')">Mirikizumab (Omvoh®)</button>
 <button class="sidebar-btn" onclick="goTo('ozanimod')">Ozanimod (Zeposia®)</button></div>
 
 <div class="sidebar-section"><div class="sidebar-cat">Immunosuppresseurs classiques — MII</div>
@@ -16073,6 +16078,171 @@ td.pk-label { font-family:var(--mono); font-size:12px; font-weight:500; color:va
 </div>
 <div class="tab-panel " id="ozanimod-ai">
 <div class="warn-box">Non documentées.</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Guide clinique IPS</em></p>
+</div>
+</div>
+</div>
+
+<div class="drug-card" id="card-nitroprussiate" data-search="nitroprussiate nitroprusside nipride nitropress vasodilatateur crise hypertensive insuffisance mitrale aiguë choc cardiogénique cyanure thiocyanate">
+  <div class="drug-header" style="background:#92400e;">
+    <div>
+      <div class="drug-name">Nitroprussiate de sodium (Nipride®)</div>
+      <div style="font-size:12px;opacity:.75;margin-top:2px;">Nitroprusside — perfusion IV</div>
+    </div>
+    <div class="drug-pharmacol">Vasodilatateur artériel et veineux direct</div>
+  </div>
+  <div class="drug-tabs"><button class="tab-btn active" onclick="showTab('nitroprussiate','ov',this)">Vue d'ensemble</button><button class="tab-btn " onclick="showTab('nitroprussiate','pk',this)">Pharmacocinétique</button><button class="tab-btn " onclick="showTab('nitroprussiate','doses',this)">Doses &amp; formes</button><button class="tab-btn " onclick="showTab('nitroprussiate','es',this)">Effets secondaires</button><button class="tab-btn " onclick="showTab('nitroprussiate','ci',this)">Contre-indications</button><button class="tab-btn " onclick="showTab('nitroprussiate','suivi',this)">Suivi</button><button class="tab-btn " onclick="showTab('nitroprussiate','ai',this)">Autres infos</button></div>
+  <div class="drug-panels"><div class="tab-panel active" id="nitroprussiate-ov">
+<div class="info-grid"><div class="info-box blue"><h4>Mécanisme</h4><ul><li>Vasodilatation directe du muscle lisse <strong>veineux et artériolaire</strong> → ↓ précharge et ↓ postcharge.</li></ul></div><div class="info-box green"><h4>Indications</h4><ul><li>Crise hypertensive</li><li>Hypotension contrôlée en anesthésie</li><li>Insuffisance cardiaque aiguë / choc cardiogénique (seul ou avec dopamine)</li><li>Insuffisance mitrale aiguë sévère, en attendant la chirurgie (± dobutamine) — voir section Valvulopathie mitrale</li></ul></div></div><div class="key-fact red"><strong>Attention</strong> : toxicité au <strong>cyanure</strong> et au thiocyanate lors de perfusions prolongées ou en insuffisance rénale/hépatique.</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Guide clinique IPS — Valvulopathie mitrale</em> · <em>Laflamme, ch. 4 · Lilly, ch. 8</em> · <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd. (fiche nitroprusside)</em></p>
+</div>
+<div class="tab-panel " id="nitroprussiate-pk">
+<div class="pk-panel"><table class="pk-table"><tr><td class="pk-label">Début</td><td>Immédiat</td></tr><tr><td class="pk-label">Durée de l'effet</td><td>1–10 min (effet réversible en quelques minutes à l'arrêt)</td></tr><tr><td class="pk-label">t½</td><td>2 min</td></tr><tr><td class="pk-label">Métabolisme</td><td>Érythrocytes et tissus → cyanure, puis foie → thiocyanate</td></tr></table></div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+<div class="tab-panel " id="nitroprussiate-doses">
+<table class="conc-table"><thead><tr><th>Voie</th><th>Dose</th><th>Source</th></tr></thead><tbody><tr><td>IV (adulte)</td><td>Initial 0,3 mcg/kg/min; ↑ au besoin jusqu'à 10 mcg/kg/min (usuel 3 mcg/kg/min; pas plus de 10 min à 10 mcg/kg/min)</td><td>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</td></tr></tbody></table><div class="key-fact"><strong>Préparation</strong> : 50 mg dans 250–1000 mL de D5W; envelopper de papier d'aluminium (protection contre la lumière); utiliser dans les 24 h.</div><div class="key-fact"><strong>Formes (Davis)</strong> : prémélange 20 mg/100 mL et 50 mg/100 mL de NaCl 0,9 %; solution injectable 25 mg/mL.</div><div class="warn-box">Disponibilité canadienne (monographie Santé Canada) non vérifiée.</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+<div class="tab-panel " id="nitroprussiate-es">
+<div class="info-grid"><div class="info-box "><h4>Courants</h4><ul><li>Hypotension, palpitations, dyspnée</li><li>Céphalées, étourdissements, agitation</li><li>Nausées, vomissements, douleurs abdominales</li><li>Vision embrouillée, acouphènes</li><li>Phlébite au site de perfusion</li><li>Acidose</li></ul></div><div class="info-box red"><h4>Graves</h4><ul><li><strong>Toxicité au cyanure</strong> : acidose lactique, hypoxémie, tachycardie, altération de la conscience, convulsions, odeur d'amande</li><li><strong>Toxicité au thiocyanate</strong> : acouphènes, psychose, hyperréflexie, confusion, convulsions, coma</li><li>Méthémoglobinémie</li></ul></div></div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+<div class="tab-panel " id="nitroprussiate-ci">
+<div class="info-box red"><h4>Contre-indications</h4><ul><li>Hypersensibilité</li><li>Perfusion cérébrale diminuée</li></ul></div><div class="info-box "><h4>Prudence</h4><ul><li>Insuffisance rénale (accumulation de thiocyanate)</li><li>Insuffisance hépatique (accumulation de cyanure)</li><li>Hypothyroïdie, hyponatrémie, carence en vitamine B</li><li>Grossesse et allaitement : innocuité non établie</li><li>Personnes âgées : sensibilité accrue</li></ul></div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+<div class="tab-panel " id="nitroprussiate-suivi">
+<div class="info-grid"><div class="info-box "><h4>Surveillance</h4><ul><li>TA, FC et ECG fréquents (surveillance continue préférée)</li><li>Surveiller l'<strong>HTA de rebond</strong> à l'arrêt</li><li>Thiocyanate plasmatique quotidien si perfusion prolongée > 3 mcg/kg/min (ou 1 mcg/kg/min en anurie); ne doit pas dépasser 1 mmol/L</li><li>Gaz/lactate : ↓ bicarbonate, ↓ pH, ↑ lactate possibles</li><li>Méthémoglobine si > 10 mg/kg et signes d'hypoxie tissulaire malgré un débit adéquat</li></ul></div><div class="info-box red"><h4>Intoxication</h4><ul><li>Hypotension sévère : ↓ ou arrêter la perfusion (effet disparaît en 1–10 min)</li><li>Cyanure : nitrite de sodium (3 %) 4–6 mg/kg IV en 2–4 min, puis thiosulfate de sodium 150–200 mcg/kg</li><li>Méthémoglobinémie : bleu de méthylène 1–2 mg/kg IV</li></ul></div></div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+<div class="tab-panel " id="nitroprussiate-ai">
+<div class="key-fact">Peut être associé à un inotrope (dopamine, dobutamine) en insuffisance cardiaque lorsque l'hypotension limite la dose.</div><div class="key-fact"><strong>Interactions</strong> : ↑ de l'effet hypotenseur avec les anesthésiques généraux, les ganglioplégiques et les autres antihypertenseurs; œstrogènes et sympathomimétiques ↓ la réponse.</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+</div>
+</div>
+
+<div class="drug-card" id="card-cefpodoxime" data-search="céfpodoxime cefpodoxime vantin cefpodoxime proxetil céphalosporine 3e génération pneumonie communautaire orale infection urinaire gonorrhée">
+  <div class="drug-header" style="background:#0f766e;">
+    <div>
+      <div class="drug-name">Céfpodoxime (Vantin®)</div>
+      <div style="font-size:12px;opacity:.75;margin-top:2px;">Céfpodoxime proxétil — comprimés PO</div>
+    </div>
+    <div class="drug-pharmacol">Céphalosporine 3<sup>e</sup> génération orale</div>
+  </div>
+  <div class="drug-tabs"><button class="tab-btn active" onclick="showTab('cefpodoxime','ov',this)">Vue d'ensemble</button><button class="tab-btn " onclick="showTab('cefpodoxime','pk',this)">Pharmacocinétique</button><button class="tab-btn " onclick="showTab('cefpodoxime','doses',this)">Doses &amp; formes</button><button class="tab-btn " onclick="showTab('cefpodoxime','es',this)">Effets secondaires</button><button class="tab-btn " onclick="showTab('cefpodoxime','ci',this)">Contre-indications</button><button class="tab-btn " onclick="showTab('cefpodoxime','suivi',this)">Suivi</button><button class="tab-btn " onclick="showTab('cefpodoxime','ai',this)">Autres infos</button></div>
+  <div class="drug-panels"><div class="tab-panel active" id="cefpodoxime-ov">
+<div class="info-grid"><div class="info-box blue"><h4>Mécanisme</h4><ul><li>Inhibe la synthèse de la paroi bactérienne (bactéricide). Plus actif sur les Gram négatifs, moins sur les staphylocoques que les générations précédentes. Sans activité sur les SARM et les entérocoques.</li></ul></div><div class="info-box green"><h4>Indications</h4><ul><li>Infections de la peau et des tissus mous</li><li>Infections urinaires et gynécologiques</li><li>Infections respiratoires, otite moyenne</li><li>Pharyngite</li><li>Pneumonie communautaire : option de « céphalosporine de 3<sup>e</sup> génération (p. ex. céfpodoxime) » dans l'algorithme du guide (INESSS/UpToDate)</li></ul></div></div><div class="key-fact">Le céfpodoxime proxétil est une prodrogue, convertie en forme active dans le tube digestif pendant l'absorption.</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Guide clinique IPS — Pneumonie communautaire</em> · <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd. (fiche céphalosporines 3<sup>e</sup> génération)</em></p>
+</div>
+<div class="tab-panel " id="cefpodoxime-pk">
+<div class="pk-panel"><table class="pk-table"><tr><td class="pk-label">Absorption</td><td>Prodrogue, ~50 % absorbé; ↓ par les antiacides et les anti-H2</td></tr><tr><td class="pk-label">Pic</td><td>2–3 h</td></tr><tr><td class="pk-label">Durée</td><td>12 h</td></tr><tr><td class="pk-label">t½</td><td>2–3 h (↑ en insuffisance rénale)</td></tr><tr><td class="pk-label">Élimination</td><td>~30 % urinaire</td></tr></table></div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+<div class="tab-panel " id="cefpodoxime-doses">
+<table class="conc-table"><thead><tr><th>Indication</th><th>Dose (adulte, PO)</th><th>Source</th></tr></thead><tbody><tr><td>Plupart des infections</td><td>200 mg q12h</td><td>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</td></tr><tr><td>Peau et tissus mous</td><td>400 mg q12h</td><td>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</td></tr><tr><td>Infection urinaire / pharyngite</td><td>100 mg q12h</td><td>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</td></tr><tr><td>Gonorrhée</td><td>200 mg, dose unique</td><td>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</td></tr><tr><td>Clairance de la créatinine < 30 mL/min</td><td>Espacer à q24h</td><td>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</td></tr></tbody></table><div class="key-fact"><strong>Enfant</strong> (2 mois–12 ans) : 5 mg/kg q12h, sans dépasser 200 mg/dose (pharyngite, otite moyenne, sinusite).</div><div class="key-fact"><strong>Administration</strong> : ne pas donner dans les 2 h qui précèdent ou suivent un antiacide ou un anti-H2.</div><div class="warn-box">Formes et teneurs canadiennes à confirmer avec la monographie Santé Canada.</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+<div class="tab-panel " id="cefpodoxime-es">
+<div class="info-grid"><div class="info-box "><h4>Courants</h4><ul><li>Diarrhée, nausées, vomissements, crampes</li><li>Éruption cutanée, urticaire</li><li>Candidose vaginale</li><li>Céphalées</li></ul></div><div class="info-box red"><h4>Graves</h4><ul><li>Réaction d'hypersensibilité, anaphylaxie, maladie sérique</li><li>Syndrome de Stevens-Johnson</li><li>Diarrhée associée à <em>C. difficile</em></li><li>Cytopénies (agranulocytose, neutropénie, thrombopénie, anémie hémolytique)</li></ul></div></div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd. (effets de classe)</em></p>
+</div>
+<div class="tab-panel " id="cefpodoxime-ci">
+<div class="info-box red"><h4>Contre-indications</h4><ul><li>Hypersensibilité aux céphalosporines</li><li>Hypersensibilité grave à la pénicilline</li></ul></div><div class="info-box "><h4>Prudence</h4><ul><li>Insuffisance rénale (clairance < 30 mL/min)</li><li>Antécédent de maladie digestive, surtout colite</li></ul></div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+<div class="tab-panel " id="cefpodoxime-suivi">
+<div class="info-box "><h4>Surveillance</h4><ul><li>Diarrhée (recherche de <em>C. difficile</em> si persistante)</li><li>Fonction rénale chez la personne âgée</li></ul></div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Guide clinique IPS</em></p>
+</div>
+<div class="tab-panel " id="cefpodoxime-ai">
+<div class="key-fact"><strong>Interactions</strong> : le probénécide ↑ les taux sériques; les antiacides et les anti-H2 ↓ l'absorption; diurétiques de l'anse, aminosides et AINS ↑ le risque de néphrotoxicité.</div><div class="key-fact">Voir aussi ➜ <em>Céfixime</em> et <em>Ceftriaxone</em> (autres céphalosporines 3<sup>e</sup> génération).</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+</div>
+</div>
+
+<div class="drug-card" id="card-guselkumab" data-search="guselkumab tremfya anti-il23 mii colite ulcéreuse crohn psoriasis arthrite psoriasique biologique">
+  <div class="drug-header" style="background:#b45309;">
+    <div>
+      <div class="drug-name">Guselkumab (Tremfya®)</div>
+      <div style="font-size:12px;opacity:.75;margin-top:2px;">Guselkumab</div>
+    </div>
+    <div class="drug-pharmacol">Anti-IL-23p19 — MII / Psoriasis</div>
+  </div>
+  <div class="drug-tabs"><button class="tab-btn active" onclick="showTab('guselkumab','ov',this)">Vue d'ensemble</button><button class="tab-btn " onclick="showTab('guselkumab','pk',this)">Pharmacocinétique</button><button class="tab-btn " onclick="showTab('guselkumab','doses',this)">Doses &amp; formes</button><button class="tab-btn " onclick="showTab('guselkumab','es',this)">Effets secondaires</button><button class="tab-btn " onclick="showTab('guselkumab','ci',this)">Contre-indications</button><button class="tab-btn " onclick="showTab('guselkumab','suivi',this)">Suivi</button><button class="tab-btn " onclick="showTab('guselkumab','ai',this)">Autres infos</button></div>
+  <div class="drug-panels"><div class="tab-panel active" id="guselkumab-ov">
+<div class="info-grid"><div class="info-box blue"><h4>Mécanisme</h4><ul><li>Anticorps monoclonal qui se lie à la sous-unité <strong>p19 de l'IL-23</strong> et l'empêche d'atteindre son récepteur → ↓ cytokines et chimiokines pro-inflammatoires.</li></ul></div><div class="info-box green"><h4>Indications</h4><ul><li>Colite ulcéreuse modérée-sévère</li><li>Maladie de Crohn modérée-sévère</li><li>Psoriasis en plaques modéré-sévère</li><li>Arthrite psoriasique</li></ul></div></div><div class="key-fact"><strong>Recommandé</strong> : en CU modérée-sévère, l'ACG recommande un inhibiteur de l'IL-23p19 (guselkumab, mirikizumab ou risankizumab) pour l'induction et pour maintenir la rémission.</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Guide clinique IPS — MII et dermatologie</em> · <em>ACG, lignes directrices CU (mise à jour) et maladie de Crohn</em> · <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+<div class="tab-panel " id="guselkumab-pk">
+<div class="pk-panel"><table class="pk-table"><tr><td class="pk-label">Absorption</td><td>49 % par voie SC</td></tr><tr><td class="pk-label">Pic</td><td>5,5 jours (SC)</td></tr><tr><td class="pk-label">Durée</td><td>8 semaines</td></tr><tr><td class="pk-label">t½</td><td>15–18 jours</td></tr><tr><td class="pk-label">Métabolisme</td><td>Catabolisme protéique</td></tr></table></div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+<div class="tab-panel " id="guselkumab-doses">
+<table class="conc-table"><thead><tr><th>Indication</th><th>Induction</th><th>Entretien</th></tr></thead><tbody><tr><td>Psoriasis / arthrite psoriasique</td><td>100 mg SC à S0 et S4</td><td>100 mg SC q8 sem</td></tr><tr><td>Colite ulcéreuse</td><td>200 mg IV à S0, S4, S8</td><td>100 mg SC à S16 puis q8 sem, OU 200 mg SC à S12 puis q4 sem</td></tr><tr><td>Maladie de Crohn</td><td>200 mg IV à S0, S4, S8 OU 400 mg SC à S0, S4, S8</td><td>100 mg SC à S16 puis q8 sem, OU 200 mg SC à S12 puis q4 sem</td></tr></tbody></table><div class="key-fact"><strong>Formes (Davis)</strong> : SC 100 mg/mL (seringue, stylo, injecteur); IV 10 mg/mL. Perfusion IV diluée sur ≥ 1 h avec filtre de 0,2 micron.</div><div class="warn-box">Disponibilité et indications canadiennes à confirmer avec la monographie Santé Canada.</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+<div class="tab-panel " id="guselkumab-es">
+<div class="info-grid"><div class="info-box "><h4>Courants</h4><ul><li>Infections des voies respiratoires hautes, bronchite, infections urinaires</li><li>Céphalées, arthralgies</li><li>Diarrhée</li><li>Réactions au site d'injection</li><li>↑ des enzymes hépatiques</li></ul></div><div class="info-box red"><h4>Graves</h4><ul><li>Hépatotoxicité</li><li>Hypersensibilité, anaphylaxie</li><li>Infections graves, réactivation de la TB</li></ul></div></div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+<div class="tab-panel " id="guselkumab-ci">
+<div class="info-box red"><h4>Contre-indications</h4><ul><li>Hypersensibilité</li><li>Infection active non traitée</li></ul></div><div class="info-box "><h4>Prudence</h4><ul><li>Antécédent de TB (réactivation possible)</li><li>Infection chronique ou récidivante</li><li>Vaccins vivants : à éviter pendant le traitement</li></ul></div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+<div class="tab-panel " id="guselkumab-suivi">
+<div class="info-box "><h4>Avant et pendant</h4><ul><li>Dépistage de la TB latente avant le traitement; traiter la TB latente d'abord</li><li>Signes d'infection</li><li>Signes d'hépatotoxicité (fatigue, nausées, douleur abdominale haute, ictère, urines foncées)</li><li>Réponse clinique, rémission, cicatrisation muqueuse, ↓ des corticostéroïdes (MII)</li></ul></div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+<div class="tab-panel " id="guselkumab-ai">
+<div class="key-fact"><strong>Interactions</strong> : peut influencer les substrats du CYP450 à marge thérapeutique étroite (warfarine, cyclosporine) : surveiller.</div><div class="key-fact">Dose oubliée : l'administrer dès que possible, puis reprendre le calendrier habituel.</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+</div>
+</div>
+
+<div class="drug-card" id="card-mirikizumab" data-search="mirikizumab omvoh anti-il23 p19 mii colite ulcéreuse crohn biologique">
+  <div class="drug-header" style="background:#b45309;">
+    <div>
+      <div class="drug-name">Mirikizumab (Omvoh®)</div>
+      <div style="font-size:12px;opacity:.75;margin-top:2px;">Mirikizumab</div>
+    </div>
+    <div class="drug-pharmacol">Anti-IL-23p19 — MII</div>
+  </div>
+  <div class="drug-tabs"><button class="tab-btn active" onclick="showTab('mirikizumab','ov',this)">Vue d'ensemble</button><button class="tab-btn " onclick="showTab('mirikizumab','pk',this)">Pharmacocinétique</button><button class="tab-btn " onclick="showTab('mirikizumab','doses',this)">Doses &amp; formes</button><button class="tab-btn " onclick="showTab('mirikizumab','es',this)">Effets secondaires</button><button class="tab-btn " onclick="showTab('mirikizumab','ci',this)">Contre-indications</button><button class="tab-btn " onclick="showTab('mirikizumab','suivi',this)">Suivi</button><button class="tab-btn " onclick="showTab('mirikizumab','ai',this)">Autres infos</button></div>
+  <div class="drug-panels"><div class="tab-panel active" id="mirikizumab-ov">
+<div class="info-grid"><div class="info-box blue"><h4>Mécanisme</h4><ul><li>Anticorps monoclonal inhibiteur de la sous-unité <strong>p19 de l'IL-23</strong>.</li></ul></div><div class="info-box green"><h4>Indications</h4><ul><li>Colite ulcéreuse modérée-sévère</li><li>Maladie de Crohn modérée-sévère (ACG)</li></ul></div></div><div class="key-fact"><strong>Recommandé</strong> : l'ACG recommande un inhibiteur de l'IL-23p19 (guselkumab, mirikizumab ou risankizumab) en CU modérée-sévère, pour l'induction comme pour le maintien. Le guide le cite parmi les options appuyées par les données cliniques.</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Guide clinique IPS — MII</em> · <em>ACG, lignes directrices CU (mise à jour)</em></p>
+</div>
+<div class="tab-panel " id="mirikizumab-pk">
+<div class="warn-box">Non documentée dans vos sources.</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Guide clinique IPS</em></p>
+</div>
+<div class="tab-panel " id="mirikizumab-doses">
+<table class="conc-table"><thead><tr><th>Indication</th><th>Induction</th><th>Entretien</th></tr></thead><tbody><tr><td>Colite ulcéreuse (LUCENT-1/2)</td><td>300 mg IV q4 sem × 3 doses</td><td>200 mg SC q4 sem (chez les répondeurs à la semaine 12)</td></tr></tbody></table><div class="warn-box"><strong>Posologie en maladie de Crohn, formes et teneurs non documentées dans vos sources</strong> ➜ À compléter avec la monographie canadienne (RxVigilance).</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>ACG, lignes directrices CU (essais LUCENT-1 et LUCENT-2)</em></p>
+</div>
+<div class="tab-panel " id="mirikizumab-es">
+<div class="warn-box">Non documentés dans vos sources (à confirmer : infections, réactions au site d'injection, hépatotoxicité).</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Guide clinique IPS</em></p>
+</div>
+<div class="tab-panel " id="mirikizumab-ci">
+<div class="warn-box">Non documentées. Par analogie aux autres anti-IL-23 de la classe : dépistage de la TB avant le traitement, éviter les vaccins vivants (à confirmer pour ce produit).</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Guide clinique IPS</em></p>
+</div>
+<div class="tab-panel " id="mirikizumab-suivi">
+<div class="warn-box">Non documenté.</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Guide clinique IPS</em></p>
+</div>
+<div class="tab-panel " id="mirikizumab-ai">
+<div class="key-fact">Résultats de LUCENT-1 en induction : rémission clinique chez 24,2 % des patients sous mirikizumab, contre 13,3 % sous placebo.</div><div class="key-fact">Voir aussi ➜ <em>Risankizumab</em>, <em>Guselkumab</em>, <em>Ustékinumab</em> (autres biologiques de la voie IL-23).</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>ACG, lignes directrices CU</em></p>
+</div>
+</div>
+</div>
+
+<div class="drug-card" id="card-sulfadiazine" data-search="sulfadiazine sulfamide rhumatisme articulaire aigu RAA prophylaxie secondaire streptocoque allergie pénicilline">
+  <div class="drug-header" style="background:#0891b2;">
+    <div>
+      <div class="drug-name">Sulfadiazine</div>
+      <div style="font-size:12px;opacity:.75;margin-top:2px;">Sulfadiazine — comprimés PO</div>
+    </div>
+    <div class="drug-pharmacol">Sulfamide — prophylaxie du RAA</div>
+  </div>
+  <div class="drug-tabs"><button class="tab-btn active" onclick="showTab('sulfadiazine','ov',this)">Vue d'ensemble</button><button class="tab-btn " onclick="showTab('sulfadiazine','pk',this)">Pharmacocinétique</button><button class="tab-btn " onclick="showTab('sulfadiazine','doses',this)">Doses &amp; formes</button><button class="tab-btn " onclick="showTab('sulfadiazine','es',this)">Effets secondaires</button><button class="tab-btn " onclick="showTab('sulfadiazine','ci',this)">Contre-indications</button><button class="tab-btn " onclick="showTab('sulfadiazine','suivi',this)">Suivi</button><button class="tab-btn " onclick="showTab('sulfadiazine','ai',this)">Autres infos</button></div>
+  <div class="drug-panels"><div class="tab-panel active" id="sulfadiazine-ov">
+<div class="info-grid"><div class="info-box blue"><h4>Mécanisme</h4><ul><li>Sulfamide : bloque la synthèse des folates bactériens (bactériostatique).</li></ul></div><div class="info-box green"><h4>Indication au guide</h4><ul><li><strong>Prophylaxie secondaire du rhumatisme articulaire aigu (RAA)</strong> : option orale de 2<sup>e</sup> intention, après la pénicilline G benzathine IM et la pénicilline V.</li></ul></div></div><div class="key-fact"><strong>Piège</strong> : en cas d'allergie à la pénicilline <em>et</em> aux sulfamides, le macrolide oral est l'option de remplacement.</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Guide clinique IPS — Valvulopathie mitrale</em> · <em>Laflamme, Cardiology — A Practical Handbook, ch. 4</em> · <em>Goldman-Cecil, ch. 274</em></p>
+</div>
+<div class="tab-panel " id="sulfadiazine-pk">
+<div class="warn-box">Non documentée dans vos sources.</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Guide clinique IPS</em></p>
+</div>
+<div class="tab-panel " id="sulfadiazine-doses">
+<table class="conc-table"><thead><tr><th>Indication</th><th>Dose</th><th>Source</th></tr></thead><tbody><tr><td>Prophylaxie secondaire du RAA</td><td>1 g PO DIE</td><td>Guide clinique IPS — Valvulopathie mitrale (Laflamme, ch. 4)</td></tr></tbody></table><div class="key-fact">Pénicilline G benzathine IM q4 sem = 1<sup>er</sup> choix (q3 sem si lésion cardiaque résiduelle), pendant au moins 10 ans (Goldman-Cecil, ch. 274).</div><div class="warn-box"><strong>Forme et teneur canadiennes non documentées</strong> ➜ À compléter avec la monographie canadienne.</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Guide clinique IPS</em> · <em>Goldman-Cecil, ch. 274</em></p>
+</div>
+<div class="tab-panel " id="sulfadiazine-es">
+<div class="warn-box">Non documentés dans vos sources (effets de classe des sulfamides : éruption, cytopénies, cristalluries — à confirmer).</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Guide clinique IPS</em></p>
+</div>
+<div class="tab-panel " id="sulfadiazine-ci">
+<div class="warn-box">Non documentées. Allergie aux sulfamides : voir ci-dessus; déficit en G6PD cité comme facteur de risque pour la sulfadiazine (Goldman-Cecil).</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Goldman-Cecil</em></p>
+</div>
+<div class="tab-panel " id="sulfadiazine-suivi">
+<div class="warn-box">Non documenté.</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Guide clinique IPS</em></p>
+</div>
+<div class="tab-panel " id="sulfadiazine-ai">
+<div class="key-fact"><strong>Ne pas confondre</strong> : sulfadiazine, sulfasalazine et céfuroxime ont des noms qui se ressemblent (liste d'alerte Davis).</div><div class="key-fact">Voir aussi ➜ <em>Sulfasalazine</em>, <em>TMP-SMX</em>.</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
 </div>
 </div>
 </div>
