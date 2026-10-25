@@ -2295,7 +2295,7 @@ m
         <span class="emoji"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-clipboard"/></svg></span> Stage
         <svg class="chevron" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>      </div>
       <div class="specialty-items">
-        <div class="nav-item" onclick="showSection('stage-cusm')">Diagnostics différentiels</div>
+        <div class="nav-item" onclick="showSection('stage-cusm')">Par motif de consultation</div>
         <div class="nav-item" onclick="showSection('stage-questionnaire')">Questionnaire cardiologique</div>
         <div class="nav-item" onclick="showSection('stage-examen')">Examen physique cardiologique</div>
       </div>
@@ -64323,36 +64323,98 @@ Fer &rarr; constipation · interactions chélation nombreuses</div>
     <div class="section" id="sec-stage-cusm">
       <div class="section-header">
         <div class="section-accent" style="background:#E1F3FE;"></div>
-        <div class="section-title"><h1>Stage — Diagnostics différentiels</h1><div class="breadcrumb">Stage <span class="breadcrumb-sep">·</span> Diagnostics différentiels par motif <span class="breadcrumb-sep">·</span> Douleur thoracique · Dyspnée · Syncope · Palpitations · Œdème</div></div>
+        <div class="section-title"><h1>Stage — Par motif de consultation</h1><div class="breadcrumb">Stage <span class="breadcrumb-sep">·</span> Par motif de consultation <span class="breadcrumb-sep">·</span> Douleur thoracique · Dyspnée · Syncope · Palpitations · Œdème</div></div>
       </div>
-      <div class="m-navbar">
-        <button class="m-nav" onclick="goToBlock('stg-ddx-dlr')">Douleur thoracique</button>
-        <button class="m-nav" onclick="goToBlock('stg-ddx-dyspnee')">Dyspnée</button>
-        <button class="m-nav" onclick="goToBlock('stg-ddx-syncope')">Syncope</button>
-        <button class="m-nav" onclick="goToBlock('stg-ddx-palp')">Palpitations</button>
-        <button class="m-nav" onclick="goToBlock('stg-ddx-oedeme')">Œdème des membres inférieurs</button>
-      </div>
+      
+      <div class="block clin" style="margin-top:14px;border-left-color:#1F6C9F;">
+        <div class="block-title" id="stg-motifs"><span class="tag">Cinq motifs de consultation<span class="tag-sub"><span class="tag-dash"> — </span>du signal d'alarme au diagnostic</span></span></div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;">
+          <button data-panel="stgm0" onclick="showPanel('stgm','stgm0',5)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#2F3437;color:#fff;">Douleur thoracique</button>
+          <button data-panel="stgm1" onclick="showPanel('stgm','stgm1',5)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">Dyspnée</button>
+          <button data-panel="stgm2" onclick="showPanel('stgm','stgm2',5)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">Syncope</button>
+          <button data-panel="stgm3" onclick="showPanel('stgm','stgm3',5)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">Palpitations</button>
+          <button data-panel="stgm4" onclick="showPanel('stgm','stgm4',5)" style="border:none;cursor:pointer;font-size:13px;border-radius:8px;padding:8px 18px;font-weight:600;transition:.15s;background:#e0e0e0;color:#333;">Œdème des membres inférieurs</button>
+        </div>
 
-      <div class="key-fact blue u-567bc"><strong>En pratique :</strong> partez du motif de consultation. Pour chacun, repérez d'abord les diagnostics qui menacent la vie, puis départagez les autres grâce à l'élément clé de chaque ligne. Les tableaux vont du plus urgent au moins urgent. Le détail de chaque maladie reste dans sa section (➜ voir les renvois).</div>
+        <div id="stgm0" style="display:block;margin-top:14px;">
 
-      <div class="block clin" style="margin-top:14px;border-left-color:#9F2F2D;">
-        <div class="block-title" id="stg-ddx-dlr"><span class="tag">Douleur thoracique<span class="tag-sub"><span class="tag-dash"> — </span>quoi éliminer, quoi départager</span></span></div>
+        <div style="font-size:13.5px;color:#6B6A66;">quoi éliminer, quoi départager</div>
+
+        <div style="font-size:12px;font-weight:800;color:#6B6A66;margin-top:18px;letter-spacing:.4px;">SIGNAUX D'ALARME</div>
 
         <div class="key-fact red u-101bb9"><strong>Attention :</strong> éliminez d'abord ce qui menace la vie — infarctus du myocarde, angine instable, dissection aortique, œdème pulmonaire et embolie pulmonaire. Une douleur nouvelle, aiguë et souvent persistante peut être l'un d'eux. <span class="u-708a45"><em>Goldman-Cecil, ch. 45</em></span></div>
 
+        <div class="key-fact red u-101bb9"><strong>Signaux d'alarme :</strong> à l'effort · irradiation au bras ou à la mâchoire · diaphorèse, dyspnée · durée de plus de 20 minutes · étourdissement ou syncope · âge avancé (infarctus atypique : confusion, ralentissement) · dyspnée sévère · hémoptysie · facteurs de risque d'embolie pulmonaire (néoplasie, immobilisation, thrombophilie). <span class="u-708a45"><em>GPHC, Entrevue, ch. 2</em></span></div>
+
+        <div class="flag-list" style="margin-top:12px;">
+          <div class="flag-item"><span class="fi-icon"></span><span>Écart de TAS ≥ 20 mmHg entre les bras, pouls asymétriques, souffle d'insuffisance aortique avec douleur déchirante : dissection aortique</span></div>
+          <div class="flag-item"><span class="fi-icon"></span><span>Frottement péricardique : péricardite aiguë ; sa disparition peut signaler un épanchement qui s'accumule</span></div>
+        </div>
+
+        <div class="u-708a45" style="margin-top:6px;"><em>Notes de cours, Examen cardiaque MMD 6411 · Goldman-Cecil, ch. 45 · Laflamme, ch. 2</em></div>
+
+        <div style="font-size:12px;font-weight:800;color:#6B6A66;margin-top:18px;letter-spacing:.4px;">QUESTIONS QUI DÉPARTAGENT</div>
+
+        <div class="key-fact blue u-101bb9"><strong>Règle :</strong> commencez par « Pouvez-vous me parler davantage de votre douleur ? », puis précisez. Une angine typique réunit trois critères : douleur rétrosternale constrictive, déclenchée par l'effort ou les émotions, soulagée par le repos (5–10 min) ou les nitrates. Deux critères : atypique. Un seul : non angineuse. <span class="u-708a45"><em>GPHC, Entrevue, ch. 2 · Laflamme, ch. 2</em></span></div>
+
         <div class="u-300634">
         <table class="u-7d15ea">
-          <thead><tr><th style="width:17%;">Diagnostic</th><th style="width:43%;">Ce qui l'évoque</th><th>À l'examen · pour confirmer</th></tr></thead>
+          <thead><tr><th style="width:17%;">Dimension</th><th style="width:38%;">Question</th><th scope="col">Réponse qui oriente</th></tr></thead>
           <tbody>
-            <tr style="background:#FDEBEC;"><td colspan="3"><strong>Causes cardiovasculaires</strong></td></tr>
-            <tr><td><strong>Infarctus du myocarde</strong></td><td>Rétrosternale, peut irradier comme l'angine · pression, brûlure, constriction · ≥ 30 min · non soulagée par le repos ni la nitroglycérine · dyspnée, sudation, faiblesse, nausées, vomissements</td><td>ECG 12 dérivations et troponine hypersensible ➜ voir SCA</td></tr>
-            <tr><td><strong>Angine instable</strong> (de repos)</td><td>Comme l'angine, parfois plus sévère · habituellement &lt; 20 min · tolérance à l'effort qui diminue, ou douleur au repos</td><td>Insuffisance cardiaque transitoire possible · ECG et troponine</td></tr>
+            <tr><td><strong>Provoquée</strong></td><td>« Qu'est-ce qui déclenche ou aggrave la douleur ? »</td><td>Exercice : cardiaque · décubitus : péricardite · respiration profonde : pleurale · toux : musculosquelettique · repas : reflux, angine, colique biliaire · aliment ou liquide froid : spasme œsophagien · froid, stress : angine</td></tr>
+            <tr><td><strong>Soulagée</strong></td><td>« Qu'est-ce qui la soulage ? »</td><td>Repos : angine · position assise : péricardite · nitroglycérine : angine, spasme œsophagien · position « chien de fusil » : pancréatite</td></tr>
+            <tr><td><strong>Qualité</strong></td><td>« Comment la décririez-vous ? » (sans suggérer) · « Est-elle reproduite quand j'appuie ? »</td><td>Pincement, serrement, brûlure : ischémie · douleur en barre : biliaire ou pancréatique · reproduite à la palpation : musculosquelettique</td></tr>
+            <tr><td><strong>Quantité</strong></td><td>« Sur 10, quelle est l'intensité ? »</td><td>« Crucifiante » : dissection aortique</td></tr>
+            <tr><td><strong>Région</strong></td><td>« Montrez-moi où. »</td><td>Centrale : cardiaque ou digestive · latéralisée : pulmonaire · épigastre : biliaire, pancréatite, infarctus · diffuse, mal localisée : cardiaque</td></tr>
+            <tr><td><strong>Irradiation</strong></td><td>« Où la douleur va-t-elle ? »</td><td>Bras gauche : infarctus, péricardite · mâchoire, dents : infarctus · dos : dissection, pancréatite, anévrisme, péricardite, infarctus · épaule droite : cholécystite</td></tr>
+            <tr><td><strong>Temps</strong></td><td>« Depuis combien de temps ? Constante ou par épisodes ? Stable ou pire ? »</td><td>&gt; 20 min : infarctus avant tout · &lt; 20 min : angine, douleur gastrique ou psychogène</td></tr>
+            <tr><td><strong>Symptômes associés</strong></td><td>« Avez-vous eu… » dyspnée, palpitations, étourdissement, orthopnée, œdème, fièvre, sueurs, nausées, toux, crachats, hémoptysie</td><td>Selon les hypothèses · jambe enflée, rouge et douloureuse d'un côté : thrombophlébite · claudication, amaurose fugace : maladie vasculaire · peur de mourir, déréalisation : attaque de panique</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="u-708a45" style="margin-top:6px;"><em>GPHC, Entrevue, ch. 2</em></div>
+
+        <div class="key-fact yellow" style="margin-top:12px;"><strong>Nuance :</strong> les durées ne concordent pas selon la source. GPHC (entrevue) retient plus de 20 min pour évoquer un infarctus et moins de 20 min pour l'angine ; Goldman-Cecil (tableau 45-2) retient ≥ 30 min pour l'infarctus et moins de 2–10 min pour l'angine stable. Une douleur de 20 à 30 min ne permet donc pas d'exclure un infarctus : faites l'ECG et la troponine. <span class="u-708a45"><em>GPHC, Entrevue, ch. 2 · Goldman-Cecil, ch. 45</em></span></div>
+
+        <div style="font-size:12px;font-weight:800;color:#6B6A66;margin-top:18px;letter-spacing:.4px;">EXAMEN CIBLÉ</div>
+
+        <div class="u-300634">
+        <table class="u-7d15ea">
+          <thead><tr><th scope="col">Examen à cibler</th><th scope="col">Trouvailles qui orientent</th></tr></thead>
+          <tbody>
+            <tr><td>TA aux deux bras et pouls · jugulaires · cœur (souffle, frottement) · poumons · reproduction de la douleur à la palpation · membres inférieurs</td><td>Asymétrie de TA ou de pouls, souffle d'insuffisance aortique : dissection · frottement péricardique : péricardite · hyperrésonance et ↓ du murmure vésiculaire : pneumothorax · douleur reproduite à la palpation : musculosquelettique · tachypnée, jambe enflée d'un seul côté : embolie pulmonaire · B3 ou souffle de dysfonction papillaire pendant la douleur : ischémie</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="u-708a45" style="margin-top:6px;"><em>Goldman-Cecil, ch. 45 · Notes de cours MMD 6411 · GPHC, Entrevue, ch. 5</em></div>
+
+        <div style="font-size:12px;font-weight:800;color:#6B6A66;margin-top:18px;letter-spacing:.4px;">DIAGNOSTICS</div>
+
+        <div style="font-size:12px;font-weight:800;color:#6B6A66;margin-top:14px;letter-spacing:.4px;">Causes cardiovasculaires</div>
+
+        <div class="u-300634">
+        <table class="u-7d15ea">
+          <thead><tr><th style="width:17%;">Diagnostic</th><th style="width:43%;">Ce qui l'évoque</th><th scope="col">À l'examen · pour confirmer</th></tr></thead>
+          <tbody>
+            <tr class="r-red"><td><strong>Infarctus du myocarde</strong></td><td>Rétrosternale, peut irradier comme l'angine · pression, brûlure, constriction · ≥ 30 min · non soulagée par le repos ni la nitroglycérine · dyspnée, sudation, faiblesse, nausées, vomissements</td><td>ECG 12 dérivations et troponine hypersensible ➜ voir SCA</td></tr>
+            <tr class="r-red"><td><strong>Angine instable</strong> (de repos)</td><td>Comme l'angine, parfois plus sévère · habituellement &lt; 20 min · tolérance à l'effort qui diminue, ou douleur au repos</td><td>Insuffisance cardiaque transitoire possible · ECG et troponine</td></tr>
             <tr><td><strong>Angine stable</strong></td><td>Rétrosternale, irradie au cou, à la mâchoire, à l'épigastre, à l'épaule ou au bras (le gauche, souvent) · pression, brûlure, serrement, lourdeur, « indigestion » · &lt; 2–10 min · déclenchée par l'effort, le froid ou le stress · soulagée par le repos ou la nitroglycérine</td><td>B3 ou souffle de dysfonction papillaire pendant la douleur · épreuve de provocation de l'ischémie ➜ voir MCAS</td></tr>
             <tr><td><strong>Péricardite</strong></td><td>Débute sur le sternum ou vers l'apex, irradie au cou ou à l'épaule gauche, plus localisée que l'ischémie · vive, en coup de poignard · plusieurs heures à jours · ↑ en respiration profonde, en rotation du thorax, couché · soulagée assis, penché en avant</td><td>Frottement péricardique ➜ voir Péricardite</td></tr>
-            <tr><td><strong>Dissection aortique</strong></td><td>Thoracique antérieure, peut irradier au dos · atroce, déchirante · début soudain, sans répit · contexte d'HTA ou de prédisposition (Marfan)</td><td>Souffle d'insuffisance aortique · asymétrie de pouls ou de TA · déficit neurologique · radiographie (taille de l'aorte), puis ETO, TDM ou IRM</td></tr>
-            <tr><td><strong>Embolie pulmonaire</strong> (douleur souvent absente)</td><td>Substernale ou sur la zone d'infarctus · pleurétique ou angineuse · début soudain, quelques minutes à &lt; 1 h · aggravée par la respiration</td><td>Dyspnée, tachypnée, tachycardie · hypotension et signes d'insuffisance du VD si gros emboles · râles, frottement pleural, hémoptysie si infarctus · score de Wells et D-dimères</td></tr>
+            <tr class="r-red"><td><strong>Dissection aortique</strong></td><td>Thoracique antérieure, peut irradier au dos · atroce, déchirante · début soudain, sans répit · contexte d'HTA ou de prédisposition (Marfan)</td><td>Souffle d'insuffisance aortique · asymétrie de pouls ou de TA · déficit neurologique · radiographie (taille de l'aorte), puis ETO, TDM ou IRM</td></tr>
+            <tr class="r-red"><td><strong>Embolie pulmonaire</strong> (douleur souvent absente)</td><td>Substernale ou sur la zone d'infarctus · pleurétique ou angineuse · début soudain, quelques minutes à &lt; 1 h · aggravée par la respiration</td><td>Dyspnée, tachypnée, tachycardie · hypotension et signes d'insuffisance du VD si gros emboles · râles, frottement pleural, hémoptysie si infarctus · score de Wells et D-dimères</td></tr>
             <tr><td><strong>Hypertension pulmonaire</strong></td><td>Substernale, oppressive, aggravée par l'effort, comme l'angine</td><td>Dyspnée sévère associée · signes d'HTP · cyanose fréquente</td></tr>
-            <tr style="background:#F1F5F9;"><td colspan="3"><strong>Causes non cardiaques</strong></td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div style="font-size:12px;font-weight:800;color:#6B6A66;margin-top:14px;letter-spacing:.4px;">Causes non cardiaques</div>
+
+        <div class="u-300634">
+        <table class="u-7d15ea">
+          <thead><tr><th style="width:17%;">Diagnostic</th><th style="width:43%;">Ce qui l'évoque</th><th scope="col">À l'examen · pour confirmer</th></tr></thead>
+          <tbody>
             <tr><td><strong>Pneumonie avec pleurésie</strong></td><td>Localisée sur la zone atteinte · pleurétique · douleur à la respiration</td><td>Dyspnée, toux, fièvre · matité à la percussion, souffle bronchique, râles, frottement pleural parfois</td></tr>
             <tr><td><strong>Pneumothorax spontané</strong></td><td>Unilatérale, vive, bien localisée · début soudain, plusieurs heures · douleur à la respiration</td><td>Dyspnée · hyperrésonance, ↓ du murmure vésiculaire et des vibrations vocales du côté atteint</td></tr>
             <tr><td><strong>Musculosquelettique</strong></td><td>Variable, sourde · aggravée par le mouvement · antécédent d'effort musculaire ou de blessure</td><td>Sensibilité à la pression ou au mouvement</td></tr>
@@ -64364,34 +64426,96 @@ Fer &rarr; constipation · interactions chélation nombreuses</div>
           </tbody>
         </table>
         </div>
-        <div class="u-708a45" style="margin-top:6px;"><em>Goldman-Cecil, ch. 45, tableau 45-2 (adapté)</em></div>
+
+        <div class="u-708a45" style="margin-top:6px;"><em>Goldman-Cecil, ch. 45, tableau 45-2 (adapté) · Lignes roses : à ne pas manquer</em></div>
 
         <div class="key-fact blue u-101bb9"><strong>Ce qui plaide contre une douleur cardiaque :</strong> pleurétique, abdominale, localisée, reproduite à la palpation ou au mouvement, ou d'une durée de quelques secondes ou de plus de plusieurs heures. Une dyspnée ou une fatigue peuvent être l'équivalent d'une angine. <span class="u-708a45"><em>Laflamme, ch. 2</em></span></div>
 
         <div class="key-fact u-101bb9"><strong>Autres causes à garder en tête :</strong> sténose aortique, cardiomyopathie hypertrophique, ischémie secondaire (anémie, hyperthyroïdie, arythmie), cocaïne, myocardite, Takotsubo, syndrome X (microvasculaire), rupture de l'œsophage (Boerhaave), pancréatite, cholécystite, ulcère perforé, spasme œsophagien, costochondrite, douleur cervicale ou tendinite de l'épaule. <span class="u-708a45"><em>Laflamme, ch. 2</em></span></div>
-      </div>
 
-      <div class="block clin" style="margin-top:14px;border-left-color:#1F6C9F;">
-        <div class="block-title" id="stg-ddx-dyspnee"><span class="tag">Dyspnée<span class="tag-sub"><span class="tag-dash"> — </span>aiguë ou chronique, cardiaque ou pulmonaire</span></span></div>
+        <div class="key-fact green" style="margin-top:12px;"><strong>En pratique :</strong> devant une douleur qui peut être ischémique, l'ECG 12 dérivations et la troponine hypersensible sont les premiers examens ; pour une embolie pulmonaire possible, le score de Wells puis les D-dimères ; pour une dissection, la radiographie, puis l'ETO, la TDM ou l'IRM. <span class="u-708a45"><em>Goldman-Cecil, ch. 45, tableau 45-2</em></span></div>
+        </div>
+
+        <div id="stgm1" style="display:none;margin-top:14px;">
+
+        <div style="font-size:13.5px;color:#6B6A66;">aiguë ou chronique, cardiaque ou pulmonaire</div>
 
         <div class="key-fact blue u-101bb9"><strong>Définition :</strong> sensation désagréable de respiration difficile ou pénible. L'essoufflement d'un sujet sain à l'effort n'en est pas une, car il est proportionné à l'effort. <span class="u-708a45"><em>Goldman-Cecil, ch. 77</em></span></div>
 
+        <div style="font-size:12px;font-weight:800;color:#6B6A66;margin-top:18px;letter-spacing:.4px;">SIGNAUX D'ALARME</div>
+
         <div class="key-fact red u-101bb9"><strong>Attention :</strong> devant une dyspnée aiguë, cherchez d'abord les causes qui menacent la vie : embolie pulmonaire, œdème pulmonaire, obstruction aiguë des voies aériennes (anaphylaxie, corps étranger), pneumothorax et pneumonie. <span class="u-708a45"><em>Goldman-Cecil, ch. 77</em></span></div>
+
+        <div class="key-fact red u-101bb9"><strong>Signaux d'alarme (dyspnée aiguë) :</strong> dyspnée au repos · baisse de l'état de conscience, agitation ou confusion · respiration irrégulière ou apneustique · cyanose · hémoptysie · douleur thoracique. <span class="u-708a45"><em>GPHC, Entrevue, ch. 3</em></span></div>
+
+        <div class="flag-list" style="margin-top:12px;">
+          <div class="flag-item"><span class="fi-icon"></span><span>Hypotension + turgescence jugulaire + bruits cardiaques assourdis + pouls paradoxal &gt; 10 mmHg : tamponnade ➜ voir Péricardite</span></div>
+          <div class="flag-item"><span class="fi-icon"></span><span>Extrémités froides, confusion, TAS &lt; 90 mmHg, diurèse basse : bas débit, choc cardiogénique ➜ voir Les chocs</span></div>
+          <div class="flag-item"><span class="fi-icon"></span><span>Nouveau souffle systolique avec œdème pulmonaire soudain après un infarctus : rupture de pilier ou de cordages, urgence chirurgicale ➜ voir Valve mitrale</span></div>
+          <div class="flag-item"><span class="fi-icon"></span><span>Cyanose centrale avec hippocratisme : cardiopathie cyanogène sévère, shunt droit-gauche</span></div>
+        </div>
+
+        <div class="u-708a45" style="margin-top:6px;"><em>Notes de cours, Examen cardiaque MMD 6411 · Goldman-Cecil, ch. 45 · Laflamme, ch. 2</em></div>
+
+        <div style="font-size:12px;font-weight:800;color:#6B6A66;margin-top:18px;letter-spacing:.4px;">QUESTIONS QUI DÉPARTAGENT</div>
+
+        <div class="key-fact blue u-101bb9"><strong>Règle :</strong> commencez par « Comment votre essoufflement a-t-il commencé ? » (aigu) ou « Pouvez-vous me parler davantage de votre problème d'essoufflement ? » (chronique). Le début, brutal ou progressif, est la première information. <span class="u-708a45"><em>GPHC, Entrevue, ch. 3</em></span></div>
 
         <div class="u-300634">
         <table class="u-7d15ea">
-          <thead><tr><th style="width:20%;">Cause</th><th style="width:48%;">Ce qui l'évoque</th><th>Pour confirmer</th></tr></thead>
+          <thead><tr><th style="width:17%;">Dimension</th><th style="width:38%;">Question</th><th scope="col">Réponse qui oriente</th></tr></thead>
           <tbody>
-            <tr style="background:#FDEBEC;"><td colspan="3"><strong>Surtout aiguë</strong></td></tr>
+            <tr><td><strong>Provoquée</strong></td><td>« Quand est-ce que ça survient ? »</td><td>Au moindre exercice : déconditionnement, MPOC léger, insuffisance cardiaque · après un certain temps d'exercice : asthme d'effort · couché sur le dos : orthopnée (insuffisance cardiaque, reflux) · couché sur un seul côté : épanchement pleural unilatéral · étouffement avec un aliment : corps étranger · après une IVRS : pneumonie · nouvel allergène : anaphylaxie · après un choc : pneumothorax · contexte stressant : attaque de panique</td></tr>
+            <tr><td><strong>Soulagée</strong></td><td>« Qu'est-ce qui vous soulage ? »</td><td>Repos, position assise · pompe : bronchospasme, asthme · position : péricardite · évitement du contexte stressant : panique</td></tr>
+            <tr><td><strong>Qualité</strong></td><td>« Est-ce difficile de prendre une respiration profonde ? »</td><td>Respiration non satisfaisante : MPOC · sensation de suffocation : insuffisance cardiaque · respiration de Kussmaul ou de Cheyne-Stokes</td></tr>
+            <tr><td><strong>Quantité</strong></td><td>« Jusqu'où marchez-vous avant de vous arrêter ? Quel est l'impact sur votre vie ? »</td><td>Grade 1 : effort intense (normal) · 2 : marche rapide ou faible pente · 3 : marche plus lentement que ses pairs · 4 : s'arrête après 100 m · 5 : dyspnée au repos</td></tr>
+            <tr><td><strong>Symptômes associés</strong></td><td>« Avez-vous eu… » douleur thoracique, palpitations, étourdissement, orthopnée, œdème, toux, crachats, fièvre, perte de poids</td><td>Selon les hypothèses · jambe enflée d'un seul côté : thrombophlébite · respiration sifflante, urticaire, œdème facial : anaphylaxie</td></tr>
+            <tr><td><strong>Temps</strong></td><td>« Depuis quand ? Constante ou par épisodes ? Premier épisode ? »</td><td>Évolution stable ou progressive · ordre d'apparition des symptômes</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="u-708a45" style="margin-top:6px;"><em>GPHC, Entrevue, ch. 3</em></div>
+
+        <div style="font-size:12px;font-weight:800;color:#6B6A66;margin-top:18px;letter-spacing:.4px;">EXAMEN CIBLÉ</div>
+
+        <div class="u-300634">
+        <table class="u-7d15ea">
+          <thead><tr><th scope="col">Examen à cibler</th><th scope="col">Trouvailles qui orientent</th></tr></thead>
+          <tbody>
+            <tr><td>FR, effort respiratoire, SpO₂ · jugulaires · poumons · B3 · œdème</td><td>Jugulaires distendues, crépitants, B3, œdème : insuffisance cardiaque · sibilances : bronchoconstriction · matité à la base : épanchement pleural · tachypnée avec cyanose : hypoxémie sévère</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="u-708a45" style="margin-top:6px;"><em>Goldman-Cecil, ch. 45 · Notes de cours MMD 6411 · GPHC, Entrevue, ch. 5</em></div>
+
+        <div style="font-size:12px;font-weight:800;color:#6B6A66;margin-top:18px;letter-spacing:.4px;">DIAGNOSTICS</div>
+
+        <div style="font-size:12px;font-weight:800;color:#6B6A66;margin-top:14px;letter-spacing:.4px;">Surtout aiguë</div>
+
+        <div class="u-300634">
+        <table class="u-7d15ea">
+          <thead><tr><th style="width:20%;">Cause</th><th style="width:48%;">Ce qui l'évoque</th><th scope="col">Pour confirmer</th></tr></thead>
+          <tbody>
             <tr><td><strong>Ischémie myocardique</strong></td><td>Dyspnée aiguë, parfois seule, comme équivalent d'angine ; douleur thoracique associée possible</td><td>ECG et troponine ➜ voir SCA</td></tr>
-            <tr><td><strong>Insuffisance cardiaque aiguë, œdème pulmonaire</strong></td><td>« Faim d'air », besoin de respirer · orthopnée · dyspnée paroxystique nocturne</td><td>Peptide natriurétique (BNP) · ECG · radiographie ➜ voir Insuffisance cardiaque</td></tr>
+            <tr class="r-red"><td><strong>Insuffisance cardiaque aiguë, œdème pulmonaire</strong></td><td>« Faim d'air », besoin de respirer · orthopnée · dyspnée paroxystique nocturne</td><td>Peptide natriurétique (BNP) · ECG · radiographie ➜ voir Insuffisance cardiaque</td></tr>
             <tr><td><strong>HTA sévère</strong></td><td>Dyspnée aiguë avec TA très élevée</td><td>Mesure de la TA · recherche d'œdème pulmonaire</td></tr>
             <tr><td><strong>Tamponnade</strong></td><td>Dyspnée aiguë avec épanchement péricardique</td><td>Échographie ➜ voir Péricardite</td></tr>
-            <tr><td><strong>Embolie pulmonaire</strong></td><td>Début soudain · douleur pleurétique, hémoptysie possibles</td><td>Score de Wells et D-dimères</td></tr>
-            <tr><td><strong>Pneumothorax</strong></td><td>Début soudain, douleur unilatérale à la respiration</td><td>Radiographie pulmonaire</td></tr>
-            <tr><td><strong>Obstruction des voies aériennes supérieures</strong></td><td>Début brutal · effort respiratoire accru</td><td>Examen des voies aériennes</td></tr>
-            <tr><td><strong>Bronchite aiguë, pneumonie</strong></td><td>Toux, fièvre, symptômes respiratoires</td><td>Radiographie pulmonaire</td></tr>
-            <tr style="background:#F1F5F9;"><td colspan="3"><strong>Surtout subaiguë ou chronique</strong></td></tr>
+            <tr class="r-red"><td><strong>Embolie pulmonaire</strong></td><td>Début soudain · douleur pleurétique, hémoptysie possibles</td><td>Score de Wells et D-dimères</td></tr>
+            <tr class="r-red"><td><strong>Pneumothorax</strong></td><td>Début soudain, douleur unilatérale à la respiration</td><td>Radiographie pulmonaire</td></tr>
+            <tr class="r-red"><td><strong>Obstruction des voies aériennes supérieures</strong></td><td>Début brutal · effort respiratoire accru</td><td>Examen des voies aériennes</td></tr>
+            <tr class="r-red"><td><strong>Bronchite aiguë, pneumonie</strong></td><td>Toux, fièvre, symptômes respiratoires</td><td>Radiographie pulmonaire</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div style="font-size:12px;font-weight:800;color:#6B6A66;margin-top:14px;letter-spacing:.4px;">Surtout subaiguë ou chronique</div>
+
+        <div class="u-300634">
+        <table class="u-7d15ea">
+          <thead><tr><th style="width:20%;">Cause</th><th style="width:48%;">Ce qui l'évoque</th><th scope="col">Pour confirmer</th></tr></thead>
+          <tbody>
             <tr><td><strong>Insuffisance cardiaque ou valvulopathie</strong></td><td>↑ de la pression veineuse pulmonaire · orthopnée, dyspnée paroxystique nocturne · le soulagement par diurèse oriente</td><td>BNP, écho cardiaque ➜ voir Insuffisance cardiaque, Valve mitrale</td></tr>
             <tr><td><strong>MPOC, asthme</strong></td><td>Oppression thoracique de bronchoconstriction · sibilances</td><td>Spirométrie ➜ voir Évaluation pulmonaire</td></tr>
             <tr><td><strong>Pneumopathie interstitielle</strong></td><td>Dyspnée progressive, sans signe d'insuffisance cardiaque</td><td>Radiographie, tests de fonction respiratoire</td></tr>
@@ -64401,21 +64525,71 @@ Fer &rarr; constipation · interactions chélation nombreuses</div>
           </tbody>
         </table>
         </div>
-        <div class="u-708a45" style="margin-top:6px;"><em>Goldman-Cecil, ch. 45 et 77</em></div>
+
+        <div class="u-708a45" style="margin-top:6px;"><em>Goldman-Cecil, ch. 45 et 77 · Lignes roses : à ne pas manquer</em></div>
 
         <div class="key-fact yellow u-101bb9"><strong>Piège :</strong> la nature de la sensation oriente. L'effort respiratoire accru évoque une obstruction des voies aériennes ou une maladie neuromusculaire ; la « faim d'air », l'insuffisance cardiaque ; l'oppression thoracique, une bronchoconstriction (qu'un œdème pulmonaire peut aussi donner). <span class="u-708a45"><em>Goldman-Cecil, ch. 45</em></span></div>
 
         <div class="key-fact green u-101bb9"><strong>En pratique :</strong> pour une dyspnée inexpliquée, le premier niveau est la radiographie pulmonaire, l'ECG, les tests de fonction respiratoire et l'épreuve d'effort avec oxymétrie. En aigu, le BNP aide à départager l'insuffisance cardiaque des autres causes. <span class="u-708a45"><em>Goldman-Cecil, ch. 77</em></span></div>
-      </div>
+        </div>
 
-      <div class="block clin" style="margin-top:14px;border-left-color:#956400;">
-        <div class="block-title" id="stg-ddx-syncope"><span class="tag">Syncope<span class="tag-sub"><span class="tag-dash"> — </span>par mécanisme, avec ce qui fait penser au cœur</span></span></div>
+        <div id="stgm2" style="display:none;margin-top:14px;">
+
+        <div style="font-size:13.5px;color:#6B6A66;">par mécanisme, avec ce qui fait penser au cœur</div>
 
         <div class="key-fact blue u-101bb9"><strong>Définition :</strong> perte de conscience brève due à une hypoperfusion cérébrale globale transitoire, qui se résout spontanément avec une récupération rapide. <span class="u-708a45"><em>Laflamme, ch. 6</em></span></div>
 
+        <div style="font-size:12px;font-weight:800;color:#6B6A66;margin-top:18px;letter-spacing:.4px;">SIGNAUX D'ALARME</div>
+
+        <div class="key-fact red u-101bb9"><strong>Attention :</strong> suspectez une syncope cardiaque devant une cardiopathie structurelle, une mort subite dans la famille, une syncope à l'effort ou en position couchée, une syncope abrupte, des palpitations pendant la syncope ou un ECG anormal. Elle exige une évaluation urgente ➜ voir Syncope pour la stratification du risque. <span class="u-708a45"><em>Laflamme, ch. 6 · Goldman-Cecil, ch. 56</em></span></div>
+
+        <div class="key-fact red u-101bb9"><strong>Attention :</strong> l'histoire fait penser à une syncope à haut risque quand elle survient à l'effort ou en position couchée, avec une douleur thoracique nouvelle, avec des palpitations avant l'épisode, ou chez un patient avec une mort subite familiale, une insuffisance cardiaque, une FEVG &lt; 35 %, une sténose aortique, une cardiomyopathie, une arythmie ventriculaire connue, une coronaropathie, une cardiopathie congénitale, une hypertension pulmonaire ou un défibrillateur. <span class="u-708a45"><em>Goldman-Cecil, ch. 56, tableau 56-4</em></span></div>
+
+        <div class="flag-list" style="margin-top:12px;">
+          <div class="flag-item"><span class="fi-icon"></span><span>Syncope à l'effort avec souffle systolique éjectionnel : sténose aortique ou CMHO ➜ voir Sténose aortique</span></div>
+        </div>
+
+        <div class="u-708a45" style="margin-top:6px;"><em>Notes de cours, Examen cardiaque MMD 6411 · Goldman-Cecil, ch. 45 · Laflamme, ch. 2</em></div>
+
+        <div style="font-size:12px;font-weight:800;color:#6B6A66;margin-top:18px;letter-spacing:.4px;">QUESTIONS QUI DÉPARTAGENT · RECONSTITUER L'ÉPISODE</div>
+
+        <div class="key-fact blue u-101bb9"><strong>Règle :</strong> commencez par « Expliquez-moi les circonstances entourant votre perte de conscience. » Ensuite, interrogez un témoin : l'histoire est la partie la plus importante de l'évaluation, car la plupart des épisodes ont lieu hors du regard d'un soignant. <span class="u-708a45"><em>GPHC, Entrevue, ch. 8 · Goldman-Cecil, ch. 56</em></span></div>
+
         <div class="u-300634">
         <table class="u-7d15ea">
-          <thead><tr><th style="width:18%;">Mécanisme</th><th style="width:30%;">Causes</th><th>Indices cliniques</th></tr></thead>
+          <thead><tr><th style="width:17%;">Dimension</th><th style="width:38%;">Question</th><th scope="col">Réponse qui oriente</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Provoquée</strong></td><td>« Que faisiez-vous juste avant ? Dans quelle position ? »</td><td>Effort : cause cardiovasculaire · changement de position : hypotension orthostatique · toux, défécation, miction, Valsalva : situationnelle · chaleur, peur, odeur désagréable : vasovagale · stress : panique · mouvements répétés des bras : vol sous-clavier</td></tr>
+            <tr><td><strong>Soulagée</strong></td><td>« Est-ce mieux couché ou assis ? »</td><td>Couché ou assis : hypotension orthostatique</td></tr>
+            <tr><td><strong>Qualité</strong></td><td>« Avez-vous senti quelque chose avant ? » (tête légère, sueurs, vision qui s'assombrit)</td><td>Prodrome de tête légère : hypoperfusion cérébrale · prodrome épileptique (déjà-vu, symptômes visuels) · inattendu : arythmie, avec peu ou pas d'avertissement</td></tr>
+            <tr><td><strong>Temps</strong></td><td>« Combien de temps a duré l'épisode ? Et le retour à la normale ? » · début subit ou progressif</td><td>Confusion de plus de 5 min au réveil : crise convulsive · récupération rapide : syncope</td></tr>
+            <tr><td><strong>Symptômes associés</strong></td><td>« Avant ou après, avez-vous eu… » douleur thoracique, palpitations, dyspnée, nausées, sueurs, déficit neurologique, morsure latérale de la langue, incontinence</td><td>Palpitations avant : tachyarythmie · douleur thoracique, dyspnée : cardiaque, embolie · déficit focal, vertige, diplopie : neurologique · morsure latérale de la langue, convulsions : épilepsie</td></tr>
+            <tr><td><strong>Antécédents</strong></td><td>FA, cardiopathie, stimulateur · diabète · épilepsie · médicaments (bêtabloquants, diurétiques) · alcool récent</td><td>Hypoglycémie · hypovolémie · hypotension orthostatique</td></tr>
+            <tr><td><strong>Famille</strong></td><td>« Y a-t-il eu une mort subite dans la famille ? Une maladie du cœur héréditaire ? »</td><td>Cardiomyopathie hypertrophique, arythmie héréditaire</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="u-708a45" style="margin-top:6px;"><em>GPHC, Entrevue, ch. 8 · Goldman-Cecil, ch. 56</em></div>
+
+        <div style="font-size:12px;font-weight:800;color:#6B6A66;margin-top:18px;letter-spacing:.4px;">EXAMEN CIBLÉ</div>
+
+        <div class="u-300634">
+        <table class="u-7d15ea">
+          <thead><tr><th scope="col">Examen à cibler</th><th scope="col">Trouvailles qui orientent</th></tr></thead>
+          <tbody>
+            <tr><td>TA et FC couché puis debout · souffles (aortique, CMHO) · pouls · TA aux deux bras · neurologique sommaire</td><td>↓ de la TA au lever : hypotension orthostatique ➜ voir Hypotension orthostatique · souffle systolique éjectionnel irradiant aux carotides : sténose aortique · différence entre les deux bras : dissection, vol sous-clavier</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="u-708a45" style="margin-top:6px;"><em>Goldman-Cecil, ch. 45 · Notes de cours MMD 6411 · GPHC, Entrevue, ch. 5</em></div>
+
+        <div style="font-size:12px;font-weight:800;color:#6B6A66;margin-top:18px;letter-spacing:.4px;">DIAGNOSTICS</div>
+
+        <div class="u-300634">
+        <table class="u-7d15ea">
+          <thead><tr><th style="width:18%;">Mécanisme</th><th style="width:30%;">Causes</th><th scope="col">Indices cliniques</th></tr></thead>
           <tbody>
             <tr><td><strong>Neurocardiogénique</strong> (8–41 % des syncopes pour la vasovagale)</td><td>Vasovagale · situationnelle (miction, défécation, déglutition, toux ; 1–8 %) · sinus carotidien (0,4 %)</td><td>Station debout prolongée immobile, douleur ou peur soudaine, stimulus désagréable · syncope d'un athlète après l'effort · pendant ou juste après miction, toux, déglutition, défécation · tête tournée ou pression sur le sinus carotidien</td></tr>
             <tr><td><strong>Hypotension orthostatique</strong> (4–10 %)</td><td>Médicaments, déshydratation, dysautonomie, alcool</td><td>Syncope immédiatement au lever · jamais en décubitus ➜ voir Hypotension orthostatique</td></tr>
@@ -64427,21 +64601,61 @@ Fer &rarr; constipation · interactions chélation nombreuses</div>
           </tbody>
         </table>
         </div>
+
         <div class="u-708a45" style="margin-top:6px;"><em>Goldman-Cecil, ch. 56, tableaux 56-1 et 56-2 · Laflamme, ch. 6</em></div>
 
-        <div class="key-fact red u-101bb9"><strong>Attention :</strong> suspectez une syncope cardiaque devant une cardiopathie structurelle, une mort subite dans la famille, une syncope à l'effort ou en position couchée, une syncope abrupte, des palpitations pendant la syncope ou un ECG anormal. Elle exige une évaluation urgente ➜ voir Syncope pour la stratification du risque. <span class="u-708a45"><em>Laflamme, ch. 6 · Goldman-Cecil, ch. 56</em></span></div>
-
         <div class="key-fact yellow u-101bb9"><strong>Piège :</strong> chez un patient hospitalisé pour une première syncope, l'embolie pulmonaire se trouve chez environ 25 % de ceux sans autre cause évidente et chez environ 13 % de ceux qui en ont une, quand elle n'est pas exclue par un score de Wells bas et des D-dimères négatifs. <span class="u-708a45"><em>Goldman-Cecil, ch. 56</em></span></div>
-      </div>
+        </div>
 
-      <div class="block clin" style="margin-top:14px;border-left-color:#346538;">
-        <div class="block-title" id="stg-ddx-palp"><span class="tag">Palpitations<span class="tag-sub"><span class="tag-dash"> — </span>régulier ou irrégulier ?</span></span></div>
+        <div id="stgm3" style="display:none;margin-top:14px;">
+
+        <div style="font-size:13.5px;color:#6B6A66;">régulier ou irrégulier ?</div>
 
         <div class="key-fact blue u-101bb9"><strong>Définition :</strong> sensation subjective d'un battement cardiaque irrégulier ou anormal. N'importe quelle arythmie peut la causer, avec ou sans cardiopathie sous-jacente. Précisez la durée et la fréquence des épisodes, ce qui les déclenche et les symptômes associés. <span class="u-708a45"><em>Goldman-Cecil, ch. 45</em></span></div>
 
+        <div style="font-size:12px;font-weight:800;color:#6B6A66;margin-top:18px;letter-spacing:.4px;">SIGNAUX D'ALARME</div>
+
+        <div class="key-fact red u-101bb9"><strong>Signaux d'alarme :</strong> syncope ou étourdissement · douleur thoracique, diaphorèse · dyspnée · mort subite ou arythmie connue dans la famille · médicaments qui allongent le QT · maladie coronarienne personnelle. <span class="u-708a45"><em>GPHC, Entrevue, ch. 2</em></span></div>
+
+        <div style="font-size:12px;font-weight:800;color:#6B6A66;margin-top:18px;letter-spacing:.4px;">QUESTIONS QUI DÉPARTAGENT · FAIRE DÉCRIRE LE RYTHME</div>
+
+        <div class="key-fact blue u-101bb9"><strong>Règle :</strong> commencez par « Pouvez-vous me parler davantage de vos palpitations ? » Puis demandez ce qui se passe exactement. Au besoin, demandez à la personne de taper du doigt pour imiter ce qu'elle ressent. <span class="u-708a45"><em>GPHC, Entrevue, ch. 2</em></span></div>
+
         <div class="u-300634">
         <table class="u-7d15ea">
-          <thead><tr><th style="width:30%;">Ce que décrit le patient</th><th style="width:25%;">Rythme à évoquer</th><th>À retenir</th></tr></thead>
+          <thead><tr><th style="width:17%;">Dimension</th><th style="width:38%;">Question</th><th scope="col">Réponse qui oriente</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Provoquées</strong></td><td>« Qu'est-ce qui les déclenche ? »</td><td>Événement stressant, lieu public : psychogène · exercice : cardiaque · grande quantité d'alcool : FA (« Holiday Heart ») · médicaments · stimulants : café, boissons énergisantes, drogues (amphétamines, cocaïne), alcool, tabac</td></tr>
+            <tr><td><strong>Soulagées</strong></td><td>« Qu'est-ce qui les arrête ? »</td><td>Manœuvres vagales : tachycardie supraventriculaire paroxystique</td></tr>
+            <tr><td><strong>Qualité</strong></td><td>« Est-ce rapide ou lent ? Régulier ? » (faire taper le rythme)</td><td>Battements irréguliers : FA, extrasystoles bénignes · un battement manqué : ectopie bénigne · un seul gros battement : extrasystole ventriculaire · battements bondissants dans le cou plutôt que dans la poitrine (« frog sign ») : tachycardie par réentrée nodale</td></tr>
+            <tr><td><strong>Quantité</strong></td><td>« Combien par jour ? Quelle durée, quel intervalle ? »</td><td>Quelques secondes : extrasystoles · quelques minutes à quelques heures : FA, tachycardie supraventriculaire</td></tr>
+            <tr><td><strong>Symptômes associés</strong></td><td>« Avez-vous eu… » douleur thoracique, dyspnée, sueurs, étourdissement, syncope, orthopnée, œdème</td><td>Effet sur le débit cardiaque · peur de mourir, déréalisation, hyperventilation : panique · chaleur, diarrhée, perte de poids, tremblements : hyperthyroïdie · céphalées pulsatiles, HTA, sueurs profuses : phéochromocytome</td></tr>
+            <tr><td><strong>Médicaments</strong></td><td>« Quels médicaments, y compris en vente libre ? Un changement récent ? »</td><td>Sympathomimétiques (salbutamol, éphédrine, décongestionnants) · sevrage d'un bêtabloquant · médicaments qui allongent le QT · hormones thyroïdiennes, théophylline, digitale</td></tr>
+            <tr><td><strong>Antécédents et famille</strong></td><td>Infarctus, cardiopathie, hyperthyroïdie · mort subite ou arythmie dans la famille</td><td>Cardiopathie structurelle · syndrome du QT long, syndrome de Brugada</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="u-708a45" style="margin-top:6px;"><em>GPHC, Entrevue, ch. 2</em></div>
+
+        <div style="font-size:12px;font-weight:800;color:#6B6A66;margin-top:18px;letter-spacing:.4px;">EXAMEN CIBLÉ</div>
+
+        <div class="u-300634">
+        <table class="u-7d15ea">
+          <thead><tr><th scope="col">Examen à cibler</th><th scope="col">Trouvailles qui orientent</th></tr></thead>
+          <tbody>
+            <tr><td>Pouls (régularité) · jugulaires (onde A) · cœur · thyroïde · signes d'insuffisance cardiaque</td><td>Irrégulièrement irrégulier, absence d'onde A : FA · goitre, tremblements, exophtalmie : hyperthyroïdie · souffle : valvulopathie</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="u-708a45" style="margin-top:6px;"><em>Goldman-Cecil, ch. 45 · Notes de cours MMD 6411 · GPHC, Entrevue, ch. 5</em></div>
+
+        <div style="font-size:12px;font-weight:800;color:#6B6A66;margin-top:18px;letter-spacing:.4px;">DIAGNOSTICS</div>
+
+        <div class="u-300634">
+        <table class="u-7d15ea">
+          <thead><tr><th style="width:30%;">Ce que décrit le patient</th><th style="width:25%;">Rythme à évoquer</th><th scope="col">À retenir</th></tr></thead>
           <tbody>
             <tr><td>« Battement sauté », « le cœur qui fait un tour sur lui-même »</td><td><strong>Extrasystoles</strong> auriculaires ou ventriculaires</td><td>À distinguer d'une FA ➜ voir Arythmies</td></tr>
             <tr><td>Rythme irrégulier, sans motif</td><td><strong>Fibrillation auriculaire</strong></td><td>Irrégulièrement irrégulier ➜ voir FA</td></tr>
@@ -64452,19 +64666,65 @@ Fer &rarr; constipation · interactions chélation nombreuses</div>
           </tbody>
         </table>
         </div>
+
         <div class="u-708a45" style="margin-top:6px;"><em>Goldman-Cecil, ch. 45 · Laflamme, ch. 4</em></div>
 
         <div class="key-fact yellow u-101bb9"><strong>Nuance :</strong> selon les séries, 9 à 43 % des patients qui consultent pour des palpitations ont une cardiopathie importante. Plus le risque est élevé, plus l'évaluation doit aller loin. <span class="u-708a45"><em>Goldman-Cecil, ch. 45</em></span></div>
 
         <div class="key-fact green u-101bb9"><strong>En pratique :</strong> l'ECG ambulatoire est indiqué pour des palpitations, une syncope ou un étourdissement (classe I), et pour un essoufflement, une douleur thoracique ou une fatigue non expliqués fortement liés aux palpitations (classe II). L'échocardiographie est indiquée si l'arythmie s'accompagne de signes de cardiopathie ou d'une histoire familiale de maladie génétique arythmogène. <span class="u-708a45"><em>Goldman-Cecil, ch. 45, tableau 45-4 (AHA/ACC)</em></span></div>
-      </div>
+        </div>
 
-      <div class="block clin" style="margin-top:14px;border-left-color:#6D28D9;">
-        <div class="block-title" id="stg-ddx-oedeme"><span class="tag">Œdème des membres inférieurs<span class="tag-sub"><span class="tag-dash"> — </span>symétrique ou unilatéral ?</span></span></div>
+        <div id="stgm4" style="display:none;margin-top:14px;">
+
+        <div style="font-size:13.5px;color:#6B6A66;">symétrique ou unilatéral ?</div>
+
+        <div style="font-size:12px;font-weight:800;color:#6B6A66;margin-top:18px;letter-spacing:.4px;">SIGNAUX D'ALARME</div>
+
+        <div class="flag-list" style="margin-top:12px;">
+          <div class="flag-item"><span class="fi-icon"></span><span>Turgescence jugulaire + B3 + œdèmes : insuffisance cardiaque congestive</span></div>
+        </div>
+
+        <div class="u-708a45" style="margin-top:6px;"><em>Notes de cours, Examen cardiaque MMD 6411 · Goldman-Cecil, ch. 45 · Laflamme, ch. 2</em></div>
+
+        <div style="font-size:12px;font-weight:800;color:#6B6A66;margin-top:18px;letter-spacing:.4px;">QUESTIONS QUI DÉPARTAGENT</div>
+
+        <div class="key-fact blue u-101bb9"><strong>Règle :</strong> commencez par « Comment avez-vous découvert cette enflure ? Depuis quand ? Déjà vécu ? » Puis posez les questions du tableau. <span class="u-708a45"><em>GPHC, Entrevue, ch. 5</em></span></div>
 
         <div class="u-300634">
         <table class="u-7d15ea">
-          <thead><tr><th style="width:24%;">Présentation</th><th style="width:34%;">Causes</th><th>Indices</th></tr></thead>
+          <thead><tr><th style="width:17%;">Dimension</th><th style="width:38%;">Question</th><th scope="col">Réponse qui oriente</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Provoqué</strong></td><td>« Est-ce pire debout ? Avez-vous commencé un médicament ? »</td><td>Position debout : insuffisance veineuse, insuffisance cardiaque · inhibiteurs calciques, corticostéroïdes, AINS : œdème d'origine médicamenteuse</td></tr>
+            <tr><td><strong>Soulagé</strong></td><td>« Est-ce mieux couché ? »</td><td>Position couchée : insuffisance veineuse, insuffisance cardiaque</td></tr>
+            <tr><td><strong>Quantité</strong></td><td>« Avez-vous pris du poids ? Combien ? »</td><td>Rétention liquidienne · accumulation massive : anasarque</td></tr>
+            <tr><td><strong>Région</strong></td><td>« Seulement les jambes ? Un seul côté ? »</td><td>Membres inférieurs seulement · ascite : cirrhose · œdème palpébral : syndrome néphrotique · épanchements pleuraux</td></tr>
+            <tr><td><strong>Symptômes associés</strong></td><td>« Avez-vous eu… » orthopnée, dyspnée paroxystique nocturne, dyspnée, douleur thoracique, syncope · douleur abdominale, diarrhée · hématurie, nycturie</td><td>Cardiaque · digestif : cirrhose, malabsorption · urinaire : cause rénale</td></tr>
+            <tr><td><strong>Antécédents et habitudes</strong></td><td>Insuffisance cardiaque, maladie rénale ou hépatique, hypothyroïdie, Cushing, cancer · alimentation riche en sel · chirurgie récente, grossesse</td><td>Sel : décompensation d'une insuffisance cardiaque · chirurgie ou cancer : thrombose veineuse profonde</td></tr>
+            <tr><td><strong>Sommeil</strong></td><td>« Vous réveillez-vous la nuit pour uriner ? »</td><td>Redistribution de l'œdème en position couchée · insuffisance rénale</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="u-708a45" style="margin-top:6px;"><em>GPHC, Entrevue, ch. 5</em></div>
+
+        <div style="font-size:12px;font-weight:800;color:#6B6A66;margin-top:18px;letter-spacing:.4px;">EXAMEN CIBLÉ</div>
+
+        <div class="u-300634">
+        <table class="u-7d15ea">
+          <thead><tr><th scope="col">Examen à cibler</th><th scope="col">Trouvailles qui orientent</th></tr></thead>
+          <tbody>
+            <tr><td>Jugulaires et reflux hépato-jugulaire · foie · poumons · mollets · œdème palpébral, ascite</td><td>Jugulaires distendues, reflux positif, hépatomégalie : insuffisance cardiaque droite, péricardite constrictive · unilatéral : thrombophlébite · œdème palpébral : syndrome néphrotique · ascite : cirrhose</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="u-708a45" style="margin-top:6px;"><em>Goldman-Cecil, ch. 45 · Notes de cours MMD 6411 · GPHC, Entrevue, ch. 5</em></div>
+
+        <div style="font-size:12px;font-weight:800;color:#6B6A66;margin-top:18px;letter-spacing:.4px;">DIAGNOSTICS</div>
+
+        <div class="u-300634">
+        <table class="u-7d15ea">
+          <thead><tr><th style="width:24%;">Présentation</th><th style="width:34%;">Causes</th><th scope="col">Indices</th></tr></thead>
           <tbody>
             <tr><td><strong>Symétrique</strong>, qui monte à partir des chevilles</td><td>Insuffisance cardiaque droite · péricardite · hypertension pulmonaire</td><td>Turgescence jugulaire, souvent congestion hépatique ➜ voir Insuffisance cardiaque, Péricardite</td></tr>
             <tr><td><strong>Unilatéral</strong></td><td>Thrombophlébite · obstruction veineuse proximale ou lymphatique</td><td>Examen de la jambe atteinte et des pouls</td></tr>
@@ -64473,31 +64733,32 @@ Fer &rarr; constipation · interactions chélation nombreuses</div>
           </tbody>
         </table>
         </div>
+
         <div class="u-708a45" style="margin-top:6px;"><em>Goldman-Cecil, ch. 45 · Laflamme, ch. 2</em></div>
 
         <div class="key-fact blue u-101bb9"><strong>Pourquoi :</strong> parmi des patients non sélectionnés avec un œdème bilatéral, environ 40 % ont une cardiopathie, 40 % une pression pulmonaire élevée, 20 % une maladie veineuse bilatérale, 20 % une maladie rénale et 25 % un œdème idiopathique. Les catégories se chevauchent. <span class="u-708a45"><em>Goldman-Cecil, ch. 45</em></span></div>
 
-        <div class="key-fact u-101bb9"><strong>En pratique :</strong> cherchez aussi un œdème présacré chez le patient alité. <span class="u-708a45"><em>Laflamme, ch. 1</em></span></div>
+        <div class="key-fact green u-101bb9"><strong>En pratique :</strong> cherchez aussi un œdème présacré chez le patient alité. <span class="u-708a45"><em>Laflamme, ch. 1</em></span></div>
+        </div>
+
       </div>
 
+
+    
+      <!--src-foot--><div class="src-foot"><p><strong>Citées dans le texte</strong> — AHA / ACC · Goldman-Cecil · GPHC.</p></div><!--/src-foot-->
     </div>
     <div class="section" id="sec-stage-questionnaire">
       <div class="section-header">
         <div class="section-accent" style="background:#E1F3FE;"></div>
-        <div class="section-title"><h1>Stage — Questionnaire cardiologique</h1><div class="breadcrumb">Stage <span class="breadcrumb-sep">·</span> Symptômes cardinaux · Antécédents · Classe fonctionnelle <span class="breadcrumb-sep">·</span> Questions par motif</div></div>
+        <div class="section-title"><h1>Stage — Questionnaire cardiologique</h1><div class="breadcrumb">Stage <span class="breadcrumb-sep">·</span> Symptômes cardinaux · Antécédents · Classe fonctionnelle</div></div>
       </div>
       <div class="m-navbar">
         <button class="m-nav" onclick="goToBlock('stg-q-cardinaux')">Symptômes cardinaux</button>
         <button class="m-nav" onclick="goToBlock('stg-q-ant')">Antécédents et contexte</button>
         <button class="m-nav" onclick="goToBlock('stg-q-classe')">Classe fonctionnelle</button>
-        <button class="m-nav" onclick="goToBlock('stg-q-dlr')">Douleur thoracique</button>
-        <button class="m-nav" onclick="goToBlock('stg-q-dyspnee')">Dyspnée</button>
-        <button class="m-nav" onclick="goToBlock('stg-q-syncope')">Syncope</button>
-        <button class="m-nav" onclick="goToBlock('stg-q-palp')">Palpitations</button>
-        <button class="m-nav" onclick="goToBlock('stg-q-oedeme')">Œdème des membres inférieurs</button>
       </div>
 
-      <div class="key-fact blue u-567bc"><strong>En pratique :</strong> commencez par une question ouverte, laissez la personne décrire avec ses mots, puis précisez avec des questions fermées. Les tableaux suivent la grille d'entrevue habituelle : ce qui provoque, ce qui soulage, la qualité, l'intensité, la région, les symptômes associés et le temps ➜ voir L'entrevue médicale et Questionnaire pour la méthode générale.</div>
+      <div class="key-fact blue u-567bc"><strong>Méthode :</strong> commencez par une question ouverte, laissez la personne décrire avec ses mots, puis précisez avec des questions fermées. Les tableaux suivent la grille d'entrevue habituelle : ce qui provoque, ce qui soulage, la qualité, l'intensité, la région, les symptômes associés et le temps ➜ voir L'entrevue médicale et Questionnaire pour la méthode générale.</div>
 
       <div class="block def" style="margin-top:14px;border-left-color:#1F6C9F;">
         <div class="block-title" id="stg-q-cardinaux"><span class="tag">Les symptômes cardinaux<span class="tag-sub"><span class="tag-dash"> — </span>à demander à chaque patient</span></span></div>
@@ -64548,7 +64809,7 @@ Fer &rarr; constipation · interactions chélation nombreuses</div>
       <div class="block def" style="margin-top:14px;border-left-color:#956400;">
         <div class="block-title" id="stg-q-classe"><span class="tag">Classe fonctionnelle<span class="tag-sub"><span class="tag-dash"> — </span>NYHA et Société canadienne de cardiologie</span></span></div>
 
-        <div class="key-fact blue u-101bb9"><strong>Principe :</strong> classer la limitation fonctionnelle, c'est dire ce que la personne arrive encore à faire. La NYHA s'applique à toute cardiopathie ; la classification de la Société canadienne de cardiologie (SCC) à l'angine. <span class="u-708a45"><em>Goldman-Cecil, ch. 45 · Laflamme, ch. 2</em></span></div>
+        <div class="key-fact blue u-101bb9"><strong>Principe :</strong> classer la limitation fonctionnelle, c'est dire ce que la personne arrive encore à faire. La NYHA s'applique à toute cardiopathie ; la classification de la Société canadienne de cardiologie (SCC) à l'angine. La classe sert à suivre l'évolution : elle peut changer dans les deux sens avec le temps. <span class="u-708a45"><em>Lilly, ch. 9</em></span> <span class="u-708a45"><em>Goldman-Cecil, ch. 45 · Laflamme, ch. 2</em></span></div>
 
         <div class="u-300634">
         <table class="u-7d15ea">
@@ -64564,139 +64825,31 @@ Fer &rarr; constipation · interactions chélation nombreuses</div>
         <div class="u-708a45" style="margin-top:6px;"><em>NYHA : Goldman-Cecil, ch. 45, tableau 45-5 · SCC : Laflamme, ch. 2</em></div>
       </div>
 
-      <div class="block clin" style="margin-top:14px;border-left-color:#9F2F2D;">
-        <div class="block-title" id="stg-q-dlr"><span class="tag">Douleur thoracique<span class="tag-sub"><span class="tag-dash"> — </span>les questions qui départagent</span></span></div>
 
-        <div class="key-fact blue u-101bb9"><strong>Règle :</strong> commencez par « Pouvez-vous me parler davantage de votre douleur ? », puis précisez. Une angine typique réunit trois critères : douleur rétrosternale constrictive, déclenchée par l'effort ou les émotions, soulagée par le repos (5–10 min) ou les nitrates. Deux critères : atypique. Un seul : non angineuse. <span class="u-708a45"><em>GPHC, Entrevue, ch. 2 · Laflamme, ch. 2</em></span></div>
 
-        <div class="u-300634">
-        <table class="u-7d15ea">
-          <thead><tr><th style="width:17%;">Dimension</th><th style="width:38%;">Question</th><th>Réponse qui oriente</th></tr></thead>
-          <tbody>
-            <tr><td><strong>Provoquée</strong></td><td>« Qu'est-ce qui déclenche ou aggrave la douleur ? »</td><td>Exercice : cardiaque · décubitus : péricardite · respiration profonde : pleurale · toux : musculosquelettique · repas : reflux, angine, colique biliaire · aliment ou liquide froid : spasme œsophagien · froid, stress : angine</td></tr>
-            <tr><td><strong>Soulagée</strong></td><td>« Qu'est-ce qui la soulage ? »</td><td>Repos : angine · position assise : péricardite · nitroglycérine : angine, spasme œsophagien · position « chien de fusil » : pancréatite</td></tr>
-            <tr><td><strong>Qualité</strong></td><td>« Comment la décririez-vous ? » (sans suggérer) · « Est-elle reproduite quand j'appuie ? »</td><td>Pincement, serrement, brûlure : ischémie · douleur en barre : biliaire ou pancréatique · reproduite à la palpation : musculosquelettique</td></tr>
-            <tr><td><strong>Quantité</strong></td><td>« Sur 10, quelle est l'intensité ? »</td><td>« Crucifiante » : dissection aortique</td></tr>
-            <tr><td><strong>Région</strong></td><td>« Montrez-moi où. »</td><td>Centrale : cardiaque ou digestive · latéralisée : pulmonaire · épigastre : biliaire, pancréatite, infarctus · diffuse, mal localisée : cardiaque</td></tr>
-            <tr><td><strong>Irradiation</strong></td><td>« Où la douleur va-t-elle ? »</td><td>Bras gauche : infarctus, péricardite · mâchoire, dents : infarctus · dos : dissection, pancréatite, anévrisme, péricardite, infarctus · épaule droite : cholécystite</td></tr>
-            <tr><td><strong>Temps</strong></td><td>« Depuis combien de temps ? Constante ou par épisodes ? Stable ou pire ? »</td><td>&gt; 20 min : infarctus avant tout · &lt; 20 min : angine, douleur gastrique ou psychogène</td></tr>
-            <tr><td><strong>Symptômes associés</strong></td><td>« Avez-vous eu… » dyspnée, palpitations, étourdissement, orthopnée, œdème, fièvre, sueurs, nausées, toux, crachats, hémoptysie</td><td>Selon les hypothèses · jambe enflée, rouge et douloureuse d'un côté : thrombophlébite · claudication, amaurose fugace : maladie vasculaire · peur de mourir, déréalisation : attaque de panique</td></tr>
-          </tbody>
-        </table>
-        </div>
-        <div class="u-708a45" style="margin-top:6px;"><em>GPHC, Entrevue, ch. 2</em></div>
 
-        <div class="key-fact red u-101bb9"><strong>Signaux d'alarme :</strong> à l'effort · irradiation au bras ou à la mâchoire · diaphorèse, dyspnée · durée de plus de 20 minutes · étourdissement ou syncope · âge avancé (infarctus atypique : confusion, ralentissement) · dyspnée sévère · hémoptysie · facteurs de risque d'embolie pulmonaire (néoplasie, immobilisation, thrombophilie). <span class="u-708a45"><em>GPHC, Entrevue, ch. 2</em></span></div>
-      </div>
 
-      <div class="block clin" style="margin-top:14px;border-left-color:#1F6C9F;">
-        <div class="block-title" id="stg-q-dyspnee"><span class="tag">Dyspnée<span class="tag-sub"><span class="tag-dash"> — </span>les questions qui départagent</span></span></div>
 
-        <div class="key-fact blue u-101bb9"><strong>Règle :</strong> commencez par « Comment votre essoufflement a-t-il commencé ? » (aigu) ou « Pouvez-vous me parler davantage de votre problème d'essoufflement ? » (chronique). Le début, brutal ou progressif, est la première information. <span class="u-708a45"><em>GPHC, Entrevue, ch. 3</em></span></div>
 
-        <div class="u-300634">
-        <table class="u-7d15ea">
-          <thead><tr><th style="width:17%;">Dimension</th><th style="width:38%;">Question</th><th>Réponse qui oriente</th></tr></thead>
-          <tbody>
-            <tr><td><strong>Provoquée</strong></td><td>« Quand est-ce que ça survient ? »</td><td>Au moindre exercice : déconditionnement, MPOC léger, insuffisance cardiaque · après un certain temps d'exercice : asthme d'effort · couché sur le dos : orthopnée (insuffisance cardiaque, reflux) · couché sur un seul côté : épanchement pleural unilatéral · étouffement avec un aliment : corps étranger · après une IVRS : pneumonie · nouvel allergène : anaphylaxie · après un choc : pneumothorax · contexte stressant : attaque de panique</td></tr>
-            <tr><td><strong>Soulagée</strong></td><td>« Qu'est-ce qui vous soulage ? »</td><td>Repos, position assise · pompe : bronchospasme, asthme · position : péricardite · évitement du contexte stressant : panique</td></tr>
-            <tr><td><strong>Qualité</strong></td><td>« Est-ce difficile de prendre une respiration profonde ? »</td><td>Respiration non satisfaisante : MPOC · sensation de suffocation : insuffisance cardiaque · respiration de Kussmaul ou de Cheyne-Stokes</td></tr>
-            <tr><td><strong>Quantité</strong></td><td>« Jusqu'où marchez-vous avant de vous arrêter ? Quel est l'impact sur votre vie ? »</td><td>Grade 1 : effort intense (normal) · 2 : marche rapide ou faible pente · 3 : marche plus lentement que ses pairs · 4 : s'arrête après 100 m · 5 : dyspnée au repos</td></tr>
-            <tr><td><strong>Symptômes associés</strong></td><td>« Avez-vous eu… » douleur thoracique, palpitations, étourdissement, orthopnée, œdème, toux, crachats, fièvre, perte de poids</td><td>Selon les hypothèses · jambe enflée d'un seul côté : thrombophlébite · respiration sifflante, urticaire, œdème facial : anaphylaxie</td></tr>
-            <tr><td><strong>Temps</strong></td><td>« Depuis quand ? Constante ou par épisodes ? Premier épisode ? »</td><td>Évolution stable ou progressive · ordre d'apparition des symptômes</td></tr>
-          </tbody>
-        </table>
-        </div>
-        <div class="u-708a45" style="margin-top:6px;"><em>GPHC, Entrevue, ch. 3</em></div>
 
-        <div class="key-fact red u-101bb9"><strong>Signaux d'alarme (dyspnée aiguë) :</strong> dyspnée au repos · baisse de l'état de conscience, agitation ou confusion · respiration irrégulière ou apneustique · cyanose · hémoptysie · douleur thoracique. <span class="u-708a45"><em>GPHC, Entrevue, ch. 3</em></span></div>
-      </div>
 
-      <div class="block clin" style="margin-top:14px;border-left-color:#956400;">
-        <div class="block-title" id="stg-q-syncope"><span class="tag">Syncope<span class="tag-sub"><span class="tag-dash"> — </span>reconstituer l'épisode</span></span></div>
 
-        <div class="key-fact blue u-101bb9"><strong>Règle :</strong> commencez par « Expliquez-moi les circonstances entourant votre perte de conscience. » Ensuite, interrogez un témoin : l'histoire est la partie la plus importante de l'évaluation, car la plupart des épisodes ont lieu hors du regard d'un soignant. <span class="u-708a45"><em>GPHC, Entrevue, ch. 8 · Goldman-Cecil, ch. 56</em></span></div>
 
-        <div class="u-300634">
-        <table class="u-7d15ea">
-          <thead><tr><th style="width:17%;">Dimension</th><th style="width:38%;">Question</th><th>Réponse qui oriente</th></tr></thead>
-          <tbody>
-            <tr><td><strong>Provoquée</strong></td><td>« Que faisiez-vous juste avant ? Dans quelle position ? »</td><td>Effort : cause cardiovasculaire · changement de position : hypotension orthostatique · toux, défécation, miction, Valsalva : situationnelle · chaleur, peur, odeur désagréable : vasovagale · stress : panique · mouvements répétés des bras : vol sous-clavier</td></tr>
-            <tr><td><strong>Soulagée</strong></td><td>« Est-ce mieux couché ou assis ? »</td><td>Couché ou assis : hypotension orthostatique</td></tr>
-            <tr><td><strong>Qualité</strong></td><td>« Avez-vous senti quelque chose avant ? » (tête légère, sueurs, vision qui s'assombrit)</td><td>Prodrome de tête légère : hypoperfusion cérébrale · prodrome épileptique (déjà-vu, symptômes visuels) · inattendu : arythmie, avec peu ou pas d'avertissement</td></tr>
-            <tr><td><strong>Temps</strong></td><td>« Combien de temps a duré l'épisode ? Et le retour à la normale ? » · début subit ou progressif</td><td>Confusion de plus de 5 min au réveil : crise convulsive · récupération rapide : syncope</td></tr>
-            <tr><td><strong>Symptômes associés</strong></td><td>« Avant ou après, avez-vous eu… » douleur thoracique, palpitations, dyspnée, nausées, sueurs, déficit neurologique, morsure latérale de la langue, incontinence</td><td>Palpitations avant : tachyarythmie · douleur thoracique, dyspnée : cardiaque, embolie · déficit focal, vertige, diplopie : neurologique · morsure latérale de la langue, convulsions : épilepsie</td></tr>
-            <tr><td><strong>Antécédents</strong></td><td>FA, cardiopathie, stimulateur · diabète · épilepsie · médicaments (bêtabloquants, diurétiques) · alcool récent</td><td>Hypoglycémie · hypovolémie · hypotension orthostatique</td></tr>
-            <tr><td><strong>Famille</strong></td><td>« Y a-t-il eu une mort subite dans la famille ? Une maladie du cœur héréditaire ? »</td><td>Cardiomyopathie hypertrophique, arythmie héréditaire</td></tr>
-          </tbody>
-        </table>
-        </div>
-        <div class="u-708a45" style="margin-top:6px;"><em>GPHC, Entrevue, ch. 8 · Goldman-Cecil, ch. 56</em></div>
-
-        <div class="key-fact red u-101bb9"><strong>Attention :</strong> l'histoire fait penser à une syncope à haut risque quand elle survient à l'effort ou en position couchée, avec une douleur thoracique nouvelle, avec des palpitations avant l'épisode, ou chez un patient avec une mort subite familiale, une insuffisance cardiaque, une FEVG &lt; 35 %, une sténose aortique, une cardiomyopathie, une arythmie ventriculaire connue, une coronaropathie, une cardiopathie congénitale, une hypertension pulmonaire ou un défibrillateur. <span class="u-708a45"><em>Goldman-Cecil, ch. 56, tableau 56-4</em></span></div>
-      </div>
-
-      <div class="block clin" style="margin-top:14px;border-left-color:#346538;">
-        <div class="block-title" id="stg-q-palp"><span class="tag">Palpitations<span class="tag-sub"><span class="tag-dash"> — </span>faire décrire le rythme</span></span></div>
-
-        <div class="key-fact blue u-101bb9"><strong>Règle :</strong> commencez par « Pouvez-vous me parler davantage de vos palpitations ? » Puis demandez ce qui se passe exactement. Au besoin, demandez à la personne de taper du doigt pour imiter ce qu'elle ressent. <span class="u-708a45"><em>GPHC, Entrevue, ch. 2</em></span></div>
-
-        <div class="u-300634">
-        <table class="u-7d15ea">
-          <thead><tr><th style="width:17%;">Dimension</th><th style="width:38%;">Question</th><th>Réponse qui oriente</th></tr></thead>
-          <tbody>
-            <tr><td><strong>Provoquées</strong></td><td>« Qu'est-ce qui les déclenche ? »</td><td>Événement stressant, lieu public : psychogène · exercice : cardiaque · grande quantité d'alcool : FA (« Holiday Heart ») · médicaments · stimulants : café, boissons énergisantes, drogues (amphétamines, cocaïne), alcool, tabac</td></tr>
-            <tr><td><strong>Soulagées</strong></td><td>« Qu'est-ce qui les arrête ? »</td><td>Manœuvres vagales : tachycardie supraventriculaire paroxystique</td></tr>
-            <tr><td><strong>Qualité</strong></td><td>« Est-ce rapide ou lent ? Régulier ? » (faire taper le rythme)</td><td>Battements irréguliers : FA, extrasystoles bénignes · un battement manqué : ectopie bénigne · un seul gros battement : extrasystole ventriculaire · battements bondissants dans le cou plutôt que dans la poitrine (« frog sign ») : tachycardie par réentrée nodale</td></tr>
-            <tr><td><strong>Quantité</strong></td><td>« Combien par jour ? Quelle durée, quel intervalle ? »</td><td>Quelques secondes : extrasystoles · quelques minutes à quelques heures : FA, tachycardie supraventriculaire</td></tr>
-            <tr><td><strong>Symptômes associés</strong></td><td>« Avez-vous eu… » douleur thoracique, dyspnée, sueurs, étourdissement, syncope, orthopnée, œdème</td><td>Effet sur le débit cardiaque · peur de mourir, déréalisation, hyperventilation : panique · chaleur, diarrhée, perte de poids, tremblements : hyperthyroïdie · céphalées pulsatiles, HTA, sueurs profuses : phéochromocytome</td></tr>
-            <tr><td><strong>Médicaments</strong></td><td>« Quels médicaments, y compris en vente libre ? Un changement récent ? »</td><td>Sympathomimétiques (salbutamol, éphédrine, décongestionnants) · sevrage d'un bêtabloquant · médicaments qui allongent le QT · hormones thyroïdiennes, théophylline, digitale</td></tr>
-            <tr><td><strong>Antécédents et famille</strong></td><td>Infarctus, cardiopathie, hyperthyroïdie · mort subite ou arythmie dans la famille</td><td>Cardiopathie structurelle · syndrome du QT long, syndrome de Brugada</td></tr>
-          </tbody>
-        </table>
-        </div>
-        <div class="u-708a45" style="margin-top:6px;"><em>GPHC, Entrevue, ch. 2</em></div>
-
-        <div class="key-fact red u-101bb9"><strong>Signaux d'alarme :</strong> syncope ou étourdissement · douleur thoracique, diaphorèse · dyspnée · mort subite ou arythmie connue dans la famille · médicaments qui allongent le QT · maladie coronarienne personnelle. <span class="u-708a45"><em>GPHC, Entrevue, ch. 2</em></span></div>
-      </div>
-
-      <div class="block clin" style="margin-top:14px;border-left-color:#6D28D9;">
-        <div class="block-title" id="stg-q-oedeme"><span class="tag">Œdème des membres inférieurs<span class="tag-sub"><span class="tag-dash"> — </span>les questions qui départagent</span></span></div>
-
-        <div class="key-fact blue u-101bb9"><strong>Règle :</strong> commencez par « Comment avez-vous découvert cette enflure ? Depuis quand ? Déjà vécu ? » Puis posez les questions du tableau. <span class="u-708a45"><em>GPHC, Entrevue, ch. 5</em></span></div>
-
-        <div class="u-300634">
-        <table class="u-7d15ea">
-          <thead><tr><th style="width:17%;">Dimension</th><th style="width:38%;">Question</th><th>Réponse qui oriente</th></tr></thead>
-          <tbody>
-            <tr><td><strong>Provoqué</strong></td><td>« Est-ce pire debout ? Avez-vous commencé un médicament ? »</td><td>Position debout : insuffisance veineuse, insuffisance cardiaque · inhibiteurs calciques, corticostéroïdes, AINS : œdème d'origine médicamenteuse</td></tr>
-            <tr><td><strong>Soulagé</strong></td><td>« Est-ce mieux couché ? »</td><td>Position couchée : insuffisance veineuse, insuffisance cardiaque</td></tr>
-            <tr><td><strong>Quantité</strong></td><td>« Avez-vous pris du poids ? Combien ? »</td><td>Rétention liquidienne · accumulation massive : anasarque</td></tr>
-            <tr><td><strong>Région</strong></td><td>« Seulement les jambes ? Un seul côté ? »</td><td>Membres inférieurs seulement · ascite : cirrhose · œdème palpébral : syndrome néphrotique · épanchements pleuraux</td></tr>
-            <tr><td><strong>Symptômes associés</strong></td><td>« Avez-vous eu… » orthopnée, dyspnée paroxystique nocturne, dyspnée, douleur thoracique, syncope · douleur abdominale, diarrhée · hématurie, nycturie</td><td>Cardiaque · digestif : cirrhose, malabsorption · urinaire : cause rénale</td></tr>
-            <tr><td><strong>Antécédents et habitudes</strong></td><td>Insuffisance cardiaque, maladie rénale ou hépatique, hypothyroïdie, Cushing, cancer · alimentation riche en sel · chirurgie récente, grossesse</td><td>Sel : décompensation d'une insuffisance cardiaque · chirurgie ou cancer : thrombose veineuse profonde</td></tr>
-            <tr><td><strong>Sommeil</strong></td><td>« Vous réveillez-vous la nuit pour uriner ? »</td><td>Redistribution de l'œdème en position couchée · insuffisance rénale</td></tr>
-          </tbody>
-        </table>
-        </div>
-        <div class="u-708a45" style="margin-top:6px;"><em>GPHC, Entrevue, ch. 5</em></div>
-      </div>
-
+    
+      <!--src-foot--><div class="src-foot"><p><strong>Citées dans le texte</strong> — Goldman-Cecil · GPHC · Lilly.</p></div><!--/src-foot-->
     </div>
     <div class="section" id="sec-stage-examen">
       <div class="section-header">
         <div class="section-accent" style="background:#E1F3FE;"></div>
-        <div class="section-title"><h1>Stage — Examen physique cardiologique</h1><div class="breadcrumb">Stage <span class="breadcrumb-sep">·</span> Séquence complète · Auscultation · Insuffisance cardiaque <span class="breadcrumb-sep">·</span> Examen selon le motif · Signaux d'alarme</div></div>
+        <div class="section-title"><h1>Stage — Examen physique cardiologique</h1><div class="breadcrumb">Stage <span class="breadcrumb-sep">·</span> Séquence complète · Auscultation · Insuffisance cardiaque</div></div>
       </div>
       <div class="m-navbar">
         <button class="m-nav" onclick="goToBlock('stg-e-sequence')">La séquence</button>
         <button class="m-nav" onclick="goToBlock('stg-e-auscultation')">Auscultation</button>
         <button class="m-nav" onclick="goToBlock('stg-e-ic')">Congestion et perfusion</button>
-        <button class="m-nav" onclick="goToBlock('stg-e-motif')">Selon le motif</button>
-        <button class="m-nav" onclick="goToBlock('stg-e-alarme')">Signaux d'alarme</button>
       </div>
 
-      <div class="key-fact blue u-567bc"><strong>En pratique :</strong> cette section regroupe l'examen de base dans l'ordre où on le fait, puis ce qui compte à l'unité de cardiologie. Les détails (ondes jugulaires, contour du pouls, souffles un à un) restent dans la section Examen physique ➜ voir Examen cardiovasculaire et Examen vasculaire périphérique.</div>
+      <div class="key-fact u-567bc"><strong>Renvoi :</strong> les détails (ondes jugulaires, contour du pouls, souffles un à un) restent dans la section Examen physique ➜ voir Examen cardiovasculaire et Examen vasculaire périphérique.</div>
 
       <div class="block def" style="margin-top:14px;border-left-color:#1F6C9F;">
         <div class="block-title" id="stg-e-sequence"><span class="tag">La séquence complète<span class="tag-sub"><span class="tag-dash"> — </span>de l'entrée dans la chambre aux jambes</span></span></div>
@@ -64773,13 +64926,10 @@ Fer &rarr; constipation · interactions chélation nombreuses</div>
 
         <div class="key-fact blue u-101bb9"><strong>Principe :</strong> chez un patient en insuffisance cardiaque, l'examen répond à deux questions : y a-t-il de la <strong>congestion</strong> (« humide » ou « sec ») et la <strong>perfusion</strong> est-elle conservée (« chaud » ou « froid ») ? La combinaison décide de l'urgence. <span class="u-708a45"><em>Laflamme, ch. 2 et 3</em></span></div>
 
-        <div class="u-300634">
-        <table class="u-7d15ea">
-          <thead><tr><th style="width:22%;">Signes de congestion</th><th style="width:34%;">Signes d'hypoperfusion</th><th>Mesures invasives (USIC, cathétérisme)</th></tr></thead>
-          <tbody>
-            <tr><td>Orthopnée, dyspnée paroxystique nocturne · turgescence jugulaire, reflux hépato-jugulaire · crépitants, épanchement pleural · B3 · hépatomégalie, ascite · œdème des jambes, du scrotum, présacré</td><td>Extrémités froides · confusion ou baisse du niveau de conscience · hypotension (TAS &lt; 90 mmHg), tension différentielle étroite · ↓ de la diurèse</td><td>Congestion : pression capillaire pulmonaire &gt; 18 mmHg · hypoperfusion : index cardiaque &lt; 2,2 L/min/m² · SvO₂ &lt; 70 %</td></tr>
-          </tbody>
-        </table>
+                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;margin-top:12px;">
+          <div style="background:#E1F3FE;border-radius:10px;padding:14px;"><strong style="color:#1F6C9F;"><tr><th style="width:22%;">Signes de congestion</strong><ul style="margin:8px 0 0;padding-left:18px;font-size:13px;line-height:1.7;"><li>Orthopnée, dyspnée paroxystique nocturne</li><li>turgescence jugulaire, reflux hépato-jugulaire</li><li>crépitants, épanchement pleural</li><li>B3</li><li>hépatomégalie, ascite</li><li>œdème des jambes, du scrotum, présacré</li></ul></div>
+          <div style="background:#FBF3DB;border-radius:10px;padding:14px;"><strong style="color:#956400;">Signes d'hypoperfusion</strong><ul style="margin:8px 0 0;padding-left:18px;font-size:13px;line-height:1.7;"><li>Extrémités froides</li><li>confusion ou baisse du niveau de conscience</li><li>hypotension (TAS &lt; 90 mmHg), tension différentielle étroite</li><li>↓ de la diurèse</li></ul></div>
+          <div style="background:#F4F4F2;border-radius:10px;padding:14px;"><strong style="color:#2F3437;">Mesures invasives (USIC, cathétérisme)</strong><ul style="margin:8px 0 0;padding-left:18px;font-size:13px;line-height:1.7;"><li>Congestion : pression capillaire pulmonaire &gt; 18 mmHg</li><li>hypoperfusion : index cardiaque &lt; 2,2 L/min/m²</li><li>SvO₂ &lt; 70 %</li></ul></div>
         </div>
 
         <div class="u-300634">
@@ -64798,39 +64948,12 @@ Fer &rarr; constipation · interactions chélation nombreuses</div>
         <div class="key-fact green u-101bb9"><strong>En pratique :</strong> le profil guide le traitement (diurétiques et vasodilatateurs pour « humide », soutien inotrope ou mécanique pour « froid »). Le détail est dans Insuffisance cardiaque ➜ voir Insuffisance cardiaque et Les chocs.</div>
       </div>
 
-      <div class="block clin" style="margin-top:14px;border-left-color:#6D28D9;">
-        <div class="block-title" id="stg-e-motif"><span class="tag">Cibler l'examen<span class="tag-sub"><span class="tag-dash"> — </span>selon le motif de consultation</span></span></div>
 
-        <div class="u-300634">
-        <table class="u-7d15ea">
-          <thead><tr><th style="width:17%;">Motif</th><th style="width:40%;">Examen à cibler</th><th>Trouvailles qui orientent</th></tr></thead>
-          <tbody>
-            <tr><td><strong>Douleur thoracique</strong></td><td>TA aux deux bras et pouls · jugulaires · cœur (souffle, frottement) · poumons · reproduction de la douleur à la palpation · membres inférieurs</td><td>Asymétrie de TA ou de pouls, souffle d'insuffisance aortique : dissection · frottement péricardique : péricardite · hyperrésonance et ↓ du murmure vésiculaire : pneumothorax · douleur reproduite à la palpation : musculosquelettique · tachypnée, jambe enflée d'un seul côté : embolie pulmonaire · B3 ou souffle de dysfonction papillaire pendant la douleur : ischémie</td></tr>
-            <tr><td><strong>Dyspnée</strong></td><td>FR, effort respiratoire, SpO₂ · jugulaires · poumons · B3 · œdème</td><td>Jugulaires distendues, crépitants, B3, œdème : insuffisance cardiaque · sibilances : bronchoconstriction · matité à la base : épanchement pleural · tachypnée avec cyanose : hypoxémie sévère</td></tr>
-            <tr><td><strong>Syncope</strong></td><td>TA et FC couché puis debout · souffles (aortique, CMHO) · pouls · TA aux deux bras · neurologique sommaire</td><td>↓ de la TA au lever : hypotension orthostatique ➜ voir Hypotension orthostatique · souffle systolique éjectionnel irradiant aux carotides : sténose aortique · différence entre les deux bras : dissection, vol sous-clavier</td></tr>
-            <tr><td><strong>Palpitations</strong></td><td>Pouls (régularité) · jugulaires (onde A) · cœur · thyroïde · signes d'insuffisance cardiaque</td><td>Irrégulièrement irrégulier, absence d'onde A : FA · goitre, tremblements, exophtalmie : hyperthyroïdie · souffle : valvulopathie</td></tr>
-            <tr><td><strong>Œdème des membres inférieurs</strong></td><td>Jugulaires et reflux hépato-jugulaire · foie · poumons · mollets · œdème palpébral, ascite</td><td>Jugulaires distendues, reflux positif, hépatomégalie : insuffisance cardiaque droite, péricardite constrictive · unilatéral : thrombophlébite · œdème palpébral : syndrome néphrotique · ascite : cirrhose</td></tr>
-          </tbody>
-        </table>
-        </div>
-        <div class="u-708a45" style="margin-top:6px;"><em>Goldman-Cecil, ch. 45 · Notes de cours MMD 6411 · GPHC, Entrevue, ch. 5</em></div>
-      </div>
 
-      <div class="block flag" style="margin-top:14px;">
-        <div class="block-title" id="stg-e-alarme"><span class="tag">Signaux d'alarme à l'examen</span></div>
-        <div class="flag-list">
-          <div class="flag-item"><span class="fi-icon"></span><span>Hypotension + turgescence jugulaire + bruits cardiaques assourdis + pouls paradoxal &gt; 10 mmHg : tamponnade ➜ voir Péricardite</span></div>
-          <div class="flag-item"><span class="fi-icon"></span><span>Écart de TAS ≥ 20 mmHg entre les bras, pouls asymétriques, souffle d'insuffisance aortique avec douleur déchirante : dissection aortique</span></div>
-          <div class="flag-item"><span class="fi-icon"></span><span>Extrémités froides, confusion, TAS &lt; 90 mmHg, diurèse basse : bas débit, choc cardiogénique ➜ voir Les chocs</span></div>
-          <div class="flag-item"><span class="fi-icon"></span><span>Nouveau souffle systolique avec œdème pulmonaire soudain après un infarctus : rupture de pilier ou de cordages, urgence chirurgicale ➜ voir Valve mitrale</span></div>
-          <div class="flag-item"><span class="fi-icon"></span><span>Syncope à l'effort avec souffle systolique éjectionnel : sténose aortique ou CMHO ➜ voir Sténose aortique</span></div>
-          <div class="flag-item"><span class="fi-icon"></span><span>Turgescence jugulaire + B3 + œdèmes : insuffisance cardiaque congestive</span></div>
-          <div class="flag-item"><span class="fi-icon"></span><span>Frottement péricardique : péricardite aiguë ; sa disparition peut signaler un épanchement qui s'accumule</span></div>
-          <div class="flag-item"><span class="fi-icon"></span><span>Cyanose centrale avec hippocratisme : cardiopathie cyanogène sévère, shunt droit-gauche</span></div>
-        </div>
-        <div class="u-708a45" style="margin-top:6px;"><em>Notes de cours, Examen cardiaque MMD 6411 · Goldman-Cecil, ch. 45 · Laflamme, ch. 2</em></div>
-      </div>
 
+
+    
+      <!--src-foot--><div class="src-foot"><p><strong>Citées dans le texte</strong> — Démarche clinique · Goldman-Cecil.</p></div><!--/src-foot-->
     </div>
 
   </main>
@@ -65000,7 +65123,7 @@ const SEARCH_INDEX = [
   { id:'connectivites',      title:'Connectivites & Vascularites',   specialty:'Rhumatologie', keywords:['connectivite','lupus','les','aan','anti-adn','anti-sm','néphrite lupique','hydroxychloroquine','sjögren','anti-ssa','anti-ssb','sécheresse','sclérodermie','raynaud','anti-scl70','anti-centromère','crise rénale','myosite','dermatomyosite','ck','anti-jo1','vascularite','anca','antiphospholipides','ppr','pseudopolyarthrite rhizomélique','horton','artérite à cellules géantes','acg','biopsie temporale','tocilizumab'] },
   { id:'mvl-psn',            title:'MVL & Produits de santé naturels', specialty:'Pharmacologie',      keywords:['mvl','vente libre','automédication','psn','produit de santé naturel','acétaminophène','ibuprofène','décongestionnant','antihistaminique','rhume','allergie','topique','millepertuis','interactions psn','npn','din'] },
   { id:'ordonnances',        title:'Normes des Ordonnances',         specialty:'Pharmacologie',   keywords:['ordonnance','ordonnance individuelle','ordonnance collective','prescription','prescrire','norme','cmq','oiiq','ramq','numéro de prescripteur','ipspl','ipssa','ipssp','ipsnn','ipssm','date de rédaction','période de validité','24 mois','posologie','voie d administration','prn','usage connu','tel que prescrit','renouvellement','pmn','protocole médical national','inesss','benzodiazépine','substances ciblées','permis d exercice','signature','magistrale','déontologie'] },
-  { id:'stage-cusm',          title:'Stage — Diagnostics différentiels', specialty:'Stage',           keywords:['stage','cardiologie','diagnostics différentiels','ddx','douleur thoracique','dyspnée','syncope','palpitations','œdème des membres inférieurs','oedème','angine','infarctus','dissection aortique','embolie pulmonaire','péricardite','tamponnade','pneumothorax','arythmie','orthopnée','faim d\'air','cardiologie tertiaire'] },
+  { id:'stage-cusm',          title:'Stage — Par motif de consultation', specialty:'Stage',           keywords:['stage','cardiologie','diagnostics différentiels','ddx','douleur thoracique','dyspnée','syncope','palpitations','œdème des membres inférieurs','oedème','angine','infarctus','dissection aortique','embolie pulmonaire','péricardite','tamponnade','pneumothorax','arythmie','orthopnée','faim d\'air','cardiologie tertiaire'] },
   { id:'stage-questionnaire', title:'Stage — Questionnaire cardiologique', specialty:'Stage',           keywords:['stage','cardiologie','questionnaire','entrevue','histoire de la maladie actuelle','douleur thoracique','dyspnée','orthopnée','dyspnée paroxystique nocturne','syncope','palpitations','œdème','classe fonctionnelle','nyha','scc','angine typique','antécédents familiaux','mort subite','signaux d\'alarme'] },
   { id:'stage-examen',        title:'Stage — Examen physique cardiologique', specialty:'Stage',           keywords:['stage','cardiologie','examen physique','examen cardiaque','auscultation','souffle','jugulaires','pouls','choc apexien','b3','b4','frottement','pouls paradoxal','insuffisance cardiaque','congestion','perfusion','humide','chaud','froid','profil hémodynamique','tamponnade','dissection aortique','signaux d\'alarme'] },
   { id:'pharmacoguide',       title:'Guide Pharmacologique',              specialty:'Pharmacologie',      keywords:['pharmacologie','médicament','pharmacocinétique','pharmacodynamie','interactions','prescription','posologie'] },
@@ -65554,7 +65677,7 @@ const SECTION_TITLES = {
   'sua':'SUA','cancer-col':'Cancer du Col','cancer-endo':'Cancer de l\'Endomètre',
   'menopause':'Ménopause & SGUM','survivance':'Survivance & Rôle IPS',
   'depistage':'Dépistage & Prévention',
-  'mvl-psn':'MVL & PSN','pharmacoguide':'Guide Pharmacologie','stage-cusm':'Stage — Diagnostics différentiels','stage-questionnaire':'Stage — Questionnaire cardiologique','stage-examen':'Stage — Examen physique cardiologique'
+  'mvl-psn':'MVL & PSN','pharmacoguide':'Guide Pharmacologie','stage-cusm':'Stage — Par motif de consultation','stage-questionnaire':'Stage — Questionnaire cardiologique','stage-examen':'Stage — Examen physique cardiologique'
 };
 
 function buildSectionNavs() {
@@ -66248,7 +66371,7 @@ function showPanel(prefix,activeId,count){
     var el=document.getElementById(prefix+i);
     if(el) el.style.display=(prefix+i===activeId)?'block':'none';
   }
-  var colorMap={'htxp':'#0a7a4e','mapxp':'#0a7a4e','nritp':'#0a7a4e','snp':'#0a7a4e','hypop':'#0a7a4e','ntxp':'#0a7a4e','natxp':'#0a7a4e','acotxp':'#0a7a4e','eppecp':'#0a7a4e','neorecp':'#0a7a4e','daptp':'#0a7a4e','aodip':'#0a7a4e','septxp':'#0a7a4e','epitxp':'#0a7a4e','dvtxp':'#065f46','cdlp':'#0a7a4e','chlp':'#0a7a4e','tocp':'#0a7a4e','tsptp':'#15803d','htpp':'#0f766e','chocp':'#0a7a4e','parp':'#0a7a4e','delp':'#0a7a4e','litp':'#0a7a4e','itssp':'#0a7a4e','seinp':'#0a7a4e','tx':'#0a7a4e','atx':'#065f46','vp':'#1e7a6b','mii-tx':'#0a7a4e','mii-cr':'#0a7a4e','pk-tx':'#7c3aed','hta-tx':'#0a7a4e','ugdd':'#0369a1','frg':'#b45309','spx':'#7c3aed','cxp':'#0a7a4e','rds':'#0369a1','gu':'#0f766e','lax':'#0a7a4e','somdx':'#0e7490','mpg':'#1e40af','cde':'#b91c1c','chp':'#0f766e','grl':'#374151','tnctyp':'#6d28d9','evcog':'#b45309','dlrx':'#c0392b','htorx':'#0f766e','miidx':'#0e7490','tvt':'#7c3aed','tsfr':'#4338ca','tsfa':'#0f766e','tsfc':'#c2410c','tsfp':'#b91c1c','tsfg':'#374151','nutc':'#6d28d9','ndnt':'#b45309','nalb':'#b91c1c','nsup':'#0a7a4e','nsri':'#b45309','mietio':'#6d28d9','ngac':'#15803d','n3min':'#1d4ed8','miisv':'#0891b2','dalg':'#0369a1','anetx':'#0a7a4e','aneb':'#6d28d9','mimei':'#7c3aed','miiact':'#c0392b','tncrx':'#15803d','scpd':'#c0392b','beers':'#b45309','pkpd':'#6d28d9','drx':'#0a7a4e','bcat':'#334155','sstp':'#c0392b','sstt':'#15803d','potx':'#be123c','pocas':'#0f766e','ap77':'#6d28d9','ap1012':'#c0392b','icfep':'#6d28d9','icphy':'#1d4ed8','ictx':'#0a7a4e','cavdx':'#c0392b','hemalg':'#0369a1','pnty':'#2F3437','pnaty':'#2F3437','fapo':'#2F3437','vmim':'#2F3437','hembil':'#0369a1','hemmas':'#c0392b','adpt':'#0369a1','tbf':'#c0392b','covc':'#b91c1c','covtx':'#0a7a4e','rxp':'#c0392b'};var col=colorMap[prefix]||'#c0392b';
+  var colorMap={'htxp':'#0a7a4e','mapxp':'#0a7a4e','nritp':'#0a7a4e','snp':'#0a7a4e','hypop':'#0a7a4e','ntxp':'#0a7a4e','natxp':'#0a7a4e','acotxp':'#0a7a4e','eppecp':'#0a7a4e','neorecp':'#0a7a4e','daptp':'#0a7a4e','aodip':'#0a7a4e','septxp':'#0a7a4e','epitxp':'#0a7a4e','dvtxp':'#065f46','cdlp':'#0a7a4e','chlp':'#0a7a4e','tocp':'#0a7a4e','tsptp':'#15803d','htpp':'#0f766e','chocp':'#0a7a4e','parp':'#0a7a4e','delp':'#0a7a4e','litp':'#0a7a4e','itssp':'#0a7a4e','seinp':'#0a7a4e','tx':'#0a7a4e','atx':'#065f46','vp':'#1e7a6b','mii-tx':'#0a7a4e','mii-cr':'#0a7a4e','pk-tx':'#7c3aed','hta-tx':'#0a7a4e','ugdd':'#0369a1','frg':'#b45309','spx':'#7c3aed','cxp':'#0a7a4e','rds':'#0369a1','gu':'#0f766e','lax':'#0a7a4e','somdx':'#0e7490','mpg':'#1e40af','cde':'#b91c1c','chp':'#0f766e','grl':'#374151','tnctyp':'#6d28d9','evcog':'#b45309','dlrx':'#c0392b','htorx':'#0f766e','miidx':'#0e7490','tvt':'#7c3aed','tsfr':'#4338ca','tsfa':'#0f766e','tsfc':'#c2410c','tsfp':'#b91c1c','tsfg':'#374151','nutc':'#6d28d9','ndnt':'#b45309','nalb':'#b91c1c','nsup':'#0a7a4e','nsri':'#b45309','mietio':'#6d28d9','ngac':'#15803d','n3min':'#1d4ed8','miisv':'#0891b2','dalg':'#0369a1','anetx':'#0a7a4e','aneb':'#6d28d9','mimei':'#7c3aed','miiact':'#c0392b','tncrx':'#15803d','scpd':'#c0392b','beers':'#b45309','pkpd':'#6d28d9','drx':'#0a7a4e','bcat':'#334155','sstp':'#c0392b','sstt':'#15803d','potx':'#be123c','pocas':'#0f766e','ap77':'#6d28d9','ap1012':'#c0392b','icfep':'#6d28d9','icphy':'#1d4ed8','ictx':'#0a7a4e','cavdx':'#c0392b','hemalg':'#0369a1','pnty':'#2F3437','pnaty':'#2F3437','fapo':'#2F3437','vmim':'#2F3437','hembil':'#0369a1','hemmas':'#c0392b','adpt':'#0369a1','tbf':'#c0392b','covc':'#b91c1c','covtx':'#0a7a4e','rxp':'#c0392b','stgm':'#2F3437'};var col=colorMap[prefix]||'#c0392b';
   for(var k=0;k<count;k++){
     var b=document.querySelector('[data-panel="'+prefix+k+'"]');
     if(b){
