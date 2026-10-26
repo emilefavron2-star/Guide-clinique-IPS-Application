@@ -591,6 +591,8 @@ td.pk-label { font-family:var(--mono); font-size:12px; font-weight:500; color:va
 <button class="sidebar-btn" onclick="goTo('terlipressine')">Terlipressine (Glypressin®)</button>
 <button class="sidebar-btn" onclick="goTo('octreotide')">Octréotide (Sandostatin®)</button>
 <button class="sidebar-btn" onclick="goTo('ursodiol')">Ursodiol</button></div>
+    <div class="sidebar-section"><div class="sidebar-cat">Stéatose hépatique (MASH)</div>
+      <button class="sidebar-btn" onclick="goTo('resmetirom')">Résmétirom (Rezdiffra®)</button></div>
 
 <!-- ═══ SYSTÈME NERVEUX CENTRAL ═══ -->
 <div class="sidebar-section"><div class="sidebar-cat">Antidépresseurs — ISRS / IRSN</div>
@@ -718,7 +720,7 @@ td.pk-label { font-family:var(--mono); font-size:12px; font-weight:500; color:va
 <button class="sidebar-btn" onclick="goTo('methocarbamol')">Méthocarbamol (Robaxin®)</button>
 <button class="sidebar-btn" onclick="goTo('ketamine')">Kétamine</button>
 <button class="sidebar-btn" onclick="goTo('ains-rx')">Kétorolac / Diclofénac / Indométhacine</button>
-<button class="sidebar-btn" onclick="goTo('celecoxib')">Célécoxib (Celebrex®)</button></div>
+<button class="sidebar-btn" onclick="goTo('celecoxib')">Célécoxib (Celebrex®)</button> <button class="sidebar-btn" onclick="goTo('meloxicam')">Méloxicam (Mobic®)</button> <button class="sidebar-btn" onclick="goTo('capsaicine_menthol')">Capsaïcine / Menthol (topiques)</button></div>
 
 <div class="sidebar-section"><div class="sidebar-cat">Myorelaxants &amp; antispastiques</div>
 <button class="sidebar-btn" onclick="goTo('baclofene')">Baclofène</button>
@@ -787,7 +789,7 @@ td.pk-label { font-family:var(--mono); font-size:12px; font-weight:500; color:va
 <button class="sidebar-btn" onclick="goTo('anakinra')">Anakinra (Kineret®)</button>
 <button class="sidebar-btn" onclick="goTo('abatacept')">Abatacept (Orencia®)</button>
 <button class="sidebar-btn" onclick="goTo('belimumab')">Bélimumab (Benlysta®)</button>
-<button class="sidebar-btn" onclick="goTo('secukinumab')">Sécukinumab (Cosentyx®)</button></div>
+<button class="sidebar-btn" onclick="goTo('secukinumab')">Sécukinumab (Cosentyx®)</button> <button class="sidebar-btn" onclick="goTo('etanercept')">Étanercept (Enbrel®)</button><button class="sidebar-btn" onclick="goTo('golimumab')">Golimumab (Simponi®)</button><button class="sidebar-btn" onclick="goTo('certolizumab')">Certolizumab pégol (Cimzia®)</button><button class="sidebar-btn" onclick="goTo('ixekizumab')">Ixékizumab (Taltz®)</button><button class="sidebar-btn" onclick="goTo('bimekizumab')">Bimékizumab (Bimzelx®)</button><button class="sidebar-btn" onclick="goTo('canakinumab')">Canakinumab (Ilaris®)</button><button class="sidebar-btn" onclick="goTo('rilonacept')">Rilonacept (Arcalyst®)</button><button class="sidebar-btn" onclick="goTo('apremilast')">Aprémilast (Otezla®)</button><button class="sidebar-btn" onclick="goTo('anifrolumab')">Anifrolumab (Saphnelo®)</button></div>
 
 <div class="sidebar-section"><div class="sidebar-cat">Immunosuppresseurs — néphro · greffe</div>
 <button class="sidebar-btn" onclick="goTo('tacrolimus')">Tacrolimus</button>
@@ -9807,7 +9809,7 @@ td.pk-label { font-family:var(--mono); font-size:12px; font-weight:500; color:va
 
 
 
-<div class="drug-card" id="card-pioglitazone" data-search="pioglitazone actos thiazolidinedione glitazone diabète dm2">
+<div class="drug-card" id="card-pioglitazone" data-search="pioglitazone rosiglitazone actos thiazolidinedione glitazone diabète dm2 œdème rétention hydrosodée">
   <div class="drug-header" style="background:#16a34a;">
     <div><div class="drug-name">Pioglitazone (Actos®)</div><div style="font-size:12px;opacity:.75;margin-top:2px;">Pioglitazone chlorhydrate</div></div>
     <div class="drug-pharmacol">Thiazolidinedione (TZD) — DM2</div>
@@ -11300,7 +11302,7 @@ td.pk-label { font-family:var(--mono); font-size:12px; font-weight:500; color:va
 </div></div>
 </div>
 
-<div class="drug-card" id="card-ropinirole" data-search="ropinirole ropinirol requip agoniste dopaminergique parkinson tremblement">
+<div class="drug-card" id="card-ropinirole" data-search="ropinirole ropinirol rotigotine requip neupro agoniste dopaminergique parkinson tremblement">
   <div class="drug-header" style="background:#5b21b6;">
     <div><div class="drug-name">Ropinirole / Rotigotine (Requip® / Neupro®)</div><div style="font-size:12px;opacity:.75;margin-top:2px;">Agonistes dopaminergiques D2/D3</div></div>
     <div class="drug-pharmacol">Agonistes DA — Parkinson précoce</div>
@@ -16246,6 +16248,404 @@ td.pk-label { font-family:var(--mono); font-size:12px; font-weight:500; color:va
 </div>
 </div>
 </div>
+
+<!-- ═══ LOT J (2026-10-26) — rhumatologie, stéatose (MASH) : compléments ═══ -->
+<div class="drug-card" id="card-etanercept" data-search="étanercept etanercept enbrel brenzys erelzi anti-tnf polyarthrite rhumatoïde spondylarthrite arthrite psoriasique psoriasis">
+  <div class="drug-header" style="background:#b91c1c;">
+    <div>
+      <div class="drug-name">Étanercept (Enbrel®)</div>
+      <div style="font-size:12px;opacity:.75;margin-top:2px;">SC · poudre 25 mg · seringues 25 mg/0,5 mL · 50 mg/mL</div>
+    </div>
+    <div class="drug-pharmacol">Anti-TNF-α (bDMARD — biologique)</div>
+  </div>
+  <div class="drug-tabs"><button class="tab-btn active" onclick="showTab('etanercept','ov',this)">Vue d'ensemble</button><button class="tab-btn " onclick="showTab('etanercept','pk',this)">Pharmacocinétique</button><button class="tab-btn " onclick="showTab('etanercept','doses',this)">Doses &amp; formes</button><button class="tab-btn " onclick="showTab('etanercept','es',this)">Effets secondaires</button><button class="tab-btn " onclick="showTab('etanercept','ci',this)">Contre-indications</button><button class="tab-btn " onclick="showTab('etanercept','suivi',this)">Suivi</button><button class="tab-btn " onclick="showTab('etanercept','ai',this)">Autres infos</button></div>
+  <div class="drug-panels"><div class="tab-panel active" id="etanercept-ov">
+<div class="info-grid"><div class="info-box blue"><h4>Mécanisme</h4><p>Se lie au <strong>TNF</strong> et l'inactive ; le TNF est un médiateur de la réponse inflammatoire.</p></div><div class="info-box green"><h4>Indications</h4><ul><li><strong>Polyarthrite rhumatoïde</strong> modérée à sévère (seul ou avec méthotrexate)</li><li>Arthrite psoriasique, <strong>spondylarthrite ankylosante</strong></li><li>Arthrite idiopathique juvénile polyarticulaire</li><li>Psoriasis en plaques modéré à sévère</li></ul></div></div><div class="warn-box">Risque d'<strong>infections graves</strong> (réactivation de la tuberculose, infections opportunistes) et de <strong>malignités</strong> (lymphome, leucémie, cancers cutanés).</div><div class="key-fact"><strong>Avant tout biologique ou JAK</strong> : dépister la <strong>tuberculose latente</strong> (IGRA) et les <strong>hépatites B et C</strong>, mettre à jour les vaccins (pas de vaccin vivant pendant le traitement).</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em> · <em>Guide clinique IPS — Rhumatologie, Médication</em></p>
+</div>
+<div class="tab-panel " id="etanercept-pk">
+<div class="pk-panel"><table class="pk-table"><tr><td class="pk-label">Absorption</td><td>~60 % après injection SC</td></tr><tr><td class="pk-label">t½</td><td>115 h (98–300 h)</td></tr><tr><td class="pk-label">Début d'action</td><td>2–4 sem (réduction des symptômes)</td></tr></table></div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+<div class="tab-panel " id="etanercept-doses">
+<div class="warn-box"><strong>Posologie non documentée dans vos sources canadiennes</strong>. ➜ À compléter avec RxVigilance ou la monographie canadienne.</div><div class="key-fact"><strong>Formes (Davis, États-Unis — à confirmer avec la monographie canadienne)</strong> : poudre 25 mg ; seringues 25 mg/0,5 mL ; seringues et stylos 50 mg/mL</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+<div class="tab-panel " id="etanercept-es">
+<div class="info-grid"><div class="info-box red"><h4>Graves</h4><ul><li>Infections graves, dont <strong>réactivation de la tuberculose</strong> et infections opportunistes</li><li>Hypersensibilité, anaphylaxie</li><li><strong>Malignités</strong> : lymphome (dont HSTCL), leucémie, cancers cutanés</li><li>Pancytopénie</li><li>Sarcoïdose</li></ul></div><div class="info-box "><h4>Autres</h4><ul><li>Réactions au site d'injection</li><li>Céphalée, étourdissements, faiblesse</li><li>Rhinite, pharyngite, infection des voies respiratoires supérieures, toux</li><li>Douleur abdominale, dyspepsie</li><li>Éruption, psoriasis</li></ul></div></div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+<div class="tab-panel " id="etanercept-ci">
+<div class="info-grid"><div class="info-box red"><h4>Contre-indications</h4><ul><li>Hypersensibilité</li><li>Infection active, même localisée, ou non traitée</li><li>Granulomatose avec polyangéite sous immunosuppresseurs</li><li>Cyclophosphamide ou anakinra en concomitance</li></ul></div><div class="info-box "><h4>Prudence</h4><ul><li>Infection chronique ou récidivante</li><li>Exposition à la tuberculose ; régions endémiques de mycoses</li><li>ATCD d'infection opportuniste</li><li>Hépatite B (porteur : risque de réactivation)</li><li>Maladie démyélinisante préexistante</li><li>Âge avancé : risque accru d'infection</li><li>Allergie au latex (capuchon d'aiguille)</li><li>Enfant exposé à la varicelle</li></ul></div></div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+<div class="tab-panel " id="etanercept-suivi">
+<div class="info-grid"><div class="info-box blue"><h4>Suivi</h4><ul><li>Signes d'infection (arrêt si infection grave ou sepsie)</li><li>Site d'injection (réaction habituellement légère à modérée, 3–5 jours)</li><li>Amplitude articulaire, gonflement, douleur</li></ul></div></div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+<div class="tab-panel " id="etanercept-ai">
+<div class="info-grid"><div class="info-box "><h4>Interactions</h4><ul><li>Anakinra : ↑ infections graves (non recommandé)</li><li>Cyclophosphamide : ↑ risque de malignités</li><li>Azathioprine ou méthotrexate : ↑ risque de HSTCL</li><li>Vaccins vivants — éviter (réponse aux vaccins diminuée, risque d'infection)</li></ul></div></div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+</div>
+</div>
+
+<div class="drug-card" id="card-golimumab" data-search="golimumab simponi simponi aria anti-tnf polyarthrite rhumatoïde spondylarthrite arthrite psoriasique colite ulcéreuse">
+  <div class="drug-header" style="background:#b91c1c;">
+    <div>
+      <div class="drug-name">Golimumab (Simponi® · Simponi Aria®)</div>
+      <div style="font-size:12px;opacity:.75;margin-top:2px;">SC 50 mg/0,5 mL · 100 mg/mL · IV 12,5 mg/mL (Aria)</div>
+    </div>
+    <div class="drug-pharmacol">Anti-TNF-α (bDMARD — biologique)</div>
+  </div>
+  <div class="drug-tabs"><button class="tab-btn active" onclick="showTab('golimumab','ov',this)">Vue d'ensemble</button><button class="tab-btn " onclick="showTab('golimumab','pk',this)">Pharmacocinétique</button><button class="tab-btn " onclick="showTab('golimumab','doses',this)">Doses &amp; formes</button><button class="tab-btn " onclick="showTab('golimumab','es',this)">Effets secondaires</button><button class="tab-btn " onclick="showTab('golimumab','ci',this)">Contre-indications</button><button class="tab-btn " onclick="showTab('golimumab','suivi',this)">Suivi</button><button class="tab-btn " onclick="showTab('golimumab','ai',this)">Autres infos</button></div>
+  <div class="drug-panels"><div class="tab-panel active" id="golimumab-ov">
+<div class="info-grid"><div class="info-box blue"><h4>Mécanisme</h4><p>Inhibe la liaison du <strong>TNF-α</strong> à ses récepteurs : effet anti-inflammatoire et antiprolifératif.</p></div><div class="info-box green"><h4>Indications</h4><ul><li><strong>Polyarthrite rhumatoïde</strong> modérée à sévère (avec méthotrexate)</li><li>Arthrite psoriasique, <strong>spondylarthrite ankylosante</strong></li><li>Colite ulcéreuse modérée à sévère (Simponi)</li><li>Arthrite idiopathique juvénile polyarticulaire (Simponi Aria)</li></ul></div></div><div class="warn-box">Risque d'<strong>infections graves</strong> (dont réactivation de la tuberculose) et de <strong>malignités</strong> ; peut aggraver une <strong>insuffisance cardiaque</strong> et une maladie démyélinisante.</div><div class="key-fact"><strong>Avant tout biologique ou JAK</strong> : dépister la <strong>tuberculose latente</strong> (IGRA) et les <strong>hépatites B et C</strong>, mettre à jour les vaccins (pas de vaccin vivant pendant le traitement).</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em> · <em>Guide clinique IPS — Rhumatologie, Médication</em></p>
+</div>
+<div class="tab-panel " id="golimumab-pk">
+<div class="pk-panel"><table class="pk-table"><tr><td class="pk-label">Absorption</td><td>Bonne en SC ; biodisponibilité complète en IV</td></tr><tr><td class="pk-label">Distribution</td><td>Surtout circulatoire, distribution extravasculaire limitée</td></tr><tr><td class="pk-label">t½</td><td>2 sem</td></tr><tr><td class="pk-label">Délai d'amélioration</td><td>dans les 3 mois</td></tr></table></div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+<div class="tab-panel " id="golimumab-doses">
+<div class="warn-box"><strong>Posologie non documentée dans vos sources canadiennes</strong>. ➜ À compléter avec RxVigilance ou la monographie canadienne.</div><div class="key-fact"><strong>Formes (Davis, États-Unis — à confirmer avec la monographie canadienne)</strong> : seringues et stylos SC 50 mg/0,5 mL et 100 mg/mL ; solution IV (Simponi Aria) 12,5 mg/mL</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+<div class="tab-panel " id="golimumab-es">
+<div class="info-grid"><div class="info-box red"><h4>Graves</h4><ul><li>Infections graves, dont <strong>réactivation de la tuberculose</strong> et infections opportunistes</li><li>Hypersensibilité, anaphylaxie</li><li><strong>Malignités</strong> : lymphome (dont HSTCL), leucémie, cancers cutanés</li><li>Insuffisance cardiaque</li><li>Atteintes démyélinisantes du SNC, syndrome de Guillain-Barré, névrite optique</li><li>Cytopénies : agranulocytose, anémie aplasique, pancytopénie, thrombocytopénie</li><li>Syndrome lupique</li></ul></div><div class="info-box "><h4>Autres</h4><ul><li>Réactions au site d'injection</li><li>Rhinopharyngite, infection des voies respiratoires supérieures</li><li>↑ enzymes hépatiques</li><li>Hypertension, paresthésies, fièvre, psoriasis</li></ul></div></div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+<div class="tab-panel " id="golimumab-ci">
+<div class="info-grid"><div class="info-box red"><h4>Contre-indications</h4><ul><li>Infection active, même localisée</li></ul></div><div class="info-box "><h4>Prudence</h4><ul><li>Infection chronique ou récidivante</li><li>Exposition à la tuberculose ; régions endémiques de mycoses</li><li>ATCD d'infection opportuniste</li><li>Hépatite B (porteur : risque de réactivation)</li><li>Maladie démyélinisante préexistante</li><li>Âge avancé : risque accru d'infection</li><li>Insuffisance cardiaque (peut s'aggraver)</li><li>Cytopénies ; psoriasis (peut s'aggraver)</li><li>Syndrome de Guillain-Barré ou sclérose en plaques</li></ul></div></div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+<div class="tab-panel " id="golimumab-suivi">
+<div class="info-grid"><div class="info-box blue"><h4>Suivi</h4><ul><li>Signes d'infection, symptômes cardiaques</li><li>Formule sanguine, enzymes hépatiques</li><li>Symptômes neurologiques (démyélinisation)</li></ul></div></div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+<div class="tab-panel " id="golimumab-ai">
+<div class="info-grid"><div class="info-box "><h4>Interactions</h4><ul><li>Abatacept ou anakinra : ↑ infections graves (non recommandé)</li><li>Corticostéroïdes ou méthotrexate : ↑ infections graves</li><li>Azathioprine ou 6-mercaptopurine : ↑ risque de HSTCL</li><li>Substrats du CYP450 à fenêtre étroite (warfarine, théophylline, ciclosporine) : l'effet peut changer au début ou à l'arrêt</li><li>Vaccins vivants — éviter (réponse aux vaccins diminuée, risque d'infection)</li></ul></div></div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+</div>
+</div>
+
+<div class="drug-card" id="card-certolizumab" data-search="certolizumab pégol cimzia anti-tnf polyarthrite rhumatoïde spondylarthrite arthrite psoriasique maladie de crohn">
+  <div class="drug-header" style="background:#b91c1c;">
+    <div>
+      <div class="drug-name">Certolizumab pégol (Cimzia®)</div>
+      <div style="font-size:12px;opacity:.75;margin-top:2px;">SC · seringues 200 mg/mL · poudre 200 mg</div>
+    </div>
+    <div class="drug-pharmacol">Anti-TNF-α pégylé (bDMARD — biologique)</div>
+  </div>
+  <div class="drug-tabs"><button class="tab-btn active" onclick="showTab('certolizumab','ov',this)">Vue d'ensemble</button><button class="tab-btn " onclick="showTab('certolizumab','pk',this)">Pharmacocinétique</button><button class="tab-btn " onclick="showTab('certolizumab','doses',this)">Doses &amp; formes</button><button class="tab-btn " onclick="showTab('certolizumab','es',this)">Effets secondaires</button><button class="tab-btn " onclick="showTab('certolizumab','ci',this)">Contre-indications</button><button class="tab-btn " onclick="showTab('certolizumab','suivi',this)">Suivi</button><button class="tab-btn " onclick="showTab('certolizumab','ai',this)">Autres infos</button></div>
+  <div class="drug-panels"><div class="tab-panel active" id="certolizumab-ov">
+<div class="info-grid"><div class="info-box blue"><h4>Mécanisme</h4><p>Neutralise le <strong>TNF</strong> ; la pégylation prolonge la durée d'action.</p></div><div class="info-box green"><h4>Indications</h4><ul><li><strong>Polyarthrite rhumatoïde</strong>, arthrite psoriasique</li><li><strong>Spondylarthrite ankylosante</strong>, spondyloarthrite axiale non radiographique</li><li>Maladie de Crohn modérée à sévère</li><li>Psoriasis en plaques, arthrite idiopathique juvénile polyarticulaire</li></ul></div></div><div class="warn-box">Risque d'<strong>infections graves</strong> (dont réactivation de la tuberculose et de l'hépatite B) et de <strong>malignités</strong>.</div><div class="key-fact"><strong>Avant tout biologique ou JAK</strong> : dépister la <strong>tuberculose latente</strong> (IGRA) et les <strong>hépatites B et C</strong>, mettre à jour les vaccins (pas de vaccin vivant pendant le traitement).</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em> · <em>Guide clinique IPS — Rhumatologie, Médication</em></p>
+</div>
+<div class="tab-panel " id="certolizumab-pk">
+<div class="pk-panel"><table class="pk-table"><tr><td class="pk-label">Absorption</td><td>~80 % après injection SC</td></tr><tr><td class="pk-label">Distribution</td><td>Tissus : minime</td></tr><tr><td class="pk-label">Pic</td><td>50–120 h</td></tr><tr><td class="pk-label">Durée</td><td>2–4 sem</td></tr><tr><td class="pk-label">t½</td><td>14 jours</td></tr></table></div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+<div class="tab-panel " id="certolizumab-doses">
+<div class="warn-box"><strong>Posologie non documentée dans vos sources canadiennes</strong>. ➜ À compléter avec RxVigilance ou la monographie canadienne.</div><div class="key-fact"><strong>Formes (Davis, États-Unis — à confirmer avec la monographie canadienne)</strong> : poudre lyophilisée 200 mg/fiole ; seringues préremplies 200 mg/mL</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+<div class="tab-panel " id="certolizumab-es">
+<div class="info-grid"><div class="info-box red"><h4>Graves</h4><ul><li>Infections graves : <strong>réactivation de la tuberculose et du VHB</strong>, infections opportunistes</li><li>Hypersensibilité : anaphylaxie, angio-œdème, maladie sérique, urticaire</li><li><strong>Malignités</strong> : lymphome (dont HSTCL), leucémie, cancers cutanés</li><li>Syndrome lupique</li><li>Réactions hématologiques</li></ul></div><div class="info-box "><h4>Autres</h4><ul><li>Arthralgie</li><li>Psoriasis, réactions cutanées (rarement graves)</li></ul></div></div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+<div class="tab-panel " id="certolizumab-ci">
+<div class="info-grid"><div class="info-box red"><h4>Contre-indications</h4><ul><li>Hypersensibilité</li><li>Infection active, même localisée</li><li>Anakinra en concomitance</li></ul></div><div class="info-box "><h4>Prudence</h4><ul><li>Infection chronique ou récidivante</li><li>Exposition à la tuberculose ; régions endémiques de mycoses</li><li>ATCD d'infection opportuniste</li><li>Hépatite B (porteur : risque de réactivation)</li><li>Maladie démyélinisante préexistante</li><li>Âge avancé : risque accru d'infection</li><li>Maladie démyélinisante (peut s'aggraver)</li><li>Insuffisance cardiaque</li></ul></div></div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+<div class="tab-panel " id="certolizumab-suivi">
+<div class="info-grid"><div class="info-box blue"><h4>Suivi</h4><ul><li>Signes d'infection ; VHB chez les porteurs</li><li>Formule sanguine</li><li>Efficacité : douleur, gonflement, CRP</li></ul></div></div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+<div class="tab-panel " id="certolizumab-ai">
+<div class="info-grid"><div class="info-box "><h4>Interactions</h4><ul><li>Anakinra : ↑ infections graves ; association contre-indiquée</li><li>Azathioprine ou méthotrexate : ↑ risque de HSTCL</li><li>Vaccins vivants — éviter (réponse aux vaccins diminuée, risque d'infection)</li></ul></div></div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+</div>
+</div>
+
+<div class="drug-card" id="card-ixekizumab" data-search="ixékizumab ixekizumab taltz anti-il-17 psoriasis spondylarthrite arthrite psoriatique">
+  <div class="drug-header" style="background:#0f766e;">
+    <div>
+      <div class="drug-name">Ixékizumab (Taltz®)</div>
+      <div style="font-size:12px;opacity:.75;margin-top:2px;">SC · stylos 80 mg/mL · seringues 20 mg/0,25 mL · 40 mg/0,5 mL · 80 mg/mL</div>
+    </div>
+    <div class="drug-pharmacol">Anticorps anti-IL-17A</div>
+  </div>
+  <div class="drug-tabs"><button class="tab-btn active" onclick="showTab('ixekizumab','ov',this)">Vue d'ensemble</button><button class="tab-btn " onclick="showTab('ixekizumab','pk',this)">Pharmacocinétique</button><button class="tab-btn " onclick="showTab('ixekizumab','doses',this)">Doses &amp; formes</button><button class="tab-btn " onclick="showTab('ixekizumab','es',this)">Effets secondaires</button><button class="tab-btn " onclick="showTab('ixekizumab','ci',this)">Contre-indications</button><button class="tab-btn " onclick="showTab('ixekizumab','suivi',this)">Suivi</button><button class="tab-btn " onclick="showTab('ixekizumab','ai',this)">Autres infos</button></div>
+  <div class="drug-panels"><div class="tab-panel active" id="ixekizumab-ov">
+<div class="info-grid"><div class="info-box blue"><h4>Mécanisme</h4><p>Se lie sélectivement à l'<strong>IL-17A</strong> et empêche son interaction avec le récepteur de l'IL-17.</p></div><div class="info-box green"><h4>Indications</h4><ul><li><strong>Psoriasis</strong> en plaques modéré à sévère</li><li>Arthrite psoriasique (seul ou avec un DMARD non biologique)</li><li><strong>Spondylarthrite ankylosante</strong>, spondyloarthrite axiale non radiographique</li></ul></div></div><div class="warn-box">Peut <strong>déclencher ou aggraver une MII</strong> — prudence en présence de Crohn ou de colite.</div><div class="key-fact"><strong>Avant tout biologique ou JAK</strong> : dépister la <strong>tuberculose latente</strong> (IGRA) et les <strong>hépatites B et C</strong>, mettre à jour les vaccins (pas de vaccin vivant pendant le traitement).</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em> · <em>Guide clinique IPS — Rhumatologie, Médication</em></p>
+</div>
+<div class="tab-panel " id="ixekizumab-pk">
+<div class="pk-panel"><table class="pk-table"><tr><td class="pk-label">Absorption</td><td>60–81 % après injection SC</td></tr><tr><td class="pk-label">Distribution</td><td>Tissus : minime</td></tr><tr><td class="pk-label">Métabolisme</td><td>Catabolisme en petits peptides et acides aminés</td></tr><tr><td class="pk-label">Pic</td><td>4 jours</td></tr><tr><td class="pk-label">t½</td><td>13 jours</td></tr></table></div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+<div class="tab-panel " id="ixekizumab-doses">
+<div class="warn-box"><strong>Posologie non documentée dans vos sources canadiennes</strong>. ➜ À compléter avec RxVigilance ou la monographie canadienne.</div><div class="key-fact"><strong>Formes (Davis, États-Unis — à confirmer avec la monographie canadienne)</strong> : stylos 80 mg/mL ; seringues 20 mg/0,25 mL, 40 mg/0,5 mL, 80 mg/mL</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+<div class="tab-panel " id="ixekizumab-es">
+<div class="info-grid"><div class="info-box red"><h4>Graves</h4><ul><li>Infections (dont réactivation de la tuberculose)</li><li><strong>MII</strong> (exacerbation)</li><li>Hypersensibilité : anaphylaxie, angio-œdème, urticaire</li></ul></div><div class="info-box "><h4>Autres</h4><ul><li>Réactions au site d'injection</li><li>Éruptions eczémateuses</li><li>Nausées</li><li>Neutropénie, thrombocytopénie</li></ul></div></div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+<div class="tab-panel " id="ixekizumab-ci">
+<div class="info-grid"><div class="info-box red"><h4>Contre-indications</h4><ul><li>Hypersensibilité</li><li>Tuberculose active</li></ul></div><div class="info-box "><h4>Prudence</h4><ul><li>Maladie inflammatoire de l'intestin (exacerbation possible)</li></ul></div></div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+<div class="tab-panel " id="ixekizumab-suivi">
+<div class="info-grid"><div class="info-box blue"><h4>Suivi</h4><ul><li>Symptômes digestifs</li><li>Infections</li></ul></div></div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+<div class="tab-panel " id="ixekizumab-ai">
+<div class="info-grid"><div class="info-box "><h4>Interactions</h4><ul><li>Vaccins vivants — éviter (réponse aux vaccins diminuée, risque d'infection)</li></ul></div></div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+</div>
+</div>
+
+<div class="drug-card" id="card-bimekizumab" data-search="bimékizumab bimekizumab bimzelx anti-il-17 psoriasis spondylarthrite arthrite psoriatique">
+  <div class="drug-header" style="background:#0f766e;">
+    <div>
+      <div class="drug-name">Bimékizumab (Bimzelx®)</div>
+      <div style="font-size:12px;opacity:.75;margin-top:2px;">Fiche minimale</div>
+    </div>
+    <div class="drug-pharmacol">Anticorps anti-IL-17 (A et F)</div>
+  </div>
+  <div class="drug-tabs"><button class="tab-btn active" onclick="showTab('bimekizumab','ov',this)">Vue d'ensemble</button><button class="tab-btn " onclick="showTab('bimekizumab','pk',this)">Pharmacocinétique</button><button class="tab-btn " onclick="showTab('bimekizumab','doses',this)">Doses &amp; formes</button><button class="tab-btn " onclick="showTab('bimekizumab','es',this)">Effets secondaires</button><button class="tab-btn " onclick="showTab('bimekizumab','ci',this)">Contre-indications</button><button class="tab-btn " onclick="showTab('bimekizumab','suivi',this)">Suivi</button><button class="tab-btn " onclick="showTab('bimekizumab','ai',this)">Autres infos</button></div>
+  <div class="drug-panels"><div class="tab-panel active" id="bimekizumab-ov">
+<div class="info-grid"><div class="info-box blue"><h4>Mécanisme</h4><p>Inhibiteur de l'<strong>IL-17</strong> ; le cours le classe avec le sécukinumab et l'ixékizumab. Il neutralise l'IL-17A et l'IL-17F.</p></div><div class="info-box green"><h4>Indications</h4><ul><li>Maladies à médiation IL-17 : psoriasis, arthrite psoriasique, spondylarthrites (à confirmer avec la monographie canadienne)</li></ul></div></div><div class="warn-box">Fiche minimale — pas de monographie Davis ni dans vos autres sources : tout le reste est à compléter.</div><div class="key-fact"><strong>Avant tout biologique ou JAK</strong> : dépister la <strong>tuberculose latente</strong> (IGRA) et les <strong>hépatites B et C</strong>, mettre à jour les vaccins (pas de vaccin vivant pendant le traitement).</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Cours Rhumatologie 3, Médication en rhumatologie (Dr Chrétien Raymer)</em></p>
+</div>
+<div class="tab-panel " id="bimekizumab-pk">
+<div class="warn-box">Non documentée dans vos sources.</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Cours Rhumatologie 3, Médication en rhumatologie (Dr Chrétien Raymer)</em></p>
+</div>
+<div class="tab-panel " id="bimekizumab-doses">
+<div class="warn-box"><strong>Posologie non documentée dans vos sources canadiennes</strong>. ➜ À compléter avec RxVigilance ou la monographie canadienne.</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Cours Rhumatologie 3, Médication en rhumatologie (Dr Chrétien Raymer)</em></p>
+</div>
+<div class="tab-panel " id="bimekizumab-es">
+<div class="warn-box">Non documentés dans vos sources. Comme pour les autres anti-IL-17, vérifier infections et MII.</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Cours Rhumatologie 3, Médication en rhumatologie (Dr Chrétien Raymer)</em></p>
+</div>
+<div class="tab-panel " id="bimekizumab-ci">
+<div class="warn-box">Non documentées dans vos sources.</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Cours Rhumatologie 3, Médication en rhumatologie (Dr Chrétien Raymer)</em></p>
+</div>
+<div class="tab-panel " id="bimekizumab-suivi">
+<div class="warn-box">Non documenté dans vos sources.</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Cours Rhumatologie 3, Médication en rhumatologie (Dr Chrétien Raymer)</em></p>
+</div>
+<div class="tab-panel " id="bimekizumab-ai">
+<div class="warn-box">Non documentées dans vos sources.</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Cours Rhumatologie 3, Médication en rhumatologie (Dr Chrétien Raymer)</em></p>
+</div>
+</div>
+</div>
+
+<div class="drug-card" id="card-canakinumab" data-search="canakinumab ilaris anti-il-1 il-1β goutte maladie de still fièvre méditerranéenne familiale auto-inflammatoire">
+  <div class="drug-header" style="background:#0f766e;">
+    <div>
+      <div class="drug-name">Canakinumab (Ilaris®)</div>
+      <div style="font-size:12px;opacity:.75;margin-top:2px;">SC · solution</div>
+    </div>
+    <div class="drug-pharmacol">Anticorps anti-IL-1β</div>
+  </div>
+  <div class="drug-tabs"><button class="tab-btn active" onclick="showTab('canakinumab','ov',this)">Vue d'ensemble</button><button class="tab-btn " onclick="showTab('canakinumab','pk',this)">Pharmacocinétique</button><button class="tab-btn " onclick="showTab('canakinumab','doses',this)">Doses &amp; formes</button><button class="tab-btn " onclick="showTab('canakinumab','es',this)">Effets secondaires</button><button class="tab-btn " onclick="showTab('canakinumab','ci',this)">Contre-indications</button><button class="tab-btn " onclick="showTab('canakinumab','suivi',this)">Suivi</button><button class="tab-btn " onclick="showTab('canakinumab','ai',this)">Autres infos</button></div>
+  <div class="drug-panels"><div class="tab-panel active" id="canakinumab-ov">
+<div class="info-grid"><div class="info-box blue"><h4>Mécanisme</h4><p>Se lie à l'<strong>IL-1β</strong> et la neutralise : elle ne peut plus activer ses récepteurs.</p></div><div class="info-box green"><h4>Indications</h4><ul><li>Syndromes périodiques associés à la cryopyrine (CAPS), TRAPS, HIDS/déficit en mévalonate kinase, <strong>fièvre méditerranéenne familiale</strong></li><li><strong>Maladie de Still</strong> active (de l'adulte et arthrite juvénile systémique)</li><li><strong>Poussées de goutte</strong> si AINS et colchicine sont contre-indiqués, non tolérés ou inefficaces, et si les corticostéroïdes répétés ne conviennent pas</li></ul></div></div><div class="key-fact">Le cours classe le canakinumab avec l'anakinra et le rilonacept parmi les <strong>inhibiteurs de l'IL-1</strong>. Ne pas associer à un anti-TNF (infections graves).</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em> · <em>Cours Rhumatologie 3, Médication en rhumatologie (Dr Chrétien Raymer)</em></p>
+</div>
+<div class="tab-panel " id="canakinumab-pk">
+<div class="pk-panel"><table class="pk-table"><tr><td class="pk-label">Absorption</td><td>~70 % après injection SC</td></tr><tr><td class="pk-label">Début</td><td>dans les 8 jours (normalisation des marqueurs d'inflammation)</td></tr><tr><td class="pk-label">Pic</td><td>7 jours</td></tr><tr><td class="pk-label">Durée</td><td>8 sem</td></tr><tr><td class="pk-label">t½</td><td>26 jours</td></tr></table></div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+<div class="tab-panel " id="canakinumab-doses">
+<div class="warn-box"><strong>Posologie non documentée dans vos sources canadiennes</strong>. ➜ À compléter avec RxVigilance ou la monographie canadienne.</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+<div class="tab-panel " id="canakinumab-es">
+<div class="info-grid"><div class="info-box red"><h4>Graves</h4><ul><li>Infections</li><li><strong>Syndrome d'activation macrophagique</strong></li><li>DRESS</li><li>Hypersensibilité</li></ul></div><div class="info-box "><h4>Autres</h4><ul><li>Réactions au site d'injection</li><li>Rhinopharyngite, bronchite, grippe</li><li>Diarrhée, nausées, gastro-entérite</li><li>Céphalée, vertige, douleur musculosquelettique</li><li>Prise de poids</li></ul></div></div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+<div class="tab-panel " id="canakinumab-ci">
+<div class="info-grid"><div class="info-box red"><h4>Contre-indications</h4><ul><li>Aucune selon Davis</li></ul></div><div class="info-box "><h4>Prudence</h4><ul><li>Infection active non traitée</li><li>Infections récidivantes ou terrain favorisant les infections</li></ul></div></div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+<div class="tab-panel " id="canakinumab-suivi">
+<div class="info-grid"><div class="info-box blue"><h4>Suivi</h4><ul><li>Signes d'infection</li><li>Marqueurs d'inflammation, fréquence des poussées</li></ul></div></div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+<div class="tab-panel " id="canakinumab-ai">
+<div class="info-grid"><div class="info-box "><h4>Interactions</h4><ul><li>Vaccins vivants : éviter ; compléter les vaccinations avant le traitement</li><li>Anti-TNF : ↑ risque d'infections graves</li><li>Substrats du CYP450 à fenêtre étroite (warfarine) : surveillance étroite</li></ul></div></div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+</div>
+</div>
+
+<div class="drug-card" id="card-rilonacept" data-search="rilonacept arcalyst anti-il-1 auto-inflammatoire">
+  <div class="drug-header" style="background:#0f766e;">
+    <div>
+      <div class="drug-name">Rilonacept (Arcalyst®)</div>
+      <div style="font-size:12px;opacity:.75;margin-top:2px;">Fiche minimale</div>
+    </div>
+    <div class="drug-pharmacol">Inhibiteur de l'IL-1</div>
+  </div>
+  <div class="drug-tabs"><button class="tab-btn active" onclick="showTab('rilonacept','ov',this)">Vue d'ensemble</button><button class="tab-btn " onclick="showTab('rilonacept','pk',this)">Pharmacocinétique</button><button class="tab-btn " onclick="showTab('rilonacept','doses',this)">Doses &amp; formes</button><button class="tab-btn " onclick="showTab('rilonacept','es',this)">Effets secondaires</button><button class="tab-btn " onclick="showTab('rilonacept','ci',this)">Contre-indications</button><button class="tab-btn " onclick="showTab('rilonacept','suivi',this)">Suivi</button><button class="tab-btn " onclick="showTab('rilonacept','ai',this)">Autres infos</button></div>
+  <div class="drug-panels"><div class="tab-panel active" id="rilonacept-ov">
+<div class="info-grid"><div class="info-box blue"><h4>Mécanisme</h4><p>Le cours le range parmi les <strong>inhibiteurs de l'IL-1</strong>, avec l'anakinra et le canakinumab.</p></div><div class="info-box green"><h4>Indications</h4><ul><li>Non documentées dans vos sources</li></ul></div></div><div class="warn-box">Fiche minimale — pas de monographie Davis ni dans vos autres sources : statut canadien, indications, doses, effets indésirables et interactions à compléter.</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Cours Rhumatologie 3, Médication en rhumatologie (Dr Chrétien Raymer)</em></p>
+</div>
+<div class="tab-panel " id="rilonacept-pk">
+<div class="warn-box">Non documentée dans vos sources.</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Cours Rhumatologie 3, Médication en rhumatologie (Dr Chrétien Raymer)</em></p>
+</div>
+<div class="tab-panel " id="rilonacept-doses">
+<div class="warn-box"><strong>Posologie non documentée dans vos sources canadiennes</strong>. ➜ À compléter avec RxVigilance ou la monographie canadienne.</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Cours Rhumatologie 3, Médication en rhumatologie (Dr Chrétien Raymer)</em></p>
+</div>
+<div class="tab-panel " id="rilonacept-es">
+<div class="warn-box">Non documentés dans vos sources.</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Cours Rhumatologie 3, Médication en rhumatologie (Dr Chrétien Raymer)</em></p>
+</div>
+<div class="tab-panel " id="rilonacept-ci">
+<div class="warn-box">Non documentées dans vos sources.</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Cours Rhumatologie 3, Médication en rhumatologie (Dr Chrétien Raymer)</em></p>
+</div>
+<div class="tab-panel " id="rilonacept-suivi">
+<div class="warn-box">Non documenté dans vos sources.</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Cours Rhumatologie 3, Médication en rhumatologie (Dr Chrétien Raymer)</em></p>
+</div>
+<div class="tab-panel " id="rilonacept-ai">
+<div class="warn-box">Non documentées dans vos sources.</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Cours Rhumatologie 3, Médication en rhumatologie (Dr Chrétien Raymer)</em></p>
+</div>
+</div>
+</div>
+
+<div class="drug-card" id="card-apremilast" data-search="aprémilast apremilast otezla inhibiteur pde4 arthrite psoriasique psoriasis behçet">
+  <div class="drug-header" style="background:#0f766e;">
+    <div>
+      <div class="drug-name">Aprémilast (Otezla®)</div>
+      <div style="font-size:12px;opacity:.75;margin-top:2px;">Comprimés 10 · 20 · 30 mg</div>
+    </div>
+    <div class="drug-pharmacol">Inhibiteur de la phosphodiestérase 4 (PDE4)</div>
+  </div>
+  <div class="drug-tabs"><button class="tab-btn active" onclick="showTab('apremilast','ov',this)">Vue d'ensemble</button><button class="tab-btn " onclick="showTab('apremilast','pk',this)">Pharmacocinétique</button><button class="tab-btn " onclick="showTab('apremilast','doses',this)">Doses &amp; formes</button><button class="tab-btn " onclick="showTab('apremilast','es',this)">Effets secondaires</button><button class="tab-btn " onclick="showTab('apremilast','ci',this)">Contre-indications</button><button class="tab-btn " onclick="showTab('apremilast','suivi',this)">Suivi</button><button class="tab-btn " onclick="showTab('apremilast','ai',this)">Autres infos</button></div>
+  <div class="drug-panels"><div class="tab-panel active" id="apremilast-ov">
+<div class="info-grid"><div class="info-box blue"><h4>Mécanisme</h4><p>Inhibe la <strong>PDE4</strong> : l'AMP cyclique intracellulaire augmente.</p></div><div class="info-box green"><h4>Indications</h4><ul><li><strong>Arthrite psoriasique</strong> active</li><li>Psoriasis en plaques (candidats à la photothérapie ou à un traitement systémique)</li><li>Ulcères buccaux de la maladie de Behçet</li></ul></div></div><div class="key-fact">Petite molécule <strong>orale</strong> ; l'amélioration articulaire peut prendre jusqu'à <strong>4 mois</strong>. Le cours le range parmi les inhibiteurs de la PDE4 des thérapies ciblées.</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em> · <em>Cours Rhumatologie 3, Médication en rhumatologie (Dr Chrétien Raymer)</em></p>
+</div>
+<div class="tab-panel " id="apremilast-pk">
+<div class="pk-panel"><table class="pk-table"><tr><td class="pk-label">Absorption</td><td>~73 % par voie orale</td></tr><tr><td class="pk-label">Métabolisme</td><td>Extensif, surtout par le CYP3A4 ; métabolites inactifs</td></tr><tr><td class="pk-label">Excrétion</td><td>Urine 58 %, selles 39 % (surtout métabolites inactifs)</td></tr><tr><td class="pk-label">Pic</td><td>2,5 h</td></tr><tr><td class="pk-label">Durée</td><td>12–24 h</td></tr><tr><td class="pk-label">t½</td><td>6–9 h</td></tr></table></div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+<div class="tab-panel " id="apremilast-doses">
+<div class="warn-box"><strong>Posologie non documentée dans vos sources canadiennes</strong>. ➜ À compléter avec RxVigilance ou la monographie canadienne.</div><div class="key-fact"><strong>Formes (Davis, États-Unis — à confirmer avec la monographie canadienne)</strong> : comprimés 10, 20 et 30 mg. Dose à réduire si ClCr &lt; 30 mL/min.</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+<div class="tab-panel " id="apremilast-es">
+<div class="info-grid"><div class="info-box red"><h4>Graves</h4><ul><li>Hypersensibilité : anaphylaxie, angio-œdème</li></ul></div><div class="info-box "><h4>Fréquents</h4><ul><li><strong>Diarrhée</strong>, nausées, vomissements, douleur abdominale haute</li><li>Perte de poids</li><li>Céphalée</li><li>Dépression</li></ul></div></div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+<div class="tab-panel " id="apremilast-ci">
+<div class="info-grid"><div class="info-box red"><h4>Contre-indications</h4><ul><li>Hypersensibilité</li><li>Inducteurs enzymatiques du CYP450</li></ul></div><div class="info-box "><h4>Prudence</h4><ul><li>ATCD de dépression ou d'idées suicidaires</li><li>Insuffisance rénale sévère (ClCr &lt; 30 mL/min : dose réduite)</li><li>Diurétiques ou antihypertenseurs : nausées, vomissements ou diarrhée sévères plus risqués</li><li>Âgés : complications des symptômes digestifs</li></ul></div></div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+<div class="tab-panel " id="apremilast-suivi">
+<div class="info-grid"><div class="info-box blue"><h4>Suivi</h4><ul><li>Poids</li><li>Humeur et idées suicidaires</li><li>Symptômes digestifs, hydratation</li></ul></div></div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+<div class="tab-panel " id="apremilast-ai">
+<div class="info-grid"><div class="info-box "><h4>Interactions</h4><ul><li>Inducteurs du CYP450 (carbamazépine, phénobarbital, phénytoïne, rifampine) : ↓ concentrations et efficacité — éviter</li></ul></div></div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+</div>
+</div>
+
+<div class="drug-card" id="card-anifrolumab" data-search="anifrolumab saphnelo lupus érythémateux disséminé interféron type i">
+  <div class="drug-header" style="background:#7c3aed;">
+    <div>
+      <div class="drug-name">Anifrolumab (Saphnelo®)</div>
+      <div style="font-size:12px;opacity:.75;margin-top:2px;">Fiche minimale</div>
+    </div>
+    <div class="drug-pharmacol">Anticorps anti-récepteur de l'interféron</div>
+  </div>
+  <div class="drug-tabs"><button class="tab-btn active" onclick="showTab('anifrolumab','ov',this)">Vue d'ensemble</button><button class="tab-btn " onclick="showTab('anifrolumab','pk',this)">Pharmacocinétique</button><button class="tab-btn " onclick="showTab('anifrolumab','doses',this)">Doses &amp; formes</button><button class="tab-btn " onclick="showTab('anifrolumab','es',this)">Effets secondaires</button><button class="tab-btn " onclick="showTab('anifrolumab','ci',this)">Contre-indications</button><button class="tab-btn " onclick="showTab('anifrolumab','suivi',this)">Suivi</button><button class="tab-btn " onclick="showTab('anifrolumab','ai',this)">Autres infos</button></div>
+  <div class="drug-panels"><div class="tab-panel active" id="anifrolumab-ov">
+<div class="info-grid"><div class="info-box blue"><h4>Mécanisme</h4><p>Anticorps dirigé contre le <strong>récepteur de l'interféron</strong>. Le cours le classe avec le rituximab et le bélimumab parmi les agents anti-cellules B ; Goldman le décrit comme un anticorps contre le récepteur de l'interféron, à l'étude dans la néphrite lupique.</p></div><div class="info-box green"><h4>Indications</h4><ul><li>Lupus érythémateux disséminé (indication exacte à confirmer avec la monographie canadienne)</li></ul></div></div><div class="warn-box">Fiche minimale — pas de monographie Davis : statut canadien, doses, effets indésirables, contre-indications et interactions à compléter.</div><div class="key-fact"><strong>Avant tout biologique ou JAK</strong> : dépister la <strong>tuberculose latente</strong> (IGRA) et les <strong>hépatites B et C</strong>, mettre à jour les vaccins (pas de vaccin vivant pendant le traitement).</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Cours Rhumatologie 3, Médication en rhumatologie (Dr Chrétien Raymer)</em> · <em>Goldman-Cecil Medicine, 26<sup>e</sup> éd.</em></p>
+</div>
+<div class="tab-panel " id="anifrolumab-pk">
+<div class="warn-box">Non documentée dans vos sources.</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Cours Rhumatologie 3, Médication en rhumatologie (Dr Chrétien Raymer)</em></p>
+</div>
+<div class="tab-panel " id="anifrolumab-doses">
+<div class="warn-box"><strong>Posologie non documentée dans vos sources canadiennes</strong>. ➜ À compléter avec RxVigilance ou la monographie canadienne.</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Cours Rhumatologie 3, Médication en rhumatologie (Dr Chrétien Raymer)</em></p>
+</div>
+<div class="tab-panel " id="anifrolumab-es">
+<div class="warn-box">Non documentés dans vos sources.</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Cours Rhumatologie 3, Médication en rhumatologie (Dr Chrétien Raymer)</em></p>
+</div>
+<div class="tab-panel " id="anifrolumab-ci">
+<div class="warn-box">Non documentées dans vos sources.</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Cours Rhumatologie 3, Médication en rhumatologie (Dr Chrétien Raymer)</em></p>
+</div>
+<div class="tab-panel " id="anifrolumab-suivi">
+<div class="warn-box">Non documenté dans vos sources.</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Cours Rhumatologie 3, Médication en rhumatologie (Dr Chrétien Raymer)</em></p>
+</div>
+<div class="tab-panel " id="anifrolumab-ai">
+<div class="warn-box">Non documentées dans vos sources.</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Cours Rhumatologie 3, Médication en rhumatologie (Dr Chrétien Raymer)</em></p>
+</div>
+</div>
+</div>
+
+<div class="drug-card" id="card-meloxicam" data-search="méloxicam meloxicam mobic ains anti-inflammatoire arthrose polyarthrite rhumatoïde cox-2 préférentiel">
+  <div class="drug-header" style="background:#b45309;">
+    <div>
+      <div class="drug-name">Méloxicam (Mobic®)</div>
+      <div style="font-size:12px;opacity:.75;margin-top:2px;">Comprimés · injectable IV (Davis)</div>
+    </div>
+    <div class="drug-pharmacol">AINS — un peu plus COX-2 sélectif (cours)</div>
+  </div>
+  <div class="drug-tabs"><button class="tab-btn active" onclick="showTab('meloxicam','ov',this)">Vue d'ensemble</button><button class="tab-btn " onclick="showTab('meloxicam','pk',this)">Pharmacocinétique</button><button class="tab-btn " onclick="showTab('meloxicam','doses',this)">Doses &amp; formes</button><button class="tab-btn " onclick="showTab('meloxicam','es',this)">Effets secondaires</button><button class="tab-btn " onclick="showTab('meloxicam','ci',this)">Contre-indications</button><button class="tab-btn " onclick="showTab('meloxicam','suivi',this)">Suivi</button><button class="tab-btn " onclick="showTab('meloxicam','ai',this)">Autres infos</button></div>
+  <div class="drug-panels"><div class="tab-panel active" id="meloxicam-ov">
+<div class="info-grid"><div class="info-box blue"><h4>Mécanisme</h4><p>Inhibe la synthèse des prostaglandines (cyclooxygénase). Le cours note une action <strong>un peu plus COX-sélective</strong> avec une prise <strong>DIE</strong>.</p></div><div class="info-box green"><h4>Indications</h4><ul><li>Soulagement de l'<strong>arthrose</strong> et de la <strong>polyarthrite rhumatoïde</strong> (dont juvénile)</li><li>IV : douleur modérée à sévère</li></ul></div></div><div class="warn-box"><strong>Risques des AINS</strong> : hémorragie ou perforation digestive, atteinte rénale, rétention hydrosodée, événements cardiovasculaires. Pas d'AINS avec l'aspirine.</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em> · <em>Cours Rhumatologie 3, Médication en rhumatologie (Dr Chrétien Raymer)</em></p>
+</div>
+<div class="tab-panel " id="meloxicam-pk">
+<div class="pk-panel"><table class="pk-table"><tr><td class="pk-label">Absorption</td><td>Bonne par voie orale ; biodisponibilité complète en IV</td></tr><tr><td class="pk-label">Liaison aux protéines</td><td>99,4 %</td></tr><tr><td class="pk-label">Métabolisme</td><td>Hépatique, surtout par le <strong>CYP2C9</strong> (polymorphisme : métaboliseurs lents ou intermédiaires → concentrations ↑), accessoirement CYP3A4</td></tr><tr><td class="pk-label">Pic</td><td>5–6 h (PO)</td></tr><tr><td class="pk-label">Durée</td><td>24 h</td></tr><tr><td class="pk-label">t½</td><td>20,1 h</td></tr></table></div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+<div class="tab-panel " id="meloxicam-doses">
+<div class="warn-box"><strong>Posologie non documentée dans vos sources canadiennes</strong>. ➜ À compléter avec RxVigilance ou la monographie canadienne.</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+<div class="tab-panel " id="meloxicam-es">
+<div class="info-grid"><div class="info-box red"><h4>Graves</h4><ul><li>Hémorragie, perforation, ulcération digestive</li><li>Infarctus, accident vasculaire cérébral, insuffisance cardiaque</li><li>Hépatotoxicité</li><li>DRESS, Stevens-Johnson, nécrolyse épidermique toxique, dermatite exfoliatrice</li><li>Anaphylaxie</li></ul></div><div class="info-box "><h4>Autres</h4><ul><li>Dyspepsie, nausées, diarrhée, ↑ enzymes hépatiques</li><li>Œdème, hypertension</li><li>Hyperkaliémie</li><li>Anémie, leucopénie, thrombocytopénie</li><li>Prurit, éruption</li><li>Retard de l'ovulation</li></ul></div></div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+<div class="tab-panel " id="meloxicam-ci">
+<div class="info-grid"><div class="info-box red"><h4>Contre-indications</h4><ul><li>Hypersensibilité (réaction croisée possible avec les autres AINS, dont l'aspirine)</li><li>Insuffisance rénale sévère (ClCr ≤ 15 mL/min, voie orale)</li><li>Aspirine en concomitance</li><li>Pontage coronarien, infarctus récent, insuffisance cardiaque</li><li>Grossesse : éviter après 30 semaines</li></ul></div><div class="info-box "><h4>Prudence</h4><ul><li>Risque cardiovasculaire (surtout usage prolongé ou doses élevées)</li><li>ATCD d'ulcère, de saignement digestif, de tabagisme, d'alcool, d'hépatopathie avancée</li><li>Anticoagulation, trouble de la coagulation</li><li>Déshydratation, insuffisance rénale ou hépatique, IECA ou diurétiques</li><li>Âgés : liste de Beers — éviter l'usage chronique sans gastroprotection</li></ul></div></div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+<div class="tab-panel " id="meloxicam-suivi">
+<div class="info-grid"><div class="info-box blue"><h4>Suivi</h4><ul><li>Fonction rénale, tension artérielle</li><li>Symptômes digestifs, hémoglobine</li><li>Enzymes hépatiques</li></ul></div></div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+<div class="tab-panel " id="meloxicam-ai">
+<div class="info-grid"><div class="info-box "><h4>Interactions</h4><ul><li>IECA : ↓ effet antihypertenseur ; furosémide ou thiazidiques : ↓ effet diurétique</li><li>Lithium : ↑ concentrations</li><li>Anticoagulants, aspirine, clopidogrel, ticagrélor, prasugrel, corticostéroïdes, fibrinolytiques, ISRS, IRSN : ↑ risque de saignement digestif</li><li>Aspirine : ↑ concentrations de méloxicam</li><li>Cholestyramine : ↓ concentrations</li><li>Polystyrène sulfonate de sodium : nécrose colique — éviter</li></ul></div></div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+</div>
+</div>
+
+<div class="drug-card" id="card-capsaicine_menthol" data-search="capsaïcine capsaicine menthol topique arthrose axiale analgésique topique">
+  <div class="drug-header" style="background:#b45309;">
+    <div>
+      <div class="drug-name">Capsaïcine / Menthol (topiques)</div>
+      <div style="font-size:12px;opacity:.75;margin-top:2px;">Fiche minimale</div>
+    </div>
+    <div class="drug-pharmacol">Analgésiques topiques</div>
+  </div>
+  <div class="drug-tabs"><button class="tab-btn active" onclick="showTab('capsaicine_menthol','ov',this)">Vue d'ensemble</button><button class="tab-btn " onclick="showTab('capsaicine_menthol','pk',this)">Pharmacocinétique</button><button class="tab-btn " onclick="showTab('capsaicine_menthol','doses',this)">Doses &amp; formes</button><button class="tab-btn " onclick="showTab('capsaicine_menthol','es',this)">Effets secondaires</button><button class="tab-btn " onclick="showTab('capsaicine_menthol','ci',this)">Contre-indications</button><button class="tab-btn " onclick="showTab('capsaicine_menthol','suivi',this)">Suivi</button><button class="tab-btn " onclick="showTab('capsaicine_menthol','ai',this)">Autres infos</button></div>
+  <div class="drug-panels"><div class="tab-panel active" id="capsaicine_menthol-ov">
+<div class="info-grid"><div class="info-box blue"><h4>Place dans le traitement</h4><p>Traitement <strong>pharmacologique topique</strong> de l'arthrose, <strong>surtout pour l'arthrose axiale</strong>, avec les AINS topiques ; la lidocaïne et d'autres préparations magistrales sont possibles selon l'expertise locale.</p></div><div class="info-box green"><h4>Indications</h4><ul><li>Arthrose (surtout axiale)</li></ul></div></div><div class="warn-box">Fiche minimale — pas de monographie Davis ni Beaulieu : mécanisme, concentrations, effets indésirables (brûlure locale), contre-indications et interactions à compléter.</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Cours Rhumatologie 3, Médication en rhumatologie (Dr Chrétien Raymer)</em></p>
+</div>
+<div class="tab-panel " id="capsaicine_menthol-pk">
+<div class="warn-box">Non documentée dans vos sources.</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Cours Rhumatologie 3, Médication en rhumatologie (Dr Chrétien Raymer)</em></p>
+</div>
+<div class="tab-panel " id="capsaicine_menthol-doses">
+<div class="warn-box"><strong>Posologie non documentée dans vos sources canadiennes</strong>. ➜ À compléter avec RxVigilance ou la monographie canadienne.</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Cours Rhumatologie 3, Médication en rhumatologie (Dr Chrétien Raymer)</em></p>
+</div>
+<div class="tab-panel " id="capsaicine_menthol-es">
+<div class="warn-box">Non documentés dans vos sources.</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Cours Rhumatologie 3, Médication en rhumatologie (Dr Chrétien Raymer)</em></p>
+</div>
+<div class="tab-panel " id="capsaicine_menthol-ci">
+<div class="warn-box">Non documentées dans vos sources.</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Cours Rhumatologie 3, Médication en rhumatologie (Dr Chrétien Raymer)</em></p>
+</div>
+<div class="tab-panel " id="capsaicine_menthol-suivi">
+<div class="warn-box">Non documenté dans vos sources.</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Cours Rhumatologie 3, Médication en rhumatologie (Dr Chrétien Raymer)</em></p>
+</div>
+<div class="tab-panel " id="capsaicine_menthol-ai">
+<div class="warn-box">Non documentées dans vos sources.</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Cours Rhumatologie 3, Médication en rhumatologie (Dr Chrétien Raymer)</em></p>
+</div>
+</div>
+</div>
+
+<div class="drug-card" id="card-resmetirom" data-search="résmétirom resmetirom rezdiffra masld mash stéatose hépatique fibrose agoniste trβ">
+  <div class="drug-header" style="background:#166534;">
+    <div>
+      <div class="drug-name">Résmétirom (Rezdiffra®)</div>
+      <div style="font-size:12px;opacity:.75;margin-top:2px;">Fiche minimale</div>
+    </div>
+    <div class="drug-pharmacol">Agoniste du récepteur des hormones thyroïdiennes (TRβ)</div>
+  </div>
+  <div class="drug-tabs"><button class="tab-btn active" onclick="showTab('resmetirom','ov',this)">Vue d'ensemble</button><button class="tab-btn " onclick="showTab('resmetirom','pk',this)">Pharmacocinétique</button><button class="tab-btn " onclick="showTab('resmetirom','doses',this)">Doses &amp; formes</button><button class="tab-btn " onclick="showTab('resmetirom','es',this)">Effets secondaires</button><button class="tab-btn " onclick="showTab('resmetirom','ci',this)">Contre-indications</button><button class="tab-btn " onclick="showTab('resmetirom','suivi',this)">Suivi</button><button class="tab-btn " onclick="showTab('resmetirom','ai',this)">Autres infos</button></div>
+  <div class="drug-panels"><div class="tab-panel active" id="resmetirom-ov">
+<div class="info-grid"><div class="info-box blue"><h4>Mécanisme</h4><p>Agoniste du récepteur des hormones thyroïdiennes (<strong>TRβ</strong>).</p></div><div class="info-box green"><h4>Indications</h4><ul><li><strong>NASH non cirrhotique</strong> avec fibrose modérée à avancée, en plus de la diète et de l'exercice</li></ul></div></div><div class="key-fact"><strong>Statut canadien non vérifié</strong> : le guide clinique (Stéatose) cite l'approbation de la FDA en 2024 pour la MASH avec fibrose F2–F3.</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em> · <em>Guide clinique IPS — Stéatose &amp; NASH</em></p>
+</div>
+<div class="tab-panel " id="resmetirom-pk">
+<div class="warn-box">Non documentée dans l'extrait Davis disponible.</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+<div class="tab-panel " id="resmetirom-doses">
+<div class="warn-box"><strong>Posologie non documentée dans vos sources canadiennes</strong>. ➜ À compléter avec RxVigilance ou la monographie canadienne.</div><div class="key-fact">Davis : la dose dépend du poids (&lt; 100 kg ou ≥ 100 kg) et est réduite avec un inhibiteur modéré du CYP2C8 ; les valeurs exactes sont à reprendre dans la monographie.</div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+<div class="tab-panel " id="resmetirom-es">
+<div class="info-grid"><div class="info-box "><h4>Digestifs</h4><ul><li>↓ appétit, nausées, vomissements</li><li>Diarrhée, constipation, flatulences, selles anormales</li><li>Douleur abdominale, <strong>cholécystite, lithiase biliaire</strong>, pancréatite obstructive</li><li>↑ enzymes hépatiques</li></ul></div><div class="info-box "><h4>Autres</h4><ul><li>Arythmies, palpitations</li><li>Hypoglycémie</li><li>Prurit, érythème</li><li>Tendinopathie</li><li>Dépression, étourdissements, vertige, dysgueusie</li><li>Saignements utérins</li><li>Hypersensibilité</li></ul></div></div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+<div class="tab-panel " id="resmetirom-ci">
+<div class="info-grid"><div class="info-box red"><h4>Contre-indications</h4><ul><li>Insuffisance hépatique modérée à sévère</li></ul></div><div class="info-box "><h4>Prudence</h4><ul><li>Insuffisance rénale sévère</li><li>Grossesse et allaitement : innocuité non établie</li><li>Enfants : innocuité et efficacité non établies</li></ul></div></div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+<div class="tab-panel " id="resmetirom-suivi">
+<div class="info-grid"><div class="info-box blue"><h4>Suivi</h4><ul><li>Enzymes hépatiques</li><li>Symptômes biliaires</li></ul></div></div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+<div class="tab-panel " id="resmetirom-ai">
+<div class="info-grid"><div class="info-box "><h4>Interactions</h4><ul><li>Inhibiteurs modérés du CYP2C8 : dose réduite (Davis)</li></ul></div></div><p style="font-size:11px;color:#777;margin-top:8px;">Sources : <em>Davis's Drug Guide for Nurses, 20<sup>e</sup> éd.</em></p>
+</div>
+</div>
+</div>
+
 
 </main>
 </div>
