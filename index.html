@@ -51792,62 +51792,9 @@ Séquestration liquidienne &gt; 6L</div>
       </div>
 
       <div class="block def u-19b365">
-        <div class="block-title" id="st-5"><span class="tag">Dépistage de la fibrose hépatique<span class="tag-sub"><span class="tag-dash"> — </span>Algorithme interactif (EASL 2024)</span></span></div>
-        <div class="content-text" style="font-size:13px;margin-bottom:10px;"><strong>Populations cibles :</strong> Diabète T2 · Obésité abdominale + ≥ 1 FR cardiométabolique · Enzymes hépatiques ↑ persistantes · Stéatose fortuite à l'imagerie</div>
-        <div id="algo-fib4" style="font-size:12px;">
-
-          <!-- Étape 1 : patient eligible -->
-          <div style="background:#E1F3FE;border-left:2px solid #1F6C9F;border-radius:6px;padding:10px 12px;margin-bottom:10px;">
-            <strong>Étape 1 — Patient à risque de fibrose hépatique ?</strong>
-            <div class="u-1f9ed8">
-              <select id="fib4-eligible" onchange="fib4Step1()" style="width:100%;padding:6px 8px;border-radius:6px;border:1px solid #EAEAEA;font-size:12px;background:#FFFFFF;">
-                <option value="">— Sélectionner —</option>
-                <option value="yes">✓ Oui — critère(s) présent(s)</option>
-                <option value="no">✕ Non — aucun critère</option>
-              </select>
-            </div>
-          </div>
-
-          <!-- Étape 2 : calcul FIB-4 -->
-          <div id="fib4-step2" style="display:none;background:#EDF3EC;border-left:2px solid #346538;border-radius:6px;padding:10px 12px;margin-bottom:10px;">
-            <strong>Étape 2 — Calculer le FIB-4</strong>
-            <div style="background:#FFFFFF;border-radius:6px;padding:8px;margin-top:8px;border:1px solid #EAEAEA;">
-              <div style="font-size:11px;color:#2F3437;margin-bottom:6px;">FIB-4 = (Âge × AST) ÷ (Plaquettes × √ALT) &nbsp;|&nbsp; <em>AST/ALT en U/L · Plaquettes en 10⁹/L</em></div>
-              <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:8px;">
-                <div><label style="font-size:11px;font-weight:600;">Âge (ans)</label><input type="number" id="fib4-age" min="18" max="100" placeholder="ex: 55" oninput="calcFib4()" style="width:100%;padding:4px 6px;border-radius:4px;border:1px solid #EAEAEA;font-size:12px;box-sizing:border-box;"></div>
-                <div><label style="font-size:11px;font-weight:600;">AST (U/L)</label><input type="number" id="fib4-ast" min="0" placeholder="ex: 45" oninput="calcFib4()" style="width:100%;padding:4px 6px;border-radius:4px;border:1px solid #EAEAEA;font-size:12px;box-sizing:border-box;"></div>
-                <div><label style="font-size:11px;font-weight:600;">ALT (U/L)</label><input type="number" id="fib4-alt" min="0" placeholder="ex: 38" oninput="calcFib4()" style="width:100%;padding:4px 6px;border-radius:4px;border:1px solid #EAEAEA;font-size:12px;box-sizing:border-box;"></div>
-                <div><label style="font-size:11px;font-weight:600;">Plaquettes (10⁹/L)</label><input type="number" id="fib4-plt" min="0" placeholder="ex: 210" oninput="calcFib4()" style="width:100%;padding:4px 6px;border-radius:4px;border:1px solid #EAEAEA;font-size:12px;box-sizing:border-box;"></div>
-              </div>
-              <div id="fib4-result-box" style="display:none;padding:8px 10px;border-radius:6px;text-align:center;font-weight:700;font-size:14px;"></div>
-            </div>
-            <div id="fib4-step2b" style="display:none;margin-top:8px;">
-              <select id="fib4-score" onchange="fib4Step2()" style="width:100%;padding:6px 8px;border-radius:6px;border:1px solid #EAEAEA;font-size:12px;background:#FFFFFF;">
-                <option value="">— Ou entrer la valeur manuellement —</option>
-                <option value="low">FIB-4 &lt; 1,3 (risque faible)</option>
-                <option value="mid">FIB-4 1,3 – 2,67 (risque intermédiaire)</option>
-                <option value="high">FIB-4 &gt; 2,67 (risque élevé)</option>
-              </select>
-            </div>
-          </div>
-
-          <!-- Étape 3 : FibroScan (intermédiaire seulement) -->
-          <div id="fib4-step3" style="display:none;background:#FBF3DB;border-left:2px solid #956400;border-radius:6px;padding:10px 12px;margin-bottom:10px;">
-            <strong>Étape 3 — VCTE / FibroScan (ou ELF / MRE)</strong>
-            <div class="u-1f9ed8">
-              <select id="fib4-fibroscan" onchange="fib4Step3()" style="width:100%;padding:6px 8px;border-radius:6px;border:1px solid #EAEAEA;font-size:12px;background:#FFFFFF;">
-                <option value="">— Résultat élastographie —</option>
-                <option value="low">&lt; 8 kPa — faible rigidité (F0–F2)</option>
-                <option value="mid">8 – 12 kPa — fibrose avancée probable (F3)</option>
-                <option value="high">&gt; 12 kPa — cirrhose probable (F4)</option>
-              </select>
-            </div>
-          </div>
-
-          <!-- Résultat final -->
-          <div id="fib4-final" style="display:none;border-radius:8px;padding:12px;margin-top:4px;"></div>
-
-        </div>
+        <div class="block-title" id="st-5"><span class="tag">Dépistage de la fibrose hépatique<span class="tag-sub"><span class="tag-dash"> — </span>Algorithme (EASL 2024)</span></span></div>
+        <div class="u-300634" style="overflow-x:auto;"><div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px;min-width:860px;"><svg viewBox="0 -2 1100 738" role="img" aria-label="Algorithme de dépistage de la fibrose hépatique : FIB-4 puis élastographie" style="width:100%;height:auto;display:block;font-family:Geist,'SF Pro Display',system-ui,sans-serif;"><rect x="300" y="0" width="500" height="95" rx="8" fill="#E1F3FE" stroke="#1F6C9F" stroke-width="1.5"/><text x="550.0" y="25" text-anchor="middle" font-size="13.5" font-weight="700" fill="#2F3437">Patient à risque de fibrose hépatique ?</text><text x="550.0" y="49" text-anchor="middle" font-size="12" fill="#2F3437">Diabète de type 2 · obésité abdominale + ≥ 1 facteur</text><text x="550.0" y="66" text-anchor="middle" font-size="12" fill="#2F3437">de risque cardiométabolique · enzymes hépatiques</text><text x="550.0" y="83" text-anchor="middle" font-size="12" fill="#2F3437">↑ persistantes · stéatose fortuite à l'imagerie</text><line x1="800" y1="47.5" x2="863" y2="47.5" stroke="#2F3437" stroke-width="1.3"/><path d="M862 43.0 L862 52.0 L870 47.5 Z" fill="#2F3437"/><text x="835" y="40.5" text-anchor="middle" font-size="12" font-style="italic" fill="#2F3437">Non</text><rect x="870" y="1.5" width="230" height="96" rx="8" fill="#F7F6F3" stroke="#6B6A66" stroke-width="1.5"/><text x="985.0" y="26.5" text-anchor="middle" font-size="13.5" font-weight="700" fill="#2F3437">Pas de dépistage</text><text x="985.0" y="44.5" text-anchor="middle" font-size="13.5" font-weight="700" fill="#2F3437">systématique</text><text x="985.0" y="68.5" text-anchor="middle" font-size="12" fill="#2F3437">Réévaluer si de nouveaux</text><text x="985.0" y="85.5" text-anchor="middle" font-size="12" fill="#2F3437">facteurs de risque apparaissent</text><line x1="550" y1="95" x2="550" y2="130" stroke="#2F3437" stroke-width="1.3"/><path d="M545.5 129 L554.5 129 L550 137 Z" fill="#2F3437"/><text x="558" y="120" text-anchor="start" font-size="12" font-style="italic" fill="#2F3437">Oui</text><rect x="310" y="137" width="480" height="112" rx="8" fill="#E1F3FE" stroke="#1F6C9F" stroke-width="1.5"/><text x="550.0" y="162" text-anchor="middle" font-size="13.5" font-weight="700" fill="#2F3437">Calculer le FIB-4</text><text x="550.0" y="186" text-anchor="middle" font-size="12" fill="#2F3437">(Âge × AST) ÷ (Plaquettes × √ALT)</text><text x="550.0" y="203" text-anchor="middle" font-size="12" fill="#2F3437">AST et ALT en U/L · plaquettes en 10⁹/L</text><text x="550.0" y="220" text-anchor="middle" font-size="12" fill="#2F3437">Fiable entre 35 et 65 ans · &gt; 65 ans : borne basse = 2,0</text><text x="550.0" y="237" text-anchor="middle" font-size="12" fill="#2F3437">&lt; 35 ans : élastographie en premier choix</text><line x1="550" y1="249" x2="550" y2="275" stroke="#2F3437" stroke-width="1.3"/><line x1="135" y1="275" x2="965" y2="275" stroke="#2F3437" stroke-width="1.3"/><line x1="135" y1="275" x2="135" y2="300" stroke="#2F3437" stroke-width="1.3"/><path d="M130.5 299 L139.5 299 L135 307 Z" fill="#2F3437"/><line x1="550" y1="275" x2="550" y2="300" stroke="#2F3437" stroke-width="1.3"/><path d="M545.5 299 L554.5 299 L550 307 Z" fill="#2F3437"/><line x1="965" y1="275" x2="965" y2="300" stroke="#2F3437" stroke-width="1.3"/><path d="M960.5 299 L969.5 299 L965 307 Z" fill="#2F3437"/><rect x="10" y="307" width="250" height="164" rx="8" fill="#EDF3EC" stroke="#346538" stroke-width="1.5"/><text x="135.0" y="332" text-anchor="middle" font-size="13.5" font-weight="700" fill="#2F3437">FIB-4 &lt; 1,3</text><text x="135.0" y="350" text-anchor="middle" font-size="13.5" font-weight="700" fill="#2F3437">Risque faible</text><text x="135.0" y="374" text-anchor="middle" font-size="12" fill="#2F3437">Répéter le FIB-4 aux 1 à 3 ans</text><text x="135.0" y="391" text-anchor="middle" font-size="12" fill="#2F3437">Gérer les comorbidités</text><text x="135.0" y="408" text-anchor="middle" font-size="12" fill="#2F3437">métaboliques (HbA1c, lipides,</text><text x="135.0" y="425" text-anchor="middle" font-size="12" fill="#2F3437">poids)</text><text x="135.0" y="442" text-anchor="middle" font-size="12" fill="#2F3437">Pas de FibroScan ni de</text><text x="135.0" y="459" text-anchor="middle" font-size="12" fill="#2F3437">référence en hépatologie</text><rect x="375" y="307" width="350" height="96" rx="8" fill="#FBF3DB" stroke="#956400" stroke-width="1.5"/><text x="550.0" y="332" text-anchor="middle" font-size="13.5" font-weight="700" fill="#2F3437">FIB-4 1,3 à 2,67</text><text x="550.0" y="350" text-anchor="middle" font-size="13.5" font-weight="700" fill="#2F3437">Risque indéterminé</text><text x="550.0" y="374" text-anchor="middle" font-size="12" fill="#2F3437">Reclasser par élastographie (FibroScan)</text><text x="550.0" y="391" text-anchor="middle" font-size="12" fill="#2F3437">ELF ou MRE si non disponible</text><rect x="840" y="307" width="250" height="164" rx="8" fill="#FDEBEC" stroke="#9F2F2D" stroke-width="1.5"/><text x="965.0" y="332" text-anchor="middle" font-size="13.5" font-weight="700" fill="#2F3437">FIB-4 &gt; 2,67</text><text x="965.0" y="350" text-anchor="middle" font-size="13.5" font-weight="700" fill="#2F3437">Risque élevé</text><text x="965.0" y="374" text-anchor="middle" font-size="12" fill="#2F3437">Référer en hépatologie sans délai</text><text x="965.0" y="391" text-anchor="middle" font-size="12" fill="#2F3437">Bilan étiologique complet</text><text x="965.0" y="408" text-anchor="middle" font-size="12" fill="#2F3437">(sérologies, auto-immun, métaux)</text><text x="965.0" y="425" text-anchor="middle" font-size="12" fill="#2F3437">FibroScan ± biopsie selon</text><text x="965.0" y="442" text-anchor="middle" font-size="12" fill="#2F3437">l'indication</text><text x="965.0" y="459" text-anchor="middle" font-size="12" fill="#2F3437">Dépistage du CHC si cirrhose</text><line x1="550" y1="403" x2="550" y2="427" stroke="#2F3437" stroke-width="1.3"/><line x1="362.5" y1="427" x2="737.5" y2="427" stroke="#2F3437" stroke-width="1.3"/><line x1="362.5" y1="427" x2="362.5" y2="494" stroke="#2F3437" stroke-width="1.3"/><path d="M358.0 493 L367.0 493 L362.5 501 Z" fill="#2F3437"/><line x1="550" y1="427" x2="550" y2="494" stroke="#2F3437" stroke-width="1.3"/><path d="M545.5 493 L554.5 493 L550 501 Z" fill="#2F3437"/><line x1="737.5" y1="427" x2="737.5" y2="494" stroke="#2F3437" stroke-width="1.3"/><path d="M733.0 493 L742.0 493 L737.5 501 Z" fill="#2F3437"/><rect x="275" y="501" width="175" height="231" rx="8" fill="#EDF3EC" stroke="#346538" stroke-width="1.5"/><text x="362.5" y="526" text-anchor="middle" font-size="13.5" font-weight="700" fill="#2F3437">&lt; 8 kPa</text><text x="362.5" y="550" text-anchor="middle" font-size="12" fill="#2F3437">Fibrose significative</text><text x="362.5" y="567" text-anchor="middle" font-size="12" fill="#2F3437">improbable</text><text x="362.5" y="584" text-anchor="middle" font-size="12" fill="#2F3437"></text><text x="362.5" y="601" text-anchor="middle" font-size="12" fill="#2F3437">Suivi IPS et gestion</text><text x="362.5" y="618" text-anchor="middle" font-size="12" fill="#2F3437">intensifiée des</text><text x="362.5" y="635" text-anchor="middle" font-size="12" fill="#2F3437">comorbidités (poids,</text><text x="362.5" y="652" text-anchor="middle" font-size="12" fill="#2F3437">DT2, lipides, alcool)</text><text x="362.5" y="669" text-anchor="middle" font-size="12" fill="#2F3437">Répéter FIB-4 et</text><text x="362.5" y="686" text-anchor="middle" font-size="12" fill="#2F3437">FibroScan aux 1–2 ans</text><text x="362.5" y="703" text-anchor="middle" font-size="12" fill="#2F3437">Pas de référence</text><text x="362.5" y="720" text-anchor="middle" font-size="12" fill="#2F3437">immédiate</text><rect x="462.5" y="501" width="175" height="231" rx="8" fill="#FBF3DB" stroke="#956400" stroke-width="1.5"/><text x="550.0" y="526" text-anchor="middle" font-size="13.5" font-weight="700" fill="#2F3437">8 à 12 kPa</text><text x="550.0" y="550" text-anchor="middle" font-size="12" fill="#2F3437">Zone indéterminée</text><text x="550.0" y="567" text-anchor="middle" font-size="12" fill="#2F3437">(fibrose avancée F3</text><text x="550.0" y="584" text-anchor="middle" font-size="12" fill="#2F3437">possible)</text><text x="550.0" y="601" text-anchor="middle" font-size="12" fill="#2F3437">Envisager la référence</text><text x="550.0" y="618" text-anchor="middle" font-size="12" fill="#2F3437">en hépatologie</text><text x="550.0" y="635" text-anchor="middle" font-size="12" fill="#2F3437">Surveillance du CHC</text><text x="550.0" y="652" text-anchor="middle" font-size="12" fill="#2F3437">individualisée</text><text x="550.0" y="669" text-anchor="middle" font-size="12" fill="#2F3437">Varices : selon</text><text x="550.0" y="686" text-anchor="middle" font-size="12" fill="#2F3437">Baveno VII</text><text x="550.0" y="703" text-anchor="middle" font-size="12" fill="#2F3437">Bilan cardiovasculaire</text><text x="550.0" y="720" text-anchor="middle" font-size="12" fill="#2F3437">(SCORE2, Framingham)</text><rect x="650" y="501" width="175" height="231" rx="8" fill="#FDEBEC" stroke="#9F2F2D" stroke-width="1.5"/><text x="737.5" y="526" text-anchor="middle" font-size="13.5" font-weight="700" fill="#2F3437">&gt; 12 kPa</text><text x="737.5" y="550" text-anchor="middle" font-size="12" fill="#2F3437">Fibrose avancée ou</text><text x="737.5" y="567" text-anchor="middle" font-size="12" fill="#2F3437">cirrhose probable (F4)</text><text x="737.5" y="584" text-anchor="middle" font-size="12" fill="#2F3437">Référer en hépatologie</text><text x="737.5" y="601" text-anchor="middle" font-size="12" fill="#2F3437">(urgent)</text><text x="737.5" y="618" text-anchor="middle" font-size="12" fill="#2F3437">CHC : échographie ± α-FP</text><text x="737.5" y="635" text-anchor="middle" font-size="12" fill="#2F3437">aux 6 mois</text><text x="737.5" y="652" text-anchor="middle" font-size="12" fill="#2F3437">Varices : OGD</text><text x="737.5" y="669" text-anchor="middle" font-size="12" fill="#2F3437">Greffe si Child B-C</text><text x="737.5" y="686" text-anchor="middle" font-size="12" fill="#2F3437">ou MELD ≥ 15</text><text x="737.5" y="703" text-anchor="middle" font-size="12" fill="#2F3437">Vaccins : VHA, VHB,</text><text x="737.5" y="720" text-anchor="middle" font-size="12" fill="#2F3437">pneumocoque, influenza</text></svg></div></div>
+        <div class="u-708a45" style="margin-top:6px;"><em>EASL-EASD-EASO 2024 ; Cours Médecine interne, Transaminases et MASLD (PCP 3)</em></div>
         <div class="key-fact red u-101bb9"><strong>Surveillance CHC :</strong> Cirrhose MASLD → échographie ± α-FP aux 6 mois · F3 sans cirrhose → surveillance individualisée · &lt; F3 → pas de surveillance systématique</div>
       </div>
 
@@ -67874,92 +67821,6 @@ function showPanel(prefix,activeId,count){
     }
   }
 }
-
-// ── Algorithme dépistage fibrose (FIB-4) ───────────────────────────────────
-function fib4Step1() {
-  var val = document.getElementById('fib4-eligible').value;
-  var s2 = document.getElementById('fib4-step2');
-  var s3 = document.getElementById('fib4-step3');
-  var fin = document.getElementById('fib4-final');
-  s3.style.display = 'none'; fin.style.display = 'none';
-  if (val === 'yes') {
-    s2.style.display = 'block';
-    document.getElementById('fib4-step2b').style.display = 'block';
-  } else if (val === 'no') {
-    s2.style.display = 'none';
-    fin.style.display = 'block';
-    fin.style.background = '#F0FDF4'; fin.style.border = '1.5px solid #16a34a';
-    fin.innerHTML = '<span style="color:#16a34a;font-size:13px;">✅ <strong>Pas d\'indication de dépistage systématique</strong><br><span style="font-weight:400;">Réévaluer si apparition de nouveaux facteurs de risque.</span></span>';
-  } else {
-    s2.style.display = 'none';
-  }
-}
-function calcFib4() {
-  var age = parseFloat(document.getElementById('fib4-age').value);
-  var ast = parseFloat(document.getElementById('fib4-ast').value);
-  var alt = parseFloat(document.getElementById('fib4-alt').value);
-  var plt = parseFloat(document.getElementById('fib4-plt').value);
-  var box = document.getElementById('fib4-result-box');
-  var sel = document.getElementById('fib4-score');
-  if (age > 0 && ast > 0 && alt > 0 && plt > 0) {
-    var fib4 = (age * ast) / (plt * Math.sqrt(alt));
-    fib4 = Math.round(fib4 * 100) / 100;
-    var cutLow = age > 65 ? 2.0 : 1.3;
-    box.style.display = 'block';
-    if (fib4 < cutLow) {
-      box.style.background = '#D1FAE5'; box.style.color = '#065f46';
-      box.innerHTML = 'FIB-4 = ' + fib4 + ' &nbsp;→&nbsp; <span style="color:#065f46">Risque faible</span>';
-      sel.value = 'low'; fib4Step2();
-    } else if (fib4 <= 2.67) {
-      box.style.background = '#FEF9C3'; box.style.color = '#92400e';
-      box.innerHTML = 'FIB-4 = ' + fib4 + ' &nbsp;→&nbsp; <span style="color:#92400e">Risque intermédiaire</span>';
-      sel.value = 'mid'; fib4Step2();
-    } else {
-      box.style.background = '#FEE2E2'; box.style.color = '#991b1b';
-      box.innerHTML = 'FIB-4 = ' + fib4 + ' &nbsp;→&nbsp; <span style="color:#991b1b">Risque élevé</span>';
-      sel.value = 'high'; fib4Step2();
-    }
-  } else {
-    box.style.display = 'none';
-  }
-}
-function fib4Step2() {
-  var val = document.getElementById('fib4-score').value;
-  var s3 = document.getElementById('fib4-step3');
-  var fin = document.getElementById('fib4-final');
-  s3.style.display = 'none'; fin.style.display = 'none';
-  document.getElementById('fib4-fibroscan').value = '';
-  if (val === 'low') {
-    fin.style.display = 'block';
-    fin.style.background = '#D1FAE5'; fin.style.border = '1.5px solid #16a34a';
-    fin.innerHTML = '<strong style="color:#065f46;">✅ Risque faible — FIB-4 &lt; 1,3</strong><br><span style="font-size:13px;">→ Répéter FIB-4 tous les <strong>1 à 3 ans</strong><br>→ Gestion des comorbidités métaboliques (HbA1c, lipides, poids)<br>→ Pas de FibroScan ni référence en hépatologie nécessaire</span>';
-  } else if (val === 'mid') {
-    s3.style.display = 'block';
-  } else if (val === 'high') {
-    fin.style.display = 'block';
-    fin.style.background = '#FEE2E2'; fin.style.border = '1.5px solid #dc2626';
-    fin.innerHTML = '<strong style="color:#991b1b;">🔴 Risque élevé — FIB-4 &gt; 2,67</strong><br><span style="font-size:13px;">→ <strong>Référer en hépatologie</strong> sans délai<br>→ Bilan étiologique complet (sérologies, auto-immun, métaux)<br>→ FibroScan + biopsie selon indication<br>→ Dépistage CHC (échographie ± α-FP q6m si cirrhose)</span>';
-  }
-}
-function fib4Step3() {
-  var val = document.getElementById('fib4-fibroscan').value;
-  var fin = document.getElementById('fib4-final');
-  fin.style.display = 'none';
-  if (val === 'low') {
-    fin.style.display = 'block';
-    fin.style.background = '#F0FDF4'; fin.style.border = '1.5px solid #16a34a';
-    fin.innerHTML = '<strong style="color:#065f46;">✅ Fibrose légère à modérée — FibroScan &lt; 8 kPa</strong><br><span style="font-size:13px;">→ Suivi IPS + <strong>gestion intensifiée des comorbidités</strong> (perte de poids, contrôle T2D, lipides, sevrage alcool)<br>→ Répéter FIB-4 + FibroScan q1-2 ans<br>→ Pas de référence immédiate en hépatologie</span>';
-  } else if (val === 'mid') {
-    fin.style.display = 'block';
-    fin.style.background = '#FEF9C3'; fin.style.border = '1.5px solid #d97706';
-    fin.innerHTML = '<strong style="color:#92400e;">⚠️ Fibrose avancée probable — FibroScan 8–12 kPa (F3)</strong><br><span style="font-size:13px;">→ <strong>Référence en hépatologie</strong> (F3 = fibrose sévère pré-cirrhotique)<br>→ Surveillance CHC individualisée<br>→ Dépistage varices (gastroscopie ou FibroScan &lt;20 kPa + plaquettes &gt;150 selon Baveno VII)<br>→ Bilan cardio-vasculaire (SCORE2 / Framingham)</span>';
-  } else if (val === 'high') {
-    fin.style.display = 'block';
-    fin.style.background = '#FEE2E2'; fin.style.border = '1.5px solid #dc2626';
-    fin.innerHTML = '<strong style="color:#991b1b;">🔴 Cirrhose probable — FibroScan &gt; 12 kPa (F4)</strong><br><span style="font-size:13px;">→ <strong>Référer en hépatologie URGENT</strong><br>→ Dépistage CHC : échographie ± α-FP aux <strong>6 mois</strong><br>→ Dépistage varices œsophagiennes (OGD)<br>→ Évaluation greffe si Child B-C ou MELD ≥ 15<br>→ Vaccins : VHA, VHB, pneumocoque, influenza</span>';
-  }
-}
-
 
 // ── RCRI Calculator ────────────────────────────────────────────────────────
 function calcRCRI() {
