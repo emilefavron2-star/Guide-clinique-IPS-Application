@@ -2159,9 +2159,10 @@ m
     <!-- Rhumatologie -->
     <div class="specialty-group" id="grp-rhumato">
       <div class="specialty-header" onclick="toggleGroup('grp-rhumato')">
-        <span class="emoji"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-link"/></svg></span> Rhumatologie
+        <span class="emoji"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-link"/></svg></span> Rhumatologie &amp; MSK
         <svg class="chevron" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>      </div>
       <div class="specialty-items">
+        <div class="nav-item" onclick="showSection('msk')">Guide MSK</div>
         <div class="nav-item" onclick="showSection('arthrite-approche')">Approche Douleur Articulaire</div>
         <div class="nav-item" onclick="showSection('arthrose')">Arthrose</div>
         <div class="nav-item" onclick="showSection('fibromyalgie')">Fibromyalgie</div>
@@ -2170,15 +2171,6 @@ m
         <div class="nav-item" onclick="showSection('spondylarthrites')">Spondylarthrites</div>
         <div class="nav-item" onclick="showSection('connectivites')">Connectivites &amp; Vascularites</div>
         <div class="nav-item" onclick="showSection('rhumato-rx')">Médication en rhumatologie</div>
-      </div>
-    </div>
-
-    <div class="specialty-group" id="grp-msk">
-      <div class="specialty-header" onclick="toggleGroup('grp-msk')">
-        <span class="emoji"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-bone"/></svg></span> MSK
-        <svg class="chevron" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>      </div>
-      <div class="specialty-items">
-        <div class="nav-item" onclick="showSection('msk')">Guide MSK</div>
       </div>
     </div>
     <!-- Gastro -->
@@ -2480,18 +2472,11 @@ m
             <div class="home-card-count">1 section</div>
           </div>
         </div>
-        <div class="home-card" onclick="showSection('arthrite-approche'); openGroup('grp-rhumato')">
+        <div class="home-card" onclick="showSection('msk'); openGroup('grp-rhumato')">
           <div class="home-card-icon" style="background:#F7F6F3;color:#9F2F2D;"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-link"/></svg></div>
           <div class="home-card-body">
-            <div class="home-card-name">Rhumatologie</div>
-            <div class="home-card-count">8 sections</div>
-          </div>
-        </div>
-        <div class="home-card" onclick="showSection('msk'); openGroup('grp-msk')">
-          <div class="home-card-icon" style="background:#F7F6F3;color:#1F6C9F;"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-bone"/></svg></div>
-          <div class="home-card-body">
-            <div class="home-card-name">MSK</div>
-            <div class="home-card-count">1 section</div>
+            <div class="home-card-name">Rhumatologie &amp; MSK</div>
+            <div class="home-card-count">9 sections</div>
           </div>
         </div>
 
@@ -67058,10 +67043,8 @@ const SECTION_ORDER = [
   'imagerie-thorax','imagerie-abdo','neuro-imagerie',
   // Laboratoire
   'labo',
-  // Rhumatologie
-  'arthrite-approche','arthrose','fibromyalgie','par','goutte','spondylarthrites','connectivites','rhumato-rx',
-  // Musculosquelettique
-  'msk',
+  // Rhumatologie & MSK
+  'msk','arthrite-approche','arthrose','fibromyalgie','par','goutte','spondylarthrites','connectivites','rhumato-rx',
   // Pharmacologie
   'ordonnances','mvl-psn',
   'pharmacoguide',
